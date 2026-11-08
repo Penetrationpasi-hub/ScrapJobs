@@ -6,6 +6,7 @@ import socket
 import ssl
 import threading
 import time
+import zlib
 from urllib.parse import urljoin, urlsplit
 
 MAX_BODY = 2 * 1024 * 1024
@@ -141,12 +142,14 @@ class Transport:
                 if response.status != 200:
                     raise FetchError("upstream_error", http_status=response.status)
                 encoding = response.getheader("Content-Encoding", "identity").lower()
-                if encoding != "identity":
+                # Manche Server liefern trotz "identity" gzip; das wird begrenzt entpackt, nichts anderes.
+                if encoding not in ("identity", "gzip"):
                     raise FetchError("unsupported", detail=f"Content-Encoding {encoding[:20]}")
                 kind = response.getheader("Content-Type", "").lower()
                 kinds = (("application/vnd.api+json", "application/json") if json_api else
                          ("application/javascript", "text/javascript") if accept_javascript else
-                         ("application/json",) if accept_json else ("text/html", "application/xhtml+xml", "text/plain"))
+                         ("application/json",) if accept_json else
+                         ("text/html", "application/xhtml+xml", "text/plain") + (("text/txt",) if robots_request else ()))
                 if not any(t in kind for t in kinds):
                     raise FetchError("unsupported", detail=f"Content-Type {kind[:60] or 'leer'}")
                 chunks, size = [], 0
@@ -160,7 +163,16 @@ class Transport:
                     if size > MAX_BODY:
                         raise FetchError("too_large")
                     chunks.append(chunk)
-                return current, b"".join(chunks).decode("utf-8", errors="replace")
+                body = b"".join(chunks)
+                if encoding == "gzip":
+                    try:
+                        unpacker = zlib.decompressobj(16 + zlib.MAX_WBITS)
+                        body = unpacker.decompress(body, MAX_BODY + 1)
+                    except zlib.error:
+                        raise FetchError("unsupported", detail="gzip fehlerhaft") from None
+                    if len(body) > MAX_BODY or unpacker.unconsumed_tail:
+                        raise FetchError("too_large")
+                return current, body.decode("utf-8", errors="replace")
             except (OSError, http.client.HTTPException) as error:
                 raise FetchError("timeout" if time.monotonic() >= self.budget.deadline else "network_error",
                                  detail=f"{type(error).__name__} {url.hostname}") from None

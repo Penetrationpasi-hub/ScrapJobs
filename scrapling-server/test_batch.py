@@ -225,3 +225,76 @@ class DiagnosticDetailTest(unittest.TestCase):
     def test_robots_snippet_is_reported(self):
         report = CrawlerDetailTest.crawl_with(CrawlerDetailTest(), robots_text="<html>\n  Seite   nicht gefunden </html>")
         self.assertIn("Seite nicht gefunden", report["detail"])
+
+
+class RobotsVariantsTest(CrawlerDetailTest):
+    def test_bom_robots_with_empty_disallow_is_parsed_even_when_strict(self):
+        report = self.crawl_with(robots_text="﻿User-agent: *\nDisallow:")
+        self.assertNotEqual(report["status"], "robots_unavailable")
+
+    def test_html_instead_of_robots_counts_as_missing_only_when_lenient(self):
+        page = "<!DOCTYPE html><html><head><title>App</title></head></html>"
+        self.assertEqual(self.crawl_with(robots_text=page)["status"], "robots_unavailable")
+        self.assertNotEqual(self.crawl_with(robots_text=page, robots_missing_ok=True)["status"], "robots_unavailable")
+
+    def test_sitemap_only_file_counts_as_no_rules_only_when_lenient(self):
+        text = "Sitemap: https://example.de/sitemap.xml"
+        self.assertEqual(self.crawl_with(robots_text=text)["status"], "robots_unavailable")
+        self.assertNotEqual(self.crawl_with(robots_text=text, robots_missing_ok=True)["status"], "robots_unavailable")
+
+    def test_block_pages_never_count_as_missing(self):
+        for page in ("<html>Just a moment...</html>", "<html>Access Denied</html>", "<html>Please solve the CAPTCHA</html>"):
+            report = self.crawl_with(robots_text=page, robots_missing_ok=True)
+            self.assertEqual(report["status"], "robots_unavailable", page)
+
+
+class TransportEncodingTest(unittest.TestCase):
+    def fetch(self, body, headers, robots=False):
+        import gzip as gz
+        from safe_http import Budget, Transport
+
+        class Response:
+            status = 200
+
+            def __init__(self):
+                self.data = body
+
+            def getheader(self, name, default=None):
+                return headers.get(name, default)
+
+            def read(self, n=-1):
+                chunk, self.data = self.data[:n], self.data[n:]
+                return chunk
+
+        class Connection:
+            def __init__(self, *a): pass
+            def request(self, *a, **k): pass
+            def getresponse(self): return Response()
+            def close(self): pass
+
+        transport = Transport(Budget(), resolve=lambda *a, **k: [(0, 0, 0, "", ("93.184.216.34", 443))], connection=Connection)
+        return transport.get("https://a.example/robots.txt" if robots else "https://a.example/", ("a.example",), robots_request=robots)[1]
+
+    def test_gzip_is_decoded_even_though_identity_was_requested(self):
+        import gzip as gz
+        text = self.fetch(gz.compress(b"User-agent: *\nDisallow:"), {"Content-Encoding": "gzip", "Content-Type": "text/plain"}, robots=True)
+        self.assertIn("User-agent", text)
+
+    def test_gzip_bomb_is_rejected(self):
+        import gzip as gz
+        from safe_http import FetchError
+        with self.assertRaises(FetchError) as caught:
+            self.fetch(gz.compress(b"a" * (3 * 1024 * 1024)), {"Content-Encoding": "gzip", "Content-Type": "text/html"})
+        self.assertEqual(caught.exception.code, "too_large")
+
+    def test_other_encodings_stay_rejected(self):
+        from safe_http import FetchError
+        with self.assertRaises(FetchError) as caught:
+            self.fetch(b"x", {"Content-Encoding": "br", "Content-Type": "text/html"})
+        self.assertEqual(caught.exception.code, "unsupported")
+
+    def test_text_txt_is_accepted_for_robots_only(self):
+        from safe_http import FetchError
+        self.assertIn("Disallow", self.fetch(b"User-agent: *\nDisallow: /x", {"Content-Type": "text/txt;charset=utf-8"}, robots=True))
+        with self.assertRaises(FetchError):
+            self.fetch(b"hallo", {"Content-Type": "text/txt"})

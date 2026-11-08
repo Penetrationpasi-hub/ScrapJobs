@@ -22,8 +22,9 @@ https://raw.githubusercontent.com/Penetrationpasi-hub/ScrapJobs/main/stellen.jso
 
 **Fehlende robots.txt:** Antwortet ein Host auf `/robots.txt` mit 404 oder 410, gelten im Katalog-Lauf
 keine Regeln, und die öffentliche Karriereseite wird normal abgerufen (weiterhin mit mindestens 1 s Abstand).
-Alles andere bleibt Abbruch: 403/429, Serverfehler, Timeouts, eine HTML-Seite statt einer robots.txt und
-jedes `Disallow`. Mit `--strict-robots` ist die alte strenge Regel wieder aktiv. Der Live-Dienst (`main.py`) ist davon nicht betroffen.
+Ebenso gelten keine Regeln, wenn der Server statt einer robots.txt seine normale HTML-Seite liefert oder die Datei
+nur Sitemap-Zeilen enthält. Sperr- und Captcha-Seiten zählen nicht dazu.
+Alles andere bleibt Abbruch: 403/429, Serverfehler, Timeouts und jedes `Disallow`. Mit `--strict-robots` ist die alte strenge Regel wieder aktiv. Der Live-Dienst (`main.py`) ist davon nicht betroffen.
 
 Es bleiben alle übrigen Schutzmaßnahmen des bisherigen Codes aktiv: robots.txt (wo vorhanden), `Crawl-delay`,
 mindestens 1 s Abstand je Host (auch zwischen Quellen desselben Hosts), nur HTTPS auf

@@ -32,7 +32,7 @@ def crawl(req, transport_factory=Transport):
         def check_robots(current):
             host = urlsplit(current).hostname
             if host not in source.hosts:
-                raise FetchError("unsafe_target")
+                raise FetchError("unsafe_target", detail=f"Host nicht freigegeben: {host}")
             if host not in robots:
                 try:
                     probe = {"robots_request": True} if missing_robots_scope(current, source, options) else {}
@@ -45,7 +45,15 @@ def crawl(req, transport_factory=Transport):
                         robots[host] = None
                         return
                     raise FetchError("robots_unavailable") from error
+                text = text.lstrip("\ufeff")  # BOM am Dateianfang verdeckt sonst die erste Zeile
                 if not re.search(r"(?im)^\s*user-agent\s*:", text):
+                    # Keine Regeln: Standardseite der Website statt einer robots.txt (HTML-200) oder eine Datei nur mit
+                    # Sitemap-Zeilen. Sperr- und Captcha-Seiten zählen nicht dazu.
+                    if robots_missing_ok and not re.search(
+                            r"captcha|access denied|just a moment|cf-chl|attention required|enable javascript|forbidden",
+                            text[:5000], re.I):
+                        robots[host] = None
+                        return
                     raise FetchError("robots_unavailable", detail="robots.txt ohne User-agent-Zeile: «" + " ".join(text.split())[:120] + "»")
                 robot = RobotFileParser()
                 robot.parse(text.splitlines())
