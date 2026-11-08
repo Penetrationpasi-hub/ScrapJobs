@@ -24,6 +24,7 @@ from sources import AGGREGATOR_SOURCES, ISOLATED_SOURCES, registry
 # Bundesweite Börsen/Aggregatoren: ohne Suchbegriff und Ortsfilter nur Rauschen.
 DEFAULT_EXCLUDED = {"indeed", "stepstone", "bluum_bw", *AGGREGATOR_SOURCES}
 SCHEMA = 1
+LOCATION_DETAILS = 50  # = zwei Ergebnisseiten à 25 (max_pages der Quellen)
 FIELDS = ("id", "title", "company", "location", "url", "posted")
 
 
@@ -141,7 +142,9 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         started = time.monotonic()
         for place in places:
             req = SimpleNamespace(q="", location=place, radius_km=25, sources=[key],
-                                  max_jobs=options.max_jobs, max_details=options.max_details,
+                                  max_jobs=options.max_jobs,
+                                  # Portale mit Ortsliste haben je Ort oft mehr als 25 Anzeigen (Kärcher Winnenden/Schwaikheim).
+                                  max_details=max(options.max_details, LOCATION_DETAILS) if place else options.max_details,
                                   documents=options.documents,
                                   robots_missing_ok=not options.strict_robots,
                                   seconds=options.seconds * (2 if key in ISOLATED_SOURCES else 1))

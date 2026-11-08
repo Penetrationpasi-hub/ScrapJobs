@@ -382,6 +382,19 @@ class CatalogLocationsTest(unittest.TestCase):
         self.assertEqual(result["status"], "done")
         self.assertEqual(len(result["jobs"]), 1)
 
+    def test_location_runs_read_more_details_than_the_default(self):
+        seen = []
+
+        def fake(req, factory):
+            seen.append((req.location, req.max_details))
+            return {"jobs": [], "sources": [{"status": "done"}]}
+
+        configured = {"festo": SimpleNamespace(label="Festo", catalog_locations=("Esslingen",)),
+                      "stihl": SimpleNamespace(label="STIHL", catalog_locations=())}
+        with mock.patch.object(batch, "crawl", fake):
+            batch.collect(["festo", "stihl"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(seen, [("Esslingen", 50), ("", 25)])
+
     def test_sources_without_places_run_once_with_empty_location(self):
         result, calls = self.collect({"": ("done", [job(1)])}, places=())
         self.assertEqual(calls, [""])

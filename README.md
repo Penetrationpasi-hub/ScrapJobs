@@ -42,7 +42,7 @@ Rems-Murr-JOBS und ZVW haben 10 s Crawl-Delay und laufen zuletzt.
 
 **Globale Konzernportale** (Festo, MAHLE, Kärcher) listen ohne Suchbegriff weltweit. Für sie gibt es `catalog_locations`
 (in `employers.json`, bei Festo in `sources.py`): Der Katalog fragt die Suche je Ort einmal mit `locationsearch=<Ort>` ab
-und führt die Treffer zusammen. Aktuell Festo: Esslingen, Ostfildern · Kärcher: Winnenden, Schwaikheim ·
+und führt die Treffer zusammen. Je Ort werden bis zu 50 Anzeigen gelesen (sonst 25). Aktuell Festo: Esslingen, Ostfildern · Kärcher: Winnenden, Schwaikheim ·
 MAHLE: Stuttgart, Fellbach, Markgröningen, Kornwestheim, Mühlacker. Schlägt ein Ort fehl, zählen die übrigen,
 und `quellen[].detail` nennt den fehlenden Ort. Die Orte gelten nur im Katalog, nicht in der Live-Suche.
 Frühere weltweite Treffer verschwinden nach der Karenzzeit (3 Tage) von selbst.
