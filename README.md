@@ -77,13 +77,17 @@ python -m pytest -q
 python batch.py --sources stihl,kaercher --out ../stellen.json
 ```
 
-## Live-Suche (Render) und Umzug
+## Eigenes Render-Projekt (optional)
 
-`scrapling-server/` ist eine unveränderte Kopie des Dienstes aus dem App-Repo
-(`N-chster-Schritt2`), plus `batch.py`. Die einzige Änderung an `crawler.py`:
-optionale Request-Attribute `max_jobs`, `max_details`, `seconds`, `documents`;
-ohne sie gelten die bisherigen Pilot-Limits (30 Stellen, 40 Abrufe, 240 s, 10 Details).
+`scrapling-server/` ist eine Kopie des Dienstes aus dem App-Repo (`N-chster-Schritt2`) plus `batch.py`.
+**Das ist Absicht:** ScrapJobs läuft als eigenes Projekt, der „normale“ Scraper in der App bleibt
+unverändert als Alternative bestehen. Der Katalog selbst braucht Render nicht, er läuft nur in GitHub Actions.
 
-Solange Render noch aus dem App-Repo deployt, existiert der Code an zwei Stellen.
-Empfehlung: Render auf dieses Repo umstellen (`rootDir: scrapling-server`, siehe `render.yaml`
-im App-Repo) und den Ordner dort entfernen. Bis dahin Änderungen an Adaptern in beiden Repos nachziehen.
+Wer die Live-Suche auch aus diesem Repo betreiben will, legt in Render einen **neuen** Web Service
+aus diesem Repo an (*New → Blueprint*, nutzt `render.yaml`, Dienstname `scrapjobs-scrapling`,
+eigener `SCRAPLING_API_TOKEN`, automatische Deploys aus). Der Dienst im App-Repo wird dafür nicht angefasst.
+
+Einzige Änderung an `crawler.py` gegenüber dem Original: optionale Request-Attribute
+`max_jobs`, `max_details`, `seconds`, `documents`. Ohne sie gelten die bisherigen Pilot-Limits
+(30 Stellen, 40 Abrufe, 240 s, 10 Details). Änderungen an Adaptern müssen in beiden Repos
+nachgezogen werden, solange beide Kopien existieren.

@@ -1,0 +1,23 @@
+# Eigenes Render-Projekt für ScrapJobs. Unabhängig vom Dienst im App-Repo
+# (naechster-schritt-scrapling-pilot), der als Alternative weiterläuft.
+services:
+  - type: web
+    name: scrapjobs-scrapling
+    runtime: python
+    plan: free
+    region: frankfurt
+    rootDir: scrapling-server
+    buildCommand: pip install --disable-pip-version-check -r requirements.txt
+    startCommand: python -m uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1 --limit-concurrency 8 --timeout-keep-alive 5
+    healthCheckPath: /health
+    numInstances: 1
+    autoDeployTrigger: "off"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.11
+      - key: SCRAPLING_ENABLED
+        value: "1"
+      - key: SCRAPLING_API_TOKEN
+        generateValue: true
+      - key: SCRAPLING_APPROVED_SOURCES
+        value: ""
