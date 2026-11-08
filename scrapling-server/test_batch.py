@@ -60,6 +60,31 @@ class MergeTest(unittest.TestCase):
         self.assertEqual({r["id"] for r in later["stellen"]}, {"scrapling-1", "scrapling-2"})
 
 
+class PartialRunTest(unittest.TestCase):
+    def test_sources_not_in_this_run_keep_their_state(self):
+        first = batch.merge(None, {"a": result("done", job(1)), "b": result("done", job(2, "B AG")), "c": result("timeout")},
+                            "2026-11-09", NOW, known=["a", "b", "c"])
+        partial = batch.merge(first, {"a": result("done", job(1), job(3))}, "2026-11-12", NOW, known=["a", "b", "c"])
+        self.assertEqual([q["key"] for q in partial["quellen"]], ["a", "b", "c"])
+        self.assertEqual({r["id"] for r in partial["stellen"]}, {"scrapling-1", "scrapling-2", "scrapling-3"})
+        by_key = {q["key"]: q for q in partial["quellen"]}
+        self.assertEqual(by_key["b"]["letzterErfolg"], "2026-11-09")  # nicht verlängert, weil nicht abgefragt
+        self.assertEqual(by_key["c"]["status"], "timeout")
+        old_b = [r for r in partial["stellen"] if r["source"] == "b"][0]
+        self.assertEqual(old_b["zuletztGesehen"], "2026-11-09")
+
+    def test_sources_removed_from_the_catalog_are_dropped(self):
+        first = batch.merge(None, {"a": result("done", job(1)), "gone": result("done", job(2, "X"))}, "2026-11-09", NOW, known=["a", "gone"])
+        later = batch.merge(first, {"a": result("done", job(1))}, "2026-11-10", NOW, known=["a"])
+        self.assertEqual([q["key"] for q in later["quellen"]], ["a"])
+        self.assertEqual([r["id"] for r in later["stellen"]], ["scrapling-1"])
+
+    def test_without_known_list_unlisted_sources_are_kept_too(self):
+        first = batch.merge(None, {"a": result("done", job(1)), "b": result("done", job(2, "B"))}, "2026-11-09", NOW)
+        later = batch.merge(first, {"a": result("done", job(1))}, "2026-11-10", NOW)
+        self.assertEqual(len(later["stellen"]), 2)
+
+
 class OverviewTest(unittest.TestCase):
     def test_markdown_groups_by_company_and_lists_sources(self):
         catalog = batch.merge(None, {"acme": result("done", job(1), job(2, "B AG")), "kaputt": result("timeout")}, "2026-11-09", NOW)

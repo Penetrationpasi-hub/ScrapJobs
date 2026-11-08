@@ -58,7 +58,7 @@ def record(job, key, label):
     return row
 
 
-def merge(previous, results, today, now, grace_days=3):
+def merge(previous, results, today, now, grace_days=3, known=None):
     """Neuen Lauf mit dem Vorstand zusammenführen.
 
     results: {key: {"label", "status", "jobs": [...]}}.
@@ -93,7 +93,16 @@ def merge(previous, results, today, now, grace_days=3):
             info["letzterErfolg"] = old_sources.get(key, {}).get("letzterErfolg")
         info["anzahl"] = sum(1 for row in jobs.values() if row["source"] == key)
         sources.append(info)
-    # Quellen, die in diesem Lauf nicht vorkamen (z. B. aus der Liste genommen), werden entfernt.
+    # Teillauf: Quellen, die in diesem Lauf nicht abgefragt wurden, behalten Stand und Status unverändert.
+    # Entfernt werden nur Quellen, die es im Katalog (known) nicht mehr gibt.
+    for key, old in old_sources.items():
+        if key in results or (known is not None and key not in known):
+            continue
+        sources.append(dict(old))
+        jobs.update({i: r for i, r in old_jobs.items() if r.get("source") == key})
+    if known is not None:
+        position = {key: index for index, key in enumerate(known)}
+        sources.sort(key=lambda info: position.get(info["key"], len(position)))
     ordered = sorted(jobs.values(), key=lambda r: (r["company"].casefold(), r["title"].casefold(), r["id"]))
     return {"schema": SCHEMA, "aktualisiert": now.isoformat(timespec="seconds"),
             "quellen": sources, "stellen": ordered}
@@ -190,7 +199,7 @@ def run(options):
     if not any(r["status"] == "done" for r in results.values()):
         print("Keine Quelle erfolgreich gelesen; stellen.json bleibt unverändert.", file=sys.stderr)
         return 1
-    catalog = merge(previous, results, now.date().isoformat(), now, options.grace_days)
+    catalog = merge(previous, results, now.date().isoformat(), now, options.grace_days, known=list(configured))
     tmp = out.with_suffix(".tmp")
     tmp.write_text(json.dumps(catalog, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     tmp.replace(out)
