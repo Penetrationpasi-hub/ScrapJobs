@@ -53,6 +53,60 @@ def discovery(html, base, source, q="", near=None):
     return links, urljoin(base, next_url) if next_url else None
 
 
+def has_microdata(page):
+    return bool(page.css('[itemscope][itemtype*="schema.org/JobPosting"]'))
+
+
+def stamp(value):
+    """schema.org-Datum als ISO ("2026-11-08T02:00:00+00:00") oder Java-Stil ("Sun Nov 08 02:00:00 UTC 2026")."""
+    value = " ".join(str(value or "").split())
+    for pattern in ("%a %b %d %H:%M:%S %Z %Y", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d"):
+        try:
+            parsed = datetime.strptime(value, pattern)
+        except ValueError:
+            continue
+        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+    return None
+
+
+def microdata(page, now=None):
+    """Einzelne JobPosting-Auszeichnung per itemprop (z. B. SuccessFactors). None = nicht verwertbar oder abgelaufen."""
+    roots = page.css('[itemscope][itemtype*="schema.org/JobPosting"]')
+    if len(roots) != 1:  # mehrere Rollen auf einer Seite sind kein Beleg für eine einzelne Stelle
+        return None
+    root = roots[0]
+
+    def meta(name):
+        values = [v for v in root.css(f'meta[itemprop="{name}"]::attr(content)').getall() if v.strip()]
+        return plain(values[0]) if len(values) == 1 else ""
+
+    def text(name):
+        nodes = root.css(f':not(meta)[itemprop="{name}"]')
+        return plain(nodes[0].get()) if len(nodes) == 1 else ""
+
+    title = text("title") or meta("title")
+    company = meta("hiringOrganization")
+    if not company:
+        nodes = root.css('[itemprop="hiringOrganization"] [itemprop="name"]')
+        company = plain(nodes[0].get()) if len(nodes) == 1 else ""
+    for name in ("validThrough",):
+        raw = meta(name)
+        if raw:
+            parsed = stamp(raw)
+            if parsed is None or parsed < (now or datetime.now(timezone.utc)):
+                return None
+    places = []
+    for name in ("streetAddress", "addressLocality", "postalCode", "addressRegion"):
+        value = meta(name) or text(name)
+        if value and value not in places:
+            places.append(value)
+    location = ", ".join(places) or plain(" ".join(root.css(".jobGeoLocation").getall()))
+    description = text("description") or None
+    published = stamp(meta("datePosted"))
+    posted = published.strftime("%Y-%m-%d") if published else ""
+    return title, company, location, description, posted
+
+
 def entries(value):
     if isinstance(value, list):
         for row in value:
@@ -122,6 +176,11 @@ def extract(html, raw, source, q="", now=None):
         description = plain(raw_description) or None
         posted = row.get("datePosted", "")
         posted = posted[:10] if isinstance(posted, str) and re.match(r"^\d{4}-\d\d-\d\d", posted) else ""
+    elif has_microdata(page):
+        row = microdata(page, now)
+        if not row:
+            return None
+        title, company, location, description, posted = row
     elif source.title_selector and source.company_selector:
         def field(selector):
             return plain(" ".join(page.css(selector).getall())) if selector else ""
