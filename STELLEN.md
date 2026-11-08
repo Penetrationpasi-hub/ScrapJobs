@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T18:29:28+00:00 · 569 Stellen aus 42 von 61 Quellen
+Stand: 2026-11-08T18:43:00+00:00 · 578 Stellen aus 43 von 61 Quellen
 
 ## Quellen
 
@@ -12,7 +12,7 @@ Stand: 2026-11-08T18:29:28+00:00 · 569 Stellen aus 42 von 61 Quellen
 | STIHL | unsupported | 0 | – |  |
 | MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
 | Diakonie Stetten | unsupported | 0 | – |  |
-| Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- (ld+json 0, JobPosting 0, 114997 Zeichen, Titel «Robert Bosch Krankenhaus GmbH Medizinischer Fachan») → Titel/Firma ungeeignet (Titel True, Firma False) |
+| Robert Bosch Krankenhaus | done | 9 | 2026-11-08 |  |
 | Kärcher | done | 99 | 2026-11-08 | teilweise: Schwaikheim network_error |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
@@ -670,6 +670,18 @@ Stand: 2026-11-08T18:29:28+00:00 · 569 Stellen aus 42 von 61 Quellen
 ### RIVA Power Systems GmbH & Co. KG
 
 - [SPS-Programmierer/Softwareentwickler für Brennstoffzellen (m/w/d)](https://mpire.jobs.personio.de/job/2670131) · Backnang Lerchenäcker · seit 2026-11-08
+
+### Robert Bosch Krankenhaus GmbH
+
+- [Facharzt (m/w/d) für Allgemeinmedizin / Innere Medizin in der hausärztlichen Zweigpraxis im PORT Gesundheitszentrum Bosch Health Campus RBK, Standort City](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000158064800-facharzt-m-w-d-fur-allgemeinmedizin-innere-medizin-in-der-hausarztlichen-zweigpraxis-im-port-gesundheitszentrum-bosch-health-campus-rbk-standort-city) · Hohenheimer Straße 21, Stuttgart, 70184, Baden-Württemberg · seit 2026-11-08
+- [Gesundheits- und Krankenpfleger (m/w/d) oder Medizinische Fachangestellte (m/w/d) für die Dialyse (Voll- oder Teilzeit)](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000156473389-gesundheits-und-krankenpfleger-m-w-d-oder-medizinische-fachangestellte-m-w-d-fur-die-dialyse-voll-oder-teilzeit-) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Gesundheits- und Krankenpfleger und Altenpfleger (m/w/d) für unsere orthopädisch-unfallchirurgische Station](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000157804765-gesundheits-und-krankenpfleger-und-altenpfleger-m-w-d-fur-unsere-orthopadisch-unfallchirurgische-station) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Leitung der Hauswirtschaft (m/w/d ) für die Bereiche Reinigung, Wäscheversorgung, Bettenaufbereitung und Hol- und Bringedienst in Vollzeit](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000155688749-leitung-der-hauswirtschaft-m-w-d-fur-die-bereiche-reinigung-wascheversorgung-bettenaufbereitung-und-hol-und-bringedienst-in-vollzeit) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Medizinischer Fachangestellter, MTA-F oder MTRA (m/w/d) für das Kardio-MRT](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000159624439-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Medizinischer Fachangestellter, MTA-F oder MTRA (m/w/d) für das Kardio-MRT für den Spätdienst (14:00 - 22:00 Uhr)](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr-) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Mitarbeiter im Sekretariat des Bildungszentrums 100% (m/w/d)](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000159307309-mitarbeiter-im-sekretariat-des-bildungszentrums-100-m-w-d-) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Personalcontroller (m/w/d)](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160140229-personalcontroller-m-w-d-) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
+- [Projektleitung SAP S/4HANA-Transformation (m/w/d) - Betriebsorganisation im Kliniksektor](https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000157409245-projektleitung-sap-s-4hana-transformation-m-w-d-betriebsorganisation-im-kliniksektor-) · Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg · seit 2026-11-08
 
 ### Savanto GmbH
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T18:29:28+00:00",
+ "aktualisiert": "2026-11-08T18:43:00+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -48,10 +48,9 @@
   {
    "key": "robert_bosch_krankenhaus",
    "label": "Robert Bosch Krankenhaus",
-   "status": "no_verified_jobs",
-   "letzterErfolg": null,
-   "detail": "verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- (ld+json 0, JobPosting 0, 114997 Zeichen, Titel «Robert Bosch Krankenhaus GmbH Medizinischer Fachan») → Titel/Firma ungeeignet (Titel True, Firma False)",
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 9
   },
   {
    "key": "kaercher",
@@ -5953,6 +5952,114 @@
    "posted": "2026-06-12",
    "source": "riva",
    "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9d748aed371ce477d44c409b",
+   "title": "Facharzt (m/w/d) für Allgemeinmedizin / Innere Medizin in der hausärztlichen Zweigpraxis im PORT Gesundheitszentrum Bosch Health Campus RBK, Standort City",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Hohenheimer Straße 21, Stuttgart, 70184, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000158064800-facharzt-m-w-d-fur-allgemeinmedizin-innere-medizin-in-der-hausarztlichen-zweigpraxis-im-port-gesundheitszentrum-bosch-health-campus-rbk-standort-city",
+   "posted": "2026-10-27",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-bb66bfd31a0d543fd9811bcc",
+   "title": "Gesundheits- und Krankenpfleger (m/w/d) oder Medizinische Fachangestellte (m/w/d) für die Dialyse (Voll- oder Teilzeit)",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000156473389-gesundheits-und-krankenpfleger-m-w-d-oder-medizinische-fachangestellte-m-w-d-fur-die-dialyse-voll-oder-teilzeit-",
+   "posted": "2026-10-20",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-0ca84af2787e1f9ca88ea71c",
+   "title": "Gesundheits- und Krankenpfleger und Altenpfleger (m/w/d) für unsere orthopädisch-unfallchirurgische Station",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000157804765-gesundheits-und-krankenpfleger-und-altenpfleger-m-w-d-fur-unsere-orthopadisch-unfallchirurgische-station",
+   "posted": "2026-10-26",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-99e71c739cba465b75a52255",
+   "title": "Leitung der Hauswirtschaft (m/w/d ) für die Bereiche Reinigung, Wäscheversorgung, Bettenaufbereitung und Hol- und Bringedienst in Vollzeit",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000155688749-leitung-der-hauswirtschaft-m-w-d-fur-die-bereiche-reinigung-wascheversorgung-bettenaufbereitung-und-hol-und-bringedienst-in-vollzeit",
+   "posted": "2026-10-15",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-fd537f403bb92d991cbedc74",
+   "title": "Medizinischer Fachangestellter, MTA-F oder MTRA (m/w/d) für das Kardio-MRT",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000159624439-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt",
+   "posted": "2026-11-04",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-6ed38232ef3d34611dd634a1",
+   "title": "Medizinischer Fachangestellter, MTA-F oder MTRA (m/w/d) für das Kardio-MRT für den Spätdienst (14:00 - 22:00 Uhr)",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr-",
+   "posted": "2026-11-06",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-64854be27ae83783f1c3915f",
+   "title": "Mitarbeiter im Sekretariat des Bildungszentrums 100% (m/w/d)",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000159307309-mitarbeiter-im-sekretariat-des-bildungszentrums-100-m-w-d-",
+   "posted": "2026-11-03",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-229eb0e47a6e25925413adb0",
+   "title": "Personalcontroller (m/w/d)",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160140229-personalcontroller-m-w-d-",
+   "posted": "2026-11-06",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-95207659fd0dadc6bb7041c3",
+   "title": "Projektleitung SAP S/4HANA-Transformation (m/w/d) - Betriebsorganisation im Kliniksektor",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000157409245-projektleitung-sap-s-4hana-transformation-m-w-d-betriebsorganisation-im-kliniksektor-",
+   "posted": "2026-10-23",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },
