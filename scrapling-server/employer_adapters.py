@@ -255,6 +255,9 @@ def adapter_jobs(source, req, get, report):
         yield from (judo if source.adapter == "judo_filter" else harro)(source, req, get, report)
     elif source.adapter == "carsonal":
         yield from carsonal(source, req, get, report)
+    elif source.adapter == "rems_list":
+        from rems_adapter import rems_list
+        yield from rems_list(source, req, get, report)
     elif source.adapter == "dvinci":
         from dvinci_adapter import dvinci
         yield from dvinci(source, req, get, report)
