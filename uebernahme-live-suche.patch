@@ -1,8 +1,43 @@
 diff --git a/scrapling-server/crawler.py b/scrapling-server/crawler.py
-index 687dbc7..6d6fe9e 100644
+index 687dbc7..ef5d079 100644
 --- a/scrapling-server/crawler.py
 +++ b/scrapling-server/crawler.py
-@@ -16,6 +16,9 @@ from search_outcomes import festo_no_matches
+@@ -1,3 +1,4 @@
++import json
+ import os
+ import re
+ import time
+@@ -5,7 +6,8 @@ from urllib.parse import urlsplit
+ from urllib.robotparser import RobotFileParser
+ 
+ import geo
+-from extraction import discovery, extract, is_detail, plain
++from scrapling import Selector
++from extraction import discovery, entries, extract, is_detail, plain
+ from safe_http import Budget, FetchError, Transport, USER_AGENT, RUN_SECONDS
+ from sources import registry, approved_sources
+ from employer_adapters import adapter_jobs
+@@ -13,9 +15,29 @@ from robots_exceptions import missing_robots_scope, missing_robots_statuses
+ from search_outcomes import festo_no_matches
+ 
+ 
++def probe(html):
++    """Kurzbeschreibung einer verworfenen Anzeigenseite für die Diagnose; Inhalte werden nicht übernommen."""
++    try:
++        page = Selector(html)
++        scripts = page.css('script[type="application/ld+json"]::text').getall()
++        postings = 0
++        for script in scripts:
++            try:
++                postings += sum(1 for _ in entries(json.loads(script)))
++            except (ValueError, TypeError):
++                continue
++        title = plain(page.css("title::text").get() or "")[:50]
++    except Exception:
++        return "(Seite nicht lesbar)"
++    return f"(ld+json {len(scripts)}, JobPosting {postings}, {len(html)} Zeichen, Titel «{title}»)"
++
++
  def crawl(req, transport_factory=Transport):
      # Live search keeps the pilot limits; the catalog batch passes its own via optional request attributes.
      max_jobs = getattr(req, "max_jobs", 30)
@@ -12,7 +47,7 @@ index 687dbc7..6d6fe9e 100644
      total_documents = getattr(req, "documents", 40)
      custom = hasattr(req, "seconds") or hasattr(req, "documents")
      budget = Budget(getattr(req, "seconds", RUN_SECONDS), total_documents) if custom else Budget()
-@@ -29,7 +32,7 @@ def crawl(req, transport_factory=Transport):
+@@ -29,7 +51,7 @@ def crawl(req, transport_factory=Transport):
          def check_robots(current):
              host = urlsplit(current).hostname
              if host not in source.hosts:
@@ -21,7 +56,7 @@ index 687dbc7..6d6fe9e 100644
              if host not in robots:
                  try:
                      probe = {"robots_request": True} if missing_robots_scope(current, source, options) else {}
-@@ -38,15 +41,26 @@ def crawl(req, transport_factory=Transport):
+@@ -38,15 +60,26 @@ def crawl(req, transport_factory=Transport):
                      if missing_robots_scope(current, source, options) and error.http_status in missing_robots_statuses(source):
                          robots[host] = None
                          return
@@ -50,8 +85,12 @@ index 687dbc7..6d6fe9e 100644
                      raise FetchError("robots_unavailable")
                  return
              if not robot.can_fetch(USER_AGENT, current):
-@@ -62,7 +76,7 @@ def crawl(req, transport_factory=Transport):
-                     raise FetchError("timeout")
+@@ -59,10 +92,10 @@ def crawl(req, transport_factory=Transport):
+             if last and delay > 1:
+                 pause = max(0, last + delay - time.monotonic())
+                 if pause >= budget.deadline - time.monotonic():
+-                    raise FetchError("timeout")
++                    raise FetchError("timeout", detail=f"robots.txt verlangt {delay:g}s Wartezeit zwischen Abrufen ({host})")
                  time.sleep(pause)
          final, html = transport.get(raw, source.hosts, authorize=check_robots, **options)
 -        if not options.get("accept_json") and ("captcha" in plain(html[:50000]).lower() or "access denied" in plain(html[:50000]).lower()):
@@ -59,7 +98,7 @@ index 687dbc7..6d6fe9e 100644
              raise FetchError("blocked")
          return final, html
  
-@@ -102,7 +116,7 @@ def crawl(req, transport_factory=Transport):
+@@ -102,7 +135,7 @@ def crawl(req, transport_factory=Transport):
              near = None
              if source.teaser and req.location and (origin := geo.center(req.location)):
                  near = lambda place: geo.in_range(origin, place, req.radius_km)
@@ -68,11 +107,46 @@ index 687dbc7..6d6fe9e 100644
                  if not next_url or next_url in visited:
                      break
                  visited.add(next_url)
-@@ -143,10 +157,17 @@ def crawl(req, transport_factory=Transport):
+@@ -112,6 +145,11 @@ def crawl(req, transport_factory=Transport):
+                         report["status"] = "no_matches"
+                     break
+                 links, following = discovery(html, final, source, req.q, near)
++                if not links and "detail" not in report:
++                    # Diagnose für leere Listen: was die Seite tatsächlich geliefert hat (z. B. JavaScript-Hülle).
++                    count = len(Selector(html).css("a[href]"))
++                    shell = plain(Selector(html).css("title::text").get() or "")[:50]
++                    report["list_note"] = f"{final} ({len(html)} Zeichen, {count} Links, Titel «{shell}»)"
+                 details.extend(link for link in links if link not in details)
+                 next_url = following
+                 # With a place filter further list pages are only worth their crawl delay while detail slots are free.
+@@ -124,6 +162,8 @@ def crawl(req, transport_factory=Transport):
+                 # An empty rendered shell is not proof of zero vacancies.
+                 if report["status"] != "no_matches":
+                     report["status"] = "unsupported"
++                    if report.get("list_note"):
++                        report["detail"] = "keine Anzeigenlinks auf " + report["list_note"]
+             for url in details[:getattr(req, "max_details", source.max_details)]:
+                 if len(jobs) >= max_jobs:
+                     break
+@@ -135,18 +175,30 @@ def crawl(req, transport_factory=Transport):
+                 except FetchError as error:
+                     if error.code == "gone":
+                         report["filtered"] += 1
++                        report.setdefault("sample", url + " (nicht gefunden)")
+                         continue
+                     raise
+-                job = extract(html, final, source, req.q) if is_detail(final, source) else None
++                why = []
++                job = extract(html, final, source, req.q, why=why) if is_detail(final, source) else None
++                if not job and not why:
++                    why.append("Weiterleitung auf " + final)
+                 if job:
+                     jobs.append(job)
                      report["kept"] += 1
                  else:
                      report["filtered"] += 1
-+                    report.setdefault("sample", url)
++                    if "sample" not in report:
++                        report["sample"] = url + " " + probe(html) + " → " + "; ".join(why)
              if details and report["filtered"] and not report["kept"]:
                  report["status"] = "no_verified_jobs"
          except FetchError as error:
@@ -155,7 +229,7 @@ index 0000000..f3214bb
 +        else:
 +            report["filtered"] += 1
 diff --git a/scrapling-server/employer_adapters.py b/scrapling-server/employer_adapters.py
-index 359c482..2fcb27f 100644
+index 359c482..3e5ddb9 100644
 --- a/scrapling-server/employer_adapters.py
 +++ b/scrapling-server/employer_adapters.py
 @@ -6,7 +6,7 @@ API records are mapped to the same strict JobPosting validation as HTML records.
@@ -198,10 +272,13 @@ index 359c482..2fcb27f 100644
          document = detail_document(get, raw, source, report)
          if document is None:
              continue
-@@ -255,6 +262,15 @@ def adapter_jobs(source, req, get, report):
+@@ -255,6 +262,18 @@ def adapter_jobs(source, req, get, report):
          yield from (judo if source.adapter == "judo_filter" else harro)(source, req, get, report)
      elif source.adapter == "carsonal":
          yield from carsonal(source, req, get, report)
++    elif source.adapter == "sitemap":
++        from sitemap_adapter import sitemap
++        yield from sitemap(source, req, get, report)
 +    elif source.adapter == "personio":
 +        from personio_adapter import personio
 +        yield from personio(source, req, get, report)
@@ -215,10 +292,21 @@ index 359c482..2fcb27f 100644
          from murr_adapter import murr
          yield from murr(source, req, get, report)
 diff --git a/scrapling-server/extraction.py b/scrapling-server/extraction.py
-index ac8298f..ed14805 100644
+index ac8298f..4a9d327 100644
 --- a/scrapling-server/extraction.py
 +++ b/scrapling-server/extraction.py
-@@ -53,6 +53,64 @@ def discovery(html, base, source, q="", near=None):
+@@ -32,6 +32,10 @@ def is_detail(raw, source):
+ def discovery(html, base, source, q="", near=None):
+     """Detail links of a result page. `near(place_text)` may veto a teaser whose listed place is out of range."""
+     page = Selector(html)
++    # Relative Links gelten gegen <base href>, wenn die Seite eines setzt (Contao: Frech).
++    declared = page.css("base::attr(href)").get()
++    if declared:
++        base = urljoin(base, declared.strip())
+     links = []
+     scores = {}
+     terms = norm(q).split()
+@@ -53,6 +57,73 @@ def discovery(html, base, source, q="", near=None):
      return links, urljoin(base, next_url) if next_url else None
  
  
@@ -229,6 +317,11 @@ index ac8298f..ed14805 100644
 +def stamp(value):
 +    """schema.org-Datum als ISO ("2026-11-08T02:00:00+00:00") oder Java-Stil ("Sun Nov 08 02:00:00 UTC 2026")."""
 +    value = " ".join(str(value or "").split())
++    try:  # ISO 8601 inkl. Millisekunden und "Z" (SmartRecruiters: 2026-11-06T08:53:04.308Z)
++        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
++        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
++    except ValueError:
++        pass
 +    for pattern in ("%a %b %d %H:%M:%S %Z %Y", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d"):
 +        try:
 +            parsed = datetime.strptime(value, pattern)
@@ -261,7 +354,11 @@ index ac8298f..ed14805 100644
 +    company = meta("hiringOrganization")
 +    if not company:
 +        nodes = root.css('[itemprop="hiringOrganization"] [itemprop="name"]')
-+        company = plain(nodes[0].get()) if len(nodes) == 1 else ""
++        if len(nodes) == 1:
++            # SmartRecruiters setzt den Namen als <meta itemprop="name" content="…">, andere als Text.
++            company = plain(nodes[0].attrib.get("content", "")) or plain(nodes[0].get())
++        else:
++            company = ""
 +    for name in ("validThrough",):
 +        raw = meta(name)
 +        if raw:
@@ -283,18 +380,91 @@ index ac8298f..ed14805 100644
  def entries(value):
      if isinstance(value, list):
          for row in value:
-@@ -122,6 +180,11 @@ def extract(html, raw, source, q="", now=None):
+@@ -69,13 +140,18 @@ def norm(value):
+     return unicodedata.normalize("NFKD", value).casefold()
+ 
+ 
+-def extract(html, raw, source, q="", now=None):
+-    if not is_detail(raw, source):
++def extract(html, raw, source, q="", now=None, why=None):
++    def no(reason):
++        if why is not None:
++            why.append(reason)
+         return None
++
++    if not is_detail(raw, source):
++        return no("keine Anzeigenadresse")
+     page = Selector(html)
+     text = plain(html)
+     if re.search(r"(job|stelle|anzeige).{0,45}(abgelaufen|nicht mehr (verfügbar|online)|bereits besetzt)|no longer accepting|job has expired", text, re.I):
+-        return None
++        return no("Text meldet abgelaufen/besetzt")
+     postings = []
+     for script in page.css('script[type="application/ld+json"]::text').getall():
+         try:
+@@ -84,14 +160,14 @@ def extract(html, raw, source, q="", now=None):
+             continue
+     # A page advertising multiple roles is not evidence of a single vacancy.
+     if len(postings) > 1:
+-        return None
++        return no("mehrere JobPosting")
+     if postings:
+         row = postings[0]
+         title = plain(row.get("title"))
+         organization = row.get("hiringOrganization")
+         company = plain(organization.get("name")) if isinstance(organization, dict) else ""
+         if row.get("url") and canonical(urljoin(raw, str(row["url"]))) != canonical(raw):
+-            return None
++            return no("JobPosting-url weicht ab")
+         expiry = row.get("validThrough")
+         if expiry:
+             try:
+@@ -99,9 +175,9 @@ def extract(html, raw, source, q="", now=None):
+                 if parsed.tzinfo is None:
+                     parsed = parsed.replace(tzinfo=timezone.utc)
+                 if parsed < (now or datetime.now(timezone.utc)):
+-                    return None
++                    return no("validThrough abgelaufen")
+             except ValueError:
+-                return None
++                return no("validThrough nicht lesbar")
+         locations = row.get("jobLocation") or []
+         if isinstance(locations, dict):
+             locations = [locations]
+@@ -122,6 +198,11 @@ def extract(html, raw, source, q="", now=None):
          description = plain(raw_description) or None
          posted = row.get("datePosted", "")
          posted = posted[:10] if isinstance(posted, str) and re.match(r"^\d{4}-\d\d-\d\d", posted) else ""
 +    elif has_microdata(page):
 +        row = microdata(page, now)
 +        if not row:
-+            return None
++            return no("Mikrodaten unvollständig")
 +        title, company, location, description, posted = row
      elif source.title_selector and source.company_selector:
          def field(selector):
              return plain(" ".join(page.css(selector).getall())) if selector else ""
+@@ -131,16 +212,16 @@ def extract(html, raw, source, q="", now=None):
+             match = re.search(source.company_capture, company, re.I)
+             company = match.group(0) if match else ""
+     else:
+-        return None
+-    if (not title or not company or re.search(r"initiativbewerbung|unsolicited application|talent.?pool|general application", title, re.I)
++        return no("keine strukturierten Daten")
++    if (not title or not company or re.search(r"initiativbewerbung|unsolicited application|talent.?pool|general application|stelle\s+besetzt|position\s+filled", title, re.I)
+             or re.search(r"verschiedene|mehrere|diverse|unbekannt|nicht angegeben", company, re.I)
+             or re.search(r"\d+\s+(?:offene\s+)?(?:jobs|stellen|treffer)|suchergebnisse", title, re.I)):
+-        return None
++        return no(f"Titel/Firma ungeeignet (Titel {bool(title)}, Firma {bool(company)})")
+     if source.company_pattern and not re.search(source.company_pattern, company, re.I):
+-        return None
++        return no("Firma passt nicht zum Muster")
+     # Search pages can ignore search terms; keep query relevance grounded in extracted text.
+     if q and not any(word in norm(title + " " + (description or "")) for word in norm(q).split()):
+-        return None
++        return no("Suchbegriff fehlt")
+     url = canonical(raw)
+     if source.key in {"rems_murr_jobs", "zvw"} and description and len(description) > 480:
+         description = description[:480].rsplit(" ", 1)[0] + " …"
 diff --git a/scrapling-server/personio_adapter.py b/scrapling-server/personio_adapter.py
 new file mode 100644
 index 0000000..fc3bc8e
@@ -535,8 +705,62 @@ index 1097674..4805067 100644
              finally:
                  connection.close()
          raise FetchError("redirect_limit")
+diff --git a/scrapling-server/sitemap_adapter.py b/scrapling-server/sitemap_adapter.py
+new file mode 100644
+index 0000000..c0bddb5
+--- /dev/null
++++ b/scrapling-server/sitemap_adapter.py
+@@ -0,0 +1,48 @@
++"""Anzeigen über die Sitemap, die der Betreiber für Suchmaschinen veröffentlicht (z. B. Talention-Portale).
++
++Sinnvoll, wenn die Stellenliste per JavaScript entsteht, die Anzeigenseiten selbst aber serverseitig ausgeliefert
++werden. Gelesen wird nur die in der Konfiguration genannte Sitemap-Datei (eine <urlset>, keine Index-Dateien,
++kein DOCTYPE). Jede Adresse muss dem Linkmuster der Quelle entsprechen; die Anzeige selbst wird wie überall auf
++der Einzelseite geprüft (JSON-LD, Firma, Ablauf).
++"""
++import re
++import xml.etree.ElementTree as ET
++
++from extraction import extract, is_detail
++from safe_http import FetchError
++
++
++def locations(text):
++    if re.search(r"<!(?:DOCTYPE|ENTITY)", text, re.I):
++        raise FetchError("unsupported", detail="Sitemap mit DOCTYPE/ENTITY abgelehnt")
++    try:
++        root = ET.fromstring(text.lstrip("﻿"))
++    except ET.ParseError:
++        raise FetchError("unsupported", detail="Sitemap nicht lesbar") from None
++    if not root.tag.endswith("}urlset") and root.tag != "urlset":
++        raise FetchError("unsupported", detail="Keine urlset-Sitemap")
++    found = []
++    for node in root.iter():
++        if node.tag.rsplit("}", 1)[-1] == "loc" and node.text and node.text.strip():
++            found.append(node.text.strip())
++    return found
++
++
++def sitemap(source, req, get, report):
++    from employer_adapters import detail_document
++    _, text = get(source.api, source, accept_xml=True)
++    limit = getattr(req, "max_details", 10)
++    links = []
++    for raw in locations(text):
++        if is_detail(raw, source) and raw not in links:
++            links.append(raw)
++    for raw in links[:limit]:
++        document = detail_document(get, raw, source, report)
++        if document is None:
++            continue
++        final, html = document
++        job = extract(html, final, source, req.q)
++        if job:
++            yield job
++        else:
++            report["filtered"] += 1
 diff --git a/scrapling-server/sources.py b/scrapling-server/sources.py
-index ca565ff..3d10700 100644
+index ca565ff..7e9c239 100644
 --- a/scrapling-server/sources.py
 +++ b/scrapling-server/sources.py
 @@ -31,6 +31,8 @@ class Source:
@@ -548,7 +772,7 @@ index ca565ff..3d10700 100644
  
      def start(self, q: str, location: str) -> str:
          return self.search.replace("{q}", quote(q, safe="")).replace("{location}", quote(location, safe=""))
-@@ -52,7 +54,8 @@ BOARDS = (
+@@ -52,10 +54,11 @@ BOARDS = (
  EMPLOYERS = (
      Source("festo", "Festo", ("jobs.festo.com",),
             "https://jobs.festo.com/search/?q={q}&locationsearch={location}", r"/job/[^?#]+",
@@ -557,7 +781,11 @@ index ca565ff..3d10700 100644
 +           catalog_locations=("Esslingen", "Ostfildern")),
      Source("bosch", "Bosch", ("careers.smartrecruiters.com", "jobs.smartrecruiters.com"),
             "https://careers.smartrecruiters.com/BoschGroup/?search={q}", r"/BoschGroup/\d+[^?#]*",
-            note="HTML-Abruf derzeit nicht bestätigt. Die öffentliche SmartRecruiters-API untersagt allgemeines Crawling; kein automatischer API-Ersatz und keine Umgehung."),
+-           note="HTML-Abruf derzeit nicht bestätigt. Die öffentliche SmartRecruiters-API untersagt allgemeines Crawling; kein automatischer API-Ersatz und keine Umgehung."),
++           note="Bewusst nicht gelesen: robots.txt von jobs.bosch.com sperrt /en/ (Anzeigen und Liste) für alle allgemeinen Crawler (Stand 2026-11-08), und die öffentliche SmartRecruiters-API untersagt allgemeines Crawling. Kein API-Ersatz und keine Umgehung."),
+ )
+ 
+ 
 @@ -73,7 +76,8 @@ def registry() -> dict[str, Source]:
              raise ValueError("One to thirty employer configurations required")
          employers = tuple(Source(**{**row, "hosts": tuple(row["hosts"])}) for row in rows)
@@ -584,14 +812,17 @@ index ca565ff..3d10700 100644
          if source.company_capture:
              re.compile(source.company_capture)
 -        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr"}:
-+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio"}:
++        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap"}:
              raise ValueError("Unknown employer adapter")
          if source.api:
              api = urlparse(source.api)
-@@ -116,10 +125,16 @@ def registry() -> dict[str, Source]:
+@@ -116,10 +125,19 @@ def registry() -> dict[str, Source]:
                  or source.api != "https://api.carsonal.de/rest"
                  or source.search != "https://jobs.burgerschloz.de/de/"):
              raise ValueError("Carsonal reader is bound to Burger Schloz's public career page")
++        if source.adapter == "sitemap" and not (
++                source.api and re.fullmatch(r"https://[a-z0-9.-]+/[A-Za-z0-9_./-]*sitemap[A-Za-z0-9_.-]*", source.api)):
++            raise ValueError("Sitemap reader needs a plain sitemap URL on a configured host")
 +        if source.adapter == "personio" and (len(source.hosts) != 1 or not source.hosts[0].endswith(".jobs.personio.de")
 +                or source.api != f"https://{source.hosts[0]}/xml"):
 +            raise ValueError("Personio reader is bound to the tenant's public /xml feed")

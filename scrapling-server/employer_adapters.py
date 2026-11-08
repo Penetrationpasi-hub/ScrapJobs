@@ -262,6 +262,9 @@ def adapter_jobs(source, req, get, report):
         yield from (judo if source.adapter == "judo_filter" else harro)(source, req, get, report)
     elif source.adapter == "carsonal":
         yield from carsonal(source, req, get, report)
+    elif source.adapter == "sitemap":
+        from sitemap_adapter import sitemap
+        yield from sitemap(source, req, get, report)
     elif source.adapter == "personio":
         from personio_adapter import personio
         yield from personio(source, req, get, report)

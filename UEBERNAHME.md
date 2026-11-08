@@ -17,6 +17,7 @@ Falls `employers.json` im App-Repo inzwischen anders aussieht, schlägt der Teil
 |---|---|---|
 | `dvinci_adapter.py` | WIRmachenDRUCK | liest die DvinciData-Stellenliste (JSON im HTML) |
 | `rems_adapter.py` | REMS | liest die Orchard-Listenseite |
+| `sitemap_adapter.py` | Peter Hahn (Talention) | liest die in der robots.txt genannte Sitemap (nur `<urlset>`, kein DOCTYPE) und prüft jede Anzeige auf der Einzelseite |
 | `personio_adapter.py` | RIVA / Mpire | liest den öffentlichen Personio-XML-Feed (`/xml`); lehnt DOCTYPE/ENTITY ab, IDs müssen numerisch sein |
 
 Dazu: `employer_adapters.adapter_jobs` ruft `dvinci`, `rems_list`, `personio` auf. `sources.py` kennt die Adapter-Namen und bindet sie fest:
@@ -45,6 +46,7 @@ Rückwärtskompatibel, die Live-Suche verhält sich ohne die neuen Request-Felde
 - `riva` → `"adapter":"personio","api":"https://mpire.jobs.personio.de/xml"`
 - `tesat` → `"adapter":"workday","api":"https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus/jobs"`, `detail` `^/de-DE/Airbus/job/[^?#]+`
 - neu `airbus` (gleiche API, drei Standort-IDs, `company_pattern` `airbus`)
+- `peter_hahn` → `"adapter":"sitemap","api":"https://jobs.peterhahn.com/sitemap"`
 - `soehnle` → Selektoren statt strukturierter Daten (`title_selector`, `company_selector`, `company_capture`, `company_pattern`, `description_selector`)
 - `catalog_locations` (nur Katalog: Festo, MAHLE, Kärcher) wird von der Live-Suche nicht gebraucht.
 
