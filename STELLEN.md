@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T19:05:59+00:00 · 678 Stellen aus 47 von 61 Quellen
+Stand: 2026-11-08T19:17:44+00:00 · 738 Stellen aus 48 von 61 Quellen
 
 ## Quellen
 
@@ -9,7 +9,7 @@ Stand: 2026-11-08T19:05:59+00:00 · 678 Stellen aus 47 von 61 Quellen
 | Festo | done | 35 | 2026-11-08 |  |
 | Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | Mercedes-Benz | unsupported | 0 | – |  |
-| STIHL | unsupported | 0 | – |  |
+| STIHL | done | 60 | 2026-11-08 |  |
 | MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
 | Diakonie Stetten | done | 60 | 2026-11-08 |  |
 | Robert Bosch Krankenhaus | done | 9 | 2026-11-08 |  |
@@ -34,7 +34,7 @@ Stand: 2026-11-08T19:05:59+00:00 · 678 Stellen aus 47 von 61 Quellen
 | REMS | done | 7 | 2026-11-08 |  |
 | stoba Backnang | done | 5 | 2026-11-08 |  |
 | Deutsche Post / DHL | unsupported | 0 | – |  |
-| d&b audiotechnik | unsupported | 0 | – |  |
+| d&b audiotechnik | network_error | 0 | – | TimeoutError www.dbaudio.com |
 | SWR Stuttgart | unsupported | 0 | – |  |
 | TTI / AEG / Milwaukee | done | 10 | 2026-11-08 |  |
 | Burger Schloz Automobile | done | 9 | 2026-11-08 |  |
@@ -235,6 +235,69 @@ Stand: 2026-11-08T19:05:59+00:00 · 678 Stellen aus 47 von 61 Quellen
 - [Werkstudent (m/w/d) Logistik & Supply Chain Management](https://careers.kaercher.com/job/Obersontheim-Werkstudent-%28mwd%29-Logistik-&-Supply-Chain-Management-74423/1367720755) · Obersontheim, DE, 74423 · seit 2026-11-08
 - [КОНСУЛТАНТ ПРОДАЖБИ](https://careers.kaercher.com/job/%D0%A1%D0%BE%D1%84%D0%B8%D1%8F-%D0%9A%D0%9E%D0%9D%D0%A1%D0%A3%D0%9B%D0%A2%D0%90%D0%9D%D0%A2-%D0%9F%D0%A0%D0%9E%D0%94%D0%90%D0%96%D0%91%D0%98-1434/1136338755) · София, BG, 1434 · seit 2026-11-08
 - [Търговски представител - Директни продажби](https://careers.kaercher.com/job/%D0%A1%D0%BE%D1%84%D0%B8%D1%8F-%D0%A2%D1%8A%D1%80%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8-%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB-%D0%94%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BD%D0%B8-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B1%D0%B8-1000/966548755) · София, BG, 1000 · seit 2026-11-08
+
+### ANDREAS STIHL AG & Co. KG
+
+- [Abschlussarbeit Analytik von Akkuzellen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-analytik-von-akkuzellen-sf37561) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Bewertung der Materialgüterpotenziale auf die Performance von Elektromotoren](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-bewertung-der-materialgueterpotenziale-auf-die-performance-von-elektromotoren-sf44462) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit E-Motor Design](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-e-motor-design-sf56180) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Entwickeln von Funktionsprototypen für neue Antriebsfunktionen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-entwickeln-von-funktionsprototypen-fuer-neue-antriebsfunktionen-sf56994) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Entwicklung eines Auslegungstools zur Skalierung von Synchronmaschinen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-entwicklung-eines-auslegungstools-zur-skalierung-von-synchronmaschinen-sf36983) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit im Bereich Regelung elektrische Antriebe](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-im-bereich-regelung-elektrische-antriebe-sf52994) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Modellbasierte Funktionsentwicklung mit MATLAB/Simulink](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-modellbasierte-funktionsentwicklung-mit-matlab-simulink-sf53532) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Modellierung von Lithium-Ionen Batterien](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-modellierung-von-lithium-ionen-batterien-sf37545) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Schmutzmanagementkonzepte für Akkugeräte](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-schmutzmanagementkonzepte-fuer-akkugeraete-sf56989) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Untersuchung der Alterung von kommerziellen Lithium-Ionen Batterien](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-untersuchung-der-alterung-von-kommerziellen-lithium-ionen-batterien-sf52528) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Vorentwicklung BLDC Motorelektroniken mit Wide Bandgap Halbleitern](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-vorentwicklung-bldc-motorelektroniken-mit-wide-bandgap-halbleitern-sf56222) · Waiblingen DE · seit 2026-11-08
+- [Ausbildung als Industriemechaniker (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/ausbildung-als-industriemechaniker-w-m-d-2027-sf57524) · Waiblingen DE · seit 2026-11-08
+- [Ausbildung als Maschinen- und Anlagenführer (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/ausbildung-als-maschinen-und-anlagenfuehrer-w-m-d-2027-sf57567) · Tengen/Wiechs am Randen DE · seit 2026-11-08
+- [Ausbildung als Mechatroniker (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/ausbildung-als-mechatroniker-w-m-d-2027-sf57572) · Waiblingen DE · seit 2026-11-08
+- [Betriebsarzt (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/betriebsarzt-w-m-d-sf57048) · Waiblingen DE · seit 2026-11-08
+- [Global Channel Lead DIY (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/global-channel-lead-diy-w-m-d-sf52723) · Waiblingen DE · seit 2026-11-08
+- [Hotelfachkraft Catering & Veranstaltungsservice (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/hotelfachkraft-catering-and-veranstaltungsservice-w-m-d-sf57474) · Waiblingen DE · seit 2026-11-08
+- [Mitarbeiter Lagerlogistik D3 (w/m/d) - Befristet](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/mitarbeiter-lagerlogistik-d3-w-m-d-befristet-sf55706) · Tengen/Wiechs am Randen DE · seit 2026-11-08
+- [Praktikum Benchmarking Antriebssysteme von Akkuprodukten](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-benchmarking-antriebssysteme-von-akkuprodukten-sf56123) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Data Analytics](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-data-analytics-sf54974) · Waiblingen DE · seit 2026-11-08
+- [Praktikum E-Motor Design](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-e-motor-design-sf56184) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Embedded Software & Machine Learning](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-embedded-software-and-machine-learning-sf53131) · Waiblingen DE · seit 2026-11-08
+- [Praktikum experimentelle Bauteilprüfungen Motorsägen und Trennschleifer](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-experimentelle-bauteilpruefungen-motorsaegen-und-trennschleifer-sf52560) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Experimentelle und Konzeptionelle Verbindungstechnik](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-experimentelle-und-konzeptionelle-verbindungstechnik-sf36202) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Fertigungsplanung Montage](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-fertigungsplanung-montage-sf53194) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Forschung Werkstofftechnik - Chemielabor](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-forschung-werkstofftechnik-chemielabor-sf56748) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Funktionserweiterung Prüfstand für elektrische Antriebe](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-funktionserweiterung-pruefstand-fuer-elektrische-antriebe-sf56988) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Global Support](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-global-support-sf56416) · Waiblingen DE · seit 2026-11-08
+- [Praktikum im Bereich Konzeption Künstliche Intelligenz](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-im-bereich-konzeption-kuenstliche-intelligenz-sf52274) · Waiblingen DE · seit 2026-11-08
+- [Praktikum im Bereich Regelung elektrischer Antriebe](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-im-bereich-regelung-elektrischer-antriebe-sf56187) · Waiblingen DE · seit 2026-11-08
+- [Praktikum indirekter Einkauf - Business Services](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-indirekter-einkauf-business-services-sf45441) · Waiblingen DE · seit 2026-11-08
+- [Praktikum KI-basierte Auswertung von Simulationsdaten](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-ki-basierte-auswertung-von-simulationsdaten-sf55319) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Konstruktion Akku Hochdruckreiniger](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-konstruktion-akku-hochdruckreiniger-sf53207) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Markenwelt und Besucherservice](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-markenwelt-und-besucherservice-sf56477) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Modellierung realer Materialeigenschaften für die Simulation von E-Motoren](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-modellierung-realer-materialeigenschaften-fuer-die-simulation-von-e-motoren-sf53214) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Modellierung von Lithium-Ionen-Hochleistungszellen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-modellierung-von-lithium-ionen-hochleistungszellen-sf54485) · Waiblingen DE · seit 2026-11-08
+- [Praktikum People Development - Leadership, Culture & Learning](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-people-development-leadership-culture-and-learning-sf57197) · Rommelshausen DE · seit 2026-11-08
+- [Praktikum Produktentwicklung Konstruktion Hochdruckreiniger](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktentwicklung-konstruktion-hochdruckreiniger-sf38043) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Produktentwicklung mechatronische Systeme in der Vorentwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktentwicklung-mechatronische-systeme-in-der-vorentwicklung-sf55954) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Produktfunktionen in der Vorentwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktfunktionen-in-der-vorentwicklung-sf38922) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Prototypenbau: Konstruktion, Fertigung, Prozessentwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-prototypenbau-konstruktion-fertigung-prozessentwicklung-sf38041) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Python Programmierung begleitend der Akkuprodukt-Entwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-python-programmierung-begleitend-der-akkuprodukt-entwicklung-sf56993) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Qualitätssicherung Kunststoffteile](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-qualitaetssicherung-kunststoffteile-sf35902) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Softwareentwicklung UI & Datenschnittstellen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-softwareentwicklung-ui-and-datenschnittstellen-sf56749) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Systemarchitektur Akkuprodukte](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-systemarchitektur-akkuprodukte-sf56406) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Technik und Produktdesign in der Vorentwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-technik-und-produktdesign-in-der-vorentwicklung-sf57067) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Technische Kommunikation](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-technische-kommunikation-sf57043) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Technologieentwicklung für die Produktion](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-technologieentwicklung-fuer-die-produktion-sf35782) · Waiblingen DE · seit 2026-11-08
+- [Praktikum thermische Modellierung und Simulation von Akkuprodukten](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-thermische-modellierung-und-simulation-von-akkuprodukten-sf36943) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Toolentwicklung für Technologiemanagement](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-toolentwicklung-fuer-technologiemanagement-sf52427) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Training Services E-Learning](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-training-services-e-learning-sf57464) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Unterstützung im Bereich Elektronikentwicklung - Schwerpunkt Hardware](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-unterstuetzung-im-bereich-elektronikentwicklung-schwerpunkt-hardware-sf36942) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Untersuchung von kommerziellen Lithium-Ionen-Batterien](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-untersuchung-von-kommerziellen-lithium-ionen-batterien-sf52388) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Validierung und Anforderungsmanagement von Akkupacks und Ladegeräten](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-validierung-und-anforderungsmanagement-von-akkupacks-und-ladegeraeten-sf57056) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Versuch und Analyse - Thermische Auslegung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-versuch-und-analyse-thermische-auslegung-sf37021) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Vorentwicklung innovative Produktfunktionen Mechatronik](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-innovative-produktfunktionen-mechatronik-sf37182) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Vorentwicklung innovative Zubehörprodukte](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-innovative-zubehoerprodukte-sf52359) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Vorentwicklung Produkt Innovationen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-produkt-innovationen-sf55952) · Waiblingen DE · seit 2026-11-08
+- [SAP Solution Architect Finance (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/sap-solution-architect-finance-w-m-d-sf56768) · Fellbach DE · seit 2026-11-08
+- [Werkstudent Markenwelt / Besucherservice (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/werkstudent-markenwelt-besucherservice-w-m-d-sf57041) · Waiblingen DE · seit 2026-11-08
 
 ### Autohaus Walter Mulfinger GmbH
 
