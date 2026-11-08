@@ -96,6 +96,28 @@ def merge(previous, results, today, now, grace_days=3):
             "quellen": sources, "stellen": ordered}
 
 
+def overview(catalog):
+    """Lesbare Übersicht (Markdown) für die GitHub-Ansicht des Repos."""
+    lines = ["# Stellenkatalog", "",
+             f"Stand: {catalog['aktualisiert']} · {len(catalog['stellen'])} Stellen aus "
+             f"{sum(1 for q in catalog['quellen'] if q['status'] == 'done')} von {len(catalog['quellen'])} Quellen", "",
+             "## Quellen", "", "| Quelle | Status | Stellen | Letzter Erfolg |", "| --- | --- | ---: | --- |"]
+    for q in catalog["quellen"]:
+        lines.append(f"| {q['label']} | {q['status']} | {q['anzahl']} | {q.get('letzterErfolg') or '–'} |")
+    lines += ["", "## Stellen", ""]
+    by_company = {}
+    for row in catalog["stellen"]:
+        by_company.setdefault(row["company"], []).append(row)
+    for company in sorted(by_company, key=str.casefold):
+        lines += [f"### {company}", ""]
+        for row in by_company[company]:
+            place = f" · {row['location']}" if row["location"] else ""
+            title = row["title"].replace("[", "(").replace("]", ")")
+            lines.append(f"- [{title}]({row['url']}){place} · seit {row['erstmalsGesehen']}")
+        lines.append("")
+    return "\n".join(lines)
+
+
 def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print):
     factory = factory or make_transport_factory()
     results = {}
@@ -156,6 +178,7 @@ def main(argv=None):
     tmp = out.with_suffix(".tmp")
     tmp.write_text(json.dumps(catalog, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     tmp.replace(out)
+    out.with_name("STELLEN.md").write_text(overview(catalog), encoding="utf-8")
     ok = sum(1 for r in results.values() if r["status"] == "done")
     print(f"{len(catalog['stellen'])} Stellen aus {ok}/{len(keys)} Quellen -> {out}")
     return 0

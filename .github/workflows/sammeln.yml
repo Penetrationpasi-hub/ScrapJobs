@@ -2,8 +2,10 @@ name: Arbeitgeber sammeln
 
 on:
   schedule:
-    # 03:20 UTC = 04:20 Winterzeit / 05:20 Sommerzeit
-    - cron: "20 3 * * *"
+    # GitHub kennt nur UTC. 04:05 UTC = 06:05 Sommerzeit, 05:05 UTC = 06:05 Winterzeit.
+    # Der Schritt "Uhrzeit prüfen" lässt nur den Lauf durch, der in Berlin gerade 6 Uhr ist.
+    - cron: "5 4 * * *"
+    - cron: "5 5 * * *"
   workflow_dispatch:
     inputs:
       sources:
@@ -23,35 +25,51 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
+      - name: Uhrzeit prüfen
+        id: zeit
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(TZ=Europe/Berlin date +%H)" != "06" ]; then
+            echo "In Berlin ist es nicht 6 Uhr, dieser Lauf wird übersprungen."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
 
-      - uses: actions/setup-python@v5
+      - if: steps.zeit.outputs.go == 'true'
+        uses: actions/checkout@v4
+
+      - if: steps.zeit.outputs.go == 'true'
+        uses: actions/setup-python@v5
         with:
           python-version: "3.13"
           cache: pip
           cache-dependency-path: scrapling-server/requirements.txt
 
-      - name: Abhängigkeiten
+      - if: steps.zeit.outputs.go == 'true'
+        name: Abhängigkeiten
         run: pip install --disable-pip-version-check -r scrapling-server/requirements.txt pytest
 
-      - name: Tests
+      - if: steps.zeit.outputs.go == 'true'
+        name: Tests
         working-directory: scrapling-server
         run: python -m pytest -q
 
-      - name: Sammeln
+      - if: steps.zeit.outputs.go == 'true'
+        name: Sammeln
         working-directory: scrapling-server
         env:
           SCRAPJOBS_SOURCES: ${{ inputs.sources }}
         run: python batch.py --out ../stellen.json
 
-      - name: Ergebnis committen
+      - if: steps.zeit.outputs.go == 'true'
+        name: Ergebnis committen
         run: |
-          if git diff --quiet -- stellen.json && [ -z "$(git ls-files --others --exclude-standard stellen.json)" ]; then
+          if git diff --quiet -- stellen.json STELLEN.md && [ -z "$(git ls-files --others --exclude-standard stellen.json STELLEN.md)" ]; then
             echo "Keine Änderung"; exit 0
           fi
           git config user.name "scrapjobs-bot"
           git config user.email "scrapjobs-bot@users.noreply.github.com"
-          git add stellen.json
+          git add stellen.json STELLEN.md
           git commit -m "Stellenkatalog $(date -u +%Y-%m-%d)"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"

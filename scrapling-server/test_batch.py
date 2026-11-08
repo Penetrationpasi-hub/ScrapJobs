@@ -60,6 +60,17 @@ class MergeTest(unittest.TestCase):
         self.assertEqual({r["id"] for r in later["stellen"]}, {"scrapling-1", "scrapling-2"})
 
 
+class OverviewTest(unittest.TestCase):
+    def test_markdown_groups_by_company_and_lists_sources(self):
+        catalog = batch.merge(None, {"acme": result("done", job(1), job(2, "B AG")), "kaputt": result("timeout")}, "2026-11-09", NOW)
+        text = batch.overview(catalog)
+        self.assertIn("2 Stellen aus 1 von 2 Quellen", text)
+        self.assertIn("### ACME GmbH", text)
+        self.assertIn("[Stelle 1](https://example.de/job/1)", text)
+        self.assertIn("| ACME | done | 2 |", text)
+        self.assertIn("| ACME | timeout | 0 | – |", text)
+
+
 class SelectionTest(unittest.TestCase):
     def test_default_excludes_boards_and_unavailable(self):
         keys = batch.select_sources(registry())
