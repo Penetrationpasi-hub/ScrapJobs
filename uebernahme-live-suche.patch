@@ -1,5 +1,5 @@
 diff --git a/scrapling-server/crawler.py b/scrapling-server/crawler.py
-index 687dbc7..e60a656 100644
+index 687dbc7..11a46ac 100644
 --- a/scrapling-server/crawler.py
 +++ b/scrapling-server/crawler.py
 @@ -1,3 +1,4 @@
@@ -134,7 +134,7 @@ index 687dbc7..e60a656 100644
              for url in details[:getattr(req, "max_details", source.max_details)]:
                  if len(jobs) >= max_jobs:
                      break
-@@ -135,18 +176,30 @@ def crawl(req, transport_factory=Transport):
+@@ -135,18 +176,31 @@ def crawl(req, transport_factory=Transport):
                  except FetchError as error:
                      if error.code == "gone":
                          report["filtered"] += 1
@@ -157,14 +157,16 @@ index 687dbc7..e60a656 100644
                  report["status"] = "no_verified_jobs"
          except FetchError as error:
              report["status"] = error.code
+-        except Exception:
 +            # Ursache für die Diagnose: bei robots_unavailable z. B. "HTTP 404" oder "blocked".
 +            cause = error.__cause__ if isinstance(error.__cause__, FetchError) else error
 +            if cause.detail:
 +                report["detail"] = cause.detail
 +            elif cause.http_status or cause is not error:
 +                report["detail"] = cause.code + (f" HTTP {cause.http_status}" if cause.http_status else "")
-         except Exception:
++        except Exception as error:
              report["status"] = "unsupported"
++            report["detail"] = "interner Fehler: " + type(error).__name__ + " " + str(error)[:120]
      return {"status": "done", "jobs": jobs, "sources": reports, "documents": total_documents - budget.remaining}
 diff --git a/scrapling-server/datafeed_adapter.py b/scrapling-server/datafeed_adapter.py
 new file mode 100644
@@ -347,6 +349,81 @@ index 359c482..872515e 100644
      elif source.adapter == "murr":
          from murr_adapter import murr
          yield from murr(source, req, get, report)
+diff --git a/scrapling-server/employers.json b/scrapling-server/employers.json
+index afc6c2e..f7ef6de 100644
+--- a/scrapling-server/employers.json
++++ b/scrapling-server/employers.json
+@@ -1,37 +1,38 @@
+ [
+   {"key":"mercedes_benz","label":"Mercedes-Benz","entries":[1],"search":"https://jobs.mercedes-benz.com/","hosts":["jobs.mercedes-benz.com"],"detail":"/(?:deDE|enUS)/[^/?#]+-\\d+-[a-zA-Z0-9]+$"},
+-  {"key":"stihl","label":"STIHL","entries":[2],"search":"https://corporate.stihl.de/de/karriere/stellenangebote","hosts":["corporate.stihl.de"],"detail":"/de/karriere/stellenangebote/job-details/[^/?#]+-sf\\d+$"},
+-  {"key":"mahle","label":"MAHLE / MAHLE Aftermarket","entries":[3,31],"search":"https://careers.mahle.com/search/?q={q}&locationsearch={location}&locale=de_DE","hosts":["careers.mahle.com"],"detail":"/job/[^?#]+"},
+-  {"key":"diakonie_stetten","label":"Diakonie Stetten","entries":[4],"search":"https://deinjob.diakonie-stetten.de/","hosts":["deinjob.diakonie-stetten.de"],"detail":"/jobs/\\d+/[^?#]+"},
++  {"key":"stihl","label":"STIHL","entries":[2],"search":"https://corporate.stihl.de/de/karriere/stellenangebote","hosts":["corporate.stihl.de"],"detail":"/de/karriere/stellenangebote/job-details/[^/?#]+-sf\\d+$","adapter":"sitemap","api":"https://corporate.stihl.de/sitemap.xml","note":"Gelesen wird die Sitemap, die STIHL für Suchmaschinen veröffentlicht (robots.txt verweist darauf); die Anzeigen werden auf der Einzelseite geprüft."},
++  {"key":"mahle","catalog_locations":["Stuttgart", "Fellbach", "Markgröningen", "Kornwestheim", "Mühlacker"],"label":"MAHLE / MAHLE Aftermarket","entries":[3,31],"search":"https://careers.mahle.com/search/?q={q}&locationsearch={location}&locale=de_DE","hosts":["careers.mahle.com"],"detail":"/job/[^?#]+"},
++  {"key":"diakonie_stetten","label":"Diakonie Stetten","entries":[4],"search":"https://deinjob.diakonie-stetten.de/","hosts":["deinjob.diakonie-stetten.de"],"detail":"/jobs/\\d+/[^?#]+","adapter":"sitemap","api":"https://deinjob.diakonie-stetten.de/sitemap.xml","note":"Anzeigenliste entsteht per JavaScript; gelesen wird die in der robots.txt genannte Sitemap und jede Anzeige auf ihrer Einzelseite."},
+   {"key":"robert_bosch_krankenhaus","label":"Robert Bosch Krankenhaus","entries":[5],"search":"https://careers.smartrecruiters.com/robertboschkrankenhausgmbh","hosts":["careers.smartrecruiters.com","jobs.smartrecruiters.com"],"detail":"/(?:RobertBoschKrankenhausGmbH|robertboschkrankenhausgmbh)/\\d+[^?#]*"},
+-  {"key":"kaercher","label":"Kärcher","entries":[6],"search":"https://careers.kaercher.com/search/?q={q}&locationsearch={location}","hosts":["careers.kaercher.com"],"detail":"/job/[^?#]+"},
++  {"key":"kaercher","catalog_locations":["Winnenden", "Schwaikheim"],"label":"Kärcher","entries":[6],"search":"https://careers.kaercher.com/search/?q={q}&locationsearch={location}","hosts":["careers.kaercher.com"],"detail":"/job/[^?#]+"},
+   {"key":"rems_murr_kliniken","label":"Rems-Murr-Kliniken · Winnenden / Schorndorf","entries":[7,20],"search":"https://rems-murr-kliniken.de/karriere/stellenangebote-und-bewerbung","hosts":["rems-murr-kliniken.de","www.rems-murr-kliniken.de"],"detail":"/jobinserat/[^/?#]+_\\d+/?$"},
+   {"key":"landratsamt_rmk","label":"Landratsamt Rems-Murr-Kreis","entries":[8],"search":"https://rems-murr-kreis.helixjobs.com/_/joblist","hosts":["rems-murr-kreis.helixjobs.com"],"detail":"^/_/jobad\\?prj=100300P[0-9]+$","company_pattern":"^Landratsamt\\s+Rems-Murr-Kreis$","reference":"https://karriere.rems-murr-kreis.de/startseite","note":"Öffentliche HTML-Stellenliste mit prj-Einzelanzeigen und JobPosting-Daten. Originalseiten lokal geprüft; kein bestätigter Live-Lauf aus Render."},
+   {"key":"paulinenpflege","label":"Paulinenpflege Winnenden","entries":[9],"search":"https://jobs.paulinenpflege.de/stellenangebote.html","hosts":["jobs.paulinenpflege.de"],"detail":"/[^/?#]+-de-j\\d+\\.html$"},
+   {"key":"ksk_waiblingen","label":"Kreissparkasse Waiblingen","entries":[10],"search":"https://kskwn.helixjobs.com/ksk/joblist","hosts":["kskwn.helixjobs.com"],"detail":"^/ksk/jobad\\?prj=100052P[0-9]+$","company_pattern":"^Kreissparkasse\\s+Waiblingen$","reference":"https://www.kskwn.de/de/home/ihre-sparkasse/karriere/berufserfahrene-fuehrungskraefte.html","note":"Echte HTML-Stellenliste statt allgemeiner Karriereseite; prj-Einzelanzeigen mit JobPosting-Daten. Originalseiten lokal geprüft; kein bestätigter Live-Lauf aus Render."},
+   {"key":"stadt_waiblingen","label":"Stadt Waiblingen","entries":[11],"search":"https://karriere.waiblingen.de/offene-stellen","hosts":["karriere.waiblingen.de"],"detail":"/(?:stellenangebot|stellenangebote|job|jobs|jobposting)/[^?#]+","note":"Karriereportal gefunden; eingebettete Bewerbersysteme können einen eigenen Adapter benötigen."},
+-  {"key":"tesat","label":"TESAT-Spacecom","entries":[12],"search":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus?locations=f5811cef9cb50118ca5ff56a4c0af44a&locations=f5811cef9cb501008f6f2e6a4c0a6548","hosts":["ag.wd3.myworkdayjobs.com"],"detail":"/(?:de-DE|en-US)/Airbus/job/[^?#]+","company_pattern":"tesat","reference":"https://www.tesat.de/career","note":"Offiziell verlinktes Workday-Portal. Nur Anzeigen mit belegtem TESAT-Arbeitgeber; ohne HTML-Links nicht unterstützt."},
++  {"key":"tesat","label":"TESAT-Spacecom","entries":[12],"search":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus?locations=f5811cef9cb50118ca5ff56a4c0af44a&locations=f5811cef9cb501008f6f2e6a4c0a6548","hosts":["ag.wd3.myworkdayjobs.com"],"detail":"^/de-DE/Airbus/job/[^?#]+","adapter":"workday","api":"https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus/jobs","company_pattern":"tesat","reference":"https://www.tesat.de/career","note":"Offiziell verlinktes Workday-Portal. Öffentliche Workday-Suche mit den TESAT-Standortfiltern; nur Anzeigen mit belegtem TESAT-Arbeitgeber."},
++  {"key":"airbus","label":"Airbus (Stuttgart, Laupheim, Backnang)","entries":[],"search":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus?locations=f5811cef9cb501e5b9910b6b4c0a494b&locations=f5811cef9cb50190df20956a4c0aa549&locations=f5811cef9cb50118ca5ff56a4c0af44a","hosts":["ag.wd3.myworkdayjobs.com"],"detail":"^/de-DE/Airbus/job/[^?#]+","adapter":"workday","api":"https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus/jobs","company_pattern":"airbus","reference":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus","note":"Öffentliche Workday-Suche des Airbus-Portals mit drei Standortfiltern; nur Anzeigen mit belegtem Airbus-Arbeitgeber (TESAT läuft als eigene Quelle)."},
+   {"key":"zfp_winnenden","label":"Klinikum Schloß Winnenden","entries":[13],"search":"https://karriere.zfp-winnenden.de/stellenangebote","hosts":["jobs.karriere.zfp-winnenden.de","karriere.zfp-winnenden.de","cs-assets.b-ite.com","jobs.b-ite.com"],"detail":"^/jobposting/[a-f0-9]{40}0$","reference":"https://karriere.zfp-winnenden.de/stellenangebote","adapter":"bite","api":"https://jobs.b-ite.com/api/v1/postings/search","company_pattern":"^Klinikum Schlo(?:ß|ss) Winnenden$","note":"Offiziell eingebundene B-ite-Lesesuche; konkreter ZFP-Mandant, Arbeitgeber-ID und Einzelanzeigen-ID werden geprüft. Maximal zehn Detailabrufe, keine Bewerbungsseiten."},
+   {"key":"volksbank_stuttgart","label":"Volksbank Stuttgart","entries":[14],"search":"https://volksbank-stuttgart.helixjobs.com/_/joblist","hosts":["volksbank-stuttgart.helixjobs.com"],"detail":"^/_/jobad\\?prj=100073P[0-9]+$","company_pattern":"^Volksbank\\s+Stuttgart\\s+eG$","reference":"https://www.volksbank-stuttgart.de/karriere.html","note":"Offiziell verlinkte HTML-Stellenliste und JobPosting-Einzelanzeige anhand öffentlicher Originalseiten lokal geprüft; noch kein bestätigter Render-Live-Suchlauf."},
+-  {"key":"klinikum_stuttgart","label":"Klinikum Stuttgart · Bad Cannstatt","entries":[15],"search":"https://www.klinikum-stuttgart.de/karriere/jobs","hosts":["www.klinikum-stuttgart.de"],"detail":"/karriere/jobs/(?!seite/)[^?#]+","note":"Der Ortsfilter gilt für den gesamten Klinikverbund, nicht nur Bad Cannstatt."},
++  {"key":"klinikum_stuttgart","label":"Klinikum Stuttgart · Bad Cannstatt","entries":[15],"search":"https://www.klinikum-stuttgart.de/karriere/jobs","hosts":["www.klinikum-stuttgart.de"],"detail":"/karriere/job/[^/?#]+-\\d+$","adapter":"sitemap","api":"https://www.klinikum-stuttgart.de/sitemap.xml","note":"Der Ortsfilter gilt für den gesamten Klinikverbund, nicht nur Bad Cannstatt. Gelesen wird die Sitemap (Index, Teil „jobs“); die Liste auf der Karriereseite liefert dem Leser keine Links."},
+   {"key":"stadt_schorndorf","label":"Stadt Schorndorf","entries":[16],"search":"https://karriere.schorndorf.de/stellenangebote.html","hosts":["karriere.schorndorf.de"],"detail":"/[^/?#]+-de-j\\d+\\.html$"},
+-  {"key":"frech","label":"Oskar Frech / Frech-Gruppe","entries":[17,55],"search":"https://www.frech.com/de/jobboerse.html","hosts":["www.frech.com"],"detail":"/de/(?:job-details-de|ausbildungsstelle-details)/[^/?#]+\\.html$"},
+-  {"key":"peter_hahn","label":"Peter Hahn","entries":[18],"search":"https://jobs.peterhahn.de/jobs","hosts":["jobs.peterhahn.de","jobs.peterhahn.com"],"detail":"/stellenangebote/[^/?#]+--\\d+/?$"},
+-  {"key":"syntegon","label":"Syntegon","entries":[19],"search":"https://jobs.syntegon.com/search","hosts":["jobs.syntegon.com"],"detail":"/(?:job|jobs)/[^?#]+","note":"Talentsconnect-Portal; dynamische Suchergebnisse können nicht auslesbar sein."},
++  {"key":"frech","label":"Oskar Frech / Frech-Gruppe","entries":[17,55],"search":"https://www.frech.com/de/jobboerse.html","hosts":["www.frech.com"],"detail":"/de/(?:job-details-de|ausbildungsstelle-details)/[^/?#]+\\.html$","title_selector":".mod_breadcrumb .pagetitle::text","company_selector":".footer-col1 h4::text","company_capture":"Oskar Frech GmbH \\+ Co\\. KG","location_selector":".footer-col1 .ce_text p:first-of-type::text","description_selector":".mod_newsreader","reference":"https://www.frech.com/de/jobboerse.html","note":"Contao-Anzeigenseiten ohne strukturierte Daten: Titel aus dem Seitentitel, Firma und Standort aus dem Seitenfuß (Hauptsitz Schorndorf)."},
++  {"key":"peter_hahn","label":"Peter Hahn","entries":[18],"search":"https://jobs.peterhahn.com/jobs","hosts":["jobs.peterhahn.de","jobs.peterhahn.com"],"detail":"/stellenangebote/[^/?#]+--\\d+/?$","adapter":"sitemap","api":"https://jobs.peterhahn.com/sitemap","reference":"https://jobs.peterhahn.com/jobs","note":"Die Stellenliste entsteht per JavaScript; gelesen wird die in der robots.txt genannte Sitemap und jede Anzeige auf ihrer Einzelseite."},
++  {"key":"syntegon","label":"Syntegon","entries":[19],"search":"https://jobs.syntegon.com/search","hosts":["jobs.syntegon.com"],"detail":"/offer/[^/?#]+/[0-9a-f-]{36}$","adapter":"sitemap","api":"https://jobs.syntegon.com/sitemap.xml","note":"Anzeigenliste entsteht per JavaScript; gelesen wird die in der robots.txt genannte Sitemap und jede Anzeige auf ihrer Einzelseite."},
+   {"key":"catalent","label":"Catalent Schorndorf","entries":[21],"search":"https://careers.catalent.com/us/en/europe","hosts":["careers.catalent.com"],"detail":"/(?:us/en|de/de)/job/[^?#]+","note":"Europa-Stellenmarkt; der bestehende Ortsfilter grenzt auf den Suchort ein."},
+   {"key":"sana_karl_olga","label":"Sana · Karl-Olga-Krankenhaus","entries":[22],"search":"https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373","hosts":["jobs.sana.de"],"detail":"/de/sites/CX_4025/job/\\d+/?$","reference":"https://www.sana.de/kok-stuttgart/karriere","note":"Oracle-Portal; ohne HTML-Anzeigenlinks als nicht unterstützt gekennzeichnet."},
+-  {"key":"loeffelhardt","label":"Emil Löffelhardt","entries":[23],"search":"https://jobs.loeffelhardt.de/","hosts":["jobs.loeffelhardt.de","stellenangebot-loeffelhardt.career.softgarden.de"],"detail":"/(?:jobs|job)/\\d+/[^?#]+"},
+-  {"key":"rems","label":"REMS","entries":[24],"search":"https://recruitment.rems.de/stellenangebote","hosts":["recruitment.rems.de"],"detail":"^/(?!stellenangebote|ausbildung|initiativ|privacy|datenschutz|Themes)[a-zA-Z0-9_-]{2,32}/?$"},
++  {"key":"loeffelhardt","label":"Emil Löffelhardt","entries":[23],"search":"https://jobs.loeffelhardt.de/","hosts":["jobs.loeffelhardt.de","stellenangebot-loeffelhardt.career.softgarden.de"],"detail":"/(?:jobs|job)/\\d+/[^?#]+","adapter":"datafeed","api":"https://stellenangebot-loeffelhardt.career.softgarden.de/jobs.feed.json","note":"Softgarden-Portal: gelesen wird der offizielle Stellen-Feed (/jobs.feed.json), ein Abruf und keine Einzelseiten."},
++  {"key":"rems","label":"REMS","adapter":"rems_list","entries":[24],"search":"https://recruitment.rems.de/stellenangebote","hosts":["recruitment.rems.de"],"detail":"^/(?!stellenangebote|ausbildung|initiativ|privacy|datenschutz|Themes)[a-zA-Z0-9_-]{2,32}/?$"},
+   {"key":"stoba","label":"stoba Backnang","entries":[25],"search":"https://stoba.one/people-jobs/arbeiten-bei-stoba-backnang","hosts":["stoba.one"],"detail":"/jobsoffer_backnang/[^/?#]+/?$"},
+   {"key":"deutsche_post","label":"Deutsche Post / DHL","entries":[26],"search":"https://careers.dhl.com/eu/de/search-results?keywords={q}","hosts":["careers.dhl.com"],"detail":"/(?:eu/de|global/en)/job/[^?#]+","reference":"https://group.dhl.com/de/karriere.html","note":"Dynamisches Portal; keine Zusage einer vollständigen regionalen Abdeckung."},
+-  {"key":"db_audiotechnik","label":"d&b audiotechnik","entries":[27],"search":"https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/","hosts":["www.dbaudio.com"],"detail":"/global/de/ueber-db/karriere/jobs/[^/?#]+-req-\\d+-\\d+/?$"},
++  {"key":"db_audiotechnik","label":"d&b audiotechnik","entries":[27],"search":"https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/","hosts":["www.dbaudio.com"],"detail":"/global/de/ueber-db/karriere/jobs/[^/?#]+-req-\\d+-\\d+/?$","adapter":"sitemap","api":"https://www.dbaudio.com/global/de/sitemap.xml","note":"Gelesen wird der deutsche Sitemap-Index (eine Ebene tief); die Anzeigen werden auf der Einzelseite geprüft."},
+   {"key":"swr","label":"SWR Stuttgart","entries":[28],"search":"https://www.swr.de/unternehmen/karriere/stellenangebote-110.html","hosts":["www.swr.de"],"detail":"/unternehmen/karriere/stellenausschreibung-[^/?#]+\\.html$"},
+   {"key":"tti","label":"TTI / AEG / Milwaukee","entries":[30],"search":"https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI","hosts":["ttiemea.wd3.myworkdayjobs.com"],"detail":"^/de-DE/TTI/job/[^?#]+","adapter":"workday","api":"https://ttiemea.wd3.myworkdayjobs.com/wday/cxs/ttiemea/TTI/jobs","company_pattern":"Techtronic|\\bTTI\\b","reference":"https://www.ttigroup.com/careers/global-career-opportunities","note":"Öffentliche Workday-Suche und belegte JobPosting-Einzelanzeigen; keine Browserausführung."},
+   {"key":"burger_schloz","label":"Burger Schloz Automobile","entries":[33],"search":"https://jobs.burgerschloz.de/de/","hosts":["jobs.burgerschloz.de","api.carsonal.de","5ep27p93be-dsn.algolia.net"],"detail":"^/de/jobs/[a-z0-9-]+-VO[0-9]{4}-[0-9]{6}$","reference":"https://www.burgerschloz.de/karriere","adapter":"carsonal","api":"https://api.carsonal.de/rest","company_pattern":"^Burger Schloz Automobile GmbH & Co\\. KG$","note":"Offizielle Carsonal-Leseschnittstelle und Burger-Schloz-Suchindex, Mandant und Einzelanzeigen belegt. Nur bestätigtes robots-404 an genau diesen Leseendpunkten ausgenommen; maximal zehn Detailabrufe."},
+   {"key":"kloepfer","label":"Klöpfer","entries":[34],"search":"https://kloepferkg.softgarden.io/de/vacancies","hosts":["kloepferkg.softgarden.io"],"detail":"/(?:job|jobs)/\\d+[^?#]*","note":"Softgarden-Portal; ohne auslesbare HTML-Links als nicht unterstützt gekennzeichnet."},
+   {"key":"judo","label":"JUDO Wasseraufbereitung","entries":[35],"search":"https://judo.eu/stellenportal/","hosts":["judo.eu"],"detail":"^/Stellenanzeige/[^/?#]+/?$","adapter":"judo_filter","api":"https://judo.eu/wp/wp-admin/admin-ajax.php","company_pattern":"^JUDO Wasseraufbereitung GmbH$","note":"Öffentliche jobfilter-Lesesuche per GET mit frischem Formular-Nonce. Keine Bewerbungs-POSTs."},
+-  {"key":"riva","label":"RIVA-Gruppe / Mpire","entries":[38],"search":"https://mpire.jobs.personio.de/","hosts":["mpire.jobs.personio.de"],"detail":"/job/\\d+","reference":"https://www.mpire.gmbh/karriere","note":"Gemeinsames Portal von Mpire und Partnerfirmen der RIVA-Gruppe."},
+-  {"key":"wirmachendruck","label":"WIRmachenDRUCK","entries":[39],"search":"https://jobs.wir-machen-druck.de/de/jobs","hosts":["jobs.wir-machen-druck.de"],"detail":"/de/jobs/\\d+/[^/?#]+/?$"},
++  {"key":"riva","label":"RIVA-Gruppe / Mpire","adapter":"personio","api":"https://mpire.jobs.personio.de/xml","entries":[38],"search":"https://mpire.jobs.personio.de/","hosts":["mpire.jobs.personio.de"],"detail":"/job/\\d+","reference":"https://www.mpire.gmbh/karriere","note":"Gemeinsames Portal von Mpire und Partnerfirmen der RIVA-Gruppe."},
++  {"key":"wirmachendruck","label":"WIRmachenDRUCK","adapter":"dvinci","entries":[39],"search":"https://jobs.wir-machen-druck.de/de/jobs","hosts":["jobs.wir-machen-druck.de"],"detail":"/de/jobs/\\d+/[^/?#]+/?$"},
+   {"key":"eisenmann","label":"Eisenmann Services / Personal-Service","entries":[40],"search":"https://www.eisenmann-gruppe.de/stellenangebote-jobs.html","hosts":["www.eisenmann-gruppe.de"],"detail":"^/stellenangebote-jobs\\.html$","adapter":"eisenmann_sections","company_pattern":"Eisenmann\\s+Personal-Service\\s+GmbH","reference":"https://www.eisenmann-services.de/unternehmensgeschichte.html","note":"Jede konkrete Anzeige aus dem offiziellen Akkordeon separat, mit eigenem Text-Direktlink. Arbeitgeber wird aus der Seite belegt."},
+   {"key":"baeckerei_maurer","label":"Bäckerei Maurer","entries":[41],"search":"https://www.baecker-maurer.de/karriere/stellen","hosts":["www.baecker-maurer.de"],"detail":"/karriere/(?!stellen/?$)[^/?#]+/?$"},
+   {"key":"elanders","label":"Elanders Waiblingen","entries":[42],"search":"https://jobapplication.hrworks.de/de?companyId=av679e8c","hosts":["jobapplication.hrworks.de"],"detail":"/de\\?(?=[^#]*\\bcompanyId=av679e8c(?:&|$))(?=[^#]*\\bid=[a-zA-Z0-9]+(?:&|$))","note":"Feste HRworks-Mandantenkennung; andere Unternehmen auf diesem Host bleiben ausgeschlossen."},
+@@ -43,7 +44,7 @@
+   {"key":"foehl","label":"Adolf Föhl","entries":[48],"search":"https://www.foehl.de/karriere-bei-foehl","hosts":["www.foehl.de"],"detail":"/karriere-bei-foehl/[^/?#]+/?$"},
+   {"key":"stadtwerke_waiblingen","label":"Stadtwerke Waiblingen","entries":[49],"search":"https://myjobboard.de/stadtwerke-waiblingen/Stellenangebote","hosts":["myjobboard.de"],"detail":"^/stadtwerke-waiblingen/Stellenangebote/[a-f0-9]{24}$","adapter":"myjobboard","api":"https://myjobboard.de/api/jobs/stadtwerke-waiblingen/Stellenangebote","company_pattern":"Stadtwerke\\s+Waiblingen","reference":"https://www.stadtwerke-waiblingen.de/karriere","note":"Öffentliche myjobboard-Daten: Mandant, einzelne Anzeigen-ID, Arbeitgeber, Veröffentlichungsstatus und Anschrift werden geprüft."},
+   {"key":"fessmann","label":"FESSMANN","entries":[51],"search":"https://karriere.fessmann.com/jobs","hosts":["karriere.fessmann.com"],"detail":"/karriere/(?!bewerbung/?$|initiativbewerbung)[^/?#]+/?$"},
+-  {"key":"soehnle","label":"Soehnle Industrial Solutions","entries":[52],"search":"https://www.soehnle-professional.com/de/karriere","hosts":["www.soehnle-professional.com"],"detail":"/de/karriere/\\d+/[^/?#]+/?$"},
++  {"key":"soehnle","label":"Soehnle Industrial Solutions","entries":[52],"search":"https://www.soehnle-professional.com/de/karriere","hosts":["www.soehnle-professional.com"],"detail":"/de/karriere/\\d+/[^/?#]+/?$","title_selector":"meta[property=\"og:title\"]::attr(content)","company_selector":".copyright span::text","company_capture":"Soehnle Industrial Solutions GmbH","company_pattern":"^Soehnle Industrial Solutions GmbH$","description_selector":".special-content","reference":"https://www.soehnle-professional.com/de/karriere","note":"Eigene Anzeigenseiten ohne strukturierte Daten: Titel aus og:title, Firma aus dem Seitenfuß. Die Seite nennt keinen Ort."},
+   {"key":"benz_sport","label":"Gotthilf Benz Turngeräte","entries":[53],"search":"https://www.benz-sport.de/content/karriere.html","hosts":["www.benz-sport.de"],"detail":"^/content/karriere\\.html$","adapter":"benz_sections","company_pattern":"Gotthilf\\s+Benz\\s+Turngerätefabrik\\s+GmbH\\s*\\+\\s*Co\\.\\s*KG","reference":"https://www.benz-sport.de/content/karriere.html","note":"Einzelne belegte Anzeigenabschnitte statt der gesamten Karriereseite. Eigene Text-Direktlinks; keine Initiativbewerbungen."},
+   {"key":"riani","label":"RIANI","entries":[54],"search":"https://www.riani.com/de_en/career","hosts":["www.riani.com"],"detail":"(?i)^/de_(?:de|en)/(?:home/)?company/karriere/[^/?#]+/?$","title_selector":"meta[property=\"og:title\"]::attr(content)","company_selector":"meta[property=\"og:site_name\"]::attr(content)","company_pattern":"^RIANI$","location_selector":".cms-element-text h4::text","description_selector":".cms-element-text","reference":"https://www.riani.com/de_en/career","note":"Konkrete Shopware-Anzeigenseiten mit Seitentitel, belegtem RIANI-Absender und Anzeigeninhalt."},
+   {"key":"dusyma","label":"Dusyma","entries":[56],"search":"https://www.dusyma.com/de/karriere","hosts":["www.dusyma.com","jobboard.easyhr.io","apibetax.easyhr.io"],"detail":"^/jobad/[0-9a-f-]{36}$","adapter":"easyhr","api":"https://apibetax.easyhr.io/active_positions?cids[]=3e591c90-d9bf-4ea5-ae09-9395cd2e322d","company_pattern":"dusyma","reference":"https://www.dusyma.com/de/karriere","note":"Offiziell eingebettetes easyHR-Board. Kunden-ID, einzelne Anzeigen-ID und online-Status werden geprüft; Bilder nicht als Text erfunden."},
+@@ -52,7 +53,7 @@
+   {"key":"awrm","label":"Abfallwirtschaft Rems-Murr","entries":[59],"search":"https://www.abfallwirtschaft-rems-murr.de/unsere-awrm/jobs","hosts":["www.abfallwirtschaft-rems-murr.de"],"detail":"^/unsere-awrm/jobs/detail/[^/?#]+/?$","title_selector":"meta[property=\"og:title\"]::attr(content)","company_selector":".news-text-wrap p:first-child strong::text","company_capture":"Abfallwirtschaft\\s+Rems-Murr\\s+AöR","company_pattern":"Abfallwirtschaft\\s+Rems-Murr","description_selector":".news-text-wrap","reference":"https://www.abfallwirtschaft-rems-murr.de/unsere-awrm/jobs","note":"Offizielle TYPO3-Einzelanzeigen. Arbeitgeber aus dem Anzeigentext, kein aus dem Firmensitz erfundener Einsatzort."},
+   {"key":"signalhorn","label":"Signalhorn","entries":[61],"available":false,"search":"","hosts":[],"detail":"","reference":"https://www.signalhorn.com/careers.html","note":"Offizielles Prescreen-Widget zugeordnet, dessen Anbieter-Endpunkt war bei Recherche nicht erreichbar. Keine geschätzten Stellen und keine Abschaltung der TLS-Prüfung als Ersatz."},
+   {"key":"murrelektronik","label":"Murrelektronik","entries":[62],"search":"https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/","hosts":["www.murrelektronik.com"],"detail":"^/de/landingpages/karriere/stellenangebote/detail/job/[a-z0-9-]+/?$","reference":"https://my.murrelektronik.com/home/de/unternehmen/karriere/stellenangebote","adapter":"murr","company_pattern":"^Murrelektronik GmbH$","note":"Offizielle Stellenliste auf www.murrelektronik.com mit Einzelanzeigen unter /detail/job/. Keine JobPosting-Daten: Titel aus der Seitenüberschrift, Arbeitgeber aus Corporation-Strukturdaten der Seite. robots.txt der www-Domain leitet per 301 auf eine HTML-Seite um; nutzerbestätigte Ausnahme nur für Liste und /detail/job/-Seiten (GET). Ort nur bei belegtem Standort."},
+-  {"key":"pfisterer","label":"PFISTERER","entries":[63],"search":"https://www.pfisterer.com/de/stellenangebote","hosts":["www.pfisterer.com","pfisterer.mhm.jobs"],"detail":"/\\d+-[^/?#]+/job\\.html$"},
++  {"key":"pfisterer","label":"PFISTERER","entries":[63],"search":"https://www.pfisterer.com/de/stellenangebote","hosts":["www.pfisterer.com","pfisterer.mhm.jobs"],"detail":"/\\d+-[^/?#]+/(?:de/)?job\\.html$"},
+   {"key":"hahn_automobile","label":"Hahn Automobile","entries":[64],"search":"https://www.hahn-gruppe.de/de-de/karriere/stellenangebote","hosts":["www.hahn-gruppe.de","ats.sopea-hr.com"],"detail":"^/ats/JobAd\\?Job=[0-9]{10}$","adapter":"hahn","api":"https://www.hahn-gruppe.de/api/Career/{category}","company_pattern":"Hahn\\s+Automobile","reference":"https://www.hahn-gruppe.de/de-de/karriere/karriere-bei-hahn","note":"Vom Nutzer getrennt von Klingele bestätigt. Offizielle Fachkräfte- und Ausbildungs-Kategorien, anschließend belegte sopea-JobPosting-Anzeigen."},
+   {"key":"klingele","label":"Klingele Paper & Packaging","entries":[],"search":"https://jobs.klingele.com/search/?q={q}&locationsearch={location}","hosts":["jobs.klingele.com"],"detail":"^/job/[^/?#]+/[0-9]+/?$","company_pattern":"Klingele","reference":"https://www.klingele.com/de/karriere","note":"Zusätzlich aus der ursprünglichen Sammelzeile 64 übernommen. Offizielles SuccessFactors-Portal; konkrete JobPosting-Anzeigen, keine Initiativbewerbungen."}
+   ,{"key":"harro_hoefliger","label":"Harro Höfliger","entries":[],"search":"https://hoefliger.com/karriere/stellenangebote","hosts":["hoefliger.com"],"detail":"^/karriere/stellenangebote/[a-z0-9-]+$","adapter":"harro_next","company_pattern":"^Harro Höfliger Verpackungsmaschinen GmbH$","reference":"https://hoefliger.com/karriere","note":"Konkrete deutsche Stellen aus offiziellen Seitendaten, anschließend JobPosting-Prüfung. Nutzerfreigabe: nur direkte robots.txt-404 für diese Stellenpfade zulässig."}
 diff --git a/scrapling-server/extraction.py b/scrapling-server/extraction.py
 index ac8298f..4a9d327 100644
 --- a/scrapling-server/extraction.py
@@ -766,37 +843,50 @@ index 1097674..c572d45 100644
          raise FetchError("redirect_limit")
 diff --git a/scrapling-server/sitemap_adapter.py b/scrapling-server/sitemap_adapter.py
 new file mode 100644
-index 0000000..c0bddb5
+index 0000000..94d6dc4
 --- /dev/null
 +++ b/scrapling-server/sitemap_adapter.py
-@@ -0,0 +1,48 @@
+@@ -0,0 +1,71 @@
 +"""Anzeigen über die Sitemap, die der Betreiber für Suchmaschinen veröffentlicht (z. B. Talention-Portale).
 +
 +Sinnvoll, wenn die Stellenliste per JavaScript entsteht, die Anzeigenseiten selbst aber serverseitig ausgeliefert
-+werden. Gelesen wird nur die in der Konfiguration genannte Sitemap-Datei (eine <urlset>, keine Index-Dateien,
-+kein DOCTYPE). Jede Adresse muss dem Linkmuster der Quelle entsprechen; die Anzeige selbst wird wie überall auf
++werden. Gelesen wird die in der Konfiguration genannte Sitemap-Datei; ist sie ein Index (<sitemapindex>), werden
++höchstens MAX_PARTS Untersitemaps desselben Hosts eine Ebene tief gelesen (kein DOCTYPE, keine tieferen Indizes). Jede Adresse muss dem Linkmuster der Quelle entsprechen; die Anzeige selbst wird wie überall auf
 +der Einzelseite geprüft (JSON-LD, Firma, Ablauf).
 +"""
 +import re
++from urllib.parse import urlsplit
 +import xml.etree.ElementTree as ET
 +
 +from extraction import extract, is_detail
 +from safe_http import FetchError
 +
 +
-+def locations(text):
++MAX_PARTS = 6
++
++
++def parse(text):
++    """Liefert ("urlset" | "index", Adressen)."""
 +    if re.search(r"<!(?:DOCTYPE|ENTITY)", text, re.I):
 +        raise FetchError("unsupported", detail="Sitemap mit DOCTYPE/ENTITY abgelehnt")
 +    try:
 +        root = ET.fromstring(text.lstrip("﻿"))
 +    except ET.ParseError:
 +        raise FetchError("unsupported", detail="Sitemap nicht lesbar") from None
-+    if not root.tag.endswith("}urlset") and root.tag != "urlset":
++    kind = root.tag.rsplit("}", 1)[-1]
++    if kind not in ("urlset", "sitemapindex"):
 +        raise FetchError("unsupported", detail="Keine urlset-Sitemap")
 +    found = []
 +    for node in root.iter():
 +        if node.tag.rsplit("}", 1)[-1] == "loc" and node.text and node.text.strip():
 +            found.append(node.text.strip())
++    return ("index" if kind == "sitemapindex" else "urlset"), found
++
++
++def locations(text):
++    kind, found = parse(text)
++    if kind != "urlset":
++        raise FetchError("unsupported", detail="Keine urlset-Sitemap")
 +    return found
 +
 +
@@ -804,8 +894,18 @@ index 0000000..c0bddb5
 +    from employer_adapters import detail_document
 +    _, text = get(source.api, source, accept_xml=True)
 +    limit = getattr(req, "max_details", 10)
++    kind, found = parse(text)
++    if kind == "index":
++        host = urlsplit(source.api).hostname
++        parts = [u for u in found if urlsplit(u).scheme == "https" and urlsplit(u).hostname == host][:MAX_PARTS]
++        found = []
++        for part in parts:
++            _, sub = get(part, source, accept_xml=True)
++            sub_kind, urls = parse(sub)
++            if sub_kind == "urlset":
++                found.extend(urls)
 +    links = []
-+    for raw in locations(text):
++    for raw in found:
 +        if is_detail(raw, source) and raw not in links:
 +            links.append(raw)
 +    for raw in links[:limit]:

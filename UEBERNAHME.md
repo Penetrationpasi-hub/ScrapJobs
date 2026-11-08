@@ -18,7 +18,7 @@ Falls `employers.json` im App-Repo inzwischen anders aussieht, schlägt der Teil
 | `dvinci_adapter.py` | WIRmachenDRUCK | liest die DvinciData-Stellenliste (JSON im HTML) |
 | `rems_adapter.py` | REMS | liest die Orchard-Listenseite |
 | `datafeed_adapter.py` | Löffelhardt (Softgarden) | liest den offiziellen Stellen-Feed `/jobs.feed.json` (schema.org DataFeed), ein Abruf |
-| `sitemap_adapter.py` | Peter Hahn (Talention) | liest die in der robots.txt genannte Sitemap (nur `<urlset>`, kein DOCTYPE) und prüft jede Anzeige auf der Einzelseite |
+| `sitemap_adapter.py` | Peter Hahn, Diakonie Stetten, Syntegon, STIHL, Klinikum Stuttgart | liest die Sitemap der Quelle und prüft jede Anzeige auf der Einzelseite. Eine `<urlset>` wird direkt gelesen; ein `<sitemapindex>` eine Ebene tief (nur Untersitemaps desselben Hosts, höchstens 6, `MAX_PARTS`). Kein DOCTYPE/ENTITY. |
 | `personio_adapter.py` | RIVA / Mpire | liest den öffentlichen Personio-XML-Feed (`/xml`); lehnt DOCTYPE/ENTITY ab, IDs müssen numerisch sein |
 
 Dazu: `employer_adapters.adapter_jobs` ruft `dvinci`, `rems_list`, `personio` auf. `sources.py` kennt die Adapter-Namen und bindet sie fest:
@@ -39,6 +39,7 @@ Rückwärtskompatibel, die Live-Suche verhält sich ohne die neuen Request-Felde
 - BOM am Anfang der robots.txt wird entfernt (sicher, kann immer gelten).
 - Diagnose: `report["detail"]`, `report["sample"]`, Detailtext bei „Host nicht freigegeben".
 - Captcha-Prüfung wird bei `accept_xml` übersprungen.
+- Unerwartete Ausnahmen setzen `report["detail"]` ("interner Fehler: <Typ> …") statt eines leeren `unsupported`.
 - **Nur Katalog-Lauf, NICHT für die Live-Suche übernehmen:** `robots_missing_ok` (fehlende oder Standard-robots.txt gilt als „keine Regeln"). Ohne das Request-Feld bleibt der Dienst streng. Ebenso die optionalen Felder `max_jobs`, `max_details`, `seconds`, `documents`, `max_pages`.
 
 ## Quellen (`employers.json`)
@@ -49,13 +50,22 @@ Rückwärtskompatibel, die Live-Suche verhält sich ohne die neuen Request-Felde
 - neu `airbus` (gleiche API, drei Standort-IDs, `company_pattern` `airbus`)
 - `loeffelhardt` → `"adapter":"datafeed","api":"https://stellenangebot-loeffelhardt.career.softgarden.de/jobs.feed.json"`
 - `diakonie_stetten`, `syntegon` → `"adapter":"sitemap"` (Sitemap-Datei der Quelle)
+- `stihl` → `"adapter":"sitemap","api":"https://corporate.stihl.de/sitemap.xml"` (direkte `urlset`, ca. 149 Anzeigen)
+- `klinikum_stuttgart` → `"adapter":"sitemap","api":"https://www.klinikum-stuttgart.de/sitemap.xml"` (Index, Teil „jobs"); `detail` korrigiert auf `/karriere/job/[^/?#]+-\\d+$` (vorher fälschlich `/karriere/jobs/…`)
+- `db_audiotechnik`: Sitemap-Eintrag vorbereitet (`https://www.dbaudio.com/global/de/sitemap.xml`), aber `www.dbaudio.com` antwortet von GitHub aus nicht (Timeout). Im Live-Dienst nur eintragen, wenn der Host von dort erreichbar ist.
 - `peter_hahn` → `"adapter":"sitemap","api":"https://jobs.peterhahn.com/sitemap"`
 - `soehnle` → Selektoren statt strukturierter Daten (`title_selector`, `company_selector`, `company_capture`, `company_pattern`, `description_selector`)
 - `catalog_locations` (nur Katalog: Festo, MAHLE, Kärcher) wird von der Live-Suche nicht gebraucht.
 
 ## Tests
-Neue Tests: `test_dvinci.py`, `test_rems_list.py`, `test_personio.py`, `test_microdata.py` (und ein Workday-Facettentest in `test_employer_adapters.py`).
+Neue Tests: `test_sitemap.py` (inkl. Index-Test und Adressmuster von STIHL/d&b/Klinikum), `test_datafeed.py`, `test_dvinci.py`, `test_rems_list.py`, `test_personio.py`, `test_microdata.py` (und ein Workday-Facettentest in `test_employer_adapters.py`).
 Nach der Übernahme `python -m pytest -q` in `scrapling-server` ausführen.
+
+## Reihenfolge der Übernahme
+1. Neue Dateien kopieren (`dvinci_adapter.py`, `rems_adapter.py`, `personio_adapter.py`, `sitemap_adapter.py`, `datafeed_adapter.py`).
+2. `safe_http.py`, `extraction.py`, `crawler.py`, `employer_adapters.py`, `sources.py` per Patch.
+3. `employers.json`-Einträge (oben) übernehmen; neue Hosts nur nach eigener Freigabe.
+4. Tests kopieren und `python -m pytest -q` ausführen (aktuell 245 grün).
 
 ## Noch offen
 Die Firmennamen aus Workday tragen eine interne Nummer („922E Airbus …"). Das Entfernen steht noch aus.
