@@ -58,7 +58,7 @@ EMPLOYERS = (
            catalog_locations=("Esslingen", "Ostfildern")),
     Source("bosch", "Bosch", ("careers.smartrecruiters.com", "jobs.smartrecruiters.com"),
            "https://careers.smartrecruiters.com/BoschGroup/?search={q}", r"/BoschGroup/\d+[^?#]*",
-           note="HTML-Abruf derzeit nicht bestätigt. Die öffentliche SmartRecruiters-API untersagt allgemeines Crawling; kein automatischer API-Ersatz und keine Umgehung."),
+           note="Bewusst nicht gelesen: robots.txt von jobs.bosch.com sperrt /en/ (Anzeigen und Liste) für alle allgemeinen Crawler (Stand 2026-11-08), und die öffentliche SmartRecruiters-API untersagt allgemeines Crawling. Kein API-Ersatz und keine Umgehung."),
 )
 
 
