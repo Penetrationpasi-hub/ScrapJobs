@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T18:59:37+00:00 · 654 Stellen aus 46 von 61 Quellen
+Stand: 2026-11-08T19:05:59+00:00 · 678 Stellen aus 47 von 61 Quellen
 
 ## Quellen
 
@@ -30,7 +30,7 @@ Stand: 2026-11-08T18:59:37+00:00 · 654 Stellen aus 46 von 61 Quellen
 | Syntegon | done | 15 | 2026-11-08 |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
 | Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – |  |
-| Emil Löffelhardt | blocked | 0 | – |  |
+| Emil Löffelhardt | done | 24 | 2026-11-08 |  |
 | REMS | done | 7 | 2026-11-08 |  |
 | stoba Backnang | done | 5 | 2026-11-08 |  |
 | Deutsche Post / DHL | unsupported | 0 | – |  |
@@ -372,6 +372,33 @@ Stand: 2026-11-08T18:59:37+00:00 · 654 Stellen aus 46 von 61 Quellen
 - [IT Projektmanager (m/w/d) (Vollzeit, unbefristet)](https://jobapplication.hrworks.de/de?companyId=av679e8c&id=7b55f5) · 71332 Waiblingen DE-BW · seit 2026-11-08
 - [IT-Systemadministrator*in (m/w/d)](https://jobapplication.hrworks.de/de?companyId=av679e8c&id=5277a0) · 71332 Waiblingen DE-BW · seit 2026-11-08
 - [MASCHINENFÜHRER FALTSCHACHTEL-KLEBEMASCHINE (m/w/d)  (Vollzeit, unbefristet)](https://jobapplication.hrworks.de/de?companyId=av679e8c&id=fdc7d0) · 71332 Waiblingen DE-BW · seit 2026-11-08
+
+### Emil Löffelhardt GmbH & Co. KG
+
+- [Ausbildung als Fachinformatiker Systemintegration (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65554431/Ausbildung-als-Fachinformatiker-Systemintegration-m-w-d-,-Start-09-2027) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ausbildung als Fachlagerist (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65555141/Ausbildung-als-Fachlagerist-m-w-d-,-Start-09-2027) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/67905957/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · Bayreuth Bayern Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65555456/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · 72636 Frickenhausen Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65554101/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65557011/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · Nürnberg Bayern Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/68362647/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · 72250 Freudenstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65561306/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · 95615 Marktredwitz Bayern Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/68362807/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · Albstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ausbildung als Kaufmann/-frau für Groß- und Außenhandelsmanagement (m/w/d), Start 09/2027](https://jobs.loeffelhardt.de/jobs/65555606/Ausbildung-als-Kaufmann--frau-f%C3%BCr-Gro%C3%9F--und-Au%C3%9Fenhandelsmanagement-m-w-d-,-Start-09-2027) · Ulm Baden-Württemberg Deutschland · seit 2026-11-08
+- [Fachberater Automatisierungstechnik (m/w/d) für Vertrieb und Support](https://jobs.loeffelhardt.de/jobs/68539062/Fachberater-Automatisierungstechnik-m-w-d-f%C3%BCr-Vertrieb-und-Support) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Fachberater eBusiness (m/w/d) - Schwerpunkt Digitalisierung Industriekunden](https://jobs.loeffelhardt.de/jobs/67518552/Fachberater-eBusiness-m-w-d---Schwerpunkt-Digitalisierung-Industriekunden) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Fachberater eBusiness (m/w/d) - Schwerpunkt Prozessdigitalisierung](https://jobs.loeffelhardt.de/jobs/67518447/Fachberater-eBusiness-m-w-d---Schwerpunkt-Prozessdigitalisierung) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Kraftfahrer (m/w/d)](https://jobs.loeffelhardt.de/jobs/66728048/Kraftfahrer-m-w-d-) · Bayreuth Bayern Deutschland · seit 2026-11-08
+- [Kraftfahrer (m/w/d)](https://jobs.loeffelhardt.de/jobs/68230556/Kraftfahrer-m-w-d-) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Lagermitarbeiter (m/w/d)](https://jobs.loeffelhardt.de/jobs/68099621/Lagermitarbeiter-m-w-d-) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Mechatroniker / Elektroniker / Instandhalter (m/w/d)](https://jobs.loeffelhardt.de/jobs/66831035/Mechatroniker-Elektroniker-Instandhalter-m-w-d-) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d)](https://jobs.loeffelhardt.de/jobs/68555147/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-) · Weiden in der Oberpfalz Bayern Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d)](https://jobs.loeffelhardt.de/jobs/67820452/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-) · Würzburg Bayern Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d)](https://jobs.loeffelhardt.de/jobs/66546283/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-) · 95326 Kulmbach Bayern Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d)](https://jobs.loeffelhardt.de/jobs/68199341/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-) · Albstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d)](https://jobs.loeffelhardt.de/jobs/68214641/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-) · Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d)](https://jobs.loeffelhardt.de/jobs/68137321/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-) · 71083 Herrenberg Baden-Württemberg Deutschland · seit 2026-11-08
+- [Sachbearbeiter Vertrieb Elektrotechnik (m/w/d) mit Schwerpunkt Licht](https://jobs.loeffelhardt.de/jobs/67625162/Sachbearbeiter-Vertrieb-Elektrotechnik-m-w-d-mit-Schwerpunkt-Licht) · Heilbronn Baden-Württemberg Deutschland · seit 2026-11-08
 
 ### Evang. Kirchenbezirk Waiblingen - Geschäftsstelle Kita
 
