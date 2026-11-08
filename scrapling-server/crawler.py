@@ -76,7 +76,7 @@ def crawl(req, transport_factory=Transport):
                     raise FetchError("timeout")
                 time.sleep(pause)
         final, html = transport.get(raw, source.hosts, authorize=check_robots, **options)
-        if not options.get("accept_json") and ("captcha" in plain(html[:50000]).lower() or "access denied" in plain(html[:50000]).lower()):
+        if not options.get("accept_json") and not options.get("accept_xml") and ("captcha" in plain(html[:50000]).lower() or "access denied" in plain(html[:50000]).lower()):
             raise FetchError("blocked")
         return final, html
 
@@ -116,7 +116,7 @@ def crawl(req, transport_factory=Transport):
             near = None
             if source.teaser and req.location and (origin := geo.center(req.location)):
                 near = lambda place: geo.in_range(origin, place, req.radius_km)
-            for _ in range(source.max_pages):
+            for _ in range(getattr(req, "max_pages", source.max_pages)):
                 if not next_url or next_url in visited:
                     break
                 visited.add(next_url)

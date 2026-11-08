@@ -108,7 +108,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)
@@ -125,13 +125,16 @@ def registry() -> dict[str, Source]:
                 or source.api != "https://api.carsonal.de/rest"
                 or source.search != "https://jobs.burgerschloz.de/de/"):
             raise ValueError("Carsonal reader is bound to Burger Schloz's public career page")
+        if source.adapter == "personio" and (len(source.hosts) != 1 or not source.hosts[0].endswith(".jobs.personio.de")
+                or source.api != f"https://{source.hosts[0]}/xml"):
+            raise ValueError("Personio reader is bound to the tenant's public /xml feed")
         if source.adapter == "rems_list" and (source.key != "rems"
                 or source.search != "https://recruitment.rems.de/stellenangebote"):
             raise ValueError("REMS reader is bound to REMS's public job list")
         if source.adapter == "murr" and (source.key != "murrelektronik"
                 or source.search != "https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/"):
             raise ValueError("Murrelektronik reader is bound to its public job list")
-        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite"} and not source.api:
+        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite", "personio"} and not source.api:
             raise ValueError("Employer API endpoint required")
     return result
 

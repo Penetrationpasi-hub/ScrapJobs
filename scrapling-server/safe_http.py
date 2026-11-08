@@ -83,7 +83,9 @@ class Transport:
         self.last = {}
 
     def get(self, raw, hosts, authorize=None, *, json_body=None, accept_json=False, accept_javascript=False,
-            robots_request=False, json_api=False):
+            robots_request=False, json_api=False, accept_xml=False):
+        if accept_xml and (accept_json or accept_javascript or json_api or robots_request or json_body is not None):
+            raise FetchError("unsupported")
         if json_api and (not accept_json or json_body is not None):
             raise FetchError("unsupported")
         if accept_javascript and (accept_json or json_body is not None):
@@ -115,6 +117,8 @@ class Transport:
                            "Accept-Encoding": "identity"}
                 if accept_javascript:
                     headers["Accept"] = "application/javascript,text/javascript"
+                if accept_xml:
+                    headers["Accept"] = "application/xml,text/xml"
                 if robots_request:
                     headers["Accept"] = "*/*"
                 if json_api:
@@ -128,7 +132,7 @@ class Transport:
                 if response.status in (301, 302, 303, 307, 308):
                     # Do not forward a search POST or API request to a redirect.
                     # HTML redirects retain the existing pinned/robots checks.
-                    if payload is not None or accept_json or accept_javascript or robots_request:
+                    if payload is not None or accept_json or accept_javascript or accept_xml or robots_request:
                         raise FetchError("unsupported", http_status=301 if robots_request and response.status == 301 else None)
                     location = response.getheader("Location")
                     if not location:
@@ -149,6 +153,7 @@ class Transport:
                 kinds = (("application/vnd.api+json", "application/json") if json_api else
                          ("application/javascript", "text/javascript") if accept_javascript else
                          ("application/json",) if accept_json else
+                         ("application/xml", "text/xml") if accept_xml else
                          ("text/html", "application/xhtml+xml", "text/plain") + (("text/txt",) if url.path == "/robots.txt" else ()))
                 if not any(t in kind for t in kinds):
                     raise FetchError("unsupported", detail=f"Content-Type {kind[:60] or 'leer'}")
