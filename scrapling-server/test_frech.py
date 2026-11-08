@@ -33,3 +33,17 @@ class FrechLinksTest(unittest.TestCase):
         self.assertEqual(sorted(links), [
             "https://www.frech.com/de/ausbildungsstelle-details/elektroniker-fuer-betriebstechnik-m-w-d.html",
             "https://www.frech.com/de/job-details-de/it-projektmanager-m-w-d.html"])
+
+
+class FilledAndRedirectTest(unittest.TestCase):
+    def test_filled_position_is_not_a_vacancy(self):
+        page = PAGE.replace("Ausbildung zum Elektroniker/ -in für Betriebstechnik (m/w/d) bei Frech</div>",
+                            "Industriemechaniker (m/w/d) – Stelle besetzt</div>")
+        self.assertIsNone(extract(page, URL, registry()["frech"]))
+
+    def test_pfisterer_redirect_variant_with_language_segment_is_a_detail(self):
+        from extraction import is_detail
+        source = registry()["pfisterer"]
+        self.assertTrue(is_detail("https://pfisterer.mhm.jobs/1786-data-strategist/job.html", source))
+        self.assertTrue(is_detail("https://pfisterer.mhm.jobs/1786-data-strategist/de/job.html", source))
+        self.assertFalse(is_detail("https://pfisterer.mhm.jobs/jobs/1786-data-strategist/job_application/new", source))

@@ -204,7 +204,7 @@ def extract(html, raw, source, q="", now=None, why=None):
             company = match.group(0) if match else ""
     else:
         return no("keine strukturierten Daten")
-    if (not title or not company or re.search(r"initiativbewerbung|unsolicited application|talent.?pool|general application", title, re.I)
+    if (not title or not company or re.search(r"initiativbewerbung|unsolicited application|talent.?pool|general application|stelle\s+besetzt|position\s+filled", title, re.I)
             or re.search(r"verschiedene|mehrere|diverse|unbekannt|nicht angegeben", company, re.I)
             or re.search(r"\d+\s+(?:offene\s+)?(?:jobs|stellen|treffer)|suchergebnisse", title, re.I)):
         return no(f"Titel/Firma ungeeignet (Titel {bool(title)}, Firma {bool(company)})")
