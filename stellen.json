@@ -1,11 +1,12 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T12:50:54+00:00",
+ "aktualisiert": "2026-11-08T13:16:29+00:00",
  "quellen": [
   {
    "key": "festo",
    "label": "Festo",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://jobs.festo.com/job/Esslingen-Praktikum-Infotronik-Ein-Praktikum%2C-zwei-Berufsfelder-73734/1014966601",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -13,7 +14,7 @@
    "key": "bosch",
    "label": "Bosch",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang=\"en\"><head><!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\" /> <![e»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -35,6 +36,7 @@
    "key": "mahle",
    "label": "MAHLE / MAHLE Aftermarket",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://careers.mahle.com/job/Markgr%C3%B6ningen-Ausbildung-Industriemechaniker-%28mwd%29-2027-71706/1405005433",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -49,7 +51,7 @@
    "key": "robert_bosch_krankenhaus",
    "label": "Robert Bosch Krankenhaus",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang=\"en\"><head><!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\" /> <![e»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -57,6 +59,7 @@
    "key": "kaercher",
    "label": "Kärcher",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://careers.kaercher.com/job/Santa-Ana%2C-CA-Field-Service-Technician-%28Santa-Ana%2C-CA%29-CA-92604/1368056655",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -92,7 +95,7 @@
    "key": "stadt_waiblingen",
    "label": "Stadt Waiblingen",
    "status": "robots_unavailable",
-   "detail": "unsupported",
+   "detail": "Content-Encoding gzip",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -142,7 +145,7 @@
    "key": "peter_hahn",
    "label": "Peter Hahn",
    "status": "robots_unavailable",
-   "detail": "unsupported",
+   "detail": "Content-Type text/txt;charset=utf-8",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -164,7 +167,7 @@
    "key": "sana_karl_olga",
    "label": "Sana · Karl-Olga-Krankenhaus",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initia»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -179,6 +182,7 @@
    "key": "rems",
    "label": "REMS",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://recruitment.rems.de/ekrmt",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -242,6 +246,7 @@
    "key": "riva",
    "label": "RIVA-Gruppe / Mpire",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://mpire.jobs.personio.de/job/2568858",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -249,6 +254,7 @@
    "key": "wirmachendruck",
    "label": "WIRmachenDRUCK",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://jobs.wir-machen-druck.de/de/jobs/4/intro",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -284,7 +290,7 @@
    "key": "brunold",
    "label": "Brunold Automobile",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «Sitemap: https://www.brunold.de/sitemap.xml»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -292,7 +298,7 @@
    "key": "kuebler",
    "label": "KÜBLER Workwear",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang=\"de\" xmlns:ng=\"http://angularjs.org\" data-beasties-container> <head> <meta charset=\"utf-8\"> <»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -335,6 +341,7 @@
    "key": "soehnle",
    "label": "Soehnle Industrial Solutions",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -356,7 +363,7 @@
    "key": "dusyma",
    "label": "Dusyma",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initia»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -385,6 +392,7 @@
    "key": "pfisterer",
    "label": "PFISTERER",
    "status": "timeout",
+   "detail": "verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -392,7 +400,7 @@
    "key": "hahn_automobile",
    "label": "Hahn Automobile",
    "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile",
+   "detail": "robots.txt ohne User-agent-Zeile: «﻿User-agent: * Disallow:»",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -400,6 +408,7 @@
    "key": "klingele",
    "label": "Klingele Paper & Packaging",
    "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://jobs.klingele.com/job/Remshalden-Initiativbewerbung-Remshalden-%28mwd%29-73630/939250355",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -421,7 +430,7 @@
    "key": "zvw",
    "label": "Zeitungsverlag Waiblingen",
    "status": "robots_unavailable",
-   "detail": "network_error",
+   "detail": "TimeoutError karriere.zvw.de",
    "letzterErfolg": null,
    "anzahl": 0
   },

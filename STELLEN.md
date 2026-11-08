@@ -1,36 +1,36 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T12:50:54+00:00 · 243 Stellen aus 27 von 60 Quellen
+Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 
 ## Quellen
 
 | Quelle | Status | Stellen | Letzter Erfolg | Detail |
 | --- | --- | ---: | --- | --- |
-| Festo | no_verified_jobs | 0 | – |  |
-| Bosch | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Festo | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.festo.com/job/Esslingen-Praktikum-Infotronik-Ein-Praktikum%2C-zwei-Berufsfelder-73734/1014966601 |
+| Bosch | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang="en"><head><!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /> <![e» |
 | Mercedes-Benz | unsupported | 0 | – |  |
 | STIHL | unsupported | 0 | – |  |
-| MAHLE / MAHLE Aftermarket | no_verified_jobs | 0 | – |  |
+| MAHLE / MAHLE Aftermarket | no_verified_jobs | 0 | – | verworfen, z. B. https://careers.mahle.com/job/Markgr%C3%B6ningen-Ausbildung-Industriemechaniker-%28mwd%29-2027-71706/1405005433 |
 | Diakonie Stetten | unsupported | 0 | – |  |
-| Robert Bosch Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
-| Kärcher | no_verified_jobs | 0 | – |  |
+| Robert Bosch Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang="en"><head><!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /> <![e» |
+| Kärcher | no_verified_jobs | 0 | – | verworfen, z. B. https://careers.kaercher.com/job/Santa-Ana%2C-CA-Field-Service-Technician-%28Santa-Ana%2C-CA%29-CA-92604/1368056655 |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
 | Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |  |
-| Stadt Waiblingen | robots_unavailable | 0 | – | unsupported |
+| Stadt Waiblingen | robots_unavailable | 0 | – | Content-Encoding gzip |
 | TESAT-Spacecom | unsupported | 0 | – |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
 | Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
 | Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
 | Stadt Schorndorf | done | 6 | 2026-11-08 |  |
 | Oskar Frech / Frech-Gruppe | no_verified_jobs | 0 | – |  |
-| Peter Hahn | robots_unavailable | 0 | – | unsupported |
+| Peter Hahn | robots_unavailable | 0 | – | Content-Type text/txt;charset=utf-8 |
 | Syntegon | unsupported | 0 | – |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
-| Sana · Karl-Olga-Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Sana · Karl-Olga-Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initia» |
 | Emil Löffelhardt | unsupported | 0 | – |  |
-| REMS | no_verified_jobs | 0 | – |  |
+| REMS | no_verified_jobs | 0 | – | verworfen, z. B. https://recruitment.rems.de/ekrmt |
 | stoba Backnang | done | 5 | 2026-11-08 |  |
 | Deutsche Post / DHL | unsupported | 0 | – |  |
 | d&b audiotechnik | unsupported | 0 | – |  |
@@ -39,32 +39,32 @@ Stand: 2026-11-08T12:50:54+00:00 · 243 Stellen aus 27 von 60 Quellen
 | Burger Schloz Automobile | done | 9 | 2026-11-08 |  |
 | Klöpfer | done | 4 | 2026-11-08 |  |
 | JUDO Wasseraufbereitung | done | 8 | 2026-11-08 |  |
-| RIVA-Gruppe / Mpire | no_verified_jobs | 0 | – |  |
-| WIRmachenDRUCK | no_verified_jobs | 0 | – |  |
+| RIVA-Gruppe / Mpire | no_verified_jobs | 0 | – | verworfen, z. B. https://mpire.jobs.personio.de/job/2568858 |
+| WIRmachenDRUCK | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.wir-machen-druck.de/de/jobs/4/intro |
 | Eisenmann Services / Personal-Service | done | 3 | 2026-11-08 |  |
 | Bäckerei Maurer | done | 15 | 2026-11-08 |  |
 | Elanders Waiblingen | done | 10 | 2026-11-08 |  |
 | Scutum Sicherheit | unsafe_target | 0 | – |  |
-| Brunold Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
-| KÜBLER Workwear | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Brunold Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «Sitemap: https://www.brunold.de/sitemap.xml» |
+| KÜBLER Workwear | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang="de" xmlns:ng="http://angularjs.org" data-beasties-container> <head> <meta charset="utf-8"> <» |
 | Swoboda | done | 16 | 2026-11-08 |  |
 | Autohaus Walter Mulfinger | done | 5 | 2026-11-08 |  |
 | Adolf Föhl | done | 7 | 2026-11-08 |  |
 | Stadtwerke Waiblingen | done | 9 | 2026-11-08 |  |
 | FESSMANN | done | 2 | 2026-11-08 |  |
-| Soehnle Industrial Solutions | no_verified_jobs | 0 | – |  |
+| Soehnle Industrial Solutions | no_verified_jobs | 0 | – | verworfen, z. B. https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd |
 | Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |  |
 | RIANI | done | 6 | 2026-11-08 |  |
-| Dusyma | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Dusyma | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initia» |
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
 | Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
 | Murrelektronik | done | 9 | 2026-11-08 |  |
-| PFISTERER | timeout | 0 | – |  |
-| Hahn Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
-| Klingele Paper & Packaging | no_verified_jobs | 0 | – |  |
+| PFISTERER | timeout | 0 | – | verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html |
+| Hahn Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «﻿User-agent: * Disallow:» |
+| Klingele Paper & Packaging | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.klingele.com/job/Remshalden-Initiativbewerbung-Remshalden-%28mwd%29-73630/939250355 |
 | Harro Höfliger | done | 10 | 2026-11-08 |  |
 | SOCCO | done | 25 | 2026-11-08 |  |
-| Zeitungsverlag Waiblingen | robots_unavailable | 0 | – | network_error |
+| Zeitungsverlag Waiblingen | robots_unavailable | 0 | – | TimeoutError karriere.zvw.de |
 | Rems-Murr-JOBS | done | 10 | 2026-11-08 |  |
 
 ## Stellen
