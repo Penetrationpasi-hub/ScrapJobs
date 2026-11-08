@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T15:27:49+00:00",
+ "aktualisiert": "2026-11-08T18:04:54+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -141,9 +141,9 @@
   {
    "key": "frech",
    "label": "Oskar Frech / Frech-Gruppe",
-   "status": "no_verified_jobs",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 4
   },
   {
    "key": "peter_hahn",
@@ -396,9 +396,9 @@
   {
    "key": "pfisterer",
    "label": "PFISTERER",
-   "status": "timeout",
+   "status": "no_verified_jobs",
    "letzterErfolg": null,
-   "detail": "verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html",
+   "detail": "verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html (ld+json 2, JobPosting 1, 26902 Zeichen, Titel «Data Strategist & Enterprise Architect (w/m/d) | B») → Weiterleitung auf https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/de/job.html",
    "anzahl": 0
   },
   {
@@ -4995,6 +4995,54 @@
    "posted": "2026-11-02",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-924e87a91168a591bf228fdb",
+   "title": "Ausbildung zum Elektroniker/ -in für Betriebstechnik (m/w/d) bei Frech",
+   "company": "Oskar Frech GmbH + Co. KG",
+   "location": "Schorndorfer Straße 32 73614 Schorndorf",
+   "url": "https://www.frech.com/de/ausbildungsstelle-details/elektroniker-fuer-betriebstechnik-m-w-d.html",
+   "posted": "",
+   "source": "frech",
+   "sourceLabel": "Oskar Frech / Frech-Gruppe",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-43c0ea2091e0efdf47c3dde7",
+   "title": "Ausbildung zum Industriekaufmann (m/w/d) bei Frech",
+   "company": "Oskar Frech GmbH + Co. KG",
+   "location": "Schorndorfer Straße 32 73614 Schorndorf",
+   "url": "https://www.frech.com/de/ausbildungsstelle-details/industriekaufmann-m-w-d.html",
+   "posted": "",
+   "source": "frech",
+   "sourceLabel": "Oskar Frech / Frech-Gruppe",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-d9b66de59cc0a0739cdccd59",
+   "title": "Industriemechaniker (m/w/d) – Stelle besetzt",
+   "company": "Oskar Frech GmbH + Co. KG",
+   "location": "Schorndorfer Straße 32 73614 Schorndorf",
+   "url": "https://www.frech.com/de/ausbildungsstelle-details/industriemechaniker-m-w-d.html",
+   "posted": "",
+   "source": "frech",
+   "sourceLabel": "Oskar Frech / Frech-Gruppe",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-dafd8f5333ab19e21f425fe2",
+   "title": "IT-Systemadministrator mit Projektverantwortung (m/w/d)",
+   "company": "Oskar Frech GmbH + Co. KG",
+   "location": "Schorndorfer Straße 32 73614 Schorndorf",
+   "url": "https://www.frech.com/de/job-details-de/it-projektmanager-m-w-d.html",
+   "posted": "",
+   "source": "frech",
+   "sourceLabel": "Oskar Frech / Frech-Gruppe",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },

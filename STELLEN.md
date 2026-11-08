@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T15:27:49+00:00 · 535 Stellen aus 39 von 61 Quellen
+Stand: 2026-11-08T18:04:54+00:00 · 539 Stellen aus 40 von 61 Quellen
 
 ## Quellen
 
@@ -25,7 +25,7 @@ Stand: 2026-11-08T15:27:49+00:00 · 535 Stellen aus 39 von 61 Quellen
 | Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
 | Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
 | Stadt Schorndorf | done | 6 | 2026-11-08 |  |
-| Oskar Frech / Frech-Gruppe | no_verified_jobs | 0 | – |  |
+| Oskar Frech / Frech-Gruppe | done | 4 | 2026-11-08 |  |
 | Peter Hahn | robots_unavailable | 0 | – | Content-Type text/txt;charset=utf-8 |
 | Syntegon | unsupported | 0 | – |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
@@ -61,7 +61,7 @@ Stand: 2026-11-08T15:27:49+00:00 · 535 Stellen aus 39 von 61 Quellen
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
 | Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
 | Murrelektronik | done | 9 | 2026-11-08 |  |
-| PFISTERER | timeout | 0 | – | verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html |
+| PFISTERER | no_verified_jobs | 0 | – | verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html (ld+json 2, JobPosting 1, 26902 Zeichen, Titel «Data Strategist & Enterprise Architect (w/m/d) | B») → Weiterleitung auf https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/de/job.html |
 | Hahn Automobile | done | 8 | 2026-11-08 |  |
 | Klingele Paper & Packaging | done | 20 | 2026-11-08 |  |
 | Harro Höfliger | done | 10 | 2026-11-08 |  |
@@ -551,6 +551,13 @@ Stand: 2026-11-08T15:27:49+00:00 · 535 Stellen aus 39 von 61 Quellen
 ### Müller Jorberg GmbH
 
 - [Organisationstalent gesucht!](https://rems-murr-jobs.de/job/organisationstalent-gesucht-1810693) · 71 Backnang Baden-Württemberg DE · seit 2026-11-08
+
+### Oskar Frech GmbH + Co. KG
+
+- [Ausbildung zum Elektroniker/ -in für Betriebstechnik (m/w/d) bei Frech](https://www.frech.com/de/ausbildungsstelle-details/elektroniker-fuer-betriebstechnik-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
+- [Ausbildung zum Industriekaufmann (m/w/d) bei Frech](https://www.frech.com/de/ausbildungsstelle-details/industriekaufmann-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
+- [Industriemechaniker (m/w/d) – Stelle besetzt](https://www.frech.com/de/ausbildungsstelle-details/industriemechaniker-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
+- [IT-Systemadministrator mit Projektverantwortung (m/w/d)](https://www.frech.com/de/job-details-de/it-projektmanager-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
 
 ### Paulinenpflege
 
