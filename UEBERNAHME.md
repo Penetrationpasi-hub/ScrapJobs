@@ -45,6 +45,7 @@ Rückwärtskompatibel, die Live-Suche verhält sich ohne die neuen Request-Felde
 - `riva` → `"adapter":"personio","api":"https://mpire.jobs.personio.de/xml"`
 - `tesat` → `"adapter":"workday","api":"https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus/jobs"`, `detail` `^/de-DE/Airbus/job/[^?#]+`
 - neu `airbus` (gleiche API, drei Standort-IDs, `company_pattern` `airbus`)
+- `soehnle` → Selektoren statt strukturierter Daten (`title_selector`, `company_selector`, `company_capture`, `company_pattern`, `description_selector`)
 - `catalog_locations` (nur Katalog: Festo, MAHLE, Kärcher) wird von der Live-Suche nicht gebraucht.
 
 ## Tests
