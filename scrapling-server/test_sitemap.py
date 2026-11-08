@@ -64,9 +64,11 @@ class SitemapSourcesTest(unittest.TestCase):
         }
         cases["stihl"] = ("https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktfunktionen-in-der-vorentwicklung-sf38922", "https://corporate.stihl.de/de/karriere/stellenangebote")
         cases["db_audiotechnik"] = ("https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/it-security-specialist-wmd-req-2026-00000180/", "https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/")
+        cases["klinikum_stuttgart"] = ("https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-m-w-d-3502", "https://www.klinikum-stuttgart.de/karriere/jobs")
         for key, (ad, listing) in cases.items():
             with self.subTest(key=key):
                 source = registry()[key]
-                self.assertEqual(source.adapter, "sitemap")
+                if key != "klinikum_stuttgart":
+                    self.assertEqual(source.adapter, "sitemap")
                 self.assertTrue(is_detail(ad, source))
                 self.assertFalse(is_detail(listing, source))
