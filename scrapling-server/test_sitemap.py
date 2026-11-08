@@ -41,7 +41,6 @@ class SitemapSourcesTest(unittest.TestCase):
         from extraction import is_detail
         cases = {
             "diakonie_stetten": ("https://deinjob.diakonie-stetten.de/jobs/23893460/Mitarbeiter-m-w-d-in-der-Reinigung/", "https://deinjob.diakonie-stetten.de/"),
-            "loeffelhardt": ("https://jobs.loeffelhardt.de/jobs/65555141/Ausbildung-als-Fachlagerist-m-w-d-,-Start-09-2027/", "https://jobs.loeffelhardt.de/"),
             "syntegon": ("https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e", "https://jobs.syntegon.com/search"),
         }
         for key, (ad, listing) in cases.items():

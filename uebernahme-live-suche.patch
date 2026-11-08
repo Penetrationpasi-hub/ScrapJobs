@@ -1,5 +1,5 @@
 diff --git a/scrapling-server/crawler.py b/scrapling-server/crawler.py
-index 687dbc7..ef5d079 100644
+index 687dbc7..e60a656 100644
 --- a/scrapling-server/crawler.py
 +++ b/scrapling-server/crawler.py
 @@ -1,3 +1,4 @@
@@ -56,7 +56,7 @@ index 687dbc7..ef5d079 100644
              if host not in robots:
                  try:
                      probe = {"robots_request": True} if missing_robots_scope(current, source, options) else {}
-@@ -38,15 +60,26 @@ def crawl(req, transport_factory=Transport):
+@@ -38,20 +60,32 @@ def crawl(req, transport_factory=Transport):
                      if missing_robots_scope(current, source, options) and error.http_status in missing_robots_statuses(source):
                          robots[host] = None
                          return
@@ -85,7 +85,13 @@ index 687dbc7..ef5d079 100644
                      raise FetchError("robots_unavailable")
                  return
              if not robot.can_fetch(USER_AGENT, current):
-@@ -59,10 +92,10 @@ def crawl(req, transport_factory=Transport):
+                 raise FetchError("robots_denied")
+             delay = robot.crawl_delay(USER_AGENT) or robot.crawl_delay("*") or 1
++            delay = max(delay, getattr(req, "min_delay", 0))  # Katalog-Lauf: Server, die zu schnelle Abrufe sperren
+             rate = robot.request_rate(USER_AGENT) or robot.request_rate("*")
+             if rate and rate.requests > 0:
+                 delay = max(delay, rate.seconds / rate.requests)
+@@ -59,10 +93,10 @@ def crawl(req, transport_factory=Transport):
              if last and delay > 1:
                  pause = max(0, last + delay - time.monotonic())
                  if pause >= budget.deadline - time.monotonic():
@@ -98,7 +104,7 @@ index 687dbc7..ef5d079 100644
              raise FetchError("blocked")
          return final, html
  
-@@ -102,7 +135,7 @@ def crawl(req, transport_factory=Transport):
+@@ -102,7 +136,7 @@ def crawl(req, transport_factory=Transport):
              near = None
              if source.teaser and req.location and (origin := geo.center(req.location)):
                  near = lambda place: geo.in_range(origin, place, req.radius_km)
@@ -107,7 +113,7 @@ index 687dbc7..ef5d079 100644
                  if not next_url or next_url in visited:
                      break
                  visited.add(next_url)
-@@ -112,6 +145,11 @@ def crawl(req, transport_factory=Transport):
+@@ -112,6 +146,11 @@ def crawl(req, transport_factory=Transport):
                          report["status"] = "no_matches"
                      break
                  links, following = discovery(html, final, source, req.q, near)
@@ -119,7 +125,7 @@ index 687dbc7..ef5d079 100644
                  details.extend(link for link in links if link not in details)
                  next_url = following
                  # With a place filter further list pages are only worth their crawl delay while detail slots are free.
-@@ -124,6 +162,8 @@ def crawl(req, transport_factory=Transport):
+@@ -124,6 +163,8 @@ def crawl(req, transport_factory=Transport):
                  # An empty rendered shell is not proof of zero vacancies.
                  if report["status"] != "no_matches":
                      report["status"] = "unsupported"
@@ -128,7 +134,7 @@ index 687dbc7..ef5d079 100644
              for url in details[:getattr(req, "max_details", source.max_details)]:
                  if len(jobs) >= max_jobs:
                      break
-@@ -135,18 +175,30 @@ def crawl(req, transport_factory=Transport):
+@@ -135,18 +176,30 @@ def crawl(req, transport_factory=Transport):
                  except FetchError as error:
                      if error.code == "gone":
                          report["filtered"] += 1
@@ -160,6 +166,53 @@ index 687dbc7..ef5d079 100644
          except Exception:
              report["status"] = "unsupported"
      return {"status": "done", "jobs": jobs, "sources": reports, "documents": total_documents - budget.remaining}
+diff --git a/scrapling-server/datafeed_adapter.py b/scrapling-server/datafeed_adapter.py
+new file mode 100644
+index 0000000..5deb47e
+--- /dev/null
++++ b/scrapling-server/datafeed_adapter.py
+@@ -0,0 +1,41 @@
++"""Softgarden-Karriereseiten: der offizielle Stellen-Feed `/jobs.feed.json` (schema.org DataFeed).
++
++Ein Abruf liefert alle Anzeigen mit Titel, Anzeigenadresse, Datum, Arbeitgeber und Ort. Beschreibungen werden nicht
++übernommen. Platzhalterwerte ("-") in der Adresse werden entfernt. Jede Anzeige läuft durch dieselbe Prüfung wie ein
++JobPosting (Host, Linkmuster, Titel, Arbeitgeber, Initiativbewerbungen, Ablauf).
++"""
++from safe_http import FetchError
++
++
++def items(data):
++    if not isinstance(data, dict) or not isinstance(data.get("dataFeedElement"), list):
++        raise FetchError("unsupported", detail="Kein schema.org-DataFeed")
++    for entry in data["dataFeedElement"]:
++        row = entry.get("item") if isinstance(entry, dict) else None
++        if isinstance(row, dict) and row.get("@type") == "JobPosting":
++            yield row
++
++
++def clean(row):
++    row = dict(row)
++    place = row.get("jobLocation")
++    if isinstance(place, dict) and isinstance(place.get("address"), dict):
++        address = {k: v for k, v in place["address"].items() if not (isinstance(v, str) and v.strip() in ("", "-"))}
++        row["jobLocation"] = {**place, "address": address}
++    row.pop("description", None)  # wird nicht veröffentlicht
++    return row
++
++
++def datafeed(source, req, get, report):
++    from employer_adapters import from_record, json_document
++    data = json_document(get, source.api, source)
++    for row in items(data):
++        url = row.get("url")
++        if not isinstance(url, str):
++            report["filtered"] += 1
++            continue
++        job = from_record(clean(row), url, source, req.q)
++        if job:
++            yield job
++        else:
++            report["filtered"] += 1
 diff --git a/scrapling-server/dvinci_adapter.py b/scrapling-server/dvinci_adapter.py
 new file mode 100644
 index 0000000..f3214bb
@@ -229,7 +282,7 @@ index 0000000..f3214bb
 +        else:
 +            report["filtered"] += 1
 diff --git a/scrapling-server/employer_adapters.py b/scrapling-server/employer_adapters.py
-index 359c482..3e5ddb9 100644
+index 359c482..872515e 100644
 --- a/scrapling-server/employer_adapters.py
 +++ b/scrapling-server/employer_adapters.py
 @@ -6,7 +6,7 @@ API records are mapped to the same strict JobPosting validation as HTML records.
@@ -272,10 +325,13 @@ index 359c482..3e5ddb9 100644
          document = detail_document(get, raw, source, report)
          if document is None:
              continue
-@@ -255,6 +262,18 @@ def adapter_jobs(source, req, get, report):
+@@ -255,6 +262,21 @@ def adapter_jobs(source, req, get, report):
          yield from (judo if source.adapter == "judo_filter" else harro)(source, req, get, report)
      elif source.adapter == "carsonal":
          yield from carsonal(source, req, get, report)
++    elif source.adapter == "datafeed":
++        from datafeed_adapter import datafeed
++        yield from datafeed(source, req, get, report)
 +    elif source.adapter == "sitemap":
 +        from sitemap_adapter import sitemap
 +        yield from sitemap(source, req, get, report)
@@ -590,7 +646,7 @@ index 0000000..9490f97
 +        else:
 +            report["filtered"] += 1
 diff --git a/scrapling-server/safe_http.py b/scrapling-server/safe_http.py
-index 1097674..4805067 100644
+index 1097674..c572d45 100644
 --- a/scrapling-server/safe_http.py
 +++ b/scrapling-server/safe_http.py
 @@ -6,6 +6,7 @@ import socket
@@ -646,7 +702,7 @@ index 1097674..4805067 100644
                  if robots_request:
                      headers["Accept"] = "*/*"
                  if json_api:
-@@ -126,11 +132,11 @@ class Transport:
+@@ -126,28 +132,31 @@ class Transport:
                  if response.status in (301, 302, 303, 307, 308):
                      # Do not forward a search POST or API request to a redirect.
                      # HTML redirects retain the existing pinned/robots checks.
@@ -660,7 +716,10 @@ index 1097674..4805067 100644
                      current = urljoin(current, location)
                      continue
                  if response.status in (401, 403, 429):
-@@ -140,14 +146,17 @@ class Transport:
+-                    raise FetchError("blocked")
++                    raise FetchError("blocked", http_status=response.status, detail=f"HTTP {response.status} von {url.hostname}")
+                 if response.status in (404, 410):
+                     raise FetchError("gone", http_status=response.status)
                  if response.status != 200:
                      raise FetchError("upstream_error", http_status=response.status)
                  encoding = response.getheader("Content-Encoding", "identity").lower()
@@ -760,7 +819,7 @@ index 0000000..c0bddb5
 +        else:
 +            report["filtered"] += 1
 diff --git a/scrapling-server/sources.py b/scrapling-server/sources.py
-index ca565ff..7e9c239 100644
+index ca565ff..baccee2 100644
 --- a/scrapling-server/sources.py
 +++ b/scrapling-server/sources.py
 @@ -31,6 +31,8 @@ class Source:
@@ -812,14 +871,16 @@ index ca565ff..7e9c239 100644
          if source.company_capture:
              re.compile(source.company_capture)
 -        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr"}:
-+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap"}:
++        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed"}:
              raise ValueError("Unknown employer adapter")
          if source.api:
              api = urlparse(source.api)
-@@ -116,10 +125,19 @@ def registry() -> dict[str, Source]:
+@@ -116,10 +125,21 @@ def registry() -> dict[str, Source]:
                  or source.api != "https://api.carsonal.de/rest"
                  or source.search != "https://jobs.burgerschloz.de/de/"):
              raise ValueError("Carsonal reader is bound to Burger Schloz's public career page")
++        if source.adapter == "datafeed" and not (source.api and source.api.endswith("/jobs.feed.json")):
++            raise ValueError("Datafeed reader needs the portal's /jobs.feed.json")
 +        if source.adapter == "sitemap" and not (
 +                source.api and re.fullmatch(r"https://[a-z0-9.-]+/[A-Za-z0-9_./-]*sitemap[A-Za-z0-9_.-]*", source.api)):
 +            raise ValueError("Sitemap reader needs a plain sitemap URL on a configured host")

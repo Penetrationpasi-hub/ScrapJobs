@@ -108,7 +108,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)
@@ -125,6 +125,8 @@ def registry() -> dict[str, Source]:
                 or source.api != "https://api.carsonal.de/rest"
                 or source.search != "https://jobs.burgerschloz.de/de/"):
             raise ValueError("Carsonal reader is bound to Burger Schloz's public career page")
+        if source.adapter == "datafeed" and not (source.api and source.api.endswith("/jobs.feed.json")):
+            raise ValueError("Datafeed reader needs the portal's /jobs.feed.json")
         if source.adapter == "sitemap" and not (
                 source.api and re.fullmatch(r"https://[a-z0-9.-]+/[A-Za-z0-9_./-]*sitemap[A-Za-z0-9_.-]*", source.api)):
             raise ValueError("Sitemap reader needs a plain sitemap URL on a configured host")
