@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T14:37:59+00:00 · 492 Stellen aus 36 von 60 Quellen
+Stand: 2026-11-08T14:51:05+00:00 · 501 Stellen aus 37 von 61 Quellen
 
 ## Quellen
 
@@ -20,6 +20,7 @@ Stand: 2026-11-08T14:37:59+00:00 · 492 Stellen aus 36 von 60 Quellen
 | Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |  |
 | Stadt Waiblingen | too_large | 0 | – |  |
 | TESAT-Spacecom | unsupported | 0 | – |  |
+| Airbus (Stuttgart, Laupheim, Backnang) | done | 9 | 2026-11-08 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
 | Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
 | Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
@@ -68,6 +69,24 @@ Stand: 2026-11-08T14:37:59+00:00 · 492 Stellen aus 36 von 60 Quellen
 | Rems-Murr-JOBS | done | 10 | 2026-11-08 |  |
 
 ## Stellen
+
+### 2601 Airbus Secure Land Communications GmbH
+
+- [Solution Architect (w/m/d) für missionskritische Mobilfunknetze und -dienste](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Sulzbach/Solution-Architect--w-m-d--fr-missionskritische-Mobilfunknetze-und--dienste_JR10454296-1) · Sulzbach Deutschland · seit 2026-11-08
+- [Solution Architect – IT Network / IP Backbone (m/w/d)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Ulm/Solution-Architect---IT-Network---IP-Backbone--m-w-d-_JR10428044) · Ulm Deutschland · seit 2026-11-08
+- [THU Karrieretag 2026 - Jobs @Airbus Public Safety and Security](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Ulm/THU-Karrieretag-2026---Jobs--Airbus-Public-Safety-and-Security_JR10447992) · Ulm Deutschland · seit 2026-11-08
+
+### 5404 AIRBUS HELICOPTERS DEUTSCHLAND GmbH
+
+- [Certifying Staff CAT B2 for Helicopters MRO (m/f/d)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Donauwrth/Certifying-Staff-B2--m-w-d----Freigabeberechtigtes-Personal_JR10317831) · Donauwörth Deutschland · seit 2026-11-08
+
+### 922E Airbus Defence and Space GmbH
+
+- [(Senior) DevOps Engineer / Platform Engineer (d/m/w) – AI-based Autonomy Hub](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/DevOps---QA-Engineer--m-f-d----Infrastructure-and-Quality-for-Safety-Critical-Software_JR10365952-1) · Backnang Deutschland · seit 2026-11-08
+- [(Senior) Full-Stack Software Engineer (d/m/w) – AI-based Autonomy Hub](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Full-Stack-Software-Engineer--d-f-m----Developing-Mission-Critical-Applications_JR10365950) · Backnang Deutschland · seit 2026-11-08
+- [(Senior) MLOps Engineer (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Machine-Learning---Data-Engineer--m-f-d----AI-for-Autonomous-Systems_JR10365945) · Backnang Deutschland · seit 2026-11-08
+- [(Senior) Simulation Software Engineer – Unreal Engine & AI Autonomy (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/XMLNAME--Senior--Simulation-Engineer--m-f-d----AI-based-Autonomy-Hub_JR10405753) · Backnang Deutschland · seit 2026-11-08
+- [Business Operations Specialist (d/m/w) (d/f/m)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Business-Operations-Specialist--d-m-w----d-f-m-_JR10452513) · Backnang Deutschland · seit 2026-11-08
 
 ### Abfallwirtschaft Rems-Murr AöR
 

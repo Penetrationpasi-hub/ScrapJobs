@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T14:37:59+00:00",
+ "aktualisiert": "2026-11-08T14:51:05+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -102,6 +102,13 @@
    "status": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
+  },
+  {
+   "key": "airbus",
+   "label": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 9
   },
   {
    "key": "zfp_winnenden",
@@ -432,6 +439,114 @@
   }
  ],
  "stellen": [
+  {
+   "id": "scrapling-584646748db5ffabd452a599",
+   "title": "Solution Architect (w/m/d) für missionskritische Mobilfunknetze und -dienste",
+   "company": "2601 Airbus Secure Land Communications GmbH",
+   "location": "Sulzbach Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Sulzbach/Solution-Architect--w-m-d--fr-missionskritische-Mobilfunknetze-und--dienste_JR10454296-1",
+   "posted": "2026-11-03",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-3867c9cc90920e9d310dfc38",
+   "title": "Solution Architect – IT Network / IP Backbone (m/w/d)",
+   "company": "2601 Airbus Secure Land Communications GmbH",
+   "location": "Ulm Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Ulm/Solution-Architect---IT-Network---IP-Backbone--m-w-d-_JR10428044",
+   "posted": "2026-10-20",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-cdb6110b91a1347b9bf095e7",
+   "title": "THU Karrieretag 2026 - Jobs @Airbus Public Safety and Security",
+   "company": "2601 Airbus Secure Land Communications GmbH",
+   "location": "Ulm Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Ulm/THU-Karrieretag-2026---Jobs--Airbus-Public-Safety-and-Security_JR10447992",
+   "posted": "2026-10-07",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-4dfcb5da0af3f471c161be0d",
+   "title": "Certifying Staff CAT B2 for Helicopters MRO (m/f/d)",
+   "company": "5404 AIRBUS HELICOPTERS DEUTSCHLAND GmbH",
+   "location": "Donauwörth Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Donauwrth/Certifying-Staff-B2--m-w-d----Freigabeberechtigtes-Personal_JR10317831",
+   "posted": "2026-09-28",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-b1771e4461c2cfdf64693fc1",
+   "title": "(Senior) DevOps Engineer / Platform Engineer (d/m/w) – AI-based Autonomy Hub",
+   "company": "922E Airbus Defence and Space GmbH",
+   "location": "Backnang Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/DevOps---QA-Engineer--m-f-d----Infrastructure-and-Quality-for-Safety-Critical-Software_JR10365952-1",
+   "posted": "2026-10-27",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c22434a0b602040d9c5c5764",
+   "title": "(Senior) Full-Stack Software Engineer (d/m/w) – AI-based Autonomy Hub",
+   "company": "922E Airbus Defence and Space GmbH",
+   "location": "Backnang Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Full-Stack-Software-Engineer--d-f-m----Developing-Mission-Critical-Applications_JR10365950",
+   "posted": "2026-10-28",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a7d84c1b848834081e14faef",
+   "title": "(Senior) MLOps Engineer (d/m/w)",
+   "company": "922E Airbus Defence and Space GmbH",
+   "location": "Backnang Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Machine-Learning---Data-Engineer--m-f-d----AI-for-Autonomous-Systems_JR10365945",
+   "posted": "2026-11-02",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ef3dd5601a8b9e19847a02b2",
+   "title": "(Senior) Simulation Software Engineer – Unreal Engine & AI Autonomy (d/m/w)",
+   "company": "922E Airbus Defence and Space GmbH",
+   "location": "Backnang Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/XMLNAME--Senior--Simulation-Engineer--m-f-d----AI-based-Autonomy-Hub_JR10405753",
+   "posted": "2026-09-30",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-fd84329bbee63ed7b54ae007",
+   "title": "Business Operations Specialist (d/m/w) (d/f/m)",
+   "company": "922E Airbus Defence and Space GmbH",
+   "location": "Backnang Deutschland",
+   "url": "https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Business-Operations-Specialist--d-m-w----d-f-m-_JR10452513",
+   "posted": "2026-11-04",
+   "source": "airbus",
+   "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
   {
    "id": "scrapling-407172cd541a87f0482b4924",
    "title": "Sachbearbeiter im Team Gebührenveranlagung (m/w/d)",
