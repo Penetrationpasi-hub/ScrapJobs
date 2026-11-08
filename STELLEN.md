@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T14:51:05+00:00 · 501 Stellen aus 37 von 61 Quellen
+Stand: 2026-11-08T15:03:10+00:00 · 520 Stellen aus 38 von 61 Quellen
 
 ## Quellen
 
@@ -19,7 +19,7 @@ Stand: 2026-11-08T14:51:05+00:00 · 501 Stellen aus 37 von 61 Quellen
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
 | Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |  |
 | Stadt Waiblingen | too_large | 0 | – |  |
-| TESAT-Spacecom | unsupported | 0 | – |  |
+| TESAT-Spacecom | done | 19 | 2026-11-08 |  |
 | Airbus (Stuttgart, Laupheim, Backnang) | done | 9 | 2026-11-08 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
 | Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
@@ -75,6 +75,28 @@ Stand: 2026-11-08T14:51:05+00:00 · 501 Stellen aus 37 von 61 Quellen
 - [Solution Architect (w/m/d) für missionskritische Mobilfunknetze und -dienste](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Sulzbach/Solution-Architect--w-m-d--fr-missionskritische-Mobilfunknetze-und--dienste_JR10454296-1) · Sulzbach Deutschland · seit 2026-11-08
 - [Solution Architect – IT Network / IP Backbone (m/w/d)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Ulm/Solution-Architect---IT-Network---IP-Backbone--m-w-d-_JR10428044) · Ulm Deutschland · seit 2026-11-08
 - [THU Karrieretag 2026 - Jobs @Airbus Public Safety and Security](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Ulm/THU-Karrieretag-2026---Jobs--Airbus-Public-Safety-and-Security_JR10447992) · Ulm Deutschland · seit 2026-11-08
+
+### 3763 Tesat-Spacecom GmbH & Co. KG
+
+- [Ausbildung Industrieelektriker (Geräte und Systeme) (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Ausbildung-Industrieelektriker--Gerte-und-Systeme---d-m-w--zum-01092027_JR10417661) · Backnang Deutschland · seit 2026-11-08
+- [Data and AI Lead (m/w/d)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Data-and-AI-Lead--m-w-d-_JR10447260-1) · Backnang Deutschland · seit 2026-11-08
+- [Duales Studium B.Eng. Elektrotechnik und Informationstechnik, Elektronik/Kommunikationstechnik (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Duales-Studium-BEng-Elektrotechnik-und-Informationstechnik--Elektronik-Kommunikationstechnik--d-m-w--zum-01092027_JR10417673-1) · Backnang Deutschland · seit 2026-11-08
+- [Industrial Engineer (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Industrial-Engineer--d-m-w-_JR10431739-1) · Backnang Deutschland · seit 2026-11-08
+- [Manufacturing Engineer (m/w/d) Optics](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Manufacturing-Engineer-Optics_JR10436623-1) · Backnang Deutschland · seit 2026-11-08
+- [Meister/Techniker Heizung- / Klimatechnik in der Werkserhaltung (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Meister-Techniker-Elektro-in-der-Werkserhaltung--d-m-w-_JR10380164-1) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum "Automatisierung eines Messplatzes für die neueste Generation von Modulatoren" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Automatisierung-eines-Messplatzes-fr-die-neueste-Generation-von-Modulatoren---d-m-w-_JR10454194) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum "Automatisierung eines Messplatzes für die nächste Generation TT&C Transpondern" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Automatisierung-eines-Messplatzes-fr-die-nchste-Generation-TT-C-Transpondern---d-m-w-_JR10432660-1) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum "Entwicklung und Charakterisierung von Hochfrequenz- und Digitalschaltungen" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Entwicklung-und-Charakterisierung-von-Hochfrequenz--und-Digitalschaltungen---d-m-w-_JR10454743-1) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum "Entwicklung von Kommunikationsmodulen im Bereich Aktive Antennen" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Entwicklung-von-Kommunikationsmodulen-im-Bereich-Aktive-Antennen---d-m-w-_JR10441617-1) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum "Entwurf eines analogen Power Limiters für robuste Ka-Band HF-Systeme in der Raumfahrt " (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Entwurf-eines-analogen-Power-Limiters-fr-robuste-Ka-Band-HF-Systeme-in-der-Raumfahrt----d-m-w-_JR10447649-1) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum "Entwurf von integrierten RMS-Leistungsdetektoren für Raumfahrtanwendungen" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Entwurf-von-integrierten-RMS-Leistungsdetektoren-fr-Raumfahrtanwendungen---d-m-w-_JR10434586) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum im Bereich "Power Supply Entwicklung für Raumfahrtanwendungen" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum-im-Bereich--Power-Supply-Entwicklung-fr-Raumfahrtanwendungen---d-m-w-_JR10448238-1) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum im Einkauf "Equipment & Commodities" (d/m/w))](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum-im-Einkauf--Equipment---Commodities---d-m-w--_JR10448250) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum im Operativen Einkauf für Elektronik (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum-im-Operativen-Einkauf-fr-Elektronik--d-m-w-_JR10411843) · Backnang Deutschland · seit 2026-11-08
+- [Praktikum/Abschlussarbeit "KI‑gestützte Auswertung Prüfbefund‑Datenbank" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum-Abschlussarbeit--KI-gesttzte-Auswertung--Prfbefund-Datenbank---d-m-w-_JR10453113) · Backnang Deutschland · seit 2026-11-08
+- [Systemingenieur (d/m/w) für Laser Communication Terminals - Schwerpunkt Nachrichtentechnik](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Systemingenieur--d-m-w--fr-Laser-Communication-Terminals---Schwerpunkt-Nachrichtentechnik_JR10439262) · Backnang Deutschland · seit 2026-11-08
+- [Werkstudent im Bereich "Projektmanagement / PMO" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Werkstudent-im-Bereich--Projektmanagement---PMO---d-m-w-_JR10453423) · Backnang Deutschland · seit 2026-11-08
+- [Werkstudent im Bereich Mechanical Engineering (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Werkstudent-im-Bereich-Mechanical-Engineering--d-m-w-_JR10446070) · Backnang Deutschland · seit 2026-11-08
 
 ### 5404 AIRBUS HELICOPTERS DEUTSCHLAND GmbH
 
