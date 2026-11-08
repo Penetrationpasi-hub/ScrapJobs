@@ -21,3 +21,15 @@ class FrechTest(unittest.TestCase):
 
     def test_foreign_footer_is_rejected(self):
         self.assertIsNone(extract(PAGE.replace("Oskar Frech GmbH + Co. KG</h4>", "Fremd GmbH</h4>"), URL, registry()["frech"]))
+
+
+class FrechLinksTest(unittest.TestCase):
+    def test_relative_links_use_the_base_href(self):
+        from extraction import discovery
+        html = ('<html><head><base href="https://www.frech.com/"></head><body>'
+                '<a href="de/job-details-de/it-projektmanager-m-w-d.html">IT</a>'
+                '<a href="de/ausbildungsstelle-details/elektroniker-fuer-betriebstechnik-m-w-d.html">Azubi</a></body></html>')
+        links, _ = discovery(html, "https://www.frech.com/de/jobboerse.html", registry()["frech"])
+        self.assertEqual(sorted(links), [
+            "https://www.frech.com/de/ausbildungsstelle-details/elektroniker-fuer-betriebstechnik-m-w-d.html",
+            "https://www.frech.com/de/job-details-de/it-projektmanager-m-w-d.html"])

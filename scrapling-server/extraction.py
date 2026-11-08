@@ -32,6 +32,10 @@ def is_detail(raw, source):
 def discovery(html, base, source, q="", near=None):
     """Detail links of a result page. `near(place_text)` may veto a teaser whose listed place is out of range."""
     page = Selector(html)
+    # Relative Links gelten gegen <base href>, wenn die Seite eines setzt (Contao: Frech).
+    declared = page.css("base::attr(href)").get()
+    if declared:
+        base = urljoin(base, declared.strip())
     links = []
     scores = {}
     terms = norm(q).split()
@@ -127,13 +131,18 @@ def norm(value):
     return unicodedata.normalize("NFKD", value).casefold()
 
 
-def extract(html, raw, source, q="", now=None):
-    if not is_detail(raw, source):
+def extract(html, raw, source, q="", now=None, why=None):
+    def no(reason):
+        if why is not None:
+            why.append(reason)
         return None
+
+    if not is_detail(raw, source):
+        return no("keine Anzeigenadresse")
     page = Selector(html)
     text = plain(html)
     if re.search(r"(job|stelle|anzeige).{0,45}(abgelaufen|nicht mehr (verfügbar|online)|bereits besetzt)|no longer accepting|job has expired", text, re.I):
-        return None
+        return no("Text meldet abgelaufen/besetzt")
     postings = []
     for script in page.css('script[type="application/ld+json"]::text').getall():
         try:
@@ -142,14 +151,14 @@ def extract(html, raw, source, q="", now=None):
             continue
     # A page advertising multiple roles is not evidence of a single vacancy.
     if len(postings) > 1:
-        return None
+        return no("mehrere JobPosting")
     if postings:
         row = postings[0]
         title = plain(row.get("title"))
         organization = row.get("hiringOrganization")
         company = plain(organization.get("name")) if isinstance(organization, dict) else ""
         if row.get("url") and canonical(urljoin(raw, str(row["url"]))) != canonical(raw):
-            return None
+            return no("JobPosting-url weicht ab")
         expiry = row.get("validThrough")
         if expiry:
             try:
@@ -157,9 +166,9 @@ def extract(html, raw, source, q="", now=None):
                 if parsed.tzinfo is None:
                     parsed = parsed.replace(tzinfo=timezone.utc)
                 if parsed < (now or datetime.now(timezone.utc)):
-                    return None
+                    return no("validThrough abgelaufen")
             except ValueError:
-                return None
+                return no("validThrough nicht lesbar")
         locations = row.get("jobLocation") or []
         if isinstance(locations, dict):
             locations = [locations]
@@ -183,7 +192,7 @@ def extract(html, raw, source, q="", now=None):
     elif has_microdata(page):
         row = microdata(page, now)
         if not row:
-            return None
+            return no("Mikrodaten unvollständig")
         title, company, location, description, posted = row
     elif source.title_selector and source.company_selector:
         def field(selector):
@@ -194,16 +203,16 @@ def extract(html, raw, source, q="", now=None):
             match = re.search(source.company_capture, company, re.I)
             company = match.group(0) if match else ""
     else:
-        return None
+        return no("keine strukturierten Daten")
     if (not title or not company or re.search(r"initiativbewerbung|unsolicited application|talent.?pool|general application", title, re.I)
             or re.search(r"verschiedene|mehrere|diverse|unbekannt|nicht angegeben", company, re.I)
             or re.search(r"\d+\s+(?:offene\s+)?(?:jobs|stellen|treffer)|suchergebnisse", title, re.I)):
-        return None
+        return no(f"Titel/Firma ungeeignet (Titel {bool(title)}, Firma {bool(company)})")
     if source.company_pattern and not re.search(source.company_pattern, company, re.I):
-        return None
+        return no("Firma passt nicht zum Muster")
     # Search pages can ignore search terms; keep query relevance grounded in extracted text.
     if q and not any(word in norm(title + " " + (description or "")) for word in norm(q).split()):
-        return None
+        return no("Suchbegriff fehlt")
     url = canonical(raw)
     if source.key in {"rems_murr_jobs", "zvw"} and description and len(description) > 480:
         description = description[:480].rsplit(" ", 1)[0] + " …"

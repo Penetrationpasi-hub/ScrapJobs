@@ -168,16 +168,20 @@ def crawl(req, transport_factory=Transport):
                 except FetchError as error:
                     if error.code == "gone":
                         report["filtered"] += 1
+                        report.setdefault("sample", url + " (nicht gefunden)")
                         continue
                     raise
-                job = extract(html, final, source, req.q) if is_detail(final, source) else None
+                why = []
+                job = extract(html, final, source, req.q, why=why) if is_detail(final, source) else None
+                if not job and not why:
+                    why.append("Weiterleitung auf " + final)
                 if job:
                     jobs.append(job)
                     report["kept"] += 1
                 else:
                     report["filtered"] += 1
                     if "sample" not in report:
-                        report["sample"] = url + " " + probe(html)
+                        report["sample"] = url + " " + probe(html) + " → " + "; ".join(why)
             if details and report["filtered"] and not report["kept"]:
                 report["status"] = "no_verified_jobs"
         except FetchError as error:
