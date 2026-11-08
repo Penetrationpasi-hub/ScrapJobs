@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
+Stand: 2026-11-08T18:59:37+00:00 · 654 Stellen aus 46 von 61 Quellen
 
 ## Quellen
 
@@ -11,7 +11,7 @@ Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 | Mercedes-Benz | unsupported | 0 | – |  |
 | STIHL | unsupported | 0 | – |  |
 | MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
-| Diakonie Stetten | unsupported | 0 | – |  |
+| Diakonie Stetten | done | 60 | 2026-11-08 |  |
 | Robert Bosch Krankenhaus | done | 9 | 2026-11-08 |  |
 | Kärcher | done | 99 | 2026-11-08 | teilweise: Schwaikheim network_error |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
@@ -27,10 +27,10 @@ Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 | Stadt Schorndorf | done | 6 | 2026-11-08 |  |
 | Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-08 |  |
 | Peter Hahn | done | 1 | 2026-11-08 |  |
-| Syntegon | unsupported | 0 | – |  |
+| Syntegon | done | 15 | 2026-11-08 |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
 | Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – |  |
-| Emil Löffelhardt | unsupported | 0 | – |  |
+| Emil Löffelhardt | blocked | 0 | – |  |
 | REMS | done | 7 | 2026-11-08 |  |
 | stoba Backnang | done | 5 | 2026-11-08 |  |
 | Deutsche Post / DHL | unsupported | 0 | – |  |
@@ -123,6 +123,16 @@ Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 - [Ausbildung: Maschinen- und Anlagenführer/in (m/w/d) – Schwerpunkt Metall- und Kunststofftechnik](https://www.foehl.de/karriere-bei-foehl/ausbildung-maschinen-und-anlagenfuehrer-metall-und-kunststofftechnik) · 73635 Rudersberg Baden-Württemberg Deutschland · seit 2026-11-08
 - [Ausbildung: Werkzeugmechaniker/in (m/w/d) – Einsatzgebiet Formentechnik](https://www.foehl.de/karriere-bei-foehl/ausbildung-werkzeugmechaniker-formentechnik) · 73635 Rudersberg Baden-Württemberg Deutschland · seit 2026-11-08
 - [Duales Studium “Maschinenbau – Konstruktion & Entwicklung” (B. Eng.)](https://www.foehl.de/karriere-bei-foehl/duales-studium-maschinenbau) · 73635 Rudersberg Baden-Württemberg Deutschland · seit 2026-11-08
+
+### Alexander-Stift - Dienste für Senioren gGmbH
+
+- [Examinierter Pflegehelfer (m/w/d) in Schnait in Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66270658/Examinierter-Pflegehelfer-m-w-d-in-Schnait-in-Teilzeit) · 71384 Weinstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Freiwilligendienst (m/w/d) im FSJ/BFD im Alexander-Stift in Korb, Schnait, Endersbach, Hohenacker, Mundelsheim, Eglosheim, Hegnach, Kirchberg, Rechberghausen, Schlierbach, Zell u. A., Neckarwestheim, ](https://deinjob.diakonie-stetten.de/jobs/40883357/Freiwilligendienst-m-w-d-im-FSJ-BFD-im-Alexander-Stift-in-Korb,-Schnait,-Endersbach,-Hohenacker,-Mundelsheim,-Eglosheim,-Hegnach,-Kirchberg,-Rechberghausen,-Schlierbach,-Zell-u-A-,-Neckarwestheim,-Zaberfeld,-Lauffen-a-N-oder-Talheim) · 71336 Waiblingen Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pflegefachkraft (m/w/d) in Ludwigsburg-Eglosheim Voll- oder Teilzeit](https://deinjob.diakonie-stetten.de/jobs/65957338/Pflegefachkraft-m-w-d-in-Ludwigsburg-Eglosheim-Voll--oder-Teilzeit) · 71634 Ludwigsburg Baden-Württemberg Deutschland · seit 2026-11-08
+
+### Alexander-Stift GmbH
+
+- [Freiwilligendienst (m/w/d) im FSJ/BFD im Alexander-Stift in Aspach, Weissach i. T., Urbach, Rudersberg oder Allmersbach i. T.](https://deinjob.diakonie-stetten.de/jobs/40773905/Freiwilligendienst-m-w-d-im-FSJ-BFD-im-Alexander-Stift-in-Aspach,-Weissach-i-T-,-Urbach,-Rudersberg-oder-Allmersbach-i-T-) · 71554 Weissach im Tal Baden-Württemberg Deutschland · seit 2026-11-08
 
 ### Alfred Kärcher SE & Co. KG
 
@@ -270,6 +280,68 @@ Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 - [Konditormeister/-in (m/w/d)](https://www.baecker-maurer.de/karriere/konditormeister) · Winnenden BW DE · seit 2026-11-08
 - [Mitarbeiter Qualitätsmanagement (m/w/d)](https://www.baecker-maurer.de/karriere/mitarbeiter-qualitaetsmanagement) · Winnenden BW DE · seit 2026-11-08
 - [Werkstudent/-in im Verkauf (m/w/d)](https://www.baecker-maurer.de/karriere/werkstudent-im-verkauf) · Backnang BW DE / Fellbach BW DE / Schorndorf BW DE / Stuttgart BW DE / Waiblingen BW DE / Winnenden BW DE · seit 2026-11-08
+
+### Diakonie Stetten e. V.
+
+- [Arbeitsmediziner (m/w/d) / Betriebsmediziner (m/w/d)](https://deinjob.diakonie-stetten.de/jobs/27368163/Arbeitsmediziner-m-w-d-Betriebsmediziner-m-w-d-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Assistenzkraft (m/w/d) im Wohnbereich in Kernen in Voll- u. Teilzeit](https://deinjob.diakonie-stetten.de/jobs/50433913/Assistenzkraft-m-w-d-im-Wohnbereich-in-Kernen-in-Voll--u-Teilzeit-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Erzieher  (w/m/d), anerkannte Fachkraft für unsere neue Kindertageseinrichtung  (w/m/d) in Voll- oder Teilzeit](https://deinjob.diakonie-stetten.de/jobs/53307569/Erzieher-w-m-d-,-anerkannte-Fachkraft-f%C3%BCr-unsere-neue-Kindertageseinrichtung-w-m-d-in-Voll--oder-Teilzeit) · 70 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Erzieher / Heilerziehungspfleger / Pflegefachkraft / Sozialpädagoge als Pädagogische Fachkraft (m/w/d) im Ganztag an einem SBBZ](https://deinjob.diakonie-stetten.de/jobs/64798946/Erzieher-Heilerziehungspfleger-Pflegefachkraft-Sozialp%C3%A4dagoge-als-P%C3%A4dagogische-Fachkraft-m-w-d-im-Ganztag-an-einem-SBBZ) · 70567 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Fachlehrer (m/w/d) mit dem Förderschwerpunkt geistige, körperliche und motorische Entwicklung](https://deinjob.diakonie-stetten.de/jobs/61393507/Fachlehrer-m-w-d-mit-dem-F%C3%B6rderschwerpunkt-geistige,-k%C3%B6rperliche-und-motorische-Entwicklung) · 70199 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Fachlehrer (m/w/d) mit Förderschwerpunkt geistige oder körperliche und motorische Entwicklung](https://deinjob.diakonie-stetten.de/jobs/37233904/Fachlehrer-m-w-d-mit-F%C3%B6rderschwerpunkt-geistige-oder-k%C3%B6rperliche-und-motorische-Entwicklung-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Ferienhelfer (m/w/d) im Wohnbereich in Filderstadt für Erwachsene mit Behinderung in Voll-oder Teilzeit (Mindestdauer 2 Wochen)](https://deinjob.diakonie-stetten.de/jobs/66391173/Ferienhelfer-m-w-d-im-Wohnbereich-in-Filderstadt-f%C3%BCr-Erwachsene-mit-Behinderung-in-Voll-oder-Teilzeit-Mindestdauer-2-Wochen-) · 70794 Filderstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Freiwilligendienst (m/w/d) FSJ/BFD im Wohnbereich für Erwachsene mit Behinderung in Filderstadt](https://deinjob.diakonie-stetten.de/jobs/66387763/Freiwilligendienst-m-w-d-FSJ-BFD-im-Wohnbereich-f%C3%BCr-Erwachsene-mit-Behinderung-in-Filderstadt) · 70794 Filderstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Freiwilligendienst (m/w/d) FSJ/BFD im Wohnbereich oder Werkstätten für Erwachsene mit Behinderung in Filderstadt oder Esslingen](https://deinjob.diakonie-stetten.de/jobs/40004394/Freiwilligendienst-m-w-d-FSJ-BFD-im-Wohnbereich-oder-Werkst%C3%A4tten-f%C3%BCr-Erwachsene-mit-Behinderung-in-Filderstadt-oder-Esslingen) · 73728 Esslingen am Neckar Baden-Württemberg Deutschland · seit 2026-11-08
+- [Freiwilliges Soziales Jahr oder Bundesfreiwilligendienst (m/w/d) im Förder- oder Arbeitsbereich Fellbach-Schmiden in den Remstal Werkstätten](https://deinjob.diakonie-stetten.de/jobs/31911657/Freiwilliges-Soziales-Jahr-oder-Bundesfreiwilligendienst-m-w-d-im-F%C3%B6rder--oder-Arbeitsbereich-Fellbach-Schmiden-in-den-Remstal-Werkst%C3%A4tten) · 70736 Fellbach Baden-Württemberg Deutschland · seit 2026-11-08
+- [Freiwilliges Soziales Jahr oder Bundesfreiwilligendienst (m/w/d) im Förderbereich Stuttgart in den Remstal Werkstätten](https://deinjob.diakonie-stetten.de/jobs/31912267/Freiwilliges-Soziales-Jahr-oder-Bundesfreiwilligendienst-m-w-d-im-F%C3%B6rderbereich-Stuttgart-in-den-Remstal-Werkst%C3%A4tten) · 70499 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Hausarzt als ärztliche Leitung (m/w/d) – Facharzt für Allgemeinmedizin oder Innere Medizin](https://deinjob.diakonie-stetten.de/jobs/51279938/Hausarzt%C2%A0als-%C3%A4rztliche-Leitung-m-w-d-%E2%80%93-Facharzt-f%C3%BCr-Allgemeinmedizin-oder-Innere-Medizin) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Heilerziehungsassistent (m/w/d) im Förderbereich in Kernen in Vollzeit](https://deinjob.diakonie-stetten.de/jobs/65798806/Heilerziehungsassistent-m-w-d-im-F%C3%B6rderbereich-in-Kernen-in-Vollzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Heilpädagoge (m/w/d), pädagogische Fachkraft (m/w/d) an der Torwiesenschule ab sofort in Voll- oder Teilzeit](https://deinjob.diakonie-stetten.de/jobs/65563856/Heilp%C3%A4dagoge-m-w-d-,-p%C3%A4dagogische-Fachkraft-m-w-d-an-der-Torwiesenschule-ab-sofort-in-Voll--oder-Teilzeit-) · 70199 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Honorarkraft, freier Mitarbeiter (m/w/d), päd. Lehrkraft (m/w/d) im Bereich Schreinerei](https://deinjob.diakonie-stetten.de/jobs/64799896/Honorarkraft,-freier-Mitarbeiter-m-w-d-,-p%C3%A4d-Lehrkraft-m-w-d-im-Bereich-Schreinerei) · 73728 Esslingen am Neckar Baden-Württemberg Deutschland · seit 2026-11-08
+- [Im Beruflichen Ausbildungszentrum (BAZ) Esslingen suchen wir ab sofort: eine/n pädagogische/n Mitarbeiter/-innen / päd. Lehrkraft im Bereich Küche als Honorarmitarbeiter*in bzw.  freie/n Mitarbeiter/i](https://deinjob.diakonie-stetten.de/jobs/66439938/Im-Beruflichen-Ausbildungszentrum-BAZ-Esslingen-suchen-wir-ab-sofort-eine-n-p%C3%A4dagogische-n-Mitarbeiter--innen-p%C3%A4d-Lehrkraft-im-Bereich-K%C3%BCche-als-Honorarmitarbeiter-in-bzw-freie-n-Mitarbeiter-in-) · 73728 Esslingen am Neckar Baden-Württemberg Deutschland · seit 2026-11-08
+- [Kitaleitung (m/w/d) inklusiver Hort an der Torwiesenschule in Stuttgart](https://deinjob.diakonie-stetten.de/jobs/67331505/Kitaleitung-m-w-d-inklusiver-Hort-an-der-Torwiesenschule-in-Stuttgart) · 70199 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Logopäde (m/w/d) in der Interdisziplinären Praxis](https://deinjob.diakonie-stetten.de/jobs/31606470/Logop%C3%A4de-m-w-d-in-der-Interdisziplin%C3%A4ren-Praxis) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Nachtbereitschaft (m/w/d) im Kinder- und Jugendbereich in Bad Cannstatt in Teilzeit](https://deinjob.diakonie-stetten.de/jobs/51573288/Nachtbereitschaft-m-w-d-im-Kinder--und-Jugendbereich-in-Bad-Cannstatt-in-Teilzeit) · 70374 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pflegefachkraft (m/w/d) für die Betreuung von Menschen mit Behinderung im Wohnen in Lorch 50% - 100%](https://deinjob.diakonie-stetten.de/jobs/65551736/Pflegefachkraft-m-w-d-f%C3%BCr-die-Betreuung-von-Menschen-mit-Behinderung-im-Wohnen-in-Lorch-50---100-) · 73547 Lorch Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pflegefachkraft oder Pflegehilfskraft (m/w/d) in Kernen im Wohnbereich in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/58970468/Pflegefachkraft-oder-Pflegehilfskraft-m-w-d-in-Kernen-im-Wohnbereich-in-Voll--und-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pflegerische Fachkraft (m/w/d) in Kernen im Wohnbereich in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/61565132/Pflegerische-Fachkraft-m-w-d-in-Kernen-im-Wohnbereich-in-Voll--und-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Physiotherapeut (m/w/d) oder Fachlehrer (m/w/d) für Körperbehinderte](https://deinjob.diakonie-stetten.de/jobs/39289169/Physiotherapeut-m-w-d-oder-Fachlehrer-m-w-d-f%C3%BCr-K%C3%B6rperbehinderte) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Praktikant (m/w/d) im Anerkennungsjahr für Jugend- und Heimerzieher oder Erzieher in Kernen](https://deinjob.diakonie-stetten.de/jobs/22876731/Praktikant-m-w-d-im-Anerkennungsjahr-f%C3%BCr-Jugend--und-Heimerzieher-oder-Erzieher-in-Kernen) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Praktikant (m/w/d) im Anerkennungsjahr für Jugend- und Heimerzieher oder Erzieher in Stuttgart-Bad Cannstatt](https://deinjob.diakonie-stetten.de/jobs/22878271/Praktikant-m-w-d-im-Anerkennungsjahr-f%C3%BCr-Jugend--und-Heimerzieher-oder-Erzieher-in-Stuttgart-Bad-Cannstatt) · 70374 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Praktikant (m/w/d) in der Eingliederungshilfe – Praxissemester - in Kernen](https://deinjob.diakonie-stetten.de/jobs/64069583/Praktikant-m-w-d-in-der-Eingliederungshilfe-%E2%80%93-Praxissemester---in-Kernen-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Praktikant (m/w/d) in der Personalabteilung - Praxissemester](https://deinjob.diakonie-stetten.de/jobs/61243932/Praktikant-m-w-d-in-der-Personalabteilung---Praxissemester) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachkraft (m/w/d) auf dem Pferdehof in den Remstal Werkstätten in Kernen in Vollzeit](https://deinjob.diakonie-stetten.de/jobs/62178729/P%C3%A4dagogische-Fachkraft-m-w-d-auf-dem-Pferdehof-in-den-Remstal-Werkst%C3%A4tten-in-Kernen-in-Vollzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachkraft (m/w/d) Fördergruppe 80%](https://deinjob.diakonie-stetten.de/jobs/64034923/P%C3%A4dagogische-Fachkraft-m-w-d-F%C3%B6rdergruppe-80) · 73547 Lorch Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachkraft (m/w/d) für die Organisation und Durchführung der Nachmittagsbetreuung](https://deinjob.diakonie-stetten.de/jobs/66331263/P%C3%A4dagogische-Fachkraft-m-w-d-f%C3%BCr-die-Organisation-und-Durchf%C3%BChrung-der-Nachmittagsbetreuung-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachkraft (m/w/d) für Einzelbegleitung im Förderbereich in Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66639968/P%C3%A4dagogische-Fachkraft-m-w-d-f%C3%BCr-Einzelbegleitung-im-F%C3%B6rderbereich-in-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachkraft (m/w/d) in einer Kurzzeitgruppe im Wohnbereich für Erwachsene mit Behinderung in Kernen in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/56645459/P%C3%A4dagogische-Fachkraft-m-w-d-in-einer-Kurzzeitgruppe-im-Wohnbereich-f%C3%BCr-Erwachsene-mit-Behinderung-in-Kernen-in-Voll--und-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachleitung (m/w/d) im Wohnverbund Schlossberg in Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66390748/P%C3%A4dagogische-Fachleitung-m-w-d-im-Wohnverbund-Schlossberg-in-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische Fachleitung (m/w/d) im Wohnverbund Wildermuthhaus in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/46578309/P%C3%A4dagogische-Fachleitung-m-w-d-im-Wohnverbund-Wildermuthhaus-in-Voll--und-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische o. pflegerische Fachkraft (m/w/d) in der schulischen Nachmittagsbetreuung  in Teilzeit an der Helene Schöttle Schule (SBBZ), Stuttgart-Steinhaldenfeld](https://deinjob.diakonie-stetten.de/jobs/67278085/P%C3%A4dagogische-o-pflegerische-Fachkraft-m-w-d-in-der-schulischen-Nachmittagsbetreuung-in-Teilzeit-an-der-Helene-Sch%C3%B6ttle-Schule-SBBZ-,-Stuttgart-Steinhaldenfeld) · 70378 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) für die Kindergruppe KiWi in Kernen in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/51573373/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-f%C3%BCr-die-Kindergruppe-KiWi-in-Kernen-in-Voll--und-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) für Einzelbegleitung im Wohnhaus in Lorch](https://deinjob.diakonie-stetten.de/jobs/66698108/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-f%C3%BCr-Einzelbegleitung-im-Wohnhaus-in-Lorch) · 73547 Lorch Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im geschützten Setting Schlossberg 101 in Kernen in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/58050243/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-gesch%C3%BCtzten-Setting-Schlossberg-101-in-Kernen-in-Voll--und-Teilzeit) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Ebersbach in Voll- oder Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66495758/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Ebersbach-in-Voll--oder-Teilzeit) · 73061 Ebersbach an der Fils Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Filderstadt in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66503078/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Filderstadt-in-Voll--und-Teilzeit) · 70794 Filderstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Lorch in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/64033923/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Lorch-in-Voll--und-Teilzeit) · 73547 Lorch Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Schorndorf in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66581458/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Schorndorf-in-Voll--und-Teilzeit) · 73614 Schorndorf Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Waiblingen in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66508288/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Waiblingen-in-Voll--und-Teilzeit) · 71332 Waiblingen Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Weinstadt / Remshalden in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66499413/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Weinstadt-Remshalden-in-Voll--und-Teilzeit) · 71384 Weinstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Weinstadt-Remshalden für unser neues AWS+ Wohnprojekt in Beutelsbach in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66820010/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-im-Wohnbereich-Weinstadt-Remshalden-f%C3%BCr-unser-neues-AWS+-Wohnprojekt-in-Beutelsbach-in-Voll--und-Teilzeit) · 71384 Weinstadt Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) in Kernen im Wohnbereich für Kinder und Jugendliche in Voll- und Teilzeit – individuelle Arbeitszeiten möglich](https://deinjob.diakonie-stetten.de/jobs/61564392/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-in-Kernen-im-Wohnbereich-f%C3%BCr-Kinder-und-Jugendliche-in-Voll--und-Teilzeit-%E2%80%93-individuelle-Arbeitszeiten-m%C3%B6glich) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) in Kernen im Wohnbereich in Voll- und Teilzeit - verlässliche Arbeitszeiten möglich](https://deinjob.diakonie-stetten.de/jobs/61564537/P%C3%A4dagogische-oder-pflegerische-Fachkraft-m-w-d-in-Kernen-im-Wohnbereich-in-Voll--und-Teilzeit---verl%C3%A4ssliche-Arbeitszeiten-m%C3%B6glich) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogischer Mitarbeiter (m/w/d), pädagogische Lehrkraft (m/w/d) im Bereich Lager / Metall als Honorarkraft](https://deinjob.diakonie-stetten.de/jobs/62748929/P%C3%A4dagogischer-Mitarbeiter-m-w-d-,-p%C3%A4dagogische-Lehrkraft-m-w-d-im-Bereich-Lager-Metall-als-Honorarkraft) · 73728 Esslingen am Neckar Baden-Württemberg Deutschland · seit 2026-11-08
+- [Pädagogischer Mitarbeiter, ggf. Student Soziale Arbeit (m/w/d) für das BAZ Esslingen auf Honorarbasis](https://deinjob.diakonie-stetten.de/jobs/63724814/P%C3%A4dagogischer-Mitarbeiter,-ggf-Student-Soziale-Arbeit-m-w-d-f%C3%BCr-das-BAZ-Esslingen-auf-Honorarbasis) · 73728 Esslingen am Neckar Baden-Württemberg Deutschland · seit 2026-11-08
+- [Schulleitung (m/w/d) an der Johannes-Landenberger-Schule in Esslingen](https://deinjob.diakonie-stetten.de/jobs/62487789/Schulleitung-m-w-d-an-der-Johannes-Landenberger-Schule-in-Esslingen) · 73728 Esslingen am Neckar Baden-Württemberg Deutschland · seit 2026-11-08
+- [Sonderpädagoge (m/w/d) an der Theodor-Dierlamm-Schule](https://deinjob.diakonie-stetten.de/jobs/62180674/Sonderp%C3%A4dagoge-m-w-d-an-der-Theodor-Dierlamm-Schule) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Teamkoordinator/Fachkraft (m/w/d) im Wohnverbund Lorch in Voll- und Teilzeit](https://deinjob.diakonie-stetten.de/jobs/66528308/Teamkoordinator-Fachkraft-m-w-d-im-Wohnverbund-Lorch-in-Voll--und-Teilzeit) · 73547 Lorch Baden-Württemberg Deutschland · seit 2026-11-08
+
+### DienstleistungsPartner (DLP) GmbH
+
+- [Mitarbeiter (m/w/d)  in der Reinigung](https://deinjob.diakonie-stetten.de/jobs/23893460/Mitarbeiter-m-w-d-in-der-Reinigung) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Reinigungskraft (m/w/d)](https://deinjob.diakonie-stetten.de/jobs/18396958/Reinigungskraft-m-w-d-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
+- [Reinigungskraft in Teilzeit oder GfB (m/w/d)](https://deinjob.diakonie-stetten.de/jobs/64423703/Reinigungskraft-in-Teilzeit-oder-GfB-m-w-d-) · 70199 Stuttgart Baden-Württemberg Deutschland · seit 2026-11-08
+- [Springerkraft für die Mitarbeit in unseren Verteilerküchen  (m/w/d)](https://deinjob.diakonie-stetten.de/jobs/64422453/Springerkraft-f%C3%BCr-die-Mitarbeit-in-unseren-Verteilerk%C3%BCchen-m-w-d-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
 
 ### dusyma
 
@@ -792,6 +864,25 @@ Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 - [Werkstudent Plant Controlling (m/w/d)](https://karriere.swoboda.com/Werkstudent-Plant-Controlling-mwd-de-j1400.html) · 87487 Wiggensbach Bayern DE · seit 2026-11-08
 - [Zerspanungsmechaniker (m/w/d)](https://karriere.swoboda.com/Zerspanungsmechaniker-mwd-de-j1346.html) · 87487 Wiggensbach Bayern DE · seit 2026-11-08
 
+### Syntegon Packaging Systems AG
+
+- [Inbetriebsetzungsingenieur (m/w/d)](https://jobs.syntegon.com/offer/inbetriebsetzungsingenieur-m-w-d/b81aafe3-06d8-4f7d-8e07-b598f5100e99) · Beringen CH · seit 2026-11-08
+- [Mechanical Assembly & Commissioning Specialist (m/w/d)](https://jobs.syntegon.com/offer/mechanical-assembly-commissioning-s/dd7cb362-6052-4564-b6c8-d86be0763b6c) · Beringen CH · seit 2026-11-08
+- [Monteur Verpackungsmaschinen (m/w/d)](https://jobs.syntegon.com/offer/monteur-verpackungsmaschinen-m-w-d/e157517b-810f-4340-845e-542bef7a7bdc) · Beringen CH · seit 2026-11-08
+- [Senior Softwareingenieur - Modernisierung (m/w/d)](https://jobs.syntegon.com/offer/senior-softwareingenieur-modernisie/512766d9-4d6a-4279-81bf-d9830fc16851) · Beringen CH · seit 2026-11-08
+- [Software Engineer -  Automation (m/w/d)](https://jobs.syntegon.com/offer/software-engineer-automation-m-w-d/55af50c6-e784-44c2-89f9-820d431f0781) · Beringen CH · seit 2026-11-08
+
+### Syntegon Technology GmbH
+
+- [Applikationsingenieur im Bereich Pharma Solid (m/w/d) - befristet 15 Monate](https://jobs.syntegon.com/offer/applikationsingenieur-im-bereich-ph/004cb817-ac42-4177-a2b1-535ace66b748) · seit 2026-11-08
+- [Head of Business Line SynTiso (m/w/d)](https://jobs.syntegon.com/offer/head-of-business-line-syntiso-m-w-d/3af5e8ac-668f-445b-98a3-3c4832bf2c1a) · Crailsheim DE · seit 2026-11-08
+- [HSE Manager (m/w/d)](https://jobs.syntegon.com/offer/hse-manager-m-w-d/4bfcbc98-e93b-413f-a3ef-c04aeaa00b2c) · Fellbach (Württemberg) DE · seit 2026-11-08
+- [HSE Manager (m/w/d)](https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e) · Schopfheim DE · seit 2026-11-08
+- [Senior Manager Lifecycle Solutions  Business Line SynTiso (m/w/d)](https://jobs.syntegon.com/offer/senior-manager-lifecycle-solutions-/2f14df13-aa04-4e75-9de0-93a15c4b923e) · Crailsheim DE · seit 2026-11-08
+- [SPS-Softwareentwickler (m/w/d) Rockwell Automation](https://jobs.syntegon.com/offer/sps-softwareentwickler-m-w-d-rockwe/f903369a-dd81-48e3-b99c-189db932a638) · Crailsheim DE · seit 2026-11-08
+- [Technical Sales Manager (m/w/d) Pharma-Sondermaschinenbau / Abfüllung & Gefriertrocknung](https://jobs.syntegon.com/offer/technical-sales-manager-m-w-d-pharm/fe7bbe06-27ad-4057-ac4a-b7c72ec5016f) · Crailsheim DE · seit 2026-11-08
+- [Technischer Redakteur (m/w/d) für Designdokumente](https://jobs.syntegon.com/offer/technischer-redakteur-m-w-d-fur-des/7fdeb176-f297-4d1b-aad6-c6f913f2a8cd) · Crailsheim DE · seit 2026-11-08
+
 ### Techtronic Industries Benelux B.V. B.O. Belgium
 
 - [Technical Sales Advisor Transportation Wallonie](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Field-Based-Belgium/Technical-Sales-Advisor-Transportation-Wallonie_JR4953) · Außendienst Belgien Belgien · seit 2026-11-08
@@ -819,6 +910,11 @@ Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 ### Techtronic Industries South East Europe
 
 - [Trainer SEE](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Field-Based-Croatia/Trainer-SEE_JR5044) · Field Based Croatia Kroatien · seit 2026-11-08
+
+### Valicare GmbH a Syntegon company
+
+- [GMP-Consultant (m/w/d)](https://jobs.syntegon.com/offer/gmp-consultant-m-w-d/567a847f-2cbc-459b-a830-a29e8a44600c) · Frankfurt am Main DE · seit 2026-11-08
+- [Senior ATMP-GMP Consultant / Projektmanager (m/w/d)](https://jobs.syntegon.com/offer/senior-atmp-gmp-consultant-projektm/f40db462-a061-44d5-a434-c030b9f53be3) · Frankfurt am Main DE · seit 2026-11-08
 
 ### Volksbank Stuttgart eG
 
