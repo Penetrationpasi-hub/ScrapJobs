@@ -13,9 +13,10 @@ USER_AGENT = "NaechsterSchrittScrapling/1.0"
 
 
 class FetchError(Exception):
-    def __init__(self, code: str, *, http_status=None):
+    def __init__(self, code: str, *, http_status=None, detail=None):
         self.code = code
         self.http_status = http_status
+        self.detail = detail
         super().__init__(code)
 
 

@@ -71,6 +71,14 @@ class OverviewTest(unittest.TestCase):
         self.assertIn("| ACME | timeout | 0 | – |", text)
 
 
+class DetailTest(unittest.TestCase):
+    def test_detail_is_kept_for_failed_source(self):
+        failed = {"label": "X", "status": "robots_unavailable", "jobs": [], "detail": "gone HTTP 404"}
+        catalog = batch.merge(None, {"x": failed}, "2026-11-09", NOW)
+        self.assertEqual(catalog["quellen"][0]["detail"], "gone HTTP 404")
+        self.assertIn("gone HTTP 404", batch.overview(catalog))
+
+
 class SelectionTest(unittest.TestCase):
     def test_default_excludes_boards_and_unavailable(self):
         keys = batch.select_sources(registry())
@@ -137,3 +145,41 @@ class MainTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CrawlerDetailTest(unittest.TestCase):
+    def crawl_with(self, robots_error=None, robots_text=None):
+        from safe_http import FetchError
+        import crawler
+
+        class Fake:
+            def __init__(self, budget):
+                self.budget, self.last = budget, {}
+
+            def get(self, raw, hosts, authorize=None, **kw):
+                if raw.endswith("/robots.txt"):
+                    if robots_error:
+                        raise robots_error
+                    return raw, robots_text
+                if authorize:
+                    authorize(raw)
+                return raw, "<html></html>"
+
+        req = SimpleNamespace(q="", location="", radius_km=25, sources=["stihl"])
+        with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "stihl"}):
+            return crawler.crawl(req, Fake)["sources"][0]
+
+    def test_robots_404_reports_cause(self):
+        from safe_http import FetchError
+        report = self.crawl_with(robots_error=FetchError("gone", http_status=404))
+        self.assertEqual((report["status"], report["detail"]), ("robots_unavailable", "gone HTTP 404"))
+
+    def test_robots_blocked_reports_cause(self):
+        from safe_http import FetchError
+        report = self.crawl_with(robots_error=FetchError("blocked"))
+        self.assertEqual((report["status"], report["detail"]), ("robots_unavailable", "blocked"))
+
+    def test_robots_without_user_agent_reports_cause(self):
+        report = self.crawl_with(robots_text="<html>Seite nicht gefunden</html>")
+        self.assertEqual(report["status"], "robots_unavailable")
+        self.assertIn("User-agent", report["detail"])

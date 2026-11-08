@@ -40,7 +40,7 @@ def crawl(req, transport_factory=Transport):
                         return
                     raise FetchError("robots_unavailable") from error
                 if not re.search(r"(?im)^\s*user-agent\s*:", text):
-                    raise FetchError("robots_unavailable")
+                    raise FetchError("robots_unavailable", detail="robots.txt ohne User-agent-Zeile")
                 robot = RobotFileParser()
                 robot.parse(text.splitlines())
                 robots[host] = robot
@@ -147,6 +147,12 @@ def crawl(req, transport_factory=Transport):
                 report["status"] = "no_verified_jobs"
         except FetchError as error:
             report["status"] = error.code
+            # Ursache für die Diagnose: bei robots_unavailable z. B. "HTTP 404" oder "blocked".
+            cause = error.__cause__ if isinstance(error.__cause__, FetchError) else error
+            if cause.detail:
+                report["detail"] = cause.detail
+            elif cause.http_status or cause is not error:
+                report["detail"] = cause.code + (f" HTTP {cause.http_status}" if cause.http_status else "")
         except Exception:
             report["status"] = "unsupported"
     return {"status": "done", "jobs": jobs, "sources": reports, "documents": total_documents - budget.remaining}

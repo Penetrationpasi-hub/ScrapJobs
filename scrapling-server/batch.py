@@ -87,6 +87,8 @@ def merge(previous, results, today, now, grace_days=3):
             info["letzterErfolg"] = today
         else:
             jobs.update(old_here)
+            if result.get("detail"):
+                info["detail"] = result["detail"]
             info["letzterErfolg"] = old_sources.get(key, {}).get("letzterErfolg")
         info["anzahl"] = sum(1 for row in jobs.values() if row["source"] == key)
         sources.append(info)
@@ -101,9 +103,9 @@ def overview(catalog):
     lines = ["# Stellenkatalog", "",
              f"Stand: {catalog['aktualisiert']} · {len(catalog['stellen'])} Stellen aus "
              f"{sum(1 for q in catalog['quellen'] if q['status'] == 'done')} von {len(catalog['quellen'])} Quellen", "",
-             "## Quellen", "", "| Quelle | Status | Stellen | Letzter Erfolg |", "| --- | --- | ---: | --- |"]
+             "## Quellen", "", "| Quelle | Status | Stellen | Letzter Erfolg | Detail |", "| --- | --- | ---: | --- | --- |"]
     for q in catalog["quellen"]:
-        lines.append(f"| {q['label']} | {q['status']} | {q['anzahl']} | {q.get('letzterErfolg') or '–'} |")
+        lines.append(f"| {q['label']} | {q['status']} | {q['anzahl']} | {q.get('letzterErfolg') or '–'} | {q.get('detail') or ''} |")
     lines += ["", "## Stellen", ""]
     by_company = {}
     for row in catalog["stellen"]:
@@ -131,7 +133,8 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         try:
             outcome = crawl(req, factory)
             report = outcome["sources"][0]
-            results[key] = {"label": label, "status": report["status"], "jobs": outcome["jobs"]}
+            results[key] = {"label": label, "status": report["status"], "jobs": outcome["jobs"],
+                            "detail": report.get("detail")}
         except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
             results[key] = {"label": label, "status": "worker_error", "jobs": []}
             log(f"  ! {key}: {type(error).__name__}")
