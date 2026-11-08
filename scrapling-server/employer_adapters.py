@@ -6,7 +6,7 @@ API records are mapped to the same strict JobPosting validation as HTML records.
 import hashlib
 import json
 import re
-from urllib.parse import quote
+from urllib.parse import parse_qs, quote, urlsplit
 
 from scrapling import Selector
 
@@ -54,9 +54,16 @@ def detail_document(get, raw, source, report, *, as_json=False):
 
 def workday(source, req, get, report):
     links = []
-    for offset in (0, 20):
+    limit = getattr(req, "max_details", 10)
+    # Ortsfilter der konfigurierten Suchadresse (?locations=<32 Hex>) gelten auch für die Abfrage.
+    facets = {}
+    wanted = [v for v in parse_qs(urlsplit(source.search).query).get("locations", [])
+              if re.fullmatch(r"[a-f0-9]{32}", v)]
+    if wanted:
+        facets["locations"] = wanted
+    for offset in range(0, 200, 20):
         data = json_document(get, source.api, source, {
-            "appliedFacets": {}, "limit": 20, "offset": offset, "searchText": req.q})
+            "appliedFacets": facets, "limit": 20, "offset": offset, "searchText": req.q})
         rows = data.get("jobPostings") if isinstance(data, dict) else None
         if not isinstance(rows, list) or any(not isinstance(row, dict) for row in rows):
             raise FetchError("unsupported")
@@ -68,9 +75,9 @@ def workday(source, req, get, report):
             raw = source.search.split("?", 1)[0].rstrip("/") + path
             if is_detail(raw, source) and raw not in links:
                 links.append(raw)
-        if len(links) >= 10 or len(rows) < 20:
+        if len(links) >= limit or len(rows) < 20:
             break
-    for raw in links[:10]:
+    for raw in links[:limit]:
         document = detail_document(get, raw, source, report)
         if document is None:
             continue

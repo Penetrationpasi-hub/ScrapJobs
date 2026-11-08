@@ -259,3 +259,26 @@ class APITransport(unittest.TestCase):
         self.assertLessEqual(result["documents"], 40)
         self.assertFalse(any("four.jobs.test" in raw for raw in requested))
         self.assertEqual(result["sources"][-1]["status"], "result_limit")
+
+
+class WorkdayFacetTest(unittest.TestCase):
+    def test_tesat_search_sends_location_facets_and_pages(self):
+        from sources import registry
+        from employer_adapters import workday
+        source = registry()["tesat"]
+        sent = []
+        def get(url, *a, **k):
+            return None
+        import employer_adapters as ea
+        original = ea.json_document
+        def fake(get, api, src, body=None):
+            sent.append(body)
+            return {"jobPostings": []}
+        ea.json_document = fake
+        try:
+            class Req: q = ""
+            list(workday(source, Req(), None, {"filtered": 0}))
+        finally:
+            ea.json_document = original
+        self.assertEqual(sent[0]["appliedFacets"], {"locations": [
+            "f5811cef9cb50118ca5ff56a4c0af44a", "f5811cef9cb501008f6f2e6a4c0a6548"]})
