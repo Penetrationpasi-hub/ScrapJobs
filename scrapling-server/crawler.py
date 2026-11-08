@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import time
@@ -5,12 +6,30 @@ from urllib.parse import urlsplit
 from urllib.robotparser import RobotFileParser
 
 import geo
-from extraction import discovery, extract, is_detail, plain
+from scrapling import Selector
+from extraction import discovery, entries, extract, is_detail, plain
 from safe_http import Budget, FetchError, Transport, USER_AGENT, RUN_SECONDS
 from sources import registry, approved_sources
 from employer_adapters import adapter_jobs
 from robots_exceptions import missing_robots_scope, missing_robots_statuses
 from search_outcomes import festo_no_matches
+
+
+def probe(html):
+    """Kurzbeschreibung einer verworfenen Anzeigenseite für die Diagnose; Inhalte werden nicht übernommen."""
+    try:
+        page = Selector(html)
+        scripts = page.css('script[type="application/ld+json"]::text').getall()
+        postings = 0
+        for script in scripts:
+            try:
+                postings += sum(1 for _ in entries(json.loads(script)))
+            except (ValueError, TypeError):
+                continue
+        title = plain(page.css("title::text").get() or "")[:50]
+    except Exception:
+        return "(Seite nicht lesbar)"
+    return f"(ld+json {len(scripts)}, JobPosting {postings}, {len(html)} Zeichen, Titel «{title}»)"
 
 
 def crawl(req, transport_factory=Transport):
@@ -157,7 +176,8 @@ def crawl(req, transport_factory=Transport):
                     report["kept"] += 1
                 else:
                     report["filtered"] += 1
-                    report.setdefault("sample", url)
+                    if "sample" not in report:
+                        report["sample"] = url + " " + probe(html)
             if details and report["filtered"] and not report["kept"]:
                 report["status"] = "no_verified_jobs"
         except FetchError as error:

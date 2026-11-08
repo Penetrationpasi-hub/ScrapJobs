@@ -29,6 +29,8 @@ LOCATION_PAGES = 4
 LOCATION_DETAILS = 100
 LOCATION_DOCUMENTS = 140
 LOCATION_SECONDS = 450
+# Quellen, deren robots.txt lange Wartezeiten zwischen Abrufen verlangt (PFISTERER: 10 s): Faktor auf das Zeitbudget.
+SLOW_SOURCES = {"pfisterer": 4}
 FIELDS = ("id", "title", "company", "location", "url", "posted")
 
 
@@ -151,7 +153,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
                                   documents=max(options.documents, LOCATION_DOCUMENTS) if place else options.documents,
                                   robots_missing_ok=not options.strict_robots,
                                   seconds=(max(options.seconds, LOCATION_SECONDS) if place else options.seconds)
-                                  * (2 if key in ISOLATED_SOURCES else 1))
+                                  * (2 if key in ISOLATED_SOURCES else 1) * SLOW_SOURCES.get(key, 1))
             if place:
                 req.max_pages = LOCATION_PAGES
             try:
