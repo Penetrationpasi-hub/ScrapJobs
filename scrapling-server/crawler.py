@@ -85,6 +85,7 @@ def crawl(req, transport_factory=Transport):
             if not robot.can_fetch(USER_AGENT, current):
                 raise FetchError("robots_denied")
             delay = robot.crawl_delay(USER_AGENT) or robot.crawl_delay("*") or 1
+            delay = max(delay, getattr(req, "min_delay", 0))  # Katalog-Lauf: Server, die zu schnelle Abrufe sperren
             rate = robot.request_rate(USER_AGENT) or robot.request_rate("*")
             if rate and rate.requests > 0:
                 delay = max(delay, rate.seconds / rate.requests)

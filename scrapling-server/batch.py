@@ -31,6 +31,8 @@ LOCATION_DOCUMENTS = 140
 LOCATION_SECONDS = 450
 # Quellen, deren robots.txt lange Wartezeiten zwischen Abrufen verlangt (PFISTERER: 10 s): Faktor auf das Zeitbudget.
 SLOW_SOURCES = {"pfisterer": 4}
+# Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
+MIN_DELAY = {"loeffelhardt": 5}
 # Sitemap-Quellen lesen jede Anzeige einzeln: mehr Einzelseiten und mehr Zeit als der Standard.
 SITEMAP_DETAILS = 100
 SITEMAP_DOCUMENTS = 130
@@ -157,6 +159,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
                                   documents=(max(options.documents, LOCATION_DOCUMENTS) if place else
                                              max(options.documents, SITEMAP_DOCUMENTS) if getattr(source, "adapter", "") == "sitemap" else options.documents),
                                   robots_missing_ok=not options.strict_robots,
+                                  min_delay=MIN_DELAY.get(key, 0),
                                   seconds=(max(options.seconds, LOCATION_SECONDS) if place else options.seconds)
                                   * (2 if key in ISOLATED_SOURCES or getattr(source, "adapter", "") == "sitemap" else 1) * SLOW_SOURCES.get(key, 1))
             if place:

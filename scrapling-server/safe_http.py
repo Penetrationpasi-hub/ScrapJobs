@@ -140,7 +140,7 @@ class Transport:
                     current = urljoin(current, location)
                     continue
                 if response.status in (401, 403, 429):
-                    raise FetchError("blocked")
+                    raise FetchError("blocked", http_status=response.status, detail=f"HTTP {response.status} von {url.hostname}")
                 if response.status in (404, 410):
                     raise FetchError("gone", http_status=response.status)
                 if response.status != 200:
