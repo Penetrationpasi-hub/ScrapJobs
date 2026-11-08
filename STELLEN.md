@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T19:21:58+00:00 · 784 Stellen aus 49 von 61 Quellen
+Stand: 2026-11-08T19:34:49+00:00 · 787 Stellen aus 50 von 61 Quellen
 
 ## Quellen
 
@@ -57,7 +57,7 @@ Stand: 2026-11-08T19:21:58+00:00 · 784 Stellen aus 49 von 61 Quellen
 | Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |  |
 | RIANI | done | 6 | 2026-11-08 |  |
 | Dusyma | done | 8 | 2026-11-08 |  |
-| Zeitungsverlag Waiblingen | robots_unavailable | 0 | – | TimeoutError karriere.zvw.de |
+| Zeitungsverlag Waiblingen | done | 3 | 2026-11-08 |  |
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
 | Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
 | Murrelektronik | done | 9 | 2026-11-08 |  |
@@ -1084,3 +1084,9 @@ Stand: 2026-11-08T19:21:58+00:00 · 784 Stellen aus 49 von 61 Quellen
 - [Senior DevOps Engineer / Cloud Engineer (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30298/senior-devops-engineer-cloud-engineer-mwd) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
 - [Teamleiter Debitoren (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30293/teamleiter-debitoren-mwd) · Backnang, Baden-Württemberg · seit 2026-11-08
 - [Teamleitung Versand (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30240/teamleitung-versand-mwd) · Backnang, Baden-Württemberg · seit 2026-11-08
+
+### Zeitungsverlag GmbH & Co Waiblingen KG
+
+- [Ausbildung 2027 Kauffrau/-mann für Marketingkommunikation](https://rems-murr-jobs.de/job/ausbildung-2027-kauffrau-mann-fuer-marketingkommunikation-1209763) · 71332 Waiblingen Baden-Württemberg DE · seit 2026-11-08
+- [Ausbildung 2027 Medienkauffrau/-mann digital und print](https://rems-murr-jobs.de/job/ausbildung-2027-medienkauffrau-mann-digital-und-print-1209766) · 71332 Waiblingen Baden-Württemberg DE · seit 2026-11-08
+- [Markenbotschafter:in (m/w/d)](https://rems-murr-jobs.de/job/markenbotschafterin-mwd-1805688) · 71332 Waiblingen Baden-Württemberg DE · seit 2026-11-08

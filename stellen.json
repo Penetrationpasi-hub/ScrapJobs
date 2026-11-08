@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T19:21:58+00:00",
+ "aktualisiert": "2026-11-08T19:34:49+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -366,10 +366,9 @@
   {
    "key": "zvw",
    "label": "Zeitungsverlag Waiblingen",
-   "status": "robots_unavailable",
-   "detail": "TimeoutError karriere.zvw.de",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 3
   },
   {
    "key": "stadtwerke_schorndorf",
@@ -9841,6 +9840,42 @@
    "posted": "2025-07-08",
    "source": "wirmachendruck",
    "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-1774bca455c203ca43c94db4",
+   "title": "Ausbildung 2027 Kauffrau/-mann für Marketingkommunikation",
+   "company": "Zeitungsverlag GmbH & Co Waiblingen KG",
+   "location": "71332 Waiblingen Baden-Württemberg DE",
+   "url": "https://rems-murr-jobs.de/job/ausbildung-2027-kauffrau-mann-fuer-marketingkommunikation-1209763",
+   "posted": "2026-05-08",
+   "source": "zvw",
+   "sourceLabel": "Zeitungsverlag Waiblingen",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-6ff9925a3f829bae505ed085",
+   "title": "Ausbildung 2027 Medienkauffrau/-mann digital und print",
+   "company": "Zeitungsverlag GmbH & Co Waiblingen KG",
+   "location": "71332 Waiblingen Baden-Württemberg DE",
+   "url": "https://rems-murr-jobs.de/job/ausbildung-2027-medienkauffrau-mann-digital-und-print-1209766",
+   "posted": "2026-05-08",
+   "source": "zvw",
+   "sourceLabel": "Zeitungsverlag Waiblingen",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-3a3527c55e82ddbe49758dc7",
+   "title": "Markenbotschafter:in (m/w/d)",
+   "company": "Zeitungsverlag GmbH & Co Waiblingen KG",
+   "location": "71332 Waiblingen Baden-Württemberg DE",
+   "url": "https://rems-murr-jobs.de/job/markenbotschafterin-mwd-1805688",
+   "posted": "2026-07-06",
+   "source": "zvw",
+   "sourceLabel": "Zeitungsverlag Waiblingen",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   }
