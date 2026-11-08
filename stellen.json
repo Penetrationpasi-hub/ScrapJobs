@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T18:43:00+00:00",
+ "aktualisiert": "2026-11-08T18:54:16+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -147,9 +147,9 @@
   {
    "key": "peter_hahn",
    "label": "Peter Hahn",
-   "status": "unsupported",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 1
   },
   {
    "key": "syntegon",
@@ -5280,6 +5280,18 @@
    "posted": "2026-10-21",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-1bd3dcab0adc1c063ce9d162",
+   "title": "Minijob – Passformmodel (m/w/d) – Anprobe Konfektionsgröße 36 in Winterbach – Jetzt bewerben!",
+   "company": "Peter Hahn GmbH",
+   "location": "73650 Winterbach Baden-Württemberg DE",
+   "url": "https://jobs.peterhahn.com/stellenangebote/Minijob-Passformmodel-m-w-d-Anprobe-Konfektionsgroesse-36-Winterbach-PETER-HAHN-GmbH--653128593",
+   "posted": "2026-11-08",
+   "source": "peter_hahn",
+   "sourceLabel": "Peter Hahn",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },

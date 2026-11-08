@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T18:43:00+00:00 · 578 Stellen aus 43 von 61 Quellen
+Stand: 2026-11-08T18:54:16+00:00 · 579 Stellen aus 44 von 61 Quellen
 
 ## Quellen
 
@@ -26,7 +26,7 @@ Stand: 2026-11-08T18:43:00+00:00 · 578 Stellen aus 43 von 61 Quellen
 | Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
 | Stadt Schorndorf | done | 6 | 2026-11-08 |  |
 | Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-08 |  |
-| Peter Hahn | unsupported | 0 | – |  |
+| Peter Hahn | done | 1 | 2026-11-08 |  |
 | Syntegon | unsupported | 0 | – |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
 | Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – |  |
@@ -587,6 +587,10 @@ Stand: 2026-11-08T18:43:00+00:00 · 578 Stellen aus 43 von 61 Quellen
 ### Paulinenpflege Winnenden e.V.
 
 - [Ausbilder Hauswirtschaft (m/w/d) in Vollzeit I Berufsbildungswerk Winnenden](https://rems-murr-jobs.de/job/ausbilder-hauswirtschaft-mwd-vollzeit-i-berufsbildungswerk-winnenden-1810235) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-08
+
+### Peter Hahn GmbH
+
+- [Minijob – Passformmodel (m/w/d) – Anprobe Konfektionsgröße 36 in Winterbach – Jetzt bewerben!](https://jobs.peterhahn.com/stellenangebote/Minijob-Passformmodel-m-w-d-Anprobe-Konfektionsgroesse-36-Winterbach-PETER-HAHN-GmbH--653128593) · 73650 Winterbach Baden-Württemberg DE · seit 2026-11-08
 
 ### PFISTERER Holding SE
 
