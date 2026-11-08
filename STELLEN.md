@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
+Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 
 ## Quellen
 
@@ -13,7 +13,7 @@ Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
 | MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
 | Diakonie Stetten | unsupported | 0 | – |  |
 | Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- |
-| Kärcher | done | 67 | 2026-11-08 |  |
+| Kärcher | done | 99 | 2026-11-08 |  |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
@@ -85,10 +85,14 @@ Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
 
 ### Alfred Kärcher SE & Co. KG
 
+- [(Senior) Automation & Integration Engineer (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-Automation-&-Integration-Engineer-%28mwd%29-71364/1370460855) · Winnenden, DE, 71364 · seit 2026-11-08
 - [(Senior) Consultant SAP Stammdaten & Prozesse (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-Consultant-SAP-Stammdaten-&-Prozesse-%28mwd%29-71364/994390555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [(Senior) Hardware-Entwickler / Electronics-Architekt - Batteriebetriebene Embedded Systeme (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-Hardware-Entwickler-Electronics-Architekt-Batteriebetriebene-Embedded-Systeme-%28mwd%29-71364/1369475055) · Winnenden, DE, 71364 · seit 2026-11-08
 - [(Senior) SAP IT Inhouse Consultant PLM (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-SAP-IT-Inhouse-Consultant-PLM-%28mwd%29-71364/985621355) · Winnenden, DE, 71364 · seit 2026-11-08
+- [(Senior) SAP Platform Architect*in (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-SAP-Platform-Architectin-%28mwd%29-71364/1344763155) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Assistenz (m/w/d) der Personalleitung (auf 2 Jahre befristet)](https://careers.kaercher.com/job/Winnenden-Assistenz-%28mwd%29-der-Personalleitung-%28auf-2-Jahre-befristet%29-71364/1369225255) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Ausbildung Elektroniker/-in für Betriebstechnik (m/w/d) am Standort Winnenden 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Elektroniker-in-f%C3%BCr-Betriebstechnik-%28mwd%29-am-Standort-Winnenden-2027-71364/1353823855) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Ausbildung Industriemechaniker/-in (m/w/d) am Standort Waldstetten 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Industriemechaniker-in-%28mwd%29-am-Standort-Waldstetten-2027-71364/1375032055) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Ausbildung Mechatroniker/in (m/w/d) am Standort Winnenden 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Mechatronikerin-%28mwd%29-am-Standort-Winnenden-2027-71364/1353821955) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Ausbildung zum Kaufmann (m/w/d) für IT-Systemmanagement bei der Alfred Kärcher Vertriebs-GmbH 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-zum-Kaufmann-%28mwd%29-f%C3%BCr-IT-Systemmanagement-bei-der-Alfred-K%C3%A4rcher-Vertriebs-GmbH-2027-71364/1368032255) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Auszubildende/r Mechatronik 2027 (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Auszubildender-Mechatronik-2027-%28mwd%29-71409/1356329055) · Schwaikheim, DE, 71409 · seit 2026-11-08
@@ -100,11 +104,14 @@ Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
 - [Data Analyst Robotik / IoT (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Data-Analyst-Robotik-IoT-%28mwd%29-71409/1369596755) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Digital Transformation Expert (m/w/d) Purchase-to-Pay  (Option auf Teilzeit ab 75%)](https://careers.kaercher.com/job/Schwaikheim-Digital-Transformation-Expert-%28mwd%29-Purchase-to-Pay-%28Option-auf-Teilzeit-ab-75%29-71409/1369220855) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Elektriker / Mechatroniker (m/w/d) - Fokus Reparatur Service Center Ahorn (Main-Tauber-Kreis)](https://careers.kaercher.com/job/Ahorn-Elektriker-Mechatroniker-%28mwd%29-Fokus-Reparatur-Service-Center-Ahorn-%28Main-Tauber-Kreis%29-74744/1367825555) · Ahorn, DE, 74744 · seit 2026-11-08
+- [Embedded Software-Entwickler (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Embedded-Software-Entwickler-%28mwd%29-71409/1362352555) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Entwicklungs- und Projektingenieur*in (m/w/d) Elektrotechnik](https://careers.kaercher.com/job/Schwaikheim-Entwicklungs-und-Projektingenieurin-%28mwd%29-Elektrotechnik-71409/1344340555) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Entwicklungsingenieur (m/w/d) Mobile Verpflegungssysteme](https://careers.kaercher.com/job/Schwaikheim-Entwicklungsingenieur-%28mwd%29-Mobile-Verpflegungssysteme-71409/1361592855) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Fachberater (m/w/d) Robotics - Saarland, Hessen und NRW](https://careers.kaercher.com/job/Winnenden-Fachberater-%28mwd%29-Robotics-Saarland%2C-Hessen-und-NRW-71364/1372747755) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Facilities Maintenance Technician (Aurora)](https://careers.kaercher.com/job/Aurora-Facilities-Maintenance-Technician-%28Aurora%29-IL-80019/1359597455) · Aurora, 80019, IL · seit 2026-11-08
 - [Field Service Technician (Detroit)](https://careers.kaercher.com/job/Detroit-Field-Service-Technician-%28Detroit%29-IL-48201/1360112755) · Detroit, 48201, IL · seit 2026-11-08
 - [Field Service Technician (Santa Ana, CA)](https://careers.kaercher.com/job/Santa-Ana%2C-CA-Field-Service-Technician-%28Santa-Ana%2C-CA%29-CA-92604/1368056655) · Santa Ana, CA, 92604, CA · seit 2026-11-08
+- [Frontend / HMI Entwickler (m/w/d) KIRA Robotics](https://careers.kaercher.com/job/Schwaikheim-Frontend-HMI-Entwickler-%28mwd%29-KIRA-Robotics-71409-Schw/1369306755) · Schwaikheim, DE, 71409 Schw · seit 2026-11-08
 - [Global Online Shop Manager (m/w/d)](https://careers.kaercher.com/job/Winnenden-Global-Online-Shop-Manager-%28mwd%29-71364/1358962755) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Gruppenleiter (m/w/d) Controlling Sales und G&A Funktionen](https://careers.kaercher.com/job/Winnenden-Gruppenleiter-%28mwd%29-Controlling-Sales-und-G&A-Funktionen-71364/1370304555) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Gruppenleiter (m/w/d) Global Controlling Operations](https://careers.kaercher.com/job/Winnenden-Gruppenleiter-%28mwd%29-Global-Controlling-Operations-71364/1373565055) · Winnenden, DE, 71364 · seit 2026-11-08
@@ -116,17 +123,33 @@ Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
 - [Material Handler](https://careers.kaercher.com/job/Aurora-Material-Handler-IL-80019/1363337955) · Aurora, 80019, IL · seit 2026-11-08
 - [Mechatroniker (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Mechatroniker-%28mwd%29-71409/1335454755) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Mechatroniker (m/w/d) Instandsetzung](https://careers.kaercher.com/job/Schwaikheim-Mechatroniker-%28mwd%29-Instandsetzung-71409/1325826955) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Navigations-Entwickler - Motion & Planning (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Navigations-Entwickler-Motion-&-Planning-%28mwd%29-71409/1362354255) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Patentreferent (m/w/d)](https://careers.kaercher.com/job/Winnenden-Patentreferent-%28mwd%29-71364/1360580155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Perception-Entwickler - AI  & Computer Vision (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Perception-Entwickler-AI-&-Computer-Vision-%28mwd%29-71409/1362356755) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikant (m/w/d) Finance und Controlling 03/2027](https://careers.kaercher.com/job/Winnenden-Praktikant-%28mwd%29-Finance-und-Controlling-032027-71364/1370314555) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikant (m/w/d) Key Account Management 03/2027](https://careers.kaercher.com/job/Winnenden-Praktikant-%28mwd%29-Key-Account-Management-032027-71364/1370317855) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum / Internship Embedded Software](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Embedded-Software-71364/1365012255) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum / Internship Factory Engineering](https://careers.kaercher.com/job/Obersontheim-Praktikum-Internship-Factory-Engineering-74423/1364903155) · Obersontheim, DE, 74423 · seit 2026-11-08
 - [Praktikum / Internship General Engineering](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Internship-General-Engineering-71409/1363285455) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum / Internship History Management](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-History-Management-71364/1364911855) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum / Internship International Marketing & Sales](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Internship-International-Marketing-&-Sales-71409/1375992955) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum / Internship International Online D2C Sales](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-International-Online-D2C-Sales-71364/1375644155) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum / Internship International Technical Sales and Bid Management](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Internship-International-Technical-Sales-and-Bid-Management-71409/1375996055) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum / Internship Market Intelligence](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Market-Intelligence-71364/1364995755) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum / Internship Physical AI & Robotik](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Physical-AI-&-Robotik-71364/1365935155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum / Internship Productmanagement Water & Air](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Productmanagement-Water-&-Air-71364/1365009155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum / Internship Robotik & Automatisierungstechnologien](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Robotik-&-Automatisierungstechnologien-71364/1364988055) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum / Internship Software-Testing](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Software-Testing-71364/1365009955) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum / Internship User Experience Research (Digital Channel Marketing)](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-User-Experience-Research-%28Digital-Channel-Marketing%29-71364/1375035855) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum B2B Sales Development Target Group Solutions](https://careers.kaercher.com/job/Winnenden-Praktikum-B2B-Sales-Development-Target-Group-Solutions-71364/1371420455) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum Entwicklung / Internship Research and Development Mechanical or Electrical Engineering](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Entwicklung-Internship-Research-and-Development-Mechanical-or-Electrical-Engineering-71409/1356658055) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum Fertigungsplanung / Internship Factory Planning](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Fertigungsplanung-Internship-Factory-Planning-71409/1373101655) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum im Bereich Akustik und Schwingungstechnik / Internship Acoustics and Vibration Engineering](https://careers.kaercher.com/job/Winnenden-Praktikum-im-Bereich-Akustik-und-Schwingungstechnik-Internship-Acoustics-and-Vibration-Engineering-71364/1364899955) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum im Serviceinnendienst / Internship Customer Service](https://careers.kaercher.com/job/Schwaikheim-Praktikum-im-Serviceinnendienst-Internship-Customer-Service-71409/1373102755) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum Marketing Übersetzungsmanagement / Internship Marketing Translation Management](https://careers.kaercher.com/job/Winnenden-Praktikum-Marketing-%C3%9Cbersetzungsmanagement-Internship-Marketing-Translation-Management-71364/1365005555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum Nachhaltigkeit / Internship Sustainability](https://careers.kaercher.com/job/Winnenden-Praktikum-Nachhaltigkeit-Internship-Sustainability-71364/1364992555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum Product Management - Digitale Produkte / Internship Product Management Vehicle Wash](https://careers.kaercher.com/job/Winnenden-Praktikum-Product-Management-Digitale-Produkte-Internship-Product-Management-Vehicle-Wash-71364/1364911255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum Qualitäts- und Prozessmanagement & Digital Transformation / Internship Quality Management](https://careers.kaercher.com/job/Winnenden-Praktikum-Qualit%C3%A4ts-und-Prozessmanagement-&-Digital-Transformation-Internship-Quality-Management-71364/1365007855) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum Qualitätsmanagement / Internship Quality Management](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Qualit%C3%A4tsmanagement-Internship-Quality-Management-71409/1375994155) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum technisches Projektmanagement / Internship Technical Project Management](https://careers.kaercher.com/job/Schwaikheim-Praktikum-technisches-Projektmanagement-Internship-Technical-Project-Management-71409/1373102155) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum zentrales Qualitätsmanagement / Internship central Quality Management](https://careers.kaercher.com/job/Winnenden-Praktikum-zentrales-Qualit%C3%A4tsmanagement-Internship-central-Quality-Management-71364/1365008755) · Winnenden, DE, 71364 · seit 2026-11-08
@@ -135,18 +158,27 @@ Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
 - [Projektmanager*in (m/w/d) internationales Sonderkundengeschäft](https://careers.kaercher.com/job/Schwaikheim-Projektmanagerin-%28mwd%29-internationales-Sonderkundengesch%C3%A4ft-71409/1362313655) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Robotic Full Stack Engineer (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotic-Full-Stack-Engineer-%28mwd%29-71409/1362355555) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Robotic System Integrator SW (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotic-System-Integrator-SW-%28mwd%29-71409/1362356055) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Robotics Sensor Architect (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotics-Sensor-Architect-%28mwd%29-71409/1362349155) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Robotik System-Integrator Elektronik (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotik-System-Integrator-Elektronik-%28mwd%29-71409/1362353055) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Sales Manager (m/w/d) North and Eastern Europe](https://careers.kaercher.com/job/Schwaikheim-Sales-Manager-%28mwd%29-North-and-Eastern-Europe-71409/1365358855) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Search & AI Optimization Specialist (SEO/GEO)](https://careers.kaercher.com/job/Winnenden-Search-&-AI-Optimization-Specialist-%28SEOGEO%29-71364/1362537455) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Sekretär / Assistenz (m/w/d) Research & Development 80 %](https://careers.kaercher.com/job/Winnenden-Sekret%C3%A4r-Assistenz-%28mwd%29-Research-&-Development-80-71364/1375851555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Senior Accountant (m/w/d) Kärcher Global Services](https://careers.kaercher.com/job/Schwaikheim-Senior-Accountant-%28mwd%29-K%C3%A4rcher-Global-Services-71409/1346915255) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Senior Consultant (m/w/d) Performance Task Force](https://careers.kaercher.com/job/Winnenden-Senior-Consultant-%28mwd%29-Performance-Task-Force-71364/1344358955) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Senior Experte (m/w/d) Batterie- und Ladegerätesysteme](https://careers.kaercher.com/job/Winnenden-Senior-Experte-%28mwd%29-Batterie-und-Ladeger%C3%A4tesysteme-71364/1369316555) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Senior Innovation Manager (m/w/d)](https://careers.kaercher.com/job/Winnenden-Senior-Innovation-Manager-%28mwd%29-71364/1363017155) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Senior Social Commerce Specialist / Consultant (m/w/d)](https://careers.kaercher.com/job/Winnenden-Senior-Social-Commerce-Specialist-Consultant-%28mwd%29-71364/1369480155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Spezialist*in (m/w/d) Qualitätsmethoden mit Schwerpunkt FMEA Moderation](https://careers.kaercher.com/job/Winnenden-Spezialistin-%28mwd%29-Qualit%C3%A4tsmethoden-mit-Schwerpunkt-FMEA-Moderation-71364/1365216255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Systemingenieur Elektronik (m/w/d) - Consumer Products](https://careers.kaercher.com/job/Winnenden-Systemingenieur-Elektronik-%28mwd%29-Consumer-Products-71364/1375855155) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Teamleiter (m/w/d) Remote Sales & Bestandskundenbetreuung (B2B)](https://careers.kaercher.com/job/Winnenden-Teamleiter-%28mwd%29-Remote-Sales-&-Bestandskundenbetreuung-%28B2B%29-71364/1369858855) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Technical Sales Manager - Robotics & Digital](https://careers.kaercher.com/job/United-Kingdom-Technical-Sales-Manager-Robotics-&-Digital/1367996555) · United Kingdom, GB · seit 2026-11-08
+- [Technischer Vertrieb (m/w/d) B2G](https://careers.kaercher.com/job/Schwaikheim-Technischer-Vertrieb-%28mwd%29-B2G-71409/1341956055) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Técnico de Taller](https://careers.kaercher.com/job/Santiago-T%C3%A9cnico-de-Taller-9340000/1376041955) · Santiago, CL, 9340000 · seit 2026-11-08
 - [Verkstadstekniker](https://careers.kaercher.com/job/Malm%C3%B6-Verkstadstekniker-213-76/1352566255) · Malmö, SE, 213 76 · seit 2026-11-08
 - [Versuchsingenieur (m/w/d) Module Center Pumpset](https://careers.kaercher.com/job/Winnenden-Versuchsingenieur-%28mwd%29-Module-Center-Pumpset-71364/1362188555) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Versuchsingenieur (m/w/d) Testing Heat Engine](https://careers.kaercher.com/job/Winnenden-Versuchsingenieur-%28mwd%29-Testing-Heat-Engine-71364/1364724655) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Vertriebsberater/Vertriebsspezialist (m/w/d) für die Gebäudereinigung Großraum Bremen](https://careers.kaercher.com/job/Winnenden-VertriebsberaterVertriebsspezialist-%28mwd%29-f%C3%BCr-die-Geb%C3%A4udereinigung-Gro%C3%9Fraum-Bremen-71364/1372747255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Werkstudent (m/w/d) / Praktikum Informationssicherheit](https://careers.kaercher.com/job/Winnenden-Werkstudent-%28mwd%29-Praktikum-Informationssicherheit-71364/1365781355) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Werkstudent (m/w/d) Einkauf](https://careers.kaercher.com/job/Schwaikheim-Werkstudent-%28mwd%29-Einkauf-71409/1373100355) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Werkstudent (m/w/d) im Bereich Entwicklung](https://careers.kaercher.com/job/Schwaikheim-Werkstudent-%28mwd%29-im-Bereich-Entwicklung-71409/1373470855) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Werkstudent (m/w/d) Logistik & Supply Chain Management](https://careers.kaercher.com/job/Obersontheim-Werkstudent-%28mwd%29-Logistik-&-Supply-Chain-Management-74423/1367720755) · Obersontheim, DE, 74423 · seit 2026-11-08
