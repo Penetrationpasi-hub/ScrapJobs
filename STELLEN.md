@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T14:08:47+00:00 · 345 Stellen aus 34 von 60 Quellen
+Stand: 2026-11-08T14:17:02+00:00 · 365 Stellen aus 35 von 60 Quellen
 
 ## Quellen
 
@@ -62,7 +62,7 @@ Stand: 2026-11-08T14:08:47+00:00 · 345 Stellen aus 34 von 60 Quellen
 | Murrelektronik | done | 9 | 2026-11-08 |  |
 | PFISTERER | timeout | 0 | – | verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html |
 | Hahn Automobile | done | 8 | 2026-11-08 |  |
-| Klingele Paper & Packaging | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.klingele.com/job/Remshalden-Initiativbewerbung-Remshalden-%28mwd%29-73630/939250355 |
+| Klingele Paper & Packaging | done | 20 | 2026-11-08 |  |
 | Harro Höfliger | done | 10 | 2026-11-08 |  |
 | SOCCO | done | 25 | 2026-11-08 |  |
 | Rems-Murr-JOBS | done | 10 | 2026-11-08 |  |
@@ -268,6 +268,29 @@ Stand: 2026-11-08T14:08:47+00:00 · 345 Stellen aus 34 von 60 Quellen
 - [Key-Account-Manager / Bau- und Wohnungswirtschaft (m/w/d)](https://judo.eu/Stellenanzeige/key-account-manager-bau-und-wohnungswirtschaft-m-w-d) · seit 2026-11-08
 - [Logistikmeister (m/w/d)](https://judo.eu/Stellenanzeige/logistikmeister-m-w-d) · Backnang-Waldrems · seit 2026-11-08
 - [Mitarbeiter (m/w/d) Vertriebsinnendienst Export](https://judo.eu/Stellenanzeige/mitarbeiter-m-w-d-vertriebsinnendienst-export-zollbeauftragter) · in Winnenden suchen wir · seit 2026-11-08
+
+### Klingele
+
+- [Ausbildung zum Elektroniker für Betriebstechnik (m/w/d)](https://jobs.klingele.com/job/Delmenhorst-Ausbildung-zum-Elektroniker-f%C3%BCr-Betriebstechnik-%28mwd%29-27755/1363143755) · Delmenhorst, DE, 27755 · seit 2026-11-08
+- [Ausbildung zum Industriekaufmann (m/w/d)](https://jobs.klingele.com/job/Delmenhorst-Ausbildung-zum-Industriekaufmann-%28mwd%29-27755/1363143955) · Delmenhorst, DE, 27755 · seit 2026-11-08
+- [Ausbildung zum Industriekaufmann (m/w/d)](https://jobs.klingele.com/job/Hilpoltstein-Ausbildung-zum-Industriekaufmann-%28mwd%29-91161/1369590355) · Hilpoltstein, DE, 91161 · seit 2026-11-08
+- [Ausbildung zum Industriemechaniker (m/w/d)](https://jobs.klingele.com/job/Delmenhorst-Ausbildung-zum-Industriemechaniker-%28mwd%29-27755/1363143555) · Delmenhorst, DE, 27755 · seit 2026-11-08
+- [Ausbildung zum Medientechnologen Druck (m/w/d)](https://jobs.klingele.com/job/Werne-Ausbildung-zum-Medientechnologen-Druck-%28mwd%29-59368/1374111555) · Werne, DE, 59368 · seit 2026-11-08
+- [Ausbildung zum Packmitteltechnologen (m/w/d)](https://jobs.klingele.com/job/Wunsiedel-Ausbildung-zum-Packmitteltechnologen-%28mwd%29-95632/941174255) · Wunsiedel, DE, 95632 · seit 2026-11-08
+- [Ausbildung zum Packmitteltechnologen (m/w/d)](https://jobs.klingele.com/job/Delmenhorst-Ausbildung-zum-Packmitteltechnologen-%28mwd%29-27755/1363143355) · Delmenhorst, DE, 27755 · seit 2026-11-08
+- [Ausbildung zum Packmitteltechnologen (m/w/d)](https://jobs.klingele.com/job/Hilpoltstein-Ausbildung-zum-Packmitteltechnologen-%28mwd%29-91161/939250055) · Hilpoltstein, DE, 91161 · seit 2026-11-08
+- [Ausbildung zur Fachkraft Lagerlogistik (m/w/d)](https://jobs.klingele.com/job/Hilpoltstein-Ausbildung-zur-Fachkraft-Lagerlogistik-%28mwd%29-91161/939253055) · Hilpoltstein, DE, 91161 · seit 2026-11-08
+- [Auszubildende/r Groß- und Außenhandelskauffrau/mann (w/m/d)](https://jobs.klingele.com/job/Villmar-Auszubildender-Gro%C3%9F-und-Au%C3%9Fenhandelskauffraumann-%28wmd%29-65606/1334590855) · Villmar, DE, 65606 · seit 2026-11-08
+- [Berufskraftfahrer (m/w/d)](https://jobs.klingele.com/job/Weener-Berufskraftfahrer-%28mwd%29-26826/1366308155) · Weener, DE, 26826 · seit 2026-11-08
+- [Elektroniker für Betriebstechnik (m/w/d)](https://jobs.klingele.com/job/Weener-Elektroniker-f%C3%BCr-Betriebstechnik-%28mwd%29-26826/1347715155) · Weener, DE, 26826 · seit 2026-11-08
+- [Elektroniker für Betriebstechnik (m/w/d)](https://jobs.klingele.com/job/Delmenhorst-Elektroniker-f%C3%BCr-Betriebstechnik-%28mwd%29-27755/1330882255) · Delmenhorst, DE, 27755 · seit 2026-11-08
+- [Elektroniker für Betriebstechnik (m/w/d)](https://jobs.klingele.com/job/Hilpoltstein-Elektroniker-f%C3%BCr-Betriebstechnik-%28mwd%29-91161/1148323055) · Hilpoltstein, DE, 91161 · seit 2026-11-08
+- [Gebietsvertriebsleiter für den Großraum Würzburg und Ostdeutschland (m/w/d)](https://jobs.klingele.com/job/Hilpoltstein-Gebietsvertriebsleiter-f%C3%BCr-den-Gro%C3%9Fraum-W%C3%BCrzburg-und-Ostdeutschland-%28mwd%29-91161/939947055) · Hilpoltstein, DE, 91161 · seit 2026-11-08
+- [Instandhaltungsmechaniker (m/w/d)](https://jobs.klingele.com/job/Weener-Instandhaltungsmechaniker-%28mwd%29-26826/1359369855) · Weener, DE, 26826 · seit 2026-11-08
+- [Kraftwerker (m/w/d)](https://jobs.klingele.com/job/Weener-Kraftwerker-%28mwd%29-26826/1336543455) · Weener, DE, 26826 · seit 2026-11-08
+- [Maschinenführer (m/w/d)](https://jobs.klingele.com/job/Delmenhorst-Maschinenf%C3%BChrer-%28mwd%29-27755/1145741255) · Delmenhorst, DE, 27755 · seit 2026-11-08
+- [Praktikant (m/w/d)](https://jobs.klingele.com/job/Grunbach-Praktikant-%28mwd%29-73630/972207355) · Grunbach, DE, 73630 · seit 2026-11-08
+- [Technischer Anlagenfahrer (m/w/d)](https://jobs.klingele.com/job/Weener-Technischer-Anlagenfahrer-%28mwd%29-26826/1353167255) · Weener, DE, 26826 · seit 2026-11-08
 
 ### Klinikum Schloß Winnenden
 
