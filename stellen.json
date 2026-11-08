@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T18:17:42+00:00",
+ "aktualisiert": "2026-11-08T18:29:28+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -49,8 +49,8 @@
    "key": "robert_bosch_krankenhaus",
    "label": "Robert Bosch Krankenhaus",
    "status": "no_verified_jobs",
-   "detail": "verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr-",
    "letzterErfolg": null,
+   "detail": "verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- (ld+json 0, JobPosting 0, 114997 Zeichen, Titel «Robert Bosch Krankenhaus GmbH Medizinischer Fachan») → Titel/Firma ungeeignet (Titel True, Firma False)",
    "anzahl": 0
   },
   {
@@ -92,7 +92,7 @@
   {
    "key": "stadt_waiblingen",
    "label": "Stadt Waiblingen",
-   "status": "too_large",
+   "status": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -148,8 +148,7 @@
   {
    "key": "peter_hahn",
    "label": "Peter Hahn",
-   "status": "robots_unavailable",
-   "detail": "Content-Type text/txt;charset=utf-8",
+   "status": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -360,9 +359,9 @@
   {
    "key": "dusyma",
    "label": "Dusyma",
-   "status": "too_large",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 8
   },
   {
    "key": "zvw",
@@ -2450,6 +2449,102 @@
    "posted": "2026-06-26",
    "source": "baeckerei_maurer",
    "sourceLabel": "Bäckerei Maurer",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-13200b1cecda2e43d00f1024",
+   "title": "Außendienstmitarbeiter (w/m/d) in den Regionen Nürnberg | Leipzig/Chemnitz/Zwickau | Berlin",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/0049bb87-7a92-424e-b783-bcc1bc90471d",
+   "posted": "2021-07-15",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a60a035bcd655d8088bc7c7c",
+   "title": "Junior Shop Manager (m/w/d)",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/5fe5b441-9739-451e-a573-f49b6c2a2377",
+   "posted": "2021-08-03",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-f259b41343986864bc64e2ac",
+   "title": "Koordinator (m/w/d) für Produkt- und Lieferkettencompliance",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/c5b10462-4d05-4559-a75a-1eb418cae97b",
+   "posted": "2025-10-16",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ea5fa32d196f09a1217b4fb9",
+   "title": "Mitarbeiter IT-Technik / Administration (m/w/d)",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/331f499b-2a80-4dca-9e4c-eef62461cde9",
+   "posted": "2021-07-21",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c42816196e8fa1936292a38d",
+   "title": "Möbelmonteure (m/w/d)",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/fda01ccf-f223-42be-be9e-1728cf57757e",
+   "posted": "2016-08-05",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ded48b471d32854644d92e9d",
+   "title": "Objektverkäufer (w/m/d) in der Region Karlsruhe/Schwarzwald/Bodensee-Oberschwaben/Schwäbische Alb",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/67b2d56f-5f91-4df7-be18-c22c9b4c8b39",
+   "posted": "2025-07-31",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-f6f6659302bd1fd213f9bed5",
+   "title": "Technischer Sachbearbeiter (m/w/d) Facility Management",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/d938cf30-452b-4306-bb16-613739cca300",
+   "posted": "2025-08-04",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a4d8824c64249c267812cb43",
+   "title": "Werkstudent (m/w/d) für unsere SEO-Optimierung",
+   "company": "dusyma",
+   "location": "Schorndorf",
+   "url": "https://jobboard.easyhr.io/jobad/9c15b00c-c956-40cf-9889-5270eeff77d5",
+   "posted": "2022-07-13",
+   "source": "dusyma",
+   "sourceLabel": "Dusyma",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },

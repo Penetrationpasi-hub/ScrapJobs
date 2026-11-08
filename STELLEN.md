@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T18:17:42+00:00 · 561 Stellen aus 41 von 61 Quellen
+Stand: 2026-11-08T18:29:28+00:00 · 569 Stellen aus 42 von 61 Quellen
 
 ## Quellen
 
@@ -12,13 +12,13 @@ Stand: 2026-11-08T18:17:42+00:00 · 561 Stellen aus 41 von 61 Quellen
 | STIHL | unsupported | 0 | – |  |
 | MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
 | Diakonie Stetten | unsupported | 0 | – |  |
-| Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- |
+| Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- (ld+json 0, JobPosting 0, 114997 Zeichen, Titel «Robert Bosch Krankenhaus GmbH Medizinischer Fachan») → Titel/Firma ungeeignet (Titel True, Firma False) |
 | Kärcher | done | 99 | 2026-11-08 | teilweise: Schwaikheim network_error |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
 | Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |  |
-| Stadt Waiblingen | too_large | 0 | – |  |
+| Stadt Waiblingen | unsupported | 0 | – |  |
 | TESAT-Spacecom | done | 19 | 2026-11-08 |  |
 | Airbus (Stuttgart, Laupheim, Backnang) | done | 9 | 2026-11-08 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
@@ -26,7 +26,7 @@ Stand: 2026-11-08T18:17:42+00:00 · 561 Stellen aus 41 von 61 Quellen
 | Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
 | Stadt Schorndorf | done | 6 | 2026-11-08 |  |
 | Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-08 |  |
-| Peter Hahn | robots_unavailable | 0 | – | Content-Type text/txt;charset=utf-8 |
+| Peter Hahn | unsupported | 0 | – |  |
 | Syntegon | unsupported | 0 | – |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
 | Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – |  |
@@ -56,7 +56,7 @@ Stand: 2026-11-08T18:17:42+00:00 · 561 Stellen aus 41 von 61 Quellen
 | Soehnle Industrial Solutions | done | 15 | 2026-11-08 |  |
 | Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |  |
 | RIANI | done | 6 | 2026-11-08 |  |
-| Dusyma | too_large | 0 | – |  |
+| Dusyma | done | 8 | 2026-11-08 |  |
 | Zeitungsverlag Waiblingen | robots_unavailable | 0 | – | TimeoutError karriere.zvw.de |
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
 | Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
@@ -270,6 +270,17 @@ Stand: 2026-11-08T18:17:42+00:00 · 561 Stellen aus 41 von 61 Quellen
 - [Konditormeister/-in (m/w/d)](https://www.baecker-maurer.de/karriere/konditormeister) · Winnenden BW DE · seit 2026-11-08
 - [Mitarbeiter Qualitätsmanagement (m/w/d)](https://www.baecker-maurer.de/karriere/mitarbeiter-qualitaetsmanagement) · Winnenden BW DE · seit 2026-11-08
 - [Werkstudent/-in im Verkauf (m/w/d)](https://www.baecker-maurer.de/karriere/werkstudent-im-verkauf) · Backnang BW DE / Fellbach BW DE / Schorndorf BW DE / Stuttgart BW DE / Waiblingen BW DE / Winnenden BW DE · seit 2026-11-08
+
+### dusyma
+
+- [Außendienstmitarbeiter (w/m/d) in den Regionen Nürnberg | Leipzig/Chemnitz/Zwickau | Berlin](https://jobboard.easyhr.io/jobad/0049bb87-7a92-424e-b783-bcc1bc90471d) · Schorndorf · seit 2026-11-08
+- [Junior Shop Manager (m/w/d)](https://jobboard.easyhr.io/jobad/5fe5b441-9739-451e-a573-f49b6c2a2377) · Schorndorf · seit 2026-11-08
+- [Koordinator (m/w/d) für Produkt- und Lieferkettencompliance](https://jobboard.easyhr.io/jobad/c5b10462-4d05-4559-a75a-1eb418cae97b) · Schorndorf · seit 2026-11-08
+- [Mitarbeiter IT-Technik / Administration (m/w/d)](https://jobboard.easyhr.io/jobad/331f499b-2a80-4dca-9e4c-eef62461cde9) · Schorndorf · seit 2026-11-08
+- [Möbelmonteure (m/w/d)](https://jobboard.easyhr.io/jobad/fda01ccf-f223-42be-be9e-1728cf57757e) · Schorndorf · seit 2026-11-08
+- [Objektverkäufer (w/m/d) in der Region Karlsruhe/Schwarzwald/Bodensee-Oberschwaben/Schwäbische Alb](https://jobboard.easyhr.io/jobad/67b2d56f-5f91-4df7-be18-c22c9b4c8b39) · Schorndorf · seit 2026-11-08
+- [Technischer Sachbearbeiter (m/w/d) Facility Management](https://jobboard.easyhr.io/jobad/d938cf30-452b-4306-bb16-613739cca300) · Schorndorf · seit 2026-11-08
+- [Werkstudent (m/w/d) für unsere SEO-Optimierung](https://jobboard.easyhr.io/jobad/9c15b00c-c956-40cf-9889-5270eeff77d5) · Schorndorf · seit 2026-11-08
 
 ### Eisenmann Personal-Service GmbH
 
