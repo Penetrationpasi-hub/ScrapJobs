@@ -181,7 +181,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         else:
             status = failures[0][1]
         results[key] = {"label": source.label, "status": status, "jobs": jobs, "detail": detail}
-        log(f"{key}: {status}, {len(jobs)} Stellen, {time.monotonic() - started:.0f}s")
+        log(f"{key}: {status}, {len(jobs)} Stellen, {time.monotonic() - started:.0f}s" + (f" ({detail})" if detail else ""))
         if index + 1 < len(keys):
             sleep(options.pause)
     return results

@@ -73,7 +73,7 @@ def crawl(req, transport_factory=Transport):
             if last and delay > 1:
                 pause = max(0, last + delay - time.monotonic())
                 if pause >= budget.deadline - time.monotonic():
-                    raise FetchError("timeout")
+                    raise FetchError("timeout", detail=f"robots.txt verlangt {delay:g}s Wartezeit zwischen Abrufen ({host})")
                 time.sleep(pause)
         final, html = transport.get(raw, source.hosts, authorize=check_robots, **options)
         if not options.get("accept_json") and not options.get("accept_xml") and ("captcha" in plain(html[:50000]).lower() or "access denied" in plain(html[:50000]).lower()):
