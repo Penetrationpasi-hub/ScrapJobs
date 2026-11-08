@@ -38,7 +38,7 @@ class ZvwTest(unittest.TestCase):
 
     def test_catalog_entry(self):
         self.assertTrue(self.source.available)
-        self.assertEqual(self.source.start("Ausbildung", "Waiblingen"), "https://karriere.zvw.de/stellenangebote/")
+        self.assertEqual(self.source.start("Ausbildung", "Waiblingen"), "https://rems-murr-jobs.de/jobs?search=Zeitungsverlag")
 
     def test_only_job_pages_on_regional_board_are_discovered(self):
         links, _ = discovery(INDEX, self.source.search, self.source, "Ausbildung")
