@@ -53,9 +53,9 @@ def target(raw, hosts, resolve=socket.getaddrinfo):
             return not address.is_global or address.is_multicast or address.is_reserved or "%" in ip or (isinstance(address, ipaddress.IPv6Address) and
                     (address.sixtofour is not None or address.teredo is not None))
         if not addresses or any(unsafe(ip) for ip in addresses):
-            raise FetchError("unsafe_target")
-    except (ValueError, OSError):
-        raise FetchError("unsafe_target") from None
+            raise FetchError("unsafe_target", detail="Adresse nicht öffentlich: " + ", ".join(addresses)[:80])
+    except (ValueError, OSError) as error:
+        raise FetchError("unsafe_target", detail=f"DNS {type(error).__name__} {url.hostname}") from None
     return url, addresses[0]
 
 
@@ -131,7 +131,7 @@ class Transport:
                         raise FetchError("unsupported", http_status=301 if robots_request and response.status == 301 else None)
                     location = response.getheader("Location")
                     if not location:
-                        raise FetchError("unsupported")
+                        raise FetchError("unsupported", detail="Weiterleitung ohne Ziel")
                     current = urljoin(current, location)
                     continue
                 if response.status in (401, 403, 429):
@@ -142,13 +142,13 @@ class Transport:
                     raise FetchError("upstream_error", http_status=response.status)
                 encoding = response.getheader("Content-Encoding", "identity").lower()
                 if encoding != "identity":
-                    raise FetchError("unsupported")
+                    raise FetchError("unsupported", detail=f"Content-Encoding {encoding[:20]}")
                 kind = response.getheader("Content-Type", "").lower()
                 kinds = (("application/vnd.api+json", "application/json") if json_api else
                          ("application/javascript", "text/javascript") if accept_javascript else
                          ("application/json",) if accept_json else ("text/html", "application/xhtml+xml", "text/plain"))
                 if not any(t in kind for t in kinds):
-                    raise FetchError("unsupported")
+                    raise FetchError("unsupported", detail=f"Content-Type {kind[:60] or 'leer'}")
                 chunks, size = [], 0
                 while True:
                     if time.monotonic() >= self.budget.deadline:
@@ -161,8 +161,9 @@ class Transport:
                         raise FetchError("too_large")
                     chunks.append(chunk)
                 return current, b"".join(chunks).decode("utf-8", errors="replace")
-            except (OSError, http.client.HTTPException):
-                raise FetchError("timeout" if time.monotonic() >= self.budget.deadline else "network_error") from None
+            except (OSError, http.client.HTTPException) as error:
+                raise FetchError("timeout" if time.monotonic() >= self.budget.deadline else "network_error",
+                                 detail=f"{type(error).__name__} {url.hostname}") from None
             finally:
                 connection.close()
         raise FetchError("redirect_limit")

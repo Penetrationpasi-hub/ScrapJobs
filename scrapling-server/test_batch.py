@@ -204,3 +204,24 @@ class CrawlerDetailTest(unittest.TestCase):
     def test_lenient_mode_still_obeys_disallow(self):
         report = self.crawl_with(robots_text="User-agent: *\nDisallow: /", robots_missing_ok=True)
         self.assertEqual(report["status"], "robots_denied")
+
+
+class DiagnosticDetailTest(unittest.TestCase):
+    def test_unsafe_target_and_unsupported_carry_reasons(self):
+        from safe_http import FetchError, target
+
+        def dns_down(*a, **k):
+            raise OSError("no dns")
+
+        with self.assertRaises(FetchError) as caught:
+            target("https://a.example/", ("a.example",), dns_down)
+        self.assertIn("DNS OSError a.example", caught.exception.detail)
+
+        private = lambda *a, **k: [(0, 0, 0, "", ("10.0.0.5", 443))]
+        with self.assertRaises(FetchError) as caught:
+            target("https://a.example/", ("a.example",), private)
+        self.assertIn("10.0.0.5", caught.exception.detail)
+
+    def test_robots_snippet_is_reported(self):
+        report = CrawlerDetailTest.crawl_with(CrawlerDetailTest(), robots_text="<html>\n  Seite   nicht gefunden </html>")
+        self.assertIn("Seite nicht gefunden", report["detail"])

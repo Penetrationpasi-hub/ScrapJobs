@@ -46,7 +46,7 @@ def crawl(req, transport_factory=Transport):
                         return
                     raise FetchError("robots_unavailable") from error
                 if not re.search(r"(?im)^\s*user-agent\s*:", text):
-                    raise FetchError("robots_unavailable", detail="robots.txt ohne User-agent-Zeile")
+                    raise FetchError("robots_unavailable", detail="robots.txt ohne User-agent-Zeile: «" + " ".join(text.split())[:120] + "»")
                 robot = RobotFileParser()
                 robot.parse(text.splitlines())
                 robots[host] = robot
@@ -149,6 +149,7 @@ def crawl(req, transport_factory=Transport):
                     report["kept"] += 1
                 else:
                     report["filtered"] += 1
+                    report.setdefault("sample", url)
             if details and report["filtered"] and not report["kept"]:
                 report["status"] = "no_verified_jobs"
         except FetchError as error:

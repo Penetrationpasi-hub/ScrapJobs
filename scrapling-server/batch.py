@@ -135,7 +135,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
             outcome = crawl(req, factory)
             report = outcome["sources"][0]
             results[key] = {"label": label, "status": report["status"], "jobs": outcome["jobs"],
-                            "detail": report.get("detail")}
+                            "detail": report.get("detail") or (f"verworfen, z. B. {report['sample']}" if report.get("sample") else None)}
         except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
             results[key] = {"label": label, "status": "worker_error", "jobs": []}
             log(f"  ! {key}: {type(error).__name__}")
