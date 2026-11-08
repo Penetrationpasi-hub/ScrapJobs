@@ -145,6 +145,11 @@ def crawl(req, transport_factory=Transport):
                         report["status"] = "no_matches"
                     break
                 links, following = discovery(html, final, source, req.q, near)
+                if not links and "detail" not in report:
+                    # Diagnose für leere Listen: was die Seite tatsächlich geliefert hat (z. B. JavaScript-Hülle).
+                    count = len(Selector(html).css("a[href]"))
+                    shell = plain(Selector(html).css("title::text").get() or "")[:50]
+                    report["list_note"] = f"{final} ({len(html)} Zeichen, {count} Links, Titel «{shell}»)"
                 details.extend(link for link in links if link not in details)
                 next_url = following
                 # With a place filter further list pages are only worth their crawl delay while detail slots are free.
@@ -157,6 +162,8 @@ def crawl(req, transport_factory=Transport):
                 # An empty rendered shell is not proof of zero vacancies.
                 if report["status"] != "no_matches":
                     report["status"] = "unsupported"
+                    if report.get("list_note"):
+                        report["detail"] = "keine Anzeigenlinks auf " + report["list_note"]
             for url in details[:getattr(req, "max_details", source.max_details)]:
                 if len(jobs) >= max_jobs:
                     break
