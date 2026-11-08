@@ -1,71 +1,71 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T12:05:18+00:00 · 243 Stellen aus 27 von 60 Quellen
+Stand: 2026-11-08T12:50:54+00:00 · 243 Stellen aus 27 von 60 Quellen
 
 ## Quellen
 
-| Quelle | Status | Stellen | Letzter Erfolg |
-| --- | --- | ---: | --- |
-| Festo | no_verified_jobs | 0 | – |
-| Bosch | robots_unavailable | 0 | – |
-| Mercedes-Benz | unsupported | 0 | – |
-| STIHL | unsupported | 0 | – |
-| MAHLE / MAHLE Aftermarket | no_verified_jobs | 0 | – |
-| Diakonie Stetten | unsupported | 0 | – |
-| Robert Bosch Krankenhaus | robots_unavailable | 0 | – |
-| Kärcher | no_verified_jobs | 0 | – |
-| Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |
-| Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |
-| Paulinenpflege Winnenden | done | 12 | 2026-11-08 |
-| Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |
-| Stadt Waiblingen | robots_unavailable | 0 | – |
-| TESAT-Spacecom | unsupported | 0 | – |
-| Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |
-| Volksbank Stuttgart | done | 7 | 2026-11-08 |
-| Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |
-| Stadt Schorndorf | done | 6 | 2026-11-08 |
-| Oskar Frech / Frech-Gruppe | no_verified_jobs | 0 | – |
-| Peter Hahn | robots_unavailable | 0 | – |
-| Syntegon | unsupported | 0 | – |
-| Catalent Schorndorf | unsupported | 0 | – |
-| Sana · Karl-Olga-Krankenhaus | robots_unavailable | 0 | – |
-| Emil Löffelhardt | unsupported | 0 | – |
-| REMS | robots_unavailable | 0 | – |
-| stoba Backnang | done | 5 | 2026-11-08 |
-| Deutsche Post / DHL | unsupported | 0 | – |
-| d&b audiotechnik | unsupported | 0 | – |
-| SWR Stuttgart | unsupported | 0 | – |
-| TTI / AEG / Milwaukee | done | 10 | 2026-11-08 |
-| Burger Schloz Automobile | done | 9 | 2026-11-08 |
-| Klöpfer | done | 4 | 2026-11-08 |
-| JUDO Wasseraufbereitung | done | 8 | 2026-11-08 |
-| RIVA-Gruppe / Mpire | no_verified_jobs | 0 | – |
-| WIRmachenDRUCK | robots_unavailable | 0 | – |
-| Eisenmann Services / Personal-Service | done | 3 | 2026-11-08 |
-| Bäckerei Maurer | done | 15 | 2026-11-08 |
-| Elanders Waiblingen | done | 10 | 2026-11-08 |
-| Scutum Sicherheit | robots_unavailable | 0 | – |
-| Brunold Automobile | robots_unavailable | 0 | – |
-| KÜBLER Workwear | robots_unavailable | 0 | – |
-| Swoboda | done | 16 | 2026-11-08 |
-| Autohaus Walter Mulfinger | done | 5 | 2026-11-08 |
-| Adolf Föhl | done | 7 | 2026-11-08 |
-| Stadtwerke Waiblingen | done | 9 | 2026-11-08 |
-| FESSMANN | done | 2 | 2026-11-08 |
-| Soehnle Industrial Solutions | no_verified_jobs | 0 | – |
-| Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |
-| RIANI | done | 6 | 2026-11-08 |
-| Dusyma | robots_unavailable | 0 | – |
-| Stadtwerke Schorndorf | robots_denied | 0 | – |
-| Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |
-| Murrelektronik | done | 9 | 2026-11-08 |
-| PFISTERER | timeout | 0 | – |
-| Hahn Automobile | robots_unavailable | 0 | – |
-| Klingele Paper & Packaging | no_verified_jobs | 0 | – |
-| Harro Höfliger | done | 10 | 2026-11-08 |
-| SOCCO | done | 25 | 2026-11-08 |
-| Zeitungsverlag Waiblingen | robots_unavailable | 0 | – |
-| Rems-Murr-JOBS | done | 10 | 2026-11-08 |
+| Quelle | Status | Stellen | Letzter Erfolg | Detail |
+| --- | --- | ---: | --- | --- |
+| Festo | no_verified_jobs | 0 | – |  |
+| Bosch | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Mercedes-Benz | unsupported | 0 | – |  |
+| STIHL | unsupported | 0 | – |  |
+| MAHLE / MAHLE Aftermarket | no_verified_jobs | 0 | – |  |
+| Diakonie Stetten | unsupported | 0 | – |  |
+| Robert Bosch Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Kärcher | no_verified_jobs | 0 | – |  |
+| Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
+| Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
+| Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
+| Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |  |
+| Stadt Waiblingen | robots_unavailable | 0 | – | unsupported |
+| TESAT-Spacecom | unsupported | 0 | – |  |
+| Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
+| Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
+| Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
+| Stadt Schorndorf | done | 6 | 2026-11-08 |  |
+| Oskar Frech / Frech-Gruppe | no_verified_jobs | 0 | – |  |
+| Peter Hahn | robots_unavailable | 0 | – | unsupported |
+| Syntegon | unsupported | 0 | – |  |
+| Catalent Schorndorf | unsupported | 0 | – |  |
+| Sana · Karl-Olga-Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Emil Löffelhardt | unsupported | 0 | – |  |
+| REMS | no_verified_jobs | 0 | – |  |
+| stoba Backnang | done | 5 | 2026-11-08 |  |
+| Deutsche Post / DHL | unsupported | 0 | – |  |
+| d&b audiotechnik | unsupported | 0 | – |  |
+| SWR Stuttgart | unsupported | 0 | – |  |
+| TTI / AEG / Milwaukee | done | 10 | 2026-11-08 |  |
+| Burger Schloz Automobile | done | 9 | 2026-11-08 |  |
+| Klöpfer | done | 4 | 2026-11-08 |  |
+| JUDO Wasseraufbereitung | done | 8 | 2026-11-08 |  |
+| RIVA-Gruppe / Mpire | no_verified_jobs | 0 | – |  |
+| WIRmachenDRUCK | no_verified_jobs | 0 | – |  |
+| Eisenmann Services / Personal-Service | done | 3 | 2026-11-08 |  |
+| Bäckerei Maurer | done | 15 | 2026-11-08 |  |
+| Elanders Waiblingen | done | 10 | 2026-11-08 |  |
+| Scutum Sicherheit | unsafe_target | 0 | – |  |
+| Brunold Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| KÜBLER Workwear | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Swoboda | done | 16 | 2026-11-08 |  |
+| Autohaus Walter Mulfinger | done | 5 | 2026-11-08 |  |
+| Adolf Föhl | done | 7 | 2026-11-08 |  |
+| Stadtwerke Waiblingen | done | 9 | 2026-11-08 |  |
+| FESSMANN | done | 2 | 2026-11-08 |  |
+| Soehnle Industrial Solutions | no_verified_jobs | 0 | – |  |
+| Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |  |
+| RIANI | done | 6 | 2026-11-08 |  |
+| Dusyma | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Stadtwerke Schorndorf | robots_denied | 0 | – |  |
+| Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
+| Murrelektronik | done | 9 | 2026-11-08 |  |
+| PFISTERER | timeout | 0 | – |  |
+| Hahn Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile |
+| Klingele Paper & Packaging | no_verified_jobs | 0 | – |  |
+| Harro Höfliger | done | 10 | 2026-11-08 |  |
+| SOCCO | done | 25 | 2026-11-08 |  |
+| Zeitungsverlag Waiblingen | robots_unavailable | 0 | – | network_error |
+| Rems-Murr-JOBS | done | 10 | 2026-11-08 |  |
 
 ## Stellen
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T12:05:18+00:00",
+ "aktualisiert": "2026-11-08T12:50:54+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -13,6 +13,7 @@
    "key": "bosch",
    "label": "Bosch",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -48,6 +49,7 @@
    "key": "robert_bosch_krankenhaus",
    "label": "Robert Bosch Krankenhaus",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -90,6 +92,7 @@
    "key": "stadt_waiblingen",
    "label": "Stadt Waiblingen",
    "status": "robots_unavailable",
+   "detail": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -139,6 +142,7 @@
    "key": "peter_hahn",
    "label": "Peter Hahn",
    "status": "robots_unavailable",
+   "detail": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -160,6 +164,7 @@
    "key": "sana_karl_olga",
    "label": "Sana · Karl-Olga-Krankenhaus",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -173,7 +178,7 @@
   {
    "key": "rems",
    "label": "REMS",
-   "status": "robots_unavailable",
+   "status": "no_verified_jobs",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -243,7 +248,7 @@
   {
    "key": "wirmachendruck",
    "label": "WIRmachenDRUCK",
-   "status": "robots_unavailable",
+   "status": "no_verified_jobs",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -271,7 +276,7 @@
   {
    "key": "scutum",
    "label": "Scutum Sicherheit",
-   "status": "robots_unavailable",
+   "status": "unsafe_target",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -279,6 +284,7 @@
    "key": "brunold",
    "label": "Brunold Automobile",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -286,6 +292,7 @@
    "key": "kuebler",
    "label": "KÜBLER Workwear",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -349,6 +356,7 @@
    "key": "dusyma",
    "label": "Dusyma",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -384,6 +392,7 @@
    "key": "hahn_automobile",
    "label": "Hahn Automobile",
    "status": "robots_unavailable",
+   "detail": "robots.txt ohne User-agent-Zeile",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -412,6 +421,7 @@
    "key": "zvw",
    "label": "Zeitungsverlag Waiblingen",
    "status": "robots_unavailable",
+   "detail": "network_error",
    "letzterErfolg": null,
    "anzahl": 0
   },
