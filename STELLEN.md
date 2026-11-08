@@ -1,24 +1,24 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
+Stand: 2026-11-08T13:52:33+00:00 · 276 Stellen aus 31 von 60 Quellen
 
 ## Quellen
 
 | Quelle | Status | Stellen | Letzter Erfolg | Detail |
 | --- | --- | ---: | --- | --- |
 | Festo | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.festo.com/job/Esslingen-Praktikum-Infotronik-Ein-Praktikum%2C-zwei-Berufsfelder-73734/1014966601 |
-| Bosch | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang="en"><head><!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /> <![e» |
+| Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | Mercedes-Benz | unsupported | 0 | – |  |
 | STIHL | unsupported | 0 | – |  |
 | MAHLE / MAHLE Aftermarket | no_verified_jobs | 0 | – | verworfen, z. B. https://careers.mahle.com/job/Markgr%C3%B6ningen-Ausbildung-Industriemechaniker-%28mwd%29-2027-71706/1405005433 |
 | Diakonie Stetten | unsupported | 0 | – |  |
-| Robert Bosch Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang="en"><head><!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /> <![e» |
+| Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- |
 | Kärcher | no_verified_jobs | 0 | – | verworfen, z. B. https://careers.kaercher.com/job/Santa-Ana%2C-CA-Field-Service-Technician-%28Santa-Ana%2C-CA%29-CA-92604/1368056655 |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
 | Kreissparkasse Waiblingen | done | 3 | 2026-11-08 |  |
-| Stadt Waiblingen | robots_unavailable | 0 | – | Content-Encoding gzip |
+| Stadt Waiblingen | too_large | 0 | – |  |
 | TESAT-Spacecom | unsupported | 0 | – |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
 | Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
@@ -28,9 +28,9 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 | Peter Hahn | robots_unavailable | 0 | – | Content-Type text/txt;charset=utf-8 |
 | Syntegon | unsupported | 0 | – |  |
 | Catalent Schorndorf | unsupported | 0 | – |  |
-| Sana · Karl-Olga-Krankenhaus | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initia» |
+| Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – |  |
 | Emil Löffelhardt | unsupported | 0 | – |  |
-| REMS | no_verified_jobs | 0 | – | verworfen, z. B. https://recruitment.rems.de/ekrmt |
+| REMS | done | 7 | 2026-11-08 |  |
 | stoba Backnang | done | 5 | 2026-11-08 |  |
 | Deutsche Post / DHL | unsupported | 0 | – |  |
 | d&b audiotechnik | unsupported | 0 | – |  |
@@ -40,13 +40,13 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 | Klöpfer | done | 4 | 2026-11-08 |  |
 | JUDO Wasseraufbereitung | done | 8 | 2026-11-08 |  |
 | RIVA-Gruppe / Mpire | no_verified_jobs | 0 | – | verworfen, z. B. https://mpire.jobs.personio.de/job/2568858 |
-| WIRmachenDRUCK | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.wir-machen-druck.de/de/jobs/4/intro |
+| WIRmachenDRUCK | done | 14 | 2026-11-08 |  |
 | Eisenmann Services / Personal-Service | done | 3 | 2026-11-08 |  |
 | Bäckerei Maurer | done | 15 | 2026-11-08 |  |
 | Elanders Waiblingen | done | 10 | 2026-11-08 |  |
-| Scutum Sicherheit | unsafe_target | 0 | – |  |
-| Brunold Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «Sitemap: https://www.brunold.de/sitemap.xml» |
-| KÜBLER Workwear | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang="de" xmlns:ng="http://angularjs.org" data-beasties-container> <head> <meta charset="utf-8"> <» |
+| Scutum Sicherheit | unsafe_target | 0 | – | Host nicht freigegeben: www.scutum-group.com |
+| Brunold Automobile | done | 4 | 2026-11-08 |  |
+| KÜBLER Workwear | unsupported | 0 | – |  |
 | Swoboda | done | 16 | 2026-11-08 |  |
 | Autohaus Walter Mulfinger | done | 5 | 2026-11-08 |  |
 | Adolf Föhl | done | 7 | 2026-11-08 |  |
@@ -55,12 +55,12 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 | Soehnle Industrial Solutions | no_verified_jobs | 0 | – | verworfen, z. B. https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd |
 | Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |  |
 | RIANI | done | 6 | 2026-11-08 |  |
-| Dusyma | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initia» |
+| Dusyma | too_large | 0 | – |  |
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
 | Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
 | Murrelektronik | done | 9 | 2026-11-08 |  |
 | PFISTERER | timeout | 0 | – | verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html |
-| Hahn Automobile | robots_unavailable | 0 | – | robots.txt ohne User-agent-Zeile: «﻿User-agent: * Disallow:» |
+| Hahn Automobile | done | 8 | 2026-11-08 |  |
 | Klingele Paper & Packaging | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.klingele.com/job/Remshalden-Initiativbewerbung-Remshalden-%28mwd%29-73630/939250355 |
 | Harro Höfliger | done | 10 | 2026-11-08 |  |
 | SOCCO | done | 25 | 2026-11-08 |  |
@@ -90,6 +90,13 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 - [Karosseriebauer/ Kfz-Mechatroniker mit Karosseriekenntnissen (m/w/d)](https://join.com/companies/mulfinger/16902950-karosseriebauer-kfz-mechatroniker-mit-karosseriekenntnissen-m-w-d) · Crailsheim de · seit 2026-11-08
 - [Kfz-Mechatroniker*in (m/w/d)](https://join.com/companies/mulfinger/16916990-kfz-mechatroniker-in-m-w-d) · Schwäbisch Gmünd de · seit 2026-11-08
 - [Renault & Dacia Verkäufer Neuwagen (m/w/d)](https://join.com/companies/mulfinger/16904239-renault-und-dacia-verkaeufer-neuwagen-m-w-d) · Schwäbisch Gmünd de · seit 2026-11-08
+
+### Brunold Automobile GmbH
+
+- [Ausbildung KFZ-Mechatroniker/in (m/w/d)](https://www.brunold.de/job/ausbildung-kfz-mechatroniker-reutlingen) · seit 2026-11-08
+- [KFZ-Mechatroniker (m/w/d)](https://www.brunold.de/job/kfz-mechatroniker-reutlingen) · seit 2026-11-08
+- [KFZ-Meister (m/w/d)](https://www.brunold.de/job/kfz-meister-backnang) · seit 2026-11-08
+- [Serviceassistenz (m/w/d)](https://www.brunold.de/job/serviceassistenz-reutlingen) · seit 2026-11-08
 
 ### Burger Schloz Automobile GmbH & Co. KG
 
@@ -171,6 +178,17 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 - [Servicetechniker/in für Sportgeräte im Außendienst (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Servicetechniker%2Fin%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29) · Bundesweit · seit 2026-11-08
 - [Teamleiter / Abteilungsleiter Schlosserei (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Teamleiter%20%2F%20Abteilungsleiter%20Schlosserei%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08
 - [Teamleiter / Abteilungsleiter Schreinerei (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Teamleiter%20%2F%20Abteilungsleiter%20Schreinerei%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08
+
+### Hahn Automobile GmbH + Co. KG
+
+- [Fahrzeuglackierer (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=1068342795) · 75179 Pforzheim BW DE · seit 2026-11-08
+- [Gewährleistungssachbearbeiter (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=0384257169) · 70736 Fellbach BW DE · seit 2026-11-08
+- [Kfz-Mechatroniker (m/w/d) Audi](https://ats.sopea-hr.com/ats/JobAd?Job=2068314579) · 73730 Esslingen BW DE · seit 2026-11-08
+- [Serviceassistent VW (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=7429016358) · 70806 Kornwestheim BW DE · seit 2026-11-08
+- [Serviceberater VW (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=2386041975) · 73061 Ebersbach BW DE · seit 2026-11-08
+- [Servicetechniker Audi (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=2910354768) · 73730 Esslingen BW DE · seit 2026-11-08
+- [Teamleiter Betriebsbüro (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=8657230914) · 70806 Kornwestheim BW DE · seit 2026-11-08
+- [Verkaufsberater Neuwagen Geely (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=0914752386) · 71634 Ludwigsburg BW DE / 71636 Ludwigsburg BW DE / 71063 Sindelfingen BW DE / 73614 Schorndorf BW DE / 73037 Göppingen BW DE / 73240 Wendlingen BW DE / 73037 Göppingen BW DE / 73734 Esslingen BW DE / · seit 2026-11-08
 
 ### Harro Höfliger Verpackungsmaschinen GmbH
 
@@ -284,6 +302,16 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 ### Paulinenpflege Winnenden e.V.
 
 - [Ausbilder Hauswirtschaft (m/w/d) in Vollzeit I Berufsbildungswerk Winnenden](https://rems-murr-jobs.de/job/ausbilder-hauswirtschaft-mwd-vollzeit-i-berufsbildungswerk-winnenden-1810235) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-08
+
+### REMS
+
+- [Einkaufssachbearbeiter (m/w/d)](https://recruitment.rems.de/ekrmt) · Hagen · seit 2026-11-08
+- [Fachkraft für Arbeitssicherheit, Brand- und Umweltschutz (m/w/d)](https://recruitment.rems.de/fas) · Waiblingen · seit 2026-11-08
+- [Fertigungsplaner (m/w/d)](https://recruitment.rems.de/sbav) · Waiblingen · seit 2026-11-08
+- [Leitung Instandhaltung Gebäudetechnik und Haus & Hof (m/w/d)](https://recruitment.rems.de/prjg) · Waiblingen · seit 2026-11-08
+- [Maschinenbeschicker (m/w/d)](https://recruitment.rems.de/mbs2) · Waiblingen · seit 2026-11-08
+- [Mechatroniker Instandhaltung (m/w/d)](https://recruitment.rems.de/mi) · Waiblingen · seit 2026-11-08
+- [Minijobber Lager / Logistik (m/w/d)](https://recruitment.rems.de/minijobber-lager-logistik-m-w-d) · Waiblingen · seit 2026-11-08
 
 ### Rems-Murr-Kliniken gGmbH
 
@@ -434,3 +462,23 @@ Stand: 2026-11-08T13:16:29+00:00 · 243 Stellen aus 27 von 60 Quellen
 - [Duales Studium 01.09.2027 - Bachelor of Arts (B.A.) BWL-Finanzdienstleistungen](https://volksbank-stuttgart.helixjobs.com/_/jobad?prj=100073P436) · 70372 Stuttgart DE · seit 2026-11-08
 - [Pflichtpraktikant (m/w/d) im Bereich Compliance (3-6 Monate), Standort Stuttgart](https://volksbank-stuttgart.helixjobs.com/_/jobad?prj=100073P504) · 70372 Stuttgart DE · seit 2026-11-08
 - [Praktikum](https://volksbank-stuttgart.helixjobs.com/_/jobad?prj=100073P51) · 70372 Stuttgart DE · seit 2026-11-08
+
+### WIRmachenDRUCK AG
+
+- [Mitarbeiter Weiterverarbeitung Produktion Digitaldruck (m/w/d) 100% (Standort: Baar, Schweiz)](https://jobs.wir-machen-druck.de/de/jobs/30238/mitarbeiter-weiterverarbeitung-produktion-digitaldruck-mwd-100-standort-baar-schweiz) · Baar, Schweiz · seit 2026-11-08
+
+### WIRmachenDRUCK GmbH
+
+- [Business Controller (m/w/d) - remote deutschlandweit](https://jobs.wir-machen-druck.de/de/jobs/30213/business-controller-mwd-remote-deutschlandweit) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [CRM Manager (m/w/d) - HubSpot Workflow Experte](https://jobs.wir-machen-druck.de/de/jobs/30275/crm-manager-mwd-hubspot-workflow-experte) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Junior Projektmanager – Projektsteuerung & Koordination (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30306/junior-projektmanager-projektsteuerung-koordination-mwd) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Kaufmännischer Sachbearbeiter Reklamationsmanagement (m/w/d)– remote](https://jobs.wir-machen-druck.de/de/jobs/30211/kaufmannischer-sachbearbeiter-reklamationsmanagement-mwd-remote) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Mediengestalter Kundenbetreuung (m/w/d) - remote deutschlandweit](https://jobs.wir-machen-druck.de/de/jobs/30210/mediengestalter-kundenbetreuung-mwd-remote-deutschlandweit) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Mitarbeiter Kundenbetreuung (m/w/d) - remote deutschlandweit](https://jobs.wir-machen-druck.de/de/jobs/30212/mitarbeiter-kundenbetreuung-mwd-remote-deutschlandweit) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Mitarbeiter Kundenbetreuung (m/w/d) in Teilzeit (Mo - Fr von 11:00 Uhr bis 15:00 Uhr) - remote deutschlandweit](https://jobs.wir-machen-druck.de/de/jobs/30302/mitarbeiter-kundenbetreuung-mwd-in-teilzeit-mo-fr-von-1100-uhr-bis-1500-uhr-remote-deutschlandweit) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Sachbearbeiter Kreditorenbuchhaltung](https://jobs.wir-machen-druck.de/de/jobs/30304/sachbearbeiter-kreditorenbuchhaltung) · Backnang, Baden-Württemberg · seit 2026-11-08
+- [Sachbearbeiter Vertriebsinnendienst (m/w/d) - remote deutschlandweit](https://jobs.wir-machen-druck.de/de/jobs/27/sachbearbeiter-vertriebsinnendienst-mwd-remote-deutschlandweit) · deutschlandweit · seit 2026-11-08
+- [Sales Consultant – Large Format Printing (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30299/sales-consultant-large-format-printing-mwd) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Senior DevOps Engineer / Cloud Engineer (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30298/senior-devops-engineer-cloud-engineer-mwd) · Backnang, Baden-Württemberg, deutschlandweit · seit 2026-11-08
+- [Teamleiter Debitoren (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30293/teamleiter-debitoren-mwd) · Backnang, Baden-Württemberg · seit 2026-11-08
+- [Teamleitung Versand (m/w/d)](https://jobs.wir-machen-druck.de/de/jobs/30240/teamleitung-versand-mwd) · Backnang, Baden-Württemberg · seit 2026-11-08

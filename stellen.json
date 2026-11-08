@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T13:16:29+00:00",
+ "aktualisiert": "2026-11-08T13:52:33+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -13,8 +13,8 @@
   {
    "key": "bosch",
    "label": "Bosch",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang=\"en\"><head><!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\" /> <![e»",
+   "status": "unsafe_target",
+   "detail": "Host nicht freigegeben: jobs.bosch.com",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -50,8 +50,8 @@
   {
    "key": "robert_bosch_krankenhaus",
    "label": "Robert Bosch Krankenhaus",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «<!DOCTYPE html><html lang=\"en\"><head><!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\" /> <![e»",
+   "status": "no_verified_jobs",
+   "detail": "verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr-",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -94,8 +94,7 @@
   {
    "key": "stadt_waiblingen",
    "label": "Stadt Waiblingen",
-   "status": "robots_unavailable",
-   "detail": "Content-Encoding gzip",
+   "status": "too_large",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -166,8 +165,7 @@
   {
    "key": "sana_karl_olga",
    "label": "Sana · Karl-Olga-Krankenhaus",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initia»",
+   "status": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -181,10 +179,9 @@
   {
    "key": "rems",
    "label": "REMS",
-   "status": "no_verified_jobs",
-   "detail": "verworfen, z. B. https://recruitment.rems.de/ekrmt",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 7
   },
   {
    "key": "stoba",
@@ -253,10 +250,9 @@
   {
    "key": "wirmachendruck",
    "label": "WIRmachenDRUCK",
-   "status": "no_verified_jobs",
-   "detail": "verworfen, z. B. https://jobs.wir-machen-druck.de/de/jobs/4/intro",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 14
   },
   {
    "key": "eisenmann",
@@ -283,22 +279,21 @@
    "key": "scutum",
    "label": "Scutum Sicherheit",
    "status": "unsafe_target",
+   "detail": "Host nicht freigegeben: www.scutum-group.com",
    "letzterErfolg": null,
    "anzahl": 0
   },
   {
    "key": "brunold",
    "label": "Brunold Automobile",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «Sitemap: https://www.brunold.de/sitemap.xml»",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 4
   },
   {
    "key": "kuebler",
    "label": "KÜBLER Workwear",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «<!doctype html> <html lang=\"de\" xmlns:ng=\"http://angularjs.org\" data-beasties-container> <head> <meta charset=\"utf-8\"> <»",
+   "status": "unsupported",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -362,8 +357,7 @@
   {
    "key": "dusyma",
    "label": "Dusyma",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initia»",
+   "status": "too_large",
    "letzterErfolg": null,
    "anzahl": 0
   },
@@ -399,10 +393,9 @@
   {
    "key": "hahn_automobile",
    "label": "Hahn Automobile",
-   "status": "robots_unavailable",
-   "detail": "robots.txt ohne User-agent-Zeile: «﻿User-agent: * Disallow:»",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 8
   },
   {
    "key": "klingele",
@@ -596,6 +589,54 @@
    "posted": "2026-10-19",
    "source": "mulfinger",
    "sourceLabel": "Autohaus Walter Mulfinger",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-f4ab02152efdaa3f31359a5a",
+   "title": "Ausbildung KFZ-Mechatroniker/in (m/w/d)",
+   "company": "Brunold Automobile GmbH",
+   "location": "",
+   "url": "https://www.brunold.de/job/ausbildung-kfz-mechatroniker-reutlingen",
+   "posted": "",
+   "source": "brunold",
+   "sourceLabel": "Brunold Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-7e2a9484ae4d3f09729072f1",
+   "title": "KFZ-Mechatroniker (m/w/d)",
+   "company": "Brunold Automobile GmbH",
+   "location": "",
+   "url": "https://www.brunold.de/job/kfz-mechatroniker-reutlingen",
+   "posted": "",
+   "source": "brunold",
+   "sourceLabel": "Brunold Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-61b5220c9cd5800495645c8f",
+   "title": "KFZ-Meister (m/w/d)",
+   "company": "Brunold Automobile GmbH",
+   "location": "",
+   "url": "https://www.brunold.de/job/kfz-meister-backnang",
+   "posted": "",
+   "source": "brunold",
+   "sourceLabel": "Brunold Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-166157b925dc3f1a5c1a2e37",
+   "title": "Serviceassistenz (m/w/d)",
+   "company": "Brunold Automobile GmbH",
+   "location": "",
+   "url": "https://www.brunold.de/job/serviceassistenz-reutlingen",
+   "posted": "",
+   "source": "brunold",
+   "sourceLabel": "Brunold Automobile",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },
@@ -1208,6 +1249,102 @@
    "posted": "",
    "source": "benz_sport",
    "sourceLabel": "Gotthilf Benz Turngeräte",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-73d1701a27860ba9eb46c684",
+   "title": "Fahrzeuglackierer (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "75179 Pforzheim BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=1068342795",
+   "posted": "2026-10-04",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-6060f26aab1e647d9b685fac",
+   "title": "Gewährleistungssachbearbeiter (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "70736 Fellbach BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=0384257169",
+   "posted": "2026-10-04",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9eb9cdd8478d186a41cde981",
+   "title": "Kfz-Mechatroniker (m/w/d) Audi",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "73730 Esslingen BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=2068314579",
+   "posted": "2026-11-02",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9cfccad7a9aa8f99fb20a275",
+   "title": "Serviceassistent VW (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "70806 Kornwestheim BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=7429016358",
+   "posted": "2026-11-03",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-d84e68f4d0d57635f52abe4b",
+   "title": "Serviceberater VW (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "73061 Ebersbach BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=2386041975",
+   "posted": "2026-07-24",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-bc5dab49077da794a1279d44",
+   "title": "Servicetechniker Audi (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "73730 Esslingen BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=2910354768",
+   "posted": "2026-11-02",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c0c8fe4c965651c6af484d8d",
+   "title": "Teamleiter Betriebsbüro (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "70806 Kornwestheim BW DE",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=8657230914",
+   "posted": "2026-11-03",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-cb90dcef995dc1a965c852d0",
+   "title": "Verkaufsberater Neuwagen Geely (m/w/d)",
+   "company": "Hahn Automobile GmbH + Co. KG",
+   "location": "71634 Ludwigsburg BW DE / 71636 Ludwigsburg BW DE / 71063 Sindelfingen BW DE / 73614 Schorndorf BW DE / 73037 Göppingen BW DE / 73240 Wendlingen BW DE / 73037 Göppingen BW DE / 73734 Esslingen BW DE /",
+   "url": "https://ats.sopea-hr.com/ats/JobAd?Job=0914752386",
+   "posted": "2026-11-03",
+   "source": "hahn_automobile",
+   "sourceLabel": "Hahn Automobile",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },
@@ -2204,6 +2341,90 @@
    "posted": "2026-10-21",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c772d4176ce9ee3b9c697d78",
+   "title": "Einkaufssachbearbeiter (m/w/d)",
+   "company": "REMS",
+   "location": "Hagen",
+   "url": "https://recruitment.rems.de/ekrmt",
+   "posted": "2026-10-29",
+   "source": "rems",
+   "sourceLabel": "REMS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-54d1cad58871f1a91cfff0d4",
+   "title": "Fachkraft für Arbeitssicherheit, Brand- und Umweltschutz (m/w/d)",
+   "company": "REMS",
+   "location": "Waiblingen",
+   "url": "https://recruitment.rems.de/fas",
+   "posted": "2026-09-28",
+   "source": "rems",
+   "sourceLabel": "REMS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ce6819f5f083665e788f6dbf",
+   "title": "Fertigungsplaner (m/w/d)",
+   "company": "REMS",
+   "location": "Waiblingen",
+   "url": "https://recruitment.rems.de/sbav",
+   "posted": "2026-08-13",
+   "source": "rems",
+   "sourceLabel": "REMS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-eaf27dce761d318b1e7eb1c8",
+   "title": "Leitung Instandhaltung Gebäudetechnik und Haus & Hof (m/w/d)",
+   "company": "REMS",
+   "location": "Waiblingen",
+   "url": "https://recruitment.rems.de/prjg",
+   "posted": "2026-08-31",
+   "source": "rems",
+   "sourceLabel": "REMS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9e6ab3985b499c90af41112c",
+   "title": "Maschinenbeschicker (m/w/d)",
+   "company": "REMS",
+   "location": "Waiblingen",
+   "url": "https://recruitment.rems.de/mbs2",
+   "posted": "2026-10-21",
+   "source": "rems",
+   "sourceLabel": "REMS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-60673b86a614617d6f7771ae",
+   "title": "Mechatroniker Instandhaltung (m/w/d)",
+   "company": "REMS",
+   "location": "Waiblingen",
+   "url": "https://recruitment.rems.de/mi",
+   "posted": "2026-02-10",
+   "source": "rems",
+   "sourceLabel": "REMS",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-12dce4dadc6d778a8f7d83de",
+   "title": "Minijobber Lager / Logistik (m/w/d)",
+   "company": "REMS",
+   "location": "Waiblingen",
+   "url": "https://recruitment.rems.de/minijobber-lager-logistik-m-w-d",
+   "posted": "2026-10-19",
+   "source": "rems",
+   "sourceLabel": "REMS",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },
@@ -3356,6 +3577,174 @@
    "posted": "2024-09-19",
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9aadaceb72623a3f65d8296e",
+   "title": "Mitarbeiter Weiterverarbeitung Produktion Digitaldruck (m/w/d) 100% (Standort: Baar, Schweiz)",
+   "company": "WIRmachenDRUCK AG",
+   "location": "Baar, Schweiz",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30238/mitarbeiter-weiterverarbeitung-produktion-digitaldruck-mwd-100-standort-baar-schweiz",
+   "posted": "2025-06-25",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9aa6370a7b1e7e32eacce4d0",
+   "title": "Business Controller (m/w/d) - remote deutschlandweit",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30213/business-controller-mwd-remote-deutschlandweit",
+   "posted": "2025-01-09",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-04592ede3039ca54b2c5f3f2",
+   "title": "CRM Manager (m/w/d) - HubSpot Workflow Experte",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30275/crm-manager-mwd-hubspot-workflow-experte",
+   "posted": "2026-02-12",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-70735de0ec25582d6a7407bc",
+   "title": "Junior Projektmanager – Projektsteuerung & Koordination (m/w/d)",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30306/junior-projektmanager-projektsteuerung-koordination-mwd",
+   "posted": "2026-11-06",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-e81c964ae1f62c2f4c6a45cf",
+   "title": "Kaufmännischer Sachbearbeiter Reklamationsmanagement (m/w/d)– remote",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30211/kaufmannischer-sachbearbeiter-reklamationsmanagement-mwd-remote",
+   "posted": "2025-01-08",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-31eff6ce30af3da7884f1bb8",
+   "title": "Mediengestalter Kundenbetreuung (m/w/d) - remote deutschlandweit",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30210/mediengestalter-kundenbetreuung-mwd-remote-deutschlandweit",
+   "posted": "2025-01-08",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a6179f469b2bf3fb31d7a703",
+   "title": "Mitarbeiter Kundenbetreuung (m/w/d) - remote deutschlandweit",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30212/mitarbeiter-kundenbetreuung-mwd-remote-deutschlandweit",
+   "posted": "2025-01-08",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c2470aecd8f5c73283ef7f23",
+   "title": "Mitarbeiter Kundenbetreuung (m/w/d) in Teilzeit (Mo - Fr von 11:00 Uhr bis 15:00 Uhr) - remote deutschlandweit",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30302/mitarbeiter-kundenbetreuung-mwd-in-teilzeit-mo-fr-von-1100-uhr-bis-1500-uhr-remote-deutschlandweit",
+   "posted": "2026-09-11",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-fcf16e18c7006034e9cab019",
+   "title": "Sachbearbeiter Kreditorenbuchhaltung",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30304/sachbearbeiter-kreditorenbuchhaltung",
+   "posted": "2026-10-19",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-1670363a127fb9bd72890ec3",
+   "title": "Sachbearbeiter Vertriebsinnendienst (m/w/d) - remote deutschlandweit",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/27/sachbearbeiter-vertriebsinnendienst-mwd-remote-deutschlandweit",
+   "posted": "2021-03-05",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-9d15257507c40f0cd1e6c88d",
+   "title": "Sales Consultant – Large Format Printing (m/w/d)",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30299/sales-consultant-large-format-printing-mwd",
+   "posted": "2026-07-02",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ba838365ce9c1abb216f588d",
+   "title": "Senior DevOps Engineer / Cloud Engineer (m/w/d)",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg, deutschlandweit",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30298/senior-devops-engineer-cloud-engineer-mwd",
+   "posted": "2026-06-30",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-351f15ece1c2a313f77a7897",
+   "title": "Teamleiter Debitoren (m/w/d)",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30293/teamleiter-debitoren-mwd",
+   "posted": "2026-05-04",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-919c0c6c93d7d126bf6b61e5",
+   "title": "Teamleitung Versand (m/w/d)",
+   "company": "WIRmachenDRUCK GmbH",
+   "location": "Backnang, Baden-Württemberg",
+   "url": "https://jobs.wir-machen-druck.de/de/jobs/30240/teamleitung-versand-mwd",
+   "posted": "2025-07-08",
+   "source": "wirmachendruck",
+   "sourceLabel": "WIRmachenDRUCK",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   }
