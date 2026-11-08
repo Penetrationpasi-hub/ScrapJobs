@@ -88,9 +88,9 @@ def merge(previous, results, today, now, grace_days=3, known=None):
             info["letzterErfolg"] = today
         else:
             jobs.update(old_here)
-            if result.get("detail"):
-                info["detail"] = result["detail"]
             info["letzterErfolg"] = old_sources.get(key, {}).get("letzterErfolg")
+        if result.get("detail"):
+            info["detail"] = result["detail"]
         info["anzahl"] = sum(1 for row in jobs.values() if row["source"] == key)
         sources.append(info)
     # Teillauf: Quellen, die in diesem Lauf nicht abgefragt wurden, behalten Stand und Status unverändert.
@@ -134,22 +134,45 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
     factory = factory or make_transport_factory()
     results = {}
     for index, key in enumerate(keys):
-        label = configured[key].label
-        req = SimpleNamespace(q="", location="", radius_km=25, sources=[key],
-                              max_jobs=options.max_jobs, max_details=options.max_details,
-                              documents=options.documents,
-                              robots_missing_ok=not options.strict_robots,
-                              seconds=options.seconds * (2 if key in ISOLATED_SOURCES else 1))
+        source = configured[key]
+        # Globale Konzernportale werden je Ort einzeln abgefragt (catalog_locations), alle anderen einmal ohne Ort.
+        places = tuple(getattr(source, "catalog_locations", ())) or ("",)
+        jobs, seen, failures, done, detail = [], set(), [], 0, None
         started = time.monotonic()
-        try:
-            outcome = crawl(req, factory)
-            report = outcome["sources"][0]
-            results[key] = {"label": label, "status": report["status"], "jobs": outcome["jobs"],
-                            "detail": report.get("detail") or (f"verworfen, z. B. {report['sample']}" if report.get("sample") else None)}
-        except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
-            results[key] = {"label": label, "status": "worker_error", "jobs": []}
-            log(f"  ! {key}: {type(error).__name__}")
-        log(f"{key}: {results[key]['status']}, {len(results[key]['jobs'])} Stellen, {time.monotonic() - started:.0f}s")
+        for place in places:
+            req = SimpleNamespace(q="", location=place, radius_km=25, sources=[key],
+                                  max_jobs=options.max_jobs, max_details=options.max_details,
+                                  documents=options.documents,
+                                  robots_missing_ok=not options.strict_robots,
+                                  seconds=options.seconds * (2 if key in ISOLATED_SOURCES else 1))
+            try:
+                outcome = crawl(req, factory)
+                report = outcome["sources"][0]
+            except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
+                report, outcome = {"status": "worker_error"}, {"jobs": []}
+                log(f"  ! {key} {place}: {type(error).__name__}")
+            if report["status"] == "done":
+                done += 1
+                for job in outcome["jobs"]:
+                    if job["url"] not in seen:
+                        seen.add(job["url"])
+                        jobs.append(job)
+            else:
+                failures.append((place, report["status"]))
+                detail = detail or report.get("detail") or (
+                    f"verworfen, z. B. {report['sample']}" if report.get("sample") else None)
+            if place:
+                log(f"  {key} [{place}]: {report['status']}, {len(outcome['jobs'])} Stellen")
+        if done:
+            status = "done"
+            if failures:  # Teilergebnis: gelesene Orte zählen, die übrigen stehen im Detail
+                detail = "teilweise: " + ", ".join(f"{place or key} {state}" for place, state in failures)
+            else:
+                detail = None
+        else:
+            status = failures[0][1]
+        results[key] = {"label": source.label, "status": status, "jobs": jobs, "detail": detail}
+        log(f"{key}: {status}, {len(jobs)} Stellen, {time.monotonic() - started:.0f}s")
         if index + 1 < len(keys):
             sleep(options.pause)
     return results

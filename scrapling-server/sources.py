@@ -31,6 +31,8 @@ class Source:
     # Result lists with a place per teaser: skip listed ads that are clearly outside the search radius.
     teaser: str = ""
     teaser_location: str = ""
+    # Nur Katalog-Lauf: Orte, für die die Suche je einmal mit {location} abgefragt wird (globale Konzernportale).
+    catalog_locations: tuple[str, ...] = ()
 
     def start(self, q: str, location: str) -> str:
         return self.search.replace("{q}", quote(q, safe="")).replace("{location}", quote(location, safe=""))
@@ -52,7 +54,8 @@ BOARDS = (
 EMPLOYERS = (
     Source("festo", "Festo", ("jobs.festo.com",),
            "https://jobs.festo.com/search/?q={q}&locationsearch={location}", r"/job/[^?#]+",
-           note="Bei bestätigten Nulltreffern werden die allgemeinen Empfehlungen nicht als Suchtreffer geprüft."),
+           note="Bei bestätigten Nulltreffern werden die allgemeinen Empfehlungen nicht als Suchtreffer geprüft.",
+           catalog_locations=("Esslingen", "Ostfildern")),
     Source("bosch", "Bosch", ("careers.smartrecruiters.com", "jobs.smartrecruiters.com"),
            "https://careers.smartrecruiters.com/BoschGroup/?search={q}", r"/BoschGroup/\d+[^?#]*",
            note="HTML-Abruf derzeit nicht bestätigt. Die öffentliche SmartRecruiters-API untersagt allgemeines Crawling; kein automatischer API-Ersatz und keine Umgehung."),
@@ -73,7 +76,8 @@ def registry() -> dict[str, Source]:
             raise ValueError("One to thirty employer configurations required")
         employers = tuple(Source(**{**row, "hosts": tuple(row["hosts"])}) for row in rows)
     catalog = json.loads(Path(__file__).with_name("employers.json").read_text(encoding="utf-8"))
-    additions = tuple(Source(**{**{k: v for k, v in row.items() if k != "entries"}, "hosts": tuple(row["hosts"])}) for row in catalog)
+    additions = tuple(Source(**{**{k: v for k, v in row.items() if k != "entries"}, "hosts": tuple(row["hosts"]),
+                         "catalog_locations": tuple(row.get("catalog_locations", ()))}) for row in catalog)
     all_sources = (*BOARDS, *employers, *additions)
     result = {source.key: source for source in all_sources}
     if len(result) != len(all_sources) or len(result) > 100 or not {"indeed", "stepstone"}.issubset(result):
@@ -93,6 +97,11 @@ def registry() -> dict[str, Source]:
         re.compile(source.detail)
         if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= 10):
             raise ValueError("Page and detail limits must stay within the global caps")
+        if source.catalog_locations and (
+                "{location}" not in source.search or len(source.catalog_locations) > 8
+                or not all(isinstance(place, str) and re.fullmatch(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .-]{1,39}", place)
+                           for place in source.catalog_locations)):
+            raise ValueError("Catalog locations need a {location} template and plain place names")
         if bool(source.teaser) != bool(source.teaser_location):
             raise ValueError("Teaser and teaser location selectors belong together")
         if source.company_pattern:

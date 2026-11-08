@@ -337,3 +337,86 @@ class BodyLimitTest(unittest.TestCase):
         self.assertEqual(caught.exception.code, "too_large")
         with mock.patch.object(safe_http, "MAX_BODY", 8 * 1024 * 1024):
             self.assertGreater(len(helper.fetch(big, {"Content-Type": "text/html"})), 3 * 1024 * 1024)
+
+
+class CatalogLocationsTest(unittest.TestCase):
+    options = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
+
+    def collect(self, outcomes, places=("Esslingen", "Ostfildern")):
+        calls = []
+
+        def fake(req, factory):
+            calls.append(req.location)
+            outcome = outcomes[req.location]
+            if isinstance(outcome, Exception):
+                raise outcome
+            status, jobs = outcome
+            return {"jobs": jobs, "sources": [{"status": status}]}
+
+        configured = {"festo": SimpleNamespace(label="Festo", catalog_locations=places)}
+        with mock.patch.object(batch, "crawl", fake):
+            result = batch.collect(["festo"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
+        return result["festo"], calls
+
+    def test_one_crawl_per_place_and_jobs_are_deduplicated(self):
+        result, calls = self.collect({"Esslingen": ("done", [job(1), job(2)]), "Ostfildern": ("done", [job(2), job(3)])})
+        self.assertEqual(calls, ["Esslingen", "Ostfildern"])
+        self.assertEqual(result["status"], "done")
+        self.assertEqual(sorted(j["id"] for j in result["jobs"]), ["scrapling-1", "scrapling-2", "scrapling-3"])
+        self.assertIsNone(result["detail"])
+
+    def test_one_failing_place_gives_a_partial_result_not_a_failure(self):
+        result, _ = self.collect({"Esslingen": ("done", [job(1)]), "Ostfildern": ("timeout", [])})
+        self.assertEqual(result["status"], "done")
+        self.assertEqual(len(result["jobs"]), 1)
+        self.assertIn("teilweise", result["detail"])
+        self.assertIn("Ostfildern timeout", result["detail"])
+
+    def test_all_places_failing_keeps_the_failure_status(self):
+        result, _ = self.collect({"Esslingen": ("robots_denied", []), "Ostfildern": ("timeout", [])})
+        self.assertEqual(result["status"], "robots_denied")
+        self.assertEqual(result["jobs"], [])
+
+    def test_a_crashing_place_does_not_stop_the_other(self):
+        result, _ = self.collect({"Esslingen": RuntimeError("x"), "Ostfildern": ("done", [job(5)])})
+        self.assertEqual(result["status"], "done")
+        self.assertEqual(len(result["jobs"]), 1)
+
+    def test_sources_without_places_run_once_with_empty_location(self):
+        result, calls = self.collect({"": ("done", [job(1)])}, places=())
+        self.assertEqual(calls, [""])
+
+    def test_partial_detail_is_published_for_a_done_source(self):
+        failed_part = {"label": "X", "status": "done", "jobs": [job(1)], "detail": "teilweise: Ostfildern timeout"}
+        catalog = batch.merge(None, {"x": failed_part}, "2026-11-09", NOW)
+        self.assertEqual(catalog["quellen"][0]["detail"], "teilweise: Ostfildern timeout")
+
+
+class CatalogConfigTest(unittest.TestCase):
+    def test_global_portals_are_restricted_to_regional_places(self):
+        configured = registry()
+        for key in ("festo", "mahle", "kaercher"):
+            source = configured[key]
+            self.assertTrue(source.catalog_locations, key)
+            self.assertIn("{location}", source.search, key)
+        self.assertIn("Esslingen", configured["festo"].catalog_locations)
+        self.assertIn("Winnenden", configured["kaercher"].catalog_locations)
+        self.assertIn("Stuttgart", configured["mahle"].catalog_locations)
+        self.assertEqual(configured["stihl"].catalog_locations, ())
+
+    def test_location_is_substituted_into_the_search_url(self):
+        source = registry()["kaercher"]
+        self.assertIn("locationsearch=Winnenden", source.start("", "Winnenden"))
+        self.assertIn("locationsearch=Markgr%C3%B6ningen", registry()["mahle"].start("", "Markgröningen"))
+
+    def test_invalid_place_lists_are_rejected(self):
+        import sources
+        bad = [{"key": "x1", "label": "X", "search": "https://x.example/s?l={location}", "hosts": ["x.example"],
+                "detail": "/job/.+", "catalog_locations": ["a&b=c"]}]
+        with mock.patch.object(sources.Path, "read_text", return_value=json.dumps(bad)):
+            with self.assertRaises(ValueError):
+                registry()
+        nolocation = [{**bad[0], "search": "https://x.example/s", "catalog_locations": ["Esslingen"]}]
+        with mock.patch.object(sources.Path, "read_text", return_value=json.dumps(nolocation)):
+            with self.assertRaises(ValueError):
+                registry()
