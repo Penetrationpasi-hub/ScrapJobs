@@ -20,7 +20,7 @@ class SitemapTest(unittest.TestCase):
         with self.assertRaises(Exception):
             locations('<!DOCTYPE x [<!ENTITY a "b">]><urlset><url><loc>' + AD + '</loc></url></urlset>')
         with self.assertRaises(Exception):
-            locations('<sitemapindex><sitemap><loc>https://x/sitemap2</loc></sitemap></sitemapindex>')
+            locations('<sitemapindex><sitemap><loc>https://x/sitemap2</loc></sitemap></sitemapindex>')  # nur parse() liest Indizes
 
     def test_only_matching_pages_are_fetched_and_verified(self):
         source = registry()["peter_hahn"]
@@ -36,6 +36,25 @@ class SitemapTest(unittest.TestCase):
         self.assertEqual([c for c, _ in calls], ["https://jobs.peterhahn.com/sitemap", AD])
 
 
+    def test_index_is_followed_one_level_on_same_host_only(self):
+        source = registry()["peter_hahn"]
+        index = ('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 '<sitemap><loc>https://jobs.peterhahn.com/sitemap?part=1</loc></sitemap>'
+                 '<sitemap><loc>https://fremd.example/sitemap</loc></sitemap></sitemapindex>')
+        calls = []
+
+        def get(raw, src, **options):
+            calls.append(raw)
+            if raw == source.api:
+                return raw, index
+            return (raw, MAP) if options.get("accept_xml") else (raw, AD_HTML)
+
+        report = {"filtered": 0, "kept": 0}
+        jobs = list(adapter_jobs(source, SimpleNamespace(q="", location="", max_details=10), get, report))
+        self.assertEqual(len(jobs), 1)
+        self.assertEqual(calls, [source.api, "https://jobs.peterhahn.com/sitemap?part=1", AD])
+
+
 class SitemapSourcesTest(unittest.TestCase):
     def test_configured_sitemap_sources_match_their_ad_addresses(self):
         from extraction import is_detail
@@ -43,6 +62,8 @@ class SitemapSourcesTest(unittest.TestCase):
             "diakonie_stetten": ("https://deinjob.diakonie-stetten.de/jobs/23893460/Mitarbeiter-m-w-d-in-der-Reinigung/", "https://deinjob.diakonie-stetten.de/"),
             "syntegon": ("https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e", "https://jobs.syntegon.com/search"),
         }
+        cases["stihl"] = ("https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktfunktionen-in-der-vorentwicklung-sf38922", "https://corporate.stihl.de/de/karriere/stellenangebote")
+        cases["db_audiotechnik"] = ("https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/it-security-specialist-wmd-req-2026-00000180/", "https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/")
         for key, (ad, listing) in cases.items():
             with self.subTest(key=key):
                 source = registry()[key]

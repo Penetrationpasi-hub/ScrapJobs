@@ -34,8 +34,8 @@ SLOW_SOURCES = {"pfisterer": 4}
 # Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
 MIN_DELAY = {}
 # Sitemap-Quellen lesen jede Anzeige einzeln: mehr Einzelseiten und mehr Zeit als der Standard.
-SITEMAP_DETAILS = 100
-SITEMAP_DOCUMENTS = 130
+SITEMAP_DETAILS = 160
+SITEMAP_DOCUMENTS = 200
 FIELDS = ("id", "title", "company", "location", "url", "posted")
 
 
