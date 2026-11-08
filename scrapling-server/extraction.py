@@ -85,6 +85,10 @@ def microdata(page, now=None):
         return plain(nodes[0].get()) if len(nodes) == 1 else ""
 
     title = text("title") or meta("title")
+    if not title:
+        # Manche Portale (z. B. Klingele) setzen kein itemprop="title"; der og:title der Seite ist dann der Stellentitel.
+        shared = [v for v in page.css('meta[property="og:title"]::attr(content)').getall() if v.strip()]
+        title = plain(shared[0]) if len(shared) == 1 else ""
     company = meta("hiringOrganization")
     if not company:
         nodes = root.css('[itemprop="hiringOrganization"] [itemprop="name"]')

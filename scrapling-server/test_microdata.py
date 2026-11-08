@@ -75,3 +75,43 @@ class MicrodataTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+KLINGELE_URL = "https://jobs.klingele.com/job/Grunbach-Ausbildung-zum-Maschinen-&-Anlagenf%C3%BChrer-%28wwd%29-73630/1368141855"
+
+
+def klingele(og=True, extra=""):
+    meta = '<meta property="og:title" content="Ausbildung zum Maschinen- &amp; Anlagenführer (w/w/d)" />' if og else ""
+    return f'''<html><head><title>Ausbildung zum Maschinen- &amp; Anlagenführer (w/w/d) Stellendetails | Klingele</title>{meta}</head><body>
+<div class="jobDisplayShell" itemscope="itemscope" itemtype="http://schema.org/JobPosting"><span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><meta itemprop="streetAddress" content="Grunbach, DE, 73630"></span></span><meta itemprop="datePosted" content="Tue Oct 13 02:00:00 UTC 2026"><meta itemprop="hiringOrganization" content="Klingele">
+<div class="job"><span itemprop="description" data-careersite-propertyid="description"><span class="jobdescription"><div class="content jobdescription"><h1>Ausbildung zum Maschinen- &amp; Anlagenführer (w/w/d)</h1><p>Wir, die Klingele Gruppe …</p></div></span></span></div></div>{extra}</body></html>'''
+
+
+class KlingeleTest(unittest.TestCase):
+    source = registry()["klingele"]
+
+    def test_title_comes_from_og_title_when_itemprop_is_missing(self):
+        job = extract(klingele(), KLINGELE_URL, self.source, "", now=NOW)
+        self.assertEqual(job["title"], "Ausbildung zum Maschinen- & Anlagenführer (w/w/d)")
+        self.assertEqual(job["company"], "Klingele")
+        self.assertEqual(job["location"], "Grunbach, DE, 73630")
+        self.assertEqual(job["posted"], "2026-10-13")
+
+    def test_no_expiry_date_is_fine(self):
+        self.assertIsNotNone(extract(klingele(), KLINGELE_URL, self.source, "", now=NOW))
+
+    def test_without_any_title_the_posting_is_dropped(self):
+        self.assertIsNone(extract(klingele(og=False), KLINGELE_URL, self.source, "", now=NOW))
+
+    def test_ambiguous_og_title_is_not_used(self):
+        twice = '<meta property="og:title" content="Andere Seite" />'
+        page = klingele().replace("</head>", twice + "</head>")
+        self.assertIsNone(extract(page, KLINGELE_URL, self.source, "", now=NOW))
+
+    def test_company_pattern_still_applies(self):
+        other = klingele().replace('content="Klingele"', 'content="Fremdfirma GmbH"')
+        self.assertIsNone(extract(other, KLINGELE_URL, self.source, "", now=NOW))
+
+    def test_unsolicited_application_is_still_dropped(self):
+        page = klingele().replace("Ausbildung zum Maschinen- &amp; Anlagenführer (w/w/d)", "Initiativbewerbung Remshalden (m/w/d)")
+        self.assertIsNone(extract(page, KLINGELE_URL, self.source, "", now=NOW))
