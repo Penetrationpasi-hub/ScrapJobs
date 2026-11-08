@@ -16,6 +16,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
+import safe_http
 from crawler import crawl
 from safe_http import Transport
 from sources import AGGREGATOR_SOURCES, ISOLATED_SOURCES, registry
@@ -156,12 +157,21 @@ def main(argv=None):
     parser.add_argument("--max-jobs", type=int, default=60, help="Stellen je Quelle")
     parser.add_argument("--documents", type=int, default=90, help="Abrufe je Quelle")
     parser.add_argument("--seconds", type=int, default=300, help="Zeitbudget je Quelle (Börsen mit 10 s Crawl-Delay doppelt)")
+    parser.add_argument("--max-body-mb", type=int, default=8, help="Größte erlaubte Antwort (Live-Dienst: 2 MB)")
     parser.add_argument("--pause", type=float, default=2.0, help="Sekunden Pause zwischen Quellen")
     parser.add_argument("--strict-robots", action="store_true",
                         help="Auch bei fehlender robots.txt (404) abbrechen; Standard: ohne Datei gelten keine Regeln")
     parser.add_argument("--grace-days", type=int, default=3)
     options = parser.parse_args(argv)
 
+    previous_limit, safe_http.MAX_BODY = safe_http.MAX_BODY, options.max_body_mb * 1024 * 1024
+    try:
+        return run(options)
+    finally:
+        safe_http.MAX_BODY = previous_limit
+
+
+def run(options):
     configured = registry()
     only = [part.strip() for part in options.sources.split(",") if part.strip()]
     exclude = None if options.exclude is None else [part.strip() for part in options.exclude.split(",") if part.strip()]

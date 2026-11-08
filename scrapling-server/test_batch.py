@@ -249,7 +249,7 @@ class RobotsVariantsTest(CrawlerDetailTest):
 
 
 class TransportEncodingTest(unittest.TestCase):
-    def fetch(self, body, headers, robots=False):
+    def fetch(self, body, headers, robots=False, flag=True):
         import gzip as gz
         from safe_http import Budget, Transport
 
@@ -273,7 +273,8 @@ class TransportEncodingTest(unittest.TestCase):
             def close(self): pass
 
         transport = Transport(Budget(), resolve=lambda *a, **k: [(0, 0, 0, "", ("93.184.216.34", 443))], connection=Connection)
-        return transport.get("https://a.example/robots.txt" if robots else "https://a.example/", ("a.example",), robots_request=robots)[1]
+        return transport.get("https://a.example/robots.txt" if robots else "https://a.example/", ("a.example",),
+                             robots_request=robots and flag)[1]
 
     def test_gzip_is_decoded_even_though_identity_was_requested(self):
         import gzip as gz
@@ -296,5 +297,18 @@ class TransportEncodingTest(unittest.TestCase):
     def test_text_txt_is_accepted_for_robots_only(self):
         from safe_http import FetchError
         self.assertIn("Disallow", self.fetch(b"User-agent: *\nDisallow: /x", {"Content-Type": "text/txt;charset=utf-8"}, robots=True))
+        self.assertIn("Disallow", self.fetch(b"User-agent: *\nDisallow: /x", {"Content-Type": "text/txt"}, robots=True, flag=False))
         with self.assertRaises(FetchError):
             self.fetch(b"hallo", {"Content-Type": "text/txt"})
+
+
+class BodyLimitTest(unittest.TestCase):
+    def test_batch_can_raise_the_body_limit(self):
+        import safe_http
+        big = b"<html>" + b"a" * (3 * 1024 * 1024) + b"</html>"
+        helper = TransportEncodingTest()
+        with self.assertRaises(safe_http.FetchError) as caught:
+            helper.fetch(big, {"Content-Type": "text/html"})
+        self.assertEqual(caught.exception.code, "too_large")
+        with mock.patch.object(safe_http, "MAX_BODY", 8 * 1024 * 1024):
+            self.assertGreater(len(helper.fetch(big, {"Content-Type": "text/html"})), 3 * 1024 * 1024)

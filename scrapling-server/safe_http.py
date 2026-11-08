@@ -149,7 +149,7 @@ class Transport:
                 kinds = (("application/vnd.api+json", "application/json") if json_api else
                          ("application/javascript", "text/javascript") if accept_javascript else
                          ("application/json",) if accept_json else
-                         ("text/html", "application/xhtml+xml", "text/plain") + (("text/txt",) if robots_request else ()))
+                         ("text/html", "application/xhtml+xml", "text/plain") + (("text/txt",) if url.path == "/robots.txt" else ()))
                 if not any(t in kind for t in kinds):
                     raise FetchError("unsupported", detail=f"Content-Type {kind[:60] or 'leer'}")
                 chunks, size = [], 0
