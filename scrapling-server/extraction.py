@@ -64,6 +64,11 @@ def has_microdata(page):
 def stamp(value):
     """schema.org-Datum als ISO ("2026-11-08T02:00:00+00:00") oder Java-Stil ("Sun Nov 08 02:00:00 UTC 2026")."""
     value = " ".join(str(value or "").split())
+    try:  # ISO 8601 inkl. Millisekunden und "Z" (SmartRecruiters: 2026-11-06T08:53:04.308Z)
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+    except ValueError:
+        pass
     for pattern in ("%a %b %d %H:%M:%S %Z %Y", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d"):
         try:
             parsed = datetime.strptime(value, pattern)
@@ -96,7 +101,11 @@ def microdata(page, now=None):
     company = meta("hiringOrganization")
     if not company:
         nodes = root.css('[itemprop="hiringOrganization"] [itemprop="name"]')
-        company = plain(nodes[0].get()) if len(nodes) == 1 else ""
+        if len(nodes) == 1:
+            # SmartRecruiters setzt den Namen als <meta itemprop="name" content="…">, andere als Text.
+            company = plain(nodes[0].attrib.get("content", "")) or plain(nodes[0].get())
+        else:
+            company = ""
     for name in ("validThrough",):
         raw = meta(name)
         if raw:
