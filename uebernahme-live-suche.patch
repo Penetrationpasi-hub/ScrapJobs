@@ -1,0 +1,653 @@
+diff --git a/scrapling-server/crawler.py b/scrapling-server/crawler.py
+index 687dbc7..6d6fe9e 100644
+--- a/scrapling-server/crawler.py
++++ b/scrapling-server/crawler.py
+@@ -16,6 +16,9 @@ from search_outcomes import festo_no_matches
+ def crawl(req, transport_factory=Transport):
+     # Live search keeps the pilot limits; the catalog batch passes its own via optional request attributes.
+     max_jobs = getattr(req, "max_jobs", 30)
++    # Nur der Katalog-Lauf: eine fehlende robots.txt (404/410) heißt "keine Regeln veröffentlicht".
++    # Der Live-Dienst bleibt streng; 403/429/5xx, Timeouts und Sperren brechen immer ab.
++    robots_missing_ok = getattr(req, "robots_missing_ok", False)
+     total_documents = getattr(req, "documents", 40)
+     custom = hasattr(req, "seconds") or hasattr(req, "documents")
+     budget = Budget(getattr(req, "seconds", RUN_SECONDS), total_documents) if custom else Budget()
+@@ -29,7 +32,7 @@ def crawl(req, transport_factory=Transport):
+         def check_robots(current):
+             host = urlsplit(current).hostname
+             if host not in source.hosts:
+-                raise FetchError("unsafe_target")
++                raise FetchError("unsafe_target", detail=f"Host nicht freigegeben: {host}")
+             if host not in robots:
+                 try:
+                     probe = {"robots_request": True} if missing_robots_scope(current, source, options) else {}
+@@ -38,15 +41,26 @@ def crawl(req, transport_factory=Transport):
+                     if missing_robots_scope(current, source, options) and error.http_status in missing_robots_statuses(source):
+                         robots[host] = None
+                         return
++                    if robots_missing_ok and error.code == "gone":
++                        robots[host] = None
++                        return
+                     raise FetchError("robots_unavailable") from error
++                text = text.lstrip("\ufeff")  # BOM am Dateianfang verdeckt sonst die erste Zeile
+                 if not re.search(r"(?im)^\s*user-agent\s*:", text):
+-                    raise FetchError("robots_unavailable")
++                    # Keine Regeln: Standardseite der Website statt einer robots.txt (HTML-200) oder eine Datei nur mit
++                    # Sitemap-Zeilen. Sperr- und Captcha-Seiten zählen nicht dazu.
++                    if robots_missing_ok and not re.search(
++                            r"captcha|access denied|just a moment|cf-chl|attention required|enable javascript|forbidden",
++                            text[:5000], re.I):
++                        robots[host] = None
++                        return
++                    raise FetchError("robots_unavailable", detail="robots.txt ohne User-agent-Zeile: «" + " ".join(text.split())[:120] + "»")
+                 robot = RobotFileParser()
+                 robot.parse(text.splitlines())
+                 robots[host] = robot
+             robot = robots[host]
+             if robot is None:
+-                if not missing_robots_scope(current, source, options):
++                if not (robots_missing_ok or missing_robots_scope(current, source, options)):
+                     raise FetchError("robots_unavailable")
+                 return
+             if not robot.can_fetch(USER_AGENT, current):
+@@ -62,7 +76,7 @@ def crawl(req, transport_factory=Transport):
+                     raise FetchError("timeout")
+                 time.sleep(pause)
+         final, html = transport.get(raw, source.hosts, authorize=check_robots, **options)
+-        if not options.get("accept_json") and ("captcha" in plain(html[:50000]).lower() or "access denied" in plain(html[:50000]).lower()):
++        if not options.get("accept_json") and not options.get("accept_xml") and ("captcha" in plain(html[:50000]).lower() or "access denied" in plain(html[:50000]).lower()):
+             raise FetchError("blocked")
+         return final, html
+ 
+@@ -102,7 +116,7 @@ def crawl(req, transport_factory=Transport):
+             near = None
+             if source.teaser and req.location and (origin := geo.center(req.location)):
+                 near = lambda place: geo.in_range(origin, place, req.radius_km)
+-            for _ in range(source.max_pages):
++            for _ in range(getattr(req, "max_pages", source.max_pages)):
+                 if not next_url or next_url in visited:
+                     break
+                 visited.add(next_url)
+@@ -143,10 +157,17 @@ def crawl(req, transport_factory=Transport):
+                     report["kept"] += 1
+                 else:
+                     report["filtered"] += 1
++                    report.setdefault("sample", url)
+             if details and report["filtered"] and not report["kept"]:
+                 report["status"] = "no_verified_jobs"
+         except FetchError as error:
+             report["status"] = error.code
++            # Ursache für die Diagnose: bei robots_unavailable z. B. "HTTP 404" oder "blocked".
++            cause = error.__cause__ if isinstance(error.__cause__, FetchError) else error
++            if cause.detail:
++                report["detail"] = cause.detail
++            elif cause.http_status or cause is not error:
++                report["detail"] = cause.code + (f" HTTP {cause.http_status}" if cause.http_status else "")
+         except Exception:
+             report["status"] = "unsupported"
+     return {"status": "done", "jobs": jobs, "sources": reports, "documents": total_documents - budget.remaining}
+diff --git a/scrapling-server/dvinci_adapter.py b/scrapling-server/dvinci_adapter.py
+new file mode 100644
+index 0000000..f3214bb
+--- /dev/null
++++ b/scrapling-server/dvinci_adapter.py
+@@ -0,0 +1,62 @@
++"""d.vinci-Karriereportale (z. B. WIRmachenDRUCK): die Stellenliste steckt als JSON im Seitenquelltext.
++
++Gelesen wird ausschließlich die öffentliche Listenseite (`var DvinciData = {...}`), kein JavaScript,
++keine Bewerbungs-API. Jede Stelle läuft durch dieselbe Prüfung wie ein JobPosting-Datensatz
++(Host, Detail-Muster, Titel, Arbeitgeber, Ablaufdatum). Infoseiten wie die Initiativbewerbung
++(`/de/jobs/4/intro`) stehen nicht in der Liste und werden deshalb nie ausgegeben.
++"""
++import json
++import re
++
++from extraction import extract, plain
++from safe_http import FetchError
++
++MARKER = re.compile(r"var\s+DvinciData\s*=\s*")
++
++
++def publications(html):
++    match = MARKER.search(html)
++    if not match:
++        raise FetchError("unsupported", detail="DvinciData nicht gefunden")
++    try:
++        data, _ = json.JSONDecoder().raw_decode(html, match.end())
++    except ValueError:
++        raise FetchError("unsupported", detail="DvinciData nicht lesbar") from None
++    rows = data.get("jobPublications") if isinstance(data, dict) else None
++    if not isinstance(rows, list):
++        raise FetchError("unsupported", detail="DvinciData ohne jobPublications")
++    return rows
++
++
++def record(row):
++    """JobPosting-artiger Datensatz aus einem Listeneintrag, nur mit belegten Feldern."""
++    if not isinstance(row, dict) or not isinstance(row.get("jobPublicationURL"), str):
++        return None
++    opening = row.get("jobOpening") if isinstance(row.get("jobOpening"), dict) else {}
++    company = opening.get("company") if isinstance(opening.get("company"), dict) else {}
++    place = plain(opening.get("location")) if isinstance(opening.get("location"), str) else ""
++    if not place:
++        names = [plain(loc.get("name")) for loc in opening.get("locations") or [] if isinstance(loc, dict)]
++        place = ", ".join(name for name in names if name)
++    data = {"@type": "JobPosting", "title": row.get("position") or row.get("pageTitle"),
++            "hiringOrganization": {"name": company.get("name")}, "url": row["jobPublicationURL"],
++            "jobLocation": {"address": {"addressLocality": place}} if place else [],
++            "datePosted": opening.get("createdDate") or ""}
++    if row.get("endDate"):
++        data["validThrough"] = row["endDate"]
++    return data
++
++
++def dvinci(source, req, get, report):
++    final, html = get(source.search, source)
++    for row in publications(html):
++        data = record(row)
++        if not data:
++            report["filtered"] += 1
++            continue
++        safe = json.dumps(data).replace("<", "\\u003c")
++        job = extract('<script type="application/ld+json">' + safe + "</script>", data["url"], source, req.q)
++        if job:
++            yield job
++        else:
++            report["filtered"] += 1
+diff --git a/scrapling-server/employer_adapters.py b/scrapling-server/employer_adapters.py
+index 359c482..2fcb27f 100644
+--- a/scrapling-server/employer_adapters.py
++++ b/scrapling-server/employer_adapters.py
+@@ -6,7 +6,7 @@ API records are mapped to the same strict JobPosting validation as HTML records.
+ import hashlib
+ import json
+ import re
+-from urllib.parse import quote
++from urllib.parse import parse_qs, quote, urlsplit
+ 
+ from scrapling import Selector
+ 
+@@ -54,9 +54,16 @@ def detail_document(get, raw, source, report, *, as_json=False):
+ 
+ def workday(source, req, get, report):
+     links = []
+-    for offset in (0, 20):
++    limit = getattr(req, "max_details", 10)
++    # Ortsfilter der konfigurierten Suchadresse (?locations=<32 Hex>) gelten auch für die Abfrage.
++    facets = {}
++    wanted = [v for v in parse_qs(urlsplit(source.search).query).get("locations", [])
++              if re.fullmatch(r"[a-f0-9]{32}", v)]
++    if wanted:
++        facets["locations"] = wanted
++    for offset in range(0, 200, 20):
+         data = json_document(get, source.api, source, {
+-            "appliedFacets": {}, "limit": 20, "offset": offset, "searchText": req.q})
++            "appliedFacets": facets, "limit": 20, "offset": offset, "searchText": req.q})
+         rows = data.get("jobPostings") if isinstance(data, dict) else None
+         if not isinstance(rows, list) or any(not isinstance(row, dict) for row in rows):
+             raise FetchError("unsupported")
+@@ -68,9 +75,9 @@ def workday(source, req, get, report):
+             raw = source.search.split("?", 1)[0].rstrip("/") + path
+             if is_detail(raw, source) and raw not in links:
+                 links.append(raw)
+-        if len(links) >= 10 or len(rows) < 20:
++        if len(links) >= limit or len(rows) < 20:
+             break
+-    for raw in links[:10]:
++    for raw in links[:limit]:
+         document = detail_document(get, raw, source, report)
+         if document is None:
+             continue
+@@ -255,6 +262,15 @@ def adapter_jobs(source, req, get, report):
+         yield from (judo if source.adapter == "judo_filter" else harro)(source, req, get, report)
+     elif source.adapter == "carsonal":
+         yield from carsonal(source, req, get, report)
++    elif source.adapter == "personio":
++        from personio_adapter import personio
++        yield from personio(source, req, get, report)
++    elif source.adapter == "rems_list":
++        from rems_adapter import rems_list
++        yield from rems_list(source, req, get, report)
++    elif source.adapter == "dvinci":
++        from dvinci_adapter import dvinci
++        yield from dvinci(source, req, get, report)
+     elif source.adapter == "murr":
+         from murr_adapter import murr
+         yield from murr(source, req, get, report)
+diff --git a/scrapling-server/employers.json b/scrapling-server/employers.json
+index afc6c2e..951d2e5 100644
+--- a/scrapling-server/employers.json
++++ b/scrapling-server/employers.json
+@@ -1,16 +1,17 @@
+ [
+   {"key":"mercedes_benz","label":"Mercedes-Benz","entries":[1],"search":"https://jobs.mercedes-benz.com/","hosts":["jobs.mercedes-benz.com"],"detail":"/(?:deDE|enUS)/[^/?#]+-\\d+-[a-zA-Z0-9]+$"},
+   {"key":"stihl","label":"STIHL","entries":[2],"search":"https://corporate.stihl.de/de/karriere/stellenangebote","hosts":["corporate.stihl.de"],"detail":"/de/karriere/stellenangebote/job-details/[^/?#]+-sf\\d+$"},
+-  {"key":"mahle","label":"MAHLE / MAHLE Aftermarket","entries":[3,31],"search":"https://careers.mahle.com/search/?q={q}&locationsearch={location}&locale=de_DE","hosts":["careers.mahle.com"],"detail":"/job/[^?#]+"},
++  {"key":"mahle","catalog_locations":["Stuttgart", "Fellbach", "Markgröningen", "Kornwestheim", "Mühlacker"],"label":"MAHLE / MAHLE Aftermarket","entries":[3,31],"search":"https://careers.mahle.com/search/?q={q}&locationsearch={location}&locale=de_DE","hosts":["careers.mahle.com"],"detail":"/job/[^?#]+"},
+   {"key":"diakonie_stetten","label":"Diakonie Stetten","entries":[4],"search":"https://deinjob.diakonie-stetten.de/","hosts":["deinjob.diakonie-stetten.de"],"detail":"/jobs/\\d+/[^?#]+"},
+   {"key":"robert_bosch_krankenhaus","label":"Robert Bosch Krankenhaus","entries":[5],"search":"https://careers.smartrecruiters.com/robertboschkrankenhausgmbh","hosts":["careers.smartrecruiters.com","jobs.smartrecruiters.com"],"detail":"/(?:RobertBoschKrankenhausGmbH|robertboschkrankenhausgmbh)/\\d+[^?#]*"},
+-  {"key":"kaercher","label":"Kärcher","entries":[6],"search":"https://careers.kaercher.com/search/?q={q}&locationsearch={location}","hosts":["careers.kaercher.com"],"detail":"/job/[^?#]+"},
++  {"key":"kaercher","catalog_locations":["Winnenden", "Schwaikheim"],"label":"Kärcher","entries":[6],"search":"https://careers.kaercher.com/search/?q={q}&locationsearch={location}","hosts":["careers.kaercher.com"],"detail":"/job/[^?#]+"},
+   {"key":"rems_murr_kliniken","label":"Rems-Murr-Kliniken · Winnenden / Schorndorf","entries":[7,20],"search":"https://rems-murr-kliniken.de/karriere/stellenangebote-und-bewerbung","hosts":["rems-murr-kliniken.de","www.rems-murr-kliniken.de"],"detail":"/jobinserat/[^/?#]+_\\d+/?$"},
+   {"key":"landratsamt_rmk","label":"Landratsamt Rems-Murr-Kreis","entries":[8],"search":"https://rems-murr-kreis.helixjobs.com/_/joblist","hosts":["rems-murr-kreis.helixjobs.com"],"detail":"^/_/jobad\\?prj=100300P[0-9]+$","company_pattern":"^Landratsamt\\s+Rems-Murr-Kreis$","reference":"https://karriere.rems-murr-kreis.de/startseite","note":"Öffentliche HTML-Stellenliste mit prj-Einzelanzeigen und JobPosting-Daten. Originalseiten lokal geprüft; kein bestätigter Live-Lauf aus Render."},
+   {"key":"paulinenpflege","label":"Paulinenpflege Winnenden","entries":[9],"search":"https://jobs.paulinenpflege.de/stellenangebote.html","hosts":["jobs.paulinenpflege.de"],"detail":"/[^/?#]+-de-j\\d+\\.html$"},
+   {"key":"ksk_waiblingen","label":"Kreissparkasse Waiblingen","entries":[10],"search":"https://kskwn.helixjobs.com/ksk/joblist","hosts":["kskwn.helixjobs.com"],"detail":"^/ksk/jobad\\?prj=100052P[0-9]+$","company_pattern":"^Kreissparkasse\\s+Waiblingen$","reference":"https://www.kskwn.de/de/home/ihre-sparkasse/karriere/berufserfahrene-fuehrungskraefte.html","note":"Echte HTML-Stellenliste statt allgemeiner Karriereseite; prj-Einzelanzeigen mit JobPosting-Daten. Originalseiten lokal geprüft; kein bestätigter Live-Lauf aus Render."},
+   {"key":"stadt_waiblingen","label":"Stadt Waiblingen","entries":[11],"search":"https://karriere.waiblingen.de/offene-stellen","hosts":["karriere.waiblingen.de"],"detail":"/(?:stellenangebot|stellenangebote|job|jobs|jobposting)/[^?#]+","note":"Karriereportal gefunden; eingebettete Bewerbersysteme können einen eigenen Adapter benötigen."},
+-  {"key":"tesat","label":"TESAT-Spacecom","entries":[12],"search":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus?locations=f5811cef9cb50118ca5ff56a4c0af44a&locations=f5811cef9cb501008f6f2e6a4c0a6548","hosts":["ag.wd3.myworkdayjobs.com"],"detail":"/(?:de-DE|en-US)/Airbus/job/[^?#]+","company_pattern":"tesat","reference":"https://www.tesat.de/career","note":"Offiziell verlinktes Workday-Portal. Nur Anzeigen mit belegtem TESAT-Arbeitgeber; ohne HTML-Links nicht unterstützt."},
++  {"key":"tesat","label":"TESAT-Spacecom","entries":[12],"search":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus?locations=f5811cef9cb50118ca5ff56a4c0af44a&locations=f5811cef9cb501008f6f2e6a4c0a6548","hosts":["ag.wd3.myworkdayjobs.com"],"detail":"^/de-DE/Airbus/job/[^?#]+","adapter":"workday","api":"https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus/jobs","company_pattern":"tesat","reference":"https://www.tesat.de/career","note":"Offiziell verlinktes Workday-Portal. Öffentliche Workday-Suche mit den TESAT-Standortfiltern; nur Anzeigen mit belegtem TESAT-Arbeitgeber."},
++  {"key":"airbus","label":"Airbus (Stuttgart, Laupheim, Backnang)","entries":[],"search":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus?locations=f5811cef9cb501e5b9910b6b4c0a494b&locations=f5811cef9cb50190df20956a4c0aa549&locations=f5811cef9cb50118ca5ff56a4c0af44a","hosts":["ag.wd3.myworkdayjobs.com"],"detail":"^/de-DE/Airbus/job/[^?#]+","adapter":"workday","api":"https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus/jobs","company_pattern":"airbus","reference":"https://ag.wd3.myworkdayjobs.com/de-DE/Airbus","note":"Öffentliche Workday-Suche des Airbus-Portals mit drei Standortfiltern; nur Anzeigen mit belegtem Airbus-Arbeitgeber (TESAT läuft als eigene Quelle)."},
+   {"key":"zfp_winnenden","label":"Klinikum Schloß Winnenden","entries":[13],"search":"https://karriere.zfp-winnenden.de/stellenangebote","hosts":["jobs.karriere.zfp-winnenden.de","karriere.zfp-winnenden.de","cs-assets.b-ite.com","jobs.b-ite.com"],"detail":"^/jobposting/[a-f0-9]{40}0$","reference":"https://karriere.zfp-winnenden.de/stellenangebote","adapter":"bite","api":"https://jobs.b-ite.com/api/v1/postings/search","company_pattern":"^Klinikum Schlo(?:ß|ss) Winnenden$","note":"Offiziell eingebundene B-ite-Lesesuche; konkreter ZFP-Mandant, Arbeitgeber-ID und Einzelanzeigen-ID werden geprüft. Maximal zehn Detailabrufe, keine Bewerbungsseiten."},
+   {"key":"volksbank_stuttgart","label":"Volksbank Stuttgart","entries":[14],"search":"https://volksbank-stuttgart.helixjobs.com/_/joblist","hosts":["volksbank-stuttgart.helixjobs.com"],"detail":"^/_/jobad\\?prj=100073P[0-9]+$","company_pattern":"^Volksbank\\s+Stuttgart\\s+eG$","reference":"https://www.volksbank-stuttgart.de/karriere.html","note":"Offiziell verlinkte HTML-Stellenliste und JobPosting-Einzelanzeige anhand öffentlicher Originalseiten lokal geprüft; noch kein bestätigter Render-Live-Suchlauf."},
+   {"key":"klinikum_stuttgart","label":"Klinikum Stuttgart · Bad Cannstatt","entries":[15],"search":"https://www.klinikum-stuttgart.de/karriere/jobs","hosts":["www.klinikum-stuttgart.de"],"detail":"/karriere/jobs/(?!seite/)[^?#]+","note":"Der Ortsfilter gilt für den gesamten Klinikverbund, nicht nur Bad Cannstatt."},
+@@ -21,7 +22,7 @@
+   {"key":"catalent","label":"Catalent Schorndorf","entries":[21],"search":"https://careers.catalent.com/us/en/europe","hosts":["careers.catalent.com"],"detail":"/(?:us/en|de/de)/job/[^?#]+","note":"Europa-Stellenmarkt; der bestehende Ortsfilter grenzt auf den Suchort ein."},
+   {"key":"sana_karl_olga","label":"Sana · Karl-Olga-Krankenhaus","entries":[22],"search":"https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373","hosts":["jobs.sana.de"],"detail":"/de/sites/CX_4025/job/\\d+/?$","reference":"https://www.sana.de/kok-stuttgart/karriere","note":"Oracle-Portal; ohne HTML-Anzeigenlinks als nicht unterstützt gekennzeichnet."},
+   {"key":"loeffelhardt","label":"Emil Löffelhardt","entries":[23],"search":"https://jobs.loeffelhardt.de/","hosts":["jobs.loeffelhardt.de","stellenangebot-loeffelhardt.career.softgarden.de"],"detail":"/(?:jobs|job)/\\d+/[^?#]+"},
+-  {"key":"rems","label":"REMS","entries":[24],"search":"https://recruitment.rems.de/stellenangebote","hosts":["recruitment.rems.de"],"detail":"^/(?!stellenangebote|ausbildung|initiativ|privacy|datenschutz|Themes)[a-zA-Z0-9_-]{2,32}/?$"},
++  {"key":"rems","label":"REMS","adapter":"rems_list","entries":[24],"search":"https://recruitment.rems.de/stellenangebote","hosts":["recruitment.rems.de"],"detail":"^/(?!stellenangebote|ausbildung|initiativ|privacy|datenschutz|Themes)[a-zA-Z0-9_-]{2,32}/?$"},
+   {"key":"stoba","label":"stoba Backnang","entries":[25],"search":"https://stoba.one/people-jobs/arbeiten-bei-stoba-backnang","hosts":["stoba.one"],"detail":"/jobsoffer_backnang/[^/?#]+/?$"},
+   {"key":"deutsche_post","label":"Deutsche Post / DHL","entries":[26],"search":"https://careers.dhl.com/eu/de/search-results?keywords={q}","hosts":["careers.dhl.com"],"detail":"/(?:eu/de|global/en)/job/[^?#]+","reference":"https://group.dhl.com/de/karriere.html","note":"Dynamisches Portal; keine Zusage einer vollständigen regionalen Abdeckung."},
+   {"key":"db_audiotechnik","label":"d&b audiotechnik","entries":[27],"search":"https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/","hosts":["www.dbaudio.com"],"detail":"/global/de/ueber-db/karriere/jobs/[^/?#]+-req-\\d+-\\d+/?$"},
+@@ -30,8 +31,8 @@
+   {"key":"burger_schloz","label":"Burger Schloz Automobile","entries":[33],"search":"https://jobs.burgerschloz.de/de/","hosts":["jobs.burgerschloz.de","api.carsonal.de","5ep27p93be-dsn.algolia.net"],"detail":"^/de/jobs/[a-z0-9-]+-VO[0-9]{4}-[0-9]{6}$","reference":"https://www.burgerschloz.de/karriere","adapter":"carsonal","api":"https://api.carsonal.de/rest","company_pattern":"^Burger Schloz Automobile GmbH & Co\\. KG$","note":"Offizielle Carsonal-Leseschnittstelle und Burger-Schloz-Suchindex, Mandant und Einzelanzeigen belegt. Nur bestätigtes robots-404 an genau diesen Leseendpunkten ausgenommen; maximal zehn Detailabrufe."},
+   {"key":"kloepfer","label":"Klöpfer","entries":[34],"search":"https://kloepferkg.softgarden.io/de/vacancies","hosts":["kloepferkg.softgarden.io"],"detail":"/(?:job|jobs)/\\d+[^?#]*","note":"Softgarden-Portal; ohne auslesbare HTML-Links als nicht unterstützt gekennzeichnet."},
+   {"key":"judo","label":"JUDO Wasseraufbereitung","entries":[35],"search":"https://judo.eu/stellenportal/","hosts":["judo.eu"],"detail":"^/Stellenanzeige/[^/?#]+/?$","adapter":"judo_filter","api":"https://judo.eu/wp/wp-admin/admin-ajax.php","company_pattern":"^JUDO Wasseraufbereitung GmbH$","note":"Öffentliche jobfilter-Lesesuche per GET mit frischem Formular-Nonce. Keine Bewerbungs-POSTs."},
+-  {"key":"riva","label":"RIVA-Gruppe / Mpire","entries":[38],"search":"https://mpire.jobs.personio.de/","hosts":["mpire.jobs.personio.de"],"detail":"/job/\\d+","reference":"https://www.mpire.gmbh/karriere","note":"Gemeinsames Portal von Mpire und Partnerfirmen der RIVA-Gruppe."},
+-  {"key":"wirmachendruck","label":"WIRmachenDRUCK","entries":[39],"search":"https://jobs.wir-machen-druck.de/de/jobs","hosts":["jobs.wir-machen-druck.de"],"detail":"/de/jobs/\\d+/[^/?#]+/?$"},
++  {"key":"riva","label":"RIVA-Gruppe / Mpire","adapter":"personio","api":"https://mpire.jobs.personio.de/xml","entries":[38],"search":"https://mpire.jobs.personio.de/","hosts":["mpire.jobs.personio.de"],"detail":"/job/\\d+","reference":"https://www.mpire.gmbh/karriere","note":"Gemeinsames Portal von Mpire und Partnerfirmen der RIVA-Gruppe."},
++  {"key":"wirmachendruck","label":"WIRmachenDRUCK","adapter":"dvinci","entries":[39],"search":"https://jobs.wir-machen-druck.de/de/jobs","hosts":["jobs.wir-machen-druck.de"],"detail":"/de/jobs/\\d+/[^/?#]+/?$"},
+   {"key":"eisenmann","label":"Eisenmann Services / Personal-Service","entries":[40],"search":"https://www.eisenmann-gruppe.de/stellenangebote-jobs.html","hosts":["www.eisenmann-gruppe.de"],"detail":"^/stellenangebote-jobs\\.html$","adapter":"eisenmann_sections","company_pattern":"Eisenmann\\s+Personal-Service\\s+GmbH","reference":"https://www.eisenmann-services.de/unternehmensgeschichte.html","note":"Jede konkrete Anzeige aus dem offiziellen Akkordeon separat, mit eigenem Text-Direktlink. Arbeitgeber wird aus der Seite belegt."},
+   {"key":"baeckerei_maurer","label":"Bäckerei Maurer","entries":[41],"search":"https://www.baecker-maurer.de/karriere/stellen","hosts":["www.baecker-maurer.de"],"detail":"/karriere/(?!stellen/?$)[^/?#]+/?$"},
+   {"key":"elanders","label":"Elanders Waiblingen","entries":[42],"search":"https://jobapplication.hrworks.de/de?companyId=av679e8c","hosts":["jobapplication.hrworks.de"],"detail":"/de\\?(?=[^#]*\\bcompanyId=av679e8c(?:&|$))(?=[^#]*\\bid=[a-zA-Z0-9]+(?:&|$))","note":"Feste HRworks-Mandantenkennung; andere Unternehmen auf diesem Host bleiben ausgeschlossen."},
+diff --git a/scrapling-server/extraction.py b/scrapling-server/extraction.py
+index ac8298f..ed14805 100644
+--- a/scrapling-server/extraction.py
++++ b/scrapling-server/extraction.py
+@@ -53,6 +53,64 @@ def discovery(html, base, source, q="", near=None):
+     return links, urljoin(base, next_url) if next_url else None
+ 
+ 
++def has_microdata(page):
++    return bool(page.css('[itemscope][itemtype*="schema.org/JobPosting"]'))
++
++
++def stamp(value):
++    """schema.org-Datum als ISO ("2026-11-08T02:00:00+00:00") oder Java-Stil ("Sun Nov 08 02:00:00 UTC 2026")."""
++    value = " ".join(str(value or "").split())
++    for pattern in ("%a %b %d %H:%M:%S %Z %Y", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d"):
++        try:
++            parsed = datetime.strptime(value, pattern)
++        except ValueError:
++            continue
++        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
++    return None
++
++
++def microdata(page, now=None):
++    """Einzelne JobPosting-Auszeichnung per itemprop (z. B. SuccessFactors). None = nicht verwertbar oder abgelaufen."""
++    roots = page.css('[itemscope][itemtype*="schema.org/JobPosting"]')
++    if len(roots) != 1:  # mehrere Rollen auf einer Seite sind kein Beleg für eine einzelne Stelle
++        return None
++    root = roots[0]
++
++    def meta(name):
++        values = [v for v in root.css(f'meta[itemprop="{name}"]::attr(content)').getall() if v.strip()]
++        return plain(values[0]) if len(values) == 1 else ""
++
++    def text(name):
++        nodes = root.css(f':not(meta)[itemprop="{name}"]')
++        return plain(nodes[0].get()) if len(nodes) == 1 else ""
++
++    title = text("title") or meta("title")
++    if not title:
++        # Manche Portale (z. B. Klingele) setzen kein itemprop="title"; der og:title der Seite ist dann der Stellentitel.
++        shared = [v for v in page.css('meta[property="og:title"]::attr(content)').getall() if v.strip()]
++        title = plain(shared[0]) if len(shared) == 1 else ""
++    company = meta("hiringOrganization")
++    if not company:
++        nodes = root.css('[itemprop="hiringOrganization"] [itemprop="name"]')
++        company = plain(nodes[0].get()) if len(nodes) == 1 else ""
++    for name in ("validThrough",):
++        raw = meta(name)
++        if raw:
++            parsed = stamp(raw)
++            if parsed is None or parsed < (now or datetime.now(timezone.utc)):
++                return None
++    places = []
++    for name in ("streetAddress", "addressLocality", "postalCode", "addressRegion"):
++        value = meta(name) or text(name)
++        if value and value not in places:
++            places.append(value)
++    location = ", ".join(places) or plain(" ".join(root.css(".jobGeoLocation").getall()))
++    description = text("description") or None
++    published = stamp(meta("datePosted"))
++    posted = published.strftime("%Y-%m-%d") if published else ""
++    return title, company, location, description, posted
++
++
+ def entries(value):
+     if isinstance(value, list):
+         for row in value:
+@@ -122,6 +180,11 @@ def extract(html, raw, source, q="", now=None):
+         description = plain(raw_description) or None
+         posted = row.get("datePosted", "")
+         posted = posted[:10] if isinstance(posted, str) and re.match(r"^\d{4}-\d\d-\d\d", posted) else ""
++    elif has_microdata(page):
++        row = microdata(page, now)
++        if not row:
++            return None
++        title, company, location, description, posted = row
+     elif source.title_selector and source.company_selector:
+         def field(selector):
+             return plain(" ".join(page.css(selector).getall())) if selector else ""
+diff --git a/scrapling-server/personio_adapter.py b/scrapling-server/personio_adapter.py
+new file mode 100644
+index 0000000..fc3bc8e
+--- /dev/null
++++ b/scrapling-server/personio_adapter.py
+@@ -0,0 +1,58 @@
++"""Personio-Karriereseiten: der öffentliche Stellenfeed `https://<mandant>.jobs.personio.de/xml`.
++
++Gelesen werden nur Titel, Firma (subcompany), Standort, Datum und ID, die Beschreibungen werden verworfen.
++Die Anzeigen-URL ist die öffentliche Seite `https://<mandant>.jobs.personio.de/job/<id>`. Jede Stelle läuft
++durch dieselbe Prüfung wie ein JobPosting (Host, Linkmuster, Titel, Arbeitgeber, Initiativbewerbungen).
++"""
++import json
++import re
++import xml.etree.ElementTree as ET
++
++from extraction import extract, plain
++from safe_http import FetchError
++
++# Ein einzelnes "&" im Text (z. B. "GmbH & Co. KG") ist kein gültiges XML und wird maskiert.
++BARE_AMPERSAND = re.compile(r"&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)")
++
++
++def positions(text):
++    if re.search(r"<!(?:DOCTYPE|ENTITY)", text, re.I):
++        raise FetchError("unsupported", detail="Feed mit DOCTYPE/ENTITY abgelehnt")
++    try:
++        root = ET.fromstring(BARE_AMPERSAND.sub("&amp;", text.lstrip("﻿")))
++    except ET.ParseError:
++        raise FetchError("unsupported", detail="Personio-Feed nicht lesbar") from None
++    if root.tag != "workzag-jobs":
++        raise FetchError("unsupported", detail="Kein Personio-Feed")
++    rows = []
++    for node in root.findall("position"):
++        def field(name):
++            child = node.find(name)
++            return plain(child.text) if child is not None and child.text else ""
++        offices = [field("office")] + [plain(o.text or "") for o in node.findall("additionalOffices/office")]
++        places = []
++        for place in offices:
++            if place and place not in places:
++                places.append(place)
++        rows.append({"id": field("id"), "title": field("name"), "company": field("subcompany"),
++                     "place": ", ".join(places[:5]), "posted": field("createdAt")})
++    return rows
++
++
++def personio(source, req, get, report):
++    _, text = get(source.api, source, accept_xml=True)
++    host = source.hosts[0]
++    for row in positions(text):
++        if not re.fullmatch(r"\d{1,12}", row["id"]):
++            report["filtered"] += 1
++            continue
++        url = f"https://{host}/job/{row['id']}"
++        data = {"@type": "JobPosting", "title": row["title"], "hiringOrganization": {"name": row["company"]},
++                "url": url, "datePosted": row["posted"],
++                "jobLocation": {"address": {"addressLocality": row["place"]}} if row["place"] else []}
++        safe = json.dumps(data).replace("<", "\\u003c")
++        job = extract('<script type="application/ld+json">' + safe + "</script>", url, source, req.q)
++        if job:
++            yield job
++        else:
++            report["filtered"] += 1
+diff --git a/scrapling-server/rems_adapter.py b/scrapling-server/rems_adapter.py
+new file mode 100644
+index 0000000..9490f97
+--- /dev/null
++++ b/scrapling-server/rems_adapter.py
+@@ -0,0 +1,54 @@
++"""REMS-Karriereportal: die Stellenliste steht vollständig im HTML der Übersichtsseite.
++
++Gelesen wird nur `recruitment.rems.de/stellenangebote` (Abschnitte DEU/AUT/CHE). Die Einzelseiten haben keine
++strukturierten Daten und werden nicht abgerufen. Der Arbeitgeber gilt nur als belegt, wenn der Seitentitel
++"REMS Recruitment-Portal" lautet; jede Stelle läuft durch die übliche Prüfung (Host, Linkmuster, Titel, Datum).
++"""
++import json
++import re
++from urllib.parse import urljoin
++
++from scrapling import Selector
++
++from extraction import extract, plain
++from safe_http import FetchError
++
++COUNTRIES = ("DEU", "AUT", "CHE")
++PRELINE = re.compile(r"^\s*([A-Z]{3})\s*-\s*(\d{2})\.(\d{2})\.(\d{4})\s*$")
++
++
++def listing(html, base):
++    if not re.search(r"<title>\s*REMS\s+Recruitment-Portal\s*</title>", html, re.I):
++        raise FetchError("unsupported", detail="Seitentitel nicht 'REMS Recruitment-Portal'")
++    page = Selector(html)
++    rows = []
++    for code in COUNTRIES:
++        for entry in page.css(f"div#{code} div.jobentry"):
++            link = entry.css("h2 a")
++            if len(link) != 1:
++                rows.append(None)
++                continue
++            place = plain(" ".join(entry.css("h3").getall()))
++            place = re.sub(r"^\s*Standort\s+", "", place)
++            stamp = PRELINE.match(plain(" ".join(entry.css(".jobentrypreline").getall())))
++            posted = f"{stamp.group(4)}-{stamp.group(3)}-{stamp.group(2)}" if stamp and stamp.group(1) == code else ""
++            rows.append({"title": plain(link[0].get()), "url": urljoin(base, link[0].attrib.get("href", "")),
++                         "place": place + ("" if code == "DEU" or not place else f", {code}"), "posted": posted})
++    return rows
++
++
++def rems_list(source, req, get, report):
++    final, html = get(source.search, source)
++    for row in listing(html, final):
++        if not row or not row["title"]:
++            report["filtered"] += 1
++            continue
++        data = {"@type": "JobPosting", "title": row["title"], "hiringOrganization": {"name": "REMS"},
++                "url": row["url"], "datePosted": row["posted"],
++                "jobLocation": {"address": {"addressLocality": row["place"]}} if row["place"] else []}
++        safe = json.dumps(data).replace("<", "\\u003c")
++        job = extract('<script type="application/ld+json">' + safe + "</script>", row["url"], source, req.q)
++        if job:
++            yield job
++        else:
++            report["filtered"] += 1
+diff --git a/scrapling-server/safe_http.py b/scrapling-server/safe_http.py
+index 1097674..4805067 100644
+--- a/scrapling-server/safe_http.py
++++ b/scrapling-server/safe_http.py
+@@ -6,6 +6,7 @@ import socket
+ import ssl
+ import threading
+ import time
++import zlib
+ from urllib.parse import urljoin, urlsplit
+ 
+ MAX_BODY = 2 * 1024 * 1024
+@@ -13,9 +14,10 @@ USER_AGENT = "NaechsterSchrittScrapling/1.0"
+ 
+ 
+ class FetchError(Exception):
+-    def __init__(self, code: str, *, http_status=None):
++    def __init__(self, code: str, *, http_status=None, detail=None):
+         self.code = code
+         self.http_status = http_status
++        self.detail = detail
+         super().__init__(code)
+ 
+ 
+@@ -52,9 +54,9 @@ def target(raw, hosts, resolve=socket.getaddrinfo):
+             return not address.is_global or address.is_multicast or address.is_reserved or "%" in ip or (isinstance(address, ipaddress.IPv6Address) and
+                     (address.sixtofour is not None or address.teredo is not None))
+         if not addresses or any(unsafe(ip) for ip in addresses):
+-            raise FetchError("unsafe_target")
+-    except (ValueError, OSError):
+-        raise FetchError("unsafe_target") from None
++            raise FetchError("unsafe_target", detail="Adresse nicht öffentlich: " + ", ".join(addresses)[:80])
++    except (ValueError, OSError) as error:
++        raise FetchError("unsafe_target", detail=f"DNS {type(error).__name__} {url.hostname}") from None
+     return url, addresses[0]
+ 
+ 
+@@ -81,7 +83,9 @@ class Transport:
+         self.last = {}
+ 
+     def get(self, raw, hosts, authorize=None, *, json_body=None, accept_json=False, accept_javascript=False,
+-            robots_request=False, json_api=False):
++            robots_request=False, json_api=False, accept_xml=False):
++        if accept_xml and (accept_json or accept_javascript or json_api or robots_request or json_body is not None):
++            raise FetchError("unsupported")
+         if json_api and (not accept_json or json_body is not None):
+             raise FetchError("unsupported")
+         if accept_javascript and (accept_json or json_body is not None):
+@@ -113,6 +117,8 @@ class Transport:
+                            "Accept-Encoding": "identity"}
+                 if accept_javascript:
+                     headers["Accept"] = "application/javascript,text/javascript"
++                if accept_xml:
++                    headers["Accept"] = "application/xml,text/xml"
+                 if robots_request:
+                     headers["Accept"] = "*/*"
+                 if json_api:
+@@ -126,11 +132,11 @@ class Transport:
+                 if response.status in (301, 302, 303, 307, 308):
+                     # Do not forward a search POST or API request to a redirect.
+                     # HTML redirects retain the existing pinned/robots checks.
+-                    if payload is not None or accept_json or accept_javascript or robots_request:
++                    if payload is not None or accept_json or accept_javascript or accept_xml or robots_request:
+                         raise FetchError("unsupported", http_status=301 if robots_request and response.status == 301 else None)
+                     location = response.getheader("Location")
+                     if not location:
+-                        raise FetchError("unsupported")
++                        raise FetchError("unsupported", detail="Weiterleitung ohne Ziel")
+                     current = urljoin(current, location)
+                     continue
+                 if response.status in (401, 403, 429):
+@@ -140,14 +146,17 @@ class Transport:
+                 if response.status != 200:
+                     raise FetchError("upstream_error", http_status=response.status)
+                 encoding = response.getheader("Content-Encoding", "identity").lower()
+-                if encoding != "identity":
+-                    raise FetchError("unsupported")
++                # Manche Server liefern trotz "identity" gzip; das wird begrenzt entpackt, nichts anderes.
++                if encoding not in ("identity", "gzip"):
++                    raise FetchError("unsupported", detail=f"Content-Encoding {encoding[:20]}")
+                 kind = response.getheader("Content-Type", "").lower()
+                 kinds = (("application/vnd.api+json", "application/json") if json_api else
+                          ("application/javascript", "text/javascript") if accept_javascript else
+-                         ("application/json",) if accept_json else ("text/html", "application/xhtml+xml", "text/plain"))
++                         ("application/json",) if accept_json else
++                         ("application/xml", "text/xml") if accept_xml else
++                         ("text/html", "application/xhtml+xml", "text/plain") + (("text/txt",) if url.path == "/robots.txt" else ()))
+                 if not any(t in kind for t in kinds):
+-                    raise FetchError("unsupported")
++                    raise FetchError("unsupported", detail=f"Content-Type {kind[:60] or 'leer'}")
+                 chunks, size = [], 0
+                 while True:
+                     if time.monotonic() >= self.budget.deadline:
+@@ -159,9 +168,19 @@ class Transport:
+                     if size > MAX_BODY:
+                         raise FetchError("too_large")
+                     chunks.append(chunk)
+-                return current, b"".join(chunks).decode("utf-8", errors="replace")
+-            except (OSError, http.client.HTTPException):
+-                raise FetchError("timeout" if time.monotonic() >= self.budget.deadline else "network_error") from None
++                body = b"".join(chunks)
++                if encoding == "gzip":
++                    try:
++                        unpacker = zlib.decompressobj(16 + zlib.MAX_WBITS)
++                        body = unpacker.decompress(body, MAX_BODY + 1)
++                    except zlib.error:
++                        raise FetchError("unsupported", detail="gzip fehlerhaft") from None
++                    if len(body) > MAX_BODY or unpacker.unconsumed_tail:
++                        raise FetchError("too_large")
++                return current, body.decode("utf-8", errors="replace")
++            except (OSError, http.client.HTTPException) as error:
++                raise FetchError("timeout" if time.monotonic() >= self.budget.deadline else "network_error",
++                                 detail=f"{type(error).__name__} {url.hostname}") from None
+             finally:
+                 connection.close()
+         raise FetchError("redirect_limit")
+diff --git a/scrapling-server/sources.py b/scrapling-server/sources.py
+index ca565ff..3d10700 100644
+--- a/scrapling-server/sources.py
++++ b/scrapling-server/sources.py
+@@ -31,6 +31,8 @@ class Source:
+     # Result lists with a place per teaser: skip listed ads that are clearly outside the search radius.
+     teaser: str = ""
+     teaser_location: str = ""
++    # Nur Katalog-Lauf: Orte, für die die Suche je einmal mit {location} abgefragt wird (globale Konzernportale).
++    catalog_locations: tuple[str, ...] = ()
+ 
+     def start(self, q: str, location: str) -> str:
+         return self.search.replace("{q}", quote(q, safe="")).replace("{location}", quote(location, safe=""))
+@@ -52,7 +54,8 @@ BOARDS = (
+ EMPLOYERS = (
+     Source("festo", "Festo", ("jobs.festo.com",),
+            "https://jobs.festo.com/search/?q={q}&locationsearch={location}", r"/job/[^?#]+",
+-           note="Bei bestätigten Nulltreffern werden die allgemeinen Empfehlungen nicht als Suchtreffer geprüft."),
++           note="Bei bestätigten Nulltreffern werden die allgemeinen Empfehlungen nicht als Suchtreffer geprüft.",
++           catalog_locations=("Esslingen", "Ostfildern")),
+     Source("bosch", "Bosch", ("careers.smartrecruiters.com", "jobs.smartrecruiters.com"),
+            "https://careers.smartrecruiters.com/BoschGroup/?search={q}", r"/BoschGroup/\d+[^?#]*",
+            note="HTML-Abruf derzeit nicht bestätigt. Die öffentliche SmartRecruiters-API untersagt allgemeines Crawling; kein automatischer API-Ersatz und keine Umgehung."),
+@@ -73,7 +76,8 @@ def registry() -> dict[str, Source]:
+             raise ValueError("One to thirty employer configurations required")
+         employers = tuple(Source(**{**row, "hosts": tuple(row["hosts"])}) for row in rows)
+     catalog = json.loads(Path(__file__).with_name("employers.json").read_text(encoding="utf-8"))
+-    additions = tuple(Source(**{**{k: v for k, v in row.items() if k != "entries"}, "hosts": tuple(row["hosts"])}) for row in catalog)
++    additions = tuple(Source(**{**{k: v for k, v in row.items() if k != "entries"}, "hosts": tuple(row["hosts"]),
++                         "catalog_locations": tuple(row.get("catalog_locations", ()))}) for row in catalog)
+     all_sources = (*BOARDS, *employers, *additions)
+     result = {source.key: source for source in all_sources}
+     if len(result) != len(all_sources) or len(result) > 100 or not {"indeed", "stepstone"}.issubset(result):
+@@ -93,13 +97,18 @@ def registry() -> dict[str, Source]:
+         re.compile(source.detail)
+         if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= 10):
+             raise ValueError("Page and detail limits must stay within the global caps")
++        if source.catalog_locations and (
++                "{location}" not in source.search or len(source.catalog_locations) > 8
++                or not all(isinstance(place, str) and re.fullmatch(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .-]{1,39}", place)
++                           for place in source.catalog_locations)):
++            raise ValueError("Catalog locations need a {location} template and plain place names")
+         if bool(source.teaser) != bool(source.teaser_location):
+             raise ValueError("Teaser and teaser location selectors belong together")
+         if source.company_pattern:
+             re.compile(source.company_pattern)
+         if source.company_capture:
+             re.compile(source.company_capture)
+-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr"}:
++        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio"}:
+             raise ValueError("Unknown employer adapter")
+         if source.api:
+             api = urlparse(source.api)
+@@ -116,10 +125,16 @@ def registry() -> dict[str, Source]:
+                 or source.api != "https://api.carsonal.de/rest"
+                 or source.search != "https://jobs.burgerschloz.de/de/"):
+             raise ValueError("Carsonal reader is bound to Burger Schloz's public career page")
++        if source.adapter == "personio" and (len(source.hosts) != 1 or not source.hosts[0].endswith(".jobs.personio.de")
++                or source.api != f"https://{source.hosts[0]}/xml"):
++            raise ValueError("Personio reader is bound to the tenant's public /xml feed")
++        if source.adapter == "rems_list" and (source.key != "rems"
++                or source.search != "https://recruitment.rems.de/stellenangebote"):
++            raise ValueError("REMS reader is bound to REMS's public job list")
+         if source.adapter == "murr" and (source.key != "murrelektronik"
+                 or source.search != "https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/"):
+             raise ValueError("Murrelektronik reader is bound to its public job list")
+-        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite"} and not source.api:
++        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite", "personio"} and not source.api:
+             raise ValueError("Employer API endpoint required")
+     return result
+ 
