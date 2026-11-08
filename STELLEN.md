@@ -1,19 +1,19 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T14:17:02+00:00 · 365 Stellen aus 35 von 60 Quellen
+Stand: 2026-11-08T14:24:56+00:00 · 445 Stellen aus 35 von 60 Quellen
 
 ## Quellen
 
 | Quelle | Status | Stellen | Letzter Erfolg | Detail |
 | --- | --- | ---: | --- | --- |
-| Festo | done | 25 | 2026-11-08 |  |
+| Festo | done | 35 | 2026-11-08 |  |
 | Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | Mercedes-Benz | unsupported | 0 | – |  |
 | STIHL | unsupported | 0 | – |  |
-| MAHLE / MAHLE Aftermarket | done | 20 | 2026-11-08 |  |
+| MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
 | Diakonie Stetten | unsupported | 0 | – |  |
 | Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- |
-| Kärcher | done | 24 | 2026-11-08 |  |
+| Kärcher | done | 67 | 2026-11-08 |  |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
@@ -87,25 +87,68 @@ Stand: 2026-11-08T14:17:02+00:00 · 365 Stellen aus 35 von 60 Quellen
 
 - [(Senior) Consultant SAP Stammdaten & Prozesse (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-Consultant-SAP-Stammdaten-&-Prozesse-%28mwd%29-71364/994390555) · Winnenden, DE, 71364 · seit 2026-11-08
 - [(Senior) SAP IT Inhouse Consultant PLM (m/w/d)](https://careers.kaercher.com/job/Winnenden-%28Senior%29-SAP-IT-Inhouse-Consultant-PLM-%28mwd%29-71364/985621355) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Assistenz (m/w/d) der Personalleitung (auf 2 Jahre befristet)](https://careers.kaercher.com/job/Winnenden-Assistenz-%28mwd%29-der-Personalleitung-%28auf-2-Jahre-befristet%29-71364/1369225255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Ausbildung Elektroniker/-in für Betriebstechnik (m/w/d) am Standort Winnenden 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Elektroniker-in-f%C3%BCr-Betriebstechnik-%28mwd%29-am-Standort-Winnenden-2027-71364/1353823855) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Ausbildung Mechatroniker/in (m/w/d) am Standort Winnenden 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Mechatronikerin-%28mwd%29-am-Standort-Winnenden-2027-71364/1353821955) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Ausbildung zum Kaufmann (m/w/d) für IT-Systemmanagement bei der Alfred Kärcher Vertriebs-GmbH 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-zum-Kaufmann-%28mwd%29-f%C3%BCr-IT-Systemmanagement-bei-der-Alfred-K%C3%A4rcher-Vertriebs-GmbH-2027-71364/1368032255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Auszubildende/r Mechatronik 2027 (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Auszubildender-Mechatronik-2027-%28mwd%29-71409/1356329055) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Bachelor of Engineering (DHBW) Elektrotechnik und Informationstechnik (Automation) (m/w/d)](https://careers.kaercher.com/job/Winnenden-Bachelor-of-Engineering-%28DHBW%29-Elektrotechnik-und-Informationstechnik-%28Automation%29-%28mwd%29-71364/1370743255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Betriebsarzt (m/w/d) auch in Teilzeit](https://careers.kaercher.com/job/Winnenden-Betriebsarzt-%28mwd%29-auch-in-Teilzeit-71349/1335376055) · Winnenden, DE, 71349 · seit 2026-11-08
+- [Bid Manager (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Bid-Manager-%28mwd%29-71409/1370213055) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Buyer (m/f/d)](https://careers.kaercher.com/job/Quistello-Buyer-%28mfd%29-46026/1362874955) · Quistello, IT, 46026 · seit 2026-11-08
+- [CI/CD- & OS-Engineer (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-CICD-&-OS-Engineer-%28mwd%29-71409/1362355055) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Data Analyst Robotik / IoT (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Data-Analyst-Robotik-IoT-%28mwd%29-71409/1369596755) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Digital Transformation Expert (m/w/d) Purchase-to-Pay  (Option auf Teilzeit ab 75%)](https://careers.kaercher.com/job/Schwaikheim-Digital-Transformation-Expert-%28mwd%29-Purchase-to-Pay-%28Option-auf-Teilzeit-ab-75%29-71409/1369220855) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Elektriker / Mechatroniker (m/w/d) - Fokus Reparatur Service Center Ahorn (Main-Tauber-Kreis)](https://careers.kaercher.com/job/Ahorn-Elektriker-Mechatroniker-%28mwd%29-Fokus-Reparatur-Service-Center-Ahorn-%28Main-Tauber-Kreis%29-74744/1367825555) · Ahorn, DE, 74744 · seit 2026-11-08
+- [Entwicklungs- und Projektingenieur*in (m/w/d) Elektrotechnik](https://careers.kaercher.com/job/Schwaikheim-Entwicklungs-und-Projektingenieurin-%28mwd%29-Elektrotechnik-71409/1344340555) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Entwicklungsingenieur (m/w/d) Mobile Verpflegungssysteme](https://careers.kaercher.com/job/Schwaikheim-Entwicklungsingenieur-%28mwd%29-Mobile-Verpflegungssysteme-71409/1361592855) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Facilities Maintenance Technician (Aurora)](https://careers.kaercher.com/job/Aurora-Facilities-Maintenance-Technician-%28Aurora%29-IL-80019/1359597455) · Aurora, 80019, IL · seit 2026-11-08
 - [Field Service Technician (Detroit)](https://careers.kaercher.com/job/Detroit-Field-Service-Technician-%28Detroit%29-IL-48201/1360112755) · Detroit, 48201, IL · seit 2026-11-08
 - [Field Service Technician (Santa Ana, CA)](https://careers.kaercher.com/job/Santa-Ana%2C-CA-Field-Service-Technician-%28Santa-Ana%2C-CA%29-CA-92604/1368056655) · Santa Ana, CA, 92604, CA · seit 2026-11-08
+- [Global Online Shop Manager (m/w/d)](https://careers.kaercher.com/job/Winnenden-Global-Online-Shop-Manager-%28mwd%29-71364/1358962755) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Gruppenleiter (m/w/d) Controlling Sales und G&A Funktionen](https://careers.kaercher.com/job/Winnenden-Gruppenleiter-%28mwd%29-Controlling-Sales-und-G&A-Funktionen-71364/1370304555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Gruppenleiter (m/w/d) Global Controlling Operations](https://careers.kaercher.com/job/Winnenden-Gruppenleiter-%28mwd%29-Global-Controlling-Operations-71364/1373565055) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Head of Enterprise Technology Enablement (m/w/d)](https://careers.kaercher.com/job/Winnenden-Head-of-Enterprise-Technology-Enablement-%28mwd%29-71364/1335639255) · Winnenden, DE, 71364 · seit 2026-11-08
 - [KAM Retail](https://careers.kaercher.com/job/Bonneuil-sur-Marne-KAM-Retail-94865/1376067355) · Bonneuil-sur-Marne, FR, 94865 · seit 2026-11-08
 - [Lehrstelle Kauffrau/Kaufmann EFZ ab Sommer 2027 (m/w/d)](https://careers.kaercher.com/job/D%C3%A4llikon-Lehrstelle-KauffrauKaufmann-EFZ-ab-Sommer-2027-%28mwd%29-8108/1364492255) · Dällikon, CH, 8108 · seit 2026-11-08
 - [Logistics Specialist](https://careers.kaercher.com/job/Rho-Logistics-Specialist-20017/1368020255) · Rho, IT, 20017 · seit 2026-11-08
+- [Manager (m/w/d) Account Receivable - Global Business Services](https://careers.kaercher.com/job/Schwaikheim-Manager-%28mwd%29-Account-Receivable-Global-Business-Services-71409/1331010255) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Material Handler](https://careers.kaercher.com/job/Aurora-Material-Handler-IL-80019/1363337955) · Aurora, 80019, IL · seit 2026-11-08
+- [Mechatroniker (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Mechatroniker-%28mwd%29-71409/1335454755) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Mechatroniker (m/w/d) Instandsetzung](https://careers.kaercher.com/job/Schwaikheim-Mechatroniker-%28mwd%29-Instandsetzung-71409/1325826955) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Patentreferent (m/w/d)](https://careers.kaercher.com/job/Winnenden-Patentreferent-%28mwd%29-71364/1360580155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikant (m/w/d) Finance und Controlling 03/2027](https://careers.kaercher.com/job/Winnenden-Praktikant-%28mwd%29-Finance-und-Controlling-032027-71364/1370314555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikant (m/w/d) Key Account Management 03/2027](https://careers.kaercher.com/job/Winnenden-Praktikant-%28mwd%29-Key-Account-Management-032027-71364/1370317855) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Praktikum / Internship Factory Engineering](https://careers.kaercher.com/job/Obersontheim-Praktikum-Internship-Factory-Engineering-74423/1364903155) · Obersontheim, DE, 74423 · seit 2026-11-08
+- [Praktikum / Internship General Engineering](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Internship-General-Engineering-71409/1363285455) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum / Internship International Marketing & Sales](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Internship-International-Marketing-&-Sales-71409/1375992955) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum / Internship International Technical Sales and Bid Management](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Internship-International-Technical-Sales-and-Bid-Management-71409/1375996055) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum / Internship Market Intelligence](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Market-Intelligence-71364/1364995755) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum / Internship Software-Testing](https://careers.kaercher.com/job/Winnenden-Praktikum-Internship-Software-Testing-71364/1365009955) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Praktikum Fertigungsplanung / Internship Factory Planning](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Fertigungsplanung-Internship-Factory-Planning-71409/1373101655) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum im Serviceinnendienst / Internship Customer Service](https://careers.kaercher.com/job/Schwaikheim-Praktikum-im-Serviceinnendienst-Internship-Customer-Service-71409/1373102755) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Praktikum Qualitätsmanagement / Internship Quality Management](https://careers.kaercher.com/job/Schwaikheim-Praktikum-Qualit%C3%A4tsmanagement-Internship-Quality-Management-71409/1375994155) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum technisches Projektmanagement / Internship Technical Project Management](https://careers.kaercher.com/job/Schwaikheim-Praktikum-technisches-Projektmanagement-Internship-Technical-Project-Management-71409/1373102155) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Praktikum zentrales Qualitätsmanagement / Internship central Quality Management](https://careers.kaercher.com/job/Winnenden-Praktikum-zentrales-Qualit%C3%A4tsmanagement-Internship-central-Quality-Management-71364/1365008755) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Principal Software Engineer - Kärcher Connected Cleaning](https://careers.kaercher.com/job/Schwaikheim-Principal-Software-Engineer-K%C3%A4rcher-Connected-Cleaning-71409/1350198855) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Produktmanager (m/w/d) Consumer Outdoor B2C (2 Jahre befristet)](https://careers.kaercher.com/job/Winnenden-Produktmanager-%28mwd%29-Consumer-Outdoor-B2C-%282-Jahre-befristet%29-71364/1362185355) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Projektmanager*in (m/w/d) internationales Sonderkundengeschäft](https://careers.kaercher.com/job/Schwaikheim-Projektmanagerin-%28mwd%29-internationales-Sonderkundengesch%C3%A4ft-71409/1362313655) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Robotic Full Stack Engineer (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotic-Full-Stack-Engineer-%28mwd%29-71409/1362355555) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Robotic System Integrator SW (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotic-System-Integrator-SW-%28mwd%29-71409/1362356055) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Robotik System-Integrator Elektronik (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Robotik-System-Integrator-Elektronik-%28mwd%29-71409/1362353055) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Sales Manager (m/w/d) North and Eastern Europe](https://careers.kaercher.com/job/Schwaikheim-Sales-Manager-%28mwd%29-North-and-Eastern-Europe-71409/1365358855) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Senior Consultant (m/w/d) Performance Task Force](https://careers.kaercher.com/job/Winnenden-Senior-Consultant-%28mwd%29-Performance-Task-Force-71364/1344358955) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Senior Innovation Manager (m/w/d)](https://careers.kaercher.com/job/Winnenden-Senior-Innovation-Manager-%28mwd%29-71364/1363017155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Senior Social Commerce Specialist / Consultant (m/w/d)](https://careers.kaercher.com/job/Winnenden-Senior-Social-Commerce-Specialist-Consultant-%28mwd%29-71364/1369480155) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Teamleiter (m/w/d) Remote Sales & Bestandskundenbetreuung (B2B)](https://careers.kaercher.com/job/Winnenden-Teamleiter-%28mwd%29-Remote-Sales-&-Bestandskundenbetreuung-%28B2B%29-71364/1369858855) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Technical Sales Manager - Robotics & Digital](https://careers.kaercher.com/job/United-Kingdom-Technical-Sales-Manager-Robotics-&-Digital/1367996555) · United Kingdom, GB · seit 2026-11-08
 - [Técnico de Taller](https://careers.kaercher.com/job/Santiago-T%C3%A9cnico-de-Taller-9340000/1376041955) · Santiago, CL, 9340000 · seit 2026-11-08
 - [Verkstadstekniker](https://careers.kaercher.com/job/Malm%C3%B6-Verkstadstekniker-213-76/1352566255) · Malmö, SE, 213 76 · seit 2026-11-08
+- [Versuchsingenieur (m/w/d) Module Center Pumpset](https://careers.kaercher.com/job/Winnenden-Versuchsingenieur-%28mwd%29-Module-Center-Pumpset-71364/1362188555) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Versuchsingenieur (m/w/d) Testing Heat Engine](https://careers.kaercher.com/job/Winnenden-Versuchsingenieur-%28mwd%29-Testing-Heat-Engine-71364/1364724655) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Vertriebsberater/Vertriebsspezialist (m/w/d) für die Gebäudereinigung Großraum Bremen](https://careers.kaercher.com/job/Winnenden-VertriebsberaterVertriebsspezialist-%28mwd%29-f%C3%BCr-die-Geb%C3%A4udereinigung-Gro%C3%9Fraum-Bremen-71364/1372747255) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Werkstudent (m/w/d) Einkauf](https://careers.kaercher.com/job/Schwaikheim-Werkstudent-%28mwd%29-Einkauf-71409/1373100355) · Schwaikheim, DE, 71409 · seit 2026-11-08
+- [Werkstudent (m/w/d) im Bereich Entwicklung](https://careers.kaercher.com/job/Schwaikheim-Werkstudent-%28mwd%29-im-Bereich-Entwicklung-71409/1373470855) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Werkstudent (m/w/d) Logistik & Supply Chain Management](https://careers.kaercher.com/job/Obersontheim-Werkstudent-%28mwd%29-Logistik-&-Supply-Chain-Management-74423/1367720755) · Obersontheim, DE, 74423 · seit 2026-11-08
 - [КОНСУЛТАНТ ПРОДАЖБИ](https://careers.kaercher.com/job/%D0%A1%D0%BE%D1%84%D0%B8%D1%8F-%D0%9A%D0%9E%D0%9D%D0%A1%D0%A3%D0%9B%D0%A2%D0%90%D0%9D%D0%A2-%D0%9F%D0%A0%D0%9E%D0%94%D0%90%D0%96%D0%91%D0%98-1434/1136338755) · София, BG, 1434 · seit 2026-11-08
 - [Търговски представител - Директни продажби](https://careers.kaercher.com/job/%D0%A1%D0%BE%D1%84%D0%B8%D1%8F-%D0%A2%D1%8A%D1%80%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8-%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB-%D0%94%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BD%D0%B8-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B1%D0%B8-1000/966548755) · София, BG, 1000 · seit 2026-11-08
@@ -193,8 +236,15 @@ Stand: 2026-11-08T14:17:02+00:00 · 365 Stellen aus 35 von 60 Quellen
 - [Abschlussarbeit Oberflächenveredelung durch Gleitschlifftechnik für die perfekte Oberfläche](https://jobs.festo.com/job/St_-Ingbert-Abschlussarbeit-Oberfl%C3%A4chenveredelung-durch-Gleitschlifftechnik-f%C3%BCr-die-perfekte-Oberfl%C3%A4che-66386/1425509833) · St. Ingbert, DE, 66386 · seit 2026-11-08
 - [Abschlussarbeit: Optimierung von Materialfluss und Abläufen im Sägezentrum](https://jobs.festo.com/job/St_-Ingbert-Abschlussarbeit-Optimierung-von-Materialfluss-und-Abl%C3%A4ufen-im-S%C3%A4gezentrum-66386/1425509133) · St. Ingbert, DE, 66386 · seit 2026-11-08
 - [Agile Master](https://jobs.festo.com/job/Barcelona-Agile-Master-08908/1445556633) · Barcelona, ES, 08908 · seit 2026-11-08
+- [Ausbildung Elektroniker für Geräte und Systeme (m/w/d) 2027](https://jobs.festo.com/job/Esslingen-Ausbildung-Elektroniker-f%C3%BCr-Ger%C3%A4te-und-Systeme-%28mwd%29-2027-73734/1387326233) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Ausbildung Industriemechaniker (m/w/d) 2027](https://jobs.festo.com/job/Esslingen-Ausbildung-Industriemechaniker-%28mwd%29-2027-73734/1387326833) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Automation Sales Engineer](https://jobs.festo.com/job/Automation-Sales-Engineer-700000/1408612033) · VN, 700000 · seit 2026-11-08
+- [Befristete Beschäftigung als Produktionshelfer - Technologiefabrik Scharnhausen (m/w/d)](https://jobs.festo.com/job/Ostfildern-Befristete-Besch%C3%A4ftigung-als-Produktionshelfer-Technologiefabrik-Scharnhausen-%28mwd%29-73760/1443946033) · Ostfildern, DE, 73760 · seit 2026-11-08
 - [CS Prototype Specialist](https://jobs.festo.com/job/Mason-CS-Prototype-Specialist-IL-45039/1445220233) · Mason, 45039, IL · seit 2026-11-08
+- [Duales Studium - Informatik (B.Sc.), Cyber Security (m/w/d) 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Informatik-%28B_Sc_%29%2C-Cyber-Security-%28mwd%29-2027-73734/1387327333) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Duales Studium - Mechatronik (B.Eng.) (m/w/d) in Esslingen 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Mechatronik-%28B_Eng_%29-%28mwd%29-in-Esslingen-2027-73734/1387331833) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Duales Studium - Wirtschaftsinformatik, Data Science (B.Sc.) (m/w/d) 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Wirtschaftsinformatik%2C-Data-Science-%28B_Sc_%29-%28mwd%29-2027-73734/1387333033) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Duales Studium - Wirtschaftsingenieurwesen (B.Eng.) (m/w/d) in Esslingen 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Wirtschaftsingenieurwesen-%28B_Eng_%29-%28mwd%29-in-Esslingen-2027-73734/1387333333) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Information Security Officer (ISO) for EMEA Region](https://jobs.festo.com/job/Kaunas-Information-Security-Officer-%28ISO%29-for-EMEA-Region/1455044233) · Kaunas, LT · seit 2026-11-08
 - [Intralogistics Coordinator](https://jobs.festo.com/job/Mason-Intralogistics-Coordinator-IL-45039/1453412633) · Mason, 45039, IL · seit 2026-11-08
 - [Materialplaner/-in und Projektleiter/-in PPS (m/w/d)](https://jobs.festo.com/job/Burg-Materialplaner-in-und-Projektleiter-in-PPS-%28mwd%29-5736/1436172433) · Burg, CH, 5736 · seit 2026-11-08
@@ -203,10 +253,13 @@ Stand: 2026-11-08T14:17:02+00:00 · 365 Stellen aus 35 von 60 Quellen
 - [Praktikum Duales Studium - BOGY & Studienorientierung](https://jobs.festo.com/job/Esslingen-Praktikum-Duales-Studium-BOGY-&-Studienorientierung-73734/1014950601) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Praktikum im Bereich HR Employee Services Standort Saarland](https://jobs.festo.com/job/St_-Ingbert-Praktikum-im-Bereich-HR-Employee-Services-Standort-Saarland-66386/1277225101) · St. Ingbert, DE, 66386 · seit 2026-11-08
 - [Praktikum im Bereich HR Employer Branding / Personalmarketing](https://jobs.festo.com/job/Esslingen-Praktikum-im-Bereich-HR-Employer-Branding-Personalmarketing-73734/1445275033) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Praktikum im Bereich Personalsachbearbeitung / Employee Services](https://jobs.festo.com/job/Esslingen-Praktikum-im-Bereich-Personalsachbearbeitung-Employee-Services-73734/1450131833) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Praktikum in der Logistik](https://jobs.festo.com/job/St_-Ingbert-Praktikum-in-der-Logistik-66386/1260918301) · St. Ingbert, DE, 66386 · seit 2026-11-08
 - [Praktikum Industriemechaniker (m/w/d)](https://jobs.festo.com/job/Esslingen-Praktikum-Industriemechaniker-%28mwd%29-73734/1014964101) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Praktikum Infotronik - Ein Praktikum, zwei Berufsfelder](https://jobs.festo.com/job/Esslingen-Praktikum-Infotronik-Ein-Praktikum%2C-zwei-Berufsfelder-73734/1014966601) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Praktikum Kaufmännisch](https://jobs.festo.com/job/Esslingen-Praktikum-Kaufm%C3%A4nnisch-73734/1014967501) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Praktikum Mechatronik (m/w/d)](https://jobs.festo.com/job/Esslingen-Praktikum-Mechatronik-%28mwd%29-73734/1014967901) · Esslingen, DE, 73734 · seit 2026-11-08
+- [Praktikum Talent Acquisition - Schwerpunkt Recruiting (ab 10/2027)](https://jobs.festo.com/job/Esslingen-Praktikum-Talent-Acquisition-Schwerpunkt-Recruiting-%28ab-102027%29-73734/1373038933) · Esslingen, DE, 73734 · seit 2026-11-08
 - [Senior Logistics Operator](https://jobs.festo.com/job/Mason-Senior-Logistics-Operator-IL-45039/1453416733) · Mason, 45039, IL · seit 2026-11-08
 - [Strategic Order Management Specialist](https://jobs.festo.com/job/Mason-Strategic-Order-Management-Specialist-IL-45039/1444853433) · Mason, 45039, IL · seit 2026-11-08
 - [Team Leader](https://jobs.festo.com/job/Mason-Team-Leader-IL-45039/1453412133) · Mason, 45039, IL · seit 2026-11-08
@@ -348,26 +401,53 @@ Stand: 2026-11-08T14:17:02+00:00 · 365 Stellen aus 35 von 60 Quellen
 
 ### MAHLE
 
+- [Abschlussarbeit Vehicle Systems (m/w/d)](https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Vehicle-Systems-%28mwd%29-70376/1439096833) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Ausbildung: Industriemechaniker (m/w/d) 2027](https://careers.mahle.com/job/M%C3%BChlacker-Ausbildung-Industriemechaniker-%28mwd%29-2027-75417/1419092633) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Ausbildung: Industriemechaniker (m/w/d) 2027](https://careers.mahle.com/job/Markgr%C3%B6ningen-Ausbildung-Industriemechaniker-%28mwd%29-2027-71706/1405005433) · Markgröningen, DE, 71706 · seit 2026-11-08
+- [Ausbildung: Mechatroniker (m/w/d) 2027](https://careers.mahle.com/job/M%C3%BChlacker-Ausbildung-Mechatroniker-%28mwd%29-2027-75417/1419090033) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Ausbildung: Werkstoffprüfer Eislingen/Albershausen 2027 (m/w/d)](https://careers.mahle.com/job/Eislingen-Ausbildung-Werkstoffpr%C3%BCfer-EislingenAlbershausen-2027-%28mwd%29-73054/1424604533) · Eislingen, DE, 73054 · seit 2026-11-08
 - [Berufsausbildung: Industriemechaniker (m/w/d) 2027](https://careers.mahle.com/job/Zell-im-Wiesental-Berufsausbildung-Industriemechaniker-%28mwd%29-2027-79669/1435787333) · Zell im Wiesental, DE, 79669 · seit 2026-11-08
 - [Berufsausbildung: Maschinen- und Anlagenführer (m/w/d) 2027](https://careers.mahle.com/job/Zell-im-Wiesental-Berufsausbildung-Maschinen-und-Anlagenf%C3%BChrer-%28mwd%29-2027-79669/1435785733) · Zell im Wiesental, DE, 79669 · seit 2026-11-08
+- [Facharbeiter CNC-Maschinenbediener (m/w/d) - befristet](https://careers.mahle.com/job/Markgr%C3%B6ningen-Facharbeiter-CNC-Maschinenbediener-%28mwd%29-befristet-71706/1423379933) · Markgröningen, DE, 71706 · seit 2026-11-08
 - [Gießer (m/w/d) - befristet](https://careers.mahle.com/job/Markgr%C3%B6ningen-Gie%C3%9Fer-%28mwd%29-befristet-71706/1445911733) · Markgröningen, DE, 71706 · seit 2026-11-08
 - [HR SSC Spezialist (Deutschsprachig) (m/w/d)](https://careers.mahle.com/job/Belgrade-HR-SSC-Spezialist-%28Deutschsprachig%29-%28mwd%29/1434536733) · Belgrade, RS · seit 2026-11-08
 - [HR SSC Teamleiter (Deutschsprachig) (m/w/d)](https://careers.mahle.com/job/Belgrade-HR-SSC-Teamleiter-%28Deutschsprachig%29-%28mwd%29/1434525633) · Belgrade, RS · seit 2026-11-08
+- [Kooperatives Studium (m/w/d): Mechatronik Plus 2027](https://careers.mahle.com/job/M%C3%BChlacker-Kooperatives-Studium-%28mwd%29-Mechatronik-Plus-2027-75417/1419093733) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Lehre Metalltechniker / Maschinenbautechnik (m/w/d)](https://careers.mahle.com/job/V%C3%B6cklabruck-Lehre-Metalltechniker-Maschinenbautechnik-%28mwd%29/1454534133) · Vöcklabruck, AT · seit 2026-11-08
 - [Materialprüfer (m/w/d) Ultraschall- und Röntgenprüfung - befristet](https://careers.mahle.com/job/Markgr%C3%B6ningen-Materialpr%C3%BCfer-%28mwd%29-Ultraschall-und-R%C3%B6ntgenpr%C3%BCfung-befristet-71706/1445912033) · Markgröningen, DE, 71706 · seit 2026-11-08
 - [Mitarbeiter Kundenqualität (m/w/d)](https://careers.mahle.com/job/Heinsdorfergrund-Mitarbeiter-Kundenqualit%C3%A4t-%28mwd%29-08468/1391242233) · Heinsdorfergrund, DE, 08468 · seit 2026-11-08
 - [Mitarbeiter Montage im Bereich Schiene (m/w/d)](https://careers.mahle.com/job/Heinsdorfergrund-Mitarbeiter-Montage-im-Bereich-Schiene-%28mwd%29-08468/1403775933) · Heinsdorfergrund, DE, 08468 · seit 2026-11-08
 - [Mitarbeiter Zylindernachbearbeitung (m/w/d) - befristet](https://careers.mahle.com/job/Markgr%C3%B6ningen-Mitarbeiter-Zylindernachbearbeitung-%28mwd%29-befristet-71706/1444232633) · Markgröningen, DE, 71706 · seit 2026-11-08
+- [Praktikum Agentic A.I. im Software Development Lifecycle im Bereich Thermomanagement (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Agentic-A_I_-im-Software-Development-Lifecycle-im-Bereich-Thermomanagement-%28mwd%29-70469/1440350833) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum AI & Data-driven Innovation Management (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-AI-&-Data-driven-Innovation-Management-%28mwd%29-70376/1439055833) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum AI & Machine Learning für Automotive-Softwareprodukte (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-AI-&-Machine-Learning-f%C3%BCr-Automotive-Softwareprodukte-%28mwd%29-70469/1440350933) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum Arbeits-, Umweltschutz und Nachhaltigkeit Europa (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Arbeits-%2C-Umweltschutz-und-Nachhaltigkeit-Europa-%28mwd%29-70376/1439054733) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum Arbeitsrecht (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Arbeitsrecht-%28mwd%29-70376/1439058533) · Stuttgart, DE, 70376 · seit 2026-11-08
 - [Praktikum Business Development Industrial & Special Solutions (non-automotive) (m/w/d)](https://careers.mahle.com/job/Kornwestheim-Praktikum-Business-Development-Industrial-&-Special-Solutions-%28non-automotive%29-%28mwd%29-70806/1453928133) · Kornwestheim, DE, 70806 · seit 2026-11-08
+- [Praktikum datengetriebene & KI-unterstützte Batteriemodellierung & -simulation (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-datengetriebene-&-KI-unterst%C3%BCtzte-Batteriemodellierung-&-simulation-%28mwd%29-70469/1439590533) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum Digital Products - Artificial Intelligence für innovative Fahrzeugregelsysteme (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Digital-Products-Artificial-Intelligence-f%C3%BCr-innovative-Fahrzeugregelsysteme-%28mwd%29-70469/1439560333) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum HR Ausbildungsservice und Praktikantenbetreuung (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-HR-Ausbildungsservice-und-Praktikantenbetreuung-%28mwd%29-70376/1439045133) · Stuttgart, DE, 70376 · seit 2026-11-08
 - [Praktikum integrierte Managementsysteme (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-integrierte-Managementsysteme-%28mwd%29-70376/1444350733) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum Internes Kontrollsystem (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Internes-Kontrollsystem-%28mwd%29-70376/1441984633) · Stuttgart, DE, 70376 · seit 2026-11-08
 - [Praktikum Konzerndatenschutz (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Konzerndatenschutz-%28mwd%29-70376/1453449433) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum Logistik (m/w/d)](https://careers.mahle.com/job/Fellbach-Praktikum-Logistik-%28mwd%29-70736/1442656933) · Fellbach, DE, 70736 · seit 2026-11-08
+- [Praktikum Machine Learning und Data Science (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Machine-Learning-und-Data-Science-%28mwd%29-70376/1439057633) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum Markt- und Wettbewerbsbeobachtung (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Markt-und-Wettbewerbsbeobachtung-%28mwd%29-70376/1440980033) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum Personalbetreuung Stuttgart (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Personalbetreuung-Stuttgart-%28mwd%29-70376/1442635633) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Praktikum Powertrain Cooling Development (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Powertrain-Cooling-Development-%28mwd%29-70469/1442375233) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum Produkt-Portfolio-Management Data Analytics (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Produkt-Portfolio-Management-Data-Analytics-%28mwd%29-70469/1442407033) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum Produktentwicklung (m/w/d)](https://careers.mahle.com/job/Kornwestheim-Praktikum-Produktentwicklung-%28mwd%29-70806/1442670833) · Kornwestheim, DE, 70806 · seit 2026-11-08
+- [Praktikum Projekthaus Vehicle Systems (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Projekthaus-Vehicle-Systems-%28mwd%29-70376/1439077033) · Stuttgart, DE, 70376 · seit 2026-11-08
 - [Praktikum Qualitätsmanagement (m/w/d)](https://careers.mahle.com/job/Fellbach-Praktikum-Qualit%C3%A4tsmanagement-%28mwd%29-70736/1444435833) · Fellbach, DE, 70736 · seit 2026-11-08
+- [Praktikum Simulation Thermomanagement von Elektrofahrzeugen (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Simulation-Thermomanagement-von-Elektrofahrzeugen-%28mwd%29-70469/1439591033) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum Supplier Quality (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Supplier-Quality-%28mwd%29-70469/1442397433) · Stuttgart, DE, 70469 · seit 2026-11-08
+- [Praktikum Trend Scouting (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Trend-Scouting-%28mwd%29-70376/1439062033) · Stuttgart, DE, 70376 · seit 2026-11-08
+- [Schulpraktikum Mühlacker 2027 - Schwerpunkt technisch/gewerbliche Berufsausbildung (m/w/d)](https://careers.mahle.com/job/M%C3%BChlacker-Schulpraktikum-M%C3%BChlacker-2027-Schwerpunkt-technischgewerbliche-Berufsausbildung-%28mwd%29-75417/1419093233) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Schulpraktikum Stuttgart 2027 - Schwerpunkt Duales Studium (m/w/d)](https://careers.mahle.com/job/Stuttgart-Schulpraktikum-Stuttgart-2027-Schwerpunkt-Duales-Studium-%28mwd%29-70376/1453902833) · Stuttgart, DE, 70376 · seit 2026-11-08
 - [Schweißer (m/w/d)](https://careers.mahle.com/job/Heinsdorfergrund-Schwei%C3%9Fer-%28mwd%29-08468/1225989801) · Heinsdorfergrund, DE, 08468 · seit 2026-11-08
 - [Servicetechniker (m/w/d)](https://careers.mahle.com/job/Heinsdorfergrund-Servicetechniker-%28mwd%29-08468/1244501201) · Heinsdorfergrund, DE, 08468 · seit 2026-11-08
 - [Studentische Tätigkeit / Praktikum / Abschlussarbeit Digitalisierung von Geschäftsprozessen (m/w/d)](https://careers.mahle.com/job/M%C3%BChlacker-Studentische-T%C3%A4tigkeit-Praktikum-Abschlussarbeit-Digitalisierung-von-Gesch%C3%A4ftsprozessen-%28mwd%29-75417/1425276633) · Mühlacker, DE, 75417 · seit 2026-11-08
+- [Technisches Schulpraktikum (m/w/d)](https://careers.mahle.com/job/Markgr%C3%B6ningen-Technisches-Schulpraktikum-%28mwd%29-71706/1405577533) · Markgröningen, DE, 71706 · seit 2026-11-08
 
 ### Murrelektronik GmbH
 
