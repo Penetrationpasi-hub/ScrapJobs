@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T15:03:10+00:00 · 520 Stellen aus 38 von 61 Quellen
+Stand: 2026-11-08T15:27:49+00:00 · 535 Stellen aus 39 von 61 Quellen
 
 ## Quellen
 
@@ -53,7 +53,7 @@ Stand: 2026-11-08T15:03:10+00:00 · 520 Stellen aus 38 von 61 Quellen
 | Adolf Föhl | done | 7 | 2026-11-08 |  |
 | Stadtwerke Waiblingen | done | 9 | 2026-11-08 |  |
 | FESSMANN | done | 2 | 2026-11-08 |  |
-| Soehnle Industrial Solutions | no_verified_jobs | 0 | – | verworfen, z. B. https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd |
+| Soehnle Industrial Solutions | done | 15 | 2026-11-08 |  |
 | Gotthilf Benz Turngeräte | done | 7 | 2026-11-08 |  |
 | RIANI | done | 6 | 2026-11-08 |  |
 | Dusyma | too_large | 0 | – |  |
@@ -659,6 +659,24 @@ Stand: 2026-11-08T15:03:10+00:00 · 520 Stellen aus 38 von 61 Quellen
 - [Ab sofort: Produktionshelfer (m/w/d) unbefristet](https://k57824.coveto.de/job-ab-sofort-produktionshelfer-m-w-d-unbefristet-neenstetten-42034.html) · 89189 Neenstetten Baden-Württemberg DE · seit 2026-11-08
 - [Ab sofort: Produktionshelfer (m/w/d) unbefristet](https://k57824.coveto.de/job-ab-sofort-produktionshelfer-m-w-d-unbefristet-neenstetten-42033.html) · 89189 Neenstetten Baden-Württemberg DE · seit 2026-11-08
 - [Ab sofort: Produktionsmitarbeiter (m/w/d) unbefristet](https://k57824.coveto.de/job-ab-sofort-produktionsmitarbeiter-m-w-d-unbefristet-filderstadt-41968.html) · 70794 Filderstadt Baden-Württemberg DE · seit 2026-11-08
+
+### Soehnle Industrial Solutions GmbH
+
+- [Applikationstechniker Systemlösungen (m/w/d)](https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd) · seit 2026-11-08
+- [Ausbildung Fachinformatiker für Systemintegration (m/w/d)](https://www.soehnle-professional.com/de/karriere/53/ausbildung-fachinformatiker-fur-systemintegration-mwd) · seit 2026-11-08
+- [Ausbildung Industriekaufmann (m/w/d)](https://www.soehnle-professional.com/de/karriere/81/ausbildung-industriekaufmann-mwd) · seit 2026-11-08
+- [Entwicklungskonstrukteur (m/w/d)](https://www.soehnle-professional.com/de/karriere/48/entwicklungskonstrukteur-mwd) · seit 2026-11-08
+- [Fachinformatiker für Anwendungsentwicklung (m/w/d)](https://www.soehnle-professional.com/de/karriere/80/fachinformatiker-fur-anwendungsentwicklung-mwd) · seit 2026-11-08
+- [Junior Embedded-Software-Entwickler (m/w/d)](https://www.soehnle-professional.com/de/karriere/47/junior-embedded-software-entwickler-mwd) · seit 2026-11-08
+- [Junior Sales Manager Smart Solutions (m/w/d)](https://www.soehnle-professional.com/de/karriere/85/junior-sales-manager-smart-solutions-mwd) · seit 2026-11-08
+- [Key Account Manager Export Industrie (m/w/d)](https://www.soehnle-professional.com/de/karriere/89/key-account-manager-export-industrie-mwd) · seit 2026-11-08
+- [Mechatroniker (m/w/d)](https://www.soehnle-professional.com/de/karriere/37/mechatroniker-mwd) · seit 2026-11-08
+- [Mitarbeiter (m/w/d) für Garten- und Grundstückspflege - geringfügig](https://www.soehnle-professional.com/de/karriere/84/mitarbeiter-mwd-fur-garten-und-grundstuckspflege-geringfugig) · seit 2026-11-08
+- [Mitarbeiter Instandhaltung / Vorrichtungsbau (m/w/d)](https://www.soehnle-professional.com/de/karriere/65/mitarbeiter-instandhaltung-vorrichtungsbau-mwd) · seit 2026-11-08
+- [Mitarbeiter Produktion (m/w/d)](https://www.soehnle-professional.com/de/karriere/83/mitarbeiter-produktion-mwd) · seit 2026-11-08
+- [Mitarbeiter Produktion Löten (m/w/d)](https://www.soehnle-professional.com/de/karriere/95/mitarbeiter-produktion-loten-mwd) · seit 2026-11-08
+- [Servicetechniker (m/w/d)](https://www.soehnle-professional.com/de/karriere/73/servicetechniker-mwd) · seit 2026-11-08
+- [Techniker Elektrotechnik (m/w/d)](https://www.soehnle-professional.com/de/karriere/52/techniker-elektrotechnik-mwd) · seit 2026-11-08
 
 ### Stadt Schorndorf Jobportal
 

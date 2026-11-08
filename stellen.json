@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T15:03:10+00:00",
+ "aktualisiert": "2026-11-08T15:27:49+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -339,10 +339,9 @@
   {
    "key": "soehnle",
    "label": "Soehnle Industrial Solutions",
-   "status": "no_verified_jobs",
-   "detail": "verworfen, z. B. https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 15
   },
   {
    "key": "benz_sport",
@@ -398,8 +397,8 @@
    "key": "pfisterer",
    "label": "PFISTERER",
    "status": "timeout",
-   "detail": "verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html",
    "letzterErfolg": null,
+   "detail": "verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html",
    "anzahl": 0
   },
   {
@@ -5860,6 +5859,186 @@
    "posted": "2026-07-28",
    "source": "socco",
    "sourceLabel": "SOCCO",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a0e657a1261cd1adea8858fb",
+   "title": "Applikationstechniker Systemlösungen (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/62/applikationstechniker-systemlosungen-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-64d01914502540651bf61529",
+   "title": "Ausbildung Fachinformatiker für Systemintegration (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/53/ausbildung-fachinformatiker-fur-systemintegration-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-f30bcc5e2428d137cd7aa5d7",
+   "title": "Ausbildung Industriekaufmann (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/81/ausbildung-industriekaufmann-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c80defed727def82e9cf1990",
+   "title": "Entwicklungskonstrukteur (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/48/entwicklungskonstrukteur-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-c3e31364342c94cb277887a6",
+   "title": "Fachinformatiker für Anwendungsentwicklung (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/80/fachinformatiker-fur-anwendungsentwicklung-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-197437a9a1901dd4672f00c0",
+   "title": "Junior Embedded-Software-Entwickler (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/47/junior-embedded-software-entwickler-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-829e142fea5bf2ad6bbb698c",
+   "title": "Junior Sales Manager Smart Solutions (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/85/junior-sales-manager-smart-solutions-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a4ef72f5774416d34a51ab6a",
+   "title": "Key Account Manager Export Industrie (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/89/key-account-manager-export-industrie-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ba19d09cc4b1badcc44f8b24",
+   "title": "Mechatroniker (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/37/mechatroniker-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-72d71866a926c1d67eb2e24a",
+   "title": "Mitarbeiter (m/w/d) für Garten- und Grundstückspflege - geringfügig",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/84/mitarbeiter-mwd-fur-garten-und-grundstuckspflege-geringfugig",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-f85ceeec1a3801ee6fe4b0ce",
+   "title": "Mitarbeiter Instandhaltung / Vorrichtungsbau (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/65/mitarbeiter-instandhaltung-vorrichtungsbau-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-99441b89ea0967f2d02fb305",
+   "title": "Mitarbeiter Produktion (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/83/mitarbeiter-produktion-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-4558551a9450dade65b636f4",
+   "title": "Mitarbeiter Produktion Löten (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/95/mitarbeiter-produktion-loten-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-a5072cff1b7455468dea4da5",
+   "title": "Servicetechniker (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/73/servicetechniker-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-3b33ff0497fdcdebec5ede1f",
+   "title": "Techniker Elektrotechnik (m/w/d)",
+   "company": "Soehnle Industrial Solutions GmbH",
+   "location": "",
+   "url": "https://www.soehnle-professional.com/de/karriere/52/techniker-elektrotechnik-mwd",
+   "posted": "",
+   "source": "soehnle",
+   "sourceLabel": "Soehnle Industrial Solutions",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },
