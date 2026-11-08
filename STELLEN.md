@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T18:04:54+00:00 · 538 Stellen aus 40 von 61 Quellen
+Stand: 2026-11-08T18:17:42+00:00 · 561 Stellen aus 41 von 61 Quellen
 
 ## Quellen
 
@@ -61,7 +61,7 @@ Stand: 2026-11-08T18:04:54+00:00 · 538 Stellen aus 40 von 61 Quellen
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
 | Abfallwirtschaft Rems-Murr | done | 1 | 2026-11-08 |  |
 | Murrelektronik | done | 9 | 2026-11-08 |  |
-| PFISTERER | no_verified_jobs | 0 | – | verworfen, z. B. https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/job.html (ld+json 2, JobPosting 1, 26902 Zeichen, Titel «Data Strategist & Enterprise Architect (w/m/d) | B») → Weiterleitung auf https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/de/job.html |
+| PFISTERER | done | 23 | 2026-11-08 |  |
 | Hahn Automobile | done | 8 | 2026-11-08 |  |
 | Klingele Paper & Packaging | done | 20 | 2026-11-08 |  |
 | Harro Höfliger | done | 10 | 2026-11-08 |  |
@@ -576,6 +576,35 @@ Stand: 2026-11-08T18:04:54+00:00 · 538 Stellen aus 40 von 61 Quellen
 ### Paulinenpflege Winnenden e.V.
 
 - [Ausbilder Hauswirtschaft (m/w/d) in Vollzeit I Berufsbildungswerk Winnenden](https://rems-murr-jobs.de/job/ausbilder-hauswirtschaft-mwd-vollzeit-i-berufsbildungswerk-winnenden-1810235) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-08
+
+### PFISTERER Holding SE
+
+- [IMS Manager (m/w/d)](https://pfisterer.mhm.jobs/1537-ims-manager-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Manager Inhouse Consulting - Prozessdesign & Transformation (w/m/d)](https://pfisterer.mhm.jobs/1558-manager-inhouse-consulting-prozessdesign-transformation-w-m-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Projektmanager Global Supply Chain Transformation – Fokus Procurement Excellence (m/w/d)](https://pfisterer.mhm.jobs/1650-projektmanager-global-supply-chain-transformation-fokus-procurement-excellence-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+
+### Pfisterer Kontaktsysteme GmbH
+
+- [Ausbildung zum Kunststoff- und Kautschuktechnologe (m/w/d) 2027](https://pfisterer.mhm.jobs/1575-ausbildung-zum-kunststoff-und-kautschuktechnologe-m-w-d-2027/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Ausbildung zum Zerspanungsmechaniker (m/w/d), Fachrichtungen Dreh- oder Fräsmaschinensysteme](https://pfisterer.mhm.jobs/1577-ausbildung-zum-zerspanungsmechaniker-m-w-d-fachrichtungen-dreh-oder-fraesmaschinensysteme/de/job.html) · 89547 Gerstetten-Gussenstadt DE · seit 2026-11-08
+- [Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)](https://pfisterer.mhm.jobs/1722-ausbildung-zur-fachkraft-fuer-lagerlogistik-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Business Development Manager Asia Pacific (m/w/d)](https://pfisterer.mhm.jobs/1546-business-development-manager-asia-pacific-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Business Development Manager Platforms (m/w/d)](https://pfisterer.mhm.jobs/1591-business-development-manager-platforms-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Data Strategist & Enterprise Architect (w/m/d)](https://pfisterer.mhm.jobs/1786-data-strategist-enterprise-architect-w-m-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Duales Studium BWL-Industrial Business Management  (DHBW)](https://pfisterer.mhm.jobs/1579-duales-studium-bwl-industrial-business-management-dhbw/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Duales Studium Wirtschaftsingenieurwesen (DHBW), Fachrichtung Elektrotechnik](https://pfisterer.mhm.jobs/1581-duales-studium-wirtschaftsingenieurwesen-dhbw-fachrichtung-elektrotechnik/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Einzelgeräte-Kabelmonteur (m/w/d)](https://pfisterer.mhm.jobs/1707-einzelgeraete-kabelmonteur-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Gießer (w/m/d)](https://pfisterer.mhm.jobs/1778-giesser-w-m-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Head of IT Governance and Operations (m/w/d)](https://pfisterer.mhm.jobs/1625-head-of-it-governance-and-operations-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Head of Product Portfolio Management OHL (m/w/d)](https://pfisterer.mhm.jobs/1781-head-of-product-portfolio-management-ohl-m-w-d/de/job.html) · 73650 Winterbach DE / 6403 Küssnacht am Rigi CH · seit 2026-11-08
+- [IBP Manager (w/m/d)](https://pfisterer.mhm.jobs/1712-ibp-manager-w-m-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Manager Treasury (m/w/d)](https://pfisterer.mhm.jobs/1664-manager-treasury-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Mitarbeiter im elektrischen Prüffeld (m/w/d)](https://pfisterer.mhm.jobs/1622-mitarbeiter-im-elektrischen-prueffeld-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Product Portfolio Manager (m/w/d)](https://pfisterer.mhm.jobs/1774-product-portfolio-manager-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Prozess- & Projektmanager – Tool Design & Manufacturing Technology  (m/w/d)](https://pfisterer.mhm.jobs/1668-prozess-projektmanager-tool-design-manufacturing-technology-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Prüfingenieur (w/m/d) High Voltage](https://pfisterer.mhm.jobs/1567-pruefingenieur-w-m-d-high-voltage/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Teamleiter SAP (m/w/d)](https://pfisterer.mhm.jobs/1297-teamleiter-sap-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+- [Versuchsingenieur (w/m/d)](https://pfisterer.mhm.jobs/1540-versuchsingenieur-w-m-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
 
 ### REMS
 
