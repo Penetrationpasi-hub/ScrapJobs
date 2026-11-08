@@ -34,3 +34,19 @@ class SitemapTest(unittest.TestCase):
         jobs = list(adapter_jobs(source, SimpleNamespace(q="", location="", max_details=10), get, report))
         self.assertEqual([j["company"] for j in jobs], ["Peter Hahn GmbH"])
         self.assertEqual([c for c, _ in calls], ["https://jobs.peterhahn.com/sitemap", AD])
+
+
+class SitemapSourcesTest(unittest.TestCase):
+    def test_configured_sitemap_sources_match_their_ad_addresses(self):
+        from extraction import is_detail
+        cases = {
+            "diakonie_stetten": ("https://deinjob.diakonie-stetten.de/jobs/23893460/Mitarbeiter-m-w-d-in-der-Reinigung/", "https://deinjob.diakonie-stetten.de/"),
+            "loeffelhardt": ("https://jobs.loeffelhardt.de/jobs/65555141/Ausbildung-als-Fachlagerist-m-w-d-,-Start-09-2027/", "https://jobs.loeffelhardt.de/"),
+            "syntegon": ("https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e", "https://jobs.syntegon.com/search"),
+        }
+        for key, (ad, listing) in cases.items():
+            with self.subTest(key=key):
+                source = registry()[key]
+                self.assertEqual(source.adapter, "sitemap")
+                self.assertTrue(is_detail(ad, source))
+                self.assertFalse(is_detail(listing, source))

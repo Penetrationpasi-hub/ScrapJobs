@@ -31,6 +31,9 @@ LOCATION_DOCUMENTS = 140
 LOCATION_SECONDS = 450
 # Quellen, deren robots.txt lange Wartezeiten zwischen Abrufen verlangt (PFISTERER: 10 s): Faktor auf das Zeitbudget.
 SLOW_SOURCES = {"pfisterer": 4}
+# Sitemap-Quellen lesen jede Anzeige einzeln: mehr Einzelseiten und mehr Zeit als der Standard.
+SITEMAP_DETAILS = 100
+SITEMAP_DOCUMENTS = 130
 FIELDS = ("id", "title", "company", "location", "url", "posted")
 
 
@@ -149,11 +152,13 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         for place in places:
             req = SimpleNamespace(q="", location=place, radius_km=25, sources=[key],
                                   max_jobs=max(options.max_jobs, LOCATION_DETAILS) if place else options.max_jobs,
-                                  max_details=max(options.max_details, LOCATION_DETAILS) if place else options.max_details,
-                                  documents=max(options.documents, LOCATION_DOCUMENTS) if place else options.documents,
+                                  max_details=(max(options.max_details, LOCATION_DETAILS) if place else
+                                               max(options.max_details, SITEMAP_DETAILS) if getattr(source, "adapter", "") == "sitemap" else options.max_details),
+                                  documents=(max(options.documents, LOCATION_DOCUMENTS) if place else
+                                             max(options.documents, SITEMAP_DOCUMENTS) if getattr(source, "adapter", "") == "sitemap" else options.documents),
                                   robots_missing_ok=not options.strict_robots,
                                   seconds=(max(options.seconds, LOCATION_SECONDS) if place else options.seconds)
-                                  * (2 if key in ISOLATED_SOURCES else 1) * SLOW_SOURCES.get(key, 1))
+                                  * (2 if key in ISOLATED_SOURCES or getattr(source, "adapter", "") == "sitemap" else 1) * SLOW_SOURCES.get(key, 1))
             if place:
                 req.max_pages = LOCATION_PAGES
             try:
