@@ -200,6 +200,7 @@ def crawl(req, transport_factory=Transport):
                 report["detail"] = cause.detail
             elif cause.http_status or cause is not error:
                 report["detail"] = cause.code + (f" HTTP {cause.http_status}" if cause.http_status else "")
-        except Exception:
+        except Exception as error:
             report["status"] = "unsupported"
+            report["detail"] = "interner Fehler: " + type(error).__name__ + " " + str(error)[:120]
     return {"status": "done", "jobs": jobs, "sources": reports, "documents": total_documents - budget.remaining}

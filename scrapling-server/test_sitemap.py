@@ -68,7 +68,6 @@ class SitemapSourcesTest(unittest.TestCase):
         for key, (ad, listing) in cases.items():
             with self.subTest(key=key):
                 source = registry()[key]
-                if key != "klinikum_stuttgart":
-                    self.assertEqual(source.adapter, "sitemap")
+                self.assertEqual(source.adapter, "sitemap")
                 self.assertTrue(is_detail(ad, source))
                 self.assertFalse(is_detail(listing, source))
