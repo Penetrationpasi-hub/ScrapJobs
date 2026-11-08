@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T19:17:44+00:00 · 738 Stellen aus 48 von 61 Quellen
+Stand: 2026-11-08T19:21:58+00:00 · 784 Stellen aus 49 von 61 Quellen
 
 ## Quellen
 
@@ -23,7 +23,7 @@ Stand: 2026-11-08T19:17:44+00:00 · 738 Stellen aus 48 von 61 Quellen
 | Airbus (Stuttgart, Laupheim, Backnang) | done | 9 | 2026-11-08 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-08 |  |
 | Volksbank Stuttgart | done | 7 | 2026-11-08 |  |
-| Klinikum Stuttgart · Bad Cannstatt | unsupported | 0 | – |  |
+| Klinikum Stuttgart · Bad Cannstatt | done | 46 | 2026-11-08 |  |
 | Stadt Schorndorf | done | 6 | 2026-11-08 |  |
 | Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-08 |  |
 | Peter Hahn | done | 1 | 2026-11-08 |  |
@@ -603,6 +603,55 @@ Stand: 2026-11-08T19:17:44+00:00 · 738 Stellen aus 48 von 61 Quellen
 - [Pflegefachkraft (w/m/d) für die Klinik für Suchttherapie in Voll- oder Teilzeit G1](https://jobs.karriere.zfp-winnenden.de/jobposting/b89c69ba9e976bdf7baa78c34646f08c76c20a1c0) · 71364 Winnenden BW de · seit 2026-11-08
 - [Pflegefachkraft (w/m/d) für die Tagesklinik in Schwäbisch Gmünd](https://jobs.karriere.zfp-winnenden.de/jobposting/874bc19feb8f36766de1844ae2b3ec2e16edf58c0) · 71364 Winnenden BW de · seit 2026-11-08
 - [Stv. Pflegerische Stationsleitung (w/m/d) für die Station A2 in Voll- oder Teilzeit (mind. 75%) ab sofort](https://jobs.karriere.zfp-winnenden.de/jobposting/141347b7e446999bb81bb58b72d0ea934185d5bb0) · 71364 Winnenden BW de · seit 2026-11-08
+
+### Klinikum Stuttgart
+
+- [Anlagenmechaniker HLK (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/anlagenmechaniker-hlk-m-w-d-3470) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Anlagenmechaniker SHK (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/anlagenmechaniker-shk-m-w-d-3233) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Assistenzarzt / Assistenzärztin  in Weiterbildung Psychiatrie Psychotherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/assistenzarzt-assistenzaerztin-in-weiterbildung-psychiatrie-psychotherapie-m-w-d-989) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Assistenzarzt oder Facharzt  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/assistenzarzt-oder-facharzt-m-w-d-3407) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Assistenzarzt/ Assistenzärztin  Psychiatrie  Psychotherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/assistenzarzt-assistenzaerztin-psychiatrie-psychotherapie-m-w-d-1339) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Controller mit Schwerpunkt Klinikcontrolling (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/controller-mit-schwerpunkt-klinikcontrolling-m-w-d-3510) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Elektromeister / Elektrotechniker (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/elektromeister-elektrotechniker-m-w-d-2917) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Erzieher/ Pädagogische Fachkraft in Voll- und Teilzeit (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/erzieher-paedagogische-fachkraft-in-voll-und-teilzeit-m-w-d-3366) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Facharzt / Fachärztin Psychiatrie Psychotherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/facharzt-fachaerztin-psychiatrie-psychotherapie-m-w-d-990) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Logopäde (m/w/d) in Teilzeit (50-70%)](https://www.klinikum-stuttgart.de/karriere/job/logopaede-m-w-d-in-teilzeit-50-70-3506) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Medizinischer Technologe (MTR) Strahlentherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/medizinischer-technologe-mtr-strahlentherapie-m-w-d-3321) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Medizinischer Technologe für Funktionsdiagnostik (MT-F / MTA) – Bereich Neurologie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/medizinischer-technologe-fuer-funktionsdiagnostik-mt-f-mta-bereich-neurologie-m-w-d-3252) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Medizinischer Technologe für Radiologie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/medizinischer-technologe-fuer-radiologie-m-w-d-3411) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Medizinischer Technologe in der Strahlentherapie (w/m/d)](https://www.klinikum-stuttgart.de/karriere/job/medizinischer-technologe-in-der-strahlentherapie-w-m-d-1794) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [MFA  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/mfa-m-w-d-3518) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [MFA  / MTR (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/mfa-mtr-m-w-d-3516) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [MFA (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/mfa-m-w-d-3182) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Mitarbeiter (m/w/d) für die stationäre Leistungsabrechnung](https://www.klinikum-stuttgart.de/karriere/job/mitarbeiter-m-w-d-fuer-die-stationaere-leistungsabrechnung-3513) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Mitarbeiter:in (m/w/d) organisatorischer Arbeits- und Gesundheitsschutz](https://www.klinikum-stuttgart.de/karriere/job/mitarbeiterin-m-w-d-organisatorischer-arbeits-und-gesundheitsschutz-3489) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Mitarbeiter:in Institutsanmeldung  / MFA (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/mitarbeiterin-institutsanmeldung-mfa-m-w-d-3505) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Oberarzt (m/w/d)  Institut für Krankenhaushygiene](https://www.klinikum-stuttgart.de/karriere/job/oberarzt-m-w-d-institut-fuer-krankenhaushygiene-3504) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Oberarzt / Oberärztin  Psychiatrie Psychotherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/oberarzt-oberaerztin-psychiatrie-psychotherapie-m-w-d-991) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Oberarzt / Oberärztin Psychiatrie Psychotherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/oberarzt-oberaerztin-psychiatrie-psychotherapie-m-w-d-3477) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Oberarzt Psychosomatik Psychotherapie in Voll- oder Teilzeit (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/oberarzt-psychosomatik-psychotherapie-in-voll-oder-teilzeit-m-w-d-3397) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [OTA/ Pflegefachkraft (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/ota-pflegefachkraft-m-w-d-3132) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [OTA/ Pflegefachkraft für den Herz-OP (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/ota-pflegefachkraft-fuer-den-herz-op-m-w-d-3320) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [OTA/ Pflegefachkraft für den Hyprid-OP (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/ota-pflegefachkraft-fuer-den-hyprid-op-m-w-d-3137) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft  für die internistische Intensivstation F21A mit dem Schwerpunkt ECMO-Therapie  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-fuer-die-internistische-intensivstation-f21a-mit-dem-schwerpunkt-ecmo-therapie-m-w-d-2820) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-m-w-d-3502) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft allgemeine Pädiatrie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-allgemeine-paediatrie-m-w-d-3254) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft Dermatologische Ambulanz (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-dermatologische-ambulanz-m-w-d-3402) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft für die Kinderonkologie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-fuer-die-kinderonkologie-m-w-d-3487) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft gynäkologische Ambulanz (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-gynaekologische-ambulanz-m-w-d-3508) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft Herzchirurgische Allgemeinstation  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-herzchirurgische-allgemeinstation-m-w-d-3499) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft Herzchirurgische Intensivstation (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-herzchirurgische-intensivstation-m-w-d-3387) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft IMC Station (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-imc-station-m-w-d-3136) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft mit Onkologischer Fachweiterbildung (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-mit-onkologischer-fachweiterbildung-m-w-d-3164) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft operative Intensivstation (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-operative-intensivstation-m-w-d-3479) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft Psychosomatik (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-psychosomatik-m-w-d-3453) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegefachkraft, OTA, MFA oder MTA für das Herzkatheterlabor (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-ota-mfa-oder-mta-fuer-das-herzkatheterlabor-m-w-d-3071) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Pflegepädagogin (m/w/d) 80 -100 %](https://www.klinikum-stuttgart.de/karriere/job/pflegepaedagogin-m-w-d-80-100-1198) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Projektleiter Bau (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/projektleiter-bau-m-w-d-3383) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Projektleiter Elektrotechnik (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/projektleiter-elektrotechnik-m-w-d-3298) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Study Nurse (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/study-nurse-m-w-d-3514) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Theaterpädagoge/ Theatertherapeut  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/theaterpaedagoge-theatertherapeut-m-w-d-3517) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
+- [Ökonomische Zentrumsleitung für das Olgahospital (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/oekonomische-zentrumsleitung-fuer-das-olgahospital-m-w-d-3318) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
 
 ### Klöpfer GmbH & Co. KG
 
