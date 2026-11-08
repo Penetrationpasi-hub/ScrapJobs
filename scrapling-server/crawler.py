@@ -16,6 +16,9 @@ from search_outcomes import festo_no_matches
 def crawl(req, transport_factory=Transport):
     # Live search keeps the pilot limits; the catalog batch passes its own via optional request attributes.
     max_jobs = getattr(req, "max_jobs", 30)
+    # Nur der Katalog-Lauf: eine fehlende robots.txt (404/410) heißt "keine Regeln veröffentlicht".
+    # Der Live-Dienst bleibt streng; 403/429/5xx, Timeouts und Sperren brechen immer ab.
+    robots_missing_ok = getattr(req, "robots_missing_ok", False)
     total_documents = getattr(req, "documents", 40)
     custom = hasattr(req, "seconds") or hasattr(req, "documents")
     budget = Budget(getattr(req, "seconds", RUN_SECONDS), total_documents) if custom else Budget()
@@ -38,6 +41,9 @@ def crawl(req, transport_factory=Transport):
                     if missing_robots_scope(current, source, options) and error.http_status in missing_robots_statuses(source):
                         robots[host] = None
                         return
+                    if robots_missing_ok and error.code == "gone":
+                        robots[host] = None
+                        return
                     raise FetchError("robots_unavailable") from error
                 if not re.search(r"(?im)^\s*user-agent\s*:", text):
                     raise FetchError("robots_unavailable", detail="robots.txt ohne User-agent-Zeile")
@@ -46,7 +52,7 @@ def crawl(req, transport_factory=Transport):
                 robots[host] = robot
             robot = robots[host]
             if robot is None:
-                if not missing_robots_scope(current, source, options):
+                if not (robots_missing_ok or missing_robots_scope(current, source, options)):
                     raise FetchError("robots_unavailable")
                 return
             if not robot.can_fetch(USER_AGENT, current):

@@ -128,6 +128,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         req = SimpleNamespace(q="", location="", radius_km=25, sources=[key],
                               max_jobs=options.max_jobs, max_details=options.max_details,
                               documents=options.documents,
+                              robots_missing_ok=not options.strict_robots,
                               seconds=options.seconds * (2 if key in ISOLATED_SOURCES else 1))
         started = time.monotonic()
         try:
@@ -156,6 +157,8 @@ def main(argv=None):
     parser.add_argument("--documents", type=int, default=90, help="Abrufe je Quelle")
     parser.add_argument("--seconds", type=int, default=300, help="Zeitbudget je Quelle (Börsen mit 10 s Crawl-Delay doppelt)")
     parser.add_argument("--pause", type=float, default=2.0, help="Sekunden Pause zwischen Quellen")
+    parser.add_argument("--strict-robots", action="store_true",
+                        help="Auch bei fehlender robots.txt (404) abbrechen; Standard: ohne Datei gelten keine Regeln")
     parser.add_argument("--grace-days", type=int, default=3)
     options = parser.parse_args(argv)
 

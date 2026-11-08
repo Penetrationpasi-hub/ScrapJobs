@@ -108,7 +108,7 @@ class CollectTest(unittest.TestCase):
             return {"jobs": [job(1)], "sources": [{"status": "done"}]}
 
         configured = {"stihl": SimpleNamespace(label="STIHL"), "boom": SimpleNamespace(label="Boom")}
-        options = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0)
+        options = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
         with mock.patch.object(batch, "crawl", fake):
             out = batch.collect(["stihl", "boom"], configured, options, factory=object(), sleep=lambda s: None, log=lambda m: None)
         self.assertEqual((out["stihl"]["status"], len(out["stihl"]["jobs"])), ("done", 1))
@@ -148,7 +148,7 @@ if __name__ == "__main__":
 
 
 class CrawlerDetailTest(unittest.TestCase):
-    def crawl_with(self, robots_error=None, robots_text=None):
+    def crawl_with(self, robots_error=None, robots_text=None, **extra):
         from safe_http import FetchError
         import crawler
 
@@ -165,7 +165,8 @@ class CrawlerDetailTest(unittest.TestCase):
                     authorize(raw)
                 return raw, "<html></html>"
 
-        req = SimpleNamespace(q="", location="", radius_km=25, sources=["stihl"])
+        req = SimpleNamespace(q="", location="", radius_km=25, sources=["stihl"], **extra)
+        self.fetched = []
         with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "stihl"}):
             return crawler.crawl(req, Fake)["sources"][0]
 
@@ -183,3 +184,23 @@ class CrawlerDetailTest(unittest.TestCase):
         report = self.crawl_with(robots_text="<html>Seite nicht gefunden</html>")
         self.assertEqual(report["status"], "robots_unavailable")
         self.assertIn("User-agent", report["detail"])
+
+    def test_missing_robots_allowed_only_when_enabled(self):
+        from safe_http import FetchError
+        for status in (404, 410):
+            error = FetchError("gone", http_status=status)
+            strict = self.crawl_with(robots_error=error)
+            self.assertEqual(strict["status"], "robots_unavailable")
+            lenient = self.crawl_with(robots_error=error, robots_missing_ok=True)
+            self.assertNotEqual(lenient["status"], "robots_unavailable")
+
+    def test_lenient_mode_still_stops_on_other_robots_failures(self):
+        from safe_http import FetchError
+        for error in (FetchError("blocked"), FetchError("upstream_error", http_status=503),
+                      FetchError("timeout"), FetchError("network_error")):
+            report = self.crawl_with(robots_error=error, robots_missing_ok=True)
+            self.assertEqual(report["status"], "robots_unavailable", error.code)
+
+    def test_lenient_mode_still_obeys_disallow(self):
+        report = self.crawl_with(robots_text="User-agent: *\nDisallow: /", robots_missing_ok=True)
+        self.assertEqual(report["status"], "robots_denied")

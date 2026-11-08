@@ -20,7 +20,12 @@ https://raw.githubusercontent.com/Penetrationpasi-hub/ScrapJobs/main/stellen.jso
    (25 Einzelanzeigen, 90 Abrufe, 300 s je Quelle; Börsen mit 10 s Crawl-Delay bekommen doppelt Zeit).
 4. Danach wird `stellen.json` zusammengeführt und committet.
 
-Es bleiben alle Schutzmaßnahmen des bisherigen Codes aktiv: robots.txt, `Crawl-delay`,
+**Fehlende robots.txt:** Antwortet ein Host auf `/robots.txt` mit 404 oder 410, gelten im Katalog-Lauf
+keine Regeln, und die öffentliche Karriereseite wird normal abgerufen (weiterhin mit mindestens 1 s Abstand).
+Alles andere bleibt Abbruch: 403/429, Serverfehler, Timeouts, eine HTML-Seite statt einer robots.txt und
+jedes `Disallow`. Mit `--strict-robots` ist die alte strenge Regel wieder aktiv. Der Live-Dienst (`main.py`) ist davon nicht betroffen.
+
+Es bleiben alle übrigen Schutzmaßnahmen des bisherigen Codes aktiv: robots.txt (wo vorhanden), `Crawl-delay`,
 mindestens 1 s Abstand je Host (auch zwischen Quellen desselben Hosts), nur HTTPS auf
 festgelegten Hosts, DNS-/IP-Prüfung, Größen- und Zeitgrenzen, kein JavaScript, kein Browser.
 
