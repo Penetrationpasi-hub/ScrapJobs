@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-08T14:31:02+00:00",
+ "aktualisiert": "2026-11-08T14:37:59+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -58,6 +58,7 @@
    "label": "Kärcher",
    "status": "done",
    "letzterErfolg": "2026-11-08",
+   "detail": "teilweise: Schwaikheim network_error",
    "anzahl": 99
   },
   {
@@ -239,10 +240,9 @@
   {
    "key": "riva",
    "label": "RIVA-Gruppe / Mpire",
-   "status": "no_verified_jobs",
-   "detail": "verworfen, z. B. https://mpire.jobs.personio.de/job/2568858",
-   "letzterErfolg": null,
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-08",
+   "anzahl": 15
   },
   {
    "key": "wirmachendruck",
@@ -3613,6 +3613,18 @@
    "zuletztGesehen": "2026-11-08"
   },
   {
+   "id": "scrapling-7f5a8a1f85dbc6dd0b361382",
+   "title": "SPS-Programmierer/Elektrotechniker Klima-, Energietechnik (m/w/d)",
+   "company": "Kroll Energy GmbH",
+   "location": "Backnang Gerberpark",
+   "url": "https://mpire.jobs.personio.de/job/2568858",
+   "posted": "2026-03-18",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
    "id": "scrapling-b84fc6107c93e923c3091948",
    "title": "Anerkennungspraktikum zum Erzieher (w/m/d) Kinderhaus Pusteblume in Schorndorf Beginn 2027",
    "company": "Landratsamt Rems-Murr-Kreis",
@@ -3909,6 +3921,18 @@
    "posted": "2026-01-28",
    "source": "landratsamt_rmk",
    "sourceLabel": "Landratsamt Rems-Murr-Kreis",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-68ddd8f7f2c489e23dfcf741",
+   "title": "Vertriebsmitarbeiter im Außendienst (m/w/d) – LED-Beleuchtung / Lichttechnik – DACH-Region",
+   "company": "LIGHTS 4 Europe GmbH & Co. KG",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2706289",
+   "posted": "2026-07-09",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },
@@ -4477,6 +4501,42 @@
    "zuletztGesehen": "2026-11-08"
   },
   {
+   "id": "scrapling-f5b4a0e871df453ea6b8dcd2",
+   "title": "Digital Marketing Manager (m/w/d) – Website, Performance & Leadgenerierung",
+   "company": "Mpire GmbH",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2855152",
+   "posted": "2026-10-22",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-8b1108be002757526fbab76d",
+   "title": "Payroll Specialist / HR-Generalist (m/w/d) in Voll- oder Teilzeit ab 30h/Woche",
+   "company": "Mpire GmbH",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2832889",
+   "posted": "2026-10-07",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-39f36d8591d4d98bd448f830",
+   "title": "Steuerfachangestellter / Finanzbuchhalter (m/w/d) in Voll- oder Teilzeit",
+   "company": "Mpire GmbH",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2838057",
+   "posted": "2026-10-12",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
    "id": "scrapling-af86eae140db31e6468a8965",
    "title": "Architekt / Baukoordinator (m/w/d)",
    "company": "Murrelektronik GmbH",
@@ -5025,6 +5085,126 @@
    "posted": "",
    "source": "riani",
    "sourceLabel": "RIANI",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-f11b686b6e902bc4d116d2d2",
+   "title": "Meister für Energie- und Gebäudetechnik (m/w/d)",
+   "company": "RIVA FACILITIES GmbH",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2748027",
+   "posted": "2026-08-10",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-6d8de0986dc4ba93631a3ae7",
+   "title": "Ausbildung zum Industriekaufmann (m/w/d) 2027",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2804953",
+   "posted": "2026-09-21",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-59421d37adf7ff337903469e",
+   "title": "Ausbildung zum Konstruktionsmechaniker (m/w/d) 2027",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2804977",
+   "posted": "2026-09-21",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-2cfdca8cf2527226be4c1edf",
+   "title": "Ausbildung zum Mechatroniker (m/w/d) 2027",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2804985",
+   "posted": "2026-09-21",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-76a56cf3b3dce851705e90a9",
+   "title": "Ausbildung zur Fachkraft für Lagerlogistik (m/w/d) 2027",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2805378",
+   "posted": "2026-09-21",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-2884a938cf49b2c9b9eaba3c",
+   "title": "Bauingenieur / Statiker Fassadenbau (m/w/d)",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2015129",
+   "posted": "2025-03-13",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-ffa621c5a74e228b2481b071",
+   "title": "CNC-Abkanter / Bieger (m/w/d) – Blechbearbeitung",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2777130",
+   "posted": "2026-09-01",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-62e6482f935f533fe8d2075d",
+   "title": "Schweißer (m/w/d) WIG/MAG – Blechkonstruktion",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2777084",
+   "posted": "2026-09-01",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-38701f90a704a690a83a10f7",
+   "title": "Vertriebsmitarbeiter im Außendienst (m/w/d) – Blechverkleidungen / Maschinenbau – Süddeutschland, Österreich & Schweiz",
+   "company": "RIVA GmbH Engineering",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2706021",
+   "posted": "2026-07-09",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-08"
+  },
+  {
+   "id": "scrapling-1979115ba4d37d1298afe212",
+   "title": "SPS-Programmierer/Softwareentwickler für Brennstoffzellen (m/w/d)",
+   "company": "RIVA Power Systems GmbH & Co. KG",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2670131",
+   "posted": "2026-06-12",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-08"
   },

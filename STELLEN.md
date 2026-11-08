@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
+Stand: 2026-11-08T14:37:59+00:00 · 492 Stellen aus 36 von 60 Quellen
 
 ## Quellen
 
@@ -13,7 +13,7 @@ Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 | MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-08 |  |
 | Diakonie Stetten | unsupported | 0 | – |  |
 | Robert Bosch Krankenhaus | no_verified_jobs | 0 | – | verworfen, z. B. https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000160143079-medizinischer-fachangestellter-mta-f-oder-mtra-m-w-d-fur-das-kardio-mrt-fur-den-spatdienst-14-00-22-00-uhr- |
-| Kärcher | done | 99 | 2026-11-08 |  |
+| Kärcher | done | 99 | 2026-11-08 | teilweise: Schwaikheim network_error |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 9 | 2026-11-08 |  |
 | Landratsamt Rems-Murr-Kreis | done | 25 | 2026-11-08 |  |
 | Paulinenpflege Winnenden | done | 12 | 2026-11-08 |  |
@@ -39,7 +39,7 @@ Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 | Burger Schloz Automobile | done | 9 | 2026-11-08 |  |
 | Klöpfer | done | 4 | 2026-11-08 |  |
 | JUDO Wasseraufbereitung | done | 8 | 2026-11-08 |  |
-| RIVA-Gruppe / Mpire | no_verified_jobs | 0 | – | verworfen, z. B. https://mpire.jobs.personio.de/job/2568858 |
+| RIVA-Gruppe / Mpire | done | 15 | 2026-11-08 |  |
 | WIRmachenDRUCK | done | 14 | 2026-11-08 |  |
 | Eisenmann Services / Personal-Service | done | 3 | 2026-11-08 |  |
 | Bäckerei Maurer | done | 15 | 2026-11-08 |  |
@@ -403,6 +403,10 @@ Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 - [Prüfer / Prüferin Kreditrevision, Revision](https://kskwn.helixjobs.com/ksk/jobad?prj=100052P221) · 71332 Waiblingen DE · seit 2026-11-08
 - [Schülerpraktikum](https://kskwn.helixjobs.com/ksk/jobad?prj=100052P309) · 71364 Winnenden DE / 71332 Waiblingen DE / 71522 Backnang DE / 73614 Schorndorf DE / 70736 Fellbach DE / 73642 Welzheim DE / 71364 Winnenden DE · seit 2026-11-08
 
+### Kroll Energy GmbH
+
+- [SPS-Programmierer/Elektrotechniker Klima-, Energietechnik (m/w/d)](https://mpire.jobs.personio.de/job/2568858) · Backnang Gerberpark · seit 2026-11-08
+
 ### Landratsamt Rems-Murr-Kreis
 
 - [Anerkennungspraktikum zum Erzieher (w/m/d) Kinderhaus Pusteblume in Schorndorf Beginn 2027](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P216) · 71332 Waiblingen DE · seit 2026-11-08
@@ -430,6 +434,10 @@ Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 - [Vertiefungspraktikum Ordnungsverwaltung](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P52) · 71332 Waiblingen DE · seit 2026-11-08
 - [Vertiefungspraktikum Organisation, Personal, Informationsverarbeitung](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P50) · 71332 Waiblingen DE · seit 2026-11-08
 - [Vertiefungspraktikum Wirtschaft und Finanzen](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P53) · 71332 Waiblingen DE · seit 2026-11-08
+
+### LIGHTS 4 Europe GmbH & Co. KG
+
+- [Vertriebsmitarbeiter im Außendienst (m/w/d) – LED-Beleuchtung / Lichttechnik – DACH-Region](https://mpire.jobs.personio.de/job/2706289) · Backnang Lerchenäcker · seit 2026-11-08
 
 ### MAHLE
 
@@ -480,6 +488,12 @@ Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 - [Servicetechniker (m/w/d)](https://careers.mahle.com/job/Heinsdorfergrund-Servicetechniker-%28mwd%29-08468/1244501201) · Heinsdorfergrund, DE, 08468 · seit 2026-11-08
 - [Studentische Tätigkeit / Praktikum / Abschlussarbeit Digitalisierung von Geschäftsprozessen (m/w/d)](https://careers.mahle.com/job/M%C3%BChlacker-Studentische-T%C3%A4tigkeit-Praktikum-Abschlussarbeit-Digitalisierung-von-Gesch%C3%A4ftsprozessen-%28mwd%29-75417/1425276633) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Technisches Schulpraktikum (m/w/d)](https://careers.mahle.com/job/Markgr%C3%B6ningen-Technisches-Schulpraktikum-%28mwd%29-71706/1405577533) · Markgröningen, DE, 71706 · seit 2026-11-08
+
+### Mpire GmbH
+
+- [Digital Marketing Manager (m/w/d) – Website, Performance & Leadgenerierung](https://mpire.jobs.personio.de/job/2855152) · Backnang Lerchenäcker · seit 2026-11-08
+- [Payroll Specialist / HR-Generalist (m/w/d) in Voll- oder Teilzeit ab 30h/Woche](https://mpire.jobs.personio.de/job/2832889) · Backnang Lerchenäcker · seit 2026-11-08
+- [Steuerfachangestellter / Finanzbuchhalter (m/w/d) in Voll- oder Teilzeit](https://mpire.jobs.personio.de/job/2838057) · Backnang Lerchenäcker · seit 2026-11-08
 
 ### Murrelektronik GmbH
 
@@ -550,6 +564,25 @@ Stand: 2026-11-08T14:31:02+00:00 · 477 Stellen aus 35 von 60 Quellen
 - [Premium Salesperson/Stylist Store Schorndorf (GN) | RIANI](https://www.riani.com/de_en/Company/Karriere/Premium-Verkaufsberater-Stylist-GN-RIANI-Store-Muenchen) · Am Standort München, ab sofort, Vollzeit / Teilzeit Referenznummer 13042026 · seit 2026-11-08
 - [Premium Verkaufsberater / Stylist (GN) Standort Hamburg - Breuninger -](https://www.riani.com/de_en/Company/Karriere/Premium-Verkaufsberater-Stylist-GN-Breuninger-Hamburg) · Am Standort Hamburg (Breuninger), ab sofort, Teilzeit Referenznummer 21032025 · seit 2026-11-08
 - [Premium Verkaufsberater / Stylist RIANI Store Hamburg - Alsterhaus -](https://www.riani.com/de_en/home/company/karriere/premium-verkaufsberater-stylist-gn-standort-hamburg-alsterhaus) · Am Standort Hamburg (Alsterhaus), ab sofort, Teilzeit Referenznummer 12052026 · seit 2026-11-08
+
+### RIVA FACILITIES GmbH
+
+- [Meister für Energie- und Gebäudetechnik (m/w/d)](https://mpire.jobs.personio.de/job/2748027) · Backnang Lerchenäcker · seit 2026-11-08
+
+### RIVA GmbH Engineering
+
+- [Ausbildung zum Industriekaufmann (m/w/d) 2027](https://mpire.jobs.personio.de/job/2804953) · Backnang Lerchenäcker · seit 2026-11-08
+- [Ausbildung zum Konstruktionsmechaniker (m/w/d) 2027](https://mpire.jobs.personio.de/job/2804977) · Backnang Lerchenäcker · seit 2026-11-08
+- [Ausbildung zum Mechatroniker (m/w/d) 2027](https://mpire.jobs.personio.de/job/2804985) · Backnang Lerchenäcker · seit 2026-11-08
+- [Ausbildung zur Fachkraft für Lagerlogistik (m/w/d) 2027](https://mpire.jobs.personio.de/job/2805378) · Backnang Lerchenäcker · seit 2026-11-08
+- [Bauingenieur / Statiker Fassadenbau (m/w/d)](https://mpire.jobs.personio.de/job/2015129) · Backnang Lerchenäcker · seit 2026-11-08
+- [CNC-Abkanter / Bieger (m/w/d) – Blechbearbeitung](https://mpire.jobs.personio.de/job/2777130) · Backnang Lerchenäcker · seit 2026-11-08
+- [Schweißer (m/w/d) WIG/MAG – Blechkonstruktion](https://mpire.jobs.personio.de/job/2777084) · Backnang Lerchenäcker · seit 2026-11-08
+- [Vertriebsmitarbeiter im Außendienst (m/w/d) – Blechverkleidungen / Maschinenbau – Süddeutschland, Österreich & Schweiz](https://mpire.jobs.personio.de/job/2706021) · Backnang Lerchenäcker · seit 2026-11-08
+
+### RIVA Power Systems GmbH & Co. KG
+
+- [SPS-Programmierer/Softwareentwickler für Brennstoffzellen (m/w/d)](https://mpire.jobs.personio.de/job/2670131) · Backnang Lerchenäcker · seit 2026-11-08
 
 ### Savanto GmbH
 
