@@ -13,12 +13,19 @@ https://raw.githubusercontent.com/Penetrationpasi-hub/ScrapJobs/main/stellen.jso
 
 ## Ablauf
 
-1. `.github/workflows/sammeln.yml` startet täglich gegen 05 Uhr (und per Hand über *Run workflow*).
+1. `.github/workflows/sammeln.yml` startet täglich (und per Hand über *Run workflow*). GitHub führt geplante
+   Läufe oft Stunden verspätet aus; gesammelt wird deshalb beim ersten geplanten Lauf eines Berliner
+   Kalendertags, weitere Läufe am selben Tag werden übersprungen.
 2. Zuerst laufen die Tests, dann `scrapling-server/batch.py`.
 3. `batch.py` ruft für jede Quelle dieselbe `crawl()`-Logik auf wie der Live-Dienst, nur im
    **Katalogmodus**: ohne Suchbegriff und Ort, ohne die engen Live-Limits
    (25 Einzelanzeigen, 90 Abrufe, 300 s je Quelle; Börsen mit 10 s Crawl-Delay bekommen doppelt Zeit).
-4. Danach wird `stellen.json` zusammengeführt und committet.
+4. Danach wird `stellen.json` zusammengeführt und zusammen mit `STELLEN.md` und
+   [`stellen.xlsx`](stellen.xlsx) committet.
+
+**`stellen.xlsx`** (aus `scrapling-server/excel.py`) zeigt den aktuellen Stand zum schnellen Prüfen:
+Blatt *Übersicht* mit Datenstand und Warnung, wenn die Daten älter als ein Tag sind; *Stellen* mit allen
+Anzeigen (grün = im letzten Lauf neu, orange = Quelle zuletzt nicht gelesen); *Quellen* mit dem Status je Arbeitgeber.
 
 **Fehlende robots.txt:** Antwortet ein Host auf `/robots.txt` mit 404 oder 410, gelten im Katalog-Lauf
 keine Regeln, und die öffentliche Karriereseite wird normal abgerufen (weiterhin mit mindestens 1 s Abstand).
