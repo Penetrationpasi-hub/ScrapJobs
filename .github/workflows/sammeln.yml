@@ -2,8 +2,10 @@ name: Arbeitgeber sammeln
 
 on:
   schedule:
-    # GitHub kennt nur UTC. 04:05 UTC = 06:05 Sommerzeit, 05:05 UTC = 06:05 Winterzeit.
-    # Der Schritt "Uhrzeit prüfen" lässt nur den Lauf durch, der in Berlin gerade 6 Uhr ist.
+    # GitHub startet geplante Laeufe oft Stunden spaeter als angegeben
+    # (beobachtet: 04:05 UTC -> ca. 12-14 Uhr UTC). Deshalb keine
+    # Uhrzeit-Pruefung mehr, sondern: einmal je Berliner Kalendertag.
+    # Der zweite Termin ist Reserve, falls der erste ausfaellt.
     - cron: "5 4 * * *"
     - cron: "5 5 * * *"
   workflow_dispatch:
@@ -25,18 +27,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - name: Uhrzeit prüfen
+      - uses: actions/checkout@v4
+
+      - name: Heute schon gesammelt?
         id: zeit
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(TZ=Europe/Berlin date +%H)" != "06" ]; then
-            echo "In Berlin ist es nicht 6 Uhr, dieser Lauf wird übersprungen."
+          heute=$(TZ=Europe/Berlin date +%F)
+          stand=$(python3 -c "import json,datetime,zoneinfo; s=json.load(open('stellen.json')).get('aktualisiert') or ''; print(datetime.datetime.fromisoformat(s).astimezone(zoneinfo.ZoneInfo('Europe/Berlin')).date() if s else '')" 2>/dev/null || true)
+          echo "Heute (Berlin): $heute, letzter Stand: ${stand:-unbekannt}"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$stand" = "$heute" ]; then
+            echo "Heute schon gesammelt, dieser Lauf wird übersprungen."
             echo "go=false" >> "$GITHUB_OUTPUT"
           else
             echo "go=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - if: steps.zeit.outputs.go == 'true'
-        uses: actions/checkout@v4
 
       - if: steps.zeit.outputs.go == 'true'
         uses: actions/setup-python@v5
@@ -47,7 +51,7 @@ jobs:
 
       - if: steps.zeit.outputs.go == 'true'
         name: Abhängigkeiten
-        run: pip install --disable-pip-version-check -r scrapling-server/requirements.txt pytest
+        run: pip install --disable-pip-version-check -r scrapling-server/requirements.txt pytest openpyxl
 
       - if: steps.zeit.outputs.go == 'true'
         name: Tests
@@ -62,14 +66,19 @@ jobs:
         run: python batch.py --out ../stellen.json
 
       - if: steps.zeit.outputs.go == 'true'
+        name: Excel
+        working-directory: scrapling-server
+        run: python excel.py ../stellen.json ../stellen.xlsx
+
+      - if: steps.zeit.outputs.go == 'true'
         name: Ergebnis committen
         run: |
-          if git diff --quiet -- stellen.json STELLEN.md && [ -z "$(git ls-files --others --exclude-standard stellen.json STELLEN.md)" ]; then
+          if git diff --quiet -- stellen.json STELLEN.md stellen.xlsx && [ -z "$(git ls-files --others --exclude-standard stellen.json STELLEN.md stellen.xlsx)" ]; then
             echo "Keine Änderung"; exit 0
           fi
           git config user.name "scrapjobs-bot"
           git config user.email "scrapjobs-bot@users.noreply.github.com"
-          git add stellen.json STELLEN.md
+          git add stellen.json STELLEN.md stellen.xlsx
           git commit -m "Stellenkatalog $(date -u +%Y-%m-%d)"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
