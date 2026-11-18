@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-18T18:20:09+00:00 · 803 Stellen aus 49 von 61 Quellen
+Stand: 2026-11-18T19:19:53+00:00 · 805 Stellen aus 51 von 61 Quellen
 
 ## Quellen
 
@@ -22,7 +22,7 @@ Stand: 2026-11-18T18:20:09+00:00 · 803 Stellen aus 49 von 61 Quellen
 | TESAT-Spacecom | done | 20 | 2026-11-18 |  |
 | Airbus (Stuttgart, Laupheim, Backnang) | done | 10 | 2026-11-18 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-18 |  |
-| Volksbank Stuttgart | network_error | 8 | 2026-11-17 | TimeoutError volksbank-stuttgart.helixjobs.com (auch nach Wiederholung) |
+| Volksbank Stuttgart | done | 8 | 2026-11-18 |  |
 | Klinikum Stuttgart · Bad Cannstatt | done | 58 | 2026-11-18 |  |
 | Stadt Schorndorf | done | 8 | 2026-11-18 |  |
 | Oskar Frech / Frech-Gruppe | done | 4 | 2026-11-18 |  |
@@ -34,7 +34,7 @@ Stand: 2026-11-18T18:20:09+00:00 · 803 Stellen aus 49 von 61 Quellen
 | REMS | done | 7 | 2026-11-18 |  |
 | stoba Backnang | done | 5 | 2026-11-18 |  |
 | Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
-| d&b audiotechnik | done | 0 | 2026-11-18 |  |
+| d&b audiotechnik | done | 0 | 2026-11-18 | 0 Stellen: 0 Adressen gelesen, 0 passend, 0 verworfen |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
 | TTI / AEG / Milwaukee | done | 26 | 2026-11-18 |  |
 | Burger Schloz Automobile | done | 9 | 2026-11-18 |  |
@@ -54,7 +54,7 @@ Stand: 2026-11-18T18:20:09+00:00 · 803 Stellen aus 49 von 61 Quellen
 | Stadtwerke Waiblingen | done | 9 | 2026-11-18 |  |
 | FESSMANN | done | 2 | 2026-11-18 |  |
 | Soehnle Industrial Solutions | done | 15 | 2026-11-18 |  |
-| Gotthilf Benz Turngeräte | robots_unavailable | 7 | 2026-11-17 | TimeoutError www.benz-sport.de |
+| Gotthilf Benz Turngeräte | done | 9 | 2026-11-18 |  |
 | RIANI | done | 8 | 2026-11-18 |  |
 | Dusyma | done | 8 | 2026-11-18 |  |
 | Zeitungsverlag Waiblingen | done | 1 | 2026-11-18 |  |
@@ -492,7 +492,9 @@ Stand: 2026-11-18T18:20:09+00:00 · 803 Stellen aus 49 von 61 Quellen
 - [Bautechniker / Metallbautechniker (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Bautechniker%20%2F%20Metallbautechniker%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08
 - [Lagermitarbeiter / Kommissionierer / Verpacker (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Lagermitarbeiter%20%2F%20Kommissionierer%20%2F%20Verpacker%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08
 - [Mitarbeiter im Vertriebsinnendienst (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Mitarbeiter%20im%20Vertriebsinnendienst%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08
+- [Monteur für Sportgeräte im Außendienst (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Monteur%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29) · Bundesweit · seit 2026-11-18
 - [Monteur/in für Sportgeräte im Außendienst (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Monteur%2Fin%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29) · Bundesweit · seit 2026-11-08
+- [Servicetechniker für Sportgeräte im Außendienst (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Servicetechniker%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29) · Bundesweit · seit 2026-11-18
 - [Servicetechniker/in für Sportgeräte im Außendienst (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Servicetechniker%2Fin%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29) · Bundesweit · seit 2026-11-08
 - [Teamleiter / Abteilungsleiter Schlosserei (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Teamleiter%20%2F%20Abteilungsleiter%20Schlosserei%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08
 - [Teamleiter / Abteilungsleiter Schreinerei (m/w/d)](https://www.benz-sport.de/content/karriere.html#:~:text=Teamleiter%20%2F%20Abteilungsleiter%20Schreinerei%20%28m%2Fw%2Fd%29) · 71364 Winnenden · seit 2026-11-08

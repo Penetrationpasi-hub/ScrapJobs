@@ -187,3 +187,6 @@ lauf,datum,quelle,label,adapter,status,stellen_lauf,neu,im_katalog,detail
 2026-11-18T18:20:09+00:00,2026-11-18,volksbank_stuttgart,Volksbank Stuttgart,html,network_error,0,0,8,TimeoutError volksbank-stuttgart.helixjobs.com (auch nach Wiederholung)
 2026-11-18T18:20:09+00:00,2026-11-18,landratsamt_rmk,Landratsamt Rems-Murr-Kreis,html,done,18,0,18,
 2026-11-18T18:20:09+00:00,2026-11-18,benz_sport,Gotthilf Benz Turngeräte,benz_sections,robots_unavailable,0,0,7,TimeoutError www.benz-sport.de
+2026-11-18T19:19:53+00:00,2026-11-18,db_audiotechnik,d&b audiotechnik,sitemap,done,0,0,0,"0 Stellen: 0 Adressen gelesen, 0 passend, 0 verworfen"
+2026-11-18T19:19:53+00:00,2026-11-18,volksbank_stuttgart,Volksbank Stuttgart,html,done,8,0,8,
+2026-11-18T19:19:53+00:00,2026-11-18,benz_sport,Gotthilf Benz Turngeräte,benz_sections,done,7,2,9,

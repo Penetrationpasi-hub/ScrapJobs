@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-18T18:20:09+00:00",
+ "aktualisiert": "2026-11-18T19:19:53+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -120,9 +120,8 @@
   {
    "key": "volksbank_stuttgart",
    "label": "Volksbank Stuttgart",
-   "status": "network_error",
-   "letzterErfolg": "2026-11-17",
-   "detail": "TimeoutError volksbank-stuttgart.helixjobs.com (auch nach Wiederholung)",
+   "status": "done",
+   "letzterErfolg": "2026-11-18",
    "anzahl": 8
   },
   {
@@ -210,6 +209,7 @@
    "label": "d&b audiotechnik",
    "status": "done",
    "letzterErfolg": "2026-11-18",
+   "detail": "0 Stellen: 0 Adressen gelesen, 0 passend, 0 verworfen",
    "anzahl": 0
   },
   {
@@ -351,10 +351,9 @@
   {
    "key": "benz_sport",
    "label": "Gotthilf Benz Turngeräte",
-   "status": "robots_unavailable",
-   "letzterErfolg": "2026-11-17",
-   "detail": "TimeoutError www.benz-sport.de",
-   "anzahl": 7
+   "status": "done",
+   "letzterErfolg": "2026-11-18",
+   "anzahl": 9
   },
   {
    "key": "riani",
@@ -4556,7 +4555,7 @@
    "source": "benz_sport",
    "sourceLabel": "Gotthilf Benz Turngeräte",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-67e13f4255eca8fe2715bcba",
@@ -4568,7 +4567,7 @@
    "source": "benz_sport",
    "sourceLabel": "Gotthilf Benz Turngeräte",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-6a440a0b7772fe70ba95de2d",
@@ -4580,7 +4579,19 @@
    "source": "benz_sport",
    "sourceLabel": "Gotthilf Benz Turngeräte",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-49a7a591d981aeb0b0e6437a",
+   "title": "Monteur für Sportgeräte im Außendienst (m/w/d)",
+   "company": "Gotthilf Benz Turngerätefabrik GmbH + Co. KG",
+   "location": "Bundesweit",
+   "url": "https://www.benz-sport.de/content/karriere.html#:~:text=Monteur%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29",
+   "posted": "",
+   "source": "benz_sport",
+   "sourceLabel": "Gotthilf Benz Turngeräte",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-090de5a2395e06eb1fd92ef4",
@@ -4593,6 +4604,18 @@
    "sourceLabel": "Gotthilf Benz Turngeräte",
    "erstmalsGesehen": "2026-11-08",
    "zuletztGesehen": "2026-11-17"
+  },
+  {
+   "id": "scrapling-e38e159b85bd9d0c5f115298",
+   "title": "Servicetechniker für Sportgeräte im Außendienst (m/w/d)",
+   "company": "Gotthilf Benz Turngerätefabrik GmbH + Co. KG",
+   "location": "Bundesweit",
+   "url": "https://www.benz-sport.de/content/karriere.html#:~:text=Servicetechniker%20f%C3%BCr%20Sportger%C3%A4te%20im%20Au%C3%9Fendienst%20%28m%2Fw%2Fd%29",
+   "posted": "",
+   "source": "benz_sport",
+   "sourceLabel": "Gotthilf Benz Turngeräte",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-331ec036629731d51edc79e3",
@@ -4616,7 +4639,7 @@
    "source": "benz_sport",
    "sourceLabel": "Gotthilf Benz Turngeräte",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-8a2e08942944b7c7497b1836",
@@ -4628,7 +4651,7 @@
    "source": "benz_sport",
    "sourceLabel": "Gotthilf Benz Turngeräte",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-2b3d51a2aade939780e20262",
@@ -9788,7 +9811,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-54be0e0820dda2d10d650ec2",
@@ -9800,7 +9823,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-79a530ab52488d678be2282e",
@@ -9812,7 +9835,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-c309784b6bc86eca329cf693",
@@ -9824,7 +9847,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-4d431da68eeb608c86808225",
@@ -9836,7 +9859,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-77e9a1eafd36af2cfe913f40",
@@ -9848,7 +9871,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-1e3c5fe9155c80efa05b6d7f",
@@ -9860,7 +9883,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-68f53d8a518a234803868b1e",
@@ -9872,7 +9895,7 @@
    "source": "volksbank_stuttgart",
    "sourceLabel": "Volksbank Stuttgart",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-9aadaceb72623a3f65d8296e",
