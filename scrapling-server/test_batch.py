@@ -148,19 +148,56 @@ class CollectTest(unittest.TestCase):
         self.assertEqual(b.last["host"], 5)
 
 
+class RetryTest(unittest.TestCase):
+    OPTIONS = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
+    CONFIGURED = {k: SimpleNamespace(label=k.upper()) for k in ("flaky", "dead", "unsup", "fine")}
+
+    def run_retry(self, outcomes):
+        calls, sleeps = [], []
+
+        def fake(req, factory):
+            key = req.sources[0]
+            calls.append(key)
+            status = outcomes[key].pop(0)
+            return {"jobs": [job(len(calls))] if status == "done" else [], "sources": [{"status": status}]}
+
+        with mock.patch.object(batch, "crawl", fake):
+            out = batch.collect_with_retry(list(outcomes), self.CONFIGURED, self.OPTIONS, factory=object(),
+                                           sleep=sleeps.append, log=lambda m: None, pause=90)
+        return out, calls, sleeps
+
+    def test_transient_failure_is_retried_once_and_replaced(self):
+        out, calls, sleeps = self.run_retry({"flaky": ["network_error", "done"], "fine": ["done"]})
+        self.assertEqual(out["flaky"]["status"], "done")
+        self.assertEqual(len(out["flaky"]["jobs"]), 1)
+        self.assertEqual(calls, ["flaky", "fine", "flaky"])
+        self.assertIn(90, sleeps)
+
+    def test_still_failing_after_retry_keeps_status_and_says_so(self):
+        out, calls, _ = self.run_retry({"dead": ["upstream_error", "network_error"]})
+        self.assertEqual(calls, ["dead", "dead"])
+        self.assertEqual(out["dead"]["status"], "upstream_error")
+        self.assertIn("auch nach Wiederholung", out["dead"]["detail"])
+
+    def test_permanent_failures_and_success_are_not_retried(self):
+        out, calls, sleeps = self.run_retry({"unsup": ["unsupported"], "fine": ["done"]})
+        self.assertEqual(calls, ["unsup", "fine"])
+        self.assertNotIn(90, sleeps)
+
+
 class MainTest(unittest.TestCase):
     def test_no_successful_source_leaves_file_untouched(self):
         with tempfile.TemporaryDirectory() as folder:
             out = Path(folder, "stellen.json")
             out.write_text('{"alt": true}', encoding="utf-8")
-            with mock.patch.object(batch, "collect", lambda *a, **k: {"stihl": result("timeout")}):
+            with mock.patch.object(batch, "collect_with_retry", lambda *a, **k: {"stihl": result("timeout")}):
                 self.assertEqual(batch.main(["--out", str(out), "--sources", "stihl"]), 1)
             self.assertEqual(out.read_text(encoding="utf-8"), '{"alt": true}')
 
     def test_writes_catalog(self):
         with tempfile.TemporaryDirectory() as folder:
             out = Path(folder, "stellen.json")
-            with mock.patch.object(batch, "collect", lambda *a, **k: {"stihl": result("done", job(1))}):
+            with mock.patch.object(batch, "collect_with_retry", lambda *a, **k: {"stihl": result("done", job(1))}):
                 self.assertEqual(batch.main(["--out", str(out), "--sources", "stihl"]), 0)
             data = json.loads(out.read_text(encoding="utf-8"))
             self.assertEqual(data["schema"], 1)

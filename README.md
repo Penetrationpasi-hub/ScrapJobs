@@ -125,3 +125,8 @@ betroffenen Quellen steht in der Zusammenfassung des Laufs unter *Actions*. Daue
 mit Begründung in `scrapling-server/ohne_stellen_ok.json` und zählen nicht. Wird eine Quelle repariert (oder
 bekommt sie wieder Stellen), erscheint ein Hinweis: dann aus der Liste streichen. Ein Test stellt sicher, dass dort
 nur Quellen des Katalogs stehen.
+
+**Wiederholung:** Quellen, die im Hauptdurchlauf mit einem vorübergehenden Fehler ausfallen (Timeout, Netzwerkfehler,
+5xx), werden nach 90 s Pause einmal erneut abgefragt (`collect_with_retry` in `batch.py`); nur ein Erfolg ersetzt
+das erste Ergebnis. Für langsame Portale gilt ein längeres Zeitlimit je Abruf (`SLOW_REQUESTS`). Bleibt eine Quelle auch
+danach ohne Stellen, steht im Detail „auch nach Wiederholung“ und der Lauf wird rot.

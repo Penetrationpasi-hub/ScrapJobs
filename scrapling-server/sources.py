@@ -23,6 +23,8 @@ class Source:
     reference: str = ""
     note: str = ""
     company_pattern: str = ""
+    # Fester Firmenname, wenn die Seite ihn nicht selbst nennt (Host ist exakt freigegeben).
+    company: str = ""
     adapter: str = "html"
     api: str = ""
     company_capture: str = ""
