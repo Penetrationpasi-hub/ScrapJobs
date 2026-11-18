@@ -127,6 +127,7 @@ bekommt sie wieder Stellen), erscheint ein Hinweis: dann aus der Liste streichen
 nur Quellen des Katalogs stehen.
 
 **Wiederholung:** Quellen, die im Hauptdurchlauf mit einem vorübergehenden Fehler ausfallen (Timeout, Netzwerkfehler,
-5xx), werden nach 90 s Pause einmal erneut abgefragt (`collect_with_retry` in `batch.py`); nur ein Erfolg ersetzt
-das erste Ergebnis. Für langsame Portale gilt ein längeres Zeitlimit je Abruf (`SLOW_REQUESTS`). Bleibt eine Quelle auch
-danach ohne Stellen, steht im Detail „auch nach Wiederholung“ und der Lauf wird rot.
+5xx, robots.txt nicht lesbar), werden bis zu zweimal erneut abgefragt (nach 90 s und nach weiteren 180 s;
+`collect_with_retry` in `batch.py`); nur ein Erfolg ersetzt das erste Ergebnis. Für langsame Portale gilt ein längeres Zeitlimit je Abruf (`SLOW_REQUESTS`). Bleibt eine Quelle auch
+danach ohne Stellen, steht im Detail „auch nach N Wiederholungen“ und der Lauf wird rot. Liefert eine Quelle `done`
+ohne Stellen, nennt das Detail die Zahlen (z. B. „0 Stellen: 120 Adressen gelesen, 0 passend, 0 verworfen“).

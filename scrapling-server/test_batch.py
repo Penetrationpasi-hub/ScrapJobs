@@ -150,7 +150,7 @@ class CollectTest(unittest.TestCase):
 
 class RetryTest(unittest.TestCase):
     OPTIONS = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
-    CONFIGURED = {k: SimpleNamespace(label=k.upper()) for k in ("flaky", "dead", "unsup", "fine")}
+    CONFIGURED = {k: SimpleNamespace(label=k.upper()) for k in ("flaky", "dead", "unsup", "fine", "robots")}
 
     def run_retry(self, outcomes):
         calls, sleeps = [], []
@@ -163,26 +163,52 @@ class RetryTest(unittest.TestCase):
 
         with mock.patch.object(batch, "crawl", fake):
             out = batch.collect_with_retry(list(outcomes), self.CONFIGURED, self.OPTIONS, factory=object(),
-                                           sleep=sleeps.append, log=lambda m: None, pause=90)
+                                           sleep=sleeps.append, log=lambda m: None, pauses=(90, 180))
         return out, calls, sleeps
 
-    def test_transient_failure_is_retried_once_and_replaced(self):
+    def test_transient_failure_is_retried_and_replaced(self):
         out, calls, sleeps = self.run_retry({"flaky": ["network_error", "done"], "fine": ["done"]})
         self.assertEqual(out["flaky"]["status"], "done")
         self.assertEqual(len(out["flaky"]["jobs"]), 1)
         self.assertEqual(calls, ["flaky", "fine", "flaky"])
         self.assertIn(90, sleeps)
+        self.assertNotIn(180, sleeps)
 
-    def test_still_failing_after_retry_keeps_status_and_says_so(self):
-        out, calls, _ = self.run_retry({"dead": ["upstream_error", "network_error"]})
-        self.assertEqual(calls, ["dead", "dead"])
+    def test_second_retry_after_longer_pause(self):
+        out, calls, sleeps = self.run_retry({"flaky": ["network_error", "timeout", "done"]})
+        self.assertEqual(out["flaky"]["status"], "done")
+        self.assertEqual(calls, ["flaky"] * 3)
+        self.assertEqual([s for s in sleeps if s >= 90], [90, 180])
+
+    def test_robots_unavailable_counts_as_transient(self):
+        out, calls, _ = self.run_retry({"robots": ["robots_unavailable", "done"]})
+        self.assertEqual(out["robots"]["status"], "done")
+        self.assertEqual(calls, ["robots", "robots"])
+
+    def test_still_failing_keeps_status_and_says_how_often_it_was_retried(self):
+        out, calls, _ = self.run_retry({"dead": ["upstream_error", "network_error", "network_error"]})
+        self.assertEqual(calls, ["dead"] * 3)
         self.assertEqual(out["dead"]["status"], "upstream_error")
-        self.assertIn("auch nach Wiederholung", out["dead"]["detail"])
+        self.assertIn("auch nach 2 Wiederholungen", out["dead"]["detail"])
 
     def test_permanent_failures_and_success_are_not_retried(self):
         out, calls, sleeps = self.run_retry({"unsup": ["unsupported"], "fine": ["done"]})
         self.assertEqual(calls, ["unsup", "fine"])
         self.assertNotIn(90, sleeps)
+
+
+class EmptyDoneTest(unittest.TestCase):
+    OPTIONS = RetryTest.OPTIONS
+
+    def test_done_without_jobs_explains_itself(self):
+        def fake(req, factory):
+            return {"jobs": [], "sources": [{"status": "done", "urls": 120, "matched": 0, "filtered": 0}]}
+
+        with mock.patch.object(batch, "crawl", fake):
+            out = batch.collect(["acme"], {"acme": SimpleNamespace(label="ACME")}, self.OPTIONS, factory=object(),
+                                sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(out["acme"]["status"], "done")
+        self.assertEqual(out["acme"]["detail"], "0 Stellen: 120 Adressen gelesen, 0 passend, 0 verworfen")
 
 
 class MainTest(unittest.TestCase):
