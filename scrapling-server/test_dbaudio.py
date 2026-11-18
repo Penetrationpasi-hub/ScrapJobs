@@ -1,50 +1,64 @@
-"""d&b audiotechnik: Anzeigen ohne JobPosting-JSON-LD, Felder aus og:title, <title> und Karriere-Kopfzeile."""
-import re
+"""d&b audiotechnik: Anzeigen kommen aus dem öffentlichen Workday-Portal (die Liste auf dbaudio.com ist JavaScript)."""
+import json
 import unittest
+from types import SimpleNamespace
 
-from extraction import extract, is_detail
+from employer_adapters import adapter_jobs
 from sources import registry
 
-BASE = "https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/"
+BOARD = "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de"
 
 
-def detail_page(title, place, extra_head=""):
-    og = f'<meta property="og:title" content="{title}">' if title else ""
-    return (f'<html><head><title>{title or "Seite"} | d&amp;b audiotechnik</title>{og}{extra_head}</head><body>'
-            f'<section class="b_textmedia__container"><h2 class="b_headline"> {title} </h2>'
-            f'<p>Starte dein Leben bei uns. Du analysierst Risiken, entwickelst pragmatische Loesungen und arbeitest eng mit allen Fachbereichen zusammen.</p></section>'
-            f'<ul class="b_careerMeta__list">'
-            f'<li class="b_careerMeta__item"><span class="b_careerMeta__label"> Abteilung: </span><span class="b_careerMeta__value"></span></li>'
-            f'<li class="b_careerMeta__item"><span class="b_careerMeta__label"> Ort: </span><span class="b_careerMeta__value"> {place} </span></li>'
-            f'<li class="b_careerMeta__item"><span class="b_careerMeta__label"> Art: </span><span class="b_careerMeta__value"> Direkteinstieg </span></li>'
-            f'</ul></body></html>')
+def posting(raw, company, title):
+    return '<script type="application/ld+json">' + json.dumps({
+        "@type": "JobPosting", "url": raw, "title": title, "hiringOrganization": {"name": company},
+        "description": "Du denkst Sicherheit ganzheitlich und schützt kritische Systeme, Anwendungen und Daten.",
+        "jobLocation": {"address": {"addressLocality": "Headquarters (Backnang, Eugen-Adolff-Straße)"}},
+        "datePosted": "2026-11-03"}) + "</script>"
 
 
 class DbAudioTest(unittest.TestCase):
     source = registry()["db_audiotechnik"]
 
-    def test_list_links_match_and_foreign_links_do_not(self):
-        good = BASE + "it-security-specialist-wmd-req-2026-00000180/"
-        self.assertTrue(is_detail(good, self.source))
-        self.assertFalse(is_detail(BASE, self.source))
-        self.assertFalse(is_detail("https://www.dbaudio.com/global/de/ueber-db/karriere/dein-weg/", self.source))
+    def run_adapter(self, respond):
+        calls, report = [], {"filtered": 0}
 
-    def test_detail_without_json_ld_is_read_from_selectors(self):
-        url = BASE + "it-security-specialist-wmd-req-2026-00000180/"
-        job = extract(detail_page("IT Security Specialist (w/m/d)", "Deutschland, Backnang"), url, self.source, "")
-        self.assertEqual((job["title"], job["company"], job["location"]),
-                         ("IT Security Specialist (w/m/d)", "d&b audiotechnik", "Deutschland, Backnang"))
-        self.assertEqual(job["url"], url.rstrip("/"))
+        def get(raw, source, **options):
+            calls.append((raw, options))
+            result = respond(raw, options)
+            return raw, result if isinstance(result, str) else json.dumps(result)
 
-    def test_page_without_title_is_rejected(self):
-        why = []
-        url = BASE + "ohne-titel-req-2026-00000001/"
-        self.assertIsNone(extract(detail_page("", "Backnang"), url, self.source, "", why=why))
-        self.assertTrue(why)
+        jobs = list(adapter_jobs(self.source, SimpleNamespace(q="", location="", max_details=10), get, report))
+        return jobs, report, calls
 
-    def test_foreign_company_is_rejected(self):
-        html = detail_page("Servicetechniker (m/w/d)", "Backnang").replace("d&amp;b audiotechnik", "Andere GmbH")
-        self.assertIsNone(extract(html, BASE + "x-req-2026-00000002/", self.source, ""))
+    def test_config_points_at_the_workday_board(self):
+        self.assertEqual(self.source.adapter, "workday")
+        self.assertEqual(self.source.hosts, ("dbaudio.wd103.myworkdayjobs.com",))
+        self.assertTrue(self.source.api.endswith("/wday/cxs/dbaudio/dbaudiotechnik-careers-de/jobs"))
+
+    def test_workday_search_and_real_detail(self):
+        good = "/job/Headquarters-Backnang-Eugen-Adolff-Strae/IT-Security-Specialist--w-m-d-_REQ_2026_00000180"
+
+        def respond(raw, options):
+            if options.get("accept_json"):
+                return {"jobPostings": [{"externalPath": good}, {"externalPath": "https://evil.test/job/1"}]}
+            return posting(raw, "d&b audiotechnik GmbH & Co. KG", "IT Security Specialist (w/m/d)")
+
+        jobs, report, calls = self.run_adapter(respond)
+        self.assertEqual(len(jobs), 1)
+        self.assertEqual((jobs[0]["title"], jobs[0]["company"]), ("IT Security Specialist (w/m/d)", "d&b audiotechnik GmbH & Co. KG"))
+        self.assertEqual(jobs[0]["url"], BOARD + good)
+        self.assertEqual(report["filtered"], 0)
+
+    def test_foreign_company_is_filtered(self):
+        def respond(raw, options):
+            if options.get("accept_json"):
+                return {"jobPostings": [{"externalPath": "/job/Backnang/Servicetechniker_REQ_1"}]}
+            return posting(raw, "Andere GmbH", "Servicetechniker (m/w/d)")
+
+        jobs, report, _ = self.run_adapter(respond)
+        self.assertEqual(jobs, [])
+        self.assertEqual(report["filtered"], 1)
 
 
 if __name__ == "__main__":
