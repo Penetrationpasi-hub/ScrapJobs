@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-18T17:53:12+00:00 · 803 Stellen aus 46 von 61 Quellen
+Stand: 2026-11-18T18:20:09+00:00 · 803 Stellen aus 49 von 61 Quellen
 
 ## Quellen
 
@@ -15,14 +15,14 @@ Stand: 2026-11-18T17:53:12+00:00 · 803 Stellen aus 46 von 61 Quellen
 | Robert Bosch Krankenhaus | done | 9 | 2026-11-18 |  |
 | Kärcher | done | 85 | 2026-11-18 |  |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 10 | 2026-11-18 |  |
-| Landratsamt Rems-Murr-Kreis | network_error | 18 | 2026-11-18 | TimeoutError rems-murr-kreis.helixjobs.com |
+| Landratsamt Rems-Murr-Kreis | done | 18 | 2026-11-18 |  |
 | Paulinenpflege Winnenden | done | 11 | 2026-11-18 |  |
-| Kreissparkasse Waiblingen | network_error | 8 | 2026-11-17 | TimeoutError kskwn.helixjobs.com |
+| Kreissparkasse Waiblingen | done | 8 | 2026-11-18 |  |
 | Stadt Waiblingen | unsupported | 0 | – | keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3188837 Zeichen, 86 Links, Titel «Offene Stellen») |
 | TESAT-Spacecom | done | 20 | 2026-11-18 |  |
 | Airbus (Stuttgart, Laupheim, Backnang) | done | 10 | 2026-11-18 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-18 |  |
-| Volksbank Stuttgart | network_error | 8 | 2026-11-17 | TimeoutError volksbank-stuttgart.helixjobs.com |
+| Volksbank Stuttgart | network_error | 8 | 2026-11-17 | TimeoutError volksbank-stuttgart.helixjobs.com (auch nach Wiederholung) |
 | Klinikum Stuttgart · Bad Cannstatt | done | 58 | 2026-11-18 |  |
 | Stadt Schorndorf | done | 8 | 2026-11-18 |  |
 | Oskar Frech / Frech-Gruppe | done | 4 | 2026-11-18 |  |
@@ -34,7 +34,7 @@ Stand: 2026-11-18T17:53:12+00:00 · 803 Stellen aus 46 von 61 Quellen
 | REMS | done | 7 | 2026-11-18 |  |
 | stoba Backnang | done | 5 | 2026-11-18 |  |
 | Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
-| d&b audiotechnik | network_error | 0 | – | TimeoutError www.dbaudio.com |
+| d&b audiotechnik | done | 0 | 2026-11-18 |  |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
 | TTI / AEG / Milwaukee | done | 26 | 2026-11-18 |  |
 | Burger Schloz Automobile | done | 9 | 2026-11-18 |  |
@@ -54,7 +54,7 @@ Stand: 2026-11-18T17:53:12+00:00 · 803 Stellen aus 46 von 61 Quellen
 | Stadtwerke Waiblingen | done | 9 | 2026-11-18 |  |
 | FESSMANN | done | 2 | 2026-11-18 |  |
 | Soehnle Industrial Solutions | done | 15 | 2026-11-18 |  |
-| Gotthilf Benz Turngeräte | unsupported | 7 | 2026-11-17 |  |
+| Gotthilf Benz Turngeräte | robots_unavailable | 7 | 2026-11-17 | TimeoutError www.benz-sport.de |
 | RIANI | done | 8 | 2026-11-18 |  |
 | Dusyma | done | 8 | 2026-11-18 |  |
 | Zeitungsverlag Waiblingen | done | 1 | 2026-11-18 |  |

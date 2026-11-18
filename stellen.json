@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-18T17:53:12+00:00",
+ "aktualisiert": "2026-11-18T18:20:09+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -70,9 +70,8 @@
   {
    "key": "landratsamt_rmk",
    "label": "Landratsamt Rems-Murr-Kreis",
-   "status": "network_error",
+   "status": "done",
    "letzterErfolg": "2026-11-18",
-   "detail": "TimeoutError rems-murr-kreis.helixjobs.com",
    "anzahl": 18
   },
   {
@@ -85,9 +84,8 @@
   {
    "key": "ksk_waiblingen",
    "label": "Kreissparkasse Waiblingen",
-   "status": "network_error",
-   "letzterErfolg": "2026-11-17",
-   "detail": "TimeoutError kskwn.helixjobs.com",
+   "status": "done",
+   "letzterErfolg": "2026-11-18",
    "anzahl": 8
   },
   {
@@ -124,7 +122,7 @@
    "label": "Volksbank Stuttgart",
    "status": "network_error",
    "letzterErfolg": "2026-11-17",
-   "detail": "TimeoutError volksbank-stuttgart.helixjobs.com",
+   "detail": "TimeoutError volksbank-stuttgart.helixjobs.com (auch nach Wiederholung)",
    "anzahl": 8
   },
   {
@@ -210,9 +208,8 @@
   {
    "key": "db_audiotechnik",
    "label": "d&b audiotechnik",
-   "status": "network_error",
-   "letzterErfolg": null,
-   "detail": "TimeoutError www.dbaudio.com",
+   "status": "done",
+   "letzterErfolg": "2026-11-18",
    "anzahl": 0
   },
   {
@@ -354,8 +351,9 @@
   {
    "key": "benz_sport",
    "label": "Gotthilf Benz Turngeräte",
-   "status": "unsupported",
+   "status": "robots_unavailable",
    "letzterErfolg": "2026-11-17",
+   "detail": "TimeoutError www.benz-sport.de",
    "anzahl": 7
   },
   {
@@ -6250,7 +6248,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-0bbcf4dadb5bd6888757c116",
@@ -6262,7 +6260,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-ab361d36fe058f400bc2741f",
@@ -6274,7 +6272,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-591e3d86557efff21e687ac5",
@@ -6286,7 +6284,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-3e6937dcc790a0e067e05d37",
@@ -6298,7 +6296,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-c1627482c430a9c91f7b0ad5",
@@ -6310,7 +6308,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-f509265d2bdb7e8d9cb492c6",
@@ -6322,7 +6320,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-12ef37a96f52df6c3820b34c",
@@ -6334,7 +6332,7 @@
    "source": "ksk_waiblingen",
    "sourceLabel": "Kreissparkasse Waiblingen",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-9bde7fdd6813a10a0f87c5d3",

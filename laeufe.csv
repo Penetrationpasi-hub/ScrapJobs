@@ -182,3 +182,8 @@ lauf,datum,quelle,label,adapter,status,stellen_lauf,neu,im_katalog,detail
 2026-11-18T17:53:12+00:00,2026-11-18,socco,SOCCO,html,done,25,0,25,
 2026-11-18T17:53:12+00:00,2026-11-18,zvw,Zeitungsverlag Waiblingen,html,done,1,0,1,
 2026-11-18T17:53:12+00:00,2026-11-18,rems_murr_jobs,Rems-Murr-JOBS,html,done,10,0,11,
+2026-11-18T18:20:09+00:00,2026-11-18,db_audiotechnik,d&b audiotechnik,sitemap,done,0,0,0,
+2026-11-18T18:20:09+00:00,2026-11-18,ksk_waiblingen,Kreissparkasse Waiblingen,html,done,8,0,8,
+2026-11-18T18:20:09+00:00,2026-11-18,volksbank_stuttgart,Volksbank Stuttgart,html,network_error,0,0,8,TimeoutError volksbank-stuttgart.helixjobs.com (auch nach Wiederholung)
+2026-11-18T18:20:09+00:00,2026-11-18,landratsamt_rmk,Landratsamt Rems-Murr-Kreis,html,done,18,0,18,
+2026-11-18T18:20:09+00:00,2026-11-18,benz_sport,Gotthilf Benz Turngeräte,benz_sections,robots_unavailable,0,0,7,TimeoutError www.benz-sport.de
