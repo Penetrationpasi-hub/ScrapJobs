@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-18T19:46:04+00:00",
+ "aktualisiert": "2026-11-18T20:19:14+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -37,7 +37,7 @@
    "label": "MAHLE / MAHLE Aftermarket",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 47
+   "anzahl": 50
   },
   {
    "key": "diakonie_stetten",
@@ -201,7 +201,7 @@
    "label": "Deutsche Post / DHL",
    "status": "unsupported",
    "letzterErfolg": null,
-   "detail": "keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND»)",
+   "detail": "keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1209410 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND»)",
    "anzahl": 0
   },
   {
@@ -6993,6 +6993,18 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-a69611470c1c5f877f0a6602",
+   "title": "Praktikum Engagement & Belonging (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Engagement-&-Belonging-%28mwd%29-70376/1439068533",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-985179b64a5ed2458261b76a",
    "title": "Praktikum Global SSC Talent Management - Learning Services (m/w/d)",
    "company": "MAHLE",
@@ -7022,6 +7034,18 @@
    "company": "MAHLE",
    "location": "Stuttgart, DE, 70376",
    "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-Wireless-Charging-22kW%2B-%28mwd%29-70376/1439050533",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-fb5e08cf9074ea3cdeda3d4d",
+   "title": "Praktikum internationale Personalentwicklung und Talentmanagement (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-internationale-Personalentwicklung-und-Talentmanagement-%28mwd%29-70376/1439051333",
    "posted": "2026-11-15",
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
@@ -7179,6 +7203,18 @@
    "location": "Stuttgart, DE, 70376",
    "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Revision-Corporate-Internal-Audit-Europe-%28mwd%29-70376/1439049533",
    "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-c47dcc14af5ba7fabd162675",
+   "title": "Praktikum Simulation und Validierung von Li-Ionen Zellen und Batterien (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70469",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Simulation-und-Validierung-von-Li-Ionen-Zellen-und-Batterien-%28mwd%29-70469/1439560033",
+   "posted": "2026-11-18",
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",

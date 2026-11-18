@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-18T19:46:04+00:00 · 815 Stellen aus 51 von 61 Quellen
+Stand: 2026-11-18T20:19:14+00:00 · 818 Stellen aus 51 von 61 Quellen
 
 ## Quellen
 
@@ -10,7 +10,7 @@ Stand: 2026-11-18T19:46:04+00:00 · 815 Stellen aus 51 von 61 Quellen
 | Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | Mercedes-Benz | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «») |
 | STIHL | done | 60 | 2026-11-18 |  |
-| MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-18 |  |
+| MAHLE / MAHLE Aftermarket | done | 50 | 2026-11-18 |  |
 | Diakonie Stetten | done | 60 | 2026-11-18 |  |
 | Robert Bosch Krankenhaus | done | 9 | 2026-11-18 |  |
 | Kärcher | done | 85 | 2026-11-18 |  |
@@ -33,7 +33,7 @@ Stand: 2026-11-18T19:46:04+00:00 · 815 Stellen aus 51 von 61 Quellen
 | Emil Löffelhardt | done | 26 | 2026-11-18 |  |
 | REMS | done | 7 | 2026-11-18 |  |
 | stoba Backnang | done | 5 | 2026-11-18 |  |
-| Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
+| Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1209410 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
 | d&b audiotechnik | done | 10 | 2026-11-18 |  |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
 | TTI / AEG / Milwaukee | done | 26 | 2026-11-18 |  |
@@ -738,9 +738,11 @@ Stand: 2026-11-18T19:46:04+00:00 · 815 Stellen aus 51 von 61 Quellen
 - [Praktikum Business Development Industrial & Special Solutions (non-automotive) (m/w/d)](https://careers.mahle.com/job/Kornwestheim-Praktikum-Business-Development-Industrial-&-Special-Solutions-%28non-automotive%29-%28mwd%29-70806/1453928133) · Kornwestheim, DE, 70806 · seit 2026-11-08
 - [Praktikum Digital Business Model Development (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Digital-Business-Model-Development-%28mwd%29-70376/1439071133) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Energie-, Facility-, Bauprojektmanagement (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Energie-%2C-Facility-%2C-Bauprojektmanagement-%28mwd%29-70376/1439064233) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Engagement & Belonging (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Engagement-&-Belonging-%28mwd%29-70376/1439068533) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Global SSC Talent Management - Learning Services (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Global-SSC-Talent-Management-Learning-Services-%28mwd%29-70376/1442387233) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Hardware-Entwicklung, Validierung und Simulation, E-Mobility, Wireless Charging (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-E-Mobility%2C-Wireless-Charging-%28mwd%29-70376/1439053733) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Hardware-Entwicklung, Validierung und Simulation, Wireless Charging 22kW+  (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-Wireless-Charging-22kW%2B-%28mwd%29-70376/1439050533) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum internationale Personalentwicklung und Talentmanagement (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-internationale-Personalentwicklung-und-Talentmanagement-%28mwd%29-70376/1439051333) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Internes Kontrollsystem (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Internes-Kontrollsystem-%28mwd%29-70376/1441984633) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Konzerndatenschutz (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Konzerndatenschutz-%28mwd%29-70376/1453449433) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Lead-Buying Mechatronics (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Lead-Buying-Mechatronics-%28mwd%29-70469/1442000733) · Stuttgart, DE, 70469 · seit 2026-11-18
@@ -754,6 +756,7 @@ Stand: 2026-11-18T19:46:04+00:00 · 815 Stellen aus 51 von 61 Quellen
 - [Praktikum Projekthaus Vehicle Systems (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Projekthaus-Vehicle-Systems-%28mwd%29-70376/1439077033) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Qualitätsmanagement (m/w/d)](https://careers.mahle.com/job/Fellbach-Praktikum-Qualit%C3%A4tsmanagement-%28mwd%29-70736/1444435833) · Fellbach, DE, 70736 · seit 2026-11-08
 - [Praktikum Revision - Corporate Internal Audit Europe (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Revision-Corporate-Internal-Audit-Europe-%28mwd%29-70376/1439049533) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Simulation und Validierung von Li-Ionen Zellen und Batterien (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Simulation-und-Validierung-von-Li-Ionen-Zellen-und-Batterien-%28mwd%29-70469/1439560033) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Strömungs- und Akustiksimulation Klimageräte (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Str%C3%B6mungs-und-Akustiksimulation-Klimager%C3%A4te-%28mwd%29-70469/1439559333) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Trend Scouting (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Trend-Scouting-%28mwd%29-70376/1439062033) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Vertrieb Tier1 Kunden (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Vertrieb-Tier1-Kunden-%28mwd%29-70376/1439053933) · Stuttgart, DE, 70376 · seit 2026-11-18
