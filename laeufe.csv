@@ -1,0 +1,123 @@
+lauf,datum,quelle,label,adapter,status,stellen_lauf,neu,im_katalog,detail
+2026-11-17T20:13:31+00:00,2026-11-17,festo,Festo,html,done,2,1,2,teilweise: Esslingen network_error
+2026-11-17T20:13:31+00:00,2026-11-17,bosch,Bosch,html,unsafe_target,0,0,0,Host nicht freigegeben: jobs.bosch.com
+2026-11-17T20:13:31+00:00,2026-11-17,mercedes_benz,Mercedes-Benz,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «»)"
+2026-11-17T20:13:31+00:00,2026-11-17,stihl,STIHL,sitemap,done,60,3,60,
+2026-11-17T20:13:31+00:00,2026-11-17,mahle,MAHLE / MAHLE Aftermarket,html,done,8,0,8,"teilweise: Stuttgart network_error, Markgröningen robots_unavailable"
+2026-11-17T20:13:31+00:00,2026-11-17,diakonie_stetten,Diakonie Stetten,sitemap,done,60,3,60,
+2026-11-17T20:13:31+00:00,2026-11-17,robert_bosch_krankenhaus,Robert Bosch Krankenhaus,html,done,9,9,9,
+2026-11-17T20:13:31+00:00,2026-11-17,kaercher,Kärcher,html,done,80,13,80,
+2026-11-17T20:13:31+00:00,2026-11-17,rems_murr_kliniken,Rems-Murr-Kliniken · Winnenden / Schorndorf,html,done,10,6,10,
+2026-11-17T20:13:31+00:00,2026-11-17,landratsamt_rmk,Landratsamt Rems-Murr-Kreis,html,done,18,2,18,
+2026-11-17T20:13:31+00:00,2026-11-17,paulinenpflege,Paulinenpflege Winnenden,html,done,10,1,10,
+2026-11-17T20:13:31+00:00,2026-11-17,ksk_waiblingen,Kreissparkasse Waiblingen,html,done,8,5,8,
+2026-11-17T20:13:31+00:00,2026-11-17,stadt_waiblingen,Stadt Waiblingen,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3185013 Zeichen, 86 Links, Titel «Offene Stellen»)"
+2026-11-17T20:13:31+00:00,2026-11-17,tesat,TESAT-Spacecom,workday,done,20,3,20,
+2026-11-17T20:13:31+00:00,2026-11-17,airbus,"Airbus (Stuttgart, Laupheim, Backnang)",workday,done,9,2,9,
+2026-11-17T20:13:31+00:00,2026-11-17,zfp_winnenden,Klinikum Schloß Winnenden,bite,done,10,3,10,
+2026-11-17T20:13:31+00:00,2026-11-17,volksbank_stuttgart,Volksbank Stuttgart,html,done,8,1,8,
+2026-11-17T20:13:31+00:00,2026-11-17,klinikum_stuttgart,Klinikum Stuttgart · Bad Cannstatt,sitemap,done,57,17,57,
+2026-11-17T20:13:31+00:00,2026-11-17,stadt_schorndorf,Stadt Schorndorf,html,done,7,2,7,
+2026-11-17T20:13:31+00:00,2026-11-17,frech,Oskar Frech / Frech-Gruppe,html,done,3,0,3,
+2026-11-17T20:13:31+00:00,2026-11-17,peter_hahn,Peter Hahn,sitemap,done,2,1,2,
+2026-11-17T20:13:31+00:00,2026-11-17,syntegon,Syntegon,sitemap,done,14,6,14,
+2026-11-17T20:13:31+00:00,2026-11-17,catalent,Catalent Schorndorf,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://careers.catalent.com/us/en/europe (174059 Zeichen, 12 Links, Titel «Jobs in Europe | Catalent Careers»)"
+2026-11-17T20:13:31+00:00,2026-11-17,sana_karl_olga,Sana · Karl-Olga-Krankenhaus,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13300 Zeichen, 0 Links, Titel «Sana»)"
+2026-11-17T20:13:31+00:00,2026-11-17,loeffelhardt,Emil Löffelhardt,datafeed,done,25,1,25,
+2026-11-17T20:13:31+00:00,2026-11-17,rems,REMS,rems_list,done,7,0,7,
+2026-11-17T20:13:31+00:00,2026-11-17,stoba,stoba Backnang,html,done,5,0,5,
+2026-11-17T20:13:31+00:00,2026-11-17,deutsche_post,Deutsche Post / DHL,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (254899 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND»)"
+2026-11-17T20:13:31+00:00,2026-11-17,db_audiotechnik,d&b audiotechnik,sitemap,network_error,0,0,0,TimeoutError www.dbaudio.com
+2026-11-17T20:13:31+00:00,2026-11-17,swr,SWR Stuttgart,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote»)"
+2026-11-17T20:13:31+00:00,2026-11-17,tti,TTI / AEG / Milwaukee,workday,done,23,23,23,
+2026-11-17T20:13:31+00:00,2026-11-17,burger_schloz,Burger Schloz Automobile,carsonal,done,9,0,9,
+2026-11-17T20:13:31+00:00,2026-11-17,kloepfer,Klöpfer,html,done,4,2,4,
+2026-11-17T20:13:31+00:00,2026-11-17,judo,JUDO Wasseraufbereitung,judo_filter,done,8,0,8,
+2026-11-17T20:13:31+00:00,2026-11-17,riva,RIVA-Gruppe / Mpire,personio,done,16,3,16,
+2026-11-17T20:13:31+00:00,2026-11-17,wirmachendruck,WIRmachenDRUCK,dvinci,done,15,2,15,
+2026-11-17T20:13:31+00:00,2026-11-17,eisenmann,Eisenmann Services / Personal-Service,eisenmann_sections,done,3,0,3,
+2026-11-17T20:13:31+00:00,2026-11-17,baeckerei_maurer,Bäckerei Maurer,html,done,15,0,15,
+2026-11-17T20:13:31+00:00,2026-11-17,elanders,Elanders Waiblingen,html,done,10,0,10,
+2026-11-17T20:13:31+00:00,2026-11-17,scutum,Scutum Sicherheit,html,unsafe_target,0,0,0,Host nicht freigegeben: www.scutum-group.com
+2026-11-17T20:13:31+00:00,2026-11-17,brunold,Brunold Automobile,html,done,1,1,1,
+2026-11-17T20:13:31+00:00,2026-11-17,kuebler,KÜBLER Workwear,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://kuebler.karriere.vision/jobs (1683 Zeichen, 0 Links, Titel «Online-Bewerbermanagement»)"
+2026-11-17T20:13:31+00:00,2026-11-17,swoboda,Swoboda,html,done,14,0,14,
+2026-11-17T20:13:31+00:00,2026-11-17,mulfinger,Autohaus Walter Mulfinger,html,done,5,3,5,
+2026-11-17T20:13:31+00:00,2026-11-17,foehl,Adolf Föhl,html,done,7,0,7,
+2026-11-17T20:13:31+00:00,2026-11-17,stadtwerke_waiblingen,Stadtwerke Waiblingen,myjobboard,done,9,0,9,
+2026-11-17T20:13:31+00:00,2026-11-17,fessmann,FESSMANN,html,done,2,0,2,
+2026-11-17T20:13:31+00:00,2026-11-17,soehnle,Soehnle Industrial Solutions,html,done,15,0,15,
+2026-11-17T20:13:31+00:00,2026-11-17,benz_sport,Gotthilf Benz Turngeräte,benz_sections,done,7,0,7,
+2026-11-17T20:13:31+00:00,2026-11-17,riani,RIANI,html,done,8,2,8,
+2026-11-17T20:13:31+00:00,2026-11-17,dusyma,Dusyma,easyhr,done,8,0,8,
+2026-11-17T20:13:31+00:00,2026-11-17,zvw,Zeitungsverlag Waiblingen,html,done,1,0,1,
+2026-11-17T20:13:31+00:00,2026-11-17,stadtwerke_schorndorf,Stadtwerke Schorndorf,html,robots_denied,0,0,0,
+2026-11-17T20:13:31+00:00,2026-11-17,awrm,Abfallwirtschaft Rems-Murr,html,done,1,1,1,
+2026-11-17T20:13:31+00:00,2026-11-17,murrelektronik,Murrelektronik,murr,done,9,1,9,
+2026-11-17T20:13:31+00:00,2026-11-17,pfisterer,PFISTERER,html,done,22,0,22,
+2026-11-17T20:13:31+00:00,2026-11-17,hahn_automobile,Hahn Automobile,hahn,done,10,7,10,
+2026-11-17T20:13:31+00:00,2026-11-17,klingele,Klingele Paper & Packaging,html,done,21,10,21,
+2026-11-17T20:13:31+00:00,2026-11-17,harro_hoefliger,Harro Höfliger,harro_next,done,10,4,10,
+2026-11-17T20:13:31+00:00,2026-11-17,socco,SOCCO,html,done,25,1,25,
+2026-11-17T20:13:31+00:00,2026-11-17,rems_murr_jobs,Rems-Murr-JOBS,html,done,10,10,10,
+2026-11-18T13:28:55+00:00,2026-11-18,festo,Festo,html,done,16,14,16,
+2026-11-18T13:28:55+00:00,2026-11-18,bosch,Bosch,html,unsafe_target,0,0,0,Host nicht freigegeben: jobs.bosch.com
+2026-11-18T13:28:55+00:00,2026-11-18,mercedes_benz,Mercedes-Benz,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «»)"
+2026-11-18T13:28:55+00:00,2026-11-18,stihl,STIHL,sitemap,done,60,0,60,
+2026-11-18T13:28:55+00:00,2026-11-18,mahle,MAHLE / MAHLE Aftermarket,html,done,31,24,32,
+2026-11-18T13:28:55+00:00,2026-11-18,diakonie_stetten,Diakonie Stetten,sitemap,done,60,0,60,
+2026-11-18T13:28:55+00:00,2026-11-18,robert_bosch_krankenhaus,Robert Bosch Krankenhaus,html,done,9,0,9,
+2026-11-18T13:28:55+00:00,2026-11-18,kaercher,Kärcher,html,done,80,5,85,
+2026-11-18T13:28:55+00:00,2026-11-18,rems_murr_kliniken,Rems-Murr-Kliniken · Winnenden / Schorndorf,html,done,10,0,10,
+2026-11-18T13:28:55+00:00,2026-11-18,landratsamt_rmk,Landratsamt Rems-Murr-Kreis,html,done,18,0,18,
+2026-11-18T13:28:55+00:00,2026-11-18,paulinenpflege,Paulinenpflege Winnenden,html,done,9,1,11,
+2026-11-18T13:28:55+00:00,2026-11-18,ksk_waiblingen,Kreissparkasse Waiblingen,html,network_error,0,0,8,TimeoutError kskwn.helixjobs.com
+2026-11-18T13:28:55+00:00,2026-11-18,stadt_waiblingen,Stadt Waiblingen,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3185013 Zeichen, 86 Links, Titel «Offene Stellen»)"
+2026-11-18T13:28:55+00:00,2026-11-18,tesat,TESAT-Spacecom,workday,done,19,0,20,
+2026-11-18T13:28:55+00:00,2026-11-18,airbus,"Airbus (Stuttgart, Laupheim, Backnang)",workday,done,9,1,10,
+2026-11-18T13:28:55+00:00,2026-11-18,zfp_winnenden,Klinikum Schloß Winnenden,bite,done,10,0,10,
+2026-11-18T13:28:55+00:00,2026-11-18,volksbank_stuttgart,Volksbank Stuttgart,html,network_error,0,0,8,TimeoutError volksbank-stuttgart.helixjobs.com
+2026-11-18T13:28:55+00:00,2026-11-18,klinikum_stuttgart,Klinikum Stuttgart · Bad Cannstatt,sitemap,done,57,1,58,
+2026-11-18T13:28:55+00:00,2026-11-18,stadt_schorndorf,Stadt Schorndorf,html,done,8,1,8,
+2026-11-18T13:28:55+00:00,2026-11-18,frech,Oskar Frech / Frech-Gruppe,html,done,3,0,3,
+2026-11-18T13:28:55+00:00,2026-11-18,peter_hahn,Peter Hahn,sitemap,done,2,0,2,
+2026-11-18T13:28:55+00:00,2026-11-18,syntegon,Syntegon,sitemap,done,14,0,14,
+2026-11-18T13:28:55+00:00,2026-11-18,catalent,Catalent Schorndorf,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://careers.catalent.com/us/en/europe (173871 Zeichen, 12 Links, Titel «Jobs in Europe | Catalent Careers»)"
+2026-11-18T13:28:55+00:00,2026-11-18,sana_karl_olga,Sana · Karl-Olga-Krankenhaus,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13300 Zeichen, 0 Links, Titel «Sana»)"
+2026-11-18T13:28:55+00:00,2026-11-18,loeffelhardt,Emil Löffelhardt,datafeed,done,26,1,26,
+2026-11-18T13:28:55+00:00,2026-11-18,rems,REMS,rems_list,done,7,0,7,
+2026-11-18T13:28:55+00:00,2026-11-18,stoba,stoba Backnang,html,done,5,0,5,
+2026-11-18T13:28:55+00:00,2026-11-18,deutsche_post,Deutsche Post / DHL,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1210300 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND»)"
+2026-11-18T13:28:55+00:00,2026-11-18,db_audiotechnik,d&b audiotechnik,sitemap,network_error,0,0,0,TimeoutError www.dbaudio.com
+2026-11-18T13:28:55+00:00,2026-11-18,swr,SWR Stuttgart,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote»)"
+2026-11-18T13:28:55+00:00,2026-11-18,tti,TTI / AEG / Milwaukee,workday,done,24,2,25,
+2026-11-18T13:28:55+00:00,2026-11-18,burger_schloz,Burger Schloz Automobile,carsonal,done,9,0,9,
+2026-11-18T13:28:55+00:00,2026-11-18,kloepfer,Klöpfer,html,done,4,0,4,
+2026-11-18T13:28:55+00:00,2026-11-18,judo,JUDO Wasseraufbereitung,judo_filter,done,8,0,8,
+2026-11-18T13:28:55+00:00,2026-11-18,riva,RIVA-Gruppe / Mpire,personio,done,16,0,16,
+2026-11-18T13:28:55+00:00,2026-11-18,wirmachendruck,WIRmachenDRUCK,dvinci,done,14,0,15,
+2026-11-18T13:28:55+00:00,2026-11-18,eisenmann,Eisenmann Services / Personal-Service,eisenmann_sections,done,3,0,3,
+2026-11-18T13:28:55+00:00,2026-11-18,baeckerei_maurer,Bäckerei Maurer,html,done,15,0,15,
+2026-11-18T13:28:55+00:00,2026-11-18,elanders,Elanders Waiblingen,html,done,10,0,10,
+2026-11-18T13:28:55+00:00,2026-11-18,scutum,Scutum Sicherheit,html,unsafe_target,0,0,0,Host nicht freigegeben: www.scutum-group.com
+2026-11-18T13:28:55+00:00,2026-11-18,brunold,Brunold Automobile,html,done,1,0,1,
+2026-11-18T13:28:55+00:00,2026-11-18,kuebler,KÜBLER Workwear,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://kuebler.karriere.vision/jobs (1683 Zeichen, 0 Links, Titel «Online-Bewerbermanagement»)"
+2026-11-18T13:28:55+00:00,2026-11-18,swoboda,Swoboda,html,done,14,0,14,
+2026-11-18T13:28:55+00:00,2026-11-18,mulfinger,Autohaus Walter Mulfinger,html,done,5,0,5,
+2026-11-18T13:28:55+00:00,2026-11-18,foehl,Adolf Föhl,html,done,7,0,7,
+2026-11-18T13:28:55+00:00,2026-11-18,stadtwerke_waiblingen,Stadtwerke Waiblingen,myjobboard,done,9,0,9,
+2026-11-18T13:28:55+00:00,2026-11-18,fessmann,FESSMANN,html,done,2,0,2,
+2026-11-18T13:28:55+00:00,2026-11-18,soehnle,Soehnle Industrial Solutions,html,done,15,0,15,
+2026-11-18T13:28:55+00:00,2026-11-18,benz_sport,Gotthilf Benz Turngeräte,benz_sections,upstream_error,0,0,7,upstream_error HTTP 503
+2026-11-18T13:28:55+00:00,2026-11-18,riani,RIANI,html,done,8,0,8,
+2026-11-18T13:28:55+00:00,2026-11-18,dusyma,Dusyma,easyhr,done,8,0,8,
+2026-11-18T13:28:55+00:00,2026-11-18,zvw,Zeitungsverlag Waiblingen,html,done,1,0,1,
+2026-11-18T13:28:55+00:00,2026-11-18,stadtwerke_schorndorf,Stadtwerke Schorndorf,html,robots_denied,0,0,0,
+2026-11-18T13:28:55+00:00,2026-11-18,awrm,Abfallwirtschaft Rems-Murr,html,done,1,0,1,
+2026-11-18T13:28:55+00:00,2026-11-18,murrelektronik,Murrelektronik,murr,done,9,0,9,
+2026-11-18T13:28:55+00:00,2026-11-18,pfisterer,PFISTERER,html,done,22,0,22,
+2026-11-18T13:28:55+00:00,2026-11-18,hahn_automobile,Hahn Automobile,hahn,done,10,0,10,
+2026-11-18T13:28:55+00:00,2026-11-18,klingele,Klingele Paper & Packaging,html,done,22,5,26,
+2026-11-18T13:28:55+00:00,2026-11-18,harro_hoefliger,Harro Höfliger,harro_next,done,10,3,13,
+2026-11-18T13:28:55+00:00,2026-11-18,socco,SOCCO,html,done,25,0,25,
+2026-11-18T13:28:55+00:00,2026-11-18,rems_murr_jobs,Rems-Murr-JOBS,html,done,10,1,11,

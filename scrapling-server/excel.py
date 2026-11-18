@@ -7,7 +7,9 @@ und Link), Quellen (Status je Arbeitgeber). Alle Werte fest eingetragen,
 keine Formeln, damit auch Vorschau-Apps am Handy alles anzeigen.
 """
 
+import csv
 import json
+import os
 import sys
 from datetime import date, datetime, timezone
 
@@ -18,6 +20,9 @@ from openpyxl.utils import get_column_letter
 KOPF_FONT = Font(bold=True, color="FFFFFF")
 KOPF_FILL = PatternFill("solid", start_color="1D3C6E")
 WARN_FILL = PatternFill("solid", start_color="FCE4D6")
+FEHL_FILL = PatternFill("solid", start_color="F4B6B6")
+GRAU_FILL = PatternFill("solid", start_color="D9D9D9")
+MAX_LAEUFE = 30
 NEU_FILL = PatternFill("solid", start_color="E2EFDA")
 DATUM = "DD.MM.YYYY"
 
@@ -38,8 +43,10 @@ def _kopf(ws, spalten, breiten):
     ws.freeze_panes = "A2"
 
 
-def build(doc, heute=None):
+def build(doc, heute=None, laeufe=None, ausnahmen=None):
     heute = heute or datetime.now(timezone.utc).date()
+    laeufe = laeufe or []
+    ausnahmen = ausnahmen or {}
     stand_dt = doc.get("aktualisiert") or ""
     stand = _datum(stand_dt)
     quellen = doc.get("quellen") or []
@@ -117,6 +124,74 @@ def build(doc, heute=None):
         if q.get("status") != "done":
             qu.cell(row=qu.max_row, column=2).fill = WARN_FILL
     qu.auto_filter.ref = f"A1:E{max(qu.max_row, 1)}"
+
+    if laeufe:
+        letzter = max(r["lauf"] for r in laeufe)
+        jetzt = [r for r in laeufe if r["lauf"] == letzter]
+        leer = [r for r in jetzt if int(r["stellen_lauf"] or 0) == 0]
+        offen = [r for r in leer if r["quelle"] not in ausnahmen]
+        ue.insert_rows(8)
+        ue.cell(row=8, column=1, value="Quellen ohne Stellen (letzter Lauf)").font = Font(bold=True)
+        ue.cell(row=8, column=2, value=f"{len(leer)} von {len(jetzt)}, davon {len(offen)} zu prüfen "
+                f"und {len(leer) - len(offen)} auf der Ausnahmeliste (Blätter Läufe, Ohne Ergebnis)")
+        if offen:
+            ue.cell(row=8, column=2).fill = WARN_FILL
+
+        # --- Matrix Quelle x Lauf
+        laufzeiten = sorted({r["lauf"] for r in laeufe})[-MAX_LAEUFE:]
+        je = {}
+        for r in laeufe:
+            je.setdefault(r["quelle"], {})[r["lauf"]] = r
+        def folge(rows_q):
+            n = 0
+            for lz in reversed(laufzeiten):
+                r = rows_q.get(lz)
+                if r is None or int(r["stellen_lauf"] or 0) != 0:
+                    break
+                n += 1
+            return n
+        def letzter_erfolg(rows_q):
+            ok = [r["datum"] for r in rows_q.values() if int(r["stellen_lauf"] or 0) > 0]
+            return _datum(max(ok)) if ok else None
+        quellen_neu = {r["quelle"]: r for r in jetzt}
+        reihen = sorted(quellen_neu, key=lambda k: (int(quellen_neu[k]["stellen_lauf"] or 0) > 0 or k in ausnahmen,
+                                                    k in ausnahmen, quellen_neu[k]["label"].casefold()))
+        lf = wb.create_sheet("Läufe")
+        _kopf(lf, ["Arbeitgeber", "Adapter", "Status zuletzt", "Läufe ohne Ergebnis in Folge", "Letzter Erfolg"]
+              + [lz[5:16].replace("T", " ") for lz in laufzeiten],
+              [34, 16, 18, 14, 14] + [11] * len(laufzeiten))
+        for k in reihen:
+            r0, rq = quellen_neu[k], je[k]
+            lf.append([r0["label"], r0["adapter"], r0["status"], folge(rq), letzter_erfolg(rq)]
+                      + [int(rq[lz]["stellen_lauf"] or 0) if lz in rq else None for lz in laufzeiten])
+            zr = lf.max_row
+            lf.cell(row=zr, column=5).number_format = DATUM
+            for j, lz in enumerate(laufzeiten, start=6):
+                c = lf.cell(row=zr, column=j)
+                if c.value == 0:
+                    c.fill = GRAU_FILL if k in ausnahmen else FEHL_FILL
+            if k in ausnahmen:
+                lf.cell(row=zr, column=1).fill = GRAU_FILL
+        lf.freeze_panes = "F2"
+        lf.auto_filter.ref = f"A1:{get_column_letter(5 + len(laufzeiten))}{max(lf.max_row, 1)}"
+        lf.cell(row=lf.max_row + 2, column=1, value=(
+            "Zahl = in diesem Lauf gelesene Stellen. Rot = 0 Stellen (Fehler oder leer), grau = dauerhaft "
+            "ohne Ergebnis erlaubt (ohne_stellen_ok.json). Leere Zelle = Quelle in diesem Lauf nicht abgefragt."))
+
+        # --- Arbeitsliste: nur Quellen ohne Stellen im letzten Lauf
+        oe = wb.create_sheet("Ohne Ergebnis")
+        _kopf(oe, ["Arbeitgeber", "Schlüssel", "Adapter", "Status", "Detail", "Läufe in Folge",
+                   "Letzter Erfolg", "Auf Ausnahmeliste", "Grund der Ausnahme"],
+              [34, 22, 16, 18, 60, 14, 14, 16, 50])
+        for r in sorted(leer, key=lambda r: (r["quelle"] in ausnahmen, r["label"].casefold())):
+            oe.append([r["label"], r["quelle"], r["adapter"], r["status"], r["detail"] or None,
+                       folge(je[r["quelle"]]), letzter_erfolg(je[r["quelle"]]),
+                       "ja" if r["quelle"] in ausnahmen else "nein", ausnahmen.get(r["quelle"])])
+            zr = oe.max_row
+            oe.cell(row=zr, column=7).number_format = DATUM
+            oe.cell(row=zr, column=2 if r["quelle"] in ausnahmen else 4).fill = (
+                GRAU_FILL if r["quelle"] in ausnahmen else FEHL_FILL)
+        oe.auto_filter.ref = f"A1:I{max(oe.max_row, 1)}"
     return wb
 
 
@@ -126,7 +201,20 @@ def main(argv=None):
     out = argv[1] if len(argv) > 1 else "../stellen.xlsx"
     with open(src, encoding="utf-8") as fh:
         doc = json.load(fh)
-    build(doc).save(out)
+    basis = os.path.dirname(os.path.abspath(src))
+    laeufe, ausnahmen = [], {}
+    try:
+        with open(os.path.join(basis, "laeufe.csv"), encoding="utf-8", newline="") as fh:
+            laeufe = list(csv.DictReader(fh))
+    except OSError:
+        pass
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ohne_stellen_ok.json"),
+                  encoding="utf-8") as fh:
+            ausnahmen = json.load(fh)
+    except (OSError, ValueError):
+        pass
+    build(doc, laeufe=laeufe, ausnahmen=ausnahmen).save(out)
     print(f"Excel geschrieben: {out}")
 
 

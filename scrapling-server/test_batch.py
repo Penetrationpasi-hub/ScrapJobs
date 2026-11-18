@@ -433,3 +433,19 @@ class CatalogConfigTest(unittest.TestCase):
         with mock.patch.object(sources.Path, "read_text", return_value=json.dumps(nolocation)):
             with self.assertRaises(ValueError):
                 registry()
+
+
+class HistoryTest(unittest.TestCase):
+    def test_zeile_je_quelle_mit_neu_und_katalog(self):
+        import csv as _csv
+        first = batch.merge(None, {"acme": result("done", job(1))}, "2026-11-09", NOW)
+        results = {"acme": result("done", job(1), job(2)), "b": result("timeout")}
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder, "laeufe.csv")
+            batch.append_history(path, NOW, results, first, {"acme": 2, "b": 0}, {})
+            batch.append_history(path, NOW, results, first, {"acme": 2, "b": 0}, {})
+            rows = list(_csv.DictReader(path.open(encoding="utf-8")))
+        self.assertEqual(len(rows), 4)
+        acme, b = rows[0], rows[1]
+        self.assertEqual((acme["quelle"], acme["stellen_lauf"], acme["neu"], acme["im_katalog"]), ("acme", "2", "1", "2"))
+        self.assertEqual((b["status"], b["stellen_lauf"]), ("timeout", "0"))
