@@ -195,12 +195,48 @@ def hahn(source, req, get, report):
             report["filtered"] += 1
 
 
+def benz_offers(source, req, final, page, report):
+    """Karriereseite nach dem Relaunch: jede Anzeige ist eine Akkordeon-Karte (.val-job-offers__item).
+
+    Die Seite nennt den Firmennamen nicht mehr (kein DC.Publisher); er steht fest in der
+    Konfiguration, der Host ist exakt freigegeben. Adressen wie bisher als Textfragment.
+    """
+    if not source.company:
+        raise FetchError("unsupported", detail="Firmenname fehlt in der Konfiguration")
+    kept = set()
+    for item in list(page.css(".val-job-offers__item"))[:40]:
+        title = " ".join(plain(item.css(".val-job-offers__item-title").get() or "").split())
+        if (not title or len(title) > 200 or title in kept
+                or re.search(r"initiativ|initiative bewerbung", title, re.I)):
+            continue
+        kept.add(title)
+        location = " ".join(plain(item.css(".val-job-offers__meta").get() or "").split())[:160]
+        description = plain(item.css(".val-job-offers__body").get() or "")
+        if len(description) < 100:
+            report["filtered"] += 1
+            continue
+        job = from_record({
+            "title": title, "hiringOrganization": {"name": source.company},
+            "description": description, "jobLocation": {"address": {"addressLocality": location}},
+        }, canonical(final), source, req.q)
+        if not job:
+            report["filtered"] += 1
+            continue
+        raw = canonical(final) + "#:~:text=" + quote(title, safe="")
+        yield {**job, "id": "scrapling-" + hashlib.sha256(raw.encode()).hexdigest()[:24], "url": raw}
+        if len(kept) >= 10:
+            break
+
+
 def sections(source, req, get, report):
     final, html = get(source.start(req.q, req.location), source)
     # A redirect to a different page is not evidence for a site-specific layout.
     if canonical(final) != canonical(source.start(req.q, req.location)):
         raise FetchError("unsupported")
     page = Selector(html)
+    if source.adapter == "benz_sections" and page.css(".val-job-offers__item"):
+        yield from benz_offers(source, req, final, page, report)
+        return
     if source.adapter == "benz_sections":
         publisher = page.css('meta[name="DC.Publisher"]::attr(content)').get() or ""
         titles = page.css(".typo h2")
@@ -210,7 +246,7 @@ def sections(source, req, get, report):
         titles = page.css(".accordion h4.trigger")
     match = re.search(source.company_pattern, publisher, re.I)
     if not match:
-        raise FetchError("unsupported")
+        raise FetchError("unsupported", detail="Firmenangabe/Abschnitte nicht gefunden (Seite umgebaut?)")
     company = match.group(0)
     # Document order also handles BENZ's nested richtext containers. A direct
     # sibling-only split would leak the next nested vacancy into the previous one.

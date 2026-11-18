@@ -32,6 +32,11 @@ LOCATION_DOCUMENTS = 140
 LOCATION_SECONDS = 450
 # Quellen, deren robots.txt lange Wartezeiten zwischen Abrufen verlangt (PFISTERER: 10 s): Faktor auf das Zeitbudget.
 SLOW_SOURCES = {"pfisterer": 4}
+# Zeitlimit (s) je einzelnem Abruf, wo 8 s zu knapp sind (langsame Portale, grosse Sitemaps).
+SLOW_REQUESTS = {"db_audiotechnik": 20, "ksk_waiblingen": 15, "volksbank_stuttgart": 15, "landratsamt_rmk": 15}
+# Vorübergehende Fehler: die Quelle wird nach dem Hauptdurchlauf einmal wiederholt.
+TRANSIENT = {"network_error", "upstream_error", "timeout"}
+RETRY_PAUSE = 90
 # Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
 MIN_DELAY = {}
 # Sitemap-Quellen lesen jede Anzeige einzeln: mehr Einzelseiten und mehr Zeit als der Standard.
@@ -200,6 +205,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
                                              max(options.documents, SITEMAP_DOCUMENTS) if getattr(source, "adapter", "") == "sitemap" else options.documents),
                                   robots_missing_ok=not options.strict_robots,
                                   min_delay=MIN_DELAY.get(key, 0),
+                                  request_timeout=SLOW_REQUESTS.get(key, 8),
                                   seconds=(max(options.seconds, LOCATION_SECONDS) if place else options.seconds)
                                   * (2 if key in ISOLATED_SOURCES or getattr(source, "adapter", "") == "sitemap" else 1) * SLOW_SOURCES.get(key, 1))
             if place:
@@ -234,6 +240,28 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         log(f"{key}: {status}, {len(jobs)} Stellen, {time.monotonic() - started:.0f}s" + (f" ({detail})" if detail else ""))
         if index + 1 < len(keys):
             sleep(options.pause)
+    return results
+
+
+def collect_with_retry(keys, configured, options, factory=None, sleep=time.sleep, log=print, pause=RETRY_PAUSE):
+    """Hauptdurchlauf, danach einmal die Quellen mit vorübergehendem Fehler (Timeout, 5xx) wiederholen.
+
+    GitHub-Runner erreichen einzelne Portale zeitweise nicht; ein zweiter Versuch nach einer
+    Pause behebt das meist. Das Ergebnis der Wiederholung ersetzt nur einen Fehlschlag.
+    """
+    results = collect(keys, configured, options, factory=factory, sleep=sleep, log=log)
+    again = [key for key in keys if results[key]["status"] in TRANSIENT]
+    if not again:
+        return results
+    log(f"\nWiederholung nach {pause} s: {', '.join(again)}")
+    sleep(pause)
+    second = collect(again, configured, options, factory=factory, sleep=sleep, log=log)
+    for key in again:
+        if second[key]["status"] == "done":
+            results[key] = second[key]
+        else:
+            first = results[key]
+            first["detail"] = ((first.get("detail") or first["status"]) + " (auch nach Wiederholung)")[:200]
     return results
 
 
@@ -276,7 +304,7 @@ def run(options):
     except ValueError:
         previous = None
     print(f"{len(keys)} Quellen")
-    results = collect(keys, configured, options)
+    results = collect_with_retry(keys, configured, options)
     now = datetime.now(timezone.utc)
     history = out.with_name("laeufe.csv")
     if not any(r["status"] == "done" for r in results.values()):

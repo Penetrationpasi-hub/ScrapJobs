@@ -26,7 +26,8 @@ RUN_SECONDS = 240
 
 
 class Budget:
-    def __init__(self, seconds=RUN_SECONDS, documents=40):
+    def __init__(self, seconds=RUN_SECONDS, documents=40, request_timeout=8):
+        self.request_timeout = request_timeout
         self.deadline = time.monotonic() + seconds
         self.remaining = documents
         self.lock = threading.Lock()
@@ -38,7 +39,7 @@ class Budget:
             if self.remaining <= 0:
                 raise FetchError("request_limit")
             self.remaining -= 1
-            return min(8, max(0.1, self.deadline - time.monotonic()))
+            return min(self.request_timeout, max(0.1, self.deadline - time.monotonic()))
 
 
 def target(raw, hosts, resolve=socket.getaddrinfo):
