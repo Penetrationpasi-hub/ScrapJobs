@@ -111,3 +111,17 @@ Einzige Änderung an `crawler.py` gegenüber dem Original: optionale Request-Att
 `max_jobs`, `max_details`, `seconds`, `documents`. Ohne sie gelten die bisherigen Pilot-Limits
 (30 Stellen, 40 Abrufe, 240 s, 10 Details). Änderungen an Adaptern müssen in beiden Repos
 nachgezogen werden, solange beide Kopien existieren.
+
+## Welche Quelle liefert was? (`laeufe.csv`, Blätter *Läufe* und *Ohne Ergebnis*)
+
+Jeder Lauf hängt je Quelle eine Zeile an [`laeufe.csv`](laeufe.csv) an: Adapter, Status, **in diesem Lauf gelesene
+Stellen** (`stellen_lauf`, bei Fehlern 0 – anders als `anzahl` in `stellen.json`, das alte Stellen stehen lässt),
+davon neu, Stand im Katalog und Detail. `stellen.xlsx` zeigt das als Matrix Quelle × letzte 30 Läufe (rot = 0) und
+als Arbeitsliste *Ohne Ergebnis* (Status, Detail, Läufe in Folge, letzter Erfolg).
+
+**Roter Lauf:** Der letzte Schritt `scrapling-server/pruefen.py` lässt den Lauf fehlschlagen, sobald eine Quelle
+0 Stellen geliefert hat (Fehlerstatus oder `done` ohne Stellen). Die Daten werden vorher committet; die Tabelle der
+betroffenen Quellen steht in der Zusammenfassung des Laufs unter *Actions*. Dauerhaft nicht lauffähige Quellen stehen
+mit Begründung in `scrapling-server/ohne_stellen_ok.json` und zählen nicht. Wird eine Quelle repariert (oder
+bekommt sie wieder Stellen), erscheint ein Hinweis: dann aus der Liste streichen. Ein Test stellt sicher, dass dort
+nur Quellen des Katalogs stehen.

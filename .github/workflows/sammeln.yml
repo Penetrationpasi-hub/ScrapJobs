@@ -70,15 +70,25 @@ jobs:
         working-directory: scrapling-server
         run: python excel.py ../stellen.json ../stellen.xlsx
 
-      - if: steps.zeit.outputs.go == 'true'
+      # !cancelled(): auch nach einem roten Sammeln speichern, was da ist
+      # (die Historie laeufe.csv wird dann trotzdem fortgeschrieben).
+      - if: ${{ !cancelled() && steps.zeit.outputs.go == 'true' }}
         name: Ergebnis committen
         run: |
-          if git diff --quiet -- stellen.json STELLEN.md stellen.xlsx && [ -z "$(git ls-files --others --exclude-standard stellen.json STELLEN.md stellen.xlsx)" ]; then
+          if git diff --quiet -- stellen.json STELLEN.md stellen.xlsx laeufe.csv && [ -z "$(git ls-files --others --exclude-standard stellen.json STELLEN.md stellen.xlsx laeufe.csv)" ]; then
             echo "Keine Änderung"; exit 0
           fi
           git config user.name "scrapjobs-bot"
           git config user.email "scrapjobs-bot@users.noreply.github.com"
-          git add stellen.json STELLEN.md stellen.xlsx
+          git add stellen.json STELLEN.md stellen.xlsx laeufe.csv
           git commit -m "Stellenkatalog $(date -u +%Y-%m-%d)"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      # Bewusst NACH dem Committen: die Daten sind gespeichert, rot ist nur das
+      # Signal. Quellen ohne Stellen (ausser Ausnahmeliste) lassen den Lauf
+      # fehlschlagen; die Tabelle steht oben in der Zusammenfassung des Laufs.
+      - if: ${{ !cancelled() && steps.zeit.outputs.go == 'true' }}
+        name: Quellen prüfen
+        working-directory: scrapling-server
+        run: python pruefen.py ../laeufe.csv ohne_stellen_ok.json

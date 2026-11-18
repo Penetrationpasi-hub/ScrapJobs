@@ -8,6 +8,7 @@ Anzeigentexte.
     python batch.py --out ../stellen.json
 """
 import argparse
+import csv
 import json
 import os
 import sys
@@ -118,6 +119,45 @@ def merge(previous, results, today, now, grace_days=3, known=None):
     ordered = sorted(jobs.values(), key=lambda r: (r["company"].casefold(), r["title"].casefold(), r["id"]))
     return {"schema": SCHEMA, "aktualisiert": now.isoformat(timespec="seconds"),
             "quellen": sources, "stellen": ordered}
+
+
+HISTORY_FIELDS = ["lauf", "datum", "quelle", "label", "adapter", "status",
+                  "stellen_lauf", "neu", "im_katalog", "detail"]
+
+
+def append_history(path, now, results, previous, katalog, configured):
+    """Je Quelle eine Zeile in laeufe.csv: was hat dieser Lauf wirklich geliefert?
+
+    stellen_lauf = in diesem Lauf gelesene Stellen (bei Fehlern 0, auch wenn
+    der Katalog die alten Stellen stehen laesst); neu = davon vorher nicht
+    im Katalog; im_katalog = Stand des Katalogs nach dem Lauf.
+    """
+    old_ids = {}
+    for row in (previous or {}).get("stellen", []):
+        if isinstance(row, dict) and row.get("id"):
+            old_ids.setdefault(row.get("source"), set()).add(row["id"])
+    rows = []
+    for key, result in results.items():
+        ids = {job.get("id") for job in result["jobs"] if job.get("id")}
+        rows.append({
+            "lauf": now.isoformat(timespec="seconds"),
+            "datum": now.date().isoformat(),
+            "quelle": key,
+            "label": result["label"],
+            "adapter": getattr(configured.get(key), "adapter", "") or "",
+            "status": result["status"],
+            "stellen_lauf": len(result["jobs"]),
+            "neu": len(ids - old_ids.get(key, set())),
+            "im_katalog": katalog.get(key, 0),
+            "detail": (result.get("detail") or "")[:200],
+        })
+    exists = Path(path).exists()
+    with open(path, "a", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=HISTORY_FIELDS)
+        if not exists:
+            writer.writeheader()
+        writer.writerows(rows)
+    return rows
 
 
 def overview(catalog):
@@ -238,10 +278,16 @@ def run(options):
     print(f"{len(keys)} Quellen")
     results = collect(keys, configured, options)
     now = datetime.now(timezone.utc)
+    history = out.with_name("laeufe.csv")
     if not any(r["status"] == "done" for r in results.values()):
+        stand = {}
+        for row in (previous or {}).get("stellen", []):
+            stand[row.get("source")] = stand.get(row.get("source"), 0) + 1
+        append_history(history, now, results, previous, stand, configured)
         print("Keine Quelle erfolgreich gelesen; stellen.json bleibt unverändert.", file=sys.stderr)
         return 1
     catalog = merge(previous, results, now.date().isoformat(), now, options.grace_days, known=list(configured))
+    append_history(history, now, results, previous, {q["key"]: q["anzahl"] for q in catalog["quellen"]}, configured)
     tmp = out.with_suffix(".tmp")
     tmp.write_text(json.dumps(catalog, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     tmp.replace(out)
