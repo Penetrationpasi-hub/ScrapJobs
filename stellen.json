@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-18T19:19:53+00:00",
+ "aktualisiert": "2026-11-18T19:46:04+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -209,8 +209,7 @@
    "label": "d&b audiotechnik",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "detail": "0 Stellen: 0 Adressen gelesen, 0 passend, 0 verworfen",
-   "anzahl": 0
+   "anzahl": 10
   },
   {
    "key": "swr",
@@ -3067,6 +3066,126 @@
    "source": "baeckerei_maurer",
    "sourceLabel": "Bäckerei Maurer",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-8fdfae5296c505bd30962ab8",
+   "title": "Senior Education & Application Support Provider, UK+IE (m/f/d)",
+   "company": "d&b audiotechnik GB Limited",
+   "location": "d&b UK - Nailsworth Vereinigtes Königreich",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/db-UK---Nailsworth/Senior-Education---Application-Support-Provider--UK-IE_REQ_2026_00000201-1",
+   "posted": "2026-11-11",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-90d5ba8be7f6c21519f13a40",
+   "title": "Advanced Einkäufer Projekt-, Technologie- & Indirekter Einkauf (m/w/d)",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Advanced-Einkufer-Projekt---Technologie----Indirekter-Einkauf--m-w-d-_REQ_2026_00000153",
+   "posted": "2026-10-14",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-354cb6f53a17f08b66001d22",
+   "title": "Gruppenleitung P-EL",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Gruppenleitung-P-EL_REQ_2026_00000197",
+   "posted": "2026-11-17",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-0e79e2853f5e445ca72ac9c7",
+   "title": "Head of Integrated Marketing & Communications",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Head-of-Integrated--Marketing---Communications_REQ_2026_00000117",
+   "posted": "2026-11-18",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-9d070afaba5c49a8488f848e",
+   "title": "Head of Talent Acquisition, Engagement & Internal Communication (m/f/d)",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Head-of-Talent-Acquisition--Engagement---Internal-Communication_REQ_2026_00000203-1",
+   "posted": "2026-11-14",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-57f7451f0acc3df503baa26c",
+   "title": "IT Security Specialist (w/m/d)",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/IT-Security-Specialist--w-m-d-_REQ_2026_00000180",
+   "posted": "2026-11-03",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-efd4a008e09ac60cc767ba06",
+   "title": "Manager Corporate Development (w/m/d)",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Manager-Corporate-Development--w-m-d-_REQ_2026_00000093",
+   "posted": "2026-08-04",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-ed10a9cdfa7c2a65bed05dd7",
+   "title": "Materialdisponent im Bereich Produktion (m/w/d)",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Materialdisponent-im-Bereich-Produktion--m-w-d-_REQ_2026_00000199",
+   "posted": "2026-11-11",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-0cd3e4fbfd161889826aee22",
+   "title": "R&D Softwareentwicklung",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/R-D-Softwareentwicklung_REQ_2026_00000200",
+   "posted": "2026-11-09",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-bb87174c1d43d56b2f1c0527",
+   "title": "Schulpraktika und Umschulungen",
+   "company": "d&b audiotechnik GmbH & Co. KG",
+   "location": "Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland",
+   "url": "https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Initiativ---Schulpraktika-und-Umschulungen_REQ_2026_00000032",
+   "posted": "2026-03-13",
+   "source": "db_audiotechnik",
+   "sourceLabel": "d&b audiotechnik",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {

@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-18T19:19:53+00:00 · 805 Stellen aus 51 von 61 Quellen
+Stand: 2026-11-18T19:46:04+00:00 · 815 Stellen aus 51 von 61 Quellen
 
 ## Quellen
 
@@ -34,7 +34,7 @@ Stand: 2026-11-18T19:19:53+00:00 · 805 Stellen aus 51 von 61 Quellen
 | REMS | done | 7 | 2026-11-18 |  |
 | stoba Backnang | done | 5 | 2026-11-18 |  |
 | Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
-| d&b audiotechnik | done | 0 | 2026-11-18 | 0 Stellen: 0 Adressen gelesen, 0 passend, 0 verworfen |
+| d&b audiotechnik | done | 10 | 2026-11-18 |  |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
 | TTI / AEG / Milwaukee | done | 26 | 2026-11-18 |  |
 | Burger Schloz Automobile | done | 9 | 2026-11-18 |  |
@@ -330,6 +330,22 @@ Stand: 2026-11-18T19:19:53+00:00 · 805 Stellen aus 51 von 61 Quellen
 - [Konditormeister/-in (m/w/d)](https://www.baecker-maurer.de/karriere/konditormeister) · Winnenden BW DE · seit 2026-11-08
 - [Mitarbeiter Qualitätsmanagement (m/w/d)](https://www.baecker-maurer.de/karriere/mitarbeiter-qualitaetsmanagement) · Winnenden BW DE · seit 2026-11-08
 - [Werkstudent/-in im Verkauf (m/w/d)](https://www.baecker-maurer.de/karriere/werkstudent-im-verkauf) · Backnang BW DE / Fellbach BW DE / Schorndorf BW DE / Stuttgart BW DE / Waiblingen BW DE / Winnenden BW DE · seit 2026-11-08
+
+### d&b audiotechnik GB Limited
+
+- [Senior Education & Application Support Provider, UK+IE (m/f/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/db-UK---Nailsworth/Senior-Education---Application-Support-Provider--UK-IE_REQ_2026_00000201-1) · d&b UK - Nailsworth Vereinigtes Königreich · seit 2026-11-18
+
+### d&b audiotechnik GmbH & Co. KG
+
+- [Advanced Einkäufer Projekt-, Technologie- & Indirekter Einkauf (m/w/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Advanced-Einkufer-Projekt---Technologie----Indirekter-Einkauf--m-w-d-_REQ_2026_00000153) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [Gruppenleitung P-EL](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Gruppenleitung-P-EL_REQ_2026_00000197) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [Head of Integrated Marketing & Communications](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Head-of-Integrated--Marketing---Communications_REQ_2026_00000117) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [Head of Talent Acquisition, Engagement & Internal Communication (m/f/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Head-of-Talent-Acquisition--Engagement---Internal-Communication_REQ_2026_00000203-1) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [IT Security Specialist (w/m/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/IT-Security-Specialist--w-m-d-_REQ_2026_00000180) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [Manager Corporate Development (w/m/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Manager-Corporate-Development--w-m-d-_REQ_2026_00000093) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [Materialdisponent im Bereich Produktion (m/w/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Materialdisponent-im-Bereich-Produktion--m-w-d-_REQ_2026_00000199) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [R&D Softwareentwicklung](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/R-D-Softwareentwicklung_REQ_2026_00000200) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
+- [Schulpraktika und Umschulungen](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Initiativ---Schulpraktika-und-Umschulungen_REQ_2026_00000032) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
 
 ### Diakonie Stetten e. V.
 

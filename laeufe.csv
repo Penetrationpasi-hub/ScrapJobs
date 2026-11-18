@@ -191,3 +191,4 @@ lauf,datum,quelle,label,adapter,status,stellen_lauf,neu,im_katalog,detail
 2026-11-18T19:19:53+00:00,2026-11-18,volksbank_stuttgart,Volksbank Stuttgart,html,done,8,0,8,
 2026-11-18T19:19:53+00:00,2026-11-18,benz_sport,Gotthilf Benz Turngeräte,benz_sections,done,7,2,9,
 2026-11-18T19:36:50+00:00,2026-11-18,db_audiotechnik,d&b audiotechnik,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/ (74099 Zeichen, 35 Links, Titel «Stellenangebote bei d&b audiotechnik | d&b audiote»)"
+2026-11-18T19:46:04+00:00,2026-11-18,db_audiotechnik,d&b audiotechnik,workday,done,10,10,10,
