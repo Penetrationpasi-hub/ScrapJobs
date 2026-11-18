@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
+Stand: 2026-11-18T17:53:12+00:00 · 803 Stellen aus 46 von 61 Quellen
 
 ## Quellen
 
@@ -10,37 +10,37 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 | Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | Mercedes-Benz | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «») |
 | STIHL | done | 60 | 2026-11-18 |  |
-| MAHLE / MAHLE Aftermarket | done | 32 | 2026-11-18 |  |
+| MAHLE / MAHLE Aftermarket | done | 47 | 2026-11-18 |  |
 | Diakonie Stetten | done | 60 | 2026-11-18 |  |
 | Robert Bosch Krankenhaus | done | 9 | 2026-11-18 |  |
 | Kärcher | done | 85 | 2026-11-18 |  |
 | Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 10 | 2026-11-18 |  |
-| Landratsamt Rems-Murr-Kreis | done | 18 | 2026-11-18 |  |
+| Landratsamt Rems-Murr-Kreis | network_error | 18 | 2026-11-18 | TimeoutError rems-murr-kreis.helixjobs.com |
 | Paulinenpflege Winnenden | done | 11 | 2026-11-18 |  |
 | Kreissparkasse Waiblingen | network_error | 8 | 2026-11-17 | TimeoutError kskwn.helixjobs.com |
-| Stadt Waiblingen | unsupported | 0 | – | keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3185013 Zeichen, 86 Links, Titel «Offene Stellen») |
+| Stadt Waiblingen | unsupported | 0 | – | keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3188837 Zeichen, 86 Links, Titel «Offene Stellen») |
 | TESAT-Spacecom | done | 20 | 2026-11-18 |  |
 | Airbus (Stuttgart, Laupheim, Backnang) | done | 10 | 2026-11-18 |  |
 | Klinikum Schloß Winnenden | done | 10 | 2026-11-18 |  |
 | Volksbank Stuttgart | network_error | 8 | 2026-11-17 | TimeoutError volksbank-stuttgart.helixjobs.com |
 | Klinikum Stuttgart · Bad Cannstatt | done | 58 | 2026-11-18 |  |
 | Stadt Schorndorf | done | 8 | 2026-11-18 |  |
-| Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-18 |  |
+| Oskar Frech / Frech-Gruppe | done | 4 | 2026-11-18 |  |
 | Peter Hahn | done | 2 | 2026-11-18 |  |
-| Syntegon | done | 14 | 2026-11-18 |  |
-| Catalent Schorndorf | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.catalent.com/us/en/europe (173871 Zeichen, 12 Links, Titel «Jobs in Europe | Catalent Careers») |
+| Syntegon | done | 15 | 2026-11-18 |  |
+| Catalent Schorndorf | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.catalent.com/us/en/europe (173964 Zeichen, 12 Links, Titel «Jobs in Europe | Catalent Careers») |
 | Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13300 Zeichen, 0 Links, Titel «Sana») |
 | Emil Löffelhardt | done | 26 | 2026-11-18 |  |
 | REMS | done | 7 | 2026-11-18 |  |
 | stoba Backnang | done | 5 | 2026-11-18 |  |
-| Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1210300 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
+| Deutsche Post / DHL | unsupported | 0 | – | keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND») |
 | d&b audiotechnik | network_error | 0 | – | TimeoutError www.dbaudio.com |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
-| TTI / AEG / Milwaukee | done | 25 | 2026-11-18 |  |
+| TTI / AEG / Milwaukee | done | 26 | 2026-11-18 |  |
 | Burger Schloz Automobile | done | 9 | 2026-11-18 |  |
 | Klöpfer | done | 4 | 2026-11-18 |  |
 | JUDO Wasseraufbereitung | done | 8 | 2026-11-18 |  |
-| RIVA-Gruppe / Mpire | done | 16 | 2026-11-18 |  |
+| RIVA-Gruppe / Mpire | done | 17 | 2026-11-18 |  |
 | WIRmachenDRUCK | done | 15 | 2026-11-18 |  |
 | Eisenmann Services / Personal-Service | done | 3 | 2026-11-18 |  |
 | Bäckerei Maurer | done | 15 | 2026-11-18 |  |
@@ -49,12 +49,12 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 | Brunold Automobile | done | 1 | 2026-11-18 |  |
 | KÜBLER Workwear | unsupported | 0 | – | keine Anzeigenlinks auf https://kuebler.karriere.vision/jobs (1683 Zeichen, 0 Links, Titel «Online-Bewerbermanagement») |
 | Swoboda | done | 14 | 2026-11-18 |  |
-| Autohaus Walter Mulfinger | done | 5 | 2026-11-18 |  |
+| Autohaus Walter Mulfinger | done | 6 | 2026-11-18 |  |
 | Adolf Föhl | done | 7 | 2026-11-18 |  |
 | Stadtwerke Waiblingen | done | 9 | 2026-11-18 |  |
 | FESSMANN | done | 2 | 2026-11-18 |  |
 | Soehnle Industrial Solutions | done | 15 | 2026-11-18 |  |
-| Gotthilf Benz Turngeräte | upstream_error | 7 | 2026-11-17 | upstream_error HTTP 503 |
+| Gotthilf Benz Turngeräte | unsupported | 7 | 2026-11-17 |  |
 | RIANI | done | 8 | 2026-11-18 |  |
 | Dusyma | done | 8 | 2026-11-18 |  |
 | Zeitungsverlag Waiblingen | done | 1 | 2026-11-18 |  |
@@ -64,7 +64,7 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 | PFISTERER | done | 22 | 2026-11-18 |  |
 | Hahn Automobile | done | 10 | 2026-11-18 |  |
 | Klingele Paper & Packaging | done | 26 | 2026-11-18 |  |
-| Harro Höfliger | done | 13 | 2026-11-18 |  |
+| Harro Höfliger | done | 17 | 2026-11-18 |  |
 | SOCCO | done | 25 | 2026-11-18 |  |
 | Rems-Murr-JOBS | done | 11 | 2026-11-18 |  |
 
@@ -292,6 +292,7 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 
 - [Garantiesachbearbeiter (m/w/d)](https://join.com/companies/mulfinger/16933799-garantiesachbearbeiter-m-w-d) · 71522 Backnang de · seit 2026-11-17
 - [Gewerbekundenverkäufer (m/w/d) für Renault&Dacia](https://join.com/companies/mulfinger/16915660-gewerbekundenverkaeufer-m-w-d-fuer-renault-und-dacia) · 71522 Backnang de · seit 2026-11-08
+- [Gewerbekundenverkäufer (m/w/d) für Renault&Dacia](https://join.com/companies/mulfinger/16965436-gewerbekundenverkaeufer-m-w-d-fuer-renault-und-dacia) · 71522 Backnang de · seit 2026-11-18
 - [Karosseriebauer/ Kfz-Mechatroniker mit Karosseriekenntnissen (m/w/d)](https://join.com/companies/mulfinger/16949266-karosseriebauer-kfz-mechatroniker-mit-karosseriekenntnissen-m-w-d) · Crailsheim de · seit 2026-11-17
 - [Kfz-Mechatroniker*in (m/w/d)](https://join.com/companies/mulfinger/16916990-kfz-mechatroniker-in-m-w-d) · Schwäbisch Gmünd de · seit 2026-11-08
 - [Renault & Dacia Verkäufer Neuwagen (m/w/d)](https://join.com/companies/mulfinger/16953007-renault-und-dacia-verkaeufer-neuwagen-m-w-d) · Schwäbisch Gmünd de · seit 2026-11-17
@@ -512,6 +513,7 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 ### Harro Höfliger Verpackungsmaschinen GmbH
 
 - [Abschlussarbeit im Bereich Nachhaltigkeitsmanagement](https://hoefliger.com/karriere/stellenangebote/abschlussarbeit-im-bereich-nachhaltigkeitsmanagement) · Allmersbach · seit 2026-11-08
+- [Abschlussarbeit im Bereich Pharma Services - Pulvercharakterisierung und Dosiertechnologien](https://hoefliger.com/karriere/stellenangebote/abschlussarbeit-im-bereich-pharma-services-pulvercharakterisierung-und-dosiertechnologien) · Allmersbach · seit 2026-11-18
 - [Abschlussarbeit: Mechanische Weiterentwicklung der Harro UTW-Wickeltechnologie - Barbed Sutures](https://hoefliger.com/karriere/stellenangebote/abschlussarbeit-mechanische-weiterentwicklung-der-harro-utw-wickeltechnologie-barbed-sutures) · Allmersbach · seit 2026-11-17
 - [Ausbildung zum Industriekaufmann (m/w/d) - Zusatzqualifikation Internat. Wirtschaftsmanagement 2027](https://hoefliger.com/karriere/stellenangebote/ausbildung-zum-industriekaufmann-m-w-d-zusatzqualifikation-internat-wirtschaftsmanagement-2027) · Allmersbach · seit 2026-11-17
 - [CE Koordinator (m/w/d) auf 2 Jahre befristet](https://hoefliger.com/karriere/stellenangebote/ce-koordinator-m-w-d-auf-2-jahre-befristet) · Allmersbach · seit 2026-11-18
@@ -520,8 +522,11 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 - [Duales Studium: Informatik (B.Sc.) - Schwerpunkt Künstliche Intelligenz 2027](https://hoefliger.com/karriere/stellenangebote/duales-studium-informatik-b-sc-schwerpunkt-kuenstliche-intelligenz-2027) · Allmersbach · seit 2026-11-08
 - [Duales Studium: Wirtschaftsingenieurwesen (B.Eng.) - Schwerpunkt IPL 2027](https://hoefliger.com/karriere/stellenangebote/duales-studium-wirtschaftsingenieurwesen-b-eng-schwerpunkt-ipl-2027) · Allmersbach · seit 2026-11-08
 - [Mechaniker / Mechatroniker Sondermaschinenbau (m/w/d)](https://hoefliger.com/karriere/stellenangebote/mechaniker-mechatroniker-sondermaschinenbau-m-w-d) · Backnang · seit 2026-11-17
+- [Mitarbeiter in der Qualitätssicherung / Messtechniker (m/w/d)](https://hoefliger.com/karriere/stellenangebote/mitarbeiter-in-der-qualitaetssicherung-messtechniker-m-w-d) · Aspach · seit 2026-11-18
+- [Produktionslogistiker (m/w/d)](https://hoefliger.com/karriere/stellenangebote/produktionslogistiker-m-w-d) · Backnang · seit 2026-11-18
 - [Sales Manager Deutschland | Benelux (m/w/d)](https://hoefliger.com/karriere/stellenangebote/sales-manager-deutschland-benelux-m-w-d) · Allmersbach · seit 2026-11-18
 - [Servicetechniker SPS-Kundenprojekte (m/w/d)](https://hoefliger.com/karriere/stellenangebote/servicetechniker-sps-kundenprojekte-m-w-d) · Deutschlandweit · seit 2026-11-17
+- [Teamleiter Facility Management (m/w/d)](https://hoefliger.com/karriere/stellenangebote/teamleiter-facility-management-m-w-d) · Allmersbach · seit 2026-11-18
 - [Werkstudent (m/w/d) im Bereich Arbeitssicherheit](https://hoefliger.com/karriere/stellenangebote/werkstudent-m-w-d-im-bereich-arbeitssicherheit) · Allmersbach · seit 2026-11-08
 - [Werkstudent (m/w/d) in der Kreditorenbuchhaltung](https://hoefliger.com/karriere/stellenangebote/werkstudent-m-w-d-in-der-kreditorenbuchhaltung) · Allmersbach · seit 2026-11-18
 
@@ -693,7 +698,9 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 
 ### MAHLE
 
+- [Abschlussarbeit Leistungselektronikentwicklung für Wireless Charging 22kW+ (m/w/d)](https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Leistungselektronikentwicklung-f%C3%BCr-Wireless-Charging-22kW%2B-%28mwd%29-70376/1439066233) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Abschlussarbeit Produktentwicklung - Elektrik/Elektronik (m/w/d)](https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Produktentwicklung-ElektrikElektronik-%28mwd%29-70469/1449832233) · Stuttgart, DE, 70469 · seit 2026-11-18
+- [Abschlussarbeit Systementwicklung WPT4-Resonatoren EV Wireless Charging (m/w/d)](https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Systementwicklung-WPT4-Resonatoren-EV-Wireless-Charging-%28mwd%29-70376/1439074133) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Abschlussarbeit Vehicle Systems (m/w/d)](https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Vehicle-Systems-%28mwd%29-70376/1439096833) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Ausbildung: Industriemechaniker (m/w/d) 2027](https://careers.mahle.com/job/M%C3%BChlacker-Ausbildung-Industriemechaniker-%28mwd%29-2027-75417/1419092633) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Ausbildung: Industriemechaniker (m/w/d) 2027](https://careers.mahle.com/job/Markgr%C3%B6ningen-Ausbildung-Industriemechaniker-%28mwd%29-2027-71706/1405005433) · Markgröningen, DE, 71706 · seit 2026-11-18
@@ -706,21 +713,34 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 - [Kooperatives Studium (m/w/d): Mechatronik Plus 2027](https://careers.mahle.com/job/M%C3%BChlacker-Kooperatives-Studium-%28mwd%29-Mechatronik-Plus-2027-75417/1419093733) · Mühlacker, DE, 75417 · seit 2026-11-08
 - [Kooperatives Studium Plus: Digital Engineering - Robotik 2027 (m/w/d)](https://careers.mahle.com/job/Stuttgart-Kooperatives-Studium-Plus-Digital-Engineering-Robotik-2027-%28mwd%29-70376/1388744833) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Materialprüfer (m/w/d) Ultraschall- und Röntgenprüfung - befristet](https://careers.mahle.com/job/Markgr%C3%B6ningen-Materialpr%C3%BCfer-%28mwd%29-Ultraschall-und-R%C3%B6ntgenpr%C3%BCfung-befristet-71706/1445912033) · Markgröningen, DE, 71706 · seit 2026-11-18
+- [Praktikum Advanced Refrigerant Heat Exchanger (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Advanced-Refrigerant-Heat-Exchanger-%28mwd%29-70469/1439559533) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Arbeits-, Umweltschutz und Nachhaltigkeit Europa (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Arbeits-%2C-Umweltschutz-und-Nachhaltigkeit-Europa-%28mwd%29-70376/1439054733) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Arbeitsrecht (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Arbeitsrecht-%28mwd%29-70376/1439058533) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Business Development / Unternehmensstrategie (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Business-Development-Unternehmensstrategie-%28mwd%29-70376/1439073333) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Business Development Industrial & Special Solutions (non-automotive) (m/w/d)](https://careers.mahle.com/job/Kornwestheim-Praktikum-Business-Development-Industrial-&-Special-Solutions-%28non-automotive%29-%28mwd%29-70806/1453928133) · Kornwestheim, DE, 70806 · seit 2026-11-08
+- [Praktikum Digital Business Model Development (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Digital-Business-Model-Development-%28mwd%29-70376/1439071133) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Energie-, Facility-, Bauprojektmanagement (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Energie-%2C-Facility-%2C-Bauprojektmanagement-%28mwd%29-70376/1439064233) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Global SSC Talent Management - Learning Services (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Global-SSC-Talent-Management-Learning-Services-%28mwd%29-70376/1442387233) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Hardware-Entwicklung, Validierung und Simulation, E-Mobility, Wireless Charging (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-E-Mobility%2C-Wireless-Charging-%28mwd%29-70376/1439053733) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Hardware-Entwicklung, Validierung und Simulation, Wireless Charging 22kW+  (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-Wireless-Charging-22kW%2B-%28mwd%29-70376/1439050533) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Internes Kontrollsystem (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Internes-Kontrollsystem-%28mwd%29-70376/1441984633) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Konzerndatenschutz (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Konzerndatenschutz-%28mwd%29-70376/1453449433) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Lead-Buying Mechatronics (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Lead-Buying-Mechatronics-%28mwd%29-70469/1442000733) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Logistik (m/w/d)](https://careers.mahle.com/job/Fellbach-Praktikum-Logistik-%28mwd%29-70736/1442656933) · Fellbach, DE, 70736 · seit 2026-11-08
+- [Praktikum Machine Learning für energieeffiziente Fahrzeugregelung und Thermomanagement (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Machine-Learning-f%C3%BCr-energieeffiziente-Fahrzeugregelung-und-Thermomanagement-%28mwd%29-70469/1448932633) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Machine Learning und Data Science (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Machine-Learning-und-Data-Science-%28mwd%29-70376/1439057633) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Metallographie im Zentralen Werkstofflabor (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Metallographie-im-Zentralen-Werkstofflabor-%28mwd%29-70376/1450317633) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Powertrain Cooling Development (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Powertrain-Cooling-Development-%28mwd%29-70469/1442375233) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Produktentwicklung - Elektrik/Elektronik (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Produktentwicklung-ElektrikElektronik-%28mwd%29-70469/1449831233) · Stuttgart, DE, 70469 · seit 2026-11-18
+- [Praktikum Produktmanagement (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Produktmanagement-%28mwd%29-70469/1441853233) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Projekthaus Vehicle Systems (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Projekthaus-Vehicle-Systems-%28mwd%29-70376/1439077033) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Qualitätsmanagement (m/w/d)](https://careers.mahle.com/job/Fellbach-Praktikum-Qualit%C3%A4tsmanagement-%28mwd%29-70736/1444435833) · Fellbach, DE, 70736 · seit 2026-11-08
+- [Praktikum Revision - Corporate Internal Audit Europe (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Revision-Corporate-Internal-Audit-Europe-%28mwd%29-70376/1439049533) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Strömungs- und Akustiksimulation Klimageräte (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Str%C3%B6mungs-und-Akustiksimulation-Klimager%C3%A4te-%28mwd%29-70469/1439559333) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Trend Scouting (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Trend-Scouting-%28mwd%29-70376/1439062033) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Vertrieb Tier1 Kunden (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Vertrieb-Tier1-Kunden-%28mwd%29-70376/1439053933) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Schulpraktikum Mühlacker 2027 - Schwerpunkt technisch/gewerbliche Berufsausbildung (m/w/d)](https://careers.mahle.com/job/M%C3%BChlacker-Schulpraktikum-M%C3%BChlacker-2027-Schwerpunkt-technischgewerbliche-Berufsausbildung-%28mwd%29-75417/1419093233) · Mühlacker, DE, 75417 · seit 2026-11-08
+- [Schulpraktikum Stuttgart 2027 - Schwerpunkt Duales Studium (m/w/d)](https://careers.mahle.com/job/Stuttgart-Schulpraktikum-Stuttgart-2027-Schwerpunkt-Duales-Studium-%28mwd%29-70376/1453902833) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Schulpraktikum Stuttgart 2027 - Schwerpunkt kaufmännische Berufsausbildung (m/w/d)](https://careers.mahle.com/job/Stuttgart-Schulpraktikum-Stuttgart-2027-Schwerpunkt-kaufm%C3%A4nnische-Berufsausbildung-%28mwd%29-70376/1446689533) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Schulpraktikum Stuttgart 2027 - Schwerpunkt technisch/gewerbliche Berufsausbildung (m/w/d)](https://careers.mahle.com/job/Stuttgart-Schulpraktikum-Stuttgart-2027-Schwerpunkt-technischgewerbliche-Berufsausbildung-%28mwd%29-70376/1446689333) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Studentische Tätigkeit / Praktikum / Abschlussarbeit Digitalisierung von Geschäftsprozessen (m/w/d)](https://careers.mahle.com/job/M%C3%BChlacker-Studentische-T%C3%A4tigkeit-Praktikum-Abschlussarbeit-Digitalisierung-von-Gesch%C3%A4ftsprozessen-%28mwd%29-75417/1425276633) · Mühlacker, DE, 75417 · seit 2026-11-08
@@ -749,6 +769,7 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 
 - [Ausbildung zum Elektroniker/ -in für Betriebstechnik (m/w/d) bei Frech](https://www.frech.com/de/ausbildungsstelle-details/elektroniker-fuer-betriebstechnik-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
 - [Ausbildung zum Industriekaufmann (m/w/d) bei Frech](https://www.frech.com/de/ausbildungsstelle-details/industriekaufmann-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
+- [Industriemechaniker (m/w/d) – Ausbildungsstelle für 2027 besetzt](https://www.frech.com/de/ausbildungsstelle-details/industriemechaniker-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-18
 - [IT-Systemadministrator mit Projektverantwortung (m/w/d)](https://www.frech.com/de/job-details-de/it-projektmanager-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
 
 ### Paulinenpflege
@@ -852,6 +873,7 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 
 ### RIVA Power Systems GmbH & Co. KG
 
+- [Polymerchemiker (m/w/d)](https://mpire.jobs.personio.de/job/2894728) · Backnang Lerchenäcker · seit 2026-11-18
 - [SPS-Programmierer/Softwareentwickler für Brennstoffzellen (m/w/d)](https://mpire.jobs.personio.de/job/2670131) · Backnang Lerchenäcker · seit 2026-11-08
 
 ### Robert Bosch Krankenhaus GmbH
@@ -991,9 +1013,14 @@ Stand: 2026-11-18T13:28:55+00:00 · 779 Stellen aus 47 von 61 Quellen
 - [Corporate Design Lead (m/w/d)](https://jobs.syntegon.com/offer/corporate-design-lead-m-w-d/b93eb864-1a79-442f-a430-b38404643af7) · Stuttgart DE · seit 2026-11-17
 - [HSE Manager (m/w/d)](https://jobs.syntegon.com/offer/hse-manager-m-w-d/4bfcbc98-e93b-413f-a3ef-c04aeaa00b2c) · Fellbach (Württemberg) DE · seit 2026-11-08
 - [HSE Manager (m/w/d)](https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e) · Schopfheim DE · seit 2026-11-08
+- [Internal Communications Manager (m/w/d) - Befristet](https://jobs.syntegon.com/offer/internal-communications-manager-m-w/21a1a787-81c3-41cc-92f0-4611d9c9f6fc) · Stuttgart DE · seit 2026-11-18
 - [SPS-Softwareentwickler (m/w/d) Rockwell Automation](https://jobs.syntegon.com/offer/sps-softwareentwickler-m-w-d-rockwe/f903369a-dd81-48e3-b99c-189db932a638) · Crailsheim DE · seit 2026-11-08
 - [Technical Sales Manager (m/w/d) Pharma-Sondermaschinenbau / Abfüllung & Gefriertrocknung](https://jobs.syntegon.com/offer/technical-sales-manager-m-w-d-pharm/bd475a61-ed9e-407b-87b4-9442af608886) · Crailsheim DE · seit 2026-11-17
 - [Technischer Redakteur (m/w/d) für Designdokumente](https://jobs.syntegon.com/offer/technischer-redakteur-m-w-d-fur-des/7fdeb176-f297-4d1b-aad6-c6f913f2a8cd) · Crailsheim DE · seit 2026-11-08
+
+### Techtronic Industries Benelux BV
+
+- [Key Account Manager Data Centers | Job Site Solutions (JSS) | Benelux](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Field-Based-Netherlands/Key-Account-Manager-Data-Centers---Job-Site-Solutions--JSS----Benelux_JR5092) · Außendienst Niederlande Niederlande · seit 2026-11-18
 
 ### Techtronic Industries Bulgaria
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-18T13:28:55+00:00",
+ "aktualisiert": "2026-11-18T17:53:12+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -37,7 +37,7 @@
    "label": "MAHLE / MAHLE Aftermarket",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 32
+   "anzahl": 47
   },
   {
    "key": "diakonie_stetten",
@@ -70,8 +70,9 @@
   {
    "key": "landratsamt_rmk",
    "label": "Landratsamt Rems-Murr-Kreis",
-   "status": "done",
+   "status": "network_error",
    "letzterErfolg": "2026-11-18",
+   "detail": "TimeoutError rems-murr-kreis.helixjobs.com",
    "anzahl": 18
   },
   {
@@ -94,7 +95,7 @@
    "label": "Stadt Waiblingen",
    "status": "unsupported",
    "letzterErfolg": null,
-   "detail": "keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3185013 Zeichen, 86 Links, Titel «Offene Stellen»)",
+   "detail": "keine Anzeigenlinks auf https://karriere.waiblingen.de/offene-stellen (3188837 Zeichen, 86 Links, Titel «Offene Stellen»)",
    "anzahl": 0
   },
   {
@@ -145,7 +146,7 @@
    "label": "Oskar Frech / Frech-Gruppe",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 3
+   "anzahl": 4
   },
   {
    "key": "peter_hahn",
@@ -159,14 +160,14 @@
    "label": "Syntegon",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 14
+   "anzahl": 15
   },
   {
    "key": "catalent",
    "label": "Catalent Schorndorf",
    "status": "unsupported",
    "letzterErfolg": null,
-   "detail": "keine Anzeigenlinks auf https://careers.catalent.com/us/en/europe (173871 Zeichen, 12 Links, Titel «Jobs in Europe | Catalent Careers»)",
+   "detail": "keine Anzeigenlinks auf https://careers.catalent.com/us/en/europe (173964 Zeichen, 12 Links, Titel «Jobs in Europe | Catalent Careers»)",
    "anzahl": 0
   },
   {
@@ -203,7 +204,7 @@
    "label": "Deutsche Post / DHL",
    "status": "unsupported",
    "letzterErfolg": null,
-   "detail": "keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1210300 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND»)",
+   "detail": "keine Anzeigenlinks auf https://careers.dhl.com/eu/de/search-results?keywords= (1208623 Zeichen, 13 Links, Titel «JOBS SUCHEN  | FREIE STELLEN BEI DEUTSCHE POST UND»)",
    "anzahl": 0
   },
   {
@@ -227,7 +228,7 @@
    "label": "TTI / AEG / Milwaukee",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 25
+   "anzahl": 26
   },
   {
    "key": "burger_schloz",
@@ -255,7 +256,7 @@
    "label": "RIVA-Gruppe / Mpire",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 16
+   "anzahl": 17
   },
   {
    "key": "wirmachendruck",
@@ -320,7 +321,7 @@
    "label": "Autohaus Walter Mulfinger",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 5
+   "anzahl": 6
   },
   {
    "key": "foehl",
@@ -353,9 +354,8 @@
   {
    "key": "benz_sport",
    "label": "Gotthilf Benz Turngeräte",
-   "status": "upstream_error",
+   "status": "unsupported",
    "letzterErfolg": "2026-11-17",
-   "detail": "upstream_error HTTP 503",
    "anzahl": 7
   },
   {
@@ -426,7 +426,7 @@
    "label": "Harro Höfliger",
    "status": "done",
    "letzterErfolg": "2026-11-18",
-   "anzahl": 13
+   "anzahl": 17
   },
   {
    "key": "socco",
@@ -478,7 +478,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-d07b1ce648c6bdd028e1199c",
@@ -514,7 +514,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-57ddf4877f638a49f995da26",
@@ -1882,7 +1882,7 @@
    "source": "kaercher",
    "sourceLabel": "Kärcher",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-c8b4ddec3387818150b9aafa",
@@ -1930,7 +1930,7 @@
    "source": "kaercher",
    "sourceLabel": "Kärcher",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-9ad31056ceaec6b9ac400dc1",
@@ -2722,6 +2722,18 @@
    "source": "mulfinger",
    "sourceLabel": "Autohaus Walter Mulfinger",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-f90a322cb5066bd1f1cd3a67",
+   "title": "Gewerbekundenverkäufer (m/w/d) für Renault&Dacia",
+   "company": "Autohaus Walter Mulfinger GmbH",
+   "location": "71522 Backnang de",
+   "url": "https://join.com/companies/mulfinger/16965436-gewerbekundenverkaeufer-m-w-d-fuer-renault-und-dacia",
+   "posted": "2026-11-05",
+   "source": "mulfinger",
+   "sourceLabel": "Autohaus Walter Mulfinger",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
@@ -4753,6 +4765,18 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-68b3478cbaf846ca1efe3ceb",
+   "title": "Abschlussarbeit im Bereich Pharma Services - Pulvercharakterisierung und Dosiertechnologien",
+   "company": "Harro Höfliger Verpackungsmaschinen GmbH",
+   "location": "Allmersbach",
+   "url": "https://hoefliger.com/karriere/stellenangebote/abschlussarbeit-im-bereich-pharma-services-pulvercharakterisierung-und-dosiertechnologien",
+   "posted": "",
+   "source": "harro_hoefliger",
+   "sourceLabel": "Harro Höfliger",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-f2bbf83f040f9cf0811dbc5e",
    "title": "Abschlussarbeit: Mechanische Weiterentwicklung der Harro UTW-Wickeltechnologie - Barbed Sutures",
    "company": "Harro Höfliger Verpackungsmaschinen GmbH",
@@ -4849,6 +4873,30 @@
    "zuletztGesehen": "2026-11-17"
   },
   {
+   "id": "scrapling-80d02280539b29d66b3b1c0e",
+   "title": "Mitarbeiter in der Qualitätssicherung / Messtechniker (m/w/d)",
+   "company": "Harro Höfliger Verpackungsmaschinen GmbH",
+   "location": "Aspach",
+   "url": "https://hoefliger.com/karriere/stellenangebote/mitarbeiter-in-der-qualitaetssicherung-messtechniker-m-w-d",
+   "posted": "",
+   "source": "harro_hoefliger",
+   "sourceLabel": "Harro Höfliger",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-af52db9e9038b709e60dfe7b",
+   "title": "Produktionslogistiker (m/w/d)",
+   "company": "Harro Höfliger Verpackungsmaschinen GmbH",
+   "location": "Backnang",
+   "url": "https://hoefliger.com/karriere/stellenangebote/produktionslogistiker-m-w-d",
+   "posted": "",
+   "source": "harro_hoefliger",
+   "sourceLabel": "Harro Höfliger",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-cad5de5dccddcbeca6715060",
    "title": "Sales Manager Deutschland | Benelux (m/w/d)",
    "company": "Harro Höfliger Verpackungsmaschinen GmbH",
@@ -4871,6 +4919,18 @@
    "sourceLabel": "Harro Höfliger",
    "erstmalsGesehen": "2026-11-17",
    "zuletztGesehen": "2026-11-17"
+  },
+  {
+   "id": "scrapling-1124f08da41c18b25470b9d5",
+   "title": "Teamleiter Facility Management (m/w/d)",
+   "company": "Harro Höfliger Verpackungsmaschinen GmbH",
+   "location": "Allmersbach",
+   "url": "https://hoefliger.com/karriere/stellenangebote/teamleiter-facility-management-m-w-d",
+   "posted": "",
+   "source": "harro_hoefliger",
+   "sourceLabel": "Harro Höfliger",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
   },
   {
    "id": "scrapling-74b57145b72ab89c5121de5d",
@@ -6529,12 +6589,36 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-06110305dac9343c1e602f07",
+   "title": "Abschlussarbeit Leistungselektronikentwicklung für Wireless Charging 22kW+ (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Leistungselektronikentwicklung-f%C3%BCr-Wireless-Charging-22kW%2B-%28mwd%29-70376/1439066233",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-23ce5309e8dfeab4af10e51c",
    "title": "Abschlussarbeit Produktentwicklung - Elektrik/Elektronik (m/w/d)",
    "company": "MAHLE",
    "location": "Stuttgart, DE, 70469",
    "url": "https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Produktentwicklung-ElektrikElektronik-%28mwd%29-70469/1449832233",
    "posted": "2026-10-21",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-aa0cd7cf58080bac0977d174",
+   "title": "Abschlussarbeit Systementwicklung WPT4-Resonatoren EV Wireless Charging (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Abschlussarbeit-Systementwicklung-WPT4-Resonatoren-EV-Wireless-Charging-%28mwd%29-70376/1439074133",
+   "posted": "2026-11-15",
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
@@ -6685,6 +6769,18 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-81c1e73d125b2638bda0e0a8",
+   "title": "Praktikum Advanced Refrigerant Heat Exchanger (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70469",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Advanced-Refrigerant-Heat-Exchanger-%28mwd%29-70469/1439559533",
+   "posted": "2026-11-18",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-2dfbfc2dee8ca218ee2881b5",
    "title": "Praktikum Arbeits-, Umweltschutz und Nachhaltigkeit Europa (m/w/d)",
    "company": "MAHLE",
@@ -6709,6 +6805,18 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-47439527b031bfd174b43660",
+   "title": "Praktikum Business Development / Unternehmensstrategie (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Business-Development-Unternehmensstrategie-%28mwd%29-70376/1439073333",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-87e0febc1fdf12f49213d1cb",
    "title": "Praktikum Business Development Industrial & Special Solutions (non-automotive) (m/w/d)",
    "company": "MAHLE",
@@ -6721,12 +6829,60 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-aff321f0aab733ddde449865",
+   "title": "Praktikum Digital Business Model Development (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Digital-Business-Model-Development-%28mwd%29-70376/1439071133",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-46388ca99b474b188367c50a",
+   "title": "Praktikum Energie-, Facility-, Bauprojektmanagement (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Energie-%2C-Facility-%2C-Bauprojektmanagement-%28mwd%29-70376/1439064233",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-985179b64a5ed2458261b76a",
    "title": "Praktikum Global SSC Talent Management - Learning Services (m/w/d)",
    "company": "MAHLE",
    "location": "Stuttgart, DE, 70376",
    "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Global-SSC-Talent-Management-Learning-Services-%28mwd%29-70376/1442387233",
    "posted": "2026-10-28",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-067a7e6ea92365e7a5dbb7af",
+   "title": "Praktikum Hardware-Entwicklung, Validierung und Simulation, E-Mobility, Wireless Charging (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-E-Mobility%2C-Wireless-Charging-%28mwd%29-70376/1439053733",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-565b33d2569e4753c466f94c",
+   "title": "Praktikum Hardware-Entwicklung, Validierung und Simulation, Wireless Charging 22kW+  (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Hardware-Entwicklung%2C-Validierung-und-Simulation%2C-Wireless-Charging-22kW%2B-%28mwd%29-70376/1439050533",
+   "posted": "2026-11-15",
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
@@ -6745,6 +6901,30 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-055c1d0b9281d2ad6ad82e79",
+   "title": "Praktikum Konzerndatenschutz (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Konzerndatenschutz-%28mwd%29-70376/1453449433",
+   "posted": "2026-11-02",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-b3275dbd2ba3ccab7a06e597",
+   "title": "Praktikum Lead-Buying Mechatronics (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70469",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Lead-Buying-Mechatronics-%28mwd%29-70469/1442000733",
+   "posted": "2026-10-27",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-598b0d7c9b9769e1b4fe2ab1",
    "title": "Praktikum Logistik (m/w/d)",
    "company": "MAHLE",
@@ -6754,6 +6934,18 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-e3ce2ca43cd9371592692d67",
+   "title": "Praktikum Machine Learning für energieeffiziente Fahrzeugregelung und Thermomanagement (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70469",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Machine-Learning-f%C3%BCr-energieeffiziente-Fahrzeugregelung-und-Thermomanagement-%28mwd%29-70469/1448932633",
+   "posted": "2026-11-17",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
@@ -6805,6 +6997,18 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-fc2881963a959035d1c4c44b",
+   "title": "Praktikum Produktmanagement (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70469",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Produktmanagement-%28mwd%29-70469/1441853233",
+   "posted": "2026-10-27",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-067724a5409389b5d8d8ec5d",
    "title": "Praktikum Projekthaus Vehicle Systems (m/w/d)",
    "company": "MAHLE",
@@ -6826,6 +7030,30 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-a14143e3a8a4d51e207bd00c",
+   "title": "Praktikum Revision - Corporate Internal Audit Europe (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Revision-Corporate-Internal-Audit-Europe-%28mwd%29-70376/1439049533",
+   "posted": "2026-11-15",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-6b58638b05af5bfe4eac6f05",
+   "title": "Praktikum Strömungs- und Akustiksimulation Klimageräte (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70469",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Str%C3%B6mungs-und-Akustiksimulation-Klimager%C3%A4te-%28mwd%29-70469/1439559333",
+   "posted": "2026-11-18",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
@@ -6862,6 +7090,18 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-e73c9711dffa2f942c99b073",
+   "title": "Schulpraktikum Stuttgart 2027 - Schwerpunkt Duales Studium (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Schulpraktikum-Stuttgart-2027-Schwerpunkt-Duales-Studium-%28mwd%29-70376/1453902833",
+   "posted": "2026-11-03",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
@@ -7090,6 +7330,18 @@
    "source": "frech",
    "sourceLabel": "Oskar Frech / Frech-Gruppe",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-d9b66de59cc0a0739cdccd59",
+   "title": "Industriemechaniker (m/w/d) – Ausbildungsstelle für 2027 besetzt",
+   "company": "Oskar Frech GmbH + Co. KG",
+   "location": "Schorndorfer Straße 32 73614 Schorndorf",
+   "url": "https://www.frech.com/de/ausbildungsstelle-details/industriemechaniker-m-w-d.html",
+   "posted": "",
+   "source": "frech",
+   "sourceLabel": "Oskar Frech / Frech-Gruppe",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
@@ -7930,6 +8182,18 @@
    "source": "riva",
    "sourceLabel": "RIVA-Gruppe / Mpire",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-f1d3b849ae33702ea2f37b82",
+   "title": "Polymerchemiker (m/w/d)",
+   "company": "RIVA Power Systems GmbH & Co. KG",
+   "location": "Backnang Lerchenäcker",
+   "url": "https://mpire.jobs.personio.de/job/2894728",
+   "posted": "2026-11-18",
+   "source": "riva",
+   "sourceLabel": "RIVA-Gruppe / Mpire",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
@@ -9133,6 +9397,18 @@
    "zuletztGesehen": "2026-11-18"
   },
   {
+   "id": "scrapling-606cd479d3ddb1512493cb0b",
+   "title": "Internal Communications Manager (m/w/d) - Befristet",
+   "company": "Syntegon Technology GmbH",
+   "location": "Stuttgart DE",
+   "url": "https://jobs.syntegon.com/offer/internal-communications-manager-m-w/21a1a787-81c3-41cc-92f0-4611d9c9f6fc",
+   "posted": "2026-11-18",
+   "source": "syntegon",
+   "sourceLabel": "Syntegon",
+   "erstmalsGesehen": "2026-11-18",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
    "id": "scrapling-a6a18f481b7388cf5a2ec60a",
    "title": "SPS-Softwareentwickler (m/w/d) Rockwell Automation",
    "company": "Syntegon Technology GmbH",
@@ -9166,6 +9442,18 @@
    "source": "syntegon",
    "sourceLabel": "Syntegon",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-18"
+  },
+  {
+   "id": "scrapling-9f9908c3208662098cdc8093",
+   "title": "Key Account Manager Data Centers | Job Site Solutions (JSS) | Benelux",
+   "company": "Techtronic Industries Benelux BV",
+   "location": "Außendienst Niederlande Niederlande",
+   "url": "https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Field-Based-Netherlands/Key-Account-Manager-Data-Centers---Job-Site-Solutions--JSS----Benelux_JR5092",
+   "posted": "2026-11-18",
+   "source": "tti",
+   "sourceLabel": "TTI / AEG / Milwaukee",
+   "erstmalsGesehen": "2026-11-18",
    "zuletztGesehen": "2026-11-18"
   },
   {
