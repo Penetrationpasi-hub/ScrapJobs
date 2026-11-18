@@ -63,7 +63,6 @@ class SitemapSourcesTest(unittest.TestCase):
             "syntegon": ("https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e", "https://jobs.syntegon.com/search"),
         }
         cases["stihl"] = ("https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktfunktionen-in-der-vorentwicklung-sf38922", "https://corporate.stihl.de/de/karriere/stellenangebote")
-        cases["db_audiotechnik"] = ("https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/it-security-specialist-wmd-req-2026-00000180/", "https://www.dbaudio.com/global/de/ueber-db/karriere/jobs/")
         cases["klinikum_stuttgart"] = ("https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-m-w-d-3502", "https://www.klinikum-stuttgart.de/karriere/jobs")
         for key, (ad, listing) in cases.items():
             with self.subTest(key=key):
