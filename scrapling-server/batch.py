@@ -35,8 +35,9 @@ SLOW_SOURCES = {"pfisterer": 4}
 # Zeitlimit (s) je einzelnem Abruf, wo 8 s zu knapp sind (langsame Portale, grosse Sitemaps).
 SLOW_REQUESTS = {"db_audiotechnik": 20, "ksk_waiblingen": 15, "volksbank_stuttgart": 15, "landratsamt_rmk": 15}
 # Vorübergehende Fehler: die Quelle wird nach dem Hauptdurchlauf einmal wiederholt.
-TRANSIENT = {"network_error", "upstream_error", "timeout"}
-RETRY_PAUSE = 90
+TRANSIENT = {"network_error", "upstream_error", "timeout", "robots_unavailable"}
+# Pausen (s) vor der 1. und 2. Wiederholung.
+RETRY_PAUSES = (90, 180)
 # Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
 MIN_DELAY = {}
 # Sitemap-Quellen lesen jede Anzeige einzeln: mehr Einzelseiten und mehr Zeit als der Standard.
@@ -232,6 +233,13 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
             status = "done"
             if failures:  # Teilergebnis: gelesene Orte zählen, die übrigen stehen im Detail
                 detail = "teilweise: " + ", ".join(f"{place or key} {state}" for place, state in failures)
+            elif not jobs:
+                # Gelesen, aber leer: Zahlen mitgeben, damit sichtbar ist, woran es liegt.
+                parts = []
+                if "urls" in report:
+                    parts.append(f"{report['urls']} Adressen gelesen, {report.get('matched', 0)} passend")
+                parts.append(f"{report.get('filtered', 0)} verworfen")
+                detail = "0 Stellen: " + ", ".join(parts)
             else:
                 detail = None
         else:
@@ -243,25 +251,31 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
     return results
 
 
-def collect_with_retry(keys, configured, options, factory=None, sleep=time.sleep, log=print, pause=RETRY_PAUSE):
-    """Hauptdurchlauf, danach einmal die Quellen mit vorübergehendem Fehler (Timeout, 5xx) wiederholen.
+def collect_with_retry(keys, configured, options, factory=None, sleep=time.sleep, log=print, pauses=RETRY_PAUSES):
+    """Hauptdurchlauf, danach bis zu zweimal die Quellen mit vorübergehendem Fehler wiederholen.
 
-    GitHub-Runner erreichen einzelne Portale zeitweise nicht; ein zweiter Versuch nach einer
-    Pause behebt das meist. Das Ergebnis der Wiederholung ersetzt nur einen Fehlschlag.
+    GitHub-Runner erreichen einzelne Portale zeitweise nicht (Timeout, 5xx, robots.txt nicht lesbar);
+    Wiederholungen nach einer Pause beheben das meist. Ein Erfolg ersetzt den Fehlschlag; sonst bleibt
+    das erste Ergebnis, mit dem Hinweis, wie oft es erneut versucht wurde.
     """
     results = collect(keys, configured, options, factory=factory, sleep=sleep, log=log)
-    again = [key for key in keys if results[key]["status"] in TRANSIENT]
-    if not again:
-        return results
-    log(f"\nWiederholung nach {pause} s: {', '.join(again)}")
-    sleep(pause)
-    second = collect(again, configured, options, factory=factory, sleep=sleep, log=log)
-    for key in again:
-        if second[key]["status"] == "done":
-            results[key] = second[key]
-        else:
+    tries = {}
+    for pause in pauses:
+        again = [key for key in keys if results[key]["status"] in TRANSIENT]
+        if not again:
+            break
+        log(f"\nWiederholung nach {pause} s: {', '.join(again)}")
+        sleep(pause)
+        second = collect(again, configured, options, factory=factory, sleep=sleep, log=log)
+        for key in again:
+            tries[key] = tries.get(key, 0) + 1
+            if second[key]["status"] == "done":
+                results[key] = second[key]
+    for key, count in tries.items():
+        if results[key]["status"] in TRANSIENT:
             first = results[key]
-            first["detail"] = ((first.get("detail") or first["status"]) + " (auch nach Wiederholung)")[:200]
+            suffix = f" (auch nach {count} Wiederholung{'en' if count > 1 else ''})"
+            first["detail"] = ((first.get("detail") or first["status"]) + suffix)[:200]
     return results
 
 

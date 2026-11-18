@@ -59,6 +59,8 @@ def sitemap(source, req, get, report):
     for raw in found:
         if is_detail(raw, source) and raw not in links:
             links.append(raw)
+    # Zahlen fuer die Diagnose, wenn der Lauf keine Stellen liefert (siehe batch.collect).
+    report["urls"], report["matched"] = len(found), len(links)
     for raw in links[:limit]:
         document = detail_document(get, raw, source, report)
         if document is None:
