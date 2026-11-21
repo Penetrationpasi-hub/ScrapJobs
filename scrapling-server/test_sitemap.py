@@ -63,6 +63,7 @@ class SitemapSourcesTest(unittest.TestCase):
             "syntegon": ("https://jobs.syntegon.com/offer/hse-manager-m-w-d/1c3136a0-a713-41b7-9e23-b5789225c66e", "https://jobs.syntegon.com/search"),
         }
         cases["stihl"] = ("https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-produktfunktionen-in-der-vorentwicklung-sf38922", "https://corporate.stihl.de/de/karriere/stellenangebote")
+        # d&b audiotechnik ist bewusst nicht eingetragen (www.dbaudio.com antwortet von GitHub aus nicht).
         cases["klinikum_stuttgart"] = ("https://www.klinikum-stuttgart.de/karriere/job/pflegefachkraft-m-w-d-3502", "https://www.klinikum-stuttgart.de/karriere/jobs")
         for key, (ad, listing) in cases.items():
             with self.subTest(key=key):

@@ -70,6 +70,22 @@ ISOLATED_SOURCES = ("rems_murr_jobs", "bluum_bw", "zvw")  # zvw reads its ads fr
 AGGREGATOR_SOURCES = ("jobsuche_bw",)
 
 
+# Persy job exchanges (public widget API of germanpersonnel.de): source key -> job exchange token
+PERSY_EXCHANGES = {"gpm": "dG9juJve", "liebert": "eusdDOss"}
+
+
+def persy_base(key):
+    return f"https://www.germanpersonnel.de/persy/api/v1/channel_posting/jobexchange/{PERSY_EXCHANGES[key]}/"
+
+
+# Phenom career portals (search widget API): source key -> portal settings; id_field is the ad identifier used in job URLs
+PHENOM_TENANTS = {
+    "deutsche_post": {"host": "careers.dhl.com", "locale": "eu/de", "lang": "de_eu", "country": "eu",
+                      "id_field": "jobSeqNo", "company": "Deutsche Post DHL Group"},
+    "catalent": {"host": "careers.catalent.com", "locale": "us/en", "lang": "en_us", "country": "us",
+                 "id_field": "jobId", "company": "Catalent"},
+}
+
 def registry() -> dict[str, Source]:
     employers = EMPLOYERS
     if raw := os.environ.get("SCRAPLING_EMPLOYERS"):
@@ -110,7 +126,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)
@@ -141,7 +157,20 @@ def registry() -> dict[str, Source]:
         if source.adapter == "murr" and (source.key != "murrelektronik"
                 or source.search != "https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/"):
             raise ValueError("Murrelektronik reader is bound to its public job list")
-        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite", "personio"} and not source.api:
+        if source.adapter == "persona_sitemap" and (source.key != "persona" or source.hosts != ("www.persona.de",)
+                or source.search != "https://www.persona.de/jobs" or source.api != "https://www.persona.de/sitemap-de.xml"):
+            raise ValueError("persona reader is bound to the public job sitemap of www.persona.de")
+        if source.adapter == "persy_exchange" and (source.key not in PERSY_EXCHANGES or source.api != persy_base(source.key)
+                or source.search != source.api or source.hosts != ("www.germanpersonnel.de", "www.persy.jobs")):
+            raise ValueError("Persy reader is bound to the known job exchanges (gpm, liebert)")
+        if source.adapter == "waiblingen_page" and (source.key != "stadt_waiblingen" or source.hosts != ("karriere.waiblingen.de",)
+                or source.search != "https://karriere.waiblingen.de/offene-stellen"):
+            raise ValueError("Waiblingen reader is bound to the city's public career list")
+        if source.adapter == "phenom_widgets" and (source.key not in PHENOM_TENANTS
+                or source.hosts != (PHENOM_TENANTS[source.key]["host"],)
+                or source.api != f"https://{PHENOM_TENANTS[source.key]['host']}/widgets"):
+            raise ValueError("Phenom reader is bound to the known career portals")
+        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite", "personio", "persona_sitemap", "persy_exchange", "phenom_widgets"} and not source.api:
             raise ValueError("Employer API endpoint required")
     return result
 

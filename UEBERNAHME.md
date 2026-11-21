@@ -69,3 +69,12 @@ Nach der Übernahme `python -m pytest -q` in `scrapling-server` ausführen.
 
 ## Noch offen
 Die Firmennamen aus Workday tragen eine interne Nummer („922E Airbus …"). Das Entfernen steht noch aus.
+
+## Rückübernahme aus N-chster-Schritt2 (Stand 3374504)
+Neue Leser: `persona_adapter.py` (persona service, Sitemap), `persy_adapter.py` (GPM, Liebert), `phenom_adapter.py` (DHL, Catalent),
+`waiblingen_adapter.py` (Stadt Waiblingen), `jobsuche_bw.py` (Aggregator) samt Tests. Dazu `safe_http.py` (Cookies, Zusatz-Header,
+größere XML-/Listenseiten), `crawler.py` (jobsucheBW-Hook), `robots_exceptions.py`, bessere Suchwort-Prüfung (`extraction.py`),
+PLZ→Ort (`geo.py`), `murr_adapter.py`, `personio_adapter.py` (Quellenname als Firma) und myjobboard-Adressen.
+`employers.json`: persona, gpm, liebert, iits neu; stadt_waiblingen, catalent, deutsche_post, rems_murr_jobs, jobsuche_bw aktualisiert.
+Bewusst NICHT übernommen: Schritt2-Stand von `zvw` und `db_audiotechnik` (Sammler liest ZVW über rems-murr-jobs.de, d&b über Workday).
+Tests: 328 grün.

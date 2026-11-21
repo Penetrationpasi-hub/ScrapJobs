@@ -32,6 +32,10 @@ PAGE = ("<!doctype html><html><head><title>Stellenangebote</title><script nonce=
         "<body><p>Keine passende Stelle? <a href=\"https://jobs.wir-machen-druck.de/de/jobs/4/intro\">Initiativbewerbung</a>!</p></body></html>")
 
 
+# Live search stays strict: the host must serve a real robots.txt (None simulates a 404).
+ROBOTS = {"text": "User-agent: *\nAllow: /\n"}
+
+
 class Fake:
     page = PAGE
     fetched = []
@@ -41,7 +45,9 @@ class Fake:
 
     def get(self, raw, hosts, authorize=None, **kw):
         if raw.endswith("/robots.txt"):
-            raise FetchError("gone", http_status=404)
+            if ROBOTS["text"] is None:
+                raise FetchError("gone", http_status=404)
+            return raw, ROBOTS["text"]
         if authorize:
             authorize(raw)
         Fake.fetched.append(raw)
@@ -58,7 +64,7 @@ def run(page=PAGE, q="", **extra):
 
 class DvinciTest(unittest.TestCase):
     def test_reads_all_valid_publications_from_the_list_page(self):
-        result = run(robots_missing_ok=True)
+        result = run()
         titles = [job["title"] for job in result["jobs"]]
         self.assertEqual(len(titles), 3)
         self.assertEqual(result["sources"][0]["status"], "done")
@@ -71,30 +77,44 @@ class DvinciTest(unittest.TestCase):
         self.assertEqual({j["company"] for j in result["jobs"]}, {"WIRmachenDRUCK GmbH", "WIRmachenDRUCK AG"})
 
     def test_initiative_application_page_is_never_a_job(self):
-        urls = [job["url"] for job in run(robots_missing_ok=True)["jobs"]]
+        urls = [job["url"] for job in run()["jobs"]]
         self.assertFalse(any("/4/intro" in url for url in urls))
 
     def test_only_the_list_page_is_fetched(self):
-        run(robots_missing_ok=True)
+        run()
         self.assertEqual(Fake.fetched, ["https://jobs.wir-machen-druck.de/de/jobs"])
 
-    def test_missing_robots_stays_strict_without_the_catalog_flag(self):
-        self.assertEqual(run()["sources"][0]["status"], "robots_unavailable")
+    def test_missing_robots_stays_strict_in_the_live_search(self):
+        ROBOTS["text"] = None
+        try:
+            self.assertEqual(run()["sources"][0]["status"], "robots_unavailable")
+        finally:
+            ROBOTS["text"] = "User-agent: *\nAllow: /\n"
 
     def test_job_url_must_stay_on_the_employer_host(self):
         rows = [{**ROWS[0], "jobPublicationURL": "https://evil.example/de/jobs/30213/x"}]
         page = PAGE.replace(json.dumps({"jobPublications": ROWS}, ensure_ascii=False),
                             json.dumps({"jobPublications": rows}, ensure_ascii=False))
-        self.assertEqual(run(page, robots_missing_ok=True)["jobs"], [])
+        self.assertEqual(run(page)["jobs"], [])
 
     def test_page_without_data_is_reported_not_empty(self):
-        result = run("<html><body>Kein Datenblock</body></html>", robots_missing_ok=True)
+        result = run("<html><body>Kein Datenblock</body></html>")
         self.assertEqual(result["sources"][0]["status"], "unsupported")
         self.assertEqual(result["sources"][0]["detail"], "DvinciData nicht gefunden")
 
     def test_publications_parser_rejects_broken_json(self):
         with self.assertRaises(FetchError):
             publications("var DvinciData = {nicht json")
+
+
+class RobotsBomTest(unittest.TestCase):
+    def test_a_byte_order_mark_does_not_hide_the_first_robots_line(self):
+        ROBOTS["text"] = "\ufeffUser-agent: *\nDisallow: /de/jobs\n"
+        try:
+            self.assertEqual(run()["sources"][0]["status"], "robots_denied")
+            self.assertEqual(Fake.fetched, [])
+        finally:
+            ROBOTS["text"] = "User-agent: *\nAllow: /\n"
 
 
 if __name__ == "__main__":

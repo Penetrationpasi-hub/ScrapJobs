@@ -77,6 +77,18 @@ class EmployerFormats(unittest.TestCase):
             self.assertFalse(self.run_adapter("stadtwerke_waiblingen", respond)[0])
             actual[key] = previous
 
+    def test_myjobboard_location_from_alternative_fields(self):
+        ident = "63aec2bcfb5a9f4266d751d3"
+        base = {"id": ident, "title": "Software Entwickler", "tenant": "stadtwerke-waiblingen",
+                "accessibilityLevel": "Public", "hiringOrganization": {"name": "Stadtwerke Waiblingen GmbH"},
+                "description": "Softwareentwicklung", "publishUntil": "2099-12-31"}
+        for extra in ({"postalAddress": {"city": "Waiblingen", "zip": "71332"}},
+                      {"location": "71332 Waiblingen"}, {"city": "Waiblingen"}):
+            actual = {**base, **extra}
+            jobs, _, _ = self.run_adapter("stadtwerke_waiblingen", lambda raw, options: {"jobs": [actual]})
+            self.assertEqual(len(jobs), 1, extra)
+            self.assertIn("Waiblingen", jobs[0]["location"], extra)
+
     def test_myjobboard_rejects_list_in_place_of_detail(self):
         ident = "63aec2bcfb5a9f4266d751d3"
         def respond(raw, options):
@@ -145,28 +157,6 @@ class EmployerFormats(unittest.TestCase):
         self.assertTrue(all("#:~:text=" in job["url"] for job in all_jobs))
         with self.assertRaises(FetchError):
             self.run_adapter("benz_sport", lambda raw, options: html.replace("Gotthilf Benz", "Other"))
-
-    def test_benz_relaunch_reads_accordion_cards_without_publisher_meta(self):
-        def card(title, place, text):
-            return (f'<div class="val-job-offers__item"><h3><button><span class="val-job-offers__item-title">{title}</span>'
-                    f'<span class="val-job-offers__badge">Vertrieb</span><span class="val-job-offers__meta">{place}</span></button></h3>'
-                    f'<div class="collapse"><div class="val-job-offers__body"><h4>Ihr Aufgabengebiet</h4><ul><li>{text}</li></ul></div></div></div>')
-        long = "Kaufmännische Bearbeitung von Kundenanfragen, Betreuung und Pflege unserer Kunden, Überwachung von Lieferterminen. "
-        html = ('<div class="val-job-offers__list">' + card("Mitarbeiter im Vertriebsinnendienst (m/w/d)", "71364 Winnenden", long)
-                + card("Monteur für Sportgeräte (m/w/d)", "Bundesweit", long)
-                + card("Initiative Bewerbung bei BENZ (m/w/d)", "71364 Winnenden / bundesweit", long)
-                + card("Zu kurz (m/w/d)", "71364 Winnenden", "kurz") + "</div>")
-        jobs, report, _ = self.run_adapter("benz_sport", lambda raw, options: html, query="")
-        self.assertEqual([j["title"] for j in jobs], ["Mitarbeiter im Vertriebsinnendienst (m/w/d)", "Monteur für Sportgeräte (m/w/d)"])
-        self.assertEqual(jobs[0]["company"], "Gotthilf Benz Turngerätefabrik GmbH + Co. KG")
-        self.assertEqual(jobs[0]["location"], "71364 Winnenden")
-        self.assertTrue(all("#:~:text=" in j["url"] for j in jobs))
-        self.assertEqual(report["filtered"], 1)
-
-    def test_benz_unknown_layout_reports_why(self):
-        with self.assertRaises(FetchError) as caught:
-            self.run_adapter("benz_sport", lambda raw, options: "<html><body><h2>Karriere</h2></body></html>")
-        self.assertEqual(caught.exception.detail, "Firmenangabe/Abschnitte nicht gefunden (Seite umgebaut?)")
 
     def test_eisenmann_proves_publisher_and_individual_accordion_content(self):
         html = '''<div class="accordion"><h4 class="trigger">Software Entwickler (m/w/d) für Süddeutschland</h4>

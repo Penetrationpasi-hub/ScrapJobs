@@ -61,6 +61,16 @@ class Murrelektronik(unittest.TestCase):
         self.assertEqual(jobs[0]["url"], url)
         self.assertEqual(self.report["filtered"], 1)
 
+    def test_location_is_read_from_arbeitsort_block(self):
+        url = BASE + PATH + "mechatroniker-m-w-d"
+        body = TEXT + " Weitere Aufgaben und Informationen zur Stelle im Unternehmen." * 2
+        page = detail(meta="Auf unserem Wachstumskurs suchen wir Sie! Mechatroniker (m/w/d)", body=body)
+        page = page.replace("</div></body>", '<h3>Ihr Arbeitsort</h3><p class="bodytext">Grabenstra\u00dfe 29<br>71570 Oppenweiler<br>Deutschland</p></div></body>')
+        jobs = self.run_adapter({LIST: listing("mechatroniker-m-w-d"), url: page})
+        self.assertEqual(len(jobs), 1)
+        self.assertIn("Oppenweiler", jobs[0]["location"])
+        self.assertIn("71570", jobs[0]["location"])
+
     def test_no_location_is_invented_and_foreign_or_missing_employer_is_dropped(self):
         a, b, c = (BASE + PATH + s for s in ("a-mechatroniker", "b-mechatroniker", "c-mechatroniker"))
         jobs = self.run_adapter({

@@ -2,7 +2,12 @@
 import json
 import os
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
+from urllib.parse import urlsplit
+
+import jobsuche_bw
+from crawler import crawl
 
 from extraction import discovery, extract
 from sources import registry, approved_sources
@@ -27,6 +32,29 @@ def page(**changes):
     posting.update(changes)
     crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": []}
     return "".join('<script type="application/ld+json">' + json.dumps(x) + "</script>" for x in (crumbs, posting))
+
+
+def flight(payload):
+    """Seitendaten wie im Next.js-HTML des Portals: JSON-Text mit maskierten Anführungszeichen."""
+    return "<script>self.__next_f.push([1,\"" + json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace('"', '\\"') + "\"])</script>"
+
+
+def location_page(location_id="M-DE-1427", name="Waiblingen"):
+    return "<html><body>" + flight({"requests": {"locationInfo": {"locations": [{
+        "locationId": location_id, "locationName": name, "locationType": "Municipality", "mainPostalCode": "71332",
+        "latitude": 48.83001, "longitude": 9.31452, "references": ["C-DE"]}], "references": []}}}) + "</body></html>"
+
+
+def search_page(ads):
+    """ads: (id, slug, [(lat, lng), …]) – Links im HTML und jobAd.geo in den Seitendaten wie beobachtet."""
+    links = "".join(f'<a data-testid="qa-hitzone" href="/jobs/{i}/{s}/">{s}</a>' for i, s, _ in ads)
+    rows = [{"distance": 0, "jobAd": {"companyName": "Firma", "geo": [{"lat": a, "lng": b} for a, b in sites], "id": i,
+                                     "link": f"https://www.jobsuche-bw.de/jobs/{i}/{s}"}} for i, s, sites in ads]
+    return "<html><body>" + links + flight({"requests": {"locationInfo": "$undefined", "jobSearchResult": {
+        "jobAdSearchResultModel": {"jobAds": rows}}}}) + "</body></html>"
+
+
+WAIBLINGEN, STUTTGART, MUENCHEN, HAMBURG = (48.83, 9.31), (48.78, 9.18), (48.14, 11.58), (53.55, 10.0)
 
 
 class JobsucheBW(unittest.TestCase):
@@ -134,6 +162,81 @@ class JobsucheBW(unittest.TestCase):
         self.assertIsNone(extract(page(title="Initiativbewerbung"), OWN, self.source, "Initiativ"))
         self.assertIsNone(extract(page(hiringOrganization={"@type": "Organization", "name": ""}), OWN, self.source, "Verkauf"))
         self.assertIsNone(extract(page(), OWN, self.source, "Buchhalter"))
+
+    def test_location_helpers(self):
+        self.assertEqual(jobsuche_bw.slug("Schwäbisch Gmünd"), "schwaebisch-gmuend")
+        self.assertEqual(jobsuche_bw.slug("Neuhausen auf den Fildern"), "neuhausen-auf-den-fildern")
+        self.assertEqual(jobsuche_bw.place_name("71332 Waiblingen"), "Waiblingen")
+        self.assertEqual(jobsuche_bw.place_name("Waiblingen, Baden-Württemberg"), "Waiblingen")
+        self.assertEqual(jobsuche_bw.place_name("71332"), "Waiblingen")
+        self.assertEqual([jobsuche_bw.radius_option(km) for km in (1, 20, 25, 50, 51, 150, 200)], [20, 20, 30, 50, 75, 200, 200])
+        self.assertEqual(jobsuche_bw.location_of(location_page()), ("M-DE-1427", (48.83001, 9.31452)))
+        self.assertIsNone(jobsuche_bw.location_of(search_page([])))
+        points = jobsuche_bw.listing_points(search_page([("SDE-1", "a", [MUENCHEN]), ("16427094", "b", [WAIBLINGEN, HAMBURG])]))
+        self.assertEqual(points, {"SDE-1": [MUENCHEN], "16427094": [WAIBLINGEN, HAMBURG]})
+
+    def run_crawl(self, location, pages, radius=25):
+        fetched = []
+
+        def factory(budget):
+            class Fixture:
+                def __init__(self):
+                    self.last = {}
+
+                def get(self, raw, hosts, authorize=None, **options):
+                    if authorize:
+                        authorize(raw)
+                    budget.claim()
+                    if raw.endswith("/robots.txt"):
+                        return raw, "User-agent: *\nAllow: /"
+                    fetched.append(raw)
+                    path = urlsplit(raw).path
+                    for prefix, html in pages.items():
+                        if path.startswith(prefix):
+                            if html is None:
+                                from safe_http import FetchError
+                                raise FetchError("gone", http_status=404)
+                            return raw, html
+                    return raw, page(title="Elektriker (m/w/d)")
+            return Fixture()
+
+        with patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "jobsuche_bw"}):
+            result = crawl(SimpleNamespace(q="Elektriker", location=location, radius_km=radius, sources=["jobsuche_bw"]), factory)
+        return result, fetched
+
+    def test_search_uses_the_portal_radius_and_skips_far_ads_before_detail_requests(self):
+        ads = [("SDE-130075", "Elektriker_Esslingen", [STUTTGART]), ("SDE-108555", "Elektriker_bundesweit", [HAMBURG]),
+               ("16427672", "Elektroinstallateur_Waiblingen", [WAIBLINGEN])]
+        result, fetched = self.run_crawl("Waiblingen", {"/stellenangebote/waiblingen/": location_page(),
+                                                       "/suchergebnis/": search_page(ads)})
+        self.assertEqual(fetched[0], "https://www.jobsuche-bw.de/stellenangebote/waiblingen/")
+        self.assertEqual(fetched[1], "https://www.jobsuche-bw.de/suchergebnis/?fulltext=Elektriker"
+                                     "&locationId=M-DE-1427&perimeterRadius=30")
+        details = [url for url in fetched if "/jobs/" in url]
+        self.assertEqual(len(details), 2)
+        self.assertFalse([url for url in details if "SDE-108555" in url])
+        report = result["sources"][0]
+        self.assertEqual(report["location_filter"], "Portal-Umkreissuche")
+        self.assertEqual(report["outside"], 1)
+
+    def test_unresolvable_place_keeps_the_nationwide_list_but_fetches_only_nearby_ads(self):
+        ads = [("SDE-126941", "Elektriker_Muenchen", [MUENCHEN]), ("SDE-1", "Elektriker_ohne_Geo", []),
+               ("SDE-2", "Elektriker_Stuttgart", [STUTTGART])]
+        result, fetched = self.run_crawl("Waiblingen", {"/stellenangebote/": None, "/suchergebnis/": search_page(ads)})
+        self.assertEqual(fetched[1], "https://www.jobsuche-bw.de/suchergebnis/?fulltext=Elektriker")
+        details = [url for url in fetched if "/jobs/" in url]
+        self.assertEqual(len(details), 1)
+        self.assertIn("SDE-2", details[0])
+        report = result["sources"][0]
+        self.assertEqual(report["location_filter"], "Trefferliste nach Koordinaten")
+        self.assertIn("nicht auflösbar", report["detail"])
+
+    def test_without_location_no_extra_request_and_no_listing_filter(self):
+        ads = [("SDE-126941", "Elektriker_Muenchen", [MUENCHEN]), ("SDE-2", "Elektriker_Stuttgart", [STUTTGART])]
+        result, fetched = self.run_crawl("", {"/suchergebnis/": search_page(ads)})
+        self.assertEqual(fetched[0], "https://www.jobsuche-bw.de/suchergebnis/?fulltext=Elektriker")
+        self.assertEqual(len([url for url in fetched if "/jobs/" in url]), 2)
+        self.assertNotIn("location_filter", result["sources"][0])
 
     def test_aggregator_needs_explicit_approval_and_is_not_in_employers_group(self):
         with patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "employers"}):

@@ -45,7 +45,9 @@ class RegionalAdditionsTest(unittest.TestCase):
             die Mitarbeitenden bei der Organisation und Sicherstellung der Warenverfügbarkeit.</p>
             </div></div></div><footer>Postanschrift: Winnenden</footer>"""
 
-        jobs = list(judo(source, self.req, get, self.report))
+        # Im Titel zählt der Wortanfang ("Logistikmeister"), nicht ein Wortteil ("Meister").
+        req = SimpleNamespace(q="Logistik", location="Backnang", radius=25)
+        jobs = list(judo(source, req, get, self.report))
         self.assertEqual(len(calls), 3)
         self.assertEqual(len(jobs), 1)
         self.assertEqual(jobs[0]["location"], "Backnang-Waldrems")

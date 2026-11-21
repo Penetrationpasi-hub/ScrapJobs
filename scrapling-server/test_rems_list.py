@@ -29,6 +29,10 @@ DEU = '<div id="DEU" style="display:none;"><h2>Deutschland</h2>' + "".join([
 ]) + "</div>"
 
 
+# Live search stays strict: the host must serve a real robots.txt (None simulates a 404).
+ROBOTS = {"text": "User-agent: *\nAllow: /\n"}
+
+
 class Fake:
     html = ""
     fetched = []
@@ -38,7 +42,9 @@ class Fake:
 
     def get(self, raw, hosts, authorize=None, **kw):
         if raw.endswith("/robots.txt"):
-            raise FetchError("gone", http_status=404)
+            if ROBOTS["text"] is None:
+                raise FetchError("gone", http_status=404)
+            return raw, ROBOTS["text"]
         if authorize:
             authorize(raw)
         Fake.fetched.append(raw)
@@ -47,7 +53,7 @@ class Fake:
 
 def run(html, **extra):
     Fake.html, Fake.fetched = html, []
-    req = SimpleNamespace(q="", location="", radius_km=25, sources=["rems"], robots_missing_ok=True, **extra)
+    req = SimpleNamespace(q="", location="", radius_km=25, sources=["rems"], **extra)
     with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "rems"}):
         return crawler.crawl(req, Fake)
 
@@ -94,6 +100,73 @@ class RemsListTest(unittest.TestCase):
     def test_listing_requires_title(self):
         with self.assertRaises(FetchError):
             listing("<html><title>x</title></html>", "https://recruitment.rems.de/stellenangebote")
+
+
+OBSERVED = '<div id="DEU" style="display:none;"><h2 style="margin-bottom:1em;">Deutschland</h2>' + "".join([
+    job("/ekrmt", "Einkaufssachbearbeiter (m/w/d)", "Hagen", "DEU - 29.10.2026"),
+    job("/mbs2", "Maschinenbeschicker (m/w/d)", "Waiblingen", "DEU - 21.10.2026"),
+    job("/minijobber-lager-logistik-m-w-d", "Minijobber Lager / Logistik (m/w/d)", "Waiblingen", "DEU - 19.10.2026"),
+    job("/fas", "Fachkraft f&#252;r Arbeitssicherheit, Brand- und Umweltschutz (m/w/d)", "Waiblingen", "DEU - 28.09.2026"),
+    job("/prjg", "Leitung Instandhaltung Geb&#228;udetechnik und Haus &amp; Hof (m/w/d)", "Waiblingen", "DEU - 31.08.2026"),
+    job("/sbav", "Fertigungsplaner (m/w/d)", "Waiblingen", "DEU - 13.08.2026"),
+    job("/mi", "Mechatroniker Instandhaltung (m/w/d)", "Waiblingen", "DEU - 10.02.2026"),
+]) + "</div>"
+
+
+class RemsObservedPageTest(unittest.TestCase):
+    def test_all_seven_ads_of_the_observed_page_are_read_with_the_live_robots_situation(self):
+        ROBOTS["text"] = None  # recruitment.rems.de/robots.txt is a 404
+        try:
+            result = run(page(OBSERVED))
+        finally:
+            ROBOTS["text"] = "User-agent: *\nAllow: /\n"
+        self.assertEqual(result["sources"][0]["status"], "done")
+        jobs = {j["url"]: j for j in result["jobs"]}
+        self.assertEqual(len(jobs), 7)
+        self.assertEqual({j["company"] for j in jobs.values()}, {"REMS"})
+        self.assertEqual(jobs["https://recruitment.rems.de/prjg"]["title"], "Leitung Instandhaltung Gebäudetechnik und Haus & Hof (m/w/d)")
+        self.assertEqual(jobs["https://recruitment.rems.de/prjg"]["location"], "Waiblingen")
+        self.assertEqual(jobs["https://recruitment.rems.de/mi"]["posted"], "2026-02-10")
+        self.assertEqual(jobs["https://recruitment.rems.de/ekrmt"]["location"], "Hagen")
+
+
+class RemsRobotsTest(unittest.TestCase):
+    def test_missing_robots_404_counts_as_no_rules_for_the_public_list_page_only(self):
+        # recruitment.rems.de answers /robots.txt with 404, which means "no rules published".
+        ROBOTS["text"] = None
+        try:
+            result = run(page(DEU))
+            self.assertEqual(result["sources"][0]["status"], "done")
+            self.assertEqual(len(result["jobs"]), 4)
+            self.assertEqual(Fake.fetched, ["https://recruitment.rems.de/stellenangebote"])
+        finally:
+            ROBOTS["text"] = "User-agent: *\nAllow: /\n"
+
+    def test_exception_is_bound_to_the_source_the_page_and_a_plain_request(self):
+        from dataclasses import replace
+        from robots_exceptions import missing_robots_scope
+        from sources import registry
+        source = registry()["rems"]
+        page_url = "https://recruitment.rems.de/stellenangebote"
+        self.assertTrue(missing_robots_scope(page_url, source, {}))
+        for raw, options in ((page_url + "?x=1", {}), ("https://recruitment.rems.de/ekrmt", {}),
+                             ("https://recruitment.rems.de.evil.test/stellenangebote", {}),
+                             ("http://recruitment.rems.de/stellenangebote", {}), (page_url, {"accept_json": True})):
+            self.assertFalse(missing_robots_scope(raw, source, options), (raw, options))
+        self.assertFalse(missing_robots_scope(page_url, replace(source, key="other"), {}))
+
+    def test_a_blocked_robots_answer_still_stops_the_reader(self):
+        class Blocked(Fake):
+            def get(self, raw, hosts, authorize=None, **kw):
+                if raw.endswith("/robots.txt"):
+                    raise FetchError("blocked", http_status=403)
+                return super().get(raw, hosts, authorize, **kw)
+        req = SimpleNamespace(q="", location="", radius_km=25, sources=["rems"])
+        Fake.html, Fake.fetched = page(DEU), []
+        with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "rems"}):
+            result = crawler.crawl(req, Blocked)
+        self.assertEqual(result["sources"][0]["status"], "robots_unavailable")
+        self.assertEqual(Fake.fetched, [])
 
 
 if __name__ == "__main__":

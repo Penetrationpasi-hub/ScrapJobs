@@ -39,6 +39,10 @@ FEED = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<workzag-jobs>\n" + "".join
 ]) + "</workzag-jobs>")
 
 
+# Live search stays strict: the host must serve a real robots.txt (None simulates a 404).
+ROBOTS = {"text": "User-agent: *\nAllow: /\n"}
+
+
 class Fake:
     feed = FEED
     fetched = []
@@ -48,7 +52,9 @@ class Fake:
 
     def get(self, raw, hosts, authorize=None, **kw):
         if raw.endswith("/robots.txt"):
-            raise FetchError("gone", http_status=404)
+            if ROBOTS["text"] is None:
+                raise FetchError("gone", http_status=404)
+            return raw, ROBOTS["text"]
         if authorize:
             authorize(raw)
         Fake.fetched.append((raw, kw))
@@ -57,7 +63,7 @@ class Fake:
 
 def run(feed=FEED, q="", **extra):
     Fake.feed, Fake.fetched = feed, []
-    req = SimpleNamespace(q=q, location="", radius_km=25, sources=["riva"], robots_missing_ok=True, **extra)
+    req = SimpleNamespace(q=q, location="", radius_km=25, sources=["riva"], **extra)
     with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "riva"}):
         return crawler.crawl(req, Fake)
 
@@ -120,6 +126,48 @@ class PersonioTest(unittest.TestCase):
     def test_registry_binds_the_adapter_to_the_tenant_feed(self):
         source = registry()["riva"]
         self.assertEqual((source.adapter, source.api), ("personio", API))
+
+
+IITS_FEED = """<?xml version="1.0" encoding="UTF-8"?>
+<workzag-jobs>
+<position><id>1345613</id><office>Remote Deutschland</office><department>iits</department>
+<recruitingCategory>Festangestellte (all genders)</recruitingCategory>
+<name>(Senior) AI-Engineer (all genders) - 100% Remote</name>
+<jobDescriptions><jobDescription><name>Über uns</name><value><![CDATA[<b>Wir</b> bauen Software]]></value></jobDescription></jobDescriptions>
+<createdAt>2023-12-01T14:49:54+00:00</createdAt></position>
+<position><id>2745503</id><office>Remote Deutschland</office><department>iits</department>
+<name>Mid Level Cloud Engineer (all genders) - 100 % Remote</name>
+<createdAt>2026-08-07T10:31:45+00:00</createdAt></position>
+<position><id>866434</id><office>Remote Deutschland</office><department>iits</department>
+<recruitingCategory>Initiativ</recruitingCategory><name>Initiativbewerbung</name>
+<createdAt>2022-10-25T17:02:03+00:00</createdAt></position>
+</workzag-jobs>"""
+
+
+class IitsTest(unittest.TestCase):
+    def crawl(self, q=""):
+        Fake.feed, Fake.fetched = IITS_FEED, []
+        req = SimpleNamespace(q=q, location="", radius_km=25, sources=["iits"])
+        with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "iits"}):
+            return crawler.crawl(req, Fake)
+
+    def test_feed_without_subcompany_uses_the_source_name_as_employer(self):
+        result = self.crawl()
+        self.assertEqual(result["sources"][0]["status"], "done")
+        self.assertEqual(Fake.fetched[0][0], "https://iits.jobs.personio.de/xml")
+        jobs = {j["url"]: j for j in result["jobs"]}
+        self.assertEqual(sorted(jobs), ["https://iits.jobs.personio.de/job/1345613", "https://iits.jobs.personio.de/job/2745503"])
+        first = jobs["https://iits.jobs.personio.de/job/1345613"]
+        self.assertEqual((first["company"], first["location"], first["posted"]),
+                         ("iits-consulting", "Remote Deutschland", "2023-12-01"))
+        self.assertEqual(result["sources"][0]["filtered"], 1)  # Initiativbewerbung
+
+    def test_search_term_filters_titles(self):
+        self.assertEqual([j["title"] for j in self.crawl("Cloud")["jobs"]], ["Mid Level Cloud Engineer (all genders) - 100 % Remote"])
+
+    def test_registry_binding(self):
+        source = registry()["iits"]
+        self.assertEqual((source.adapter, source.api), ("personio", "https://iits.jobs.personio.de/xml"))
 
 
 class XmlTransportTest(unittest.TestCase):

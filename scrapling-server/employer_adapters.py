@@ -89,6 +89,36 @@ def workday(source, req, get, report):
             report["filtered"] += 1
 
 
+def _myjobboard_address(*records):
+    """Ort aus den bei myjobboard üblichen Feldern (Detail zuerst, dann Listeneintrag)."""
+    def text(value):
+        return value.strip() if isinstance(value, str) and value.strip() else ""
+
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        sources = [record.get("postalAddress"), record.get("address"), record.get("location"), record]
+        for source in sources:
+            if isinstance(source, str) and text(source) and source is not record:
+                match = re.search(r"(\d{5})\s+([A-ZÄÖÜ][^\d,]{1,60})", source)
+                return ({"postalCode": match[1], "addressLocality": match[2].strip()} if match
+                        else {"addressLocality": text(source)})
+            if not isinstance(source, dict):
+                continue
+            city = next((text(source.get(k)) for k in
+                         ("addressLocality", "locality", "city", "town", "place", "ort", "location") if text(source.get(k))), "")
+            if city:
+                address = {"addressLocality": city}
+                postal = next((text(source.get(k)) for k in ("postalCode", "zip", "zipCode", "plz") if text(source.get(k))), "")
+                country = text(source.get("addressCountry") or source.get("country"))
+                if postal:
+                    address["postalCode"] = postal
+                if country:
+                    address["addressCountry"] = country
+                return address
+    return None
+
+
 def myjobboard(source, req, get, report):
     data = json_document(get, source.api, source)
     rows = data.get("jobs") if isinstance(data, dict) else None
@@ -119,7 +149,7 @@ def myjobboard(source, req, get, report):
             "title": actual.get("title"), "hiringOrganization": actual.get("hiringOrganization"),
             "description": actual.get("description"), "datePosted": actual.get("publishedAt"),
             "validThrough": actual.get("publishUntil"),
-            "jobLocation": {"address": actual.get("postalAddress")},
+            "jobLocation": {"address": _myjobboard_address(actual, row)},
         }, raw, source, req.q)
         if job:
             yield job
@@ -301,6 +331,18 @@ def adapter_jobs(source, req, get, report):
     elif source.adapter == "datafeed":
         from datafeed_adapter import datafeed
         yield from datafeed(source, req, get, report)
+    elif source.adapter == "persy_exchange":
+        from persy_adapter import persy
+        yield from persy(source, req, get, report)
+    elif source.adapter == "phenom_widgets":
+        from phenom_adapter import phenom
+        yield from phenom(source, req, get, report)
+    elif source.adapter == "waiblingen_page":
+        from waiblingen_adapter import waiblingen
+        yield from waiblingen(source, req, get, report)
+    elif source.adapter == "persona_sitemap":
+        from persona_adapter import persona
+        yield from persona(source, req, get, report)
     elif source.adapter == "sitemap":
         from sitemap_adapter import sitemap
         yield from sitemap(source, req, get, report)
