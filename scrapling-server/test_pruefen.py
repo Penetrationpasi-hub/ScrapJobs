@@ -15,15 +15,22 @@ class PruefenTest(unittest.TestCase):
     def test_nur_juengster_lauf_und_ausnahmen(self):
         rows = [zeile("2026-11-17T10:00:00", "a", "timeout", 0), zeile("2026-11-17T10:00:00", "b"),
                 zeile("2026-11-18T10:00:00", "a"), zeile("2026-11-18T10:00:00", "b", "network_error", 0),
-                zeile("2026-11-18T10:00:00", "c", "unsupported", 0), zeile("2026-11-18T10:00:00", "d")]
-        fehler, entbehrlich, lauf = pruefen.pruefe(rows, {"c": "x", "d": "x"})
-        self.assertEqual([r["quelle"] for r in fehler], ["b"])
+                zeile("2026-11-18T10:00:00", "c", "unsupported", 0), zeile("2026-11-18T10:00:00", "d"),
+                zeile("2026-11-18T10:00:00", "e", "network_error", 0)]
+        fehler, entbehrlich, lauf, warnungen = pruefen.pruefe(rows, {"c": "x", "d": "x"})
+        self.assertEqual([r["quelle"] for r in fehler], ["e"])  # nie Stellen gehabt: echter Fehler
+        self.assertEqual([r["quelle"] for r in warnungen], ["b"])  # Anbieter-Ausfall, Vorlauf hatte Stellen
         self.assertEqual([r["quelle"] for r in entbehrlich], ["d"])
         self.assertEqual(lauf, "2026-11-18T10:00:00")
 
     def test_done_ohne_stellen_ist_fehler(self):
-        fehler, _, _ = pruefen.pruefe([zeile("2026-11-18T10:00:00", "a", "done", 0)], {})
+        fehler, _, _, _ = pruefen.pruefe([zeile("2026-11-18T10:00:00", "a", "done", 0)], {})
         self.assertEqual(len(fehler), 1)
+
+    def test_unsupported_ist_auch_nach_stellen_ein_fehler(self):
+        rows = [zeile("2026-11-17T1", "a"), zeile("2026-11-18T1", "a", "unsupported", 0)]
+        fehler, _, _, warnungen = pruefen.pruefe(rows, {})
+        self.assertEqual(([r["quelle"] for r in fehler], warnungen), (["a"], []))
 
     def test_laeufe_in_folge(self):
         rows = [zeile("2026-11-16T1", "a"), zeile("2026-11-17T1", "a", "timeout", 0), zeile("2026-11-18T1", "a", "timeout", 0)]

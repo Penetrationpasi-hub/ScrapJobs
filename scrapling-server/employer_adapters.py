@@ -24,7 +24,7 @@ def json_document(get, raw, source, payload=None):
     try:
         return json.loads(text)
     except (ValueError, TypeError):
-        raise FetchError("unsupported") from None
+        raise FetchError("unsupported", detail="keine JSON-Antwort: " + " ".join(str(text)[:80].split())) from None
 
 
 def from_record(row, raw, source, query):

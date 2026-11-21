@@ -26,7 +26,7 @@ def entries(text, host="jobs.lidl.de"):
 
     Dieselbe Plattform (`/jobs/<titel>-<ort>-<id>`, Sitemap `sitemap-jobs.xml`) nutzen Lidl und Kaufland (Schwarz-Gruppe)."""
     if "<urlset" not in text[:2000]:
-        raise FetchError("unsupported", detail="Kein Sitemap")
+        raise FetchError("unsupported", detail="Kein Sitemap: " + " ".join(text[:80].split()))
     loc = re.compile(r"<loc>\s*https://" + re.escape(host) + r"/jobs/" + SLUG + r"\s*</loc>")
     rows = []
     for block in ENTRY.findall(text):

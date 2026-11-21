@@ -11,6 +11,8 @@ import zlib
 from urllib.parse import urljoin, urlsplit
 
 MAX_BODY = 2 * 1024 * 1024
+# Fixed floor for the explicit XML limit; MAX_BODY itself may be raised at run time (batch.py --max-body-mb).
+MIN_XML_BODY = 2 * 1024 * 1024
 # Larger answers are only allowed for XML documents such as a sitemap (see `max_body` in Transport.get).
 MAX_XML_BODY = 8 * 1024 * 1024
 # A single, server-owned list page that carries all ads inline (see `large_page` in Transport.get).
@@ -119,9 +121,9 @@ class Transport:
                 raise FetchError("unsupported")
             limit = MAX_LARGE_PAGE
         if max_body is not None:
-            if not accept_xml or not MAX_BODY < max_body <= MAX_XML_BODY:
-                raise FetchError("unsupported")
-            limit = max_body
+            if not accept_xml or not MIN_XML_BODY < max_body <= MAX_XML_BODY:
+                raise FetchError("unsupported", detail="max_body nur für XML zwischen 2 und 8 MB")
+            limit = max(max_body, MAX_BODY)
         if cookies is not None and (not isinstance(cookies, dict) or accept_xml or robots_request):
             raise FetchError("unsupported")
         if extra_headers is not None:
