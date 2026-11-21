@@ -116,7 +116,8 @@ def registry() -> dict[str, Source]:
         if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= (50 if source.adapter in ("lidl_sitemap", "kaufland_sitemap") else 10)):
             raise ValueError("Page and detail limits must stay within the global caps")
         if source.catalog_locations and (
-                "{location}" not in source.search or len(source.catalog_locations) > 8
+                ("{location}" not in source.search and source.adapter != "phenom_widgets")
+                or len(source.catalog_locations) > 8
                 or not all(isinstance(place, str) and re.fullmatch(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .-]{1,39}", place)
                            for place in source.catalog_locations)):
             raise ValueError("Catalog locations need a {location} template and plain place names")
