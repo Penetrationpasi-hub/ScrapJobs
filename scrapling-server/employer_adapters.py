@@ -340,7 +340,7 @@ def adapter_jobs(source, req, get, report):
     elif source.adapter == "waiblingen_page":
         from waiblingen_adapter import waiblingen
         yield from waiblingen(source, req, get, report)
-    elif source.adapter == "lidl_sitemap":
+    elif source.adapter in ("lidl_sitemap", "kaufland_sitemap"):
         from lidl_adapter import lidl
         yield from lidl(source, req, get, report)
     elif source.adapter == "persona_sitemap":

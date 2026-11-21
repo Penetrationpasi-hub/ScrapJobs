@@ -188,6 +188,13 @@ echte Sitemap: „Verkäufer“, Waiblingen, 25 km → 359 Treffer, „Filiallei
 `Crawl-delay`. Der Leser ist in `sources.py` fest an diese Sitemap gebunden. Ein Live-Lauf aus Render steht aus.
 
 
+**Kaufland (`kaufland`):** `jobs.kaufland.de` läuft auf derselben Plattform wie Lidl (Single-Page-App, robots.txt sperrt nur
+`/cps/`). Gelesen wird `sitemap-jobs.xml` (rund 3 700 Anzeigen, URLs `/jobs/<titel>-<ort>-<id>`; der Index
+`sitemap.xml` nennt die Teile mit relativen Adressen und wird deshalb nicht gebraucht). Der Leser ist `lidl_adapter.py` mit dem
+Host der Quelle (`kaufland_sitemap`, in `sources.py` fest an diese Sitemap gebunden); rund ein Fünftel der Adressen hat keinen
+Geschlechtsmarker, dort liegt der Ort in den letzten Wörtern. Bis zu 50 Einzelanzeigen je Lauf (JobPosting mit Arbeitgeber
+„Kaufland Vertrieb … GmbH & Co. KG“, PLZ, Koordinaten). Ein Live-Lauf aus Render steht aus.
+
 **Zeitungsverlag Waiblingen (`zvw`):** `karriere.zvw.de/stellenangebote/` ist eine
 WordPress-Seite ohne eigenes Bewerbersystem; ihre Anzeigen sind feste Links auf
 `rems-murr-jobs.de/job/…`. Der Eintrag liest diese Übersicht und übernimmt nur

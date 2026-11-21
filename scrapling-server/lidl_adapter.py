@@ -17,17 +17,20 @@ from safe_http import FetchError
 
 MAX_SITEMAP = 6 * 1024 * 1024
 ENTRY = re.compile(r"<url>(.*?)</url>", re.S)
-LOC = re.compile(r"<loc>\s*https://jobs\.lidl\.de/jobs/([a-z0-9.-]{3,200}-(\d{3,9}))\s*</loc>")
+SLUG = r"([a-z0-9.-]{3,200}-(\d{3,9}))"
 LASTMOD = re.compile(r"<lastmod>\s*([0-9T:.+Z-]{10,40})\s*</lastmod>")
 
 
-def entries(text):
-    """(Titelteil, Ortsteil, URL, Änderungsdatum) je Anzeige; URLs ohne endende Anzeigen-ID zählen nicht."""
+def entries(text, host="jobs.lidl.de"):
+    """(Titelteil, Ortsteil, URL, Änderungsdatum) je Anzeige; URLs ohne endende Anzeigen-ID zählen nicht.
+
+    Dieselbe Plattform (`/jobs/<titel>-<ort>-<id>`, Sitemap `sitemap-jobs.xml`) nutzen Lidl und Kaufland (Schwarz-Gruppe)."""
     if "<urlset" not in text[:2000]:
         raise FetchError("unsupported", detail="Kein Sitemap")
+    loc = re.compile(r"<loc>\s*https://" + re.escape(host) + r"/jobs/" + SLUG + r"\s*</loc>")
     rows = []
     for block in ENTRY.findall(text):
-        match = LOC.search(block)
+        match = loc.search(block)
         if not match:
             continue
         slug, ident = match.groups()
@@ -35,7 +38,7 @@ def entries(text):
         parts = GENDER.split(body)
         title, place = (body, "") if len(parts) < 2 else ("-".join(parts[:-1]), parts[-1].strip("-"))
         stamp = LASTMOD.search(block)
-        rows.append((title, place, f"https://jobs.lidl.de/jobs/{slug}", stamp.group(1) if stamp else ""))
+        rows.append((title, place, f"https://{host}/jobs/{slug}", stamp.group(1) if stamp else ""))
     return rows
 
 
@@ -79,7 +82,7 @@ def select(rows, query, origin, radius):
 
 def lidl(source, req, get, report):
     _, text = get(source.api, source, accept_xml=True, max_body=MAX_SITEMAP)
-    rows = entries(text)
+    rows = entries(text, source.hosts[0])
     origin = geo.center(req.location) if getattr(req, "location", "") else None
     urls = select(rows, req.q, origin, getattr(req, "radius_km", 25))
     report["detail"] = f"{len(rows)} Anzeigen im Sitemap, {len(urls)} passend"

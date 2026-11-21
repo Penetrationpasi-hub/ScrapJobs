@@ -113,7 +113,7 @@ def registry() -> dict[str, Source]:
         if not source.detail:
             raise ValueError("Detail-page matcher required")
         re.compile(source.detail)
-        if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= (50 if source.adapter == "lidl_sitemap" else 10)):
+        if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= (50 if source.adapter in ("lidl_sitemap", "kaufland_sitemap") else 10)):
             raise ValueError("Page and detail limits must stay within the global caps")
         if source.catalog_locations and (
                 "{location}" not in source.search or len(source.catalog_locations) > 8
@@ -126,7 +126,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)
@@ -163,6 +163,9 @@ def registry() -> dict[str, Source]:
         if source.adapter == "lidl_sitemap" and (source.key != "lidl" or source.hosts != ("jobs.lidl.de",)
                 or source.api != "https://jobs.lidl.de/sitemap-jobs.xml"):
             raise ValueError("Lidl reader is bound to the public job sitemap of jobs.lidl.de")
+        if source.adapter == "kaufland_sitemap" and (source.key != "kaufland" or source.hosts != ("jobs.kaufland.de",)
+                or source.api != "https://jobs.kaufland.de/sitemap-jobs.xml"):
+            raise ValueError("Kaufland reader is bound to the public job sitemap of jobs.kaufland.de")
         if source.adapter == "persy_exchange" and (source.key not in PERSY_EXCHANGES or source.api != persy_base(source.key)
                 or source.search != source.api or source.hosts != ("www.germanpersonnel.de", "www.persy.jobs")):
             raise ValueError("Persy reader is bound to the known job exchanges (gpm, liebert)")
@@ -173,7 +176,7 @@ def registry() -> dict[str, Source]:
                 or source.hosts != (PHENOM_TENANTS[source.key]["host"],)
                 or source.api != f"https://{PHENOM_TENANTS[source.key]['host']}/widgets"):
             raise ValueError("Phenom reader is bound to the known career portals")
-        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite", "personio", "persona_sitemap", "persy_exchange", "phenom_widgets", "lidl_sitemap"} and not source.api:
+        if source.adapter in {"workday", "myjobboard", "easyhr", "hahn", "bite", "personio", "persona_sitemap", "persy_exchange", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap"} and not source.api:
             raise ValueError("Employer API endpoint required")
     return result
 
