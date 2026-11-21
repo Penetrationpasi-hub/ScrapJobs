@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
+Stand: 2026-11-21T22:22:35+00:00 · 1246 Stellen aus 60 von 67 Quellen
 
 ## Quellen
 
@@ -28,12 +28,12 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 | Oskar Frech / Frech-Gruppe | done | 4 | 2026-11-21 |  |
 | Peter Hahn | done | 2 | 2026-11-21 |  |
 | Syntegon | done | 16 | 2026-11-21 |  |
-| Catalent | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen |
+| Catalent | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen · 0 Treffer (Suche, en_us, Ort ja), 0 gelesen (Seiten [0]); 0 in Deutschland und im Umkreis; anderes Land: -; ohne Kennung 0; außerhalb Umkreis 0 |
 | Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13300 Zeichen, 0 Links, Titel «Sana») |
 | Emil Löffelhardt | done | 26 | 2026-11-21 |  |
 | REMS | done | 7 | 2026-11-21 |  |
 | stoba Backnang | done | 5 | 2026-11-21 |  |
-| Deutsche Post / DHL | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen |
+| Deutsche Post / DHL | done | 93 | 2026-11-21 |  |
 | d&b audiotechnik | done | 11 | 2026-11-21 |  |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
 | TTI / AEG / Milwaukee | done | 26 | 2026-11-21 |  |
@@ -66,10 +66,10 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 | Klingele Paper & Packaging | done | 27 | 2026-11-21 |  |
 | Harro Höfliger | done | 20 | 2026-11-21 |  |
 | SOCCO | done | 25 | 2026-11-21 |  |
-| Rems-Murr-JOBS | done | 20 | 2026-11-21 |  |
-| persona service | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen |
-| Lidl | done | 50 | 2026-11-21 |  |
-| Kaufland | done | 50 | 2026-11-21 |  |
+| Rems-Murr-JOBS | done | 21 | 2026-11-21 |  |
+| persona service | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen · 4741 Anzeigen im Sitemap, 0 passend |
+| Lidl | done | 82 | 2026-11-21 |  |
+| Kaufland | done | 51 | 2026-11-21 |  |
 | GPM Personalservice | done | 60 | 2026-11-21 |  |
 | Liebert GmbH | done | 60 | 2026-11-21 |  |
 | iits-consulting | done | 7 | 2026-11-21 |  |
@@ -360,6 +360,102 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [R&D Softwareentwicklung](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/R-D-Softwareentwicklung_REQ_2026_00000200) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
 - [Schulpraktika und Umschulungen](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Initiativ---Schulpraktika-und-Umschulungen_REQ_2026_00000032) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-18
 - [Senior Recruiter (w/m/d)](https://dbaudio.wd103.myworkdayjobs.com/de-DE/dbaudiotechnik-careers-de/job/Headquarters-Backnang-Eugen-Adolff-Strae/Senior-Recruiter--w-m-d-_REQ_2026_00000088) · Headquarters (Backnang, Eugen-Adolff-Straße) Deutschland · seit 2026-11-20
+
+### Deutsche Post DHL Group
+
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326932DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Fellbach Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326886DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Filderstadt Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326911DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Freiberg am Neckar Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326889DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326922DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Marbach am Neckar Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326903DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Gerlingen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326929DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Wüstenrot Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326984DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Esslingen am Neckar Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326895DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Böblingen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326986DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Ostfildern Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326926DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Steinheim an der Murr Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326916DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Markgröningen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326923DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Murrhardt Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326908DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326917DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326887DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326905DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Leonberg Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326927DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Winnenden Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326934DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326980DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Remshalden Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326914DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Ludwigsburg Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326977DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Wernau (Neckar) Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326935DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326933DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Remseck am Neckar Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326924DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Oberstenfeld Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326918DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Tamm Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326937DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326891DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326949DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Rudersberg Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326904DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Korntal-Münchingen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326888DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326910DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326900DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Leinfelden-Echterdingen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326906DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Leonberg Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326936DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326890DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326952DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Welzheim Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326901DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Waldenbuch Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326925DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326913DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Kornwestheim Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft als Postbote für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326921DEEUEXTERNAL/Abrufkraft-als-Postbote-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Backnang Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft für Pakete und Briefe (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326975DEEUEXTERNAL/Abrufkraft-f%C3%BCr-Pakete-und-Briefe-m-w-d) · Schorndorf Baden-Württemberg DE · seit 2026-11-21
+- [Abrufkraft: Paketzusteller (m/w/d) in Stuttgart-Vaihingen](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV33417DEEUEXTERNAL/Abrufkraft-Paketzusteller-m-w-d-in-Stuttgart-Vaihingen) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348858DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Esslingen am Neckar Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348851DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Böblingen Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348852DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Leonberg Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348854DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Backnang Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348850DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348853DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Kornwestheim Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Fachkraft Kurier-, Express- u. Postdienstleistungen (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348855DEEUEXTERNAL/Ausbildung-Fachkraft-Kurier-Express-u-Postdienstleistungen-m-w-d-in-2027) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Kaufmann/-frau für Büromanagement (m/w/d) für Daten- u. Kundenbetreuung in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV387936DEEUEXTERNAL/Ausbildung-Kaufmann-frau-f%C3%BCr-B%C3%BCromanagement-m-w-d-f%C3%BCr-Daten-u-Kundenbetreuung-in-2027) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Kaufmann/-frau für Büromanagement (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV347828DEEUEXTERNAL/Ausbildung-Kaufmann-frau-f%C3%BCr-B%C3%BCromanagement-m-w-d-in-2027) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Kaufmann/-frau für Spedition und Logistikdienstleistung (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV347836DEEUEXTERNAL/Ausbildung-Kaufmann-frau-f%C3%BCr-Spedition-und-Logistikdienstleistung-m-w-d-in-2027) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Mechatroniker/-in (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV347963DEEUEXTERNAL/Ausbildung-Mechatroniker-in-m-w-d-in-2027) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung Mechatroniker/-in (m/w/d) in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV347950DEEUEXTERNAL/Ausbildung-Mechatroniker-in-m-w-d-in-2027) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [AUSBILDUNG ZUM KAUFMANN (M/W/D) FÜR SPEDITION UND LOGISTIKDIENSTLEISTUNG STUTTGART](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV380209DEEUEXTERNAL/AUSBILDUNG-ZUM-KAUFMANN-M-W-D-F%C3%9CR-SPEDITION-UND-LOGISTIKDIENSTLEISTUNG-STUTTGART) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [AUSBILDUNG ZUM KAUFMANN (M/W/D) FÜR SPEDITION UND LOGISTIKDIENSTLEISTUNG STUTTGART](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV380247DEEUEXTERNAL/AUSBILDUNG-ZUM-KAUFMANN-M-W-D-F%C3%9CR-SPEDITION-UND-LOGISTIKDIENSTLEISTUNG-STUTTGART) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [AUSBILDUNG ZUM KAUFMANN (M/W/D) FÜR SPEDITION UND LOGISTIKDIENSTLEISTUNG STUTTGART](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV382882DEEUEXTERNAL/AUSBILDUNG-ZUM-KAUFMANN-M-W-D-F%C3%9CR-SPEDITION-UND-LOGISTIKDIENSTLEISTUNG-STUTTGART) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [AUSBILDUNG ZUM KAUFMANN (M/W/D) FÜR SPEDITION UND LOGISTIKDIENSTLEISTUNG STUTTGART](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV380207DEEUEXTERNAL/AUSBILDUNG-ZUM-KAUFMANN-M-W-D-F%C3%9CR-SPEDITION-UND-LOGISTIKDIENSTLEISTUNG-STUTTGART) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [AUSBILDUNG ZUM KAUFMANN (M/W/D) FÜR SPEDITION UND LOGISTIKDIENSTLEISTUNG STUTTGART](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV380250DEEUEXTERNAL/AUSBILDUNG-ZUM-KAUFMANN-M-W-D-F%C3%9CR-SPEDITION-UND-LOGISTIKDIENSTLEISTUNG-STUTTGART) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Ausbildung zum/zur Immobilienkaufmann/-frau (m/w/d) Stuttgart 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV365882DEEUEXTERNAL/Ausbildung-zum-zur-Immobilienkaufmann-frau-m-w-d-Stuttgart-2027) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV70112DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV187740DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d) · Korntal-Münchingen Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV71730DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV165727DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d) · Möglingen Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV189471DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d) · Leinfelden-Echterdingen Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d) in Stuttgart-Nord](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV232388DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d-in-Stuttgart-Nord) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Aushilfe Paketzusteller (m/w/d) in Stuttgart-Nord](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV34056DEEUEXTERNAL/Aushilfe-Paketzusteller-m-w-d-in-Stuttgart-Nord) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Betriebstechniker (m/w/d) in Vollzeit](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV71625DEEUEXTERNAL/Betriebstechniker-m-w-d-in-Vollzeit) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Business Development Manager (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV367922DEEUEXTERNAL/Business-Development-Manager-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Customs Operations Specialist (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV384447DEEUEXTERNAL/Customs-Operations-Specialist-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Duales Studium: Bachelor of Arts BWL-Dienstleistungsmgmt/Logistik-/SupplyChain Management](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV347973DEEUEXTERNAL/Duales-Studium-Bachelor-of-Arts-BWL-Dienstleistungsmgmt-Logistik-SupplyChain-Management) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [Duales Studium: Bachelor of Science Data Science und Künstliche Intelligenz in 2027](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV387940DEEUEXTERNAL/Duales-Studium-Bachelor-of-Science-Data-Science-und-K%C3%BCnstliche-Intelligenz-in-2027) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Facharzt für Arbeitsmedizin in Stuttgart (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV378807DEEUEXTERNAL/Facharzt-f%C3%BCr-Arbeitsmedizin-in-Stuttgart-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Kaufmann (m/w/d) für Spedition und Logistikdienstleistung Luftfracht Export](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV389702DEEUEXTERNAL/Kaufmann-m-w-d-f%C3%BCr-Spedition-und-Logistikdienstleistung-Luftfracht-Export) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Kaufmann (m/w/d) für Spedition und Logistikdienstleistung Luftfracht Export](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV388727DEEUEXTERNAL/Kaufmann-m-w-d-f%C3%BCr-Spedition-und-Logistikdienstleistung-Luftfracht-Export) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Lagermitarbeiter - Aushilfe als Paketsortierer (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV253664DEEUEXTERNAL/Lagermitarbeiter-Aushilfe-als-Paketsortierer-m-w-d) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Lagermitarbeiter - Aushilfe als Paketsortierer (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV67558DEEUEXTERNAL/Lagermitarbeiter-Aushilfe-als-Paketsortierer-m-w-d) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Lagermitarbeiter / Lagerhelfer (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV163763DEEUEXTERNAL/Lagermitarbeiter-Lagerhelfer-m-w-d) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Lkw Fahrer - Nahverkehr (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV97616DEEUEXTERNAL/Lkw-Fahrer-Nahverkehr-m-w-d) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Lkw Fahrer – Nahverkehr (m/w/d) in Waiblingen](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV79128DEEUEXTERNAL/Lkw-Fahrer-Nahverkehr-m-w-d-in-Waiblingen) · Waiblingen Baden-Württemberg DE · seit 2026-11-21
+- [LKW-Fahrer (m/w/d) im Hofverkehr in Teilzeit](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV186681DEEUEXTERNAL/LKW-Fahrer-m-w-d-im-Hofverkehr-in-Teilzeit) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [LKW-Fahrer (m/w/d) im Hofverkehr Vollzeit](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV110179DEEUEXTERNAL/LKW-Fahrer-m-w-d-im-Hofverkehr-Vollzeit) · Köngen Baden-Württemberg DE · seit 2026-11-21
+- [Minijob in der Paketsortierung](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV209783DEEUEXTERNAL/Minijob-in-der-Paketsortierung) · Ostfildern Baden-Württemberg DE · seit 2026-11-21
+- [Postbote für Briefe und Pakete (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV326983DEEUEXTERNAL/Postbote-f%C3%BCr-Briefe-und-Pakete-m-w-d) · Altbach Baden-Württemberg DE · seit 2026-11-21
+- [Regional Field Sales Manager (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV360112DEEUEXTERNAL/Regional-Field-Sales-Manager-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Sales Support Specialist (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV390582DEEUEXTERNAL/Sales-Support-Specialist-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Senior IT-Spezialist / SAP HCM Berater (m/w/d)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV368615DEEUEXTERNAL/Senior-IT-Spezialist-SAP-HCM-Berater-m-w-d) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Verkäufer Postfiliale (m/w/d) in 70329 Stuttgart in Geringfügigkeit (Minijob)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV389356DEEUEXTERNAL/Verk%C3%A4ufer-Postfiliale-m-w-d-in-70329-Stuttgart-in-Geringf%C3%BCgigkeit-Minijob) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
+- [Verkäufer Postfiliale (m/w/d) in 70771 Leinfelden-Echterdingen in Teilzeit (SVpflichtig)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV360157DEEUEXTERNAL/Verk%C3%A4ufer-Postfiliale-m-w-d-in-70771-Leinfelden-Echterdingen-in-Teilzeit-SVpflichtig) · Leinfelden-Echterdingen Baden-Württemberg DE · seit 2026-11-21
+- [Verkäufer Postfiliale (m/w/d) in 71111 Waldenbuch in Geringfügigkeit (Minijob)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV356861DEEUEXTERNAL/Verk%C3%A4ufer-Postfiliale-m-w-d-in-71111-Waldenbuch-in-Geringf%C3%BCgigkeit-Minijob) · Waldenbuch Baden-Württemberg DE · seit 2026-11-21
+- [Verkäufer Postfiliale (m/w/d) in 71686 Remseck-Hochdorf in Geringfügigkeit (Minijob)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348617DEEUEXTERNAL/Verk%C3%A4ufer-Postfiliale-m-w-d-in-71686-Remseck-Hochdorf-in-Geringf%C3%BCgigkeit-Minijob) · Remseck am Neckar Baden-Württemberg DE · seit 2026-11-21
+- [WerkstudentIn | Studentische Aushilfe (w/m/d) Weitere Infos](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV392499DEEUEXTERNAL/WerkstudentIn-Studentische-Aushilfe-w-m-d-Weitere-Infos) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
 
 ### Diakonie Stetten e. V.
 
@@ -678,6 +774,10 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [Logistikmeister (m/w/d)](https://judo.eu/Stellenanzeige/logistikmeister-m-w-d) · Backnang-Waldrems · seit 2026-11-08
 - [Mitarbeiter (m/w/d) Vertriebsinnendienst Export](https://judo.eu/Stellenanzeige/mitarbeiter-m-w-d-vertriebsinnendienst-export-zollbeauftragter) · in Winnenden suchen wir · seit 2026-11-08
 
+### Kaufland Dienstleistung GmbH & Co. KG
+
+- [Sachbearbeiter Kaufmännisches Facility Management Vermietung (m/w/d)](https://jobs.kaufland.de/jobs/sachbearbeiter-kaufmaennisches-facility-management-vermietung-m-w-d-neckarsulm-413618) · 74172 Neckarsulm DE · seit 2026-11-21
+
 ### Kaufland Dienstleistung Ost GmbH & Co.KG
 
 - [Kaufmännischer Mitarbeiter / Sachbearbeiter Lager (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-sachbearbeiter-lager-m-w-d-luebbenau-spreewald-412646) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
@@ -917,12 +1017,39 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [Vertiefungspraktikum Organisation, Personal, Informationsverarbeitung](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P50) · 71332 Waiblingen DE · seit 2026-11-08
 - [Vertiefungspraktikum Wirtschaft und Finanzen](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P53) · 71332 Waiblingen DE · seit 2026-11-08
 
+### Lidl Dienstleistung GmbH & Co. KG
+
+- [(Junior) Controller - Kunde (m/w/d)](https://jobs.lidl.de/jobs/junior-controller-kunde-m-w-d-bad-wimpfen-770235) · 74206 Bad Wimpfen DE · seit 2026-11-21
+
+### Lidl GmbH & Co. KG (Kerpen)
+
+- [Staplerfahrer im Logistikzentrum (m/w/d)](https://jobs.lidl.de/jobs/staplerfahrer-im-logistikzentrum-m-w-d-kerpen-769835) · 50169 Kerpen DE · seit 2026-11-21
+
+### Lidl Immobilien Dienstleistung GmbH & Co. KG
+
+- [Projektleiter - Technisches Facility Management (m/w/d)](https://jobs.lidl.de/jobs/projektleiter-technisches-facility-management-m-w-d-bad-wimpfen-752474) · 74206 Bad Wimpfen DE · seit 2026-11-21
+
 ### Lidl St. Ingbert Nord Vertriebs-GmbH & Co. KG
 
+- [Aushilfe Warenverräumung Minijob (m/w/d)](https://jobs.lidl.de/jobs/aushilfe-warenverraeumung-minijob-m-w-d-wadgassen-773118) · 66787 Wadgassen DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-grossrosseln-773120) · 66352 Großrosseln DE · seit 2026-11-21
 - [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-dillingen-772529) · 66763 Dillingen DE · seit 2026-11-21
 - [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-saarwellingen-772531) · 66793 Saarwellingen DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-wadgassen-773121) · 66787 Wadgassen DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-ueberherrn-773122) · 66802 Überherrn DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-salmtal-772585) · 54528 Salmtal DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-losheim-772538) · 66679 Losheim DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-trier-772600) · 54294 Trier DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-trier-772592) · 54296 Trier DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-bous-773119) · 66359 Bous DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-schweich-772595) · 54338 Schweich DE · seit 2026-11-21
 - [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-merzig-772535) · 66663 Merzig DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-trier-772581) · 54292 Trier DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-saarwellingen-773327) · 66793 Saarwellingen DE · seit 2026-11-21
+
+### Lidl St. Ingbert Süd Vertriebs-GmbH & Co. KG
+
+- [Reinigungskraft in der Filiale Minijob (m/w/d)](https://jobs.lidl.de/jobs/reinigungskraft-in-der-filiale-minijob-m-w-d-st.-wendel-771546) · 66606 St. Wendel DE · seit 2026-11-21
 
 ### Lidl Vertriebs-GmbH & Co. KG, Anzing Ost
 
@@ -942,6 +1069,10 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-767891) · 76149 Karlsruhe DE · seit 2026-11-21
 - [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-illingen-759674) · 75428 Illingen DE · seit 2026-11-21
 - [Schülerjob im Verkauf Minijob (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-minijob-m-w-d-karlsruhe-739018) · 76149 Karlsruhe DE · seit 2026-11-21
+- [Schülerjob im Verkauf Minijob (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-minijob-m-w-d-eggenstein-761206) · 76344 Eggenstein DE · seit 2026-11-21
+- [Schülerjob im Verkauf Minijob (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-minijob-m-w-d-stutensee-739019) · 76297 Stutensee DE · seit 2026-11-21
+- [Schülerjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-teilzeit-m-w-d-karlsruhe-739017) · 76149 Karlsruhe DE · seit 2026-11-21
+- [Schülerjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-teilzeit-m-w-d-eggenstein-761205) · 76344 Eggenstein DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-karlsruhe-716341) · 76135 Karlsruhe DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-karlsruhe-747504) · 76137 Karlsruhe DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-kraichtal-725952) · 76703 Kraichtal DE · seit 2026-11-21
@@ -954,6 +1085,7 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-gernsbach-706100) · 76593 Gernsbach DE · seit 2026-11-21
 - [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-korntal-muenchingen-752691) · 70825 Korntal-Münchingen DE · seit 2026-11-21
 - [Schülerjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-teilzeit-m-w-d-neuhausen-761063) · 75242 Neuhausen DE · seit 2026-11-21
+- [Schülerjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-teilzeit-m-w-d-renningen-761065) · 71272 Renningen DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-rheinau-731267) · 77866 Rheinau DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-sindelfingen-738928) · 71063 Sindelfingen DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-sindelfingen-688786) · 71065 Sindelfingen DE · seit 2026-11-21
@@ -963,6 +1095,12 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-herrenberg-770411) · 71083 Herrenberg DE · seit 2026-11-21
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-boeblingen-738934) · 71032 Böblingen DE · seit 2026-11-21
 
+### Lidl Vertriebs-GmbH & Co. KG, Erlensee Nord
+
+- [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-seligenstadt-773900) · 63500 Seligenstadt DE · seit 2026-11-21
+- [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-hanau-773901) · 63456 Hanau DE · seit 2026-11-21
+- [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-obertshausen-773898) · 63179 Obertshausen DE · seit 2026-11-21
+
 ### Lidl Vertriebs-GmbH & Co. KG, Erlensee Süd
 
 - [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-grossostheim-712816) · 63762 Großostheim DE · seit 2026-11-21
@@ -971,10 +1109,25 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 
 - [Abiturientenprogramm Vertrieb inkl. Handelsfachwirt 2027 (m/w/d)](https://jobs.lidl.de/jobs/abiturientenprogramm-vertrieb-inkl.-handelsfachwirt-2027-m-w-d-neuss-753961) · 41469 Neuss DE · seit 2026-11-21
 
+### Lidl Vertriebs-GmbH & Co. KG, Herne Süd
+
+- [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-essen-773835) · 45355 Essen DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Kerpen Süd
+
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-weilerswist-768962) · 53919 Weilerswist DE · seit 2026-11-21
+- [Stellvertretender Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/stellvertretender-filialleiter-m-w-d-weilerswist-768963) · 53919 Weilerswist DE · seit 2026-11-21
+- [Stellvertretender Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/stellvertretender-filialleiter-m-w-d-bornheim-765202) · 53332 Bornheim DE · seit 2026-11-21
+- [Stellvertretender Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/stellvertretender-filialleiter-m-w-d-wesseling-765204) · 50389 Wesseling DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-wesseling-765216) · 50389 Wesseling DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-wesseling-765207) · 50389 Wesseling DE · seit 2026-11-21
+- [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-bruehl-765209) · 50321 Brühl DE · seit 2026-11-21
+
 ### Lidl Vertriebs-GmbH & Co. KG, KRE 2
 
 - [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-761325) · 10117 Berlin DE · seit 2026-11-21
 - [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767176) · 13158 Berlin DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767174) · 13089 Berlin DE · seit 2026-11-21
 - [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767171) · 13086 Berlin DE · seit 2026-11-21
 - [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-761327) · 10117 Berlin DE · seit 2026-11-21
 - [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767168) · 10409 Berlin DE · seit 2026-11-21
@@ -1288,6 +1441,7 @@ Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 - [Mitarbeiter (m/w/d) für die Zustellung der Tageszeitungen in Backnang und Teilorte](https://rems-murr-jobs.de/job/mitarbeiter-mwd-fuer-die-zustellung-der-tageszeitungen-backnang-und-teilorte-1810995) · 71522 Backnang Baden-Württemberg DE · seit 2026-11-17
 - [Mitarbeiter (m/w/d) für die Zustellung der Tageszeitungen in Kernen-Rommelshausen](https://rems-murr-jobs.de/job/mitarbeiter-mwd-fuer-die-zustellung-der-tageszeitungen-kernen-rommelshausen-1334608) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-21
 - [Mitarbeiter (m/w/d) für die Zustellung der Tageszeitungen in Kernen-Stetten](https://rems-murr-jobs.de/job/mitarbeiter-mwd-fuer-die-zustellung-der-tageszeitungen-kernen-stetten-1811051) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-17
+- [Mitarbeiter (m/w/d) zur Verteilung der Wochenblätter in Waiblingen-Neustadt gesucht](https://rems-murr-jobs.de/job/mitarbeiter-mwd-zur-verteilung-der-wochenblaetter-waiblingen-neustadt-gesucht-1810223) · 71336 Waiblingen Baden-Württemberg DE · seit 2026-11-21
 - [Mitarbeiter (m/w/d) zur Wochenblattverteilung in Winterbach gesucht](https://rems-murr-jobs.de/job/mitarbeiter-mwd-zur-wochenblattverteilung-winterbach-gesucht-1197433) · 73650 Winterbach Baden-Württemberg DE · seit 2026-11-21
 - [Mitarbeiter (m/w/d) zur Wochenblattzustellung in Strümpfelbach gesucht](https://rems-murr-jobs.de/job/mitarbeiter-mwd-zur-wochenblattzustellung-struempfelbach-gesucht-1807206) · 71384 Weinstadt Baden-Württemberg DE · seit 2026-11-17
 
