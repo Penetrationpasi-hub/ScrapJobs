@@ -480,6 +480,11 @@ class CatalogConfigTest(unittest.TestCase):
         self.assertIn("Stuttgart", configured["mahle"].catalog_locations)
         self.assertEqual(configured["stihl"].catalog_locations, ())
 
+    def test_phenom_portals_use_regional_places(self):
+        configured = registry()
+        self.assertEqual(configured["catalent"].catalog_locations, ("Schorndorf",))
+        self.assertIn("Stuttgart", configured["deutsche_post"].catalog_locations)
+
     def test_location_is_substituted_into_the_search_url(self):
         source = registry()["kaercher"]
         self.assertIn("locationsearch=Winnenden", source.start("", "Winnenden"))

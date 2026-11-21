@@ -239,7 +239,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
                 if "urls" in report:
                     parts.append(f"{report['urls']} Adressen gelesen, {report.get('matched', 0)} passend")
                 parts.append(f"{report.get('filtered', 0)} verworfen")
-                detail = "0 Stellen: " + ", ".join(parts)
+                detail = "0 Stellen: " + ", ".join(parts) + (f" · {report['detail']}" if report.get("detail") else "")
             else:
                 detail = None
         else:
