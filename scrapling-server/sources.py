@@ -67,7 +67,7 @@ EMPLOYERS = (
 # Boards with a robots.txt crawl delay of 10 s: each one runs alone in its own group.
 ISOLATED_SOURCES = ("rems_murr_jobs", "bluum_bw", "zvw")  # zvw reads its ads from rems-murr-jobs.de
 # Aggregators are only searched when approved explicitly, never via the "employers" group.
-AGGREGATOR_SOURCES = ("jobsuche_bw",)
+AGGREGATOR_SOURCES = ("jobsuche_bw", "trabajo")
 
 
 # Persy job exchanges (public widget API of germanpersonnel.de): source key -> job exchange token
@@ -127,7 +127,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap", "trabajo_search"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)
@@ -167,6 +167,9 @@ def registry() -> dict[str, Source]:
         if source.adapter == "kaufland_sitemap" and (source.key != "kaufland" or source.hosts != ("jobs.kaufland.de",)
                 or source.api != "https://jobs.kaufland.de/sitemap-jobs.xml"):
             raise ValueError("Kaufland reader is bound to the public job sitemap of jobs.kaufland.de")
+        if source.adapter == "trabajo_search" and (source.key != "trabajo" or source.hosts != ("de.trabajo.org",)
+                or source.search != "https://de.trabajo.org/stellenangebote" or source.api):
+            raise ValueError("Trabajo reader is bound to the public German search of de.trabajo.org")
         if source.adapter == "persy_exchange" and (source.key not in PERSY_EXCHANGES or source.api != persy_base(source.key)
                 or source.search != source.api or source.hosts != ("www.germanpersonnel.de", "www.persy.jobs")):
             raise ValueError("Persy reader is bound to the known job exchanges (gpm, liebert)")

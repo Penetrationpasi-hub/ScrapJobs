@@ -40,10 +40,17 @@ festgelegten Hosts, DNS-/IP-Prüfung, Größen- und Zeitgrenzen, kein JavaScript
 ## Welche Quellen
 
 Alle konfigurierten Arbeitgeber aus `scrapling-server/employers.json` und `sources.py`.
-Standardmäßig **ausgeschlossen**: Indeed, StepStone, bluum BW und jobsucheBW
+Standardmäßig **ausgeschlossen**: Indeed, StepStone, bluum BW, jobsucheBW und Trabajo.org
 (bundesweite Börsen, ohne Suchbegriff nur Rauschen) sowie die zwei deaktivierten Profile
 (Signalhorn, BKZ). Änderbar über `SCRAPJOBS_EXCLUDE` (ersetzt die Liste) oder
 `SCRAPJOBS_SOURCES` (nur diese Quellen), lokal und im Workflow-Dialog.
+
+**Trabajo.org** (`trabajo`) ist eine bundesweite Börse mit serverseitig gerenderter Suche
+(`/stellenangebote-<begriff>/<ort>`, weitere Seiten über `?page=N`). Der Adapter liest den Ort je Treffer
+und ruft nur Anzeigen im Umkreis einzeln ab; der Umkreis wird nochmals an der verifizierten
+JobPosting-Adresse geprüft. Arbeitgeber ist der echte Inserent, nicht Trabajo. Wie jobsucheBW nur mit
+ausdrücklicher Freigabe (`SCRAPJOBS_SOURCES=trabajo` bzw. `SCRAPLING_APPROVED_SOURCES`), nie über die
+Gruppe `employers`.
 
 Rems-Murr-JOBS und ZVW haben 10 s Crawl-Delay und laufen zuletzt.
 

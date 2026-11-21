@@ -343,6 +343,9 @@ def adapter_jobs(source, req, get, report):
     elif source.adapter in ("lidl_sitemap", "kaufland_sitemap"):
         from lidl_adapter import lidl
         yield from lidl(source, req, get, report)
+    elif source.adapter == "trabajo_search":
+        from trabajo_adapter import trabajo
+        yield from trabajo(source, req, get, report)
     elif source.adapter == "persona_sitemap":
         from persona_adapter import persona
         yield from persona(source, req, get, report)
