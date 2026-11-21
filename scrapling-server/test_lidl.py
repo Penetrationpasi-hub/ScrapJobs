@@ -133,7 +133,7 @@ class LidlTest(unittest.TestCase):
         self.assertIn("Anzeigen im Sitemap", result["sources"][0]["detail"])
 
     def test_only_the_configured_number_of_details_is_fetched(self):
-        many = "".join(block(f"{BASE}verkaeufer-m-w-d-waiblingen-{760000 + n}") for n in range(30))
+        many = "".join(block(f"{BASE}verkaeufer-m-w-d-waiblingen-{760000 + n}") for n in range(70))
         sitemap = SITEMAP.replace("</urlset>", many + "</urlset>")
         with mock.patch.object(__import__("test_lidl"), "SITEMAP", sitemap):
             run(location="Waiblingen")

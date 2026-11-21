@@ -182,7 +182,7 @@ Suche läuft per JavaScript. `lidl_adapter.py` liest deshalb die in der robots.t
 Anzeigen, 2,4 MB; `Transport.get(accept_xml=True, max_body=6 MiB)`) mit URLs `/jobs/<titel>-m-w-d-<ort>-<id>`. Titel und
 Ort werden am Geschlechtsmarker getrennt (fehlt er, liegt der Ort in den letzten 1–3 Wörtern des Titels; mehrwortige Orte
 löst `geo.py` auf). Gewählt werden Treffer nach Titelwörtern und Entfernung (unbekannte Orte hinten, neueste zuerst);
-nur die nächsten 10 Einzelanzeigen werden abgerufen und wie jedes JobPosting geprüft (Arbeitgeber „Lidl Vertriebs-GmbH &
+nur die nächsten 50 Einzelanzeigen werden abgerufen (Dokument-Budget und 30-Treffer-Grenze eines Laufs gelten weiter) und wie jedes JobPosting geprüft (Arbeitgeber „Lidl Vertriebs-GmbH &
 Co. KG, <Regionalgesellschaft>“, PLZ und Koordinaten). Die genaue Umkreisprüfung macht danach die App. Beispiel gegen die
 echte Sitemap: „Verkäufer“, Waiblingen, 25 km → 359 Treffer, „Filialleiter“ → 98. robots.txt sperrt nur `/cps/`, kein
 `Crawl-delay`. Der Leser ist in `sources.py` fest an diese Sitemap gebunden. Ein Live-Lauf aus Render steht aus.
