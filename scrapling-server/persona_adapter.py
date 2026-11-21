@@ -26,7 +26,7 @@ GENDER = re.compile(r"-(?:m-w-d|w-m-d|m-f-d|f-m-d|m-w-x)(?=-|$)")
 def entries(text):
     """(Titelteil, Ortsteil, URL, Änderungsdatum) je Anzeige; Anzeigen anderer Sprachen und Bereiche zählen nicht."""
     if "<urlset" not in text[:2000]:
-        raise FetchError("unsupported", detail="Kein Sitemap")
+        raise FetchError("unsupported", detail="Kein Sitemap: " + " ".join(text[:80].split()))
     rows = []
     for block in ENTRY.findall(text):
         match = LOC.search(block)

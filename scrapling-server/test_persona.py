@@ -210,6 +210,16 @@ class LargeXmlTransportTest(unittest.TestCase):
         self.assertEqual(caught.exception.code, "too_large")
         self.assertGreater(len(self.fetch(size, max_body=MAX_SITEMAP)), size)
 
+    def test_explicit_xml_limit_survives_a_raised_default_limit(self):
+        # batch.py raises safe_http.MAX_BODY to 8 MB; the 6 MB sitemap limit must still be accepted (regression).
+        import safe_http
+        old, safe_http.MAX_BODY = safe_http.MAX_BODY, 8 * 1024 * 1024
+        try:
+            size = 5 * 1024 * 1024
+            self.assertGreater(len(self.fetch(size, max_body=MAX_SITEMAP)), size)
+        finally:
+            safe_http.MAX_BODY = old
+
     def test_the_limit_stays_bounded_and_xml_only(self):
         with self.assertRaises(FetchError) as caught:
             self.fetch(10, max_body=9 * 1024 * 1024)
