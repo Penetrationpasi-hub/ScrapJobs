@@ -37,6 +37,21 @@ class RemsMurrTest(unittest.TestCase):
         self.assertTrue(job["description"].endswith(" …"))
         self.assertIsNone(extract(self.html, "https://rems-murr-jobs.de/jobs/produktion/backnang", source, "Produktion"))
 
+    def test_teaser_places_skip_far_ads_and_pager_of_the_observed_jobiqo_list(self):
+        import geo
+
+        def teaser(number, place):
+            return (f'<div data-test-id="job-teaser-{number} "><a href="/job/elektriker-mwd-{number}">Elektriker</a>'
+                    f'<div data-testid="jcl-job-teaser-location"><span>location</span><span>{place}</span></div></div>')
+        html = (teaser(1, "71 Leutenbach, Deutschland") + teaser(2, "Kirchhofstraße 4, 73614 Schorndorf, Deutschland")
+                + teaser(3, "Beinstein, 71334 Waiblingen, Deutschland") + teaser(4, "04103 Leipzig, Deutschland")
+                + '<a data-testid="pager_next" href="https://rems-murr-jobs.de/jobs?search=Elektriker&amp;page=2">Weiter</a>')
+        origin = geo.center("Backnang")
+        links, following = discovery(html, self.source.search, self.source, "Elektriker",
+                                     lambda place: geo.in_range(origin, place, 18))
+        self.assertEqual(sorted(link.rsplit("-", 1)[1] for link in links), ["1", "3"])
+        self.assertEqual(following, "https://rems-murr-jobs.de/jobs?search=Elektriker&page=2")
+
     def test_explicit_board_approval_and_separate_worker_group(self):
         from main import Search
         with patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "employers"}):

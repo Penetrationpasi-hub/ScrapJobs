@@ -35,10 +35,21 @@ def data():
         points = [plz[code] for code in codes.split(" ") if code in plz]
         if not points:
             continue
-        ort = {"name": name, "population": int(population or 0), "points": points}
+        ort = {"name": name, "population": int(population or 0), "points": points, "codes": codes.split(" ")}
         for key in {norm(name), norm(rest[0] if rest and rest[0] else name)}:
             by_key.setdefault(key, []).append(ort)
     return plz, by_key
+
+
+def name_for_postcode(code):
+    """Größter Ort mit dieser Postleitzahl, None wenn unbekannt."""
+    _, by_key = data()
+    best = None
+    for orte in by_key.values():
+        for ort in orte:
+            if code in ort["codes"] and (best is None or ort["population"] > best["population"]):
+                best = ort
+    return best["name"] if best else None
 
 
 def km(a, b):
@@ -83,6 +94,9 @@ def distance_km(origin, place_text):
             candidates = []
             for part in re.split(r"[,/]|\s[-–]\s", site):
                 words = part.strip().split()
+                # Gekürzte Postleitzahlen in Teasern („71 Leutenbach“) sind kein Ortsname.
+                while words and re.fullmatch(r"\d{1,4}", words[0]):
+                    words.pop(0)
                 while words and norm(words[-1]) in REGION_WORDS:
                     words.pop()
                 joined = " ".join(words)

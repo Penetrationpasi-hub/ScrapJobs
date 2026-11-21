@@ -1,6 +1,6 @@
 """Personio-Karriereseiten: der öffentliche Stellenfeed `https://<mandant>.jobs.personio.de/xml`.
 
-Gelesen werden nur Titel, Firma (subcompany), Standort, Datum und ID, die Beschreibungen werden verworfen.
+Gelesen werden nur Titel, Firma (subcompany; fehlt sie im Feed eines Ein-Firmen-Mandanten, gilt der Quellenname), Standort, Datum und ID, die Beschreibungen werden verworfen.
 Die Anzeigen-URL ist die öffentliche Seite `https://<mandant>.jobs.personio.de/job/<id>`. Jede Stelle läuft
 durch dieselbe Prüfung wie ein JobPosting (Host, Linkmuster, Titel, Arbeitgeber, Initiativbewerbungen).
 """
@@ -47,7 +47,7 @@ def personio(source, req, get, report):
             report["filtered"] += 1
             continue
         url = f"https://{host}/job/{row['id']}"
-        data = {"@type": "JobPosting", "title": row["title"], "hiringOrganization": {"name": row["company"]},
+        data = {"@type": "JobPosting", "title": row["title"], "hiringOrganization": {"name": row["company"] or source.label},
                 "url": url, "datePosted": row["posted"],
                 "jobLocation": {"address": {"addressLocality": row["place"]}} if row["place"] else []}
         safe = json.dumps(data).replace("<", "\\u003c")

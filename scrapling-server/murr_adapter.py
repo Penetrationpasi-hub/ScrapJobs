@@ -44,6 +44,24 @@ def _organization(page):
     return ""
 
 
+def _work_address(page):
+    """Ort aus dem Block "Ihr Arbeitsort" (Straße <br> PLZ Ort <br> Land); sonst leer."""
+    for heading in page.css("h3"):
+        if plain(" ".join(heading.css("::text").getall())).lower() != "ihr arbeitsort":
+            continue
+        block = heading.xpath("following-sibling::p[1]")
+        lines = [plain(line) for line in block.css("::text").getall()] if block else []
+        for index, line in enumerate(lines):
+            match = re.fullmatch(r"(\d{5})\s+([A-ZÄÖÜ][^\d]{1,60})", line)
+            if match:
+                address = {"postalCode": match[1], "addressLocality": match[2].strip()}
+                country = lines[index + 1] if index + 1 < len(lines) else ""
+                if country and re.fullmatch(r"[A-Za-zÄÖÜäöüß .-]{2,40}", country):
+                    address["addressCountry"] = country
+                return address
+    return None
+
+
 def murr(source, req, get, report):
     final, html = get(source.search, source)
     if canonical(final) != canonical(source.search):
@@ -72,11 +90,15 @@ def murr(source, req, get, report):
             report["filtered"] += 1
             continue
         meta = " ".join(page.css('meta[name="description"]::attr(content)').getall())
-        place = re.search(r"Standort in ([A-ZÄÖÜ][\wäöüß-]+)", meta)
         row = {"title": plain(headings[0].get()), "hiringOrganization": {"name": company},
                "description": description, "url": canonical(target)}
-        if place:
-            row["jobLocation"] = {"address": {"addressLocality": place[1]}}
+        address = _work_address(page)
+        if address:
+            row["jobLocation"] = {"address": address}
+        else:
+            place = re.search(r"Standort in ([A-ZÄÖÜ][\wäöüß-]+)", meta)
+            if place:
+                row["jobLocation"] = {"address": {"addressLocality": place[1]}}
         job = from_record(row, canonical(target), source, req.q)
         if job:
             yield job

@@ -6,6 +6,7 @@ from urllib.parse import urlsplit
 from urllib.robotparser import RobotFileParser
 
 import geo
+import jobsuche_bw
 from scrapling import Selector
 from extraction import discovery, entries, extract, is_detail, plain
 from safe_http import Budget, FetchError, Transport, USER_AGENT, RUN_SECONDS
@@ -137,6 +138,11 @@ def crawl(req, transport_factory=Transport):
             near = None
             if source.teaser and req.location and (origin := geo.center(req.location)):
                 near = lambda place: geo.in_range(origin, place, req.radius_km)
+            # jobsucheBW: Umkreis schon in der Portalsuche; ohne auflösbaren Ort zählen die Listenkoordinaten.
+            listing_origin = None
+            if key == "jobsuche_bw":
+                start, listing_origin = jobsuche_bw.plan(req, source, allowed_get, report)
+                next_url = start
             for _ in range(getattr(req, "max_pages", source.max_pages)):
                 if not next_url or next_url in visited:
                     break
@@ -147,6 +153,9 @@ def crawl(req, transport_factory=Transport):
                         report["status"] = "no_matches"
                     break
                 links, following = discovery(html, final, source, req.q, near)
+                if listing_origin is not None:
+                    links, outside = jobsuche_bw.keep(links, html, listing_origin, req.radius_km)
+                    report["outside"] = report.get("outside", 0) + outside
                 if not links and "detail" not in report:
                     # Diagnose für leere Listen: was die Seite tatsächlich geliefert hat (z. B. JavaScript-Hülle).
                     count = len(Selector(html).css("a[href]"))

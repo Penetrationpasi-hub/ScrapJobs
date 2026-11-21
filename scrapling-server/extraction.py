@@ -220,8 +220,13 @@ def extract(html, raw, source, q="", now=None, why=None):
     if source.company_pattern and not re.search(source.company_pattern, company, re.I):
         return no("Firma passt nicht zum Muster")
     # Search pages can ignore search terms; keep query relevance grounded in extracted text.
-    if q and not any(word in norm(title + " " + (description or "")) for word in norm(q).split()):
-        return no("Suchbegriff fehlt")
+    # Im Titel zählt der Wortanfang (Elektro -> Elektroniker); in der Beschreibung nur ganze Wörter, sonst
+    # treffen "Elektro" auch "Elektronische Patientenakte" oder "Elektrokonvulsionstherapie".
+    if q:
+        words = [re.escape(word) for word in norm(q).split()]
+        title_text, body_text = norm(title), norm(description or "")
+        if not any(re.search(r"(?<!\w)" + word, title_text) or re.search(r"(?<!\w)" + word + r"(?!\w)", body_text) for word in words):
+            return no("Suchbegriff fehlt")
     url = canonical(raw)
     if source.key in {"rems_murr_jobs", "zvw"} and description and len(description) > 480:
         description = description[:480].rsplit(" ", 1)[0] + " …"

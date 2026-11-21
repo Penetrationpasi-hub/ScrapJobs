@@ -2,6 +2,7 @@
 import http.client
 import ipaddress
 import json
+import re
 import socket
 import ssl
 import threading
@@ -10,7 +11,16 @@ import zlib
 from urllib.parse import urljoin, urlsplit
 
 MAX_BODY = 2 * 1024 * 1024
+# Larger answers are only allowed for XML documents such as a sitemap (see `max_body` in Transport.get).
+MAX_XML_BODY = 8 * 1024 * 1024
+# A single, server-owned list page that carries all ads inline (see `large_page` in Transport.get).
+MAX_LARGE_PAGE = 6 * 1024 * 1024
 USER_AGENT = "NaechsterSchrittScrapling/1.0"
+# Opt-in session for server-owned adapters (e.g. Phenom's search widget needs a CSRF token plus the session cookie).
+EXTRA_HEADERS = {"X-CSRF-Token", "Referer", "Origin"}
+COOKIE_NAME = re.compile(r"[A-Za-z0-9_.-]{1,64}")
+COOKIE_VALUE = re.compile(r"[A-Za-z0-9._~+/=%:-]{0,512}")
+MAX_COOKIES = 20
 
 
 class FetchError(Exception):
@@ -78,15 +88,47 @@ class PinnedHTTPS(http.client.HTTPSConnection):
             raise
 
 
+def store_cookies(jar, response):
+    """Keep only plain name=value pairs from Set-Cookie (no attributes, no foreign hosts: the jar belongs to one call chain)."""
+    try:
+        lines = response.msg.get_all("Set-Cookie") or []
+    except AttributeError:
+        one = response.getheader("Set-Cookie")
+        lines = [one] if one else []
+    for line in lines:
+        pair = str(line).split(";", 1)[0]
+        name, _, value = pair.partition("=")
+        name, value = name.strip(), value.strip()
+        if COOKIE_NAME.fullmatch(name) and COOKIE_VALUE.fullmatch(value) and (name in jar or len(jar) < MAX_COOKIES):
+            jar[name] = value
+
+
 class Transport:
     def __init__(self, budget, resolve=socket.getaddrinfo, connection=PinnedHTTPS):
         self.budget, self.resolve, self.connection = budget, resolve, connection
         self.last = {}
 
     def get(self, raw, hosts, authorize=None, *, json_body=None, accept_json=False, accept_javascript=False,
-            robots_request=False, json_api=False, accept_xml=False):
+            robots_request=False, json_api=False, accept_xml=False, max_body=None, large_page=False,
+            cookies=None, extra_headers=None):
         if accept_xml and (accept_json or accept_javascript or json_api or robots_request or json_body is not None):
             raise FetchError("unsupported")
+        limit = MAX_BODY
+        if large_page:
+            if accept_xml or accept_json or accept_javascript or json_api or robots_request or json_body is not None or max_body is not None:
+                raise FetchError("unsupported")
+            limit = MAX_LARGE_PAGE
+        if max_body is not None:
+            if not accept_xml or not MAX_BODY < max_body <= MAX_XML_BODY:
+                raise FetchError("unsupported")
+            limit = max_body
+        if cookies is not None and (not isinstance(cookies, dict) or accept_xml or robots_request):
+            raise FetchError("unsupported")
+        if extra_headers is not None:
+            if (not isinstance(extra_headers, dict) or accept_xml or robots_request or any(
+                    name not in EXTRA_HEADERS or not isinstance(value, str) or not 0 < len(value) <= 512
+                    or re.search(r"[\x00-\x1f\x7f]", value) for name, value in extra_headers.items())):
+                raise FetchError("unsupported")
         if json_api and (not accept_json or json_body is not None):
             raise FetchError("unsupported")
         if accept_javascript and (accept_json or json_body is not None):
@@ -126,10 +168,16 @@ class Transport:
                     headers["Accept"] = "application/vnd.api+json"
                 if payload is not None:
                     headers["Content-Type"] = "application/json"
+                if extra_headers:
+                    headers.update(extra_headers)
+                if cookies:
+                    headers["Cookie"] = "; ".join(f"{name}={value}" for name, value in cookies.items())
                 connection.request("POST" if payload is not None else "GET",
                                    url.path + ("?" + url.query if url.query else ""),
                                    body=payload, headers=headers)
                 response = connection.getresponse()
+                if cookies is not None:
+                    store_cookies(cookies, response)
                 if response.status in (301, 302, 303, 307, 308):
                     # Do not forward a search POST or API request to a redirect.
                     # HTML redirects retain the existing pinned/robots checks.
@@ -166,18 +214,18 @@ class Transport:
                     if not chunk:
                         break
                     size += len(chunk)
-                    if size > MAX_BODY:
-                        raise FetchError("too_large")
+                    if size > limit:
+                        raise FetchError("too_large", detail=f"mehr als {limit // 1024} KB (Limit)")
                     chunks.append(chunk)
                 body = b"".join(chunks)
                 if encoding == "gzip":
                     try:
                         unpacker = zlib.decompressobj(16 + zlib.MAX_WBITS)
-                        body = unpacker.decompress(body, MAX_BODY + 1)
+                        body = unpacker.decompress(body, limit + 1)
                     except zlib.error:
                         raise FetchError("unsupported", detail="gzip fehlerhaft") from None
-                    if len(body) > MAX_BODY or unpacker.unconsumed_tail:
-                        raise FetchError("too_large")
+                    if len(body) > limit or unpacker.unconsumed_tail:
+                        raise FetchError("too_large", detail=f"entpackt mehr als {limit // 1024} KB (Limit)")
                 return current, body.decode("utf-8", errors="replace")
             except (OSError, http.client.HTTPException) as error:
                 raise FetchError("timeout" if time.monotonic() >= self.budget.deadline else "network_error",
