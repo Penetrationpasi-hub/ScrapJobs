@@ -177,6 +177,17 @@ geprüft (Startseite, Kategorieseite, Suche, zwei Einzelanzeigen); `robots.txt` 
 außerhalb des Workers gelesen, ein Live-Lauf aus Render steht aus. Aggregator: nur ausdrücklich
 per `jobsuche_bw` freigeben, nicht über die Gruppe `employers` (`AGGREGATOR_SOURCES` in `sources.py`).
 
+**Lidl (`lidl`):** `jobs.lidl.de` ist eine Single-Page-App: Startseite und `/suche` enthalten keine Anzeigenlinks, die
+Suche läuft per JavaScript. `lidl_adapter.py` liest deshalb die in der robots.txt genannte `sitemap-jobs.xml` (rund 15 000
+Anzeigen, 2,4 MB; `Transport.get(accept_xml=True, max_body=6 MiB)`) mit URLs `/jobs/<titel>-m-w-d-<ort>-<id>`. Titel und
+Ort werden am Geschlechtsmarker getrennt (fehlt er, liegt der Ort in den letzten 1–3 Wörtern des Titels; mehrwortige Orte
+löst `geo.py` auf). Gewählt werden Treffer nach Titelwörtern und Entfernung (unbekannte Orte hinten, neueste zuerst);
+nur die nächsten 10 Einzelanzeigen werden abgerufen und wie jedes JobPosting geprüft (Arbeitgeber „Lidl Vertriebs-GmbH &
+Co. KG, <Regionalgesellschaft>“, PLZ und Koordinaten). Die genaue Umkreisprüfung macht danach die App. Beispiel gegen die
+echte Sitemap: „Verkäufer“, Waiblingen, 25 km → 359 Treffer, „Filialleiter“ → 98. robots.txt sperrt nur `/cps/`, kein
+`Crawl-delay`. Der Leser ist in `sources.py` fest an diese Sitemap gebunden. Ein Live-Lauf aus Render steht aus.
+
+
 **Zeitungsverlag Waiblingen (`zvw`):** `karriere.zvw.de/stellenangebote/` ist eine
 WordPress-Seite ohne eigenes Bewerbersystem; ihre Anzeigen sind feste Links auf
 `rems-murr-jobs.de/job/…`. Der Eintrag liest diese Übersicht und übernimmt nur
