@@ -113,7 +113,7 @@ def registry() -> dict[str, Source]:
         if not source.detail:
             raise ValueError("Detail-page matcher required")
         re.compile(source.detail)
-        if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= 10):
+        if not (1 <= source.max_pages <= 3 and 1 <= source.max_details <= (50 if source.adapter == "lidl_sitemap" else 10)):
             raise ValueError("Page and detail limits must stay within the global caps")
         if source.catalog_locations and (
                 "{location}" not in source.search or len(source.catalog_locations) > 8
