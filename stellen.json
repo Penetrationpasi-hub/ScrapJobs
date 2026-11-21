@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-21T09:03:36+00:00",
+ "aktualisiert": "2026-11-21T10:25:03+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -37,7 +37,7 @@
    "label": "MAHLE / MAHLE Aftermarket",
    "status": "done",
    "letzterErfolg": "2026-11-21",
-   "anzahl": 60
+   "anzahl": 61
   },
   {
    "key": "diakonie_stetten",
@@ -98,16 +98,15 @@
   {
    "key": "tesat",
    "label": "TESAT-Spacecom",
-   "status": "robots_unavailable",
-   "letzterErfolg": "2026-11-20",
-   "detail": "upstream_error HTTP 503 (auch nach 2 Wiederholungen)",
+   "status": "done",
+   "letzterErfolg": "2026-11-21",
    "anzahl": 22
   },
   {
    "key": "airbus",
    "label": "Airbus (Stuttgart, Laupheim, Backnang)",
-   "status": "unsupported",
-   "letzterErfolg": "2026-11-20",
+   "status": "done",
+   "letzterErfolg": "2026-11-21",
    "anzahl": 10
   },
   {
@@ -222,10 +221,9 @@
   {
    "key": "tti",
    "label": "TTI / AEG / Milwaukee",
-   "status": "robots_unavailable",
-   "letzterErfolg": "2026-11-20",
-   "detail": "upstream_error HTTP 503 (auch nach 2 Wiederholungen)",
-   "anzahl": 27
+   "status": "done",
+   "letzterErfolg": "2026-11-21",
+   "anzahl": 26
   },
   {
    "key": "burger_schloz",
@@ -442,9 +440,24 @@
   {
    "key": "persona",
    "label": "persona service",
-   "status": "unsupported",
-   "letzterErfolg": null,
+   "status": "done",
+   "letzterErfolg": "2026-11-21",
+   "detail": "0 Stellen: 0 verworfen",
    "anzahl": 0
+  },
+  {
+   "key": "lidl",
+   "label": "Lidl",
+   "status": "done",
+   "letzterErfolg": "2026-11-21",
+   "anzahl": 50
+  },
+  {
+   "key": "kaufland",
+   "label": "Kaufland",
+   "status": "done",
+   "letzterErfolg": "2026-11-21",
+   "anzahl": 50
   },
   {
    "key": "gpm",
@@ -479,7 +492,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-584646748db5ffabd452a599",
@@ -491,7 +504,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-3867c9cc90920e9d310dfc38",
@@ -503,7 +516,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-d07b1ce648c6bdd028e1199c",
@@ -515,7 +528,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-d7b7c79b3fda2a916331e937",
@@ -539,7 +552,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-20",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-c9c926ac2228a2158dca67e5",
@@ -551,7 +564,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-ed3b9d38ac3cdf58fa89efb2",
@@ -563,7 +576,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-20",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-57ddf4877f638a49f995da26",
@@ -599,7 +612,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-7b2e2c2605aec51ebb5537cc",
@@ -611,7 +624,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-7c85926b034694862e4afb45",
@@ -623,7 +636,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-987b9bd570f5b33c3f3a9f36",
@@ -635,7 +648,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-c78a803cc78e9425389ba635",
@@ -647,7 +660,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-f4261e28a5ef26e9a0d36ad7",
@@ -659,7 +672,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-81e9f0bf2f566af9d960cf12",
@@ -671,7 +684,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-441879dabf9af3198af9150d",
@@ -683,7 +696,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-97fa50fd80ddacecc5a23e48",
@@ -695,7 +708,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-61910c7ecbc0ede86a05acef",
@@ -707,7 +720,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-29fdd0e8f252b43689042f14",
@@ -719,7 +732,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-46e1ba47de7eaef4bffc93c7",
@@ -731,7 +744,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-1d665b1d451f93cacb2e2592",
@@ -743,7 +756,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-95893385c3a1577a213fd6f7",
@@ -755,7 +768,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-79e00d99bc31efa28524f820",
@@ -767,7 +780,7 @@
    "source": "tesat",
    "sourceLabel": "TESAT-Spacecom",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-4dfcb5da0af3f471c161be0d",
@@ -779,7 +792,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-be14c542fe6ef9c94c8cf95f",
@@ -791,7 +804,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-b1771e4461c2cfdf64693fc1",
@@ -803,7 +816,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-c22434a0b602040d9c5c5764",
@@ -815,7 +828,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-a7d84c1b848834081e14faef",
@@ -827,7 +840,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-ef3dd5601a8b9e19847a02b2",
@@ -839,7 +852,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-08",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-e3c640a0b789e1022955e508",
@@ -851,7 +864,7 @@
    "source": "airbus",
    "sourceLabel": "Airbus (Stuttgart, Laupheim, Backnang)",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-bc3e3b36c23e8b9dbb2978a4",
@@ -6326,6 +6339,606 @@
    "zuletztGesehen": "2026-11-21"
   },
   {
+   "id": "scrapling-dff95b18a5d221adfcdcda7c",
+   "title": "Kaufmännischer Mitarbeiter / Sachbearbeiter Lager (m/w/d)",
+   "company": "Kaufland Dienstleistung Ost GmbH & Co.KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-sachbearbeiter-lager-m-w-d-luebbenau-spreewald-412646",
+   "posted": "2026-10-21",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-7edce6ec930f00fe9a6c97b3",
+   "title": "Mitarbeiter Reinigung (m/w/d)",
+   "company": "Kaufland Fleischwaren Heiligenstadt GmbH & Co.KG",
+   "location": "37308 Heilbad Heiligenstadt DE",
+   "url": "https://jobs.kaufland.de/jobs/mitarbeiter-reinigung-m-w-d-heilbad-heiligenstadt-413665",
+   "posted": "2026-11-20",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1a9865a5dcb9c2e5ef3ddd43",
+   "title": "Elektriker / Elektroniker / Mechatroniker Haustechnik (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/elektriker-elektroniker-mechatroniker-haustechnik-m-w-d-luebbenau-spreewald-387184",
+   "posted": "2025-06-10",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-f44dfc72f3f7c944ac4aac43",
+   "title": "Elektriker/ Elektroniker/ Mechatroniker Automatisierungstechnik (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/elektriker-elektroniker-mechatroniker-automatisierungstechnik-m-w-d-luebbenau-spreewald-387755",
+   "posted": "2025-06-27",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-86fb26b81458ded9751ac6e6",
+   "title": "Kaufmännischer Mitarbeiter 1st Level (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-1st-level-m-w-d-luebbenau-spreewald-410411",
+   "posted": "2026-09-16",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-db3235b1053dbdf02996cf39",
+   "title": "Kaufmännischer Mitarbeiter Lagersteuerung (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-lagersteuerung-m-w-d-luebbenau-spreewald-378252",
+   "posted": "2024-09-18",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-41bc58a612bd397c4ec35e90",
+   "title": "Kaufmännischer Mitarbeiter Wareneingang (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-wareneingang-m-w-d-luebbenau-spreewald-405822",
+   "posted": "2026-07-27",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-94482fbde6956e9c68ce63d9",
+   "title": "Kaufmännischer Mitarbeiter Warenkoordination (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-warenkoordination-m-w-d-luebbenau-spreewald-378253",
+   "posted": "2024-09-18",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-39d6fcdd50b8aa8d03410c80",
+   "title": "Schichtleiter Logistik (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/schichtleiter-logistik-m-w-d-luebbenau-spreewald-401942",
+   "posted": "2026-04-01",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-40ab510fc3e973a184653250",
+   "title": "Schülerpraktikant im Bereich Technik - Logistik (m/w/d)",
+   "company": "Kaufland Logistik VZ 2 GmbH & Co. KG",
+   "location": "03222 Lübbenau/Spreewald DE",
+   "url": "https://jobs.kaufland.de/jobs/schuelerpraktikant-im-bereich-technik-logistik-m-w-d-luebbenau-spreewald-399602",
+   "posted": "2026-02-05",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-cf8be89a217112bd0eed6f40",
+   "title": "Disponent Logistik (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/disponent-logistik-m-w-d-moeckmuehl-406365",
+   "posted": "2026-08-07",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-365c93dd25b3ceeee06125ed",
+   "title": "Gebäudetechniker Haustechnik (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/gebaeudetechniker-haustechnik-m-w-d-moeckmuehl-401390",
+   "posted": "2026-03-11",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-2594d753aed828ba2ecb5b1c",
+   "title": "Kaufmännischer Mitarbeiter Lagerleitstand (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-lagerleitstand-m-w-d-moeckmuehl-406366",
+   "posted": "2026-08-07",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-86f031cebf2275622b46df85",
+   "title": "Kaufmännischer Mitarbeiter Warenkoordination (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-warenkoordination-m-w-d-moeckmuehl-399822",
+   "posted": "2026-02-13",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-69862ebadb43cb0bd2718cff",
+   "title": "Komisjoner w dz. artykułów suchych (k/m/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/komisjoner-w-dz.-artykulow-suchych-k-m-d-moeckmuehl-402629",
+   "posted": "2026-08-31",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-a52db56f9b285754b11d1812",
+   "title": "Komisjoner w dziale Owoce i Warzywa Order Picker (k/m/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/komisjoner-w-dziale-owoce-i-warzywa-order-picker-k-m-d-moeckmuehl-399924",
+   "posted": "2026-08-31",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1a7dd26cf588c735a3c00cae",
+   "title": "Kommissionierer Food (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-food-m-w-d-moeckmuehl-402632",
+   "posted": "2026-04-23",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-0c4025dc83017df7b32e5010",
+   "title": "Kommissionierer Frische (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-frische-m-w-d-moeckmuehl-397834",
+   "posted": "2025-12-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-bc3c565423f63b5ee476fbc6",
+   "title": "Kommissionierer Obst und Gemüse (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-obst-und-gemuese-m-w-d-moeckmuehl-401407",
+   "posted": "2026-03-11",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-3220c1a902571a295fe46692",
+   "title": "Kommissionierer Tiefkühl (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-tiefkuehl-m-w-d-moeckmuehl-397835",
+   "posted": "2025-12-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-cbca055633cde77958c7bdbd",
+   "title": "Nachwuchsführungskraft Logistik (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/nachwuchsfuehrungskraft-logistik-m-w-d-moeckmuehl-411179",
+   "posted": "2026-09-24",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-6f3a8176bc95f3fc1f1b8a9d",
+   "title": "Raktári komissiózó (hűtött áru raktárban)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/raktari-komissiozo-hutoett-aru-raktarban-moeckmuehl-389563",
+   "posted": "2025-12-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-802526844b208afdf07cad84",
+   "title": "Raktári komissiózó (mélyhűtött áru raktárban)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/raktari-komissiozo-melyhutoett-aru-raktarban-moeckmuehl-389566",
+   "posted": "2025-12-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-13e2ca058940452c1ac7b027",
+   "title": "Raktári komissiózó (száraz raktárban)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/raktari-komissiozo-szaraz-raktarban-moeckmuehl-402630",
+   "posted": "2026-04-23",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-12659bddef0019914772c953",
+   "title": "Sachbearbeiter Warenkoordination (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/sachbearbeiter-warenkoordination-m-w-d-moeckmuehl-406369",
+   "posted": "2026-08-07",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-0ed901944ea381ae06bd8042",
+   "title": "Schichtleiter Logistik (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/schichtleiter-logistik-m-w-d-moeckmuehl-399826",
+   "posted": "2026-02-12",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-25134d62816d1efc6c08264f",
+   "title": "Schichtleiter Logistik mit Polnischkenntnissen (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/schichtleiter-logistik-mit-polnischkenntnissen-m-w-d-moeckmuehl-399829",
+   "posted": "2026-02-12",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-237d9aa3a057fa11beb9041c",
+   "title": "Schichtleiter Transport (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/schichtleiter-transport-m-w-d-moeckmuehl-411180",
+   "posted": "2026-09-24",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-d8abac371f14b66a88ba825a",
+   "title": "Schülerpraktikant in der Logistik (m/w/d)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/schuelerpraktikant-in-der-logistik-m-w-d-moeckmuehl-381795",
+   "posted": "2025-01-13",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-a63665f390b61db8f0e321b6",
+   "title": "Selector de comenzi (depozit congelat)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/selector-de-comenzi-depozit-congelat-moeckmuehl-395251",
+   "posted": "2025-12-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-fdccb66799be6ebd109d9fb2",
+   "title": "Selector de comenzi (depozit nerefrigerat)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/selector-de-comenzi-depozit-nerefrigerat-moeckmuehl-395255",
+   "posted": "2026-07-21",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-ed201b558e8de64e6d270800",
+   "title": "Selector de comenzi (depozit refrigerat)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/selector-de-comenzi-depozit-refrigerat-moeckmuehl-395040",
+   "posted": "2025-12-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-08543f18e036b987ce7943e8",
+   "title": "Комплектовач на поръчки - дълбоко замразени продукти (м/ж/д)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/komplektovach-na-porachki-dalboko-zamrazeni-produkti-m-zh-d-moeckmuehl-412669",
+   "posted": "2026-10-22",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-0725f1dc28960d27fad409b9",
+   "title": "Комплектовач на поръчки - неохладени хранителни продукти (м/ж/д)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/komplektovach-na-porachki-neohladeni-hranitelni-produkti-m-zh-d-moeckmuehl-412667",
+   "posted": "2026-10-22",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-80be561179e1d65261de219a",
+   "title": "Комплектовач на поръчки - охладени хранителни продукти (м/ж/д)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/komplektovach-na-porachki-ohladeni-hranitelni-produkti-m-zh-d-moeckmuehl-412668",
+   "posted": "2026-10-22",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-2edb9b61af2bb6b5f7fbec74",
+   "title": "Комплектовач на поръчки - плодове и зеленчуци (м/ж/д)",
+   "company": "Kaufland Logistik VZ 3 GmbH & Co. KG",
+   "location": "74219 Möckmühl DE",
+   "url": "https://jobs.kaufland.de/jobs/komplektovach-na-porachki-plodove-i-zelenchutsi-m-zh-d-moeckmuehl-412630",
+   "posted": "2026-10-22",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1dada2566c0d7e3c2ce198a0",
+   "title": "Elektroniker Automatisierungstechnik (m/w/d)",
+   "company": "Kaufland Logistik VZ 4 GmbH & Co. KG",
+   "location": "06721 Meineweh - OT Schleinitz DE",
+   "url": "https://jobs.kaufland.de/jobs/elektroniker-automatisierungstechnik-m-w-d-meineweh-ot-schleinitz-400146",
+   "posted": "2026-03-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1b2f291ac5100e89d8345b02",
+   "title": "Haustechniker (m/w/d)",
+   "company": "Kaufland Logistik VZ 4 GmbH & Co. KG",
+   "location": "06721 Meineweh - OT Schleinitz DE",
+   "url": "https://jobs.kaufland.de/jobs/haustechniker-m-w-d-meineweh-ot-schleinitz-395314",
+   "posted": "2026-01-21",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-d7174858abfc8594e7a90b12",
+   "title": "Kommissionierer Frische (m/w/d)",
+   "company": "Kaufland Logistik VZ 4 GmbH & Co. KG",
+   "location": "06721 Meineweh - OT Schleinitz DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-frische-m-w-d-meineweh-ot-schleinitz-409771",
+   "posted": "2026-08-27",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-ec68a58fd83cf9a46f1d9b4d",
+   "title": "Mechatroniker Automatisierungstechnik (m/w/d)",
+   "company": "Kaufland Logistik VZ 4 GmbH & Co. KG",
+   "location": "06721 Meineweh - OT Schleinitz DE",
+   "url": "https://jobs.kaufland.de/jobs/mechatroniker-automatisierungstechnik-m-w-d-meineweh-ot-schleinitz-400145",
+   "posted": "2026-03-02",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1d1195b7ccad8794969b6363",
+   "title": "Reinigungskraft technischer Anlagen (m/w/d), Osterfeld",
+   "company": "Kaufland Logistik VZ 4 GmbH & Co. KG",
+   "location": "06721 Meineweh - OT Schleinitz DE",
+   "url": "https://jobs.kaufland.de/jobs/reinigungskraft-technischer-anlagen-m-w-d-osterfeld-meineweh-ot-schleinitz-412526",
+   "posted": "2026-10-29",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-747593d9e82e56dcbb489c0f",
+   "title": "Instandhalter / Mechatroniker für automatische Fördersysteme (m/w/d)",
+   "company": "Kaufland Logistik VZ 5 GmbH & Co. KG",
+   "location": "85290 Geisenfeld DE",
+   "url": "https://jobs.kaufland.de/jobs/instandhalter-mechatroniker-fuer-automatische-foerdersysteme-m-w-d-geisenfeld-386331",
+   "posted": "2025-11-19",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-c95f99dcd85930c39e6c7cab",
+   "title": "Kommissionierer Food (m/w/d)",
+   "company": "Kaufland Logistik VZ GmbH & Co. KG",
+   "location": "44339 Dortmund DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-food-m-w-d-dortmund-405158",
+   "posted": "2026-07-20",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-6d6f6ca2d592cee78e76c496",
+   "title": "Kommissionierer Frische (m/w/d)",
+   "company": "Kaufland Logistik VZ GmbH & Co. KG",
+   "location": "44339 Dortmund DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-frische-m-w-d-dortmund-392793",
+   "posted": "2025-08-22",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-c96746f1b4c0c740084eacaa",
+   "title": "Kommissionierer Tiefkühl (m/w/d)",
+   "company": "Kaufland Logistik VZ GmbH & Co. KG",
+   "location": "44339 Dortmund DE",
+   "url": "https://jobs.kaufland.de/jobs/kommissionierer-tiefkuehl-m-w-d-dortmund-392796",
+   "posted": "2025-08-22",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-8eead7a1ddfd4eea31a41882",
+   "title": "Senior Consultant Inhouse Consulting (m/w/d)",
+   "company": "Kaufland Stiftung & Co. KG",
+   "location": "74072 Heilbronn DE",
+   "url": "https://jobs.kaufland.de/jobs/senior-consultant-inhouse-consulting-m-w-d-heilbronn-413347",
+   "posted": "2026-11-10",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-7bdb0901e3ea18682a594bcf",
+   "title": "Aushilfe / Studentenjob in Teilzeit (m/w/d)",
+   "company": "Kaufland Vertrieb 440 GmbH & Co. KG",
+   "location": "12681 Berlin DE",
+   "url": "https://jobs.kaufland.de/jobs/aushilfe-studentenjob-in-teilzeit-m-w-d-berlin-413622",
+   "posted": "2026-11-20",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-71e4a953596fcc2a8d2a432b",
+   "title": "Verkäufer in Teilzeit - befristet (m/w/d)",
+   "company": "Kaufland Vertrieb 76 GmbH & Co. KG",
+   "location": "13355 Berlin DE",
+   "url": "https://jobs.kaufland.de/jobs/verkaeufer-in-teilzeit-befristet-m-w-d-berlin-413567",
+   "posted": "2026-11-16",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-2e83da95fcf80edeb4ad040a",
+   "title": "Verkäufer in Teilzeit - befristet (m/w/d)",
+   "company": "Kaufland Vertrieb KDSL GmbH & Co. KG",
+   "location": "22547 Hamburg DE",
+   "url": "https://jobs.kaufland.de/jobs/verkaeufer-in-teilzeit-befristet-m-w-d-hamburg-413660",
+   "posted": "2026-11-20",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-be1903b0f0cfd3d2bd2bd1d4",
+   "title": "Verkäufer in Teilzeit - befristet (m/w/d)",
+   "company": "Kaufland Vertrieb KDSL GmbH & Co. KG",
+   "location": "22547 Hamburg DE",
+   "url": "https://jobs.kaufland.de/jobs/verkaeufer-in-teilzeit-befristet-m-w-d-hamburg-413659",
+   "posted": "2026-11-20",
+   "source": "kaufland",
+   "sourceLabel": "Kaufland",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
    "id": "scrapling-0f0696dbcf5a18438a4bf997",
    "title": "Ausbildung zum  Packmitteltechnologen (m/w/d)",
    "company": "Klingele",
@@ -7946,6 +8559,606 @@
    "zuletztGesehen": "2026-11-21"
   },
   {
+   "id": "scrapling-26104710dfa501d3e45ef5de",
+   "title": "Filialleiter (m/w/d)",
+   "company": "Lidl St. Ingbert Nord Vertriebs-GmbH & Co. KG",
+   "location": "66763 Dillingen DE",
+   "url": "https://jobs.lidl.de/jobs/filialleiter-m-w-d-dillingen-772529",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-3824301f9008675e6f5c8e07",
+   "title": "Filialleiter (m/w/d)",
+   "company": "Lidl St. Ingbert Nord Vertriebs-GmbH & Co. KG",
+   "location": "66793 Saarwellingen DE",
+   "url": "https://jobs.lidl.de/jobs/filialleiter-m-w-d-saarwellingen-772531",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-cdbbf169139b96f89e373e12",
+   "title": "Filialleiter (m/w/d)",
+   "company": "Lidl St. Ingbert Nord Vertriebs-GmbH & Co. KG",
+   "location": "66663 Merzig DE",
+   "url": "https://jobs.lidl.de/jobs/filialleiter-m-w-d-merzig-772535",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-b1d082f132935fb3d11cd97f",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl St. Ingbert Nord Vertriebs-GmbH & Co. KG",
+   "location": "66793 Saarwellingen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-saarwellingen-773327",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-8d2bcb78a879a421aa6d93df",
+   "title": "Mitarbeiter Warenverräumung 09-12 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Anzing Ost",
+   "location": "83043 Bad Aibling DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-09-12-uhr-teilzeit-m-w-d-bad-aibling-773629",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-18b5b1a4488c4ce92d40bf00",
+   "title": "Mitarbeiter Warenverräumung 13-16 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Anzing Ost",
+   "location": "83043 Bad Aibling DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-13-16-uhr-teilzeit-m-w-d-bad-aibling-773630",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-c601843fee3e9cbba657fe57",
+   "title": "Verkäufer mit Stellvertretung Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Anzing Ost",
+   "location": "83043 Bad Aibling DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-bad-aibling-773636",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-7b25c2aad1ea333712c9b074",
+   "title": "Verkäufer Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Anzing Ost",
+   "location": "83043 Bad Aibling DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-bad-aibling-773634",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-2ddb60a3ea5de580b78c5cf8",
+   "title": "Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "75438 Knittlingen DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-knittlingen-770727",
+   "posted": "2026-11-13",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-6aefabb392265bd9b14d91cb",
+   "title": "Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "75305 Neuenbürg DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-neuenbuerg-730380",
+   "posted": "2026-08-04",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-71c89353dfdc3251bb1b162f",
+   "title": "Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "75015 Bretten DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-bretten-725963",
+   "posted": "2026-07-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-984cf473588166bb425a24d3",
+   "title": "Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76356 Weingarten DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-weingarten-749607",
+   "posted": "2026-09-18",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1fb9a3c3538374401e3e17d0",
+   "title": "Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76185 Karlsruhe DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-761187",
+   "posted": "2026-10-22",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-51cb55de9ae6eb9c178f9522",
+   "title": "Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76131 Karlsruhe DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-759675",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-8097b147b5cdc435a2b484f5",
+   "title": "Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76149 Karlsruhe DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-767891",
+   "posted": "2026-11-03",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-f16b15cd1ad948129ede38f5",
+   "title": "Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "75428 Illingen DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-illingen-759674",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-2dfee2d5f1debe75031f9d91",
+   "title": "Schülerjob im Verkauf Minijob (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76149 Karlsruhe DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-minijob-m-w-d-karlsruhe-739018",
+   "posted": "2026-08-26",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-65975e667509fda27f7a521e",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76135 Karlsruhe DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-karlsruhe-716341",
+   "posted": "2026-10-16",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-8280d6825f8d081ec48b4823",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76137 Karlsruhe DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-karlsruhe-747504",
+   "posted": "2026-10-16",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-8e089404b0da9469e6d28307",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76703 Kraichtal DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-kraichtal-725952",
+   "posted": "2026-10-16",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-be94ad02c3fc563d1e39d248",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76275 Ettlingen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-ettlingen-749563",
+   "posted": "2026-10-22",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-c54cd390fcf774101341af2f",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "76448 Durmersheim DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-durmersheim-759670",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-ec9b7c29483654c3bf9f9306",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord",
+   "location": "75203 Königsbach-Stein DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-koenigsbach-stein-746125",
+   "posted": "2026-10-16",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-196a982b70be27afcb71dd4b",
+   "title": "Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "76593 Gernsbach DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-gernsbach-706100",
+   "posted": "2026-06-17",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-722aec4c6b9a002b3d0bc374",
+   "title": "Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "70825 Korntal-Münchingen DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-korntal-muenchingen-752691",
+   "posted": "2026-09-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1eae4fa0504bc0fd2d32e8d7",
+   "title": "Schülerjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "75242 Neuhausen DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-teilzeit-m-w-d-neuhausen-761063",
+   "posted": "2026-10-21",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-2e620f29b80f5247341c01c8",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "77866 Rheinau DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-rheinau-731267",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-665cfccd6ccf32b20f6abf4f",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "71063 Sindelfingen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-sindelfingen-738928",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-70a73e1712eab8d8f16294da",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "71065 Sindelfingen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-sindelfingen-688786",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-72efb90af19bddfea69978d4",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "71139 Ehningen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-ehningen-730603",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-794c036f8b3bc46d9653f153",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "71272 Renningen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-renningen-733062",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-7c53bc471a38b99bcdf1983b",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "76532 Baden-Baden DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-baden-baden-729856",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-a2b0600c95cca0dfa35fdf66",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "71083 Herrenberg DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-herrenberg-770411",
+   "posted": "2026-11-10",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-c6c3e0f8591536f87114e01e",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd",
+   "location": "71032 Böblingen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-boeblingen-738934",
+   "posted": "2026-10-14",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-bdee044d094d641be31763ce",
+   "title": "Verkäufer Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Erlensee Süd",
+   "location": "63762 Großostheim DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-grossostheim-712816",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-c0b0a3243b5dd9568e2e3d2f",
+   "title": "Abiturientenprogramm Vertrieb inkl. Handelsfachwirt 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Grevenbroich West",
+   "location": "41469 Neuss DE",
+   "url": "https://jobs.lidl.de/jobs/abiturientenprogramm-vertrieb-inkl.-handelsfachwirt-2027-m-w-d-neuss-753961",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-177733689feabfd35c206956",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, KRE 2",
+   "location": "10117 Berlin DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-761325",
+   "posted": "2026-10-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-20fbfecc091d1c5a1844cfe9",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, KRE 2",
+   "location": "13158 Berlin DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767176",
+   "posted": "2026-11-03",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-73cd67724b866320b21d9eed",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, KRE 2",
+   "location": "13086 Berlin DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767171",
+   "posted": "2026-11-03",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-7b1c489e7d1af173667cb1a9",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, KRE 2",
+   "location": "10117 Berlin DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-761327",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-9ca711f1fe5ba8060ddcae88",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, KRE 2",
+   "location": "10409 Berlin DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767168",
+   "posted": "2026-11-03",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-0d02f58711f3ad1c9fc8cf10",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "04916 Herzberg (Elster) DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-herzberg-elster-773761",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-345ee2e013e746a1c1b53f74",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "04874 Belgern DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-belgern-768868",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-dd506bb25d34e89ffaef61c6",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "04758 Oschatz DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-oschatz-767928",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-1a8564392102b095c9e7d127",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "02977 Hoyerswerda DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-hoyerswerda-771053",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-5a9c6dbe2f0dfdd444e8da62",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "03130 Spremberg DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-spremberg-771052",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-686cd59d0757fcff4f13a8eb",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "03159 Döbern DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-doebern-771050",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-6cd5a085696bdb5b2478d801",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "02943 Weißwasser DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-weisswasser-771054",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-775b1646c0565139e1187e3b",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "04916 Herzberg (Elster) DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-herzberg-elster-744921",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
+   "id": "scrapling-a67e5bed46d993643d91a3ba",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost",
+   "location": "02943 Boxberg DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-boxberg-771051",
+   "posted": "2026-11-20",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
    "id": "scrapling-3a8994d72c1d35193eaf346c",
    "title": "Aluminium-Schweißer (m/w/d)",
    "company": "Liebert GmbH - Göppingen",
@@ -8999,7 +10212,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-20",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-46388ca99b474b188367c50a",
@@ -9035,7 +10248,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-18"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-067a7e6ea92365e7a5dbb7af",
@@ -9071,7 +10284,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-20",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-fb5e08cf9074ea3cdeda3d4d",
@@ -9182,6 +10395,18 @@
    "zuletztGesehen": "2026-11-21"
   },
   {
+   "id": "scrapling-1b73cb247b2fd4fe26f18f49",
+   "title": "Praktikum Personalbetreuung Stuttgart (m/w/d)",
+   "company": "MAHLE",
+   "location": "Stuttgart, DE, 70376",
+   "url": "https://careers.mahle.com/job/Stuttgart-Praktikum-Personalbetreuung-Stuttgart-%28mwd%29-70376/1442635633",
+   "posted": "2026-10-29",
+   "source": "mahle",
+   "sourceLabel": "MAHLE / MAHLE Aftermarket",
+   "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-21"
+  },
+  {
    "id": "scrapling-b3b418f77af215d3bc4e9ffe",
    "title": "Praktikum Powertrain Cooling Development (m/w/d)",
    "company": "MAHLE",
@@ -9191,7 +10416,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-18"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-60e19db1754d5e91bc5f459a",
@@ -12047,7 +13272,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-19",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-9f9908c3208662098cdc8093",
@@ -12059,7 +13284,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-5ea084ffc2122822c4e800db",
@@ -12071,7 +13296,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-885f3204ddebc02667548579",
@@ -12095,7 +13320,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-49ee1c9f1cea006b8f833401",
@@ -12107,7 +13332,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-e1dd8155ce0410b9b7df7a2a",
@@ -12143,7 +13368,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-f05fc9509d2fe84507ace88e",
@@ -12155,19 +13380,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
-  },
-  {
-   "id": "scrapling-fd291b61fe5ab0efcc520ad3",
-   "title": "Fleet Specialist",
-   "company": "Techtronic Industries Italia srl",
-   "location": "IT Cinisello Balsamo Italien",
-   "url": "https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Cinisello-Balsamo-Italy/Fleet-Specialist_JR5069",
-   "posted": "2026-11-10",
-   "source": "tti",
-   "sourceLabel": "TTI / AEG / Milwaukee",
-   "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-17"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-a7fe29b57ea4d29e82978b34",
@@ -12179,7 +13392,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-2ebcfc5c245012648b98ad42",
@@ -12191,7 +13404,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-1d5f5814b2e760bde6ed6e4e",
@@ -12203,7 +13416,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-80994363ddfcb92757573101",
@@ -12215,7 +13428,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-d87d51f655a1c368ae02ecda",
@@ -12227,7 +13440,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-41cbc24052eddab368f1fbdc",
@@ -12239,7 +13452,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-44cdaf71a3dd5852e291c258",
@@ -12251,7 +13464,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-d5fd029c33c0c8d89068e31b",
@@ -12263,7 +13476,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-78d9f2a0a2b807ac619dad8c",
@@ -12275,7 +13488,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-a12e83faaf50207f54c3a4c4",
@@ -12287,7 +13500,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-aabd4b6aad2e29c6e56df9e5",
@@ -12299,7 +13512,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-9230647be70d815343758a0b",
@@ -12311,7 +13524,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-b8708936d59bc4b1ed5baeff",
@@ -12323,7 +13536,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-2c71600ea3e640fc52ee5eb0",
@@ -12335,7 +13548,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-fd074797c0447e8751652d8e",
@@ -12347,7 +13560,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-0f38aeb87342f92c0b4f6408",
@@ -12359,7 +13572,7 @@
    "source": "tti",
    "sourceLabel": "TTI / AEG / Milwaukee",
    "erstmalsGesehen": "2026-11-17",
-   "zuletztGesehen": "2026-11-20"
+   "zuletztGesehen": "2026-11-21"
   },
   {
    "id": "scrapling-caf911ba6d4f4b527214831f",

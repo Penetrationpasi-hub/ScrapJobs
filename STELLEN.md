@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
+Stand: 2026-11-21T10:25:03+00:00 · 1119 Stellen aus 60 von 67 Quellen
 
 ## Quellen
 
@@ -10,7 +10,7 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 | Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | Mercedes-Benz | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «») |
 | STIHL | done | 60 | 2026-11-21 |  |
-| MAHLE / MAHLE Aftermarket | done | 60 | 2026-11-21 |  |
+| MAHLE / MAHLE Aftermarket | done | 61 | 2026-11-21 |  |
 | Diakonie Stetten | done | 61 | 2026-11-21 |  |
 | Robert Bosch Krankenhaus | done | 13 | 2026-11-21 |  |
 | Kärcher | done | 87 | 2026-11-21 |  |
@@ -19,8 +19,8 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 | Paulinenpflege Winnenden | done | 10 | 2026-11-21 |  |
 | Kreissparkasse Waiblingen | done | 8 | 2026-11-21 |  |
 | Stadt Waiblingen | done | 16 | 2026-11-21 |  |
-| TESAT-Spacecom | robots_unavailable | 22 | 2026-11-20 | upstream_error HTTP 503 (auch nach 2 Wiederholungen) |
-| Airbus (Stuttgart, Laupheim, Backnang) | unsupported | 10 | 2026-11-20 |  |
+| TESAT-Spacecom | done | 22 | 2026-11-21 |  |
+| Airbus (Stuttgart, Laupheim, Backnang) | done | 10 | 2026-11-21 |  |
 | Klinikum Schloß Winnenden | done | 11 | 2026-11-21 |  |
 | Volksbank Stuttgart | done | 8 | 2026-11-21 |  |
 | Klinikum Stuttgart · Bad Cannstatt | done | 63 | 2026-11-21 |  |
@@ -36,7 +36,7 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 | Deutsche Post / DHL | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen |
 | d&b audiotechnik | done | 11 | 2026-11-21 |  |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
-| TTI / AEG / Milwaukee | robots_unavailable | 27 | 2026-11-20 | upstream_error HTTP 503 (auch nach 2 Wiederholungen) |
+| TTI / AEG / Milwaukee | done | 26 | 2026-11-21 |  |
 | Burger Schloz Automobile | done | 9 | 2026-11-21 |  |
 | Klöpfer | done | 4 | 2026-11-21 |  |
 | JUDO Wasseraufbereitung | done | 8 | 2026-11-21 |  |
@@ -67,7 +67,9 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 | Harro Höfliger | done | 20 | 2026-11-21 |  |
 | SOCCO | done | 25 | 2026-11-21 |  |
 | Rems-Murr-JOBS | done | 20 | 2026-11-21 |  |
-| persona service | unsupported | 0 | – |  |
+| persona service | done | 0 | 2026-11-21 | 0 Stellen: 0 verworfen |
+| Lidl | done | 50 | 2026-11-21 |  |
+| Kaufland | done | 50 | 2026-11-21 |  |
 | GPM Personalservice | done | 60 | 2026-11-21 |  |
 | Liebert GmbH | done | 60 | 2026-11-21 |  |
 | iits-consulting | done | 7 | 2026-11-21 |  |
@@ -676,6 +678,89 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 - [Logistikmeister (m/w/d)](https://judo.eu/Stellenanzeige/logistikmeister-m-w-d) · Backnang-Waldrems · seit 2026-11-08
 - [Mitarbeiter (m/w/d) Vertriebsinnendienst Export](https://judo.eu/Stellenanzeige/mitarbeiter-m-w-d-vertriebsinnendienst-export-zollbeauftragter) · in Winnenden suchen wir · seit 2026-11-08
 
+### Kaufland Dienstleistung Ost GmbH & Co.KG
+
+- [Kaufmännischer Mitarbeiter / Sachbearbeiter Lager (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-sachbearbeiter-lager-m-w-d-luebbenau-spreewald-412646) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+
+### Kaufland Fleischwaren Heiligenstadt GmbH & Co.KG
+
+- [Mitarbeiter Reinigung (m/w/d)](https://jobs.kaufland.de/jobs/mitarbeiter-reinigung-m-w-d-heilbad-heiligenstadt-413665) · 37308 Heilbad Heiligenstadt DE · seit 2026-11-21
+
+### Kaufland Logistik VZ 2 GmbH & Co. KG
+
+- [Elektriker / Elektroniker / Mechatroniker Haustechnik (m/w/d)](https://jobs.kaufland.de/jobs/elektriker-elektroniker-mechatroniker-haustechnik-m-w-d-luebbenau-spreewald-387184) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Elektriker/ Elektroniker/ Mechatroniker Automatisierungstechnik (m/w/d)](https://jobs.kaufland.de/jobs/elektriker-elektroniker-mechatroniker-automatisierungstechnik-m-w-d-luebbenau-spreewald-387755) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Kaufmännischer Mitarbeiter 1st Level (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-1st-level-m-w-d-luebbenau-spreewald-410411) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Kaufmännischer Mitarbeiter Lagersteuerung (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-lagersteuerung-m-w-d-luebbenau-spreewald-378252) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Kaufmännischer Mitarbeiter Wareneingang (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-wareneingang-m-w-d-luebbenau-spreewald-405822) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Kaufmännischer Mitarbeiter Warenkoordination (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-warenkoordination-m-w-d-luebbenau-spreewald-378253) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Schichtleiter Logistik (m/w/d)](https://jobs.kaufland.de/jobs/schichtleiter-logistik-m-w-d-luebbenau-spreewald-401942) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+- [Schülerpraktikant im Bereich Technik - Logistik (m/w/d)](https://jobs.kaufland.de/jobs/schuelerpraktikant-im-bereich-technik-logistik-m-w-d-luebbenau-spreewald-399602) · 03222 Lübbenau/Spreewald DE · seit 2026-11-21
+
+### Kaufland Logistik VZ 3 GmbH & Co. KG
+
+- [Disponent Logistik (m/w/d)](https://jobs.kaufland.de/jobs/disponent-logistik-m-w-d-moeckmuehl-406365) · 74219 Möckmühl DE · seit 2026-11-21
+- [Gebäudetechniker Haustechnik (m/w/d)](https://jobs.kaufland.de/jobs/gebaeudetechniker-haustechnik-m-w-d-moeckmuehl-401390) · 74219 Möckmühl DE · seit 2026-11-21
+- [Kaufmännischer Mitarbeiter Lagerleitstand (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-lagerleitstand-m-w-d-moeckmuehl-406366) · 74219 Möckmühl DE · seit 2026-11-21
+- [Kaufmännischer Mitarbeiter Warenkoordination (m/w/d)](https://jobs.kaufland.de/jobs/kaufmaennischer-mitarbeiter-warenkoordination-m-w-d-moeckmuehl-399822) · 74219 Möckmühl DE · seit 2026-11-21
+- [Komisjoner w dz. artykułów suchych (k/m/d)](https://jobs.kaufland.de/jobs/komisjoner-w-dz.-artykulow-suchych-k-m-d-moeckmuehl-402629) · 74219 Möckmühl DE · seit 2026-11-21
+- [Komisjoner w dziale Owoce i Warzywa Order Picker (k/m/d)](https://jobs.kaufland.de/jobs/komisjoner-w-dziale-owoce-i-warzywa-order-picker-k-m-d-moeckmuehl-399924) · 74219 Möckmühl DE · seit 2026-11-21
+- [Kommissionierer Food (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-food-m-w-d-moeckmuehl-402632) · 74219 Möckmühl DE · seit 2026-11-21
+- [Kommissionierer Frische (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-frische-m-w-d-moeckmuehl-397834) · 74219 Möckmühl DE · seit 2026-11-21
+- [Kommissionierer Obst und Gemüse (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-obst-und-gemuese-m-w-d-moeckmuehl-401407) · 74219 Möckmühl DE · seit 2026-11-21
+- [Kommissionierer Tiefkühl (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-tiefkuehl-m-w-d-moeckmuehl-397835) · 74219 Möckmühl DE · seit 2026-11-21
+- [Nachwuchsführungskraft Logistik (m/w/d)](https://jobs.kaufland.de/jobs/nachwuchsfuehrungskraft-logistik-m-w-d-moeckmuehl-411179) · 74219 Möckmühl DE · seit 2026-11-21
+- [Raktári komissiózó (hűtött áru raktárban)](https://jobs.kaufland.de/jobs/raktari-komissiozo-hutoett-aru-raktarban-moeckmuehl-389563) · 74219 Möckmühl DE · seit 2026-11-21
+- [Raktári komissiózó (mélyhűtött áru raktárban)](https://jobs.kaufland.de/jobs/raktari-komissiozo-melyhutoett-aru-raktarban-moeckmuehl-389566) · 74219 Möckmühl DE · seit 2026-11-21
+- [Raktári komissiózó (száraz raktárban)](https://jobs.kaufland.de/jobs/raktari-komissiozo-szaraz-raktarban-moeckmuehl-402630) · 74219 Möckmühl DE · seit 2026-11-21
+- [Sachbearbeiter Warenkoordination (m/w/d)](https://jobs.kaufland.de/jobs/sachbearbeiter-warenkoordination-m-w-d-moeckmuehl-406369) · 74219 Möckmühl DE · seit 2026-11-21
+- [Schichtleiter Logistik (m/w/d)](https://jobs.kaufland.de/jobs/schichtleiter-logistik-m-w-d-moeckmuehl-399826) · 74219 Möckmühl DE · seit 2026-11-21
+- [Schichtleiter Logistik mit Polnischkenntnissen (m/w/d)](https://jobs.kaufland.de/jobs/schichtleiter-logistik-mit-polnischkenntnissen-m-w-d-moeckmuehl-399829) · 74219 Möckmühl DE · seit 2026-11-21
+- [Schichtleiter Transport (m/w/d)](https://jobs.kaufland.de/jobs/schichtleiter-transport-m-w-d-moeckmuehl-411180) · 74219 Möckmühl DE · seit 2026-11-21
+- [Schülerpraktikant in der Logistik (m/w/d)](https://jobs.kaufland.de/jobs/schuelerpraktikant-in-der-logistik-m-w-d-moeckmuehl-381795) · 74219 Möckmühl DE · seit 2026-11-21
+- [Selector de comenzi (depozit congelat)](https://jobs.kaufland.de/jobs/selector-de-comenzi-depozit-congelat-moeckmuehl-395251) · 74219 Möckmühl DE · seit 2026-11-21
+- [Selector de comenzi (depozit nerefrigerat)](https://jobs.kaufland.de/jobs/selector-de-comenzi-depozit-nerefrigerat-moeckmuehl-395255) · 74219 Möckmühl DE · seit 2026-11-21
+- [Selector de comenzi (depozit refrigerat)](https://jobs.kaufland.de/jobs/selector-de-comenzi-depozit-refrigerat-moeckmuehl-395040) · 74219 Möckmühl DE · seit 2026-11-21
+- [Комплектовач на поръчки - дълбоко замразени продукти (м/ж/д)](https://jobs.kaufland.de/jobs/komplektovach-na-porachki-dalboko-zamrazeni-produkti-m-zh-d-moeckmuehl-412669) · 74219 Möckmühl DE · seit 2026-11-21
+- [Комплектовач на поръчки - неохладени хранителни продукти (м/ж/д)](https://jobs.kaufland.de/jobs/komplektovach-na-porachki-neohladeni-hranitelni-produkti-m-zh-d-moeckmuehl-412667) · 74219 Möckmühl DE · seit 2026-11-21
+- [Комплектовач на поръчки - охладени хранителни продукти (м/ж/д)](https://jobs.kaufland.de/jobs/komplektovach-na-porachki-ohladeni-hranitelni-produkti-m-zh-d-moeckmuehl-412668) · 74219 Möckmühl DE · seit 2026-11-21
+- [Комплектовач на поръчки - плодове и зеленчуци (м/ж/д)](https://jobs.kaufland.de/jobs/komplektovach-na-porachki-plodove-i-zelenchutsi-m-zh-d-moeckmuehl-412630) · 74219 Möckmühl DE · seit 2026-11-21
+
+### Kaufland Logistik VZ 4 GmbH & Co. KG
+
+- [Elektroniker Automatisierungstechnik (m/w/d)](https://jobs.kaufland.de/jobs/elektroniker-automatisierungstechnik-m-w-d-meineweh-ot-schleinitz-400146) · 06721 Meineweh - OT Schleinitz DE · seit 2026-11-21
+- [Haustechniker (m/w/d)](https://jobs.kaufland.de/jobs/haustechniker-m-w-d-meineweh-ot-schleinitz-395314) · 06721 Meineweh - OT Schleinitz DE · seit 2026-11-21
+- [Kommissionierer Frische (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-frische-m-w-d-meineweh-ot-schleinitz-409771) · 06721 Meineweh - OT Schleinitz DE · seit 2026-11-21
+- [Mechatroniker Automatisierungstechnik (m/w/d)](https://jobs.kaufland.de/jobs/mechatroniker-automatisierungstechnik-m-w-d-meineweh-ot-schleinitz-400145) · 06721 Meineweh - OT Schleinitz DE · seit 2026-11-21
+- [Reinigungskraft technischer Anlagen (m/w/d), Osterfeld](https://jobs.kaufland.de/jobs/reinigungskraft-technischer-anlagen-m-w-d-osterfeld-meineweh-ot-schleinitz-412526) · 06721 Meineweh - OT Schleinitz DE · seit 2026-11-21
+
+### Kaufland Logistik VZ 5 GmbH & Co. KG
+
+- [Instandhalter / Mechatroniker für automatische Fördersysteme (m/w/d)](https://jobs.kaufland.de/jobs/instandhalter-mechatroniker-fuer-automatische-foerdersysteme-m-w-d-geisenfeld-386331) · 85290 Geisenfeld DE · seit 2026-11-21
+
+### Kaufland Logistik VZ GmbH & Co. KG
+
+- [Kommissionierer Food (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-food-m-w-d-dortmund-405158) · 44339 Dortmund DE · seit 2026-11-21
+- [Kommissionierer Frische (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-frische-m-w-d-dortmund-392793) · 44339 Dortmund DE · seit 2026-11-21
+- [Kommissionierer Tiefkühl (m/w/d)](https://jobs.kaufland.de/jobs/kommissionierer-tiefkuehl-m-w-d-dortmund-392796) · 44339 Dortmund DE · seit 2026-11-21
+
+### Kaufland Stiftung & Co. KG
+
+- [Senior Consultant Inhouse Consulting (m/w/d)](https://jobs.kaufland.de/jobs/senior-consultant-inhouse-consulting-m-w-d-heilbronn-413347) · 74072 Heilbronn DE · seit 2026-11-21
+
+### Kaufland Vertrieb 440 GmbH & Co. KG
+
+- [Aushilfe / Studentenjob in Teilzeit (m/w/d)](https://jobs.kaufland.de/jobs/aushilfe-studentenjob-in-teilzeit-m-w-d-berlin-413622) · 12681 Berlin DE · seit 2026-11-21
+
+### Kaufland Vertrieb 76 GmbH & Co. KG
+
+- [Verkäufer in Teilzeit - befristet (m/w/d)](https://jobs.kaufland.de/jobs/verkaeufer-in-teilzeit-befristet-m-w-d-berlin-413567) · 13355 Berlin DE · seit 2026-11-21
+
+### Kaufland Vertrieb KDSL GmbH & Co. KG
+
+- [Verkäufer in Teilzeit - befristet (m/w/d)](https://jobs.kaufland.de/jobs/verkaeufer-in-teilzeit-befristet-m-w-d-hamburg-413660) · 22547 Hamburg DE · seit 2026-11-21
+- [Verkäufer in Teilzeit - befristet (m/w/d)](https://jobs.kaufland.de/jobs/verkaeufer-in-teilzeit-befristet-m-w-d-hamburg-413659) · 22547 Hamburg DE · seit 2026-11-21
+
 ### Klingele
 
 - [Ausbildung zum  Packmitteltechnologen (m/w/d)](https://jobs.klingele.com/job/Grunbach-Ausbildung-zum-Packmitteltechnologen-%28mwd%29-73630/1169013755) · Grunbach, DE, 73630 · seit 2026-11-17
@@ -832,6 +917,80 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 - [Vertiefungspraktikum Organisation, Personal, Informationsverarbeitung](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P50) · 71332 Waiblingen DE · seit 2026-11-08
 - [Vertiefungspraktikum Wirtschaft und Finanzen](https://rems-murr-kreis.helixjobs.com/_/jobad?prj=100300P53) · 71332 Waiblingen DE · seit 2026-11-08
 
+### Lidl St. Ingbert Nord Vertriebs-GmbH & Co. KG
+
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-dillingen-772529) · 66763 Dillingen DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-saarwellingen-772531) · 66793 Saarwellingen DE · seit 2026-11-21
+- [Filialleiter (m/w/d)](https://jobs.lidl.de/jobs/filialleiter-m-w-d-merzig-772535) · 66663 Merzig DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-saarwellingen-773327) · 66793 Saarwellingen DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Anzing Ost
+
+- [Mitarbeiter Warenverräumung 09-12 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-09-12-uhr-teilzeit-m-w-d-bad-aibling-773629) · 83043 Bad Aibling DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 13-16 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-13-16-uhr-teilzeit-m-w-d-bad-aibling-773630) · 83043 Bad Aibling DE · seit 2026-11-21
+- [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-bad-aibling-773636) · 83043 Bad Aibling DE · seit 2026-11-21
+- [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-bad-aibling-773634) · 83043 Bad Aibling DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Bietigheim Nord
+
+- [Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-knittlingen-770727) · 75438 Knittlingen DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-neuenbuerg-730380) · 75305 Neuenbürg DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-bretten-725963) · 75015 Bretten DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-10 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-10-uhr-teilzeit-m-w-d-weingarten-749607) · 76356 Weingarten DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-761187) · 76185 Karlsruhe DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-759675) · 76131 Karlsruhe DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-karlsruhe-767891) · 76149 Karlsruhe DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-illingen-759674) · 75428 Illingen DE · seit 2026-11-21
+- [Schülerjob im Verkauf Minijob (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-minijob-m-w-d-karlsruhe-739018) · 76149 Karlsruhe DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-karlsruhe-716341) · 76135 Karlsruhe DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-karlsruhe-747504) · 76137 Karlsruhe DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-kraichtal-725952) · 76703 Kraichtal DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-ettlingen-749563) · 76275 Ettlingen DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-durmersheim-759670) · 76448 Durmersheim DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-koenigsbach-stein-746125) · 75203 Königsbach-Stein DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Bietigheim Süd
+
+- [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-gernsbach-706100) · 76593 Gernsbach DE · seit 2026-11-21
+- [Mitarbeiter Warenverräumung 6-9 Uhr Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-6-9-uhr-teilzeit-m-w-d-korntal-muenchingen-752691) · 70825 Korntal-Münchingen DE · seit 2026-11-21
+- [Schülerjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/schuelerjob-im-verkauf-teilzeit-m-w-d-neuhausen-761063) · 75242 Neuhausen DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-rheinau-731267) · 77866 Rheinau DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-sindelfingen-738928) · 71063 Sindelfingen DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-sindelfingen-688786) · 71065 Sindelfingen DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-ehningen-730603) · 71139 Ehningen DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-renningen-733062) · 71272 Renningen DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-baden-baden-729856) · 76532 Baden-Baden DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-herrenberg-770411) · 71083 Herrenberg DE · seit 2026-11-21
+- [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-boeblingen-738934) · 71032 Böblingen DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Erlensee Süd
+
+- [Verkäufer Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-grossostheim-712816) · 63762 Großostheim DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Grevenbroich West
+
+- [Abiturientenprogramm Vertrieb inkl. Handelsfachwirt 2027 (m/w/d)](https://jobs.lidl.de/jobs/abiturientenprogramm-vertrieb-inkl.-handelsfachwirt-2027-m-w-d-neuss-753961) · 41469 Neuss DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, KRE 2
+
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-761325) · 10117 Berlin DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767176) · 13158 Berlin DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767171) · 13086 Berlin DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-761327) · 10117 Berlin DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-m-w-d-berlin-767168) · 10409 Berlin DE · seit 2026-11-21
+
+### Lidl Vertriebs-GmbH & Co. KG, Radeburg Ost
+
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-herzberg-elster-773761) · 04916 Herzberg (Elster) DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-belgern-768868) · 04874 Belgern DE · seit 2026-11-21
+- [Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)](https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-oschatz-767928) · 04758 Oschatz DE · seit 2026-11-21
+- [Schülerpraktikum in der Filiale (m/w/d)](https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-hoyerswerda-771053) · 02977 Hoyerswerda DE · seit 2026-11-21
+- [Schülerpraktikum in der Filiale (m/w/d)](https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-spremberg-771052) · 03130 Spremberg DE · seit 2026-11-21
+- [Schülerpraktikum in der Filiale (m/w/d)](https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-doebern-771050) · 03159 Döbern DE · seit 2026-11-21
+- [Schülerpraktikum in der Filiale (m/w/d)](https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-weisswasser-771054) · 02943 Weißwasser DE · seit 2026-11-21
+- [Schülerpraktikum in der Filiale (m/w/d)](https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-herzberg-elster-744921) · 04916 Herzberg (Elster) DE · seit 2026-11-21
+- [Schülerpraktikum in der Filiale (m/w/d)](https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-boxberg-771051) · 02943 Boxberg DE · seit 2026-11-21
+
 ### Liebert GmbH - Göppingen
 
 - [Aluminium-Schweißer (m/w/d)](https://www.persy.jobs/persy/l/job-jrw3w-a-stellenangebote-Aluminium-Schweisser-m-w-d-Vollzeit-job-in-Ebersbach-73061-Baden-Wuerttemberg) · 73061 Ebersbach Deutschland · seit 2026-11-21
@@ -946,6 +1105,7 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 - [Praktikum Machine Learning und Data Science (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Machine-Learning-und-Data-Science-%28mwd%29-70376/1439057633) · Stuttgart, DE, 70376 · seit 2026-11-18
 - [Praktikum Markt- und Wettbewerbsbeobachtung (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Markt-und-Wettbewerbsbeobachtung-%28mwd%29-70376/1440980033) · Stuttgart, DE, 70376 · seit 2026-11-20
 - [Praktikum Metallographie im Zentralen Werkstofflabor (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Metallographie-im-Zentralen-Werkstofflabor-%28mwd%29-70376/1450317633) · Stuttgart, DE, 70376 · seit 2026-11-18
+- [Praktikum Personalbetreuung Stuttgart (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Personalbetreuung-Stuttgart-%28mwd%29-70376/1442635633) · Stuttgart, DE, 70376 · seit 2026-11-21
 - [Praktikum Powertrain Cooling Development (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Powertrain-Cooling-Development-%28mwd%29-70469/1442375233) · Stuttgart, DE, 70469 · seit 2026-11-18
 - [Praktikum Produkt-Portfolio-Management Data Analytics (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Produkt-Portfolio-Management-Data-Analytics-%28mwd%29-70469/1442407033) · Stuttgart, DE, 70469 · seit 2026-11-21
 - [Praktikum Produktentwicklung - Elektrik/Elektronik (m/w/d)](https://careers.mahle.com/job/Stuttgart-Praktikum-Produktentwicklung-ElektrikElektronik-%28mwd%29-70469/1449831233) · Stuttgart, DE, 70469 · seit 2026-11-18
@@ -1305,10 +1465,6 @@ Stand: 2026-11-21T09:03:36+00:00 · 1019 Stellen aus 54 von 65 Quellen
 
 - [Digital Marketing Specialist](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Field-Based-Spain/Digital-Marketing-Specialist_JR5101) · Außendienst Spanien Spanien · seit 2026-11-17
 - [Social Media & Content Specialist](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Field-Based-Spain/Social-Media---Content-Specialist_JR5106) · Außendienst Spanien Spanien · seit 2026-11-17
-
-### Techtronic Industries Italia srl
-
-- [Fleet Specialist](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Cinisello-Balsamo-Italy/Fleet-Specialist_JR5069) · IT Cinisello Balsamo Italien · seit 2026-11-17
 
 ### Techtronic Industries Magyarország Kft.
 
