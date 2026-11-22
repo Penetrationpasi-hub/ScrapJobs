@@ -127,7 +127,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap", "trabajo_search", "penny_search", "rewe_search"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap", "trabajo_search", "penny_search", "rewe_search", "aldi_map", "dm_sitemap", "toom_search"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)
@@ -170,6 +170,17 @@ def registry() -> dict[str, Source]:
         if source.adapter == "trabajo_search" and (source.key != "trabajo" or source.hosts != ("de.trabajo.org",)
                 or source.search != "https://de.trabajo.org/stellenangebote" or source.api):
             raise ValueError("Trabajo reader is bound to the public German search of de.trabajo.org")
+        if source.adapter == "aldi_map" and (source.key != "aldi_sued"
+                or source.hosts != ("karriere.aldi-sued.de", "jobs.aldi-sued.de")
+                or source.search != "https://karriere.aldi-sued.de/jobsuche"):
+            raise ValueError("ALDI reader is bound to the public ALDI SUED career portal")
+        if source.adapter == "dm_sitemap" and (source.key != "dm" or source.hosts != ("www.dm-jobs.de",)
+                or source.api != "https://www.dm-jobs.de/sitemap/jobs.xml"):
+            raise ValueError("dm reader needs the official jobs sitemap")
+        if source.adapter == "toom_search" and (source.key != "toom"
+                or source.hosts != ("karriere.toom.de", "cms.karriere.toom.de", "toom-baumarkt.dvinci-easy.com")
+                or source.api != "https://cms.karriere.toom.de/api/jobs/search"):
+            raise ValueError("toom reader is bound to the public search and original d.vinci portal")
         if source.adapter == "persy_exchange" and (source.key not in PERSY_EXCHANGES or source.api != persy_base(source.key)
                 or source.search != source.api or source.hosts != ("www.germanpersonnel.de", "www.persy.jobs")):
             raise ValueError("Persy reader is bound to the known job exchanges (gpm, liebert)")

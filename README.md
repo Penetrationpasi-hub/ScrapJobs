@@ -74,6 +74,20 @@ den Ort jeder JobPosting-Einzelanzeige erneut anhand der lokalen PLZ-/Ortsdaten.
 Lokal starten: `python scrapling-server/batch.py --sources penny --out stellen.json`.
 Für REWE: `python scrapling-server/batch.py --sources rewe --out stellen.json`.
 
+**ALDI SÜD** (`aldi_sued`), **dm-drogerie markt** (`dm`) und **toom Baumarkt** (`toom`)
+sammeln ebenfalls ausschließlich im Umkreis **50 km um Waiblingen** und sind im täglichen Lauf enthalten:
+
+- ALDI SÜD (zuständig für Waiblingen): öffentliche Stellenkarte mit Koordinaten, anschließend
+  verifizierte JobPosting-Mikrodaten der Originalanzeigen bei SuccessFactors.
+- dm: offizielle Jobs-Sitemap, PLZ-Vorfilter aus den Anzeigenadressen und Prüfung der Einzelanzeigen.
+  Anzeigen ohne PLZ im Link werden auf der Detailseite geprüft.
+- toom: öffentliche Umkreissuche über alle Ergebnisseiten; Details aus dem verlinkten d.vinci-Portal.
+  Dort stehen die Original-JobPostings, während die Karriereseite den Importzeitpunkt als Ablaufdatum ausgibt.
+
+Lokal: `python scrapling-server/batch.py --sources aldi_sued,dm,toom --out stellen.json`.
+Für alle drei Quellen gilt: Nur Anzeigen mit bestätigtem Ort innerhalb des Umkreises werden übernommen;
+erreichte Seiten-/Detailgrenzen werden als unvollständiger Lauf gemeldet.
+
 **Globale Konzernportale** (Festo, MAHLE, Kärcher) listen ohne Suchbegriff weltweit. Für sie gibt es `catalog_locations`
 (in `employers.json`, bei Festo in `sources.py`): Der Katalog fragt die Suche je Ort einmal mit `locationsearch=<Ort>` ab
 und führt die Treffer zusammen. Je Ort wird vollständig gelesen (alle Ergebnisseiten). Aktuell Festo: Esslingen, Ostfildern · Kärcher: Winnenden, Schwaikheim ·
