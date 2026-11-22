@@ -6,6 +6,7 @@ from types import SimpleNamespace
 from unittest import mock
 
 import crawler
+import batch
 from phenom_adapter import PAGE, record, slug
 from safe_http import Budget, FetchError, Transport, store_cookies
 from sources import PHENOM_TENANTS, registry
@@ -114,10 +115,13 @@ class PhenomTest(unittest.TestCase):
 
         def widgets(body):
             offsets.append(body["from"])
-            return reply(full, total=900)(body)
+            page = [{**row, "jobSeqNo": f"DPDHGLOBALAV{body['from'] + n:06d}DEEUEXTERNAL"}
+                    for n, row in enumerate(full)]
+            return reply(page, total=900)(body)
         result = run(widgets=widgets)
         self.assertEqual(offsets, list(range(0, PAGE * 8, PAGE)))
         self.assertIn("900 Treffer (Suche, de_eu, Ort nein), 80 gelesen", result["sources"][0]["detail"])
+        self.assertEqual(result["sources"][0]["status"], "result_limit")
 
     def test_zero_kept_jobs_say_why_in_the_status_line(self):
         abroad = [hit(f"DPDHGLOBALAV{n:06d}DEEUEXTERNAL", f"Postbote {n}", "Krakau", 50.06, 19.94, country="Polen") for n in range(5)]
@@ -185,9 +189,83 @@ class CatalentTest(unittest.TestCase):
     def test_failing_widget_falls_back_to_the_hits_embedded_in_the_page(self):
         first = [catalent_hit(f"00{n:05d}", f"Engineer {n}", "Eberbach", 49.46, 8.99) for n in range(10)]
         result = self.crawl(catalent_page(first, total=50), widgets=lambda body: {"refineSearch": {"status": 403, "data": None}})
-        self.assertEqual(result["sources"][0]["status"], "done")
+        self.assertEqual(result["sources"][0]["status"], "unsupported")
         self.assertEqual(len(result["jobs"]), 10)
         self.assertIn("eingebettete Seite, Suche fehlgeschlagen", result["sources"][0]["detail"])
+
+    def test_secondary_schorndorf_location_is_kept_in_the_regional_catalog(self):
+        # Observed record 0096961: the primary site is Eberbach (outside), the second Schorndorf (inside).
+        row = catalent_hit("0096961", "Talent & Leadership Development Manager, Germany", "Eberbach", 49.4668, 8.99016)
+        row["multi_location_array"] = [
+            {"location": "Eberbach, Baden-Wurttemberg, Germany, 69412", "latlong": {"lat": 49.4668, "lon": 8.99016}},
+            {"location": "Schorndorf, Baden-Wurttemberg, Germany, 73614", "latlong": {"lat": 48.80537, "lon": 9.52721}},
+        ]
+        far = catalent_hit("0097074", "Mitarbeiter Produktion", "Eberbach", 49.4668, 8.99016)
+        result = self.crawl(catalent_page([], 0), q="", location="Waiblingen", radius_km=50,
+                            widgets=reply([row, far]))
+        self.assertEqual(result["sources"][0]["status"], "done")
+        self.assertEqual(len(result["jobs"]), 1)
+        job = result["jobs"][0]
+        self.assertIn("69412 Eberbach", job["location"])
+        self.assertIn("73614 Schorndorf", job["location"])
+        self.assertTrue(batch.in_area({**job, "source": "catalent"}))
+
+    def test_multisite_postcode_fallback_and_foreign_primary_site(self):
+        row = catalent_hit("0090001", "Engineer", "Beinheim", 48.86, 8.08, country="France")
+        row["multi_location_array"] = [
+            {"location": "Beinheim, France, 67930", "latlong": {"lat": 48.86, "lon": 8.08}},
+            {"location": "Schorndorf, Germany, D-73614", "latlong": {"lat": "NaN", "lon": "Infinity"}},
+        ]
+        result = self.crawl(catalent_page([], 0), location="Waiblingen", radius_km=50, widgets=reply([row]))
+        self.assertEqual(len(result["jobs"]), 1)
+        self.assertEqual(result["jobs"][0]["location"], "73614 Schorndorf DE")
+
+    def test_unknown_location_is_not_a_radius_match(self):
+        row = catalent_hit("0090002", "Engineer", "Unbekanntstadt", "NaN", "Infinity")
+        result = self.crawl(catalent_page([], 0), location="Waiblingen", radius_km=50, widgets=reply([row]))
+        self.assertEqual(result["jobs"], [])
+        self.assertIn("Ort unbekannt 1", result["sources"][0]["detail"])
+
+    def test_expired_job_is_filtered(self):
+        row = {**catalent_hit("0090003", "Engineer", "Schorndorf", 48.80537, 9.52721),
+               "validThrough": "2000-01-01"}
+        result = self.crawl(catalent_page([], 0), widgets=reply([row]))
+        self.assertEqual(result["jobs"], [])
+        self.assertEqual(result["sources"][0]["filtered"], 1)
+
+    def test_valid_empty_search_does_not_use_unfiltered_embedded_hits(self):
+        eager = [catalent_hit("0090004", "Engineer", "Schorndorf", 48.80537, 9.52721)]
+        result = self.crawl(catalent_page(eager, 1), widgets=reply([]))
+        self.assertEqual(result["sources"][0]["status"], "done")
+        self.assertEqual(result["jobs"], [])
+        self.assertIn("0 Treffer (Suche", result["sources"][0]["detail"])
+
+    def test_missing_jobs_is_a_failure_not_an_empty_search(self):
+        result = self.crawl(catalent_page([], 0, embedded=False),
+                            widgets=lambda body: {"refineSearch": {"status": 200, "totalHits": 0, "data": {}}})
+        self.assertEqual(result["sources"][0]["status"], "unsupported")
+
+    def test_all_pages_are_read_and_partial_failures_are_reported(self):
+        first = [catalent_hit(f"00{n:05d}", f"Engineer {n}", "Schorndorf", 48.80537, 9.52721) for n in range(10)]
+        last = [catalent_hit("0099999", "Engineer last", "Schorndorf", 48.80537, 9.52721)]
+        for ending in ("complete", "empty", "repeated", "error"):
+            with self.subTest(ending=ending):
+                offsets = []
+
+                def widgets(body):
+                    offsets.append(body["from"])
+                    if body["from"] == 0:
+                        return reply(first, total=11)(body)
+                    if ending == "error":
+                        return {"refineSearch": {"status": 503, "data": None}}
+                    return reply(last if ending == "complete" else first if ending == "repeated" else [], total=11)(body)
+
+                result = self.crawl(catalent_page([], 0), widgets=widgets)
+                self.assertEqual(offsets, [0, 10])
+                self.assertEqual(result["sources"][0]["status"], "done" if ending == "complete" else "unsupported")
+                self.assertEqual(len(result["jobs"]), 11 if ending == "complete" else 10)
+                if ending != "complete":
+                    self.assertIn("unvollständig", result["sources"][0]["detail"])
 
     def test_failing_widget_without_embedded_hits_is_reported(self):
         result = self.crawl(catalent_page([], total=0, embedded=False),

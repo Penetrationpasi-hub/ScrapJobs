@@ -8154,7 +8154,8 @@ Schöppingen|8165|48624
 Schöps|0|07768
 Schöpstal|0|02829
 Schorfheide|0|16244
-Schorndorf|0|73614 93489
+Schorndorf|0|73614
+Schorndorf (Oberpfalz)|0|93489
 Schornsheim|1590|55288
 Schorssow|0|17166
 Schortens|21357|26419

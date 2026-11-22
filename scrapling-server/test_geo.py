@@ -5,6 +5,13 @@ import geo
 
 
 class Geo(unittest.TestCase):
+    def test_schorndorf_is_not_averaged_with_the_bavarian_namesake(self):
+        local = geo.center("Schorndorf")
+        self.assertLess(geo.km(local, (48.80537, 9.52721)), 5)
+        self.assertLess(geo.km(geo.center("Waiblingen"), local), 20)
+        self.assertGreater(geo.km(local, geo.center("93489")), 200)
+        self.assertEqual(geo.center("Schorndorf (Oberpfalz)"), geo.center("93489"))
+
     def test_distances_match_the_netlify_implementation(self):
         backnang = geo.center("Backnang")
         self.assertAlmostEqual(geo.distance_km(backnang, "04103 Leipzig, Deutschland"), 338.32, places=1)

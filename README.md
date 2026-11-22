@@ -95,6 +95,14 @@ MAHLE: Stuttgart, Fellbach, Markgröningen, Kornwestheim, Mühlacker. Schlägt e
 und `quellen[].detail` nennt den fehlenden Ort. Die Orte gelten nur im Katalog, nicht in der Live-Suche.
 Frühere weltweite Treffer verschwinden nach der Karenzzeit (3 Tage) von selbst.
 
+**Catalent** (`catalent`) wird im Katalog über die Phenom-Suche mit **Waiblingen + 50 km** abgefragt.
+Bei Anzeigen mit mehreren Standorten zählen alle belegten deutschen Standorte (einschließlich PLZ und Koordinaten),
+also auch Schorndorf als Zweitstandort neben Eberbach. Die Ortsdaten trennen Schorndorf (73614) und
+Schorndorf in der Oberpfalz (93489); aus beiden Orten darf kein gemeinsamer Suchmittelpunkt entstehen.
+Leere, gültige Suchantworten werden als Nulltreffer gemeldet; fehlerhafte oder wiederholte Ergebnisseiten sowie
+eingebettete Ersatztreffer nach einem Suchfehler gelten als unvollständig. Catalent steht nach erfolgreicher
+Live-Prüfung nicht mehr in `ohne_stellen_ok.json`.
+
 ## Datenformat
 
 Nur Metadaten, **keine Anzeigentexte** (das Repo ist öffentlich). Den Volltext holt die App

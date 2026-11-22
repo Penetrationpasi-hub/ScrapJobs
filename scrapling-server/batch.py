@@ -40,6 +40,8 @@ AREA = (AREA_NAME, AREA_KM)
 # Bundesweite Anzeigen-Sitemaps (tausende Anzeigen, je Anzeige ein Abruf): nur Anzeigen im Umkreis werden
 # abgerufen, ohne Suchbegriff. Ohne erkennbaren Ort zählt eine Anzeige dort nicht (bundesweites Portal).
 AREA_SOURCES = {"persona", "lidl", "kaufland"}
+# Phenom kann direkt nach Koordinaten suchen; Catalent nutzt dasselbe Gebiet, aber das normale Zeitbudget.
+AREA_SEARCH_SOURCES = AREA_SOURCES | {"catalent"}
 AREA_SECONDS = 3600
 # Ortsangaben, die auf einen Standort im Ausland deuten (Stellen ohne auflösbaren deutschen Ort).
 FOREIGN = re.compile(r"\b(?:CH|AT|BE|FR|GB|UK|ES|IT|NL|PL|CZ|US|CN|Schweiz|Österreich|Belgien|Frankreich|Spanien|"
@@ -227,7 +229,7 @@ def in_area(row, origin=None):
     distance = area_distance(origin, place)
     if distance is not None:
         return distance <= AREA[1]
-    return row.get("source") not in AREA_SOURCES and not FOREIGN.search(place)
+    return row.get("source") not in AREA_SEARCH_SOURCES and not FOREIGN.search(place)
 
 
 def keep_area(results, previous):
@@ -266,7 +268,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
             continue
         # Globale Konzernportale werden je Ort einzeln abgefragt (catalog_locations), bundesweite Sitemaps im
         # Suchgebiet (AREA), alle anderen einmal ohne Ort.
-        area = key in AREA_SOURCES
+        area = key in AREA_SEARCH_SOURCES
         places = (AREA[0],) if area else tuple(getattr(source, "catalog_locations", ())) or ("",)
         jobs, seen, failures, done, detail = [], set(), [], 0, None
         started = time.monotonic()

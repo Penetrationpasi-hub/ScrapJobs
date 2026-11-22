@@ -496,6 +496,18 @@ class CatalogLocationsTest(unittest.TestCase):
     def test_area_comes_from_the_retail_region(self):
         self.assertEqual(batch.AREA, ("Waiblingen", 50))
 
+    def test_catalent_uses_the_full_area_with_the_normal_time_budget(self):
+        seen = []
+
+        def fake(req, factory):
+            seen.append((req.location, req.radius_km, req.seconds))
+            return {"jobs": [], "sources": [{"status": "done"}]}
+
+        with mock.patch.object(batch, "crawl", fake):
+            batch.collect(["catalent"], registry(), self.options, factory=object(),
+                          sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(seen, [("Waiblingen", 50, 300)])
+
     def test_cli_defaults_read_sources_completely(self):
         captured = {}
         with mock.patch.object(batch, "run", lambda options: captured.setdefault("o", options) and 0):
@@ -569,7 +581,8 @@ class CatalogConfigTest(unittest.TestCase):
 
     def test_phenom_portals_use_regional_places(self):
         configured = registry()
-        self.assertEqual(configured["catalent"].catalog_locations, ("Schorndorf",))
+        self.assertIn("catalent", batch.AREA_SEARCH_SOURCES)
+        self.assertEqual(configured["catalent"].catalog_locations, ())
         self.assertIn("Stuttgart", configured["deutsche_post"].catalog_locations)
 
     def test_location_is_substituted_into_the_search_url(self):
