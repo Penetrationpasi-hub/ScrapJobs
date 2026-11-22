@@ -127,7 +127,7 @@ def registry() -> dict[str, Source]:
             re.compile(source.company_pattern)
         if source.company_capture:
             re.compile(source.company_capture)
-        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap", "trabajo_search"}:
+        if source.adapter not in {"html", "workday", "myjobboard", "easyhr", "hahn", "benz_sections", "eisenmann_sections", "judo_filter", "harro_next", "bite", "carsonal", "murr", "dvinci", "rems_list", "personio", "sitemap", "datafeed", "persona_sitemap", "persy_exchange", "waiblingen_page", "phenom_widgets", "lidl_sitemap", "kaufland_sitemap", "trabajo_search", "penny_search", "rewe_search"}:
             raise ValueError("Unknown employer adapter")
         if source.api:
             api = urlparse(source.api)

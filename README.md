@@ -68,6 +68,12 @@ Die Live-Suche behält ihre Grenzen von drei Seiten und zehn Einzelanzeigen.
 
 Rems-Murr-JOBS und ZVW haben 10 s Crawl-Delay und laufen zuletzt.
 
+**PENNY** (`penny`) und **REWE** (`rewe`): öffentliche HTML-Suche mit festem Umkreis **50 km um Waiblingen**.
+Der Adapter übergibt die Ortskoordinaten, liest im Katalog alle Ergebnisseiten und prüft
+den Ort jeder JobPosting-Einzelanzeige erneut anhand der lokalen PLZ-/Ortsdaten.
+Lokal starten: `python scrapling-server/batch.py --sources penny --out stellen.json`.
+Für REWE: `python scrapling-server/batch.py --sources rewe --out stellen.json`.
+
 **Globale Konzernportale** (Festo, MAHLE, Kärcher) listen ohne Suchbegriff weltweit. Für sie gibt es `catalog_locations`
 (in `employers.json`, bei Festo in `sources.py`): Der Katalog fragt die Suche je Ort einmal mit `locationsearch=<Ort>` ab
 und führt die Treffer zusammen. Je Ort wird vollständig gelesen (alle Ergebnisseiten). Aktuell Festo: Esslingen, Ostfildern · Kärcher: Winnenden, Schwaikheim ·
