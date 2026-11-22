@@ -494,9 +494,9 @@ class CatalogLocationsTest(unittest.TestCase):
         self.assertEqual(out["b"]["status"], "timeout")
         self.assertIn("Gesamtzeit", out["b"]["detail"])
 
-    def test_a_place_list_raises_the_catalog_limits_for_every_place(self):
+    def test_a_place_list_receives_the_catalog_limits_for_every_place(self):
         # Aggregators such as Trabajo have no {location} in the search URL; the adapter builds
-        # /stellenangebote/<Ort> itself. The catalog must still read more than the live cap of 10.
+        # /stellenangebote/<Ort> itself. Pass the requested budgets instead of the live cap of 10.
         seen = []
 
         def fake(req, factory):
@@ -507,7 +507,7 @@ class CatalogLocationsTest(unittest.TestCase):
                                                  catalog_locations=("Waiblingen", "Schorndorf"))}
         with mock.patch.object(batch, "crawl", fake):
             batch.collect(["trabajo"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
-        self.assertEqual(seen, [("Waiblingen", 100, 4, 100), ("Schorndorf", 100, 4, 100)])
+        self.assertEqual(seen, [("Waiblingen", 25, 100, 60), ("Schorndorf", 25, 100, 60)])
 
     def test_sources_without_places_run_once_with_empty_location(self):
         result, calls = self.collect({"": ("done", [job(1)])}, places=())

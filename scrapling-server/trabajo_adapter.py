@@ -48,8 +48,8 @@ def search_url(q="", location=""):
     The keyword belongs to the path segment itself
     (``/stellenangebote-<keyword>``), and with a keyword the place is appended
     as its own segment (``/stellenangebote-<keyword>/<place>``). Without a
-    keyword the portal's place index is ``/stellenangebote/<Place>`` (the name
-    as written, not a lower-case slug): that page is already limited to the
+    keyword the portal's place index is ``/stellenangebote/<Place>`` (the
+    URL-encoded place name): that page is already limited to the
     town, so the catalog can read it instead of the nationwide list.
     """
     keyword = slug(q)
