@@ -25,11 +25,20 @@ from sources import AGGREGATOR_SOURCES, ISOLATED_SOURCES, registry
 # Bundesweite Börsen/Aggregatoren: ohne Suchbegriff und Ortsfilter nur Rauschen.
 DEFAULT_EXCLUDED = {"indeed", "stepstone", "bluum_bw", *AGGREGATOR_SOURCES}
 SCHEMA = 1
-# Portale mit Ortsliste (Kärcher Winnenden hatte genau 50 = zwei Seiten): bis zu vier Ergebnisseiten à 25.
-LOCATION_PAGES = 4
-LOCATION_DETAILS = 100
-LOCATION_DOCUMENTS = 140
-LOCATION_SECONDS = 450
+# Der Katalog soll jede Quelle vollständig lesen; gefiltert wird erst in der App. Die Grenzen sind deshalb nur
+# Sicherungen gegen Endlosschleifen, keine Auswahl: Stellen, Einzelanzeigen, Ergebnisseiten und Abrufe je Quelle.
+CATALOG_JOBS = 5000
+CATALOG_DETAILS = 5000
+CATALOG_PAGES = 100
+CATALOG_DOCUMENTS = 6000
+# Bundesweite Anzeigen-Sitemaps (tausende Anzeigen, je Anzeige ein Abruf): alle Anzeigen im Suchgebiet,
+# ohne Suchbegriff; Anzeigen ohne erkennbaren Ort zählen mit. Mittelpunkt, Umkreis (km), Zeitbudget (s).
+AREA_SOURCES = {"persona", "lidl", "kaufland"}
+AREA = ("Waiblingen", 150)
+AREA_SECONDS = 3600
+# Gesamtzeit des Laufs (s): danach werden keine weiteren Quellen mehr begonnen, damit das Ergebnis vor dem
+# Workflow-Timeout gespeichert wird. Nicht mehr gelesene Quellen behalten ihre Stellen aus dem Vorlauf.
+RUN_SECONDS = 5 * 3600
 # Quellen, deren robots.txt lange Wartezeiten zwischen Abrufen verlangt (PFISTERER: 10 s): Faktor auf das Zeitbudget.
 SLOW_SOURCES = {"pfisterer": 4}
 # Zeitlimit (s) je einzelnem Abruf, wo 8 s zu knapp sind (langsame Portale, grosse Sitemaps).
@@ -40,9 +49,6 @@ TRANSIENT = {"network_error", "upstream_error", "timeout", "robots_unavailable"}
 RETRY_PAUSES = (90, 180)
 # Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
 MIN_DELAY = {}
-# Sitemap-Quellen lesen jede Anzeige einzeln: mehr Einzelseiten und mehr Zeit als der Standard.
-SITEMAP_DETAILS = 160
-SITEMAP_DOCUMENTS = 200
 FIELDS = ("id", "title", "company", "location", "url", "posted")
 
 
@@ -188,35 +194,51 @@ def overview(catalog):
     return "\n".join(lines)
 
 
-def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print):
+def source_seconds(key, source, options):
+    """Zeitbudget je Quelle bzw. je Ort; Börsen mit langem Crawl-Delay und Sitemaps bekommen mehr."""
+    if key in AREA_SOURCES:
+        return max(options.seconds, AREA_SECONDS)
+    factor = 2 if key in ISOLATED_SOURCES or getattr(source, "adapter", "") == "sitemap" else 1
+    return options.seconds * factor * SLOW_SOURCES.get(key, 1)
+
+
+def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print, deadline=None):
     factory = factory or make_transport_factory()
     results = {}
     for index, key in enumerate(keys):
         source = configured[key]
-        # Globale Konzernportale werden je Ort einzeln abgefragt (catalog_locations), alle anderen einmal ohne Ort.
-        places = tuple(getattr(source, "catalog_locations", ())) or ("",)
+        if deadline is not None and time.monotonic() >= deadline:
+            results[key] = {"label": source.label, "status": "timeout", "jobs": [],
+                            "detail": "Gesamtzeit des Laufs erschöpft, Quelle nicht mehr gelesen"}
+            log(f"{key}: timeout (Gesamtzeit erschöpft)")
+            continue
+        # Globale Konzernportale werden je Ort einzeln abgefragt (catalog_locations), bundesweite Sitemaps im
+        # Suchgebiet (AREA), alle anderen einmal ohne Ort.
+        area = key in AREA_SOURCES
+        places = (AREA[0],) if area else tuple(getattr(source, "catalog_locations", ())) or ("",)
         jobs, seen, failures, done, detail = [], set(), [], 0, None
         started = time.monotonic()
         for place in places:
-            req = SimpleNamespace(q="", location=place, radius_km=25, sources=[key],
-                                  max_jobs=max(options.max_jobs, LOCATION_DETAILS) if place else options.max_jobs,
-                                  max_details=(max(options.max_details, LOCATION_DETAILS) if place else
-                                               max(options.max_details, SITEMAP_DETAILS) if getattr(source, "adapter", "") == "sitemap" else options.max_details),
-                                  documents=(max(options.documents, LOCATION_DOCUMENTS) if place else
-                                             max(options.documents, SITEMAP_DOCUMENTS) if getattr(source, "adapter", "") == "sitemap" else options.documents),
+            seconds = source_seconds(key, source, options)
+            if deadline is not None:
+                seconds = max(1, min(seconds, deadline - time.monotonic()))
+            req = SimpleNamespace(q="", location=place, radius_km=AREA[1] if area else 25, sources=[key],
+                                  max_jobs=options.max_jobs, max_details=options.max_details,
+                                  max_pages=options.max_pages, documents=options.documents,
                                   robots_missing_ok=not options.strict_robots,
                                   min_delay=MIN_DELAY.get(key, 0),
                                   request_timeout=SLOW_REQUESTS.get(key, 8),
-                                  seconds=(max(options.seconds, LOCATION_SECONDS) if place else options.seconds)
-                                  * (2 if key in ISOLATED_SOURCES or getattr(source, "adapter", "") == "sitemap" else 1) * SLOW_SOURCES.get(key, 1))
-            if place:
-                req.max_pages = LOCATION_PAGES
+                                  seconds=seconds)
             try:
                 outcome = crawl(req, factory)
                 report = outcome["sources"][0]
             except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
                 report, outcome = {"status": "worker_error"}, {"jobs": []}
                 log(f"  ! {key} {place}: {type(error).__name__}")
+            if report["status"] in {"timeout", "request_limit"} and outcome["jobs"]:
+                # Zeit- oder Abrufbudget mitten in einer großen Quelle erschöpft: Gelesenes zählt, Rest im Detail.
+                failures.append((place, f"{report['status']} nach {len(outcome['jobs'])} Stellen"))
+                report = {**report, "status": "done"}
             if report["status"] == "done":
                 done += 1
                 for job in outcome["jobs"]:
@@ -251,22 +273,23 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
     return results
 
 
-def collect_with_retry(keys, configured, options, factory=None, sleep=time.sleep, log=print, pauses=RETRY_PAUSES):
+def collect_with_retry(keys, configured, options, factory=None, sleep=time.sleep, log=print, pauses=RETRY_PAUSES,
+                       deadline=None):
     """Hauptdurchlauf, danach bis zu zweimal die Quellen mit vorübergehendem Fehler wiederholen.
 
     GitHub-Runner erreichen einzelne Portale zeitweise nicht (Timeout, 5xx, robots.txt nicht lesbar);
     Wiederholungen nach einer Pause beheben das meist. Ein Erfolg ersetzt den Fehlschlag; sonst bleibt
     das erste Ergebnis, mit dem Hinweis, wie oft es erneut versucht wurde.
     """
-    results = collect(keys, configured, options, factory=factory, sleep=sleep, log=log)
+    results = collect(keys, configured, options, factory=factory, sleep=sleep, log=log, deadline=deadline)
     tries = {}
     for pause in pauses:
         again = [key for key in keys if results[key]["status"] in TRANSIENT]
-        if not again:
+        if not again or (deadline is not None and time.monotonic() + pause >= deadline):
             break
         log(f"\nWiederholung nach {pause} s: {', '.join(again)}")
         sleep(pause)
-        second = collect(again, configured, options, factory=factory, sleep=sleep, log=log)
+        second = collect(again, configured, options, factory=factory, sleep=sleep, log=log, deadline=deadline)
         for key in again:
             tries[key] = tries.get(key, 0) + 1
             if second[key]["status"] == "done":
@@ -286,10 +309,13 @@ def main(argv=None):
                         help="Kommagetrennte Quellenschlüssel; leer = alle Arbeitgeber des Katalogs")
     parser.add_argument("--exclude", default=os.environ.get("SCRAPJOBS_EXCLUDE"),
                         help="Kommagetrennt; ersetzt die Standard-Ausschlussliste (indeed, stepstone, bluum_bw, jobsuche_bw)")
-    parser.add_argument("--max-details", type=int, default=25, help="Einzelanzeigen je Quelle")
-    parser.add_argument("--max-jobs", type=int, default=60, help="Stellen je Quelle")
-    parser.add_argument("--documents", type=int, default=90, help="Abrufe je Quelle")
-    parser.add_argument("--seconds", type=int, default=300, help="Zeitbudget je Quelle (Börsen mit 10 s Crawl-Delay doppelt)")
+    parser.add_argument("--max-details", type=int, default=CATALOG_DETAILS, help="Einzelanzeigen je Quelle")
+    parser.add_argument("--max-jobs", type=int, default=CATALOG_JOBS, help="Stellen je Quelle")
+    parser.add_argument("--max-pages", type=int, default=CATALOG_PAGES, help="Ergebnisseiten je Quelle")
+    parser.add_argument("--documents", type=int, default=CATALOG_DOCUMENTS, help="Abrufe je Quelle")
+    parser.add_argument("--seconds", type=int, default=900,
+                        help="Zeitbudget je Quelle (Börsen mit 10 s Crawl-Delay und Sitemaps doppelt, Suchgebiet-Sitemaps 1 h)")
+    parser.add_argument("--run-seconds", type=int, default=RUN_SECONDS, help="Gesamtzeit des Laufs")
     parser.add_argument("--max-body-mb", type=int, default=8, help="Größte erlaubte Antwort (Live-Dienst: 2 MB)")
     parser.add_argument("--pause", type=float, default=2.0, help="Sekunden Pause zwischen Quellen")
     parser.add_argument("--strict-robots", action="store_true",
@@ -318,7 +344,7 @@ def run(options):
     except ValueError:
         previous = None
     print(f"{len(keys)} Quellen")
-    results = collect_with_retry(keys, configured, options)
+    results = collect_with_retry(keys, configured, options, deadline=time.monotonic() + options.run_seconds)
     now = datetime.now(timezone.utc)
     history = out.with_name("laeufe.csv")
     if not any(r["status"] == "done" for r in results.values()):

@@ -86,7 +86,7 @@ def lidl(source, req, get, report):
     origin = geo.center(req.location) if getattr(req, "location", "") else None
     urls = select(rows, req.q, origin, getattr(req, "radius_km", 25))
     report["detail"] = f"{len(rows)} Anzeigen im Sitemap, {len(urls)} passend"
-    for raw in urls[:source.max_details]:
+    for raw in urls[:getattr(req, "max_details", source.max_details)]:
         document = detail_document(get, raw, source, report)
         if document is None:
             continue

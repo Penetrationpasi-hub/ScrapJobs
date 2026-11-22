@@ -61,7 +61,7 @@ def workday(source, req, get, report):
               if re.fullmatch(r"[a-f0-9]{32}", v)]
     if wanted:
         facets["locations"] = wanted
-    for offset in range(0, 200, 20):
+    for offset in range(0, 20 * getattr(req, "max_pages", 10), 20):
         data = json_document(get, source.api, source, {
             "appliedFacets": facets, "limit": 20, "offset": offset, "searchText": req.q})
         rows = data.get("jobPostings") if isinstance(data, dict) else None

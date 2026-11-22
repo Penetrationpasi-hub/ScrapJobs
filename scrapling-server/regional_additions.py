@@ -37,7 +37,7 @@ def judo(source, req, get, report):
     links, _ = discovery(data["data"], final, source, req.q)
     if not links:
         report["status"] = "unsupported"
-    for url in links[:10]:
+    for url in links[:getattr(req, "max_details", 10)]:
         target, html = get(url, source)
         if canonical(target) != canonical(url):
             report["filtered"] += 1
