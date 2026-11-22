@@ -483,6 +483,12 @@ class CatalogLocationsTest(unittest.TestCase):
                 self.assertEqual(len(result["jobs"]), 2)
                 self.assertIn(state, result["detail"])
 
+    def test_incomplete_with_jobs_is_partial_without_jobs_it_stays_incomplete(self):
+        result, _ = self.collect({"": ("incomplete", [job(1)])}, places=())
+        self.assertEqual((result["status"], len(result["jobs"])), ("done", 1))
+        result, _ = self.collect({"": ("incomplete", [])}, places=())
+        self.assertEqual(result["status"], "incomplete")
+
     def test_blocked_without_jobs_stays_blocked(self):
         result, _ = self.collect({"": ("blocked", [])}, places=())
         self.assertEqual(result["status"], "blocked")
@@ -495,6 +501,18 @@ class CatalogLocationsTest(unittest.TestCase):
 
     def test_area_comes_from_the_retail_region(self):
         self.assertEqual(batch.AREA, ("Waiblingen", 50))
+
+    def test_catalent_uses_the_full_area_with_the_normal_time_budget(self):
+        seen = []
+
+        def fake(req, factory):
+            seen.append((req.location, req.radius_km, req.seconds))
+            return {"jobs": [], "sources": [{"status": "done"}]}
+
+        with mock.patch.object(batch, "crawl", fake):
+            batch.collect(["catalent"], registry(), self.options, factory=object(),
+                          sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(seen, [("Waiblingen", 50, 300)])
 
     def test_cli_defaults_read_sources_completely(self):
         captured = {}
@@ -569,7 +587,8 @@ class CatalogConfigTest(unittest.TestCase):
 
     def test_phenom_portals_use_regional_places(self):
         configured = registry()
-        self.assertEqual(configured["catalent"].catalog_locations, ("Schorndorf",))
+        self.assertIn("catalent", batch.AREA_SEARCH_SOURCES)
+        self.assertEqual(configured["catalent"].catalog_locations, ())
         self.assertIn("Stuttgart", configured["deutsche_post"].catalog_locations)
 
     def test_location_is_substituted_into_the_search_url(self):

@@ -95,6 +95,20 @@ MAHLE: Stuttgart, Fellbach, Markgröningen, Kornwestheim, Mühlacker. Schlägt e
 und `quellen[].detail` nennt den fehlenden Ort. Die Orte gelten nur im Katalog, nicht in der Live-Suche.
 Frühere weltweite Treffer verschwinden nach der Karenzzeit (3 Tage) von selbst.
 
+**Catalent** (`catalent`) wird im Katalog über die Phenom-Suche mit **Waiblingen + 50 km** abgefragt.
+Bei Anzeigen mit mehreren Standorten zählen alle belegten deutschen Standorte (einschließlich PLZ und Koordinaten),
+also auch Schorndorf als Zweitstandort neben Eberbach. Die Ortsdaten trennen Schorndorf (73614) und
+Schorndorf in der Oberpfalz (93489); aus beiden Orten darf kein gemeinsamer Suchmittelpunkt entstehen.
+Leere, gültige Suchantworten werden als Nulltreffer gemeldet; fehlerhafte oder wiederholte Ergebnisseiten sowie
+eingebettete Ersatztreffer nach einem Suchfehler gelten als unvollständig. Catalent steht nach erfolgreicher
+Live-Prüfung nicht mehr in `ohne_stellen_ok.json`.
+
+Gleichnamige Orte weit auseinander (Leonberg, Lorch, Urbach …) werden für einen Suchmittelpunkt nicht gemittelt:
+`geo.center` nimmt die Gruppe mit den meisten Postleitzahlen, bei Gleichstand die nächste an Waiblingen. Anzeigenorte
+zählen weiter mit dem nächstgelegenen Treffer. Bricht die Phenom-Suche nach gelesenen Seiten ab, behält der Katalog
+die Stellen (Status `incomplete`, im Lauf „teilweise“); scheitert schon die erste Seite, zählt die Quelle als Fehler.
+Die Live-Suche in Netlify nutzt eine eigene Ortsdatei und ist von dieser Korrektur nicht erfasst.
+
 ## Datenformat
 
 Nur Metadaten, **keine Anzeigentexte** (das Repo ist öffentlich). Den Volltext holt die App

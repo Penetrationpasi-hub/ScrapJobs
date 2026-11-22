@@ -8,10 +8,14 @@ Die Suchergebnisse stehen bei diesen Portalen nicht im HTML, sondern werden vom 
    und Radius, Sprache/Land aus `"locale"` der Seite, Seitenwechsel über `from`), Antwort
    `refineSearch.data.jobs[]` mit Titel, Ort (Stadt, Land, Koordinaten), Datum, Kurztext und Kennung.
 Die Anzeigenadresse ist `https://<Host>/<Sprache>/job/<Kennung>/<Titel-Slug>`; Einzelseiten werden nicht abgerufen.
+Mehrere Standorte werden aus `multi_location_array` mit Land, PLZ und Koordinaten übernommen; der nächstgelegene
+deutsche Standort entscheidet über den Umkreis. Unvollständige Antworten oder Ersatztreffer nach einem Suchfehler
+bleiben im Status erkennbar, damit der Katalog sie nicht als vollständig gelesene Quelle wertet.
 Jede Anzeige läuft durch dieselbe Prüfung wie ein JobPosting (`extract`). Der Leser ist in `sources.py` an die
 bekannten Portale (`PHENOM_TENANTS`) gebunden.
 """
 import json
+import math
 import re
 from urllib.parse import quote
 
@@ -86,13 +90,14 @@ def classify(tenant, row):
     if not isinstance(ident, str) or not re.fullmatch(r"[A-Za-z0-9]{3,60}", ident) or not isinstance(title, str) or not slug(title):
         return None, "kennung"
     country = str(row.get("country") or "")
-    if country.casefold() not in GERMANY:
+    places = locations(row)
+    if not places:
         return None, "land:" + (country or "leer")
-    address = {"@type": "PostalAddress", "addressLocality": str(row.get("city") or ""),
-               "addressRegion": str(row.get("state") or ""), "addressCountry": "DE"}
     url = f"https://{tenant['host']}/{tenant['locale']}/job/{ident}/{quote(slug(title), safe='-')}"
     data = {"@type": "JobPosting", "title": title, "url": url, "hiringOrganization": {"name": tenant["company"]},
-            "jobLocation": {"@type": "Place", "address": address}, "datePosted": str(row.get("postedDate") or "")[:10]}
+            "jobLocation": places, "datePosted": str(row.get("postedDate") or "")[:10]}
+    if row.get("validThrough"):
+        data["validThrough"] = row["validThrough"]
     if isinstance(row.get("descriptionTeaser"), str):
         data["description"] = row["descriptionTeaser"][:4000]
     return data, None
@@ -103,11 +108,64 @@ def record(tenant, row):
     return classify(tenant, row)[0]
 
 
-def coordinates(row):
+def point(latitude, longitude):
     try:
-        return float(row["latitude"]), float(row["longitude"])
-    except (KeyError, TypeError, ValueError):
+        lat, lon = float(latitude), float(longitude)
+        if math.isfinite(lat) and math.isfinite(lon) and -90 <= lat <= 90 and -180 <= lon <= 180:
+            return lat, lon
+    except (TypeError, ValueError):
+        pass
+    return None
+
+
+def locations(row):
+    """Alle belegten deutschen Standorte; Phenom listet Zweitstandorte in multi_location_array."""
+    places = []
+
+    def add(city, state, postcode, coords):
+        address = {"@type": "PostalAddress", "addressLocality": city,
+                   "addressRegion": state, "addressCountry": "DE"}
+        if postcode:
+            address["postalCode"] = postcode
+        place = {"@type": "Place", "address": address}
+        if coords:
+            place["geo"] = {"latitude": coords[0], "longitude": coords[1]}
+        if place not in places:
+            places.append(place)
+
+    multi = row.get("multi_location_array")
+    if isinstance(multi, list):
+        for site in multi:
+            if not isinstance(site, dict) or not isinstance(site.get("location"), str):
+                continue
+            parts = [part.strip() for part in site["location"].split(",")]
+            country = next((i for i, part in enumerate(parts) if part.casefold() in GERMANY), None)
+            if country is None or country < 1:
+                continue
+            code = re.search(r"\b\d{5}\b", " ".join(parts[country + 1:]))
+            coords = site.get("latlong")
+            coords = point(coords.get("lat"), coords.get("lon")) if isinstance(coords, dict) else None
+            add(parts[0], ", ".join(parts[1:country]), code[0] if code else "", coords)
+    if not places and str(row.get("country") or "").casefold() in GERMANY:
+        code = str(row.get("postalCode") or "")
+        add(str(row.get("city") or ""), str(row.get("state") or ""),
+            code if re.fullmatch(r"\d{5}", code) else "", point(row.get("latitude"), row.get("longitude")))
+    return places
+
+
+def distance(origin, places):
+    if not origin:
         return None
+    distances = []
+    for place in places:
+        coords = place.get("geo", {})
+        coords = point(coords.get("latitude"), coords.get("longitude"))
+        address = place["address"]
+        near = geo.km(origin, coords) if coords else geo.distance_km(
+            origin, address.get("postalCode") or address.get("addressLocality"))
+        if near is not None:
+            distances.append(near)
+    return min(distances) if distances else None
 
 
 def phenom(source, req, get, report):
@@ -136,23 +194,38 @@ def phenom(source, req, get, report):
         except ValueError:
             raise FetchError("unsupported", detail="Widget-Antwort ist kein JSON") from None
         result = body.get("refineSearch") if isinstance(body, dict) else None
-        if not isinstance(result, dict) or result.get("status") not in (200, "200", None) or not isinstance(result.get("data"), dict):
+        if (not isinstance(result, dict) or result.get("status") not in (200, "200", None)
+                or not isinstance(result.get("data"), dict)
+                or not isinstance(result["data"].get("jobs"), list)
+                or type(result.get("totalHits")) is not int or result["totalHits"] < 0):
             raise FetchError("unsupported", detail="Widget-Antwort ohne Treffer-Daten: " + json.dumps(body)[:160])
         return result
 
     rows, sizes, total, source_note = [], [], 0, "Suche"
     try:
-        result = search(0)
-        total = result.get("totalHits") if isinstance(result.get("totalHits"), int) else 0
-        rows = list(result["data"].get("jobs") or [])
-        sizes.append(len(rows))
-        while rows and len(rows) < min(total, PAGE * getattr(req, "max_pages", MAX_PAGES)):
-            batch = search(len(rows))["data"].get("jobs") or []
+        seen = set()
+        for _ in range(getattr(req, "max_pages", MAX_PAGES)):
+            result = search(len(rows))
+            total = result["totalHits"]
+            batch = result["data"]["jobs"]
             sizes.append(len(batch))
-            if not batch:
-                break
+            if not batch and len(rows) < total:
+                raise FetchError("unsupported", detail="Phenom-Suche endet vor der gemeldeten Trefferzahl")
+            ids = [row.get(tenant["id_field"]) for row in batch if isinstance(row, dict)]
+            ids = [ident for ident in ids if isinstance(ident, str) and ident]
+            if seen.intersection(ids) or len(ids) != len(set(ids)):
+                raise FetchError("unsupported", detail="Phenom-Suche wiederholt Anzeigen bei der Pagination")
+            seen.update(ids)
             rows.extend(batch)
+            if len(rows) >= total:
+                break
+        else:
+            report["status"] = "result_limit"
     except FetchError as error:
+        # Schon gelesene Seiten sind serverseitig nach Ort gefiltert: sie bleiben erhalten und die Quelle gilt als
+        # unvollständig (batch.py: "teilweise"). Scheitert schon die erste Seite, bleibt es beim Fehlercode.
+        report["status"] = "incomplete" if rows else error.code
+        source_note = f"Suche unvollständig: {error.detail or error.code}"
         # Die eingebetteten Treffer der Seite kennen weder Suchbegriff noch Ort; sie sind nur der Notbehelf.
         if eager is None or rows:
             if not rows:
@@ -161,7 +234,7 @@ def phenom(source, req, get, report):
             rows = list(eager["data"].get("jobs") or [])
             total = eager.get("totalHits") or len(rows)
             source_note = f"eingebettete Seite, Suche fehlgeschlagen: {error.detail or error.code}"
-    ranked, why, foreign = [], {"kennung": 0, "umkreis": 0}, {}
+    ranked, why, foreign = [], {"kennung": 0, "umkreis": 0, "ort": 0}, {}
     for row in rows:
         data, reason = classify(tenant, row)
         if not data:
@@ -170,19 +243,20 @@ def phenom(source, req, get, report):
             else:
                 foreign[reason[5:]] = foreign.get(reason[5:], 0) + 1
             continue
-        point = coordinates(row)
-        near = geo.km(origin, point) if origin and point else (
-            geo.distance_km(origin, data["jobLocation"]["address"]["addressLocality"]) if origin else None)
+        near = distance(origin, data["jobLocation"])
+        if origin and near is None:
+            why["ort"] += 1
+            continue
         if near is not None and near > radius:
             why["umkreis"] += 1
             continue
         ranked.append((near is None, near or 0, data))
-    if not ranked or total > len(rows):
+    if not ranked or total > len(rows) or report.get("status", "done") != "done":
         top = ", ".join(f"{name}×{count}" for name, count in sorted(foreign.items(), key=lambda kv: -kv[1])[:4]) or "-"
         report["detail"] = (
             f"{total} Treffer ({source_note}, {lang}, Ort {'ja' if location else 'nein'}), {len(rows)} gelesen (Seiten {sizes}); "
             f"{len(ranked)} in Deutschland und im Umkreis; anderes Land: {top}; ohne Kennung {why['kennung']}; "
-            f"außerhalb Umkreis {why['umkreis']}")
+            f"außerhalb Umkreis {why['umkreis']}; Ort unbekannt {why['ort']}")
     ranked.sort(key=lambda item: (item[0], item[1]))
     for _, _, data in ranked:
         safe = json.dumps(data).replace("<", "\\u003c")

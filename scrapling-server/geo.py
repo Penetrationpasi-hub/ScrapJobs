@@ -74,11 +74,39 @@ def resolve(text):
     return max(pool, key=lambda ort: ort["population"])["points"] if pool else None
 
 
+# Bezugspunkt für gleichnamige Orte ohne klaren Favoriten (Waiblingen, PLZ 71332).
+ANCHOR = (48.8309, 9.3163)
+CLUSTER_KM = 30
+
+
+def clusters(points, link_km=CLUSTER_KM):
+    """Gruppiert Punkte (Single-Linkage): gleichnamige Orte weit voneinander landen in getrennten Gruppen."""
+    groups = []
+    for point in points:
+        near = [group for group in groups if any(km(point, other) <= link_km for other in group)]
+        merged = [point]
+        for group in near:
+            merged.extend(group)
+            groups.remove(group)
+        groups.append(merged)
+    return groups
+
+
+def mean(points):
+    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+
+
 def center(text):
+    """Mittelpunkt des Ortes. Bei gleichnamigen Orten weit auseinander (Schorndorf, Leonberg, Lorch …) zählt nur
+    eine Gruppe: die mit den meisten Postleitzahlen, bei Gleichstand die dem Anker Waiblingen nächste.
+    Ein Mittelwert über mehrere Gruppen läge sonst mitten im Nirgendwo."""
     points = resolve(text)
     if not points:
         return None
-    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+    groups = clusters(points)
+    if len(groups) > 1:
+        points = min(groups, key=lambda group: (-len(group), km(ANCHOR, mean(group))))
+    return mean(points)
 
 
 def distance_km(origin, place_text):
