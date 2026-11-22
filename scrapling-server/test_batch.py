@@ -458,7 +458,7 @@ class CatalogLocationsTest(unittest.TestCase):
         with mock.patch.object(batch, "crawl", fake):
             batch.collect(["festo", "stihl", "lidl"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
         self.assertEqual(seen, [("Esslingen", 25, 25, 100, 60, 90, 300), ("", 25, 25, 100, 60, 90, 600),
-                                ("Waiblingen", 150, 25, 100, 60, 90, batch.AREA_SECONDS)])
+                                ("Waiblingen", 50, 25, 100, 60, 90, batch.AREA_SECONDS)])
 
     def test_cli_defaults_read_sources_completely(self):
         captured = {}
@@ -568,3 +568,32 @@ class HistoryTest(unittest.TestCase):
         acme, b = rows[0], rows[1]
         self.assertEqual((acme["quelle"], acme["stellen_lauf"], acme["neu"], acme["im_katalog"]), ("acme", "2", "1", "2"))
         self.assertEqual((b["status"], b["stellen_lauf"]), ("timeout", "0"))
+
+
+class AreaTest(unittest.TestCase):
+    def row(self, location, source="stihl"):
+        return {"id": location, "source": source, "location": location}
+
+    def test_inside_and_outside_the_radius(self):
+        self.assertEqual(batch.AREA, ("Waiblingen", 50))
+        self.assertTrue(batch.in_area(self.row("71332 Waiblingen")))
+        self.assertTrue(batch.in_area(self.row("70174 Stuttgart Deutschland")))
+        self.assertTrue(batch.in_area(self.row("Winnenden BW DE")))  # Fallback auf einzelne Wörter
+        self.assertFalse(batch.in_area(self.row("87487 Wiggensbach Bayern DE")))
+        self.assertFalse(batch.in_area(self.row("Weener, DE, 26826")))
+
+    def test_unknown_place_counts_only_for_regional_employers_in_germany(self):
+        self.assertTrue(batch.in_area(self.row("")))
+        self.assertTrue(batch.in_area(self.row("Remote Deutschland")))
+        self.assertFalse(batch.in_area(self.row("", source="lidl")))
+        self.assertFalse(batch.in_area(self.row("GB UK Vereinigtes Königreich")))
+        self.assertFalse(batch.in_area(self.row("Beringen CH")))
+
+    def test_keep_area_filters_run_and_previous_catalog(self):
+        results = {"x": {"label": "X", "status": "done", "detail": None,
+                         "jobs": [{**job(1), "location": "Fellbach"}, {**job(2), "location": "Hamburg"}]}}
+        previous = {"stellen": [self.row("Hamburg"), self.row("Backnang")]}
+        results, previous = batch.keep_area(results, previous)
+        self.assertEqual([j["id"] for j in results["x"]["jobs"]], ["scrapling-1"])
+        self.assertIn("1 außerhalb 50 km um Waiblingen", results["x"]["detail"])
+        self.assertEqual([r["location"] for r in previous["stellen"]], ["Backnang"])

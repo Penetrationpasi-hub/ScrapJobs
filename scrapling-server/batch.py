@@ -11,12 +11,14 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
+import geo
 import safe_http
 from crawler import crawl
 from safe_http import Transport
@@ -31,11 +33,16 @@ CATALOG_JOBS = 5000
 CATALOG_DETAILS = 5000
 CATALOG_PAGES = 100
 CATALOG_DOCUMENTS = 6000
-# Bundesweite Anzeigen-Sitemaps (tausende Anzeigen, je Anzeige ein Abruf): alle Anzeigen im Suchgebiet,
-# ohne Suchbegriff; Anzeigen ohne erkennbaren Ort zählen mit. Mittelpunkt, Umkreis (km), Zeitbudget (s).
+# Umkreis des Katalogs (Mittelpunkt, km): die Arbeitsmarktanalyse im Repo Jobs rechnet jede Stelle zum Umkreis
+# Waiblingen, Stellen außerhalb würden sie verfälschen. Stuttgart (~7 km) liegt darin.
+AREA = ("Waiblingen", 50)
+# Bundesweite Anzeigen-Sitemaps (tausende Anzeigen, je Anzeige ein Abruf): nur Anzeigen im Umkreis werden
+# abgerufen, ohne Suchbegriff. Ohne erkennbaren Ort zählt eine Anzeige dort nicht (bundesweites Portal).
 AREA_SOURCES = {"persona", "lidl", "kaufland"}
-AREA = ("Waiblingen", 150)
 AREA_SECONDS = 3600
+# Ortsangaben, die auf einen Standort im Ausland deuten (Stellen ohne auflösbaren deutschen Ort).
+FOREIGN = re.compile(r"\b(?:CH|AT|BE|FR|GB|UK|ES|IT|NL|PL|CZ|US|CN|Schweiz|Österreich|Belgien|Frankreich|Spanien|"
+                     r"Italien|Niederlande|Polen|Tschechien|Vereinigtes Königreich|United Kingdom|USA|China)\b")
 # Gesamtzeit des Laufs (s): danach werden keine weiteren Quellen mehr begonnen, damit das Ergebnis vor dem
 # Workflow-Timeout gespeichert wird. Nicht mehr gelesene Quellen behalten ihre Stellen aus dem Vorlauf.
 RUN_SECONDS = 5 * 3600
@@ -194,6 +201,44 @@ def overview(catalog):
     return "\n".join(lines)
 
 
+def area_distance(origin, place):
+    """Entfernung (km) zum nächsten erkennbaren Ort; Fallback auf einzelne Wörter („Winnenden BW DE“), None wenn unbekannt."""
+    distance = geo.distance_km(origin, place)
+    if distance is not None:
+        return distance
+    found = [geo.distance_km(origin, word) for word in re.findall(r"[A-ZÄÖÜ][\wäöüß.-]{2,}", place or "")
+             if geo.norm(word) not in geo.REGION_WORDS]
+    found = [value for value in found if value is not None]
+    return min(found) if found else None
+
+
+def in_area(row, origin=None):
+    """Stelle im Umkreis AREA? Unbekannter Ort zählt bei regionalen Arbeitgebern, nicht bei bundesweiten Portalen
+    und nicht bei Standorten im Ausland."""
+    origin = origin or geo.center(AREA[0])
+    place = row.get("location") or ""
+    distance = area_distance(origin, place)
+    if distance is not None:
+        return distance <= AREA[1]
+    return row.get("source") not in AREA_SOURCES and not FOREIGN.search(place)
+
+
+def keep_area(results, previous):
+    """Stellen außerhalb des Umkreises aus dem Lauf und aus dem Vorstand entfernen; Zahl je Quelle im Detail."""
+    origin = geo.center(AREA[0])
+    for key, result in results.items():
+        kept = [job for job in result["jobs"] if in_area({**job, "source": key}, origin)]
+        dropped = len(result["jobs"]) - len(kept)
+        if dropped:
+            note = f"{dropped} außerhalb {AREA[1]} km um {AREA[0]}"
+            result["detail"] = (result["detail"] + " · " + note) if result.get("detail") else note
+        result["jobs"] = kept
+    if previous:
+        previous = {**previous, "stellen": [row for row in previous.get("stellen", [])
+                                            if not isinstance(row, dict) or in_area(row, origin)]}
+    return results, previous
+
+
 def source_seconds(key, source, options):
     """Zeitbudget je Quelle bzw. je Ort; Börsen mit langem Crawl-Delay und Sitemaps bekommen mehr."""
     if key in AREA_SOURCES:
@@ -345,6 +390,8 @@ def run(options):
         previous = None
     print(f"{len(keys)} Quellen")
     results = collect_with_retry(keys, configured, options, deadline=time.monotonic() + options.run_seconds)
+    # Nur Stellen im Umkreis (AREA) in den Katalog, auch aus dem Vorstand.
+    results, previous = keep_area(results, previous)
     now = datetime.now(timezone.utc)
     history = out.with_name("laeufe.csv")
     if not any(r["status"] == "done" for r in results.values()):

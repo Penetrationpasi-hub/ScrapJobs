@@ -18,13 +18,17 @@ https://raw.githubusercontent.com/Penetrationpasi-hub/ScrapJobs/main/stellen.jso
    Kalendertags, weitere Läufe am selben Tag werden übersprungen.
 2. Zuerst laufen die Tests, dann `scrapling-server/batch.py`.
 3. `batch.py` ruft für jede Quelle dieselbe `crawl()`-Logik auf wie der Live-Dienst, nur im
-   **Katalogmodus**: ohne Suchbegriff und Ort und **vollständig** – gefiltert wird erst in der App.
+   **Katalogmodus**: ohne Suchbegriff und **vollständig**, aber nur Stellen im **Umkreis von 50 km um
+   Waiblingen** (Stuttgart liegt darin; `AREA` in `batch.py`). Die Arbeitsmarktanalyse im Repo Jobs rechnet jede
+   Stelle zu diesem Umkreis, Stellen außerhalb würden sie verfälschen. Der Filter gilt für den Lauf und den
+   Vorstand; die Zahl entfernter Stellen steht im Detail der Quelle. Ohne erkennbaren Ort bleibt eine Stelle
+   bei regionalen Arbeitgebern stehen, nicht bei bundesweiten Portalen und nicht bei Ortsangaben im Ausland.
    Die Grenzen (5000 Stellen/Einzelanzeigen, 100 Ergebnisseiten, 6000 Abrufe je Quelle) sind nur Sicherungen.
    Zeitbudget 900 s je Quelle (Börsen mit 10 s Crawl-Delay und Sitemaps doppelt, PFISTERER vierfach);
    ist es erschöpft, zählt das bis dahin Gelesene („teilweise: timeout nach N Stellen“). Nach 5 h Gesamtzeit
    beginnt der Lauf keine neue Quelle mehr; diese behalten ihre Stellen aus dem Vorlauf.
-   **Bundesweite Sitemaps** (persona, Lidl, Kaufland): alle Anzeigen im Suchgebiet **150 km um Waiblingen**
-   (`AREA` in `batch.py`), Anzeigen ohne erkennbaren Ort zählen mit; je Portal bis zu 1 h.
+   **Bundesweite Sitemaps** (persona, Lidl, Kaufland): abgerufen werden nur die Anzeigen im Umkreis
+   (dazu die ohne erkennbaren Ort, die nach dem Abruf geprüft werden); je Portal bis zu 1 h.
 4. Danach wird `stellen.json` zusammengeführt und zusammen mit `STELLEN.md` und
    [`stellen.xlsx`](stellen.xlsx) committet.
 

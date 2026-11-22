@@ -6,5 +6,6 @@
   "kuebler": "kein Adapter für das Portal (unsupported)",
   "bosch": "Host jobs.bosch.com nicht freigegeben (unsafe_target)",
   "scutum": "Host nicht freigegeben (unsafe_target)",
-  "stadtwerke_schorndorf": "robots.txt sperrt die Karriereseite (robots_denied)"
+  "stadtwerke_schorndorf": "robots.txt sperrt die Karriereseite (robots_denied)",
+  "swoboda": "alle Stellen außerhalb des Umkreises (Wiggensbach, Allgäu)"
 }
