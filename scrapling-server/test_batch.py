@@ -475,6 +475,27 @@ class CatalogLocationsTest(unittest.TestCase):
             batch.collect(["diakonie_stetten", "stihl"], configured, options, factory=object(), sleep=lambda s: None, log=lambda m: None)
         self.assertEqual(seen, [("diakonie_stetten", 60, 60, 70, 2), ("stihl", 5000, 5000, 6000, 0)])
 
+    def test_blocked_or_result_limit_with_jobs_is_partial(self):
+        for state in ("blocked", "result_limit"):
+            with self.subTest(state=state):
+                result, _ = self.collect({"": (state, [job(1), job(2)])}, places=())
+                self.assertEqual(result["status"], "done")
+                self.assertEqual(len(result["jobs"]), 2)
+                self.assertIn(state, result["detail"])
+
+    def test_blocked_without_jobs_stays_blocked(self):
+        result, _ = self.collect({"": ("blocked", [])}, places=())
+        self.assertEqual(result["status"], "blocked")
+
+    def test_big_retail_sources_get_more_time_and_spacing(self):
+        options = SimpleNamespace(seconds=900)
+        self.assertEqual(batch.source_seconds("dm", SimpleNamespace(), options), 2700)
+        self.assertEqual(batch.source_seconds("aldi_sued", SimpleNamespace(), options), 900)
+        self.assertEqual((batch.MIN_DELAY["dm"], batch.MIN_DELAY["aldi_sued"]), (2, 2))
+
+    def test_area_comes_from_the_retail_region(self):
+        self.assertEqual(batch.AREA, ("Waiblingen", 50))
+
     def test_cli_defaults_read_sources_completely(self):
         captured = {}
         with mock.patch.object(batch, "run", lambda options: captured.setdefault("o", options) and 0):

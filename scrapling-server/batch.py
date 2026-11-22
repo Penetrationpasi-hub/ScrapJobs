@@ -21,6 +21,7 @@ from types import SimpleNamespace
 import geo
 import safe_http
 from crawler import crawl
+from retail_region import AREA_KM, AREA_NAME
 from safe_http import Transport
 from sources import AGGREGATOR_SOURCES, ISOLATED_SOURCES, registry
 
@@ -35,7 +36,7 @@ CATALOG_PAGES = 100
 CATALOG_DOCUMENTS = 6000
 # Umkreis des Katalogs (Mittelpunkt, km): die Arbeitsmarktanalyse im Repo Jobs rechnet jede Stelle zum Umkreis
 # Waiblingen, Stellen außerhalb würden sie verfälschen. Stuttgart (~7 km) liegt darin.
-AREA = ("Waiblingen", 50)
+AREA = (AREA_NAME, AREA_KM)
 # Bundesweite Anzeigen-Sitemaps (tausende Anzeigen, je Anzeige ein Abruf): nur Anzeigen im Umkreis werden
 # abgerufen, ohne Suchbegriff. Ohne erkennbaren Ort zählt eine Anzeige dort nicht (bundesweites Portal).
 AREA_SOURCES = {"persona", "lidl", "kaufland"}
@@ -47,7 +48,8 @@ FOREIGN = re.compile(r"\b(?:CH|AT|BE|FR|GB|UK|ES|IT|NL|PL|CZ|US|CN|Schweiz|Öste
 # Workflow-Timeout gespeichert wird. Nicht mehr gelesene Quellen behalten ihre Stellen aus dem Vorlauf.
 RUN_SECONDS = 5 * 3600
 # Quellen, deren robots.txt lange Wartezeiten zwischen Abrufen verlangt (PFISTERER: 10 s): Faktor auf das Zeitbudget.
-SLOW_SOURCES = {"pfisterer": 4}
+# dm: rund 270 Einzelanzeigen, im Live-Lauf 894 s (Budget je Quelle sonst 900 s).
+SLOW_SOURCES = {"pfisterer": 4, "dm": 3}
 # Zeitlimit (s) je einzelnem Abruf, wo 8 s zu knapp sind (langsame Portale, grosse Sitemaps).
 SLOW_REQUESTS = {"db_audiotechnik": 20, "ksk_waiblingen": 15, "volksbank_stuttgart": 15, "landratsamt_rmk": 15}
 # Vorübergehende Fehler: die Quelle wird nach dem Hauptdurchlauf einmal wiederholt.
@@ -57,7 +59,8 @@ RETRY_PAUSES = (90, 180)
 # Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
 # deinjob.diakonie-stetten.de sperrte am 22.11.2026 nach rund 75 schnellen Abrufen mit HTTP 403 (zwei volle
 # Läufe binnen 20 Minuten). Deshalb 2 s Abstand und höchstens so viele Anzeigen wie vor dem Wegfall der Grenzen.
-MIN_DELAY = {"diakonie_stetten": 2}
+# ALDI SÜD und dm rufen je rund 270-400 Einzelanzeigen nacheinander ab.
+MIN_DELAY = {"diakonie_stetten": 2, "aldi_sued": 2, "dm": 2}
 # Quellen mit fester Obergrenze an Stellen bzw. Einzelanzeigen je Lauf (statt der Katalog-Grenzen).
 SOURCE_LIMITS = {"diakonie_stetten": 60}
 FIELDS = ("id", "title", "company", "location", "url", "posted")
@@ -285,7 +288,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
             except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
                 report, outcome = {"status": "worker_error"}, {"jobs": []}
                 log(f"  ! {key} {place}: {type(error).__name__}")
-            if report["status"] in {"timeout", "request_limit"} and outcome["jobs"]:
+            if report["status"] in {"timeout", "request_limit", "blocked", "result_limit"} and outcome["jobs"]:
                 # Zeit- oder Abrufbudget mitten in einer großen Quelle erschöpft: Gelesenes zählt, Rest im Detail.
                 failures.append((place, f"{report['status']} nach {len(outcome['jobs'])} Stellen"))
                 report = {**report, "status": "done"}

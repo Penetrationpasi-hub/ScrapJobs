@@ -340,6 +340,21 @@ def adapter_jobs(source, req, get, report):
     elif source.adapter == "waiblingen_page":
         from waiblingen_adapter import waiblingen
         yield from waiblingen(source, req, get, report)
+    elif source.adapter == "aldi_map":
+        from aldi_adapter import aldi
+        yield from aldi(source, req, get, report)
+    elif source.adapter == "dm_sitemap":
+        from dm_adapter import dm
+        yield from dm(source, req, get, report)
+    elif source.adapter == "toom_search":
+        from toom_adapter import toom
+        yield from toom(source, req, get, report)
+    elif source.adapter == "rewe_search":
+        from rewe_adapter import rewe
+        yield from rewe(source, req, get, report)
+    elif source.adapter == "penny_search":
+        from penny_adapter import penny
+        yield from penny(source, req, get, report)
     elif source.adapter in ("lidl_sitemap", "kaufland_sitemap"):
         from lidl_adapter import lidl
         yield from lidl(source, req, get, report)
