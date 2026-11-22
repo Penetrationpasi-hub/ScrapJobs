@@ -13,7 +13,7 @@ from unittest import mock
 import crawler
 from safe_http import FetchError
 from sources import AGGREGATOR_SOURCES, approved_sources, registry
-from trabajo_adapter import search_url, slug
+from trabajo_adapter import search_url, slug, trabajo
 
 HOST = "de.trabajo.org"
 BASE = f"https://{HOST}"
@@ -118,8 +118,12 @@ class TrabajoUrls(unittest.TestCase):
         self.assertEqual(search_url("Verkäufer Teilzeit", "Schwäbisch Gmünd"),
                          f"{BASE}/stellenangebote-verkaeufer-teilzeit/schwaebisch-gmuend")
 
-    def test_place_alone_is_not_a_search_route(self):
-        self.assertEqual(search_url("", "Waiblingen"), f"{BASE}/stellenangebote")
+    def test_place_alone_uses_the_town_index(self):
+        # The catalog has no keyword. /stellenangebote/<Ort> is the portal's own place list
+        # (about 20 ads per page, 50 pages for Waiblingen), not the nationwide /stellenangebote.
+        self.assertEqual(search_url("", "Waiblingen"), f"{BASE}/stellenangebote/Waiblingen")
+        self.assertEqual(search_url("", "Schwäbisch Gmünd"),
+                         f"{BASE}/stellenangebote/Schw%C3%A4bisch%20Gm%C3%BCnd")
         self.assertEqual(search_url("", ""), f"{BASE}/stellenangebote")
         self.assertEqual(search_url("Verkauf", ""), f"{BASE}/stellenangebote-verkauf")
 
@@ -136,6 +140,45 @@ class TrabajoUrls(unittest.TestCase):
 
 
 class TrabajoCrawl(unittest.TestCase):
+    def test_catalog_reads_more_than_ten_details_and_three_pages(self):
+        source = registry()["trabajo"]
+        start = search_url("", "Waiblingen")
+        fetched = []
+
+        def get(url, source):
+            fetched.append(url)
+            if "/stellenangebot-" in url:
+                return url, posting("waiblingen")
+            number = int(url.split("page=")[-1]) if "page=" in url else 1
+            links = "".join(f'<a href="{BASE}/stellenangebot-5506-{i:032x}">Verkauf</a>'
+                            for i in range((number - 1) * 4, number * 4))
+            following = (f'<nav aria-label="Page navigation"><a href="{start}?page={number + 1}">Weiter</a></nav>'
+                         if number < 5 else "")
+            return url, links + following
+
+        req = SimpleNamespace(q="", location="Waiblingen", radius_km=25, max_details=100, max_pages=4)
+        report = {"filtered": 0}
+        jobs = list(trabajo(source, req, get, report))
+        self.assertEqual(len(jobs), 16)
+        self.assertEqual(len(fetched), 20)
+        self.assertNotIn(start + "?page=5", fetched)
+        self.assertEqual(report["urls"], 16)
+
+    def test_live_defaults_still_limit_detail_requests_to_ten(self):
+        source = registry()["trabajo"]
+        fetched = []
+
+        def get(url, source):
+            fetched.append(url)
+            if "/stellenangebot-" in url:
+                return url, posting("waiblingen")
+            return url, "".join(f'<a href="{BASE}/stellenangebot-5506-{i:032x}">Verkauf</a>'
+                                for i in range(20))
+
+        req = SimpleNamespace(q="Verkauf", location="Waiblingen", radius_km=25)
+        self.assertEqual(len(list(trabajo(source, req, get, {"filtered": 0}))), 10)
+        self.assertEqual(len(fetched), 11)
+
     def test_only_ads_in_the_radius_are_fetched_across_pages(self):
         result = run()
         self.assertEqual(result["sources"][0]["status"], "done")
@@ -176,6 +219,8 @@ class TrabajoRegistry(unittest.TestCase):
         source = registry()["trabajo"]
         self.assertEqual((source.adapter, source.hosts, source.api), ("trabajo_search", (HOST,), ""))
         self.assertEqual((source.max_pages, source.max_details), (3, 10))
+        self.assertIn("Waiblingen", source.catalog_locations)
+        self.assertLessEqual(len(source.catalog_locations), 8)
         self.assertTrue(source.teaser and source.teaser_location)
 
     def test_reader_is_bound_to_the_public_german_search(self):

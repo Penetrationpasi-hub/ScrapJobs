@@ -494,6 +494,21 @@ class CatalogLocationsTest(unittest.TestCase):
         self.assertEqual(out["b"]["status"], "timeout")
         self.assertIn("Gesamtzeit", out["b"]["detail"])
 
+    def test_a_place_list_receives_the_catalog_limits_for_every_place(self):
+        # Aggregators such as Trabajo have no {location} in the search URL; the adapter builds
+        # /stellenangebote/<Ort> itself. Pass the requested budgets instead of the live cap of 10.
+        seen = []
+
+        def fake(req, factory):
+            seen.append((req.location, req.max_details, req.max_pages, req.max_jobs))
+            return {"jobs": [], "sources": [{"status": "done", "urls": 0, "matched": 0, "filtered": 0}]}
+
+        configured = {"trabajo": SimpleNamespace(label="Trabajo.org", adapter="trabajo_search",
+                                                 catalog_locations=("Waiblingen", "Schorndorf"))}
+        with mock.patch.object(batch, "crawl", fake):
+            batch.collect(["trabajo"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(seen, [("Waiblingen", 25, 100, 60), ("Schorndorf", 25, 100, 60)])
+
     def test_sources_without_places_run_once_with_empty_location(self):
         result, calls = self.collect({"": ("done", [job(1)])}, places=())
         self.assertEqual(calls, [""])
