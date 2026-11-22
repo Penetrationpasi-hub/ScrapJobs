@@ -55,7 +55,11 @@ TRANSIENT = {"network_error", "upstream_error", "timeout", "robots_unavailable"}
 # Pausen (s) vor der 1. und 2. Wiederholung.
 RETRY_PAUSES = (90, 180)
 # Mindestwartezeit (s) zwischen Abrufen, wenn der Server zu schnelle Abfragen mit 403/429 beantwortet.
-MIN_DELAY = {}
+# deinjob.diakonie-stetten.de sperrte am 22.11.2026 nach rund 75 schnellen Abrufen mit HTTP 403 (zwei volle
+# Läufe binnen 20 Minuten). Deshalb 2 s Abstand und höchstens so viele Anzeigen wie vor dem Wegfall der Grenzen.
+MIN_DELAY = {"diakonie_stetten": 2}
+# Quellen mit fester Obergrenze an Stellen bzw. Einzelanzeigen je Lauf (statt der Katalog-Grenzen).
+SOURCE_LIMITS = {"diakonie_stetten": 60}
 FIELDS = ("id", "title", "company", "location", "url", "posted")
 
 
@@ -263,13 +267,14 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
         places = (AREA[0],) if area else tuple(getattr(source, "catalog_locations", ())) or ("",)
         jobs, seen, failures, done, detail = [], set(), [], 0, None
         started = time.monotonic()
+        cap = SOURCE_LIMITS.get(key, options.max_jobs + options.max_details + options.documents)
         for place in places:
             seconds = source_seconds(key, source, options)
             if deadline is not None:
                 seconds = max(1, min(seconds, deadline - time.monotonic()))
             req = SimpleNamespace(q="", location=place, radius_km=AREA[1] if area else 25, sources=[key],
-                                  max_jobs=options.max_jobs, max_details=options.max_details,
-                                  max_pages=options.max_pages, documents=options.documents,
+                                  max_jobs=min(options.max_jobs, cap), max_details=min(options.max_details, cap),
+                                  max_pages=options.max_pages, documents=min(options.documents, cap + 10),
                                   robots_missing_ok=not options.strict_robots,
                                   min_delay=MIN_DELAY.get(key, 0),
                                   request_timeout=SLOW_REQUESTS.get(key, 8),
