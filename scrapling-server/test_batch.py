@@ -133,7 +133,7 @@ class CollectTest(unittest.TestCase):
             return {"jobs": [job(1)], "sources": [{"status": "done"}]}
 
         configured = {"stihl": SimpleNamespace(label="STIHL"), "boom": SimpleNamespace(label="Boom")}
-        options = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
+        options = SimpleNamespace(max_jobs=60, max_details=25, max_pages=100, documents=90, seconds=300, pause=0, strict_robots=False)
         with mock.patch.object(batch, "crawl", fake):
             out = batch.collect(["stihl", "boom"], configured, options, factory=object(), sleep=lambda s: None, log=lambda m: None)
         self.assertEqual((out["stihl"]["status"], len(out["stihl"]["jobs"])), ("done", 1))
@@ -149,7 +149,7 @@ class CollectTest(unittest.TestCase):
 
 
 class RetryTest(unittest.TestCase):
-    OPTIONS = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
+    OPTIONS = SimpleNamespace(max_jobs=60, max_details=25, max_pages=100, documents=90, seconds=300, pause=0, strict_robots=False)
     CONFIGURED = {k: SimpleNamespace(label=k.upper()) for k in ("flaky", "dead", "unsup", "fine", "robots")}
 
     def run_retry(self, outcomes):
@@ -403,7 +403,7 @@ class BodyLimitTest(unittest.TestCase):
 
 
 class CatalogLocationsTest(unittest.TestCase):
-    options = SimpleNamespace(max_jobs=60, max_details=25, documents=90, seconds=300, pause=0, strict_robots=False)
+    options = SimpleNamespace(max_jobs=60, max_details=25, max_pages=100, documents=90, seconds=300, pause=0, strict_robots=False)
 
     def collect(self, outcomes, places=("Esslingen", "Ostfildern")):
         calls = []
@@ -445,18 +445,54 @@ class CatalogLocationsTest(unittest.TestCase):
         self.assertEqual(result["status"], "done")
         self.assertEqual(len(result["jobs"]), 1)
 
-    def test_location_runs_read_more_pages_and_details_than_the_default(self):
+    def test_every_source_gets_the_same_catalog_limits(self):
         seen = []
 
         def fake(req, factory):
-            seen.append((req.location, req.max_details, getattr(req, "max_pages", None), req.max_jobs, req.documents, req.seconds))
+            seen.append((req.location, req.radius_km, req.max_details, req.max_pages, req.max_jobs, req.documents, req.seconds))
             return {"jobs": [], "sources": [{"status": "done"}]}
 
         configured = {"festo": SimpleNamespace(label="Festo", catalog_locations=("Esslingen",)),
-                      "stihl": SimpleNamespace(label="STIHL", catalog_locations=())}
+                      "stihl": SimpleNamespace(label="STIHL", catalog_locations=(), adapter="sitemap"),
+                      "lidl": SimpleNamespace(label="Lidl", catalog_locations=())}
         with mock.patch.object(batch, "crawl", fake):
-            batch.collect(["festo", "stihl"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
-        self.assertEqual(seen, [("Esslingen", 100, 4, 100, 140, 450), ("", 25, None, 60, 90, 300)])
+            batch.collect(["festo", "stihl", "lidl"], configured, self.options, factory=object(), sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(seen, [("Esslingen", 25, 25, 100, 60, 90, 300), ("", 25, 25, 100, 60, 90, 600),
+                                ("Waiblingen", 150, 25, 100, 60, 90, batch.AREA_SECONDS)])
+
+    def test_cli_defaults_read_sources_completely(self):
+        captured = {}
+        with mock.patch.object(batch, "run", lambda options: captured.setdefault("o", options) and 0):
+            batch.main(["--out", "x.json"])
+        options = captured["o"]
+        self.assertEqual((options.max_jobs, options.max_details, options.max_pages, options.documents),
+                         (batch.CATALOG_JOBS, batch.CATALOG_DETAILS, batch.CATALOG_PAGES, batch.CATALOG_DOCUMENTS))
+        self.assertGreaterEqual(options.max_jobs, 1000)
+
+    def test_exhausted_budget_keeps_what_was_read(self):
+        result, _ = self.collect({"": ("timeout", [job(1), job(2)])}, places=())
+        self.assertEqual(result["status"], "done")
+        self.assertEqual(len(result["jobs"]), 2)
+        self.assertIn("timeout nach 2 Stellen", result["detail"])
+
+    def test_timeout_without_jobs_stays_a_failure(self):
+        result, _ = self.collect({"": ("timeout", [])}, places=())
+        self.assertEqual(result["status"], "timeout")
+
+    def test_sources_after_the_run_deadline_are_not_started(self):
+        calls = []
+
+        def fake(req, factory):
+            calls.append(req.sources[0])
+            return {"jobs": [job(1)], "sources": [{"status": "done"}]}
+
+        configured = {"a": SimpleNamespace(label="A"), "b": SimpleNamespace(label="B")}
+        with mock.patch.object(batch, "crawl", fake):
+            out = batch.collect(["a", "b"], configured, self.options, factory=object(), sleep=lambda s: None,
+                                log=lambda m: None, deadline=batch.time.monotonic() - 1)
+        self.assertEqual(calls, [])
+        self.assertEqual(out["b"]["status"], "timeout")
+        self.assertIn("Gesamtzeit", out["b"]["detail"])
 
     def test_sources_without_places_run_once_with_empty_location(self):
         result, calls = self.collect({"": ("done", [job(1)])}, places=())

@@ -69,7 +69,7 @@ def murr(source, req, get, report):
     links, _ = discovery(html, final, source, req.q)
     if not links:
         report["status"] = "unsupported"
-    for url in links[:10]:
+    for url in links[:getattr(req, "max_details", 10)]:
         try:
             target, page_html = get(url, source)
         except FetchError as error:

@@ -146,7 +146,7 @@ def phenom(source, req, get, report):
         total = result.get("totalHits") if isinstance(result.get("totalHits"), int) else 0
         rows = list(result["data"].get("jobs") or [])
         sizes.append(len(rows))
-        while rows and len(rows) < min(total, PAGE * MAX_PAGES):
+        while rows and len(rows) < min(total, PAGE * getattr(req, "max_pages", MAX_PAGES)):
             batch = search(len(rows))["data"].get("jobs") or []
             sizes.append(len(batch))
             if not batch:

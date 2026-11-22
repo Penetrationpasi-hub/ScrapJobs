@@ -182,7 +182,7 @@ Suche läuft per JavaScript. `lidl_adapter.py` liest deshalb die in der robots.t
 Anzeigen, 2,4 MB; `Transport.get(accept_xml=True, max_body=6 MiB)`) mit URLs `/jobs/<titel>-m-w-d-<ort>-<id>`. Titel und
 Ort werden am Geschlechtsmarker getrennt (fehlt er, liegt der Ort in den letzten 1–3 Wörtern des Titels; mehrwortige Orte
 löst `geo.py` auf). Gewählt werden Treffer nach Titelwörtern und Entfernung (unbekannte Orte hinten, neueste zuerst);
-nur die nächsten 50 Einzelanzeigen werden abgerufen (Dokument-Budget und 30-Treffer-Grenze eines Laufs gelten weiter) und wie jedes JobPosting geprüft (Arbeitgeber „Lidl Vertriebs-GmbH &
+live nur die nächsten 50 Einzelanzeigen (Dokument-Budget und 30-Treffer-Grenze eines Laufs gelten weiter; der Katalog-Lauf liest ohne Suchbegriff alle Anzeigen im Umkreis von 150 km um Waiblingen) und wie jedes JobPosting geprüft (Arbeitgeber „Lidl Vertriebs-GmbH &
 Co. KG, <Regionalgesellschaft>“, PLZ und Koordinaten). Die genaue Umkreisprüfung macht danach die App. Beispiel gegen die
 echte Sitemap: „Verkäufer“, Waiblingen, 25 km → 359 Treffer, „Filialleiter“ → 98. robots.txt sperrt nur `/cps/`, kein
 `Crawl-delay`. Der Leser ist in `sources.py` fest an diese Sitemap gebunden. Ein Live-Lauf aus Render steht aus.
@@ -192,7 +192,7 @@ echte Sitemap: „Verkäufer“, Waiblingen, 25 km → 359 Treffer, „Filiallei
 `/cps/`). Gelesen wird `sitemap-jobs.xml` (rund 3 700 Anzeigen, URLs `/jobs/<titel>-<ort>-<id>`; der Index
 `sitemap.xml` nennt die Teile mit relativen Adressen und wird deshalb nicht gebraucht). Der Leser ist `lidl_adapter.py` mit dem
 Host der Quelle (`kaufland_sitemap`, in `sources.py` fest an diese Sitemap gebunden); rund ein Fünftel der Adressen hat keinen
-Geschlechtsmarker, dort liegt der Ort in den letzten Wörtern. Bis zu 50 Einzelanzeigen je Lauf (JobPosting mit Arbeitgeber
+Geschlechtsmarker, dort liegt der Ort in den letzten Wörtern. Live bis zu 50 Einzelanzeigen je Lauf, im Katalog alle im Suchgebiet (JobPosting mit Arbeitgeber
 „Kaufland Vertrieb … GmbH & Co. KG“, PLZ, Koordinaten). Ein Live-Lauf aus Render steht aus.
 
 **Zeitungsverlag Waiblingen (`zvw`):** `karriere.zvw.de/stellenangebote/` ist eine

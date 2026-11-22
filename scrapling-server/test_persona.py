@@ -123,6 +123,14 @@ class PersonaTest(unittest.TestCase):
         self.assertEqual(chosen[0], url("fuessen"))
         self.assertEqual(len(chosen), 5)
 
+    def test_without_a_search_term_every_ad_in_the_area_is_kept(self):
+        # Katalog-Lauf: kein Suchbegriff, nur das Suchgebiet; Balingen (~70 km) liegt im 150-km-Umkreis.
+        chosen = select(entries(SITEMAP), "", geo.center("Waiblingen"), 150)
+        self.assertIn(url("balingen"), chosen)
+        self.assertIn(url("waiblingen"), chosen)
+        self.assertNotIn(url("fuessen"), select(entries(SITEMAP), "", geo.center("Waiblingen"), 100))
+        self.assertEqual(len(select(entries(SITEMAP), "", None, 50)), 6)
+
     def test_every_search_term_counts_towards_the_ranking(self):
         chosen = select(entries(SITEMAP), "Elektroniker Betriebstechnik", None, 50)
         self.assertEqual(chosen[0], url("stuttgart"))
@@ -152,6 +160,19 @@ class PersonaTest(unittest.TestCase):
             with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "persona"}):
                 result = crawler.crawl(req, Fake)
         self.assertEqual(len(result["jobs"]), registry()["persona"].max_details)
+
+    def test_catalog_request_lifts_the_detail_limit(self):
+        many = "".join(block(f"{BASE}/jobs/elektroinstallateur-m-w-d-waiblingen/{i:08x}-0000-4000-8000-{i:012x}") for i in range(10, 50))
+        sitemap = SITEMAP.replace("</urlset>", many + "</urlset>")
+        with mock.patch.object(Fake, "get", autospec=True,
+                               side_effect=lambda self, raw, hosts, authorize=None, **kw: (raw, sitemap) if raw == SITEMAP_URL
+                               else (raw, ROBOTS) if raw.endswith("/robots.txt") else (raw, DETAILS.get(raw, posting("Elektroinstallateur (m/w/d)", "Waiblingen", "71332")))):
+            req = SimpleNamespace(q="", location="Waiblingen", radius_km=150, sources=["persona"],
+                                  max_jobs=5000, max_details=5000, documents=6000, seconds=60)
+            with mock.patch.dict(os.environ, {"SCRAPLING_APPROVED_SOURCES": "persona"}):
+                result = crawler.crawl(req, Fake)
+        self.assertEqual(result["sources"][0]["status"], "done")
+        self.assertGreater(len(result["jobs"]), 40)
 
     def test_expired_and_irrelevant_ads_are_dropped(self):
         DETAILS[url("waiblingen")] = posting("Elektroinstallateur (m/w/d)", "Waiblingen", "71332", validThrough="2020-01-01")

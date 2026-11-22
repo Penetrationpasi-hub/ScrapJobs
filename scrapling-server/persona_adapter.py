@@ -44,8 +44,8 @@ def select(rows, query, origin, radius):
     terms = [geo.norm(term) for term in query.split() if len(term) >= 2]
     chosen = []
     for title, place, url, stamp in rows:
-        text = geo.norm(title)
-        score = sum(term in text for term in terms)
+        # Ohne Suchbegriff (Katalog-Lauf) zählt jede Anzeige; gefiltert wird erst in der App.
+        score = sum(term in geo.norm(title) for term in terms) if terms else 1
         if not score:
             continue
         distance = geo.distance_km(origin, place.replace("-", " ")) if origin and place else None
@@ -63,7 +63,7 @@ def persona(source, req, get, report):
     origin = geo.center(req.location) if getattr(req, "location", "") else None
     urls = select(rows, req.q, origin, getattr(req, "radius_km", 25))
     report["detail"] = f"{len(rows)} Anzeigen im Sitemap, {len(urls)} passend"
-    for raw in urls[:source.max_details]:
+    for raw in urls[:getattr(req, "max_details", source.max_details)]:
         document = detail_document(get, raw, source, report)
         if document is None:
             continue

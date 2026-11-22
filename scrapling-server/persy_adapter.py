@@ -78,7 +78,8 @@ def distance(origin, data):
 
 def persy(source, req, get, report):
     rows = []
-    for offset in range(0, PAGE * MAX_PAGES, PAGE):
+    pages = getattr(req, "max_pages", MAX_PAGES)
+    for offset in range(0, PAGE * pages, PAGE):
         page = json_document(get, page_url(offset, source.key), source)
         if not isinstance(page, list):
             raise FetchError("unsupported", detail="Persy-Antwort ist keine Liste")
@@ -86,7 +87,7 @@ def persy(source, req, get, report):
         if len(page) < PAGE:
             break
     else:
-        report["detail"] = f"mehr als {PAGE * MAX_PAGES} Anzeigen, nur die ersten gelesen"
+        report["detail"] = f"mehr als {PAGE * pages} Anzeigen, nur die ersten gelesen"
     origin = geo.center(req.location) if getattr(req, "location", "") else None
     radius = getattr(req, "radius_km", 25)
     ranked = []

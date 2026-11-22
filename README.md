@@ -18,8 +18,13 @@ https://raw.githubusercontent.com/Penetrationpasi-hub/ScrapJobs/main/stellen.jso
    Kalendertags, weitere Läufe am selben Tag werden übersprungen.
 2. Zuerst laufen die Tests, dann `scrapling-server/batch.py`.
 3. `batch.py` ruft für jede Quelle dieselbe `crawl()`-Logik auf wie der Live-Dienst, nur im
-   **Katalogmodus**: ohne Suchbegriff und Ort, ohne die engen Live-Limits
-   (25 Einzelanzeigen, 90 Abrufe, 300 s je Quelle; Börsen mit 10 s Crawl-Delay bekommen doppelt Zeit).
+   **Katalogmodus**: ohne Suchbegriff und Ort und **vollständig** – gefiltert wird erst in der App.
+   Die Grenzen (5000 Stellen/Einzelanzeigen, 100 Ergebnisseiten, 6000 Abrufe je Quelle) sind nur Sicherungen.
+   Zeitbudget 900 s je Quelle (Börsen mit 10 s Crawl-Delay und Sitemaps doppelt, PFISTERER vierfach);
+   ist es erschöpft, zählt das bis dahin Gelesene („teilweise: timeout nach N Stellen“). Nach 5 h Gesamtzeit
+   beginnt der Lauf keine neue Quelle mehr; diese behalten ihre Stellen aus dem Vorlauf.
+   **Bundesweite Sitemaps** (persona, Lidl, Kaufland): alle Anzeigen im Suchgebiet **150 km um Waiblingen**
+   (`AREA` in `batch.py`), Anzeigen ohne erkennbaren Ort zählen mit; je Portal bis zu 1 h.
 4. Danach wird `stellen.json` zusammengeführt und zusammen mit `STELLEN.md` und
    [`stellen.xlsx`](stellen.xlsx) committet.
 
@@ -56,7 +61,7 @@ Rems-Murr-JOBS und ZVW haben 10 s Crawl-Delay und laufen zuletzt.
 
 **Globale Konzernportale** (Festo, MAHLE, Kärcher) listen ohne Suchbegriff weltweit. Für sie gibt es `catalog_locations`
 (in `employers.json`, bei Festo in `sources.py`): Der Katalog fragt die Suche je Ort einmal mit `locationsearch=<Ort>` ab
-und führt die Treffer zusammen. Je Ort werden bis zu 100 Anzeigen auf vier Ergebnisseiten gelesen (sonst 25). Aktuell Festo: Esslingen, Ostfildern · Kärcher: Winnenden, Schwaikheim ·
+und führt die Treffer zusammen. Je Ort wird vollständig gelesen (alle Ergebnisseiten). Aktuell Festo: Esslingen, Ostfildern · Kärcher: Winnenden, Schwaikheim ·
 MAHLE: Stuttgart, Fellbach, Markgröningen, Kornwestheim, Mühlacker. Schlägt ein Ort fehl, zählen die übrigen,
 und `quellen[].detail` nennt den fehlenden Ort. Die Orte gelten nur im Katalog, nicht in der Live-Suche.
 Frühere weltweite Treffer verschwinden nach der Karenzzeit (3 Tage) von selbst.
