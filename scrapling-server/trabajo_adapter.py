@@ -15,7 +15,7 @@ verified detail page is checked once more before yielding the job.
 """
 import re
 import unicodedata
-from urllib.parse import parse_qs, urljoin, urlsplit
+from urllib.parse import parse_qs, quote, urljoin, urlsplit
 
 from scrapling import Selector
 
@@ -46,16 +46,22 @@ def search_url(q="", location=""):
     """Build Trabajo's public search URL for the supplied search parameters.
 
     The keyword belongs to the path segment itself
-    (``/stellenangebote-<keyword>``), the place is appended as its own segment
-    (``/stellenangebote-<keyword>/<place>``). Without a keyword the plain
-    ``/stellenangebote`` list is used, because a place-only path would not be a
-    search route on Trabajo.
+    (``/stellenangebote-<keyword>``), and with a keyword the place is appended
+    as its own segment (``/stellenangebote-<keyword>/<place>``). Without a
+    keyword the portal's place index is ``/stellenangebote/<Place>`` (the name
+    as written, not a lower-case slug): that page is already limited to the
+    town, so the catalog can read it instead of the nationwide list.
     """
-    keyword, place = slug(q), slug(location)
-    path = f"{SEARCH_PREFIX}-{keyword}" if keyword else SEARCH_PREFIX
-    if keyword and place:
-        path = f"{path}/{place}"
-    return BASE + path
+    keyword = slug(q)
+    place = location.strip()
+    if keyword:
+        path = f"{SEARCH_PREFIX}-{keyword}"
+        if folded := slug(place):
+            path = f"{path}/{folded}"
+        return BASE + path
+    if place:
+        return f"{BASE}{SEARCH_PREFIX}/{quote(place, safe='')}"
+    return BASE + SEARCH_PREFIX
 
 
 def _page_number(raw):
@@ -96,8 +102,10 @@ def trabajo(source, req, get, report):
     origin = geo.center(location) if location else None
     radius = getattr(req, "radius_km", 25)
     near = (lambda place: geo.in_range(origin, place, radius)) if origin else None
-    limit = min(getattr(req, "max_details", source.max_details), source.max_details)
-    pages_limit = min(getattr(req, "max_pages", source.max_pages), source.max_pages)
+    # Internal catalog requests supply larger budgets; the public Search model
+    # does not accept these fields and retains the source's live defaults.
+    limit = getattr(req, "max_details", source.max_details)
+    pages_limit = getattr(req, "max_pages", source.max_pages)
     current = search_url(req.q, location)
     visited = set()
     details = []

@@ -51,11 +51,16 @@ Standardmäßig **ausgeschlossen**: Indeed, StepStone, bluum BW, jobsucheBW und 
 `SCRAPJOBS_SOURCES` (nur diese Quellen), lokal und im Workflow-Dialog.
 
 **Trabajo.org** (`trabajo`) ist eine bundesweite Börse mit serverseitig gerenderter Suche
-(`/stellenangebote-<begriff>/<ort>`, weitere Seiten über `?page=N`). Der Adapter liest den Ort je Treffer
-und ruft nur Anzeigen im Umkreis einzeln ab; der Umkreis wird nochmals an der verifizierten
-JobPosting-Adresse geprüft. Arbeitgeber ist der echte Inserent, nicht Trabajo. Wie jobsucheBW nur mit
-ausdrücklicher Freigabe (`SCRAPJOBS_SOURCES=trabajo` bzw. `SCRAPLING_APPROVED_SOURCES`), nie über die
-Gruppe `employers`.
+(`/stellenangebote-<begriff>/<ort>`, weitere Seiten über `?page=N`). Ohne Suchbegriff liest der Katalog
+die Ortsliste `/stellenangebote/<Ort>` je `catalog_locations` (Waiblingen, Schorndorf, Backnang,
+Winnenden, Fellbach, Schwaikheim, Murrhardt, Welzheim), nicht die bundesweite Liste. Der Adapter liest
+den Ort je Treffer und ruft nur Anzeigen im Umkreis einzeln ab; der Umkreis wird nochmals an der
+verifizierten JobPosting-Adresse geprüft. Arbeitgeber ist der echte Inserent, nicht Trabajo. Wie
+jobsucheBW nur mit ausdrücklicher Freigabe (`SCRAPJOBS_SOURCES=trabajo` bzw.
+`SCRAPLING_APPROVED_SOURCES`), nie über die Gruppe `employers`.
+Im Katalog gelten je Ort vier Suchseiten und bis zu 100 Einzelanzeigen innerhalb des
+Abrufbudgets; das ist eine begrenzte Auswahl, kein vollständiger Export aller Portalstellen.
+Die Live-Suche behält ihre Grenzen von drei Seiten und zehn Einzelanzeigen.
 
 Rems-Murr-JOBS und ZVW haben 10 s Crawl-Delay und laufen zuletzt.
 
