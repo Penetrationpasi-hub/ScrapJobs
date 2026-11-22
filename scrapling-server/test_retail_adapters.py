@@ -143,10 +143,18 @@ def test_toom_reads_all_pages_and_original_expiry():
     assert len(fetched) == 5
 
 
-@pytest.mark.parametrize('mode', ['repeat', 'missing'])
-def test_toom_incomplete_list_is_not_reported_as_success(mode):
-    with pytest.raises(FetchError):
-        run('toom', toom_get([], **{mode: True}))
+def test_toom_repeated_hit_is_skipped_but_rest_is_delivered():
+    jobs, report = run('toom', toom_get([], repeat=True))
+    assert [job['url'] for job in jobs] == [toom_url(1)]
+    assert report['filtered'] == 1
+    assert report['status'] == 'done'
+
+
+def test_toom_hit_without_original_is_skipped_not_fatal():
+    jobs, report = run('toom', toom_get([], missing=True))
+    assert jobs == []
+    assert report['filtered'] == 2
+    assert report['status'] == 'done'
 
 
 def test_dm_detail_budget_is_partial():

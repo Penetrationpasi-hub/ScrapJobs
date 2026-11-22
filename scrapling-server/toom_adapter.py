@@ -10,7 +10,7 @@ from scrapling import Selector
 
 import geo
 from extraction import is_detail
-from retail_region import regional_details
+from retail_region import AREA_KM, AREA_NAME, regional_details
 from safe_http import FetchError
 
 PUBLIC_LIST = "https://toom-baumarkt.dvinci-easy.com/de/jobs/iframe"
@@ -28,9 +28,9 @@ def toom(source, req, get, report):
             links[match.group(1)] = url
     if not links:
         raise FetchError("unsupported", detail="toom-Originalstellenliste fehlt")
-    lat, lng = geo.center("Waiblingen")
+    lat, lng = geo.center(AREA_NAME)
     payload = {"search": {"term": req.q, "filters": {}, "location": {
-        "lat": lat, "lng": lng, "range": 50}, "sort": "date"}}
+        "lat": lat, "lng": lng, "range": AREA_KM}, "sort": "date"}}
     urls, seen = [], set()
     for page in range(1, getattr(req, "max_pages", source.max_pages) + 1):
         data = json_document(get, source.api + f"?type=jobs&page={page}", source, payload)
@@ -42,10 +42,11 @@ def toom(source, req, get, report):
             raise FetchError("unsupported", detail="Ungültige toom-Suchantwort")
         for row in rows:
             ident = str(row.get("externalId", "")) if isinstance(row, dict) else ""
-            if ident not in links:
-                raise FetchError("unsupported", detail="toom-Suchtreffer ohne Originalanzeige: " + ident)
-            if ident in seen:
-                raise FetchError("unsupported", detail="toom-Suche wiederholt eine Anzeige")
+            # Einzelne Lücken (Anzeige zwischen Liste und Suche neu oder weg) und Wiederholungen
+            # überspringen, statt die ganze Quelle zu verwerfen.
+            if ident not in links or ident in seen:
+                report["filtered"] += 1
+                continue
             seen.add(ident)
             urls.append(links[ident])
         if page >= meta["totalPages"]:

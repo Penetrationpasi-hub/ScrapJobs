@@ -2,11 +2,15 @@
 import geo
 from extraction import canonical, extract, is_detail
 
+# Festes Suchgebiet aller regionalen Händler-Adapter (ALDI, dm, toom, REWE, PENNY); auch Grundlage von batch.AREA.
+AREA_NAME = "Waiblingen"
+AREA_KM = 50
+
 
 def regional_details(urls, source, req, get, report):
     from employer_adapters import detail_document
 
-    origin = geo.center("Waiblingen")
+    origin = geo.center(AREA_NAME)
     seen = set()
     count = 0
     for url in urls:
@@ -25,8 +29,8 @@ def regional_details(urls, source, req, get, report):
         if document is None:
             continue
         job = extract(document[1], document[0], source, req.q)
-        if job and geo.in_range(origin, job.get("location", ""), 50) is True:
+        if job and geo.in_range(origin, job.get("location", ""), AREA_KM) is True:
             yield job
         else:
             report["filtered"] += 1
-    report["detail"] = f"Waiblingen + 50 km: {count} Einzelanzeigen geprüft"
+    report["detail"] = f"{AREA_NAME} + {AREA_KM} km: {count} Einzelanzeigen geprüft"

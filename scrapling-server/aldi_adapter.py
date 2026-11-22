@@ -5,7 +5,7 @@ from urllib.parse import parse_qs, urljoin, urlsplit
 from scrapling import Selector
 
 import geo
-from retail_region import regional_details
+from retail_region import AREA_KM, AREA_NAME, regional_details
 from safe_http import FetchError
 
 
@@ -26,7 +26,7 @@ def aldi(source, req, get, report):
     rows = data.get("result") if isinstance(data, dict) else None
     if not isinstance(rows, list):
         raise FetchError("unsupported", detail="ALDI-Stellenkarte ohne result-Liste")
-    origin = geo.center("Waiblingen")
+    origin = geo.center(AREA_NAME)
     urls = []
     for row in rows:
         if not isinstance(row, dict) or not isinstance(row.get("url"), str):
@@ -39,7 +39,7 @@ def aldi(source, req, get, report):
             # Ohne belastbare Koordinaten entscheidet die verifizierte Detailadresse.
             urls.append(row["url"])
             continue
-        if geo.km(origin, (lat, lng)) <= 50:
+        if geo.km(origin, (lat, lng)) <= AREA_KM:
             urls.append(row["url"])
     report["urls"], report["matched"] = len(rows), len(urls)
     yield from regional_details(urls, source, req, get, report)

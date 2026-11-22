@@ -5,14 +5,15 @@ from scrapling import Selector
 
 import geo
 from extraction import canonical, extract, is_detail
+from retail_region import AREA_KM, AREA_NAME
 from safe_http import FetchError
 
 
 def career_search(source, req, get, report):
     from employer_adapters import detail_document
 
-    origin = geo.center("Waiblingen")
-    params = {"location": "Waiblingen", "range": 50, "lat": origin[0],
+    origin = geo.center(AREA_NAME)
+    params = {"location": AREA_NAME, "range": AREA_KM, "lat": origin[0],
               "lng": origin[1], "term": req.q}
     seen = set()
     details = 0
@@ -30,7 +31,7 @@ def career_search(source, req, get, report):
                 continue
             seen.add(raw)
             places = " | ".join(row.css('.job-search__item-multilocation::text').getall())
-            if geo.in_range(origin, places, 50) is False:
+            if geo.in_range(origin, places, AREA_KM) is False:
                 report["filtered"] += 1
                 continue
             if details >= max_details:
@@ -41,11 +42,11 @@ def career_search(source, req, get, report):
             if document is None:
                 continue
             job = extract(document[1], document[0], source, req.q)
-            if job and geo.in_range(origin, job.get("location", ""), 50) is True:
+            if job and geo.in_range(origin, job.get("location", ""), AREA_KM) is True:
                 yield job
             else:
                 report["filtered"] += 1
-        report["detail"] = f"Waiblingen + 50 km: {index} Suchseiten, {details} Einzelanzeigen geprüft"
+        report["detail"] = f"{AREA_NAME} + {AREA_KM} km: {index} Suchseiten, {details} Einzelanzeigen geprüft"
         if not page.css('a.job-search-button-next:not(.is--disabled)::attr(href)').get():
             return
     report["status"] = "result_limit"
