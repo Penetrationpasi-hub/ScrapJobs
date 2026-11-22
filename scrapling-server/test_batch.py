@@ -460,6 +460,21 @@ class CatalogLocationsTest(unittest.TestCase):
         self.assertEqual(seen, [("Esslingen", 25, 25, 100, 60, 90, 300), ("", 25, 25, 100, 60, 90, 600),
                                 ("Waiblingen", 50, 25, 100, 60, 90, batch.AREA_SECONDS)])
 
+    def test_source_limits_cap_one_source(self):
+        seen = []
+
+        def fake(req, factory):
+            seen.append((req.sources[0], req.max_jobs, req.max_details, req.documents, req.min_delay))
+            return {"jobs": [], "sources": [{"status": "done"}]}
+
+        options = SimpleNamespace(max_jobs=5000, max_details=5000, max_pages=100, documents=6000, seconds=300,
+                                  pause=0, strict_robots=False)
+        configured = {"diakonie_stetten": SimpleNamespace(label="Diakonie Stetten", catalog_locations=(), adapter="sitemap"),
+                      "stihl": SimpleNamespace(label="STIHL", catalog_locations=(), adapter="sitemap")}
+        with mock.patch.object(batch, "crawl", fake):
+            batch.collect(["diakonie_stetten", "stihl"], configured, options, factory=object(), sleep=lambda s: None, log=lambda m: None)
+        self.assertEqual(seen, [("diakonie_stetten", 60, 60, 70, 2), ("stihl", 5000, 5000, 6000, 0)])
+
     def test_cli_defaults_read_sources_completely(self):
         captured = {}
         with mock.patch.object(batch, "run", lambda options: captured.setdefault("o", options) and 0):
