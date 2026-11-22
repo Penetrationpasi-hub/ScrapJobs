@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-22T00:07:10+00:00",
+ "aktualisiert": "2026-11-22T11:53:53+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -458,6 +458,13 @@
    "status": "done",
    "letzterErfolg": "2026-11-22",
    "anzahl": 51
+  },
+  {
+   "key": "trabajo",
+   "label": "Trabajo.org",
+   "status": "done",
+   "letzterErfolg": "2026-11-22",
+   "anzahl": 10
   },
   {
    "key": "gpm",
@@ -4383,6 +4390,18 @@
    "zuletztGesehen": "2026-11-22"
   },
   {
+   "id": "scrapling-352205efb32e7f77d8e2ce92",
+   "title": "(Senior) Mobile Developer",
+   "company": "Deutsche Welle",
+   "location": "Bonn North Rhine-Westphalia DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-43a8dc1d2bf85a456c2156093bed3f63",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
    "id": "scrapling-302a507ed1ba3dca48b69daa",
    "title": "Arbeitsmediziner (m/w/d) / Betriebsmediziner (m/w/d)",
    "company": "Diakonie Stetten e. V.",
@@ -5955,6 +5974,18 @@
    "zuletztGesehen": "2026-11-20"
   },
   {
+   "id": "scrapling-dbb3e51e2b09b82c8eab27ee",
+   "title": "Elektroniker für Betriebstechnik",
+   "company": "Frankenberg GmbH",
+   "location": "Würselen North Rhine-Westphalia DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-5345600361f3eaff7737e606900c794d",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
    "id": "scrapling-1fb7279a6f9b8e03bd61ba01",
    "title": "Löffel abgeben? Nein, das Zepter übernehmen! Wir suchen eine Mensaleitung",
    "company": "Freie Waldorfschule Engelberg  & Kindertagesstätte Engelberg",
@@ -7128,6 +7159,78 @@
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-17",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-284a2c19dacda397f1e22aad",
+   "title": "Technischen Vertriebsaußendienst",
+   "company": "Herth+Buss Mobility Solutions",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-d8e073531568fe03af7019260cf3e963",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-100c09b636efe4bc6df41dbb",
+   "title": "Lead Video Editor*in Ads Performance Marketing",
+   "company": "HEY HOLY | B Corp",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-807fad443eebe6f605ac0fc7c5ae4900",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-273ac9763e59e1c88804fa7c",
+   "title": "Database Administrator",
+   "company": "HiredBuddy",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-3aed4112a368a7311301b8b9181eef2d",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-90b0330f409f54107f396258",
+   "title": "Product Manager",
+   "company": "HiredBuddy",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-7477dc99cb23e01b17b5704f343404cf",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-6008ed7a6f384a7f7dc564a4",
+   "title": "User Experience Designer",
+   "company": "HiredBuddy",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-a3ac6310b25f27dcb65c18b5632166bc",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-3916b2811e7641d7faa6f601",
+   "title": "Web Developer",
+   "company": "HiredBuddy",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-eb4dbb5f55b5b7701e438c63ce14fed0",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
    "zuletztGesehen": "2026-11-22"
   },
   {
@@ -12099,6 +12202,18 @@
    "zuletztGesehen": "2026-11-22"
   },
   {
+   "id": "scrapling-05bd5a4a7e25e48bdf8c6adb",
+   "title": "Nuclear AI Safety Evaluators",
+   "company": "Pasiflora AI",
+   "location": "DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-cd9b845648d5149e631e72a0214c7979",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
    "id": "scrapling-fa9e9dc7d52be0a33bd70f91",
    "title": "Ausbilder Hauswirtschaft (m/w/d) in Vollzeit I Berufsbildungswerk Winnenden",
    "company": "Paulinenpflege",
@@ -12480,6 +12595,18 @@
    "source": "pfisterer",
    "sourceLabel": "PFISTERER",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-22"
+  },
+  {
+   "id": "scrapling-46cab3f62d75dc958c9009d9",
+   "title": "Finanzbuchhalter (all genders)",
+   "company": "ploon.it group",
+   "location": "Hanover Lower Saxony DE",
+   "url": "https://de.trabajo.org/stellenangebot-4112-666f61ffd492a4d9a433da80d1b3bbe5",
+   "posted": "2026-11-22",
+   "source": "trabajo",
+   "sourceLabel": "Trabajo.org",
+   "erstmalsGesehen": "2026-11-22",
    "zuletztGesehen": "2026-11-22"
   },
   {

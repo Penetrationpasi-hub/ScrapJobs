@@ -1,6 +1,6 @@
 # Stellenkatalog
 
-Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
+Stand: 2026-11-22T11:53:53+00:00 · 1227 Stellen aus 60 von 68 Quellen
 
 ## Quellen
 
@@ -70,6 +70,7 @@ Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
 | persona service | done | 0 | 2026-11-22 | 0 Stellen: 0 verworfen · 4741 Anzeigen im Sitemap, 0 passend |
 | Lidl | done | 82 | 2026-11-22 |  |
 | Kaufland | done | 51 | 2026-11-22 |  |
+| Trabajo.org | done | 10 | 2026-11-22 |  |
 | GPM Personalservice | done | 60 | 2026-11-22 |  |
 | Liebert GmbH | done | 60 | 2026-11-22 |  |
 | iits-consulting | done | 7 | 2026-11-22 |  |
@@ -452,6 +453,10 @@ Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
 - [Verkäufer Postfiliale (m/w/d) in 71686 Remseck-Hochdorf in Geringfügigkeit (Minijob)](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV348617DEEUEXTERNAL/Verk%C3%A4ufer-Postfiliale-m-w-d-in-71686-Remseck-Hochdorf-in-Geringf%C3%BCgigkeit-Minijob) · Remseck am Neckar Baden-Württemberg DE · seit 2026-11-21
 - [WerkstudentIn | Studentische Aushilfe (w/m/d) Weitere Infos](https://careers.dhl.com/eu/de/job/DPDHGLOBALAV392499DEEUEXTERNAL/WerkstudentIn-Studentische-Aushilfe-w-m-d-Weitere-Infos) · Stuttgart Baden-Württemberg DE · seit 2026-11-21
 
+### Deutsche Welle
+
+- [(Senior) Mobile Developer](https://de.trabajo.org/stellenangebot-4112-43a8dc1d2bf85a456c2156093bed3f63) · Bonn North Rhine-Westphalia DE · seit 2026-11-22
+
 ### Diakonie Stetten e. V.
 
 - [Arbeitsmediziner (m/w/d) / Betriebsmediziner (m/w/d)](https://deinjob.diakonie-stetten.de/jobs/27368163/Arbeitsmediziner-m-w-d-Betriebsmediziner-m-w-d-) · 71394 Kernen im Remstal Baden-Württemberg Deutschland · seit 2026-11-08
@@ -619,6 +624,10 @@ Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
 - [Spontane sollicitaties - België](https://jobs.festo.com/job/Vilvoorde-Spontane-sollicitaties-Belgi%C3%AB-1800/1253284801) · Vilvoorde, BE, 1800 · seit 2026-11-20
 - [Umschulung Mechatroniker (m/w/d)](https://jobs.festo.com/job/St_-Ingbert-Umschulung-Mechatroniker-%28mwd%29-66386/1200566801) · St. Ingbert, DE, 66386 · seit 2026-11-20
 
+### Frankenberg GmbH
+
+- [Elektroniker für Betriebstechnik](https://de.trabajo.org/stellenangebot-4112-5345600361f3eaff7737e606900c794d) · Würselen North Rhine-Westphalia DE · seit 2026-11-22
+
 ### Freie Waldorfschule Engelberg  & Kindertagesstätte Engelberg
 
 - [Löffel abgeben? Nein, das Zepter übernehmen! Wir suchen eine Mensaleitung](https://rems-murr-jobs.de/job/loeffel-abgeben-nein-das-zepter-uebernehmen-wir-suchen-eine-mensaleitung-1810424) · 73 Winterbach Baden-Württemberg DE · seit 2026-11-21
@@ -740,6 +749,21 @@ Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
 ### heldenreich. Ergotherapie/Logopädie/Physiotherapie Anja Kommode und Team
 
 - [Ergotherapeut (m/w/d)  gesucht](https://rems-murr-jobs.de/job/ergotherapeut-mwd-gesucht-1269193) · 73642 Welzheim Baden-Württemberg DE · seit 2026-11-17
+
+### Herth+Buss Mobility Solutions
+
+- [Technischen Vertriebsaußendienst](https://de.trabajo.org/stellenangebot-4112-d8e073531568fe03af7019260cf3e963) · DE · seit 2026-11-22
+
+### HEY HOLY | B Corp
+
+- [Lead Video Editor*in Ads Performance Marketing](https://de.trabajo.org/stellenangebot-4112-807fad443eebe6f605ac0fc7c5ae4900) · DE · seit 2026-11-22
+
+### HiredBuddy
+
+- [Database Administrator](https://de.trabajo.org/stellenangebot-4112-3aed4112a368a7311301b8b9181eef2d) · DE · seit 2026-11-22
+- [Product Manager](https://de.trabajo.org/stellenangebot-4112-7477dc99cb23e01b17b5704f343404cf) · DE · seit 2026-11-22
+- [User Experience Designer](https://de.trabajo.org/stellenangebot-4112-a3ac6310b25f27dcb65c18b5632166bc) · DE · seit 2026-11-22
+- [Web Developer](https://de.trabajo.org/stellenangebot-4112-eb4dbb5f55b5b7701e438c63ce14fed0) · DE · seit 2026-11-22
 
 ### iits-consulting
 
@@ -1284,6 +1308,10 @@ Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
 - [Industriemechaniker (m/w/d) – Ausbildungsstelle für 2027 besetzt](https://www.frech.com/de/ausbildungsstelle-details/industriemechaniker-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-18
 - [IT-Systemadministrator mit Projektverantwortung (m/w/d)](https://www.frech.com/de/job-details-de/it-projektmanager-m-w-d.html) · Schorndorfer Straße 32 73614 Schorndorf · seit 2026-11-08
 
+### Pasiflora AI
+
+- [Nuclear AI Safety Evaluators](https://de.trabajo.org/stellenangebot-4112-cd9b845648d5149e631e72a0214c7979) · DE · seit 2026-11-22
+
 ### Paulinenpflege
 
 - [Ausbilder Hauswirtschaft (m/w/d) in Vollzeit I Berufsbildungswerk Winnenden](https://jobs.paulinenpflege.de/Ausbilder-Hauswirtschaft-mwd-in-Vollzeit-I-Berufsbildungsw-de-j3468.html) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-08
@@ -1330,6 +1358,10 @@ Stand: 2026-11-22T00:07:10+00:00 · 1217 Stellen aus 59 von 67 Quellen
 - [Prüfingenieur (w/m/d) High Voltage](https://pfisterer.mhm.jobs/1567-pruefingenieur-w-m-d-high-voltage/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
 - [Teamleiter SAP (m/w/d)](https://pfisterer.mhm.jobs/1297-teamleiter-sap-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
 - [Versuchsingenieur (w/m/d)](https://pfisterer.mhm.jobs/1540-versuchsingenieur-w-m-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
+
+### ploon.it group
+
+- [Finanzbuchhalter (all genders)](https://de.trabajo.org/stellenangebot-4112-666f61ffd492a4d9a433da80d1b3bbe5) · Hanover Lower Saxony DE · seit 2026-11-22
 
 ### REMS
 
