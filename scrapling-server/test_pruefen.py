@@ -32,6 +32,12 @@ class PruefenTest(unittest.TestCase):
         fehler, _, _, warnungen = pruefen.pruefe(rows, {})
         self.assertEqual(([r["quelle"] for r in fehler], warnungen), (["a"], []))
 
+    def test_unvollstaendig_ohne_stellen_warnt_nur_nach_frueheren_stellen(self):
+        rows = [zeile("2026-11-17T1", "a"), zeile("2026-11-18T1", "a", "incomplete", 0),
+                zeile("2026-11-18T1", "b", "incomplete", 0)]
+        fehler, _, _, warnungen = pruefen.pruefe(rows, {})
+        self.assertEqual(([r["quelle"] for r in fehler], [r["quelle"] for r in warnungen]), (["b"], ["a"]))
+
     def test_laeufe_in_folge(self):
         rows = [zeile("2026-11-16T1", "a"), zeile("2026-11-17T1", "a", "timeout", 0), zeile("2026-11-18T1", "a", "timeout", 0)]
         self.assertEqual(pruefen.seit(rows, "a"), 2)

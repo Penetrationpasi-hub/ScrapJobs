@@ -262,7 +262,7 @@ class CatalentTest(unittest.TestCase):
 
                 result = self.crawl(catalent_page([], 0), widgets=widgets)
                 self.assertEqual(offsets, [0, 10])
-                self.assertEqual(result["sources"][0]["status"], "done" if ending == "complete" else "unsupported")
+                self.assertEqual(result["sources"][0]["status"], "done" if ending == "complete" else "incomplete")
                 self.assertEqual(len(result["jobs"]), 11 if ending == "complete" else 10)
                 if ending != "complete":
                     self.assertIn("unvollständig", result["sources"][0]["detail"])

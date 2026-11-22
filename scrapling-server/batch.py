@@ -290,7 +290,7 @@ def collect(keys, configured, options, factory=None, sleep=time.sleep, log=print
             except Exception as error:  # eine kaputte Quelle darf den Lauf nicht beenden
                 report, outcome = {"status": "worker_error"}, {"jobs": []}
                 log(f"  ! {key} {place}: {type(error).__name__}")
-            if report["status"] in {"timeout", "request_limit", "blocked", "result_limit"} and outcome["jobs"]:
+            if report["status"] in {"timeout", "request_limit", "blocked", "result_limit", "incomplete"} and outcome["jobs"]:
                 # Zeit- oder Abrufbudget mitten in einer großen Quelle erschöpft: Gelesenes zählt, Rest im Detail.
                 failures.append((place, f"{report['status']} nach {len(outcome['jobs'])} Stellen"))
                 report = {**report, "status": "done"}

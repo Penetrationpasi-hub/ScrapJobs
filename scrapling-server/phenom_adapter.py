@@ -222,7 +222,9 @@ def phenom(source, req, get, report):
         else:
             report["status"] = "result_limit"
     except FetchError as error:
-        report["status"] = error.code
+        # Schon gelesene Seiten sind serverseitig nach Ort gefiltert: sie bleiben erhalten und die Quelle gilt als
+        # unvollständig (batch.py: "teilweise"). Scheitert schon die erste Seite, bleibt es beim Fehlercode.
+        report["status"] = "incomplete" if rows else error.code
         source_note = f"Suche unvollständig: {error.detail or error.code}"
         # Die eingebetteten Treffer der Seite kennen weder Suchbegriff noch Ort; sie sind nur der Notbehelf.
         if eager is None or rows:

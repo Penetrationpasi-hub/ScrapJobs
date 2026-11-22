@@ -483,6 +483,12 @@ class CatalogLocationsTest(unittest.TestCase):
                 self.assertEqual(len(result["jobs"]), 2)
                 self.assertIn(state, result["detail"])
 
+    def test_incomplete_with_jobs_is_partial_without_jobs_it_stays_incomplete(self):
+        result, _ = self.collect({"": ("incomplete", [job(1)])}, places=())
+        self.assertEqual((result["status"], len(result["jobs"])), ("done", 1))
+        result, _ = self.collect({"": ("incomplete", [])}, places=())
+        self.assertEqual(result["status"], "incomplete")
+
     def test_blocked_without_jobs_stays_blocked(self):
         result, _ = self.collect({"": ("blocked", [])}, places=())
         self.assertEqual(result["status"], "blocked")

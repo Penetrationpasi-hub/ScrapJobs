@@ -6,7 +6,7 @@ Quellen auf der Ausnahmeliste (dauerhaft nicht lauffaehig) zaehlen nicht.
 Liefert eine Ausnahme-Quelle wieder Stellen, kommt ein Hinweis, sie von der
 Liste zu streichen. Die Tabelle landet in $GITHUB_STEP_SUMMARY.
 Exit 1, wenn eine nicht ausgenommene Quelle keine Stellen geliefert hat.
-Ausnahme: Ausfaelle des Anbieters (upstream_error/robots_unavailable/network_error/timeout) bei einer Quelle,
+Ausnahme: Ausfaelle des Anbieters (upstream_error/robots_unavailable/network_error/timeout/incomplete) bei einer Quelle,
 die im Lauf davor Stellen hatte, sind nur eine Warnung - der Katalog behaelt ihre Stellen ohnehin.
 """
 import csv
@@ -20,7 +20,7 @@ def lies(path):
         return list(csv.DictReader(fh))
 
 
-VORUEBERGEHEND = {"upstream_error", "robots_unavailable", "network_error", "timeout"}
+VORUEBERGEHEND = {"upstream_error", "robots_unavailable", "network_error", "timeout", "incomplete"}
 
 
 def vorher_stellen(rows, quelle, lauf):
