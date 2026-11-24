@@ -1,89 +1,90 @@
 # Stellenkatalog
 
-Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
+Stand: 2026-11-24T17:19:22+00:00 · 3645 Stellen aus 63 von 73 Quellen
 
 ## Quellen
 
 | Quelle | Status | Stellen | Letzter Erfolg | Detail |
 | --- | --- | ---: | --- | --- |
-| Festo | done | 18 | 2026-11-23 |  |
+| Festo | done | 15 | 2026-11-24 |  |
 | Bosch | unsafe_target | 0 | – | Host nicht freigegeben: jobs.bosch.com |
 | ALDI SÜD | robots_unavailable | 0 | – | HTTP 403 von karriere.aldi-sued.de (auch nach 2 Wiederholungen) |
 | dm-drogerie markt | network_error | 0 | – | TimeoutError www.dm-jobs.de (auch nach 2 Wiederholungen) |
-| toom Baumarkt | done | 26 | 2026-11-23 |  |
-| REWE | done | 219 | 2026-11-23 |  |
-| PENNY | done | 155 | 2026-11-23 |  |
+| toom Baumarkt | done | 26 | 2026-11-24 |  |
+| REWE | done | 219 | 2026-11-24 |  |
+| PENNY | done | 156 | 2026-11-24 |  |
 | Mercedes-Benz | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «») |
-| STIHL | done | 128 | 2026-11-23 | 6 außerhalb 50 km um Waiblingen |
-| MAHLE / MAHLE Aftermarket | done | 58 | 2026-11-23 |  |
-| Diakonie Stetten | done | 61 | 2026-11-23 |  |
-| Robert Bosch Krankenhaus | done | 9 | 2026-11-23 |  |
-| Kärcher | done | 86 | 2026-11-23 |  |
-| Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 13 | 2026-11-23 |  |
-| Landratsamt Rems-Murr-Kreis | done | 21 | 2026-11-23 |  |
-| Paulinenpflege Winnenden | done | 10 | 2026-11-23 |  |
-| Kreissparkasse Waiblingen | done | 8 | 2026-11-23 |  |
-| Stadt Waiblingen | done | 16 | 2026-11-23 |  |
-| TESAT-Spacecom | done | 25 | 2026-11-23 |  |
-| Airbus (Stuttgart, Laupheim, Backnang) | done | 6 | 2026-11-23 | 7 außerhalb 50 km um Waiblingen |
-| Klinikum Schloß Winnenden | done | 11 | 2026-11-23 |  |
-| Volksbank Stuttgart | done | 8 | 2026-11-23 |  |
-| Klinikum Stuttgart · Bad Cannstatt | done | 66 | 2026-11-23 |  |
-| Stadt Schorndorf | done | 8 | 2026-11-23 |  |
-| Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-23 |  |
-| Peter Hahn | done | 2 | 2026-11-23 |  |
-| Syntegon | done | 5 | 2026-11-23 | 11 außerhalb 50 km um Waiblingen |
-| Catalent | done | 9 | 2026-11-23 |  |
-| Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13307 Zeichen, 0 Links, Titel «Sana») |
-| Emil Löffelhardt | done | 14 | 2026-11-23 | 10 außerhalb 50 km um Waiblingen |
-| REMS | done | 6 | 2026-11-23 | 1 außerhalb 50 km um Waiblingen |
-| stoba Backnang | done | 5 | 2026-11-23 |  |
-| Deutsche Post / DHL | done | 120 | 2026-11-23 |  |
-| d&b audiotechnik | done | 10 | 2026-11-23 | 1 außerhalb 50 km um Waiblingen |
+| STIHL | done | 135 | 2026-11-24 | 6 außerhalb 50 km um Waiblingen |
+| MAHLE / MAHLE Aftermarket | done | 58 | 2026-11-24 |  |
+| Diakonie Stetten | done | 61 | 2026-11-24 |  |
+| Robert Bosch Krankenhaus | done | 9 | 2026-11-24 |  |
+| Kärcher | done | 88 | 2026-11-24 |  |
+| Rems-Murr-Kliniken · Winnenden / Schorndorf | done | 10 | 2026-11-24 |  |
+| Landratsamt Rems-Murr-Kreis | done | 21 | 2026-11-24 |  |
+| Paulinenpflege Winnenden | done | 12 | 2026-11-24 |  |
+| Kreissparkasse Waiblingen | done | 8 | 2026-11-24 |  |
+| Stadt Waiblingen | done | 16 | 2026-11-24 |  |
+| TESAT-Spacecom | done | 29 | 2026-11-24 |  |
+| Airbus (Stuttgart, Laupheim, Backnang) | done | 6 | 2026-11-24 | 7 außerhalb 50 km um Waiblingen |
+| Klinikum Schloß Winnenden | done | 11 | 2026-11-24 |  |
+| Volksbank Stuttgart | done | 8 | 2026-11-24 |  |
+| Klinikum Stuttgart · Bad Cannstatt | done | 69 | 2026-11-24 |  |
+| Stadt Schorndorf | done | 9 | 2026-11-24 |  |
+| Oskar Frech / Frech-Gruppe | done | 3 | 2026-11-24 |  |
+| Peter Hahn | unsafe_target | 2 | 2026-11-23 | Host nicht freigegeben: peterhahn.com |
+| Syntegon | done | 5 | 2026-11-24 | 11 außerhalb 50 km um Waiblingen |
+| Catalent | done | 9 | 2026-11-24 |  |
+| Sana · Karl-Olga-Krankenhaus | unsupported | 0 | – | keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13309 Zeichen, 0 Links, Titel «Sana») |
+| Emil Löffelhardt | done | 14 | 2026-11-24 | 10 außerhalb 50 km um Waiblingen |
+| REMS | done | 6 | 2026-11-24 | 1 außerhalb 50 km um Waiblingen |
+| stoba Backnang | done | 5 | 2026-11-24 |  |
+| Deutsche Post / DHL | done | 120 | 2026-11-24 |  |
+| d&b audiotechnik | done | 10 | 2026-11-24 | 1 außerhalb 50 km um Waiblingen |
 | SWR Stuttgart | unsupported | 0 | – | keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote») |
-| TTI / AEG / Milwaukee | done | 16 | 2026-11-23 | 83 außerhalb 50 km um Waiblingen |
-| Burger Schloz Automobile | done | 9 | 2026-11-23 |  |
-| Klöpfer | done | 6 | 2026-11-23 |  |
-| JUDO Wasseraufbereitung | done | 38 | 2026-11-23 |  |
-| RIVA-Gruppe / Mpire | done | 17 | 2026-11-23 |  |
-| WIRmachenDRUCK | done | 14 | 2026-11-23 | 1 außerhalb 50 km um Waiblingen |
-| Eisenmann Services / Personal-Service | done | 3 | 2026-11-23 |  |
-| Bäckerei Maurer | done | 15 | 2026-11-23 |  |
-| Elanders Waiblingen | done | 10 | 2026-11-23 |  |
+| TTI / AEG / Milwaukee | done | 17 | 2026-11-24 | 83 außerhalb 50 km um Waiblingen |
+| Burger Schloz Automobile | done | 9 | 2026-11-24 |  |
+| Klöpfer | done | 6 | 2026-11-24 |  |
+| JUDO Wasseraufbereitung | done | 40 | 2026-11-24 |  |
+| RIVA-Gruppe / Mpire | done | 18 | 2026-11-24 |  |
+| WIRmachenDRUCK | done | 14 | 2026-11-24 | 1 außerhalb 50 km um Waiblingen |
+| Eisenmann Services / Personal-Service | done | 3 | 2026-11-24 |  |
+| Bäckerei Maurer | done | 15 | 2026-11-24 |  |
+| Elanders Waiblingen | done | 10 | 2026-11-24 |  |
 | Scutum Sicherheit | unsafe_target | 0 | – | Host nicht freigegeben: www.scutum-group.com |
-| Brunold Automobile | done | 1 | 2026-11-23 |  |
+| Brunold Automobile | done | 1 | 2026-11-24 |  |
 | KÜBLER Workwear | unsupported | 0 | – | keine Anzeigenlinks auf https://kuebler.karriere.vision/jobs (1683 Zeichen, 0 Links, Titel «Online-Bewerbermanagement») |
-| Swoboda | done | 0 | 2026-11-23 | 14 außerhalb 50 km um Waiblingen |
-| Autohaus Walter Mulfinger | done | 4 | 2026-11-23 | 1 außerhalb 50 km um Waiblingen |
-| Adolf Föhl | done | 7 | 2026-11-23 |  |
-| Stadtwerke Waiblingen | done | 9 | 2026-11-23 |  |
-| FESSMANN | done | 2 | 2026-11-23 |  |
-| Soehnle Industrial Solutions | done | 15 | 2026-11-23 |  |
-| Gotthilf Benz Turngeräte | done | 6 | 2026-11-23 |  |
-| RIANI | done | 5 | 2026-11-23 | 3 außerhalb 50 km um Waiblingen |
-| Dusyma | done | 8 | 2026-11-23 |  |
-| Zeitungsverlag Waiblingen | done | 3 | 2026-11-23 |  |
+| Swoboda | done | 0 | 2026-11-24 | 14 außerhalb 50 km um Waiblingen |
+| Autohaus Walter Mulfinger | done | 6 | 2026-11-24 | 1 außerhalb 50 km um Waiblingen |
+| Adolf Föhl | done | 7 | 2026-11-24 |  |
+| Stadtwerke Waiblingen | done | 9 | 2026-11-24 |  |
+| FESSMANN | done | 2 | 2026-11-24 |  |
+| Soehnle Industrial Solutions | done | 15 | 2026-11-24 |  |
+| Gotthilf Benz Turngeräte | done | 6 | 2026-11-24 |  |
+| RIANI | done | 5 | 2026-11-24 | 3 außerhalb 50 km um Waiblingen |
+| Dusyma | done | 8 | 2026-11-24 |  |
+| Zeitungsverlag Waiblingen | done | 3 | 2026-11-24 |  |
 | Stadtwerke Schorndorf | robots_denied | 0 | – |  |
-| Abfallwirtschaft Rems-Murr | done | 2 | 2026-11-23 |  |
-| Murrelektronik | done | 26 | 2026-11-23 | 2 außerhalb 50 km um Waiblingen |
-| PFISTERER | done | 21 | 2026-11-23 | 9 außerhalb 50 km um Waiblingen |
-| Hahn Automobile | done | 10 | 2026-11-23 |  |
-| Klingele Paper & Packaging | done | 6 | 2026-11-23 | 30 außerhalb 50 km um Waiblingen |
-| Harro Höfliger | done | 19 | 2026-11-23 |  |
-| SOCCO | done | 17 | 2026-11-23 | 8 außerhalb 50 km um Waiblingen |
-| Rems-Murr-JOBS | done | 146 | 2026-11-23 | teilweise: rems_murr_jobs timeout nach 140 Stellen |
-| persona service | done | 247 | 2026-11-23 | 686 außerhalb 50 km um Waiblingen |
-| Lidl | done | 1162 | 2026-11-23 | 427 außerhalb 50 km um Waiblingen |
-| Kaufland | done | 321 | 2026-11-23 | 319 außerhalb 50 km um Waiblingen |
+| Abfallwirtschaft Rems-Murr | done | 2 | 2026-11-24 |  |
+| Murrelektronik | done | 27 | 2026-11-24 | 2 außerhalb 50 km um Waiblingen |
+| PFISTERER | done | 22 | 2026-11-24 | 9 außerhalb 50 km um Waiblingen |
+| Hahn Automobile | done | 11 | 2026-11-24 |  |
+| Klingele Paper & Packaging | done | 6 | 2026-11-24 | 30 außerhalb 50 km um Waiblingen |
+| Harro Höfliger | done | 19 | 2026-11-24 |  |
+| SOCCO | done | 17 | 2026-11-24 | 8 außerhalb 50 km um Waiblingen |
+| Rems-Murr-JOBS | done | 158 | 2026-11-24 | teilweise: rems_murr_jobs timeout nach 138 Stellen |
+| persona service | done | 247 | 2026-11-24 | 671 außerhalb 50 km um Waiblingen |
+| Lidl | done | 1166 | 2026-11-24 | 429 außerhalb 50 km um Waiblingen |
+| Kaufland | done | 323 | 2026-11-24 | 316 außerhalb 50 km um Waiblingen |
 | Trabajo.org | done | 10 | 2026-11-22 |  |
-| GPM Personalservice | done | 221 | 2026-11-23 | 13 außerhalb 50 km um Waiblingen |
-| Liebert GmbH | done | 69 | 2026-11-23 | 10 außerhalb 50 km um Waiblingen |
-| iits-consulting | done | 7 | 2026-11-23 |  |
+| GPM Personalservice | done | 226 | 2026-11-24 | 13 außerhalb 50 km um Waiblingen |
+| Liebert GmbH | done | 72 | 2026-11-24 | 10 außerhalb 50 km um Waiblingen |
+| iits-consulting | done | 7 | 2026-11-24 |  |
 
 ## Stellen
 
 ### 3763 Tesat-Spacecom GmbH & Co. KG
 
+- [AIT Manager Communication Payloads (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/AIT-Manager-Communication-Payloads--d-m-w-_JR10448019-1) · Backnang Deutschland · seit 2026-11-24
 - [Ausbildung Industrieelektriker (Geräte und Systeme) (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Ausbildung-Industrieelektriker--Gerte-und-Systeme---d-m-w--zum-01092027_JR10417661) · Backnang Deutschland · seit 2026-11-08
 - [Ausbildung zum Elektroniker für Geräte und Systeme (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Ausbildung-zum-Elektroniker-fr-Gerte-und-Systeme--d-m-w--zum-01092027_JR10417664) · Backnang Deutschland · seit 2026-11-22
 - [Ausbildung zum Oberflächenbeschichter (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Ausbildung-zum-Oberflchenbeschichter--d-m-w--zum-01092027_JR10417667) · Backnang Deutschland · seit 2026-11-22
@@ -92,7 +93,10 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Duales Studium B.Eng. Embedded Systems (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Duales-Studium-BEng-Embedded-Systems--d-m-w--zum-01092027_JR10417680) · Backnang Deutschland · seit 2026-11-22
 - [Duales Studium B.Eng. Optical Engineering (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Duales-Studium-BEng-Optical-Engineering--d-m-w--zum-01092027_JR10417678) · Backnang Deutschland · seit 2026-11-22
 - [Duales Studium B.Sc. Wirtschaftsinformatik - Application Management (d/m/w) zum 01.09.2027](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Duales-Studium-BSc-Wirtschaftsinformatik---Application-Management--d-m-w--zum-01092027_JR10417683) · Backnang Deutschland · seit 2026-11-22
+- [Engineer Mechanical Environmental Test (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Engineer-Mechanical-Environmental-Test--d-m-w-_JR10451262-1) · Backnang Deutschland · seit 2026-11-24
+- [Galvaniseur für Teilegalvanik (m/w/d)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Galvaniseur-fr-Teilegalvanik--m-w-d-_JR10450073-1) · Backnang Deutschland · seit 2026-11-24
 - [Hardware Entwickler (d/m/w) Digitale Signalverarbeitung](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Backnang/Hardware-Entwickler--d-m-w--Digitale-Signalverarbeitung_JR10455129-1) · Backnang Deutschland · seit 2026-11-20
+- [Manufacturing Engineer (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Manufacturing-Engineer--d-m-w-_JR10450938-1) · Backnang Deutschland · seit 2026-11-24
 - [Meister/Techniker Heizung- / Klimatechnik in der Werkserhaltung (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Meister-Techniker-Elektro-in-der-Werkserhaltung--d-m-w-_JR10380164-1) · Backnang Deutschland · seit 2026-11-08
 - [Praktikum "AI Softwareentwicklung" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--AI-Softwareentwicklung---d-m-w-_JR10460095) · Backnang Deutschland · seit 2026-11-23
 - [Praktikum "Automatisierung eines Messplatzes für die neueste Generation von Modulatoren" (d/m/w)](https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Stuttgart-Area/Praktikum--Automatisierung-eines-Messplatzes-fr-die-neueste-Generation-von-Modulatoren---d-m-w-_JR10454194) · Backnang Deutschland · seit 2026-11-08
@@ -175,6 +179,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Ausbildung Industriemechaniker/-in (m/w/d) am Standort Waldstetten 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Industriemechaniker-in-%28mwd%29-am-Standort-Waldstetten-2027-71364/1375032055) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Ausbildung Kaufmann/-frau für Speditions- und Logistikdienstleistung am Standort Obersontheim 2027](https://rems-murr-jobs.de/job/ausbildung-kaufmann-frau-fuer-speditions-und-logistikdienstleistung-am-standort-obersontheim-2027-1811340) · 74423 Obersontheim Baden-Württemberg DE · seit 2026-11-22
 - [Ausbildung Mechatroniker/in (m/w/d) am Standort Winnenden 2027](https://rems-murr-jobs.de/job/ausbildung-mechatronikerin-mwd-am-standort-winnenden-2027-1811335) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-22
+- [Ausbildung Mechatroniker/in (m/w/d) am Standort Winnenden 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-Mechatronikerin-%28mwd%29-am-Standort-Winnenden-2027-71364/1378296555) · Winnenden, DE, 71364 · seit 2026-11-24
 - [AUSBILDUNG ZUM KAUFMANN (M/W/D) FÜR IT-SYSTEMMANAGEMENT BEI DER ALFRED KÄRCHER VERTRIEBS- GMBH 2027](https://rems-murr-jobs.de/job/ausbildung-zum-kaufmann-mwd-fuer-it-systemmanagement-bei-der-alfred-kaercher-vertriebs-gmbh-2027-1811336) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-22
 - [Ausbildung zum Kaufmann (m/w/d) für IT-Systemmanagement bei der Alfred Kärcher Vertriebs-GmbH 2027](https://careers.kaercher.com/job/Winnenden-Ausbildung-zum-Kaufmann-%28mwd%29-f%C3%BCr-IT-Systemmanagement-bei-der-Alfred-K%C3%A4rcher-Vertriebs-GmbH-2027-71364/1368032255) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Auszubildende/r Mechatronik 2027 (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Auszubildender-Mechatronik-2027-%28mwd%29-71409/1356329055) · Schwaikheim, DE, 71409 · seit 2026-11-08
@@ -189,6 +194,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Embedded Software-Entwickler (m/w/d)](https://careers.kaercher.com/job/Schwaikheim-Embedded-Software-Entwickler-%28mwd%29-71409/1362352555) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Entwicklungs- und Projektingenieur*in (m/w/d) Elektrotechnik](https://careers.kaercher.com/job/Schwaikheim-Entwicklungs-und-Projektingenieurin-%28mwd%29-Elektrotechnik-71409/1344340555) · Schwaikheim, DE, 71409 · seit 2026-11-08
 - [Fachberater (m/w/d) Robotics - Saarland, Hessen und NRW](https://careers.kaercher.com/job/Winnenden-Fachberater-%28mwd%29-Robotics-Saarland%2C-Hessen-und-NRW-71364/1372747755) · Winnenden, DE, 71364 · seit 2026-11-08
+- [Fachberater Vehicle Wash (m/w/d)](https://careers.kaercher.com/job/Winnenden-Fachberater-Vehicle-Wash-%28mwd%29-71364/1378273555) · Winnenden, DE, 71364 · seit 2026-11-24
 - [Frontend / HMI Entwickler (m/w/d) KIRA Robotics](https://careers.kaercher.com/job/Schwaikheim-Frontend-HMI-Entwickler-%28mwd%29-KIRA-Robotics-71409-Schw/1369306755) · Schwaikheim, DE, 71409 Schw · seit 2026-11-08
 - [Global Online Shop Manager (m/w/d)](https://careers.kaercher.com/job/Winnenden-Global-Online-Shop-Manager-%28mwd%29-71364/1358962755) · Winnenden, DE, 71364 · seit 2026-11-08
 - [Gruppenleiter (m/w/d) Controlling Sales und G&A Funktionen](https://careers.kaercher.com/job/Winnenden-Gruppenleiter-%28mwd%29-Controlling-Sales-und-G&A-Funktionen-71364/1370304555) · Winnenden, DE, 71364 · seit 2026-11-08
@@ -261,6 +267,8 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 ### ANDREAS STIHL AG & Co. KG
 
 - [Abschlussarbeit Analytik von Akkuzellen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-analytik-von-akkuzellen-sf37561) · Waiblingen DE · seit 2026-11-08
+- [Abschlussarbeit Ansätze zur Reproduktion multiaxialer Belastungen durch uniaxiale Shakeranregung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-ansaetze-zur-reproduktion-multiaxialer-belastungen-durch-uniaxiale-shakeranregung-sf58617) · Waiblingen DE · seit 2026-11-24
+- [Abschlussarbeit Anwenderanalyse und Entwicklung innovativer Produktlösungen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-anwenderanalyse-und-entwicklung-innovativer-produktloesungen-sf58614) · Waiblingen DE · seit 2026-11-24
 - [Abschlussarbeit Bewertung der Materialgüterpotenziale auf die Performance von Elektromotoren](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-bewertung-der-materialgueterpotenziale-auf-die-performance-von-elektromotoren-sf44462) · Waiblingen DE · seit 2026-11-08
 - [Abschlussarbeit E-Motor Design](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-e-motor-design-sf56180) · Waiblingen DE · seit 2026-11-08
 - [Abschlussarbeit Entwickeln von Funktionsprototypen für neue Antriebsfunktionen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-entwickeln-von-funktionsprototypen-fuer-neue-antriebsfunktionen-sf56994) · Waiblingen DE · seit 2026-11-08
@@ -278,21 +286,31 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Abschlussarbeit Untersuchung der Alterung von kommerziellen Lithium-Ionen Batterien](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-untersuchung-der-alterung-von-kommerziellen-lithium-ionen-batterien-sf52528) · Waiblingen DE · seit 2026-11-08
 - [Abschlussarbeit Vorentwicklung BLDC Motorelektroniken mit Wide Bandgap Halbleitern](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-vorentwicklung-bldc-motorelektroniken-mit-wide-bandgap-halbleitern-sf56222) · Waiblingen DE · seit 2026-11-08
 - [Abschlussarbeit Vorentwicklung Elektronikmodule](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-vorentwicklung-elektronikmodule-sf58248) · Waiblingen DE · seit 2026-11-22
+- [Abschlussarbeit ​​ Experimentelle Untersuchung des dynamischen Verhaltens von Sägeketten](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abschlussarbeit-experimentelle-untersuchung-des-dynamischen-verhaltens-von-saegeketten-sf58616) · Waiblingen DE · seit 2026-11-24
 - [Abteilungsleiter Sondermaschinenbau & Automatisierung (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/abteilungsleiter-sondermaschinenbau-and-automatisierung-w-m-d-sf57767) · Waiblingen DE · seit 2026-11-22
 - [Ausbildung als Fachkraft für Lagerlogistik (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/ausbildung-als-fachkraft-fuer-lagerlogistik-w-m-d-2027-sf57565) · Waiblingen DE · seit 2026-11-17
+- [Ausbildung als Fachkraft für Lagerlogistik (w/m/d) 2027](https://rems-murr-jobs.de/job/ausbildung-als-fachkraft-fuer-lagerlogistik-wmd-2027-1811726) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
 - [Ausbildung als Industriemechaniker (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/ausbildung-als-industriemechaniker-w-m-d-2027-sf57524) · Waiblingen DE · seit 2026-11-08
+- [Ausbildung als Industriemechaniker (w/m/d) 2027](https://rems-murr-jobs.de/job/ausbildung-als-industriemechaniker-wmd-2027-1811727) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
 - [Ausbildung als Mechatroniker (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/ausbildung-als-mechatroniker-w-m-d-2027-sf57572) · Waiblingen DE · seit 2026-11-08
+- [Ausbildung als Mechatroniker (w/m/d) 2027](https://rems-murr-jobs.de/job/ausbildung-als-mechatroniker-wmd-2027-1811728) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
 - [Betriebsarzt (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/betriebsarzt-w-m-d-sf57048) · Waiblingen DE · seit 2026-11-08
 - [Duales Studium Elektrotechnik und Informationstechnik (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/duales-studium-elektrotechnik-und-informationstechnik-w-m-d-2027-sf57555) · Waiblingen DE · seit 2026-11-17
+- [Duales Studium Elektrotechnik und Informationstechnik (w/m/d) 2027](https://rems-murr-jobs.de/job/duales-studium-elektrotechnik-und-informationstechnik-wmd-2027-1811729) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
+- [Duales Studium Embedded Systems (DHBW) (w/m/d) 2027](https://rems-murr-jobs.de/job/duales-studium-embedded-systems-dhbw-wmd-2027-1811725) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
 - [Duales Studium Embedded Systems (DHBW) (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/duales-studium-embedded-systems-dhbw-w-m-d-2027-sf57638) · Waiblingen DE · seit 2026-11-22
+- [Duales Studium Informatik (w/m/d) 2027](https://rems-murr-jobs.de/job/duales-studium-informatik-wmd-2027-1811730) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
 - [Duales Studium Informatik (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/duales-studium-informatik-w-m-d-2027-sf57537) · Waiblingen DE · seit 2026-11-17
 - [Duales Studium Wirtschaftsinformatik (w/m/d) 2027](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/duales-studium-wirtschaftsinformatik-w-m-d-2027-sf57528) · Waiblingen DE · seit 2026-11-22
+- [Duales Studium Wirtschaftsinformatik (w/m/d) 2027](https://rems-murr-jobs.de/job/duales-studium-wirtschaftsinformatik-wmd-2027-1811731) · Waiblingen Baden-Württemberg DE · seit 2026-11-24
 - [Experte für globale Finanzprozesse in S/4HANA (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/senior-prozessmanager-finance-and-sap-fi-w-m-d-sf58264) · Fellbach DE · seit 2026-11-23
 - [Experte für globale Finanzprozesse in S/4HANA (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/experte-fuer-globale-finanzprozesse-in-s-4hana-w-m-d-sf58264) · Fellbach DE · seit 2026-11-22
 - [Global Channel Lead DIY (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/global-channel-lead-diy-w-m-d-sf52723) · Waiblingen DE · seit 2026-11-08
 - [Hotelfachkraft Catering & Veranstaltungsservice (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/hotelfachkraft-catering-and-veranstaltungsservice-w-m-d-sf57474) · Waiblingen DE · seit 2026-11-08
 - [IAM Specialist & Compliance Manager - Identity & Access Management (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/iam-specialist-and-compliance-manager-identity-and-access-management-w-m-d-sf58257) · Fellbach DE · seit 2026-11-22
 - [Lead Solution Architect Fleet Solutions & Connected Services (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/lead-solution-architect-fleet-solutions-and-connected-services-w-m-d-sf55829) · Waiblingen DE · seit 2026-11-22
+- [Mitarbeiter Betriebsgastronomie / Gemeinschaftsverpflegung (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/mitarbeiter-betriebsgastronomie-gemeinschaftsverpflegung-w-m-d-sf58577) · Fellbach DE · seit 2026-11-24
+- [Mitarbeiter Betriebsgastronomie / Gemeinschaftsverpflegung (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/mitarbeiter-betriebsgastronomie-gemeinschaftsverpflegung-w-m-d-sf58578) · Waiblingen DE · seit 2026-11-24
 - [Mitarbeiter Werksverpflegung / Koch (w/m/d)](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/mitarbeiter-werksverpflegung-koch-w-m-d-sf58376) · Waiblingen DE · seit 2026-11-22
 - [Praktikum Aufbau einer Simulationsumgebung für die Robotikentwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-aufbau-einer-simulationsumgebung-fuer-die-robotikentwicklung-sf57469) · Waiblingen DE · seit 2026-11-22
 - [Praktikum Auslegung und Optimierung Turbomaschinen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-auslegung-und-optimierung-turbomaschinen-sf58593) · Waiblingen DE · seit 2026-11-22
@@ -303,6 +321,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Praktikum CI/CD & DevOps für Embedded Software](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-ci-cd-and-devops-fuer-embedded-software-sf58592) · Waiblingen DE · seit 2026-11-22
 - [Praktikum Data Analytics](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-data-analytics-sf58525) · Fellbach DE · seit 2026-11-22
 - [Praktikum Data Analytics & AI im Marketing und Vertrieb](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-data-analytics-sf54974) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Data Analytics & AI im Marketing und Vertrieb](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-data-analytics-and-ai-im-marketing-und-vertrieb-sf54974) · Waiblingen DE · seit 2026-11-24
 - [Praktikum Data Analytics & Data Science - E-Commerce](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-data-analytics-and-data-science-e-commerce-sf58415) · Waiblingen DE · seit 2026-11-22
 - [Praktikum E-Motor Design](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-e-motor-design-sf56184) · Waiblingen DE · seit 2026-11-08
 - [Praktikum E-Motoren Entwicklung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-e-motoren-entwicklung-sf58331) · Waiblingen DE · seit 2026-11-22
@@ -364,6 +383,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Praktikum Untersuchung von kommerziellen Lithium-Ionen-Batterien](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-untersuchung-von-kommerziellen-lithium-ionen-batterien-sf52388) · Waiblingen DE · seit 2026-11-08
 - [Praktikum Validierung und Anforderungsmanagement von Akkupacks und Ladegeräten](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-validierung-und-anforderungsmanagement-von-akkupacks-und-ladegeraeten-sf57056) · Waiblingen DE · seit 2026-11-08
 - [Praktikum Versuch und Analyse - Thermische Auslegung](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-versuch-und-analyse-thermische-auslegung-sf37021) · Waiblingen DE · seit 2026-11-08
+- [Praktikum Vorentwicklung Elektronikmodule](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-elektronikmodule-sf58615) · Waiblingen DE · seit 2026-11-24
 - [Praktikum Vorentwicklung innovative Produktfunktionen Mechatronik](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-innovative-produktfunktionen-mechatronik-sf37182) · Waiblingen DE · seit 2026-11-08
 - [Praktikum Vorentwicklung innovative Zubehörprodukte](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-innovative-zubehoerprodukte-sf52359) · Waiblingen DE · seit 2026-11-08
 - [Praktikum Vorentwicklung Produkt Innovationen](https://corporate.stihl.de/de/karriere/stellenangebote/job-details/praktikum-vorentwicklung-produkt-innovationen-sf55952) · Waiblingen DE · seit 2026-11-08
@@ -391,9 +411,11 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 
 ### Autohaus Walter Mulfinger GmbH
 
+- [Ausbildung zum Automobilkaufmann (m/w/d) für Renault und Dacia 2027 - mehrere Standorte](https://join.com/companies/mulfinger/16983464-ausbildung-zum-automobilkaufmann-m-w-d-fuer-renault-und-dacia-2027-mehrere-standorte) · 71522 Backnang de · seit 2026-11-24
 - [Garantiesachbearbeiter (m/w/d)](https://join.com/companies/mulfinger/16933799-garantiesachbearbeiter-m-w-d) · 71522 Backnang de · seit 2026-11-17
 - [Gewerbekundenverkäufer (m/w/d) für Renault&Dacia](https://join.com/companies/mulfinger/16965436-gewerbekundenverkaeufer-m-w-d-fuer-renault-und-dacia) · 71522 Backnang de · seit 2026-11-18
 - [Kfz-Mechatroniker*in (m/w/d)](https://join.com/companies/mulfinger/16967154-kfz-mechatroniker-in-m-w-d) · Schwäbisch Gmünd de · seit 2026-11-19
+- [Renault & Dacia Verkäufer Neuwagen (m/w/d)](https://join.com/companies/mulfinger/16951619-renault-und-dacia-verkaeufer-neuwagen-m-w-d) · Essingen de · seit 2026-11-24
 - [Renault & Dacia Verkäufer Neuwagen (m/w/d)](https://join.com/companies/mulfinger/16953007-renault-und-dacia-verkaeufer-neuwagen-m-w-d) · Schwäbisch Gmünd de · seit 2026-11-17
 
 ### AWO Rems-Murr gGmbH
@@ -675,11 +697,15 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 ### Diakonie Stetten e.V.
 
 - [Dual Studierende (m/w/d) (DHBW) für Soziale Arbeit](https://rems-murr-jobs.de/job/dual-studierende-mwd-dhbw-fuer-soziale-arbeit-1811010) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-22
+- [Gruppenleitung (m/w/d) für unsere Fördergruppe mit basaler Assistenz in Kernen in Vollzeit](https://rems-murr-jobs.de/job/gruppenleitung-mwd-fuer-unsere-foerdergruppe-mit-basaler-assistenz-kernen-vollzeit-1811694) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-24
 - [Hauswirtschaftlichen Mitarbeiter (m/w/d) in Teilzeit](https://rems-murr-jobs.de/job/hauswirtschaftlichen-mitarbeiter-mwd-teilzeit-1811298) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-22
 - [Hauswirtschaftlichen Mitarbeiter (m/w/d) mit 39,0 Stunden pro Woche](https://rems-murr-jobs.de/job/hauswirtschaftlichen-mitarbeiter-mwd-mit-390-stunden-pro-woche-1811575) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-22
 - [Heilerziehungspfleger (m/w/d) oder Pädagogische Fachkraft (m/w/d) in Voll- oder Teilzeit](https://rems-murr-jobs.de/job/heilerziehungspfleger-mwd-oder-paedagogische-fachkraft-mwd-voll-oder-teilzeit-1811524) · 73547 Lorch Baden-Württemberg DE · seit 2026-11-22
 - [Koch (m/w/d) in Vollzeit (Mo - Fr)](https://rems-murr-jobs.de/job/koch-mwd-vollzeit-mo-fr-1811576) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-22
+- [Logopäde (m/w/d) in der Interdisziplinären Frühförderung](https://rems-murr-jobs.de/job/logopaede-mwd-der-interdisziplinaeren-fruehfoerderung-1811695) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-24
 - [Pädagogische oder pflegerische Fachkraft (m/w/d) für das geschützte Setting auf der Hangweide in Voll- und Teilzeit](https://rems-murr-jobs.de/job/paedagogische-oder-pflegerische-fachkraft-mwd-fuer-das-geschuetzte-setting-auf-der-hangweide-voll-1810777) · 71394 Kernen im Remstal Baden-Württemberg DE · seit 2026-11-22
+- [Pädagogische oder pflegerische Fachkraft (m/w/d) im Wohnbereich Weinstadt-Remshalden für unser neues AWS+ Wohnprojekt in Beutelsbach in Voll- und Teilzeit](https://rems-murr-jobs.de/job/paedagogische-oder-pflegerische-fachkraft-mwd-im-wohnbereich-weinstadt-remshalden-fuer-unser-neues-1811693) · 71384 Weinstadt Baden-Württemberg DE · seit 2026-11-24
+- [stellv.  Pflegedienstleitung  (m/w/d) in Weissach i. T. in Vollzeit](https://rems-murr-jobs.de/job/stellv-pflegedienstleitung-mwd-weissach-i-t-vollzeit-1811692) · 71554 Weissach im Tal Baden-Württemberg DE · seit 2026-11-24
 - [Wohnverbundleitung (m/w/d) im Kommunalen Wohnverbund Lorch](https://rems-murr-jobs.de/job/wohnverbundleitung-mwd-im-kommunalen-wohnverbund-lorch-1810717) · 73547 Lorch Baden-Württemberg DE · seit 2026-11-22
 
 ### DIE KREISBAUGRUPPE
@@ -775,7 +801,6 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Duales Studium - Informatik (B.Sc.), Cyber Security (m/w/d) 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Informatik-%28B_Sc_%29%2C-Cyber-Security-%28mwd%29-2027-73734/1387327333) · Esslingen, DE, 73734 · seit 2026-11-18
 - [Duales Studium - Wirtschaftsinformatik, Data Science (B.Sc.) (m/w/d) 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Wirtschaftsinformatik%2C-Data-Science-%28B_Sc_%29-%28mwd%29-2027-73734/1387333033) · Esslingen, DE, 73734 · seit 2026-11-18
 - [Duales Studium - Wirtschaftsingenieurwesen (B.Eng.) (m/w/d) in Esslingen 2027](https://jobs.festo.com/job/Esslingen-Duales-Studium-Wirtschaftsingenieurwesen-%28B_Eng_%29-%28mwd%29-in-Esslingen-2027-73734/1387333333) · Esslingen, DE, 73734 · seit 2026-11-18
-- [FluidX: Fullstack Developer](https://jobs.festo.com/job/Bangalore%2C-Karnataka-FluidX-Fullstack-Developer/1276955301) · Bangalore, Karnataka, IN · seit 2026-11-20
 - [Praktikum Duales Studium - BOGY & Studienorientierung](https://jobs.festo.com/job/Esslingen-Praktikum-Duales-Studium-BOGY-&-Studienorientierung-73734/1014950601) · Esslingen, DE, 73734 · seit 2026-11-18
 - [Praktikum im Bereich HR Employer Branding / Personalmarketing](https://jobs.festo.com/job/Esslingen-Praktikum-im-Bereich-HR-Employer-Branding-Personalmarketing-73734/1445275033) · Esslingen, DE, 73734 · seit 2026-11-18
 - [Praktikum im Personalbereich HR Business Partner](https://jobs.festo.com/job/Ostfildern-Praktikum-im-Personalbereich-HR-Business-Partner-73760/1457205833) · Ostfildern, DE, 73760 · seit 2026-11-17
@@ -785,8 +810,6 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Praktikum Mechatronik (m/w/d)](https://jobs.festo.com/job/Esslingen-Praktikum-Mechatronik-%28mwd%29-73734/1014967901) · Esslingen, DE, 73734 · seit 2026-11-18
 - [Praktikum Personalmanagement - Bereich HR Business Partner](https://jobs.festo.com/job/Esslingen-Praktikum-Personalmanagement-Bereich-HR-Business-Partner-73734/1457208433) · Esslingen, DE, 73734 · seit 2026-11-18
 - [Praktikum Talent Acquisition - Schwerpunkt Recruiting (ab 10/2027)](https://jobs.festo.com/job/Esslingen-Praktikum-Talent-Acquisition-Schwerpunkt-Recruiting-%28ab-102027%29-73734/1373038933) · Esslingen, DE, 73734 · seit 2026-11-18
-- [Raktáros](https://jobs.festo.com/job/Budapest-Rakt%C3%A1ros-1037/1369514533) · Budapest, HU, 1037 · seit 2026-11-20
-- [Spontanbewerbungen Festo Gewindetriebe AG](https://jobs.festo.com/job/Burg-Spontanbewerbungen-Festo-Gewindetriebe-AG-5736/1075460301) · seit 2026-11-20
 
 ### Fleischwaren Neckarsulm GmbH & Co. KG
 
@@ -947,6 +970,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Koch/Köchin (m/w/d)](https://www.persy.jobs/persy/l/job-juduz-a-stellenangebote-Koch-Koechin-m-w-d-Vollzeit-job-in-Fellbach-70734-Baden-Wuerttemberg) · 70734 Fellbach Deutschland · seit 2026-11-21
 - [KochKöchin (m/w/d)](https://www.persy.jobs/persy/l/job-judsm-a-stellenangebote-KochKoechin-m-w-d-job-in-Stuttgart-70188-Baden-Wuerttemberg) · 70188 Stuttgart Deutschland · seit 2026-11-22
 - [Kommissionierer (m/w/d)](https://www.persy.jobs/persy/l/job-jrw5n-a-stellenangebote-Kommissionierer-m-w-d-Vollzeit-job-in-Waiblingen-71332-Baden-Wuerttemberg) · 71332 Waiblingen Deutschland · seit 2026-11-22
+- [Konstruktionsmechaniker (m/w/d)](https://www.persy.jobs/persy/l/job-jwquv-a-stellenangebote-Konstruktionsmechaniker-m-w-d-job-in-Hemmingen-71282-Baden-Wuerttemberg) · 71282 Hemmingen Deutschland · seit 2026-11-24
 - [Kraftfahrzeugmechaniker (m/w/d)](https://www.persy.jobs/persy/l/job-jtkcj-a-stellenangebote-Kraftfahrzeugmechaniker-m-w-d-Vollzeit-job-in-Stuttgart-70565-Baden-Wuerttemberg) · 70565 Stuttgart Deutschland · seit 2026-11-21
 - [Kreditorenbuchhalter (m/w/d)](https://www.persy.jobs/persy/l/job-juduo-a-stellenangebote-Kreditorenbuchhalter-m-w-d-Vollzeit-job-in-Korntal-Muenchingen-70825-Baden-Wuerttemberg) · 70825 Korntal-Münchingen Deutschland · seit 2026-11-22
 - [Lackierer (m/w/d)](https://www.persy.jobs/persy/l/job-judr1-a-stellenangebote-Lackierer-m-w-d-job-in-Esslingen-am-Neckar-73734-Baden-Wuerttemberg) · 73734 Esslingen am Neckar Deutschland · seit 2026-11-22
@@ -961,6 +985,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Lagermitarbeiter (m/w/d)](https://www.persy.jobs/persy/l/job-judu9-a-stellenangebote-Lagermitarbeiter-m-w-d-Vollzeit-job-in-Heimsheim-71296-Baden-Wuerttemberg) · 71296 Heimsheim Deutschland · seit 2026-11-22
 - [Lagermitarbeiter (m/w/d)](https://www.persy.jobs/persy/l/job-judq2-a-stellenangebote-Lagermitarbeiter-m-w-d-job-in-Ditzingen-71254-Baden-Wuerttemberg) · 71254 Ditzingen Deutschland · seit 2026-11-22
 - [Lagermitarbeiter mit Kundenbetreuung/Angebotsmanagement (m/w/d)](https://www.persy.jobs/persy/l/job-jtkco-a-stellenangebote-Lagermitarbeiter-mit-Kundenbetreuung-Angebotsmanagement-m-w-d-Vollzeit-job-in-Ludwigsburg-Wuerttemberg-71634-Baden-Wuerttemberg) · 71634 Ludwigsburg, Württemberg Deutschland · seit 2026-11-21
+- [LKW Fahrer (m/w/d)](https://www.persy.jobs/persy/l/job-jwqut-a-stellenangebote-LKW-Fahrer-m-w-d-job-in-Nufringen-71154-Baden-Wuerttemberg) · 71154 Nufringen Deutschland · seit 2026-11-24
 - [Maler und Lackierer - Maler (m/w/d)](https://www.persy.jobs/persy/l/job-judv0-a-stellenangebote-Maler-und-Lackierer-Maler-m-w-d-Vollzeit-job-in-Sindelfingen-71063-Baden-Wuerttemberg) · 71063 Sindelfingen Deutschland · seit 2026-11-21
 - [Maler und Lackierer - Maler (m/w/d)](https://www.persy.jobs/persy/l/job-judt2-a-stellenangebote-Maler-und-Lackierer-Maler-m-w-d-Vollzeit-job-in-Stuttgart-70372-Baden-Wuerttemberg) · 70372 Stuttgart Deutschland · seit 2026-11-22
 - [Maler und Lackierer - Maler (m/w/d)](https://www.persy.jobs/persy/l/job-judv7-a-stellenangebote-Maler-und-Lackierer-Maler-m-w-d-Vollzeit-job-in-Winnenden-Wuerttemberg-71364-Baden-Wuerttemberg) · 71364 Winnenden, Württemberg Deutschland · seit 2026-11-21
@@ -989,6 +1014,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Mitarbeiter (w/m/d) in der Qualitätssicherung](https://www.persy.jobs/persy/l/job-jssm6-a-stellenangebote-Mitarbeiter-w-m-d-in-der-Qualitaetssicherung-Vollzeit-job-in-Waiblingen-71336-Baden-Wuerttemberg) · 71336 Waiblingen Deutschland · seit 2026-11-22
 - [Mitarbeiter für die Endbearbeitung und Versand (m/w/d)](https://www.persy.jobs/persy/l/job-judu0-a-stellenangebote-Mitarbeiter-fuer-die-Endbearbeitung-und-Versand-m-w-d-Vollzeit-job-in-Hemmingen-71282-Baden-Wuerttemberg) · 71282 Hemmingen Deutschland · seit 2026-11-22
 - [Mitarbeiter für die Qualitätssicherung (m/w/d)](https://www.persy.jobs/persy/l/job-judtm-a-stellenangebote-Mitarbeiter-fuer-die-Qualitaetssicherung-m-w-d-Vollzeit-job-in-Korntal-Muenchingen-70825-Baden-Wuerttemberg) · 70825 Korntal-Münchingen Deutschland · seit 2026-11-22
+- [Mitarbeiter im Versand m/w/d/](https://www.persy.jobs/persy/l/job-jwquw-a-stellenangebote-Mitarbeiter-im-Versand-m-w-d-job-in-Wurmberg-75449-Baden-Wuerttemberg) · 75449 Wurmberg Deutschland · seit 2026-11-24
 - [Mitarbeiter in der CNC-Bearbeitung (m/w/d)](https://www.persy.jobs/persy/l/job-judv6-a-stellenangebote-Mitarbeiter-in-der-CNC-Bearbeitung-m-w-d-Vollzeit-job-in-Weil-der-Stadt-71263-Baden-Wuerttemberg) · 71263 Weil der Stadt Deutschland · seit 2026-11-21
 - [Mitarbeiter in der Produktion (m/w/d)](https://www.persy.jobs/persy/l/job-jtkch-a-stellenangebote-Mitarbeiter-in-der-Produktion-m-w-d-job-in-Berglen-73663-Baden-Wuerttemberg) · 73663 Berglen Deutschland · seit 2026-11-21
 - [Mitarbeiter Kabelkonfektionierung und Gerätefertigung (m/w/d)](https://www.persy.jobs/persy/l/job-judtp-a-stellenangebote-Mitarbeiter-Kabelkonfektionierung-und-Geraetefertigung-m-w-d-Vollzeit-job-in-Sindelfingen-71063-Baden-Wuerttemberg) · 71063 Sindelfingen Deutschland · seit 2026-11-22
@@ -1026,6 +1052,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Produktionsmitarbeiter im Bereich Chemie (m/w/d)](https://www.persy.jobs/persy/l/job-judt0-a-stellenangebote-Produktionsmitarbeiter-im-Bereich-Chemie-m-w-d-Vollzeit-job-in-Heilbronn-Neckar-74076-Baden-Wuerttemberg) · 74076 Heilbronn, Neckar Deutschland · seit 2026-11-22
 - [Produktionsmitarbeiter/in (m/w/d)](https://www.persy.jobs/persy/l/job-judps-a-stellenangebote-Produktionsmitarbeiter-in-m-w-d-job-in-Asperg-71679-Baden-Wuerttemberg) · 71679 Asperg Deutschland · seit 2026-11-22
 - [Reifenmonteur (m/w/d)](https://www.persy.jobs/persy/l/job-judpp-a-stellenangebote-Reifenmonteur-m-w-d-job-in-Stuttgart-70435-Baden-Wuerttemberg) · 70435 Stuttgart Deutschland · seit 2026-11-22
+- [Reinigungskraft mit Kenntnis in der Kleinmontage (m/d/w)](https://www.persy.jobs/persy/l/job-jwqux-a-stellenangebote-Reinigungskraft-mit-Kenntnis-in-der-Kleinmontage-m-d-w-job-in-Renningen-71272-Baden-Wuerttemberg) · 71272 Renningen Deutschland · seit 2026-11-24
 - [Sachbearbeiter - Logistik (m/w/d)](https://www.persy.jobs/persy/l/job-judtv-a-stellenangebote-Sachbearbeiter-Logistik-m-w-d-Vollzeit-job-in-Esslingen-am-Neckar-73734-Baden-Wuerttemberg) · 73734 Esslingen am Neckar Deutschland · seit 2026-11-22
 - [Sachbearbeiter - Rechnungswesen (m/w/d)](https://www.persy.jobs/persy/l/job-judvm-a-stellenangebote-Sachbearbeiter-Rechnungswesen-m-w-d-Vollzeit-job-in-Heilbronn-Neckar-74076-Baden-Wuerttemberg) · 74076 Heilbronn, Neckar Deutschland · seit 2026-11-21
 - [Schlosser/Machaniker (m/w/d)](https://www.persy.jobs/persy/l/job-judv2-a-stellenangebote-Schlosser-Machaniker-m-w-d-Vollzeit-job-in-Plochingen-73207-Baden-Wuerttemberg) · 73207 Plochingen Deutschland · seit 2026-11-21
@@ -1038,6 +1065,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Schweißer (m/w/d)](https://www.persy.jobs/persy/l/job-jsa8o-a-stellenangebote-Schweisser-m-w-d-job-in-Erdmannhausen-71729-Baden-Wuerttemberg) · 71729 Erdmannhausen Deutschland · seit 2026-11-22
 - [Schweißer MAG (m/w/d)](https://www.persy.jobs/persy/l/job-judr3-a-stellenangebote-Schweisser-MAG-m-w-d-job-in-Brackenheim-74336-Baden-Wuerttemberg) · 74336 Brackenheim Deutschland · seit 2026-11-22
 - [Servicekraft - Gastronomie und Gastgewerbe (m/w/d)](https://www.persy.jobs/persy/l/job-juds7-a-stellenangebote-Servicekraft-Gastronomie-und-Gastgewerbe-m-w-d-job-in-Stuttgart-70188-Baden-Wuerttemberg) · 70188 Stuttgart Deutschland · seit 2026-11-22
+- [Servicemitarbeiterin/Servicemitarbeiter Veranstaltungsservice (m/w/d)](https://www.persy.jobs/persy/l/job-jwquu-a-stellenangebote-Servicemitarbeiterin-Servicemitarbeiter-Veranstaltungsservice-m-w-d-job-in-Stuttgart-70174-Baden-Wuerttemberg) · 70174 Stuttgart Deutschland · seit 2026-11-24
 - [Servicetechniker (m/w/d)](https://www.persy.jobs/persy/l/job-judtq-a-stellenangebote-Servicetechniker-m-w-d-Vollzeit-job-in-Stuttgart-70173-Baden-Wuerttemberg) · 70173 Stuttgart Deutschland · seit 2026-11-22
 - [Speditionskaufmann/-frau (m/w/d)](https://www.persy.jobs/persy/l/job-judul-a-stellenangebote-Speditionskaufmann-frau-m-w-d-Vollzeit-job-in-Moeglingen-Kreis-Ludwigsburg-71696-Baden-Wuerttemberg) · 71696 Möglingen, Kreis Ludwigsburg Deutschland · seit 2026-11-22
 - [Speditionskaufmann/-frau (m/w/d)](https://www.persy.jobs/persy/l/job-js25k-a-stellenangebote-Speditionskaufmann-frau-m-w-d-Vollzeit-job-in-Moeglingen-Kreis-Ludwigsburg-71696-Baden-Wuerttemberg) · 71696 Möglingen, Kreis Ludwigsburg Deutschland · seit 2026-11-22
@@ -1074,6 +1102,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Gewährleistungssachbearbeiter (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=0384257169) · 70736 Fellbach BW DE · seit 2026-11-08
 - [Kfz-Mechatroniker (m/w/d) für Karosseriemontage](https://ats.sopea-hr.com/ats/JobAd?Job=0893245167) · 70806 Kornwestheim BW DE · seit 2026-11-19
 - [Serviceassistent (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=9346128570) · 71384 Weinstadt BW DE · seit 2026-11-17
+- [Serviceassistent (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=0629314587) · 71063 Sindelfingen BW DE · seit 2026-11-24
 - [Serviceassistent VW (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=3804912657) · 73734 Esslingen BW DE · seit 2026-11-23
 - [Serviceberater (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=3984761502) · 71384 Weinstadt BW DE · seit 2026-11-17
 - [Serviceberater VW (m/w/d)](https://ats.sopea-hr.com/ats/JobAd?Job=2386041975) · 73061 Ebersbach BW DE · seit 2026-11-08
@@ -1084,10 +1113,10 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 ### Harro Höfliger Verpackungsmaschinen GmbH
 
 - [Abschlussarbeit im Bereich Nachhaltigkeitsmanagement](https://hoefliger.com/karriere/stellenangebote/abschlussarbeit-im-bereich-nachhaltigkeitsmanagement) · Allmersbach · seit 2026-11-08
-- [Abschlussarbeit im Bereich Pharma Services - Pulvercharakterisierung und Dosiertechnologien](https://hoefliger.com/karriere/stellenangebote/abschlussarbeit-im-bereich-pharma-services-pulvercharakterisierung-und-dosiertechnologien) · Allmersbach · seit 2026-11-18
 - [Applikationsingenieur für Kamerasysteme im Customer Service (m/w/d)](https://hoefliger.com/karriere/stellenangebote/applikationsingenieur-fuer-kamerasysteme-im-customer-service-m-w-d) · Allmersbach · seit 2026-11-23
 - [Ausbildung zum Elektroniker für Automatisierungstechnik (m/w/d) 2027](https://hoefliger.com/karriere/stellenangebote/ausbildung-zum-elektroniker-fuer-automatisierungstechnik-m-w-d-2027) · Allmersbach · seit 2026-11-19
 - [Ausbildung zum Industriekaufmann (m/w/d) 2027](https://hoefliger.com/karriere/stellenangebote/ausbildung-zum-industriekaufmann-m-w-d-2027) · Allmersbach · seit 2026-11-21
+- [Ausbildung zum Mechatroniker (m/w/d) 2027](https://hoefliger.com/karriere/stellenangebote/ausbildung-zum-mechatroniker-m-w-d-2027) · Allmersbach · seit 2026-11-24
 - [CE Koordinator (m/w/d) auf 2 Jahre befristet](https://hoefliger.com/karriere/stellenangebote/ce-koordinator-m-w-d-auf-2-jahre-befristet) · Allmersbach · seit 2026-11-23
 - [Controls Engineer - HMI/SCADA/MES Rockwell (m/w/d)](https://hoefliger.com/karriere/stellenangebote/controls-engineer-hmi-scada-mes-rockwell-m-w-d) · Oppenweiler · seit 2026-11-21
 - [Duales Studium: Allgemeines Wirtschaftsingenieurwesen (B.Eng.) 2027](https://hoefliger.com/karriere/stellenangebote/duales-studium-allgemeines-wirtschaftsingenieurwesen-b-eng-2027) · Allmersbach · seit 2026-11-21
@@ -1095,13 +1124,13 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Duales Studium: Informatik (B.Sc.) - Schwerpunkt Cyber Security 2027](https://hoefliger.com/karriere/stellenangebote/duales-studium-informatik-b-sc-schwerpunkt-cyber-security-2027) · Allmersbach · seit 2026-11-08
 - [Duales Studium: Informatik (B.Sc.) - Schwerpunkt Künstliche Intelligenz 2027](https://hoefliger.com/karriere/stellenangebote/duales-studium-informatik-b-sc-schwerpunkt-kuenstliche-intelligenz-2027) · Allmersbach · seit 2026-11-08
 - [Duales Studium: Ulmer Modell: Elektro- & Informationstechnik + Elektroniker f. Automat. (m/w/d) 2027](https://hoefliger.com/karriere/stellenangebote/duales-studium-ulmer-modell-elektro-informationstechnik-elektroniker-f-automat-m-w-d-2027) · Allmersbach · seit 2026-11-21
+- [Elektroniker / Elektriker im Sondermaschinenbau (m/w/d)](https://hoefliger.com/karriere/stellenangebote/elektroniker-elektriker-im-sondermaschinenbau-m-w-d) · Backnang · seit 2026-11-24
 - [Instandhaltungstechniker (m/w/d)](https://hoefliger.com/karriere/stellenangebote/instandhaltungstechniker-m-w-d) · Deutschlandweit · seit 2026-11-21
-- [Produktionslogistiker (m/w/d)](https://hoefliger.com/karriere/stellenangebote/produktionslogistiker-m-w-d) · Backnang · seit 2026-11-18
+- [Masterarbeit: KI-gestützte Erstellung von Budgetangeboten für Plattformmaschinen im Vertrieb](https://hoefliger.com/karriere/stellenangebote/masterarbeit-ki-gestuetzte-erstellung-von-budgetangeboten-fuer-plattformmaschinen-im-vertrieb) · Allmersbach · seit 2026-11-24
+- [Mechaniker / Mechatroniker Sondermaschinenbau (m/w/d)](https://hoefliger.com/karriere/stellenangebote/mechaniker-mechatroniker-sondermaschinenbau-m-w-d) · Backnang · seit 2026-11-24
 - [Projektmanager für internationale Projekte (m/w/d)](https://hoefliger.com/karriere/stellenangebote/projektmanager-fuer-internationale-projekte-m-w-d) · Allmersbach · seit 2026-11-23
 - [Sales Manager Deutschland | Benelux (m/w/d)](https://hoefliger.com/karriere/stellenangebote/sales-manager-deutschland-benelux-m-w-d) · Allmersbach · seit 2026-11-18
-- [Teamleiter Facility Management (m/w/d)](https://hoefliger.com/karriere/stellenangebote/teamleiter-facility-management-m-w-d) · Allmersbach · seit 2026-11-18
 - [Werkstudent (m/w/d) im Bereich Arbeitssicherheit](https://hoefliger.com/karriere/stellenangebote/werkstudent-m-w-d-im-bereich-arbeitssicherheit) · Allmersbach · seit 2026-11-08
-- [Werkstudent (m/w/d) in der Kreditorenbuchhaltung](https://hoefliger.com/karriere/stellenangebote/werkstudent-m-w-d-in-der-kreditorenbuchhaltung) · Allmersbach · seit 2026-11-18
 
 ### heldenreich. Ergotherapie/Logopädie/Physiotherapie Anja Kommode und Team
 
@@ -1157,6 +1186,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Prozessmanager/ Business Consultant (m/w/d)](https://judo.eu/Stellenanzeige/prozessmanager-m-w-d) · seit 2026-11-22
 - [Servicetechniker SHK (m/w/d)](https://judo.eu/Stellenanzeige/servicetechniker-shk-m-w-d-38) · seit 2026-11-22
 - [Servicetechniker SHK (m/w/d)](https://judo.eu/Stellenanzeige/servicetechniker-shk-m-w-d-30) · seit 2026-11-22
+- [Servicetechniker SHK (m/w/d)](https://judo.eu/Stellenanzeige/servicetechniker-shk-m-w-d-41) · seit 2026-11-24
 - [Servicetechniker SHK (m/w/d)](https://judo.eu/Stellenanzeige/servicetechniker-shk-m-w-d-29) · seit 2026-11-22
 - [Servicetechniker SHK (m/w/d)](https://judo.eu/Stellenanzeige/servicetechniker-shk-m-w-d-36) · seit 2026-11-22
 - [Servicetechniker SHK (m/w/d)](https://judo.eu/Stellenanzeige/servicetechniker-shk-m-w-d-34) · seit 2026-11-22
@@ -1169,6 +1199,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Technischen Projektabwickler (m/w/d)](https://judo.eu/Stellenanzeige/technischen-projektabwickler-m-w-d) · Winnenden suchen wir zur Verstärkung für den Bereich Industrie- und Gebäudetechnik · seit 2026-11-22
 - [Technischen Schulungsreferent / Trainer (m/w/d)](https://judo.eu/Stellenanzeige/technischer-schulungsreferent-trainer-m-w-d-4) · seit 2026-11-22
 - [Technischen Vertriebsmitarbeiter (m/w/d) – Projektanlagen](https://judo.eu/Stellenanzeige/technischen-vertriebsmitarbeiter-m-w-d-projektanlagen) · Winnenden suchen wir zur Verstärkung für den Bereich Industrie- und Gebäudetechnik · seit 2026-11-22
+- [Technischer Sachbearbeiter Kundendienst(m/w/d)](https://judo.eu/Stellenanzeige/technischer-sachbearbeiter-kundendienstm-w-d) · in Winnenden suchen wir · seit 2026-11-24
 - [TGA-Projektberater (m/w/d) im Außendienst](https://judo.eu/Stellenanzeige/tga-projektberater-m-w-d-im-aussendienst-3) · seit 2026-11-22
 - [Versandmitarbeiter (m/w/d)](https://judo.eu/Stellenanzeige/versandmitarbeiter-m-w-d) · seit 2026-11-22
 - [Versuchstechniker (m/w/d) im Bereich Wasseraufbereitung](https://judo.eu/Stellenanzeige/versuchstechniker-m-w-d-im-bereich-wasseraufbereitung-2) · Winnenden suchen wir · seit 2026-11-22
@@ -1252,6 +1283,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 
 - [Ausbildung zum Industriekaufmann - Einkauf International (m/w/d) 2027](https://jobs.kaufland.de/jobs/ausbildung-zum-industriekaufmann-einkauf-international-m-w-d-2027-heilbronn-402664) · 74072 Heilbronn DE · seit 2026-11-22
 - [Consultant Aktionsmanagement International (m/w/d)](https://jobs.kaufland.de/jobs/consultant-aktionsmanagement-international-m-w-d-heilbronn-412803) · 74072 Heilbronn DE · seit 2026-11-22
+- [Consultant Learning & Development International (m/w/d)](https://jobs.kaufland.de/jobs/consultant-learning-amp-development-international-m-w-d-heilbronn-413685) · 74072 Heilbronn DE · seit 2026-11-24
 - [Consultant Venture Building (m/w/d)](https://jobs.kaufland.de/jobs/consultant-venture-building-m-w-d-heilbronn-410198) · 74072 Heilbronn DE · seit 2026-11-22
 - [Einkäufer International - Food Frische (m/w/d)](https://jobs.kaufland.de/jobs/einkaeufer-international-food-frische-m-w-d-heilbronn-406767) · 74072 Heilbronn DE · seit 2026-11-22
 - [Einkäufer International - Food Trocken (m/w/d)](https://jobs.kaufland.de/jobs/einkaeufer-international-food-trocken-m-w-d-heilbronn-410328) · 74072 Heilbronn DE · seit 2026-11-22
@@ -1278,6 +1310,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Spezialist Warenfluss - Filialkommunikation (m/w/d)](https://jobs.kaufland.de/jobs/spezialist-warenfluss-filialkommunikation-m-w-d-heilbronn-405001) · 74072 Heilbronn DE · seit 2026-11-22
 - [Teamleiter Qualitätsmanagement Produktentwicklung Food Frische (m/w/d)](https://jobs.kaufland.de/jobs/teamleiter-qualitaetsmanagement-produktentwicklung-food-frische-m-w-d-heilbronn-413362) · 74072 Heilbronn DE · seit 2026-11-22
 - [Trainee Einkauf International (m/w/d) 2027](https://jobs.kaufland.de/jobs/trainee-einkauf-international-m-w-d-2027-heilbronn-412216) · 74072 Heilbronn DE · seit 2026-11-22
+- [Werkstudent People Experience - Development (m/w/d)](https://jobs.kaufland.de/jobs/werkstudent-people-experience-development-m-w-d-heilbronn-413358) · 74072 Heilbronn DE · seit 2026-11-24
 
 ### Kaufland Vertrieb 17 GmbH & Co. KG
 
@@ -1584,6 +1617,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 
 ### Klinikum Stuttgart
 
+- [Ambulanz Sportklinik](https://www.klinikum-stuttgart.de/karriere/job/ambulanz-sportklinik-3547) · Stuttgart Baden-Württemberg DE · seit 2026-11-24
 - [Anlagenmechaniker HLK (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/anlagenmechaniker-hlk-m-w-d-3470) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
 - [Anlagenmechaniker SHK (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/anlagenmechaniker-shk-m-w-d-3233) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
 - [Arzt in der Transfusionsmedizin (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/arzt-in-der-transfusionsmedizin-m-w-d-3527) · Stuttgart Baden-Württemberg DE · seit 2026-11-17
@@ -1597,6 +1631,8 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Elektromeister / Elektrotechniker (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/elektromeister-elektrotechniker-m-w-d-2917) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
 - [Erzieher/ Pädagogische Fachkraft in Voll- und Teilzeit (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/erzieher-paedagogische-fachkraft-in-voll-und-teilzeit-m-w-d-3366) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
 - [Examinierte Pflegefachkraft/ MFA für unser MVZ (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/examinierte-pflegefachkraft-mfa-fuer-unser-mvz-m-w-d-3528) · Stuttgart Baden-Württemberg DE · seit 2026-11-17
+- [Facharzt / Fachärztin  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/facharzt-fachaerztin-m-w-d-3542) · Stuttgart Baden-Württemberg DE · seit 2026-11-24
+- [Facharzt / Fachärztin (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/facharzt-fachaerztin-m-w-d-3543) · Stuttgart Baden-Württemberg DE · seit 2026-11-24
 - [Facharzt / Fachärztin für Ambulanz mit Fachrichtung Psychiatrie  Psychotherapie oder Allgemeinmedizin oder Innere Medizin oder Neurologie oder Gynäkologie oder Rechtsmedizin  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/facharzt-fachaerztin-fuer-ambulanz-mit-fachrichtung-psychiatrie-psychotherapie-oder-allgemeinmedizin-oder-innere-medizin-oder-neurologie-oder-gynaekologie-oder-rechtsmedizin-m-w-d-3542) · Stuttgart Baden-Württemberg DE · seit 2026-11-23
 - [Facharzt / Fachärztin für den Bereich suchtspezifische Rehabilitations- und  Adaptionsbehandlung (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/facharzt-fachaerztin-fuer-den-bereich-suchtspezifische-rehabilitations-und-adaptionsbehandlung-m-w-d-3543) · Stuttgart Baden-Württemberg DE · seit 2026-11-23
 - [Facharzt / Fachärztin Psychiatrie Psychotherapie (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/facharzt-fachaerztin-psychiatrie-psychotherapie-m-w-d-990) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
@@ -1644,7 +1680,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Sport- und Bewegungstherapeut (w/m/d)](https://www.klinikum-stuttgart.de/karriere/job/sport-und-bewegungstherapeut-w-m-d-3534) · Stuttgart Baden-Württemberg DE · seit 2026-11-17
 - [Strategischer Einkäufer (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/strategischer-einkaeufer-m-w-d-3546) · Stuttgart Baden-Württemberg DE · seit 2026-11-23
 - [Study Nurse (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/study-nurse-m-w-d-3514) · Stuttgart Baden-Württemberg DE · seit 2026-11-20
-- [Stv. pflegerische Bereichsleitung Affektive Störungen und DBT (m/w/d](https://www.klinikum-stuttgart.de/karriere/job/stv-pflegerische-bereichsleitung-affektive-stoerungen-und-dbt-m-w-d-3544) · Stuttgart Baden-Württemberg DE · seit 2026-11-23
+- [Stv. pflegerische Bereichsleitung Affektive Störungen und DBT (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/stv-pflegerische-bereichsleitung-affektive-stoerungen-und-dbt-m-w-d-3544) · Stuttgart Baden-Württemberg DE · seit 2026-11-23
 - [Teamleitung Network & Security (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/teamleitung-network-security-m-w-d-3520) · Stuttgart Baden-Württemberg DE · seit 2026-11-17
 - [Theaterpädagoge/ Theatertherapeut  (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/theaterpaedagoge-theatertherapeut-m-w-d-3517) · Stuttgart Baden-Württemberg DE · seit 2026-11-08
 - [Verwaltungsangestellte im Schulsekretariat (m/w/d)](https://www.klinikum-stuttgart.de/karriere/job/verwaltungsangestellte-im-schulsekretariat-m-w-d-3540) · Stuttgart Baden-Württemberg DE · seit 2026-11-20
@@ -1770,6 +1806,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 ### Lidl International Services
 
 - [Inhouse SAP FI Experte / Transformation S4/HANA (m/w/d)](https://jobs.lidl.de/jobs/inhouse-sap-fi-experte-transformation-s4-hana-m-w-d-neckarsulm-772334) · 74167 Neckarsulm DE · seit 2026-11-22
+- [Junior Consultant Projekte Omnichannel Verwaltung (m/w/d)](https://jobs.lidl.de/jobs/junior-consultant-projekte-omnichannel-verwaltung-m-w-d-neckarsulm-774141) · 74167 Neckarsulm DE · seit 2026-11-24
 - [Senior Project Manager Corporate Finance (m/w/d)](https://jobs.lidl.de/jobs/senior-project-manager-corporate-finance-m-w-d-neckarsulm-772872) · 74167 Neckarsulm DE · seit 2026-11-22
 
 ### Lidl Stiftung
@@ -1779,6 +1816,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [(Senior) Consultant Konzepte Food Aktion (m/w/d)](https://jobs.lidl.de/jobs/senior-consultant-konzepte-food-aktion-m-w-d-neckarsulm-766242) · 74172 Neckarsulm DE · seit 2026-11-22
 - [(Senior) Consultant Transformation Food Einkauf & Systeme (m/w/d)](https://jobs.lidl.de/jobs/senior-consultant-transformation-food-einkauf-amp-systeme-m-w-d-neckarsulm-769970) · 74172 Neckarsulm DE · seit 2026-11-22
 - [(Senior) E-Commerce Event- & Projektmanager (m/w/d)](https://jobs.lidl.de/jobs/senior-e-commerce-event-amp-projektmanager-m-w-d-neckarsulm-763699) · 74172 Neckarsulm DE · seit 2026-11-22
+- [(Senior) E-Commerce Projektmanager (m/w/d)](https://jobs.lidl.de/jobs/senior-e-commerce-projektmanager-m-w-d-neckarsulm-763699) · 74172 Neckarsulm DE · seit 2026-11-24
 - [(Senior) Experte Partnership Development (m/w/d)](https://jobs.lidl.de/jobs/senior-experte-partnership-development-m-w-d-neckarsulm-771475) · 74167 Neckarsulm DE · seit 2026-11-22
 - [Abschlussarbeit Mobile Office](https://jobs.lidl.de/jobs/abschlussarbeit-mobile-office-neckarsulm-754604) · 74167 Neckarsulm DE · seit 2026-11-22
 - [Affiliate Marketing Manager - International E-Commerce (m/w/d)](https://jobs.lidl.de/jobs/affiliate-marketing-manager-international-e-commerce-m-w-d-neckarsulm-770598) · 74172 Neckarsulm DE · seit 2026-11-22
@@ -1912,6 +1950,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Projektmanager Personalplanung International (m/w/d)](https://jobs.lidl.de/jobs/projektmanager-personalplanung-international-m-w-d-neckarsulm-764469) · 74167 Neckarsulm DE · seit 2026-11-22
 - [Projektmanager Prozesse & Plattformen Lieferantenmanagement (m/w/d)](https://jobs.lidl.de/jobs/projektmanager-prozesse-amp-plattformen-lieferantenmanagement-m-w-d-neckarsulm-768441) · 74172 Neckarsulm DE · seit 2026-11-22
 - [Prozessarchitekt Einkaufssystem Non Food (m/w/d)](https://jobs.lidl.de/jobs/prozessarchitekt-einkaufssystem-non-food-m-w-d-neckarsulm-726045) · 74167 Neckarsulm DE · seit 2026-11-22
+- [Rechtsreferendar - Wahlstation Arbeitsrecht und HR Compliance (m/w/d)](https://jobs.lidl.de/jobs/rechtsreferendar-wahlstation-arbeitsrecht-und-hr-compliance-m-w-d-neckarsulm-774331) · 74167 Neckarsulm DE · seit 2026-11-24
 - [Rechtsreferendar - Wahlstation Arbeitsrecht und HR Compliance (m/w/d)](https://jobs.lidl.de/jobs/rechtsreferendar-wahlstation-arbeitsrecht-und-hr-compliance-m-w-d-neckarsulm-648703) · 74167 Neckarsulm DE · seit 2026-11-22
 - [Senior Consultant Pricing Food (m/w/d)](https://jobs.lidl.de/jobs/senior-consultant-pricing-food-m-w-d-neckarsulm-743553) · 74172 Neckarsulm DE · seit 2026-11-22
 - [Senior Controller (m/w/d)](https://jobs.lidl.de/jobs/senior-controller-m-w-d-neckarsulm-731076) · 74167 Neckarsulm DE · seit 2026-11-22
@@ -2131,6 +2170,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Studentenjob im Verkauf Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-schwieberdingen-722527) · 71701 Schwieberdingen DE · seit 2026-11-22
 - [Studentenjob im Verkauf Teilzeit für die Neueröffnung (m/w/d)](https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-fuer-die-neueroeffnung-m-w-d-magstadt-648123) · 71106 Magstadt DE · seit 2026-11-22
 - [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-leonberg-675512) · 71229 Leonberg DE · seit 2026-11-22
+- [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-weil-der-stadt-773907) · 71263 Weil der Stadt DE · seit 2026-11-24
 - [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-ehningen-768489) · 71139 Ehningen DE · seit 2026-11-22
 - [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-bad-liebenzell-733056) · 75378 Bad Liebenzell DE · seit 2026-11-22
 - [Verkäufer mit Stellvertretung Teilzeit (m/w/d)](https://jobs.lidl.de/jobs/verkaeufer-mit-stellvertretung-teilzeit-m-w-d-sindelfingen-768487) · 71063 Sindelfingen DE · seit 2026-11-22
@@ -2931,6 +2971,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Gabelstaplerfahrer (m/w/d)](https://www.persy.jobs/persy/l/job-juz78-a-stellenangebote-Gabelstaplerfahrer-m-w-d-Vollzeit-job-in-Boehmenkirch-89558-Baden-Wuerttemberg) · 89558 Böhmenkirch Deutschland · seit 2026-11-21
 - [Helfer - Holz, Flechtwaren (m/w/d)](https://www.persy.jobs/persy/l/job-jsa54-a-stellenangebote-Helfer-Holz-Flechtwaren-m-w-d-Vollzeit-job-in-Kirchheim-unter-Teck-73230-Baden-Wuerttemberg) · 73230 Kirchheim unter Teck Deutschland · seit 2026-11-21
 - [Helfer - Holz, Flechtwaren (m/w/d)](https://www.persy.jobs/persy/l/job-jwq8r-a-stellenangebote-Helfer-Holz-Flechtwaren-m-w-d-Vollzeit-job-in-Kirchheim-unter-Teck-73230-Baden-Wuerttemberg) · 73230 Kirchheim unter Teck Deutschland · seit 2026-11-23
+- [Lackierer / Lackierhelfer](https://www.persy.jobs/persy/l/job-jwxo4-a-stellenangebote-Lackierer-Lackierhelfer-Vollzeit-job-in-Gingen-73333-Baden-Wuerttemberg) · 73333 Gingen Deutschland · seit 2026-11-24
 - [Lagerhelfer (m/w/d)](https://www.persy.jobs/persy/l/job-jtyrv-a-stellenangebote-Lagerhelfer-m-w-d-job-in-Goeppingen-73037-Baden-Wuerttemberg) · 73037 Göppingen Deutschland · seit 2026-11-21
 - [Lagerist (m/w/d)](https://www.persy.jobs/persy/l/job-jv6b2-a-stellenangebote-Lagerist-m-w-d-Vollzeit-job-in-Salach-73084-Baden-Wuerttemberg) · 73084 Salach Deutschland · seit 2026-11-21
 - [Personaldisponent (m/w/d)](https://www.persy.jobs/persy/l/job-juz3d-a-stellenangebote-Personaldisponent-m-w-d-Vollzeit-job-in-Goeppingen-73033-Baden-Wuerttemberg) · 73033 Göppingen Deutschland · seit 2026-11-21
@@ -2942,6 +2983,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Produktionshelfer (m/w/d)](https://www.persy.jobs/persy/l/job-jus6q-a-stellenangebote-Produktionshelfer-m-w-d-Vollzeit-job-in-Geislingen-an-der-Steige-Tuerkheim-73312-Baden-Wuerttemberg) · 73312 Geislingen an der Steige Türkheim Deutschland · seit 2026-11-21
 - [Produktionshelfer (m/w/d)](https://www.persy.jobs/persy/l/job-jwq8k-a-stellenangebote-Produktionshelfer-m-w-d-job-in-Kirchheim-unter-Teck-73230-Baden-Wuerttemberg) · 73230 Kirchheim unter Teck Deutschland · seit 2026-11-23
 - [Produktionshelfer (m/w/d)](https://www.persy.jobs/persy/l/job-jskar-a-stellenangebote-Produktionshelfer-m-w-d-Vollzeit-job-in-Donzdorf-73072-Baden-Wuerttemberg) · 73072 Donzdorf Deutschland · seit 2026-11-21
+- [Produktionshelfer (m/w/d) (copy)](https://www.persy.jobs/persy/l/job-jwxn7-a-stellenangebote-Produktionshelfer-m-w-d-copy-Vollzeit-job-in-Eislingen-Fils-73054-Baden-Wuerttemberg) · 73054 Eislingen/Fils Deutschland · seit 2026-11-24
 - [Sachbearbeiter - Vertrieb (m/w/d)](https://www.persy.jobs/persy/l/job-jwqnj-a-stellenangebote-Sachbearbeiter-Vertrieb-m-w-d-Vollzeit-job-in-Geislingen-an-der-Steige-Tuerkheim-73312-Baden-Wuerttemberg) · 73312 Geislingen an der Steige Türkheim Deutschland · seit 2026-11-23
 - [Schlosser (m/w/d) (copy)](https://www.persy.jobs/persy/l/job-juz2w-a-stellenangebote-Schlosser-m-w-d-copy-Vollzeit-job-in-Zell-unter-Aichelberg-73119-Baden-Wuerttemberg) · 73119 Zell unter Aichelberg Deutschland · seit 2026-11-21
 - [Schreiner (m/w/d)](https://www.persy.jobs/persy/l/job-juz85-a-stellenangebote-Schreiner-m-w-d-Vollzeit-job-in-Eislingen-73054-Baden-Wuerttemberg) · 73054 Eislingen Deutschland · seit 2026-11-21
@@ -2991,6 +3033,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Verpacker (m/w/d)](https://www.persy.jobs/persy/l/job-jwqmk-a-stellenangebote-Verpacker-m-w-d-Vollzeit-job-in-Neuhausen-auf-den-Fildern-73765-Baden-Wuerttemberg) · 73765 Neuhausen auf den Fildern Deutschland · seit 2026-11-23
 - [Zerspanungsmechaniker (m/w/d) (copy)](https://www.persy.jobs/persy/l/job-js1s1-a-stellenangebote-Zerspanungsmechaniker-m-w-d-copy-Vollzeit-job-in-Stuttgart-70193-Baden-Wuerttemberg) · 70193 Stuttgart Deutschland · seit 2026-11-21
 - [Zerspanungsmechaniker - manuelle Mechanik (m/w/d)](https://www.persy.jobs/persy/l/job-jwqox-a-stellenangebote-Zerspanungsmechaniker-manuelle-Mechanik-m-w-d-Vollzeit-job-in-Leutenbach-71397-Baden-Wuerttemberg) · 71397 Leutenbach Deutschland · seit 2026-11-23
+- [Zerspanungsmechaniker / CNC- Fräser (m/w/d)](https://www.persy.jobs/persy/l/job-jwxte-a-stellenangebote-Zerspanungsmechaniker-CNC-Fraeser-m-w-d-Vollzeit-job-in-Leutenbach-71397-Baden-Wuerttemberg) · 71397 Leutenbach Deutschland · seit 2026-11-24
 
 ### LIGHTS 4 Europe GmbH & Co. KG
 
@@ -3062,6 +3105,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Bilanzbuchhalter / Steuerfachwirt (m/w/d)](https://mpire.jobs.personio.de/job/2886571) · Backnang Lerchenäcker · seit 2026-11-17
 - [Digital Marketing Manager (m/w/d) – Website, Performance & Leadgenerierung](https://mpire.jobs.personio.de/job/2855152) · Backnang Lerchenäcker · seit 2026-11-08
 - [Fachassistent Lohn und Gehalt / Payroll Specialist (m/w/d) in Voll- oder Teilzeit ab 20h/Woche](https://mpire.jobs.personio.de/job/2887052) · Backnang Lerchenäcker · seit 2026-11-17
+- [Mediendesigner (m/w/d) – Digital, Print & UX/UI](https://mpire.jobs.personio.de/job/2903121) · Backnang Lerchenäcker · seit 2026-11-24
 - [Personalreferent / HR-Generalist (m/w/d) in Voll- oder Teilzeit ab 20h/Woche](https://mpire.jobs.personio.de/job/2832889) · Backnang Lerchenäcker · seit 2026-11-08
 
 ### Murrelektronik GmbH
@@ -3089,6 +3133,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Personalleiter (m/w/d) - Standort Stollberg](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/personalleiter-m-w-d-standort-stollberg) · seit 2026-11-22
 - [Produktmanager Netzwerktechnik (Industrial Ethernet) (m/w/d)](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/produktmanager-netzwerktechnik-industrial-ethernet-m-w-d) · seit 2026-11-22
 - [Sachbearbeiter (m/w/d) Kreditorenbuchhaltung](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/sachbearbeiter-m-w-d-kreditorenbuchhaltung) · 71570 Oppenweiler Deutschland · seit 2026-11-22
+- [SAP Inhouse Consultant (m/w/d) - SCM / Logistik (SAP S/4HANA)](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/sap-inhouse-consultant-m-w-d-scm-logistik-sap-s-4hana) · 71570 Oppenweiler Deutschland · seit 2026-11-24
 - [SAP Inhouse Consultant - FI/CO (m/w/d)](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/sap-inhouse-consultant-fi-co-m-w-d) · 71570 Oppenweiler Deutschland · seit 2026-11-22
 - [Supply Chain Manager Logistikprozesse (m/w/d)](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/supply-chain-manager-logistikprozesse-m-w-d) · seit 2026-11-22
 - [Umwelt- und Energiemanagementkoordinator (m/w/d)](https://www.murrelektronik.com/de/landingpages/karriere/stellenangebote/detail/job/umwelt-und-energiemanagementkoordinator-m-w-d) · 71570 Oppenweiler Deutschland · seit 2026-11-22
@@ -3109,6 +3154,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 
 ### Paulinenpflege
 
+- [Arbeitserzieher / Fachkraft für Arbeits- und Berufsförderung (m/w/d) in Teilzeit I Arbeitsgruppenleitung Werkstatt für Menschen mit Behinderung](https://jobs.paulinenpflege.de/Arbeitserzieher-Fachkraft-fuer-Arbeits-und-Berufsfoerderun-de-j3498.html) · 71540 Murrhardt Baden-Württemberg DE · seit 2026-11-24
 - [Ausbilder Hauswirtschaft (m/w/d) in Vollzeit I Berufsbildungswerk Winnenden](https://jobs.paulinenpflege.de/Ausbilder-Hauswirtschaft-mwd-in-Vollzeit-I-Berufsbildungsw-de-j3468.html) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-08
 - [Ausbildung Heilerziehungspflege / Heilerziehungsassistenz](https://jobs.paulinenpflege.de/Ausbildung-Heilerziehungspflege-Heilerziehungsassistenz-de-j3407.html) · 71522 Backnang Baden-Württemberg DE / 71540 Murrhardt Baden-Württemberg DE / 71364 Winnenden Baden-Württemberg DE · seit 2026-11-08
 - [Duales Studium Soziale Arbeit](https://jobs.paulinenpflege.de/Duales-Studium-Soziale-Arbeit-de-j3405.html) · x Rems-Murr-Kreis DE · seit 2026-11-08
@@ -3119,6 +3165,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Produktionsmitarbeiter (m/w/d) in Teilzeit | Werkstatt für Menschen mit Behinderung](https://jobs.paulinenpflege.de/Produktionsmitarbeiter-mwd-in-Teilzeit-Werkstatt-fuer-Mens-de-j3486.html) · 71540 Murrhardt Baden-Württemberg DE · seit 2026-11-17
 - [Psychologe (m/w/d) in Teilzeit I  Psychologischer Dienst für Mitarbeitende und Klienten (m/w/d)](https://jobs.paulinenpflege.de/Psychologe-mwd-in-Teilzeit-I-Psychologischer-Dienst-fuer-M-de-j3492.html) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-18
 - [Sozialpädagoge / Heilpädagoge /Psychologe (m/w/d) in Vollzeit I Teamleitung Sozialpsychiatrie Bereich Assistenz und Teilhabe](https://jobs.paulinenpflege.de/Sozialpaedagoge-Heilpaedagoge-Psychologe-mwd-in-Vollzeit-I-de-j3472.html) · 71522 Backnang Baden-Württemberg DE · seit 2026-11-08
+- [Sozialpädagoge / Sozialarbeiter (m/w/d) in Teilzeit I Abteilungsleitung  stationäre Jugendhilfe](https://jobs.paulinenpflege.de/Sozialpaedagoge-Sozialarbeiter-mwd-in-Teilzeit-I-Abteilung-de-j3497.html) · 71364 Winnenden Baden-Württemberg DE · seit 2026-11-24
 
 ### Paulinenpflege Winnenden e.V.
 
@@ -3232,6 +3279,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Ausbildung Verkäufer (m/w/d)](https://karriere.penny.de/jobs/penny/979496-de_DE/Ausbildung-Verkaeufer-m-w-d-Reutlingen-Hohbuch.html?feedId=172701) · 72762 Reutlingen/Hohbuch Bade DE · seit 2026-11-23
 - [Ausbildung Verkäufer (m/w/d)](https://karriere.penny.de/jobs/penny/978417-de_DE/Ausbildung-Verkaeufer-m-w-d-Oehringen.html?feedId=172701) · 74613 Oehringen Bade DE · seit 2026-11-23
 - [Ausbildung Verkäufer (m/w/d)](https://karriere.penny.de/jobs/penny/979304-de_DE/Ausbildung-Verkaeufer-m-w-d-Sachsenheim.html?feedId=172701) · 74343 Sachsenheim Bade DE · seit 2026-11-23
+- [Aushilfe (m/w/d)](https://karriere.penny.de/jobs/penny/987834-de_DE/Aushilfe-m-w-d-Oedheim.html?feedId=172701) · 74229 Oedheim BW DE · seit 2026-11-24
 - [Aushilfe (m/w/d)](https://karriere.penny.de/jobs/penny/987207-de_DE/Aushilfe-m-w-d-Filderstadt.html?feedId=172701) · 70794 Filderstadt BW DE · seit 2026-11-23
 - [Duales Studium Logistik (B.A.)](https://karriere.penny.de/jobs/penny/978397-de_DE/Duales-Studium-Logistik-B-A-Neuhausen-auf-den-Fildern.html?feedId=172701) · 73765 Neuhausen auf den Fildern Bade DE · seit 2026-11-23
 - [Elektriker / Elektroniker Logistik (m/w/d)](https://karriere.penny.de/jobs/penny/981158-de_DE/Elektriker-Elektroniker-Logistik-m-w-d-Neuhausen.html?feedId=172701) · 73765 Neuhausen Bade DE · seit 2026-11-23
@@ -3547,6 +3595,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 
 ### Pfisterer Kontaktsysteme GmbH
 
+- [Assistenz für die Geschäftsbereiche PPM und Technology (m/w/d)](https://pfisterer.mhm.jobs/1825-assistenz-fuer-die-geschaeftsbereiche-ppm-und-technology-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-24
 - [Ausbildung zum Kunststoff- und Kautschuktechnologe (m/w/d) 2027](https://pfisterer.mhm.jobs/1575-ausbildung-zum-kunststoff-und-kautschuktechnologe-m-w-d-2027/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
 - [Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)](https://pfisterer.mhm.jobs/1722-ausbildung-zur-fachkraft-fuer-lagerlogistik-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
 - [Business Development Manager Asia Pacific (m/w/d)](https://pfisterer.mhm.jobs/1546-business-development-manager-asia-pacific-m-w-d/de/job.html) · 73650 Winterbach DE · seit 2026-11-08
@@ -3587,14 +3636,11 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 ### Rems-Murr-Kliniken gGmbH
 
 - [Arzt (m/w/d) in fortgeschrittener Weiterbildung Innere Medizin und Gastroenterologie](https://rems-murr-kliniken.de/jobinserat/arzt-m-w-d-in-fortgeschrittener-weiterbildung-innere-medizin-und-gastroenterologie_554) · 71364 Winnenden DE · seit 2026-11-21
-- [Assistenzarzt (m/w/d) in Weiterbildung – Unfallchirurgie und Orthopädie](https://rems-murr-kliniken.de/jobinserat/assistenzarzt-m-w-d-in-weiterbildung-unfallchirurgie-und-orthopaedie_2372) · 71364 Winnenden DE · seit 2026-11-20
 - [Ausbildung Pflegefachkraft (m/w/d)](https://rems-murr-kliniken.de/jobinserat/ausbildung-pflegefachkraft-m-w-d_1597) · 71364 Winnenden DE · seit 2026-11-21
 - [Gesundheits- und Krankenpfleger (m/w/d) – Geriatrie und Ausbildungsstation](https://rems-murr-kliniken.de/jobinserat/gesundheits-und-krankenpfleger-m-w-d-geriatrie-und-ausbildungsstation_734) · 73614 Schorndorf DE · seit 2026-11-08
 - [Gesundheits- und Krankenpfleger (m/w/d) – Innere Medizin und Gastroenterologie](https://rems-murr-kliniken.de/jobinserat/gesundheits-und-krankenpfleger-m-w-d-innere-medizin-und-gastroenterologie_1495) · 73614 Schorndorf DE · seit 2026-11-17
 - [Hebamme / Entbindungspfleger (m/w/d)](https://rems-murr-kliniken.de/jobinserat/hebamme-entbindungspfleger-m-w-d_598) · 73614 Schorndorf DE · seit 2026-11-08
 - [Klinikpraktika während der Ausbildung zum Rettungssanitäter (m/w/d)/ Rettungsassistenten (m/w/d)](https://rems-murr-kliniken.de/jobinserat/klinikpraktika-waehrend-der-ausbildung-zum-rettungssanitaeter-m-w-d-rettungsassistenten-m-w-d_754) · 73614 Schorndorf DE / 71364 Winnenden DE · seit 2026-11-17
-- [Praktika während einer Ausbildung in der Pflege – Standort Schorndorf](https://rems-murr-kliniken.de/jobinserat/praktika-waehrend-einer-ausbildung-in-der-pflege-standort-schorndorf_1613) · 73614 Schorndorf DE · seit 2026-11-17
-- [Praktika während einer Ausbildung in der Pflege – Standort Winnenden](https://rems-murr-kliniken.de/jobinserat/praktika-waehrend-einer-ausbildung-in-der-pflege-standort-winnenden_1612) · 71364 Winnenden DE · seit 2026-11-17
 - [Praktika – Berufsorientierung (BOGY/BORS und Schnupperpraktikum) – Standort Schorndorf](https://rems-murr-kliniken.de/jobinserat/praktika-berufsorientierung-bogy-bors-und-schnupperpraktikum-standort-schorndorf_1617) · 73614 Schorndorf DE · seit 2026-11-08
 - [Praktika – Berufsorientierung (z.B. BOGY) – Standort Winnenden](https://rems-murr-kliniken.de/jobinserat/praktika-berufsorientierung-z-b-bogy-standort-winnenden_1616) · 71364 Winnenden DE · seit 2026-11-08
 - [Praktikant (m/w/d) in der Personalentwicklung](https://rems-murr-kliniken.de/jobinserat/praktikant-m-w-d-in-der-personalentwicklung_1328) · 71364 Winnenden DE · seit 2026-11-21
@@ -3603,6 +3649,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 ### Remsgold-CHEMIE GmbH & Co. KG
 
 - [Maschinenrüster / Anlagenführer (m/w/d)](https://rems-murr-jobs.de/job/maschinenruester-anlagenfuehrer-mwd-1807821) · 73650 Winterbach Baden-Württemberg DE · seit 2026-11-22
+- [Minijobber Produktion (m/w/d)](https://rems-murr-jobs.de/job/minijobber-produktion-mwd-1811714) · 73 Winterbach Baden-Württemberg DE · seit 2026-11-24
 - [Reinigungskraft auf Minijobbasis (m/w/d)](https://rems-murr-jobs.de/job/reinigungskraft-auf-minijobbasis-mwd-1810843) · 73 Winterbach Baden-Württemberg DE · seit 2026-11-22
 - [Sales Manager Südwestdeutschland (m/w/d) bei AlmaWin](https://rems-murr-jobs.de/job/sales-manager-suedwestdeutschland-mwd-bei-almawin-1810739) · 73650 Winterbach Baden-Württemberg DE · seit 2026-11-21
 
@@ -3953,6 +4000,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [FSJ (m/w/d) zum nächstmöglichen Zeitpunkt](https://karriere.schorndorf.de/FSJ-mwd-zum-naechstmoeglichen-Zeitpunkt-de-j1221.html) · 73614 Schorndorf Baden-Württemberg DE · seit 2026-11-18
 - [Mehrere Integrationsfachkräfte (m/w/d)](https://karriere.schorndorf.de/Mehrere-Integrationsfachkraefte-mwd-de-j1234.html) · 73614 Schorndorf Baden-Württemberg DE · seit 2026-11-08
 - [Schulkindbetreuungskraft (w/m/d)](https://karriere.schorndorf.de/Schulkindbetreuungskraft-wmd-de-j1236.html) · 73614 Schorndorf Baden-Württemberg DE · seit 2026-11-17
+- [Teamleitung Schulkindbetreuung der Fuchshofschule und Reinhold-Maier-Schule (m/w/d)](https://karriere.schorndorf.de/Teamleitung-Schulkindbetreuung-der-Fuchshofschule-und-Rein-de-j1237.html) · 73614 Schorndorf Baden-Württemberg DE · seit 2026-11-24
 
 ### Stadt Waiblingen
 
@@ -4058,6 +4106,7 @@ Stand: 2026-11-23T16:47:30+00:00 · 3596 Stellen aus 64 von 73 Quellen
 - [Accounting Specialist (m/f/d)](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Winnenden-Germany/Accounting-Specialist--m-f-d-_JR4843) · DE Winnenden ELC Deutschland · seit 2026-11-22
 - [Service & Processes Project Manager (f-m-d)](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Winnenden-Germany/Service---Processes-Project-Manager--f-m-d-_JR5055) · DE Winnenden ELC Deutschland · seit 2026-11-22
 - [Supply Chain Intern (f-m-d) - Milwaukee®](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Winnenden-Germany/Supply-Chain-Intern--f-m-d----Milwaukee-_JR5089) · DE Winnenden ELC Deutschland · seit 2026-11-17
+- [Trainer (f-m-d)](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Winnenden-Germany/Trainer--w-m-d-_JR5147) · DE Winnenden ELC Deutschland · seit 2026-11-24
 - [Werkstudent (w-m-d) im HR](https://ttiemea.wd3.myworkdayjobs.com/de-DE/TTI/job/Winnenden-Germany/Werkstudent--w-m-d--im-HR_JR4973) · DE Winnenden ELC Deutschland · seit 2026-11-17
 
 ### Techtronic Industries Magyarország Kft.
