@@ -53,7 +53,8 @@ RUN_SECONDS = 5 * 3600
 # dm: rund 270 Einzelanzeigen, im Live-Lauf 894 s (Budget je Quelle sonst 900 s).
 SLOW_SOURCES = {"pfisterer": 4, "dm": 3}
 # Zeitlimit (s) je einzelnem Abruf, wo 8 s zu knapp sind (langsame Portale, grosse Sitemaps).
-SLOW_REQUESTS = {"db_audiotechnik": 20, "ksk_waiblingen": 15, "volksbank_stuttgart": 15, "landratsamt_rmk": 15}
+# dm: Jobs-Sitemap rund 1 MB; mit 8 s lief sie am 23./24.11.2026 auf dem Runner in den Timeout.
+SLOW_REQUESTS = {"db_audiotechnik": 20, "dm": 30, "ksk_waiblingen": 15, "volksbank_stuttgart": 15, "landratsamt_rmk": 15}
 # Vorübergehende Fehler: die Quelle wird nach dem Hauptdurchlauf einmal wiederholt.
 TRANSIENT = {"network_error", "upstream_error", "timeout", "robots_unavailable"}
 # Pausen (s) vor der 1. und 2. Wiederholung.

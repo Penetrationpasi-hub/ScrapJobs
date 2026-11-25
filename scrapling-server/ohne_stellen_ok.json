@@ -6,5 +6,6 @@
   "bosch": "Host jobs.bosch.com nicht freigegeben (unsafe_target)",
   "scutum": "Host nicht freigegeben (unsafe_target)",
   "stadtwerke_schorndorf": "robots.txt sperrt die Karriereseite (robots_denied)",
-  "swoboda": "alle Stellen außerhalb des Umkreises (Wiggensbach, Allgäu)"
+  "swoboda": "alle Stellen außerhalb des Umkreises (Wiggensbach, Allgäu)",
+  "aldi_sued": "karriere.aldi-sued.de antwortet GitHub-Runnern mit HTTP 403 (robots_unavailable, seit 23.11.2026); von anderen Netzen erreichbar"
 }
