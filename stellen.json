@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "aktualisiert": "2026-11-25T12:42:46+00:00",
+ "aktualisiert": "2026-11-25T18:47:01+00:00",
  "quellen": [
   {
    "key": "festo",
@@ -28,10 +28,9 @@
   {
    "key": "dm",
    "label": "dm-drogerie markt",
-   "status": "network_error",
-   "letzterErfolg": null,
-   "detail": "TimeoutError www.dm-jobs.de (auch nach 2 Wiederholungen)",
-   "anzahl": 0
+   "status": "done",
+   "letzterErfolg": "2026-11-25",
+   "anzahl": 270
   },
   {
    "key": "toom",
@@ -45,7 +44,7 @@
    "label": "REWE",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "anzahl": 219
+   "anzahl": 220
   },
   {
    "key": "penny",
@@ -89,7 +88,7 @@
    "label": "Robert Bosch Krankenhaus",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "anzahl": 10
+   "anzahl": 11
   },
   {
    "key": "kaercher",
@@ -167,7 +166,7 @@
    "label": "Klinikum Stuttgart · Bad Cannstatt",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "anzahl": 69
+   "anzahl": 72
   },
   {
    "key": "stadt_schorndorf",
@@ -195,7 +194,7 @@
    "label": "Syntegon",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "detail": "11 außerhalb 50 km um Waiblingen",
+   "detail": "10 außerhalb 50 km um Waiblingen",
    "anzahl": 5
   },
   {
@@ -361,7 +360,7 @@
    "status": "done",
    "letzterErfolg": "2026-11-25",
    "detail": "1 außerhalb 50 km um Waiblingen",
-   "anzahl": 6
+   "anzahl": 7
   },
   {
    "key": "foehl",
@@ -485,31 +484,31 @@
    "label": "Rems-Murr-JOBS",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "detail": "teilweise: rems_murr_jobs timeout nach 137 Stellen",
-   "anzahl": 159
+   "detail": "teilweise: rems_murr_jobs timeout nach 138 Stellen",
+   "anzahl": 160
   },
   {
    "key": "persona",
    "label": "persona service",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "detail": "664 außerhalb 50 km um Waiblingen",
-   "anzahl": 250
+   "detail": "667 außerhalb 50 km um Waiblingen",
+   "anzahl": 253
   },
   {
    "key": "lidl",
    "label": "Lidl",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "detail": "423 außerhalb 50 km um Waiblingen",
-   "anzahl": 1196
+   "detail": "419 außerhalb 50 km um Waiblingen",
+   "anzahl": 1231
   },
   {
    "key": "kaufland",
    "label": "Kaufland",
    "status": "done",
    "letzterErfolg": "2026-11-25",
-   "detail": "313 außerhalb 50 km um Waiblingen",
+   "detail": "312 außerhalb 50 km um Waiblingen",
    "anzahl": 325
   },
   {
@@ -533,7 +532,7 @@
    "status": "done",
    "letzterErfolg": "2026-11-25",
    "detail": "7 außerhalb 50 km um Waiblingen",
-   "anzahl": 72
+   "anzahl": 78
   },
   {
    "key": "iits",
@@ -2522,7 +2521,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-2dc9f91379b72a5581b5b5b4",
@@ -2534,7 +2533,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-abcb5ce360445edffddc2086",
@@ -2750,7 +2749,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-e5c749e4bf3ba441ca9143d8",
@@ -3026,7 +3025,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-a3a2e0116e6f302f33f26f35",
@@ -3038,7 +3037,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-2196d31d1bb82ade03bfeebc",
@@ -3170,7 +3169,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-2b75d223aed3e6a4eab6958f",
@@ -3914,7 +3913,7 @@
    "source": "stihl",
    "sourceLabel": "STIHL",
    "erstmalsGesehen": "2026-11-24",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-0b7e7d015075930d6478060b",
@@ -4226,6 +4225,18 @@
    "source": "mulfinger",
    "sourceLabel": "Autohaus Walter Mulfinger",
    "erstmalsGesehen": "2026-11-17",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-af51bc8895802aac13053a26",
+   "title": "Garantiesachbearbeiter (m/w/d)",
+   "company": "Autohaus Walter Mulfinger GmbH",
+   "location": "71522 Backnang de",
+   "url": "https://join.com/companies/mulfinger/16986876-garantiesachbearbeiter-m-w-d",
+   "posted": "2026-10-15",
+   "source": "mulfinger",
+   "sourceLabel": "Autohaus Walter Mulfinger",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -4582,11 +4593,11 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71336 Waiblingen Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-bittenfeld-mwd-1806783",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-23"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-86efca5405dcac4f81892ddb",
@@ -4594,7 +4605,7 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "70736 Fellbach Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-fellbach-mwd-1806786",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
@@ -4642,11 +4653,11 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71336 Waiblingen Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-hohenacker-mwd-1806785",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-23"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-bd99b69b2e3fa18cdc56bd7d",
@@ -4654,7 +4665,7 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "73614 Schorndorf Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-schorndorf-mwd-1806781",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
@@ -4666,11 +4677,11 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71409 Schwaikheim Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-schwaikheim-mwd-1806779",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-2c61f7b1a4e17c3a2b98fcf3",
@@ -4678,11 +4689,11 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71394 Kernen im Remstal Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-stetten-mwd-1806784",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-23"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-83f3a81cc39e96f3867541a5",
@@ -4690,7 +4701,7 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "70376 Stuttgart Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-stuttgart-mwd-1806782",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
@@ -4702,7 +4713,7 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71332 Waiblingen Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-waiblingen-mwd-1806787",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
@@ -4726,11 +4737,11 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71364 Winnenden Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/baeckereifachverkaeuferin-winnenden-mwd-1806775",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-23"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-543aeadf64063cee5cf94173",
@@ -4774,7 +4785,7 @@
    "company": "Bäckerei Maurer GmbH",
    "location": "71364 Winnenden Baden-Württemberg DE",
    "url": "https://rems-murr-jobs.de/job/fachgeschaeftsleitung-baeckerei-mwd-1806788",
-   "posted": "2026-10-26",
+   "posted": "2026-11-25",
    "source": "rems_murr_jobs",
    "sourceLabel": "Rems-Murr-JOBS",
    "erstmalsGesehen": "2026-11-22",
@@ -7418,6 +7429,3246 @@
    "source": "diakonie_stetten",
    "sourceLabel": "Diakonie Stetten",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-11c6b6a7515e936e3f4f1574",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 70794 Filderstadt",
+   "company": "dm Deutschland",
+   "location": "70794 Filderstadt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-70794-filderstadt/241066",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a872cd566ca4f74fea6a2f2f",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 70806 Kornwestheim",
+   "company": "dm Deutschland",
+   "location": "70806 Kornwestheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-70806-kornwestheim/240828",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4e298c38ca95a1ca88e4ff3d",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 71111 Waldenbuch",
+   "company": "dm Deutschland",
+   "location": "71111 Waldenbuch DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-71111-waldenbuch/241099",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-19659de5bd07bb58cf095076",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 71634 Ludwigsburg",
+   "company": "dm Deutschland",
+   "location": "71634 Ludwigsburg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-71634-ludwigsburg/240839",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5b42b1e987d4446092aaa62b",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 71679 Asperg",
+   "company": "dm Deutschland",
+   "location": "71679 Asperg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-71679-asperg/240846",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a4e125f743455f152b722185",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 74199 Untergruppenbach",
+   "company": "dm Deutschland",
+   "location": "74199 Untergruppenbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-74199-untergruppenbach/240858",
+   "posted": "2026-01-15",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b4ba1b19d7fe302ddba50394",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 74360 Ilsfeld",
+   "company": "dm Deutschland",
+   "location": "74360 Ilsfeld DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-74360-ilsfeld/240853",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0540d4b2378fba0195947091",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 74523 Schwäbisch Hall",
+   "company": "dm Deutschland",
+   "location": "74523 Schwäbisch Hall DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-74523-schwaebisch-hall/240841",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-74cfe6c9e13721c2aed38680",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 74545 Michelfeld",
+   "company": "dm Deutschland",
+   "location": "74545 Michelfeld DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-74545-michelfeld/240832",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-d2bb63f023c7208cb4446f4e",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 74613 Öhringen",
+   "company": "dm Deutschland",
+   "location": "74613 Öhringen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-74613-oehringen/240844",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5832cd666836e2841b5ba15d",
+   "title": "Ausbildung Drogist (w/m/d) 2026 in 74629 Pfedelbach",
+   "company": "dm Deutschland",
+   "location": "74629 Pfedelbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2026-in-74629-pfedelbach/240867",
+   "posted": "2025-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-133f49eaf752040c819b4754",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70173-stuttgart/262764",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-34e4f2724cf3385e5096d4d3",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70173-stuttgart/262779",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-62bd25aa0b7b8c6c31d3fb7e",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70173-stuttgart/262814",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8044f86161eb92c284aebfce",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70173-stuttgart/262776",
+   "posted": "2026-11-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-acc0c4d94573f3f863f519d7",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70173-stuttgart/262755",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-1a8b0407249e3eab5e64bfee",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70178 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70178 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70178-stuttgart/262773",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-32a171d8905d8636a50ca2ef",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70178 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70178 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70178-stuttgart/262763",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-aa54f01f074d1c90bfa91c79",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70188 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70188 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70188-stuttgart/262744",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-751070860e20c97be581c027",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70191 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70191 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70191-stuttgart/262772",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ecf1939bfcfe18525469acc7",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70192 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70192 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70192-stuttgart/262760",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-810eb1eef7a5db9a4892852e",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70193 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70193 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70193-stuttgart/262762",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-017a612487295d8ae8e695fd",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70372 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70372 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70372-stuttgart/262798",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-1f7e0cfb2be61b9132ef656f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70469 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70469 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70469-stuttgart/262767",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-fb0b5e144dfd19a9f706f008",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70469 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70192 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70469-stuttgart/264786",
+   "posted": "2026-11-02",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-51ca381f415e6c4b8b99c693",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70499 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70499 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70499-stuttgart/262787",
+   "posted": "2026-10-16",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b0a553b28534695438c3385f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70499 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70499 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70499-stuttgart/262756",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-43939119397aecb695ca4ab1",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70567 Stuttgart-Möhringen",
+   "company": "dm Deutschland",
+   "location": "70372 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70567-stuttgart-moehringen/273643",
+   "posted": "2026-11-09",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7ed47049711821708fd27f1d",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70597 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70597 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70597-stuttgart/262791",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-917ab1b03bb87da948a6fd11",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70619 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70619 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70619-stuttgart/262742",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a12908a3d4c6973ec313676f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70736 Fellbach",
+   "company": "dm Deutschland",
+   "location": "70736 Fellbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70736-fellbach/262823",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a3522c8813322ab918204511",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70736 Fellbach",
+   "company": "dm Deutschland",
+   "location": "70736 Fellbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70736-fellbach/262800",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4eacb200461df09cf1917c73",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70771 Leinfelden-Echterdingen",
+   "company": "dm Deutschland",
+   "location": "70771 Leinfelden-Echterdingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70771-leinfelden-echterdingen/262857",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-dfa8db53729d1e9b3248f8ca",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70771 Leinfelden-Echterdingen",
+   "company": "dm Deutschland",
+   "location": "70771 Leinfelden-Echterdingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70771-leinfelden-echterdingen/262878",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7385586648a20f05c5a054bd",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70794 Filderstadt",
+   "company": "dm Deutschland",
+   "location": "70794 Filderstadt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70794-filderstadt/262868",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-81d7f104dd02f13715595401",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70794 Filderstadt",
+   "company": "dm Deutschland",
+   "location": "70794 Filderstadt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70794-filderstadt/262869",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-75e49092c086b378913d1676",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 70806 Kornwestheim",
+   "company": "dm Deutschland",
+   "location": "70806 Kornwestheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-70806-kornwestheim/262649",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3302aa81befaf0fe49c49e36",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71032 Böblingen",
+   "company": "dm Deutschland",
+   "location": "71032 Böblingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71032-boeblingen/262912",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-28228ee62980703e024e123a",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71063 Sindelfingen",
+   "company": "dm Deutschland",
+   "location": "71063 Sindelfingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71063-sindelfingen/262892",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-dbd541c991868a1ef31a2f08",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71065 Sindelfingen",
+   "company": "dm Deutschland",
+   "location": "71065 Sindelfingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71065-sindelfingen/262883",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-cf9092e62b26586795dd294d",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71083 Herrenberg",
+   "company": "dm Deutschland",
+   "location": "71083 Herrenberg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71083-herrenberg/262906",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-d5450914684f7520793bfe8b",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71088 Holzgerlingen",
+   "company": "dm Deutschland",
+   "location": "71088 Holzgerlingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71088-holzgerlingen/262893",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-350bb86ecf3d760e1d1ae738",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71111 Waldenbuch",
+   "company": "dm Deutschland",
+   "location": "71111 Waldenbuch DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71111-waldenbuch/262866",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-92e776f8488e621632051744",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71116 Gärtringen",
+   "company": "dm Deutschland",
+   "location": "71116 Gärtringen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71116-gaertringen/262886",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5e60c0b9aefc256415578e79",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71134 Aidlingen",
+   "company": "dm Deutschland",
+   "location": "71134 Aidlingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71134-aidlingen/262920",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-64d19ed1220c7385d9544183",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71229 Leonberg",
+   "company": "dm Deutschland",
+   "location": "71229 Leonberg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71229-leonberg/262914",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6dc53c5d202695787bf68203",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71229 Leonberg",
+   "company": "dm Deutschland",
+   "location": "71229 Leonberg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71229-leonberg/262907",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-d38d871a142df92a40c6eb79",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71254 Ditzingen",
+   "company": "dm Deutschland",
+   "location": "71254 Ditzingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71254-ditzingen/262916",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-01579be95125aed61043d52a",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71263 Weil der Stadt",
+   "company": "dm Deutschland",
+   "location": "71263 Weil der Stadt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71263-weil-der-stadt/262898",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6a12000efec3cb4c8fd35a7f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71272 Renningen",
+   "company": "dm Deutschland",
+   "location": "71272 Renningen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71272-renningen/262900",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ed72b9f011ee740b8bbd40d7",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71277 Rutesheim",
+   "company": "dm Deutschland",
+   "location": "71277 Rutesheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71277-rutesheim/262894",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2f33d6f07a6d6af9430f70b2",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71296 Heimsheim",
+   "company": "dm Deutschland",
+   "location": "71296 Heimsheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71296-heimsheim/262913",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8382cc697c67f9ef32f1969a",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71297 Mönsheim",
+   "company": "dm Deutschland",
+   "location": "71297 Mönsheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71297-moensheim/262806",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0cd7680b63116e727920a750",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71332 Waiblingen",
+   "company": "dm Deutschland",
+   "location": "71332 Waiblingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71332-waiblingen/262808",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-358760cf19ca0a0daaf6d885",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71332 Waiblingen",
+   "company": "dm Deutschland",
+   "location": "71332 Waiblingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71332-waiblingen/262838",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6e590d606d34503af19e5bc8",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71364 Winnenden",
+   "company": "dm Deutschland",
+   "location": "71364 Winnenden DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71364-winnenden/262815",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b628b05aceb3bcbfb919836b",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71384 Weinstadt",
+   "company": "dm Deutschland",
+   "location": "71384 Weinstadt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71384-weinstadt/262789",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f94cd69735845c5afcbef524",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71522 Backnang",
+   "company": "dm Deutschland",
+   "location": "71522 Backnang DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71522-backnang/262809",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-be69c2436f631163d3fd452f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71540 Murrhardt",
+   "company": "dm Deutschland",
+   "location": "71540 Murrhardt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71540-murrhardt/262834",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6b2a57604e7d2cfad2c8386a",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71634 Ludwigsburg",
+   "company": "dm Deutschland",
+   "location": "71634 Ludwigsburg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71634-ludwigsburg/262633",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8404b12c250bcf264979941e",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71634 Ludwigsburg",
+   "company": "dm Deutschland",
+   "location": "71634 Ludwigsburg DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71634-ludwigsburg/262669",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-92124a8f4281c79bd7db343f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71665 Vaihingen an der Enz",
+   "company": "dm Deutschland",
+   "location": "71665 Vaihingen an der Enz DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71665-vaihingen-an-der-enz/262766",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-de1bdc358c9268cd5f465869",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71711 Murr",
+   "company": "dm Deutschland",
+   "location": "71711 Murr DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71711-murr/262638",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e86c8965db895f8c34618fd4",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 71720 Oberstenfeld",
+   "company": "dm Deutschland",
+   "location": "71720 Oberstenfeld DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-71720-oberstenfeld/262643",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6dace56f0f1ba3faa7c894cb",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72070 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72070 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72070-tuebingen/262879",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7f1fe0ea8cf94491fd996b18",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72070 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72070 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72070-tuebingen/262862",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5c1345bae81f04d6f28085e0",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72072 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72072 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72072-tuebingen/262882",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-fe95ae525747c64ec1eba0f4",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72072 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72072 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72072-tuebingen/263958",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-199a591e97aca0499bad998f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72138 Kirchentellinsfurt",
+   "company": "dm Deutschland",
+   "location": "72138 Kirchentellinsfurt DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72138-kirchentellinsfurt/262859",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e463dd00bc257d8586dbcde8",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72525 Münsingen",
+   "company": "dm Deutschland",
+   "location": "72525 Münsingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72525-muensingen/262872",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3eeaacdcc4111568acb8ce72",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72555 Metzingen",
+   "company": "dm Deutschland",
+   "location": "72555 Metzingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72555-metzingen/262888",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2cb7136a370729c228da5c86",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72622 Nürtingen",
+   "company": "dm Deutschland",
+   "location": "72622 Nürtingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72622-nuertingen/262889",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a68c9ad577af5b474dbbddce",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72636 Frickenhausen",
+   "company": "dm Deutschland",
+   "location": "72636 Frickenhausen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72636-frickenhausen/262881",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-eccf2510a7d0c051ce8dcba8",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72654 Neckartenzlingen",
+   "company": "dm Deutschland",
+   "location": "72654 Neckartenzlingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72654-neckartenzlingen/262876",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8de7588eb033c1b054a82e26",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72760 Reutlingen",
+   "company": "dm Deutschland",
+   "location": "72760 Reutlingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72760-reutlingen/262870",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-37d98247d03a1bd95bb87cc5",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72770 Reutlingen",
+   "company": "dm Deutschland",
+   "location": "72770 Reutlingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72770-reutlingen/262905",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3f6e78d5c377d0d4dd0d0bc3",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 72793 Pfullingen",
+   "company": "dm Deutschland",
+   "location": "72793 Pfullingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-72793-pfullingen/262863",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c6f62ad6f9923d4879b4cb03",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73033 Göppingen",
+   "company": "dm Deutschland",
+   "location": "73033 Göppingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73033-goeppingen/262825",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-65cb5cd6095e2cdbced39be7",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73061 Ebersbach an der Fils",
+   "company": "dm Deutschland",
+   "location": "73061 Ebersbach an der Fils DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73061-ebersbach-an-der-fils/262831",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3ade523f00a531448e0321a2",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73066 Uhingen",
+   "company": "dm Deutschland",
+   "location": "73066 Uhingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73066-uhingen/262824",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ed7746b234696538face5cd5",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73079 Süßen",
+   "company": "dm Deutschland",
+   "location": "73079 Süßen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73079-suessen/262813",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c3bbfd778335d5301f9cceff",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73084 Salach",
+   "company": "dm Deutschland",
+   "location": "73084 Salach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73084-salach/262827",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3474d672078e56346592c9f0",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73230 Kirchheim unter Teck",
+   "company": "dm Deutschland",
+   "location": "73230 Kirchheim unter Teck DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73230-kirchheim-unter-teck/262865",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7df6c88227495202a6c08954",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73235 Weilheim an der Teck",
+   "company": "dm Deutschland",
+   "location": "73235 Weilheim an der Teck DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73235-weilheim-an-der-teck/262877",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-dc4fd1514683449f12e683f8",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73257 Köngen",
+   "company": "dm Deutschland",
+   "location": "73257 Köngen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73257-koengen/262864",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-66e7aedc6ff372707ecc2831",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73312 Geislingen an der Steige",
+   "company": "dm Deutschland",
+   "location": "73312 Geislingen an der Steige DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73312-geislingen-an-der-steige/262836",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4052124a6ddef89f43e90336",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73525 Schwäbisch Gmünd",
+   "company": "dm Deutschland",
+   "location": "73525 Schwäbisch Gmünd DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73525-schwaebisch-gmuend/262816",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6f6bd6276d656b7ebf7f66d1",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73529 Schwäbisch Gmünd",
+   "company": "dm Deutschland",
+   "location": "73529 Schwäbisch Gmünd DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73529-schwaebisch-gmuend/262811",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f89fdd5a44a2775e6b5a0bb4",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73557 Mutlangen",
+   "company": "dm Deutschland",
+   "location": "73557 Mutlangen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73557-mutlangen/262829",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-60b6635b2d52eef6ea2fc443",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73614 Schorndorf",
+   "company": "dm Deutschland",
+   "location": "73614 Schorndorf DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73614-schorndorf/262803",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-96d96d55ac3f49cbf0bf3974",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73728 Esslingen am Neckar",
+   "company": "dm Deutschland",
+   "location": "73728 Esslingen am Neckar DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73728-esslingen-am-neckar/262802",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-99bf65e9e72f647610d4682a",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73770 Denkendorf",
+   "company": "dm Deutschland",
+   "location": "73770 Denkendorf DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73770-denkendorf/262875",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2be72733336dcbfcc2e6f6d8",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73776 Altbach",
+   "company": "dm Deutschland",
+   "location": "73776 Altbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73776-altbach/262832",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-89697221d218d5848f69fc10",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 73779 Deizisau",
+   "company": "dm Deutschland",
+   "location": "73779 Deizisau DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-73779-deizisau/262822",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a6f77d5ad3f2c1838c64cbb5",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74072 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74072 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74072-heilbronn/262624",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f50f07dec0a5037bcf7c724c",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74072 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74072 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74072-heilbronn/264277",
+   "posted": "2026-07-12",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0157ffc6d7a60bb0b721e796",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74076 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74076 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74076-heilbronn/262627",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ffa48cb1c751d19bebab7e5f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74081 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74081 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74081-heilbronn/262623",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-80fd3c89e391d4bb43177cbe",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74177 Bad Friedrichshall",
+   "company": "dm Deutschland",
+   "location": "74177 Bad Friedrichshall DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74177-bad-friedrichshall/262651",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0da958f0389371147e98aa19",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74199 Untergruppenbach",
+   "company": "dm Deutschland",
+   "location": "74199 Untergruppenbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74199-untergruppenbach/262653",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5f3873e33489bc54cb15ca79",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74321 Bietigheim-Bissingen",
+   "company": "dm Deutschland",
+   "location": "74321 Bietigheim-Bissingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74321-bietigheim-bissingen/262654",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b421a917aa933acfd9c01c34",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74321 Bietigheim-Bissingen",
+   "company": "dm Deutschland",
+   "location": "74321 Bietigheim-Bissingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74321-bietigheim-bissingen/262629",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-68563cf471fb00178178f006",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74336 Brackenheim",
+   "company": "dm Deutschland",
+   "location": "74336 Brackenheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74336-brackenheim/262644",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f87373c90ef1db25ab0c7268",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74360 Ilsfeld",
+   "company": "dm Deutschland",
+   "location": "74360 Ilsfeld DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74360-ilsfeld/262662",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-970f6af27a27c5c0b863c86f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74376 Gemmrigheim",
+   "company": "dm Deutschland",
+   "location": "74376 Gemmrigheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74376-gemmrigheim/262645",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-37af68030f2137b151db127b",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74405 Gaildorf",
+   "company": "dm Deutschland",
+   "location": "74405 Gaildorf DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74405-gaildorf/262904",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-88bae05d16f5be544404371f",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74523 Schwäbisch Hall",
+   "company": "dm Deutschland",
+   "location": "74523 Schwäbisch Hall DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74523-schwaebisch-hall/262652",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-98d2f7be06afc55faf83c877",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74545 Michelfeld",
+   "company": "dm Deutschland",
+   "location": "74545 Michelfeld DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74545-michelfeld/262630",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-58dd3662e96583327513f595",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74613 Öhringen",
+   "company": "dm Deutschland",
+   "location": "74613 Öhringen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74613-oehringen/262646",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ecc7ccc1c8aa53815663ef97",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 74629 Pfedelbach",
+   "company": "dm Deutschland",
+   "location": "74629 Pfedelbach DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-74629-pfedelbach/262650",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-092627fc2d61416269cd7892",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75015 Bretten",
+   "company": "dm Deutschland",
+   "location": "75015 Bretten DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75015-bretten/262769",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-505f69dd0799f6a3da309913",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75015 Bretten",
+   "company": "dm Deutschland",
+   "location": "75015 Bretten DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75015-bretten/262752",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4aa4a2dc360e1fc59bc50548",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75031 Eppingen",
+   "company": "dm Deutschland",
+   "location": "75031 Eppingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75031-eppingen/262664",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-017b40fded57512058ecf4a9",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75038 Oberderdingen",
+   "company": "dm Deutschland",
+   "location": "75038 Oberderdingen DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75038-oberderdingen/262775",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-88102ffdd41ecd0da368697d",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75172 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75172 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75172-pforzheim/262753",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f581173e9a36b370ca408877",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75175 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75175 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75175-pforzheim/262786",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5e6eddae52029a7f91dff462",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75177 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75177 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75177-pforzheim/262780",
+   "posted": "2026-10-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-13fd32baab5a539174b7a166",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75179 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75179 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75179-pforzheim/262768",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4ef5d6193909ffe764bafdfd",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75179 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75179 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75179-pforzheim/262740",
+   "posted": "2026-08-26",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3fbb9fb644401163c87c1a72",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75181 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75181 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75181-pforzheim/262774",
+   "posted": "2026-09-21",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6567f453577dec23d67058b9",
+   "title": "Ausbildung Drogist (w/m/d) 2027 in 75417 Mühlacker",
+   "company": "dm Deutschland",
+   "location": "75417 Mühlacker DE",
+   "url": "https://www.dm-jobs.de/job/ausbildung-drogist-w-m-d-2027-in-75417-muehlacker/262783",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-facde2c975bffecdbee7d91a",
+   "title": "Aushilfe für die Warenverräumung (w/m/d) 12 Std./Wo. in 72138 Kirchentellinsfurt",
+   "company": "dm Deutschland",
+   "location": "72138 Kirchentellinsfurt DE",
+   "url": "https://www.dm-jobs.de/job/aushilfe-fuer-die-warenverraeumung-w-m-d-12-std-wo-in-72138-kirchentellinsfurt/274280",
+   "posted": "2026-11-18",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-641dd1de91ac2c96a0a620cb",
+   "title": "Aushilfe im Verkauf (w/m/d) 4 Std./Wo. in 71296 Heimsheim",
+   "company": "dm Deutschland",
+   "location": "71296 Heimsheim DE",
+   "url": "https://www.dm-jobs.de/job/aushilfe-im-verkauf-w-m-d-4-std-wo-in-71296-heimsheim/273221",
+   "posted": "2026-11-08",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-92c1ee23434394597c5b63a9",
+   "title": "Aushilfe im Verkauf (w/m/d) 7 Std./Wo. in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/aushilfe-im-verkauf-w-m-d-7-std-wo-in-70173-stuttgart/271089",
+   "posted": "2026-11-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8c6179f49aca8a181707a7a2",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70173-stuttgart/263226",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6bb7e2c3977a5d1da63a6617",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70499 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70499 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70499-stuttgart/274268",
+   "posted": "2026-11-18",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6da3ca39a9613ed36e56acf1",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70597 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70597 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70597-stuttgart/263229",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-18c1f34976e0481735903c6e",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70736 Fellbach",
+   "company": "dm Deutschland",
+   "location": "70736 Fellbach DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70736-fellbach/263236",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7c527774780711c46ebd2422",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70736 Fellbach",
+   "company": "dm Deutschland",
+   "location": "70736 Fellbach DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70736-fellbach/263222",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-081f56626123f89826814645",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70771 Leinfelden-Echterdingen",
+   "company": "dm Deutschland",
+   "location": "70771 Leinfelden-Echterdingen DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70771-leinfelden-echterdingen/263243",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e331553664d82f269baac083",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 70794 Filderstadt",
+   "company": "dm Deutschland",
+   "location": "70794 Filderstadt DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-70794-filderstadt/263247",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a9e7ac2afb369a99207a42e7",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 71065 Sindelfingen",
+   "company": "dm Deutschland",
+   "location": "71065 Sindelfingen DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-71065-sindelfingen/263258",
+   "posted": "2026-08-04",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a022100257a6c904514f9127",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 71296 Heimsheim",
+   "company": "dm Deutschland",
+   "location": "71296 Heimsheim DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-71296-heimsheim/263248",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b071ce0f8ca4b5ce2d034b05",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 71384 Weinstadt",
+   "company": "dm Deutschland",
+   "location": "71384 Weinstadt DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-71384-weinstadt/263242",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-80c70da83fdf82bbbf662b85",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 71665 Vaihingen an der Enz",
+   "company": "dm Deutschland",
+   "location": "71665 Vaihingen an der Enz DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-71665-vaihingen-an-der-enz/263225",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3ff08df33b7029f5e43bc090",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 72070 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72070 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-72070-tuebingen/263251",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-cdac39ac9d9a0b395f398eb6",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 72793 Pfullingen",
+   "company": "dm Deutschland",
+   "location": "72793 Pfullingen DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-72793-pfullingen/263254",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e51b3d8a841da512becd8897",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 72810 Gomaringen",
+   "company": "dm Deutschland",
+   "location": "72810 Gomaringen DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-72810-gomaringen/263259",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-71f465e37f329a9e75f59548",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 73614 Schorndorf",
+   "company": "dm Deutschland",
+   "location": "73614 Schorndorf DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-73614-schorndorf/263228",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a16dfe42c48a3093a60a3e91",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 73728 Esslingen am Neckar",
+   "company": "dm Deutschland",
+   "location": "73728 Esslingen am Neckar DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-73728-esslingen-am-neckar/263235",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-1bfb42737c10024c9373b952",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 75031 Eppingen",
+   "company": "dm Deutschland",
+   "location": "75031 Eppingen DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-75031-eppingen/263214",
+   "posted": "2026-08-04",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-332020c8b7910cc45cd3e905",
+   "title": "Duales Studium BWL-Handel (B. A.) 2027 in 75179 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75179 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/duales-studium-bwl-handel-b-a-2027-in-75179-pforzheim/263240",
+   "posted": "2026-07-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2950319cef8ad54986e409a7",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70173-stuttgart/21822",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a3520d210e2e5c01b0530dbb",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70178 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70178 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70178-stuttgart/21467",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b45c89413311354f2e3d9332",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70188 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70188 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70188-stuttgart/81664",
+   "posted": "2021-10-18",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-369d15dbc3eabe257d857025",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70192 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70192 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70192-stuttgart/81665",
+   "posted": "2021-07-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-80824d08f6fe0a91f266e1bd",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70193 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70193 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70193-stuttgart/21834",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-373ddfc904c08fc40fb319c4",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70372 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70372 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70372-stuttgart/81667",
+   "posted": "2021-07-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0c07f00c2a39917b724e3a52",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70435 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70435 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70435-stuttgart/22055",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-bbd03edee9d5b5230e8854ef",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70469 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70469 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70469-stuttgart/113566",
+   "posted": "2021-12-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8660174f3114706532e8182b",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70499 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70499 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70499-stuttgart/24613",
+   "posted": "2022-03-21",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8c69b3a1f2bd319e8d04e9da",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70499 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70499 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70499-stuttgart/81624",
+   "posted": "2021-07-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-845ea33d6af6a2347d799556",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70563 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70563 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70563-stuttgart/22526",
+   "posted": "2023-03-10",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-19e4e5b76eda2ebed9a6115a",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70597 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70597 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70597-stuttgart/81623",
+   "posted": "2025-08-06",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4dac42236047e399d6557715",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70619 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70619 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70619-stuttgart/81641",
+   "posted": "2021-08-03",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-34185a33cf6bb62a5c5e1791",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70736 Fellbach",
+   "company": "dm Deutschland",
+   "location": "70736 Fellbach DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70736-fellbach/21688",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7498bf1f666067c5dea0da60",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70736 Fellbach",
+   "company": "dm Deutschland",
+   "location": "70736 Fellbach DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70736-fellbach/22203",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7cccd04169ea491acf9c0576",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70771 Leinfelden-Echterdingen",
+   "company": "dm Deutschland",
+   "location": "70771 Leinfelden-Echterdingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70771-leinfelden-echterdingen/204997",
+   "posted": "2024-06-30",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4cd6efe53d1c9376207477c5",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70794 Filderstadt",
+   "company": "dm Deutschland",
+   "location": "70794 Filderstadt DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70794-filderstadt/24053",
+   "posted": "2023-02-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ff3543e0ea235642aa7d84fd",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70794 Filderstadt",
+   "company": "dm Deutschland",
+   "location": "70794 Filderstadt DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70794-filderstadt/97221",
+   "posted": "2021-09-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f11fbaf5d12f01bb741c25ce",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 70806 Kornwestheim",
+   "company": "dm Deutschland",
+   "location": "70806 Kornwestheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-70806-kornwestheim/188725",
+   "posted": "2023-02-06",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2738c22b62e90aaf3ceba294",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71032 Böblingen",
+   "company": "dm Deutschland",
+   "location": "71032 Böblingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71032-boeblingen/245365",
+   "posted": "2025-09-16",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5744874e7f252600da306152",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71063 Sindelfingen",
+   "company": "dm Deutschland",
+   "location": "71063 Sindelfingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71063-sindelfingen/23939",
+   "posted": "2022-12-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b5c3ee6ab825cb59ecc5f0ad",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71065 Sindelfingen",
+   "company": "dm Deutschland",
+   "location": "71065 Sindelfingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71065-sindelfingen/186835",
+   "posted": "2022-12-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6097a7a3deae76967733fbdb",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71083 Herrenberg",
+   "company": "dm Deutschland",
+   "location": "71083 Herrenberg DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71083-herrenberg/136564",
+   "posted": "2022-03-31",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a6a547110dbf005788c8eb2b",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71088 Holzgerlingen",
+   "company": "dm Deutschland",
+   "location": "71088 Holzgerlingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71088-holzgerlingen/127601",
+   "posted": "2022-02-21",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0b8f42e5306bb278736c0db3",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71111 Waldenbuch",
+   "company": "dm Deutschland",
+   "location": "71111 Waldenbuch DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71111-waldenbuch/199982",
+   "posted": "2023-08-07",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2d8317538f1bd94fbd8179ea",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71116 Gärtringen",
+   "company": "dm Deutschland",
+   "location": "71116 Gärtringen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71116-gaertringen/83062",
+   "posted": "2021-07-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-fd3dccb86906cd32bcc99f0b",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71134 Aidlingen",
+   "company": "dm Deutschland",
+   "location": "71134 Aidlingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71134-aidlingen/228493",
+   "posted": "2024-11-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-55a7b7c532924356d7e7ed98",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71229 Leonberg",
+   "company": "dm Deutschland",
+   "location": "71229 Leonberg DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71229-leonberg/80484",
+   "posted": "2021-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-fa1cb07650a267dbdf41889f",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71229 Leonberg",
+   "company": "dm Deutschland",
+   "location": "71229 Leonberg DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71229-leonberg/22660",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-62df0eafbb80c80b9f930ea8",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71254 Ditzingen",
+   "company": "dm Deutschland",
+   "location": "71254 Ditzingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71254-ditzingen/122345",
+   "posted": "2022-01-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e89e44422fb1c58d0e6db39e",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71263 Weil der Stadt",
+   "company": "dm Deutschland",
+   "location": "71263 Weil der Stadt DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71263-weil-der-stadt/24224",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5ad23bba04157f2b4c45ed4c",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71272 Renningen",
+   "company": "dm Deutschland",
+   "location": "71272 Renningen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71272-renningen/190906",
+   "posted": "2023-03-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-1d796444d06b5023df8c6043",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71277 Rutesheim",
+   "company": "dm Deutschland",
+   "location": "71277 Rutesheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71277-rutesheim/96781",
+   "posted": "2024-09-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-18dd80042950ab6a6bca5da4",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71296 Heimsheim",
+   "company": "dm Deutschland",
+   "location": "71296 Heimsheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71296-heimsheim/186391",
+   "posted": "2022-12-07",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b092452d06e3f356239f9042",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71297 Mönsheim",
+   "company": "dm Deutschland",
+   "location": "71297 Mönsheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71297-moensheim/74373",
+   "posted": "2024-04-29",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-54b810807b2241ca87545ca5",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71332 Waiblingen",
+   "company": "dm Deutschland",
+   "location": "71332 Waiblingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71332-waiblingen/207099",
+   "posted": "2023-12-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f16d8861a413dc6b82e30805",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71332 Waiblingen",
+   "company": "dm Deutschland",
+   "location": "71332 Waiblingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71332-waiblingen/101365",
+   "posted": "2021-10-11",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f159cdef694843aeb3bab807",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71364 Winnenden",
+   "company": "dm Deutschland",
+   "location": "71364 Winnenden DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71364-winnenden/22913",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8297f206637f8997efeb67a1",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71384 Weinstadt",
+   "company": "dm Deutschland",
+   "location": "71384 Weinstadt DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71384-weinstadt/21653",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4351d225da23c20b9e6b42fa",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71522 Backnang",
+   "company": "dm Deutschland",
+   "location": "71522 Backnang DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71522-backnang/22948",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7dc382b0a5e0ff5d51ab2a7a",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71540 Murrhardt",
+   "company": "dm Deutschland",
+   "location": "71540 Murrhardt DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71540-murrhardt/86810",
+   "posted": "2021-08-12",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-393a5f452993df692cf86680",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71634 Ludwigsburg",
+   "company": "dm Deutschland",
+   "location": "71634 Ludwigsburg DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71634-ludwigsburg/132817",
+   "posted": "2022-03-16",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-18937053840d3fbd092f4d73",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71638 Ludwigsburg",
+   "company": "dm Deutschland",
+   "location": "71638 Ludwigsburg DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71638-ludwigsburg/126547",
+   "posted": "2022-02-16",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8463d10ca50c221a2d18c928",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71665 Vaihingen an der Enz",
+   "company": "dm Deutschland",
+   "location": "71665 Vaihingen an der Enz DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71665-vaihingen-an-der-enz/22782",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-57848e5220d825265e15ebd8",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71679 Asperg",
+   "company": "dm Deutschland",
+   "location": "71679 Asperg DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71679-asperg/41643",
+   "posted": "2026-03-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-28baf05726fcd85f3b564665",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71711 Murr",
+   "company": "dm Deutschland",
+   "location": "71711 Murr DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71711-murr/184920",
+   "posted": "2023-09-05",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-59775f5cd9661e9db3906497",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 71720 Oberstenfeld",
+   "company": "dm Deutschland",
+   "location": "71720 Oberstenfeld DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-71720-oberstenfeld/253840",
+   "posted": "2026-02-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-be5394123f3c46eef59c2393",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72070 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72070 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72070-tuebingen/209853",
+   "posted": "2024-04-18",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2d8ea8f18c33948818f9320f",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72072 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72072 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72072-tuebingen/190709",
+   "posted": "2023-03-23",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-771bea44c46e38bba67f3b9d",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72072 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72072 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72072-tuebingen/199709",
+   "posted": "2023-08-03",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-42dc7731062414f38c4f398c",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72138 Kirchentellinsfurt",
+   "company": "dm Deutschland",
+   "location": "72138 Kirchentellinsfurt DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72138-kirchentellinsfurt/235274",
+   "posted": "2025-04-15",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a85a80f2fdc1e00e6b00382b",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72525 Münsingen",
+   "company": "dm Deutschland",
+   "location": "72525 Münsingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72525-muensingen/199910",
+   "posted": "2023-08-09",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b6f4a441c975d13d49efc0cc",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72555 Metzingen",
+   "company": "dm Deutschland",
+   "location": "72555 Metzingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72555-metzingen/186444",
+   "posted": "2022-12-09",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-039dbfe623d678eeca8dc2c0",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72622 Nürtingen",
+   "company": "dm Deutschland",
+   "location": "72622 Nürtingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72622-nuertingen/208889",
+   "posted": "2024-02-02",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f36d5bea298afe6c1b9e4ff6",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72631 Aichtal",
+   "company": "dm Deutschland",
+   "location": "72631 Aichtal DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72631-aichtal/98561",
+   "posted": "2021-09-29",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8ef5c4aac00df65a74409d70",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72636 Frickenhausen",
+   "company": "dm Deutschland",
+   "location": "72636 Frickenhausen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72636-frickenhausen/200016",
+   "posted": "2023-08-09",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7c8729979bc628cb3d11f597",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72654 Neckartenzlingen",
+   "company": "dm Deutschland",
+   "location": "72654 Neckartenzlingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72654-neckartenzlingen/203632",
+   "posted": "2023-10-09",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4e1560edb738447c621d403c",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72760 Reutlingen",
+   "company": "dm Deutschland",
+   "location": "72760 Reutlingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72760-reutlingen/185312",
+   "posted": "2022-11-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-300a788010c09ebf5dada1c9",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72764 Reutlingen",
+   "company": "dm Deutschland",
+   "location": "72764 Reutlingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72764-reutlingen/204485",
+   "posted": "2023-12-03",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-102f4e9a0ff85b7d1f327885",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72770 Reutlingen",
+   "company": "dm Deutschland",
+   "location": "72770 Reutlingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72770-reutlingen/199955",
+   "posted": "2023-08-07",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-535fb1c8a2ad8e252431ac85",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72793 Pfullingen",
+   "company": "dm Deutschland",
+   "location": "72793 Pfullingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72793-pfullingen/271363",
+   "posted": "2026-10-07",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-42c49764e79e4daae3165bc3",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 72810 Gomaringen",
+   "company": "dm Deutschland",
+   "location": "72810 Gomaringen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-72810-gomaringen/43509",
+   "posted": "2023-08-03",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-48591f5ccfb9b3c0cb3a9f05",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73033 Göppingen",
+   "company": "dm Deutschland",
+   "location": "73033 Göppingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73033-goeppingen/101914",
+   "posted": "2021-11-17",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b0fa00f9bbaaeeb3787fa672",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73033 Göppingen",
+   "company": "dm Deutschland",
+   "location": "73033 Göppingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73033-goeppingen/265259",
+   "posted": "2026-07-14",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7ca0fa3f6abe01672d3c30f6",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73061 Ebersbach an der Fils",
+   "company": "dm Deutschland",
+   "location": "73061 Ebersbach an der Fils DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73061-ebersbach-an-der-fils/212685",
+   "posted": "2024-04-02",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a82dd99160ff3338c3c4c7e3",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73066 Uhingen",
+   "company": "dm Deutschland",
+   "location": "73066 Uhingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73066-uhingen/120261",
+   "posted": "2022-01-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a6fa5d220cbb0279d8b7beea",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73079 Süßen",
+   "company": "dm Deutschland",
+   "location": "73079 Süßen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73079-suessen/186570",
+   "posted": "2022-12-12",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-fc9a81e1021e7a503f7fdc69",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73084 Salach",
+   "company": "dm Deutschland",
+   "location": "73084 Salach DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73084-salach/234528",
+   "posted": "2025-05-22",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-02c6eb32ccb794d26c22194e",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73230 Kirchheim unter Teck",
+   "company": "dm Deutschland",
+   "location": "73230 Kirchheim unter Teck DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73230-kirchheim-unter-teck/98546",
+   "posted": "2021-09-29",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c4bc4dd5b1f2c0baa09b8575",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73235 Weilheim an der Teck",
+   "company": "dm Deutschland",
+   "location": "73235 Weilheim an der Teck DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73235-weilheim-an-der-teck/200528",
+   "posted": "2024-11-26",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c646eedfb0c9b8cc85ad21a5",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73257 Köngen",
+   "company": "dm Deutschland",
+   "location": "73257 Köngen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73257-koengen/203954",
+   "posted": "2023-10-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-045423d500891717ab2ddfe8",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73312 Geislingen an der Steige",
+   "company": "dm Deutschland",
+   "location": "73312 Geislingen an der Steige DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73312-geislingen-an-der-steige/189211",
+   "posted": "2023-03-01",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0ee528080ac04a2914554bf2",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73525 Schwäbisch Gmünd",
+   "company": "dm Deutschland",
+   "location": "73525 Schwäbisch Gmünd DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73525-schwaebisch-gmuend/101920",
+   "posted": "2024-10-15",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-84cc9095b27dbf6fd34b07a0",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73529 Schwäbisch Gmünd",
+   "company": "dm Deutschland",
+   "location": "73529 Schwäbisch Gmünd DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73529-schwaebisch-gmuend/186240",
+   "posted": "2022-12-07",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-27788155d998e90bc6d1068b",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73547 Lorch",
+   "company": "dm Deutschland",
+   "location": "73547 Lorch DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73547-lorch/21786",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-1eb12dee630cc2bb5b46357f",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73557 Mutlangen",
+   "company": "dm Deutschland",
+   "location": "73557 Mutlangen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73557-mutlangen/181901",
+   "posted": "2022-10-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-80a8c3b105fbb130dd0ba51f",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73614 Schorndorf",
+   "company": "dm Deutschland",
+   "location": "73614 Schorndorf DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73614-schorndorf/206082",
+   "posted": "2023-11-23",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-274f3e83ebf06f4298a336e4",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73732 Esslingen am Neckar",
+   "company": "dm Deutschland",
+   "location": "73732 Esslingen am Neckar DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73732-esslingen-am-neckar/247102",
+   "posted": "2025-10-09",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0602138081589794361897ce",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73765 Neuhausen auf den Fildern",
+   "company": "dm Deutschland",
+   "location": "73765 Neuhausen auf den Fildern DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73765-neuhausen-auf-den-fildern/203985",
+   "posted": "2023-10-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2be1bc95ef12c17367146ec8",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73770 Denkendorf",
+   "company": "dm Deutschland",
+   "location": "73770 Denkendorf DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73770-denkendorf/201372",
+   "posted": "2023-09-04",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ac9b5dd2c0693a075313a989",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 73779 Deizisau",
+   "company": "dm Deutschland",
+   "location": "73779 Deizisau DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-73779-deizisau/247303",
+   "posted": "2025-10-13",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-532a98405091af51e7b1ded4",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74072 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74072 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74072-heilbronn/193432",
+   "posted": "2023-05-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ddaa00734a19ff464aaf7f4b",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74072 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74072 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74072-heilbronn/148863",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-260eb8ea926b547228a84bab",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74076 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74076 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74076-heilbronn/104241",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-594e9382d867377d2f8bb4e2",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74081 Heilbronn",
+   "company": "dm Deutschland",
+   "location": "74081 Heilbronn DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74081-heilbronn/156766",
+   "posted": "2022-07-15",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ef55b67d953c2787b78805ba",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74172 Neckarsulm",
+   "company": "dm Deutschland",
+   "location": "74172 Neckarsulm DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74172-neckarsulm/56061",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e3555b9b6f06a6f0ede96971",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74182 Obersulm",
+   "company": "dm Deutschland",
+   "location": "74182 Obersulm DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74182-obersulm/61319",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-152e8e91f5a22743954b1621",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74199 Untergruppenbach",
+   "company": "dm Deutschland",
+   "location": "74199 Untergruppenbach DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74199-untergruppenbach/69664",
+   "posted": "2026-01-15",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-5b1f6180fb41f74a0ecdf427",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74211 Leingarten",
+   "company": "dm Deutschland",
+   "location": "74211 Leingarten DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74211-leingarten/211138",
+   "posted": "2024-03-06",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2cb89b6ef2f6112aef24ad98",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74321 Bietigheim-Bissingen",
+   "company": "dm Deutschland",
+   "location": "74321 Bietigheim-Bissingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74321-bietigheim-bissingen/200601",
+   "posted": "2023-08-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-dd247835598cb6e58c1957ec",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74321 Bietigheim-Bissingen",
+   "company": "dm Deutschland",
+   "location": "74321 Bietigheim-Bissingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74321-bietigheim-bissingen/101567",
+   "posted": "2021-10-11",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-edc93363cca1f9eea9223869",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74336 Brackenheim",
+   "company": "dm Deutschland",
+   "location": "74336 Brackenheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74336-brackenheim/23118",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-65d812aa226f8bea1ce9ad00",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74360 Ilsfeld",
+   "company": "dm Deutschland",
+   "location": "74360 Ilsfeld DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74360-ilsfeld/222096",
+   "posted": "2026-04-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-d6889518b166d5b84b323f21",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74376 Gemmrigheim",
+   "company": "dm Deutschland",
+   "location": "74376 Gemmrigheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74376-gemmrigheim/21375",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4c7e3f0cfda04f57f4b66b09",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74405 Gaildorf",
+   "company": "dm Deutschland",
+   "location": "74405 Gaildorf DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74405-gaildorf/102683",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e26fbf077071db4568f04ffd",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74523 Schwäbisch Hall",
+   "company": "dm Deutschland",
+   "location": "74523 Schwäbisch Hall DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74523-schwaebisch-hall/24325",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8d665ac35c9be55d123b8a02",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74545 Michelfeld",
+   "company": "dm Deutschland",
+   "location": "74545 Michelfeld DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74545-michelfeld/61724",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-35047ab4ad50d5df0aee2394",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74613 Öhringen",
+   "company": "dm Deutschland",
+   "location": "74613 Öhringen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74613-oehringen/21928",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-44da3dedeebeaa78eccc55f0",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 74629 Pfedelbach",
+   "company": "dm Deutschland",
+   "location": "74629 Pfedelbach DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-74629-pfedelbach/106197",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-47b09d3ed4c93b85200fd681",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75015 Bretten",
+   "company": "dm Deutschland",
+   "location": "75015 Bretten DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75015-bretten/85282",
+   "posted": "2021-08-05",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4ac6d8a3086944c1f5dc9fae",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75015 Bretten",
+   "company": "dm Deutschland",
+   "location": "75015 Bretten DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75015-bretten/142029",
+   "posted": "2022-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f6bbe1cb548679246acb278d",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75031 Eppingen",
+   "company": "dm Deutschland",
+   "location": "75031 Eppingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75031-eppingen/104222",
+   "posted": "2023-04-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7bee3537dcced1840ffc45cb",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75038 Oberderdingen",
+   "company": "dm Deutschland",
+   "location": "75038 Oberderdingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75038-oberderdingen/266046",
+   "posted": "2026-07-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-56e68458daaf3d389efc2f6d",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75175 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75175 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75175-pforzheim/21363",
+   "posted": "2020-11-27",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-9574f50225d07fb92f471fe8",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75179 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75179 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75179-pforzheim/268719",
+   "posted": "2026-09-04",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f8542a825ac520bf62d229f4",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75179 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75179 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75179-pforzheim/173181",
+   "posted": "2022-09-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a2af0f335332ed0fe15c4c00",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75181 Pforzheim",
+   "company": "dm Deutschland",
+   "location": "75181 Pforzheim DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75181-pforzheim/21563",
+   "posted": "2022-03-23",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-9200cec53724d30e52a86221",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75365 Calw",
+   "company": "dm Deutschland",
+   "location": "75365 Calw DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75365-calw/203801",
+   "posted": "2023-10-11",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-93e10f24021020241c3d0a34",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 75417 Mühlacker",
+   "company": "dm Deutschland",
+   "location": "75417 Mühlacker DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-75417-muehlacker/100210",
+   "posted": "2023-08-03",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-82a2e92230399c0cf1c40bdf",
+   "title": "Schülerpraktikum dm-Markt (w/m/d) in 89150 Laichingen",
+   "company": "dm Deutschland",
+   "location": "89150 Laichingen DE",
+   "url": "https://www.dm-jobs.de/job/schuelerpraktikum-dm-markt-w-m-d-in-89150-laichingen/259895",
+   "posted": "2026-05-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-32c8c33eaaec0bb23c911ffb",
+   "title": "Stellvertretender Filialleiter (w/m/d) 37,5 Std./Wo. im Großraum Göppingen",
+   "company": "dm Deutschland",
+   "location": "73033 Göppingen DE",
+   "url": "https://www.dm-jobs.de/job/stellvertretender-filialleiter-w-m-d-37-5-std-wo-im-grossraum-goeppingen/258987",
+   "posted": "2026-06-18",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c9c512975649e57ba1cd46c0",
+   "title": "Stellvertretender Marktverantwortlicher (w/m/d) 37,5 Std./Wo. im Großraum Ludwigsburg",
+   "company": "dm Deutschland",
+   "location": "71634 Ludwigsburg DE",
+   "url": "https://www.dm-jobs.de/job/stellvertretender-marktverantwortlicher-w-m-d-37-5-std-wo-im-grossraum-ludwigsburg/253954",
+   "posted": "2026-02-26",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c816fac17f5b39c7d9084ae5",
+   "title": "Verkäufer (w/m/d) 15 Std./Wo. in 73557 Mutlangen",
+   "company": "dm Deutschland",
+   "location": "73557 Mutlangen DE",
+   "url": "https://www.dm-jobs.de/job/verkaeufer-w-m-d-15-std-wo-in-73557-mutlangen/274262",
+   "posted": "2026-11-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-828090defa66ea965d51752c",
+   "title": "Verkäufer (w/m/d) 15-25 Std./Wo. in 71297 Mönsheim",
+   "company": "dm Deutschland",
+   "location": "71297 Mönsheim DE",
+   "url": "https://www.dm-jobs.de/job/verkaeufer-w-m-d-15-25-std-wo-in-71297-moensheim/272821",
+   "posted": "2026-10-28",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-d93f8d7fce45f5e0d11c6b02",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 70192 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70192 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-70192-stuttgart/274591",
+   "posted": "2026-11-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6937706649ef4bbcd964b469",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 70619 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70619 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-70619-stuttgart/274594",
+   "posted": "2026-11-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-0e82086db8fa9c310a812b06",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 71277 Rutesheim",
+   "company": "dm Deutschland",
+   "location": "71277 Rutesheim DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-71277-rutesheim/274080",
+   "posted": "2026-11-17",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c434f497eb264df9f1cd8b75",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 71297 Mönsheim",
+   "company": "dm Deutschland",
+   "location": "71297 Mönsheim DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-71297-moensheim/273763",
+   "posted": "2026-11-10",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c7401a5e58afcd62404f134a",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 73557 Mutlangen",
+   "company": "dm Deutschland",
+   "location": "73557 Mutlangen DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-73557-mutlangen/274261",
+   "posted": "2026-11-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2566cb8f738cf09fc99d1468",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 73776 Altbach",
+   "company": "dm Deutschland",
+   "location": "73776 Altbach DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-73776-altbach/273423",
+   "posted": "2026-11-20",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-bd35d3e966fe9cdfa76d1ce3",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 75015 Bretten",
+   "company": "dm Deutschland",
+   "location": "75015 Bretten DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-75015-bretten/265462",
+   "posted": "2026-07-17",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c725514e683d139a1fd26b1e",
+   "title": "Warenverräumer (w/m/d) 3 Std./Wo. in 75015 Bretten",
+   "company": "dm Deutschland",
+   "location": "75015 Bretten DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-std-wo-in-75015-bretten/256967",
+   "posted": "2026-08-17",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b9aea40de6732f161b365817",
+   "title": "Warenverräumer (w/m/d) 3-4 Std./Wo. in 70597 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70597 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-4-std-wo-in-70597-stuttgart/274545",
+   "posted": "2026-11-24",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-43c4ded73d2e53f5027e191b",
+   "title": "Warenverräumer (w/m/d) 3-6 Std./Wo. in 72138 Kirchentellinsfurt",
+   "company": "dm Deutschland",
+   "location": "72138 Kirchentellinsfurt DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-6-std-wo-in-72138-kirchentellinsfurt/274279",
+   "posted": "2026-11-19",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-7b1872f0d38ca1c113f663d3",
+   "title": "Warenverräumer (w/m/d) 3-6 Std./Wo. in 72631 Aichtal",
+   "company": "dm Deutschland",
+   "location": "72631 Aichtal DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-3-6-std-wo-in-72631-aichtal/273304",
+   "posted": "2026-11-03",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-1dc063e2f939396fdbf12cb7",
+   "title": "Warenverräumer (w/m/d) 4 Std./Wo. in 70173 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70173 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-4-std-wo-in-70173-stuttgart/272754",
+   "posted": "2026-11-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-04caeb566b831ff014622e03",
+   "title": "Warenverräumer (w/m/d) 6 Std./Wo. in 70178 Stuttgart",
+   "company": "dm Deutschland",
+   "location": "70178 Stuttgart DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-6-std-wo-in-70178-stuttgart/274593",
+   "posted": "2026-11-25",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c6777bbb9e7a904d455d058b",
+   "title": "Warenverräumer (w/m/d) 6 Std./Wo. in 72070 Tübingen",
+   "company": "dm Deutschland",
+   "location": "72070 Tübingen DE",
+   "url": "https://www.dm-jobs.de/job/warenverraeumer-w-m-d-6-std-wo-in-72070-tuebingen/274453",
+   "posted": "2026-11-24",
+   "source": "dm",
+   "sourceLabel": "dm-drogerie markt",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -11609,78 +14860,6 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
-   "id": "scrapling-284a2c19dacda397f1e22aad",
-   "title": "Technischen Vertriebsaußendienst",
-   "company": "Herth+Buss Mobility Solutions",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-d8e073531568fe03af7019260cf3e963",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
-   "id": "scrapling-100c09b636efe4bc6df41dbb",
-   "title": "Lead Video Editor*in Ads Performance Marketing",
-   "company": "HEY HOLY | B Corp",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-807fad443eebe6f605ac0fc7c5ae4900",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
-   "id": "scrapling-273ac9763e59e1c88804fa7c",
-   "title": "Database Administrator",
-   "company": "HiredBuddy",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-3aed4112a368a7311301b8b9181eef2d",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
-   "id": "scrapling-90b0330f409f54107f396258",
-   "title": "Product Manager",
-   "company": "HiredBuddy",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-7477dc99cb23e01b17b5704f343404cf",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
-   "id": "scrapling-6008ed7a6f384a7f7dc564a4",
-   "title": "User Experience Designer",
-   "company": "HiredBuddy",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-a3ac6310b25f27dcb65c18b5632166bc",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
-   "id": "scrapling-3916b2811e7641d7faa6f601",
-   "title": "Web Developer",
-   "company": "HiredBuddy",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-eb4dbb5f55b5b7701e438c63ce14fed0",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
    "id": "scrapling-cb82e9d93c197fda22c089da",
    "title": "Fertigungs-Allrounder (m/w/d)",
    "company": "Hornung GmbH",
@@ -12758,7 +15937,7 @@
    "source": "kaufland",
    "sourceLabel": "Kaufland",
    "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-f843dcf515d7330455d65684",
@@ -16481,6 +19660,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-bcdb83b20d7ce94f46e8e8d5",
+   "title": "Diätassistent (m/w/d) für die Diätküche sowie für die Ernährungsberatung/Ernährungstherapie",
+   "company": "Klinikum Stuttgart",
+   "location": "Stuttgart Baden-Württemberg DE",
+   "url": "https://www.klinikum-stuttgart.de/karriere/job/diaetassistent-m-w-d-fuer-die-diaetkueche-sowie-fuer-die-ernaehrungsberatung-ernaehrungstherapie-3549",
+   "posted": "2026-11-25",
+   "source": "klinikum_stuttgart",
+   "sourceLabel": "Klinikum Stuttgart · Bad Cannstatt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-46ed27fcdd87f7f6e621d66f",
    "title": "Elektromeister / Elektrotechniker (m/w/d)",
    "company": "Klinikum Stuttgart",
@@ -17042,6 +20233,30 @@
    "source": "klinikum_stuttgart",
    "sourceLabel": "Klinikum Stuttgart · Bad Cannstatt",
    "erstmalsGesehen": "2026-11-08",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6e44f6ec62ae8da1552029da",
+   "title": "Projektleitung SAP S4 Umstellung",
+   "company": "Klinikum Stuttgart",
+   "location": "Stuttgart Baden-Württemberg DE",
+   "url": "https://www.klinikum-stuttgart.de/karriere/job/projektleitung-sap-s4-umstellung-3548",
+   "posted": "2026-11-18",
+   "source": "klinikum_stuttgart",
+   "sourceLabel": "Klinikum Stuttgart · Bad Cannstatt",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-448d4593aac877565aad3a55",
+   "title": "Psychologe (m/w/d)",
+   "company": "Klinikum Stuttgart",
+   "location": "Stuttgart Baden-Württemberg DE",
+   "url": "https://www.klinikum-stuttgart.de/karriere/job/psychologe-m-w-d-3550",
+   "posted": "2026-11-25",
+   "source": "klinikum_stuttgart",
+   "sourceLabel": "Klinikum Stuttgart · Bad Cannstatt",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -19049,6 +22264,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-71676ddef2905b6fb099a271",
+   "title": "Praktikum Controlling International - Projekte",
+   "company": "Lidl Stiftung",
+   "location": "74167 Neckarsulm DE",
+   "url": "https://jobs.lidl.de/jobs/praktikum-controlling-international-projekte-neckarsulm-774878",
+   "posted": "2026-11-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-e50a0b16ff948b27dcfce9e6",
    "title": "Praktikum Controlling International - Projekte",
    "company": "Lidl Stiftung",
@@ -19310,6 +22537,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-452de50b65d48d9abfbb945d",
+   "title": "Praktikum Externe Produktprüfung und Produktionsstätten Food",
+   "company": "Lidl Stiftung",
+   "location": "74167 Neckarsulm DE",
+   "url": "https://jobs.lidl.de/jobs/praktikum-externe-produktpruefung-und-produktionsstaetten-food-neckarsulm-769344",
+   "posted": "2026-11-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -19817,6 +23056,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-68ac014074298a48b4bf41d0",
+   "title": "Praktikum Supply Chain - stationäre Lieferkette",
+   "company": "Lidl Stiftung",
+   "location": "74167 Neckarsulm DE",
+   "url": "https://jobs.lidl.de/jobs/praktikum-supply-chain-stationaere-lieferkette-neckarsulm-756720",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-148b7101eab90f8c8e56ab81",
    "title": "Praktikum Supply Chain - Warensteuerung",
    "company": "Lidl Stiftung",
@@ -20129,6 +23380,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-e7574e8df36aa8055dd44cc7",
+   "title": "System- und Prozessmanager Einkauf (m/w/d)",
+   "company": "Lidl Stiftung",
+   "location": "74172 Neckarsulm DE",
+   "url": "https://jobs.lidl.de/jobs/system-und-prozessmanager-einkauf-m-w-d-neckarsulm-774701",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-1eea7daeec00c9f419e9b124",
    "title": "Teamleiter Employer Branding International (m/w/d)",
    "company": "Lidl Stiftung",
@@ -20246,6 +23509,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b3d0fef4576dc60fd2b927f3",
+   "title": "Ausbildung Kaufmann für Büromanagement 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG (Waldenburg)",
+   "location": "74638 Waldenburg DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-fuer-bueromanagement-2027-m-w-d-waldenburg-774428",
+   "posted": "2026-11-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -22721,6 +25996,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-af238e55b137691b375c1705",
+   "title": "Abiturientenprogramm Vertrieb inkl. Handelsfachwirt 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72793 Pfullingen DE",
+   "url": "https://jobs.lidl.de/jobs/abiturientenprogramm-vertrieb-inkl.-handelsfachwirt-2027-m-w-d-pfullingen-773003",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-e476ef50606ffc68a72426fe",
    "title": "Abiturientenprogramm Vertrieb inkl. Handelsfachwirt 2027 (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
@@ -22742,6 +26029,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-ea3dcc5669cb738252471055",
+   "title": "Abiturientenprogramm Vertrieb inkl. Handelsfachwirt 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72760 Reutlingen DE",
+   "url": "https://jobs.lidl.de/jobs/abiturientenprogramm-vertrieb-inkl.-handelsfachwirt-2027-m-w-d-reutlingen-772992",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -22793,6 +26092,30 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-67845d1be89830b952f433d2",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72800 Eningen u. A. DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-eningen-u.-a-773006",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-8f74dfb90b6817410abb15ab",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72760 Reutlingen DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-reutlingen-773007",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-9b363818d753ae913cc74803",
    "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
@@ -22826,6 +26149,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a72c51de536e3126c2139a39",
+   "title": "Ausbildung Kaufmann im Einzelhandel / Verkäufer 2027 (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72805 Lichtenstein DE",
+   "url": "https://jobs.lidl.de/jobs/ausbildung-kaufmann-im-einzelhandel-verkaeufer-2027-m-w-d-lichtenstein-773008",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -23009,6 +26344,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-b88bc0681be475b458b09da2",
+   "title": "Schülerpraktikum in der Filiale (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72760 Reutlingen DE",
+   "url": "https://jobs.lidl.de/jobs/schuelerpraktikum-in-der-filiale-m-w-d-reutlingen-773012",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-4dda7b996add237ad9595d53",
    "title": "Stellvertretender Filialleiter (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
@@ -23117,6 +26464,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-c225d60f54374d2041040f09",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72762 Reutlingen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-reutlingen-774991",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-f4271b84e8cb86750b7e2d29",
    "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
@@ -23177,6 +26536,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-65209f472dc82a15fb8972c6",
+   "title": "Verkäufer Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72072 Tübingen DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-tuebingen-774992",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-6d3cfab24844ae3ad5ee6ad0",
    "title": "Verkäufer Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
@@ -23234,6 +26605,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-eff6f0f661afbfebc7b42a11",
+   "title": "Verkäufer Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Hüfingen Nord",
+   "location": "72119 Ammerbuch DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-ammerbuch-771065",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -24713,6 +28096,42 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-7f8c3c8c47ed099aedae15c8",
+   "title": "Mitarbeiter Warenverräumung 10-15 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70469 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-10-15-std.-woche-teilzeit-m-w-d-stuttgart-774956",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-9a8da4045bf9e93f9312203d",
+   "title": "Mitarbeiter Warenverräumung 10-15 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70435 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-10-15-std.-woche-teilzeit-m-w-d-stuttgart-774961",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b9f24a7c9acda16dd8ef2e7a",
+   "title": "Mitarbeiter Warenverräumung 10-15 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70499 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-10-15-std.-woche-teilzeit-m-w-d-stuttgart-774953",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-e69f411e3b6d82164d8a43a8",
    "title": "Mitarbeiter Warenverräumung 10-15 Std./Woche Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
@@ -24742,6 +28161,18 @@
    "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
    "location": "73733 Esslingen am Neckar DE",
    "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-20-25-std.-woche-teilzeit-m-w-d-esslingen-am-neckar-774086",
+   "posted": "2026-11-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-86b16f4ceb1399fd47045e6f",
+   "title": "Mitarbeiter Warenverräumung 20-25 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70329 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/mitarbeiter-warenverraeumung-20-25-std.-woche-teilzeit-m-w-d-stuttgart-774087",
    "posted": "2026-11-24",
    "source": "lidl",
    "sourceLabel": "Lidl",
@@ -26057,6 +29488,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-5bd17611c7f4a1edbae6dac3",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70499 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-stuttgart-774960",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-5cf15fd69f9b3eaa2b4e41b7",
    "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
@@ -26186,6 +29629,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-f276718d0eed45fe4915412b",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70499 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-stuttgart-774954",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -26441,6 +29896,30 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-19eebe3346e584e65ed0370c",
+   "title": "Verkäufer 20-25 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70499 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-20-25-std.-woche-teilzeit-m-w-d-stuttgart-774914",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-23bb0895e72a463255dfab05",
+   "title": "Verkäufer 20-25 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70469 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-20-25-std.-woche-teilzeit-m-w-d-stuttgart-774958",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-493eccac665a630d69fa5476",
    "title": "Verkäufer 20-25 Std./Woche Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
@@ -26486,6 +29965,42 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-b1a93d943b0b631a0402fc74",
+   "title": "Verkäufer 20-25 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70435 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-20-25-std.-woche-teilzeit-m-w-d-stuttgart-774959",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-be1cdc327bb5096e96cedf74",
+   "title": "Verkäufer 20-25 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "73760 Ostfildern DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-20-25-std.-woche-teilzeit-m-w-d-ostfildern-774077",
+   "posted": "2026-11-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c09f6edc39d43f97885033de",
+   "title": "Verkäufer 20-25 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Nord",
+   "location": "70499 Stuttgart DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-20-25-std.-woche-teilzeit-m-w-d-stuttgart-774921",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -28265,6 +31780,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-27c964fe784ff2509f25bb1c",
+   "title": "Reinigungskraft in der Filiale Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73079 Süßen DE",
+   "url": "https://jobs.lidl.de/jobs/reinigungskraft-in-der-filiale-teilzeit-m-w-d-suessen-772831",
+   "posted": "2026-11-24",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-2b035c81fdecc272436b7d3c",
    "title": "Reinigungskraft in der Filiale Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
@@ -28553,6 +32080,30 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-1d43a5d71d8304908cd06cb1",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73329 Kuchen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-kuchen-774108",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6014c76ac4aca01f5e70f5f4",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73557 Mutlangen DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-mutlangen-774102",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-774abe8366244dca4b6fcef1",
    "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
    "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
@@ -28574,6 +32125,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-c2256f96c2f6c80c200e072d",
+   "title": "Studentenjob im Verkauf Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73540 Heubach DE",
+   "url": "https://jobs.lidl.de/jobs/studentenjob-im-verkauf-teilzeit-m-w-d-heubach-774113",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -28670,6 +32233,66 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2c74b3ea9ec2cb2e36e6bf75",
+   "title": "Verkäufer 9-23 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73540 Heubach DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-9-23-std.-woche-teilzeit-m-w-d-heubach-774112",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-4e8b09c982f045c9180c237e",
+   "title": "Verkäufer 9-23 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73329 Kuchen DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-9-23-std.-woche-teilzeit-m-w-d-kuchen-774107",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a5ec3901deeb5d418b03ed8f",
+   "title": "Verkäufer 9-23 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73574 Iggingen DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-9-23-std.-woche-teilzeit-m-w-d-iggingen-774110",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e675a7a2a59bbf28223558cd",
+   "title": "Verkäufer 9-23 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73557 Mutlangen DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-9-23-std.-woche-teilzeit-m-w-d-mutlangen-774103",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-46448874c193ed69d13b3564",
+   "title": "Verkäufer 9-30 Std./Woche Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73525 Schwäbisch Gmünd DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-9-30-std.-woche-teilzeit-m-w-d-schwaebisch-gmuend-774101",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -28862,6 +32485,18 @@
    "source": "lidl",
    "sourceLabel": "Lidl",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-2c0774b83d10d27f761d8d5b",
+   "title": "Verkäufer Teilzeit (m/w/d)",
+   "company": "Lidl Vertriebs-GmbH & Co. KG, Kirchheim/Teck Süd",
+   "location": "73525 Schwäbisch Gmünd DE",
+   "url": "https://jobs.lidl.de/jobs/verkaeufer-teilzeit-m-w-d-schwaebisch-gmuend-774094",
+   "posted": "2026-11-25",
+   "source": "lidl",
+   "sourceLabel": "Lidl",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -32417,6 +36052,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-cd229e35ca76b018c8f9fa87",
+   "title": "Elektroniker - Automatisierungstechnik (m/w/d)",
+   "company": "Liebert GmbH Personaldienstleistungen",
+   "location": "71409 Schwaikheim Deutschland",
+   "url": "https://www.persy.jobs/persy/l/job-jx42y-a-stellenangebote-Elektroniker-Automatisierungstechnik-m-w-d-Vollzeit-job-in-Schwaikheim-71409-Baden-Wuerttemberg",
+   "posted": "2026-11-25",
+   "source": "liebert",
+   "sourceLabel": "Liebert GmbH",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-afa3389bcaaeb7f2a8ca6263",
    "title": "Fachkraft für Lagerlogistik (m/w/d) (copy)",
    "company": "Liebert GmbH Personaldienstleistungen",
@@ -32462,6 +36109,18 @@
    "source": "liebert",
    "sourceLabel": "Liebert GmbH",
    "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-3494262427800748a6520781",
+   "title": "Helfer - Kunststoff, Kautschuk (m/w/d)",
+   "company": "Liebert GmbH Personaldienstleistungen",
+   "location": "71679 Asperg Deutschland",
+   "url": "https://www.persy.jobs/persy/l/job-jx42a-a-stellenangebote-Helfer-Kunststoff-Kautschuk-m-w-d-Vollzeit-job-in-Asperg-71679-Baden-Wuerttemberg",
+   "posted": "2026-11-25",
+   "source": "liebert",
+   "sourceLabel": "Liebert GmbH",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -32609,6 +36268,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-c8b4b745dece7f6af3b81d02",
+   "title": "Mechaniker / Montagemitarbeiter Sondermaschinen- und Anlagenbau (m/w/d)",
+   "company": "Liebert GmbH Personaldienstleistungen",
+   "location": "71409 Schwaikheim Deutschland",
+   "url": "https://www.persy.jobs/persy/l/job-jx43h-a-stellenangebote-Mechaniker-Montagemitarbeiter-Sondermaschinen-und-Anlagenbau-m-w-d-Vollzeit-job-in-Schwaikheim-71409-Baden-Wuerttemberg",
+   "posted": "2026-11-25",
+   "source": "liebert",
+   "sourceLabel": "Liebert GmbH",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-37bce4f03dc1056a4aa4c4a4",
    "title": "Mechatroniker (m/w/d)",
    "company": "Liebert GmbH Personaldienstleistungen",
@@ -32621,6 +36292,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-9388d497b1bfc9095ad4a1a3",
+   "title": "Mechatroniker (m/w/d) (copy)",
+   "company": "Liebert GmbH Personaldienstleistungen",
+   "location": "71409 Schwaikheim Deutschland",
+   "url": "https://www.persy.jobs/persy/l/job-jx42l-a-stellenangebote-Mechatroniker-m-w-d-copy-Vollzeit-job-in-Schwaikheim-71409-Baden-Wuerttemberg",
+   "posted": "2026-11-25",
+   "source": "liebert",
+   "sourceLabel": "Liebert GmbH",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-d976150b8f8c8450319b6724",
    "title": "Mechatroniker (m/w/d) (copy)",
    "company": "Liebert GmbH Personaldienstleistungen",
@@ -32630,6 +36313,18 @@
    "source": "liebert",
    "sourceLabel": "Liebert GmbH",
    "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-48245be4c2923fc5c6c1c0fb",
+   "title": "Messtechniker (Energietechnik) (m/w/d)",
+   "company": "Liebert GmbH Personaldienstleistungen",
+   "location": "71409 Schwaikheim Deutschland",
+   "url": "https://www.persy.jobs/persy/l/job-jx43c-a-stellenangebote-Messtechniker-Energietechnik-m-w-d-Vollzeit-job-in-Schwaikheim-71409-Baden-Wuerttemberg",
+   "posted": "2026-11-25",
+   "source": "liebert",
+   "sourceLabel": "Liebert GmbH",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -32654,6 +36349,18 @@
    "source": "liebert",
    "sourceLabel": "Liebert GmbH",
    "erstmalsGesehen": "2026-11-21",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-956ba326fa29147926fe3bae",
+   "title": "Montagemitarbeiter (m/w/d)",
+   "company": "Liebert GmbH Personaldienstleistungen",
+   "location": "71679 Asperg Deutschland",
+   "url": "https://www.persy.jobs/persy/l/job-jx42g-a-stellenangebote-Montagemitarbeiter-m-w-d-Vollzeit-job-in-Asperg-71679-Baden-Wuerttemberg",
+   "posted": "2026-11-25",
+   "source": "liebert",
+   "sourceLabel": "Liebert GmbH",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -32906,7 +36613,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-22"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-23ce5309e8dfeab4af10e51c",
@@ -32918,7 +36625,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-2e72740d39792a98ee03f694",
@@ -33230,7 +36937,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-22"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-985179b64a5ed2458261b76a",
@@ -33242,7 +36949,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-067a7e6ea92365e7a5dbb7af",
@@ -33254,7 +36961,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-22"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-565b33d2569e4753c466f94c",
@@ -33362,7 +37069,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-1b73cb247b2fd4fe26f18f49",
@@ -33374,7 +37081,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-21",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-b3b418f77af215d3bc4e9ffe",
@@ -33410,7 +37117,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-fc2881963a959035d1c4c44b",
@@ -33530,7 +37237,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-22"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-f3a598e5eb491494dafdf17b",
@@ -33542,7 +37249,7 @@
    "source": "mahle",
    "sourceLabel": "MAHLE / MAHLE Aftermarket",
    "erstmalsGesehen": "2026-11-18",
-   "zuletztGesehen": "2026-11-22"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-6dfe91385d92afea2c39d064",
@@ -34001,18 +37708,6 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
-   "id": "scrapling-05bd5a4a7e25e48bdf8c6adb",
-   "title": "Nuclear AI Safety Evaluators",
-   "company": "Pasiflora AI",
-   "location": "DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-cd9b845648d5149e631e72a0214c7979",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
    "id": "scrapling-b6d7ad080bba2758745a1a60",
    "title": "Arbeitserzieher / Fachkraft für Arbeits- und Berufsförderung (m/w/d) in Teilzeit I Arbeitsgruppenleitung Werkstatt für Menschen mit Behinderung",
    "company": "Paulinenpflege",
@@ -34154,6 +37849,18 @@
    "source": "paulinenpflege",
    "sourceLabel": "Paulinenpflege Winnenden",
    "erstmalsGesehen": "2026-11-24",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-e892af42b36425fb6cb4cbb8",
+   "title": "Arbeitserzieher / Fachkraft für Arbeits- und Berufsförderung (m/w/d) in Teilzeit I Arbeitsgruppenleitung Werkstatt für Menschen mit Behinderung",
+   "company": "Paulinenpflege Winnenden e.V.",
+   "location": "71540 Murrhardt Baden-Württemberg DE",
+   "url": "https://rems-murr-jobs.de/job/arbeitserzieher-fachkraft-fuer-arbeits-und-berufsfoerderung-mwd-teilzeit-i-arbeitsgruppenleitung-1811781",
+   "posted": "2026-11-25",
+   "source": "rems_murr_jobs",
+   "sourceLabel": "Rems-Murr-JOBS",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -37709,6 +41416,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-a0dbbb459e7ad752e3664033",
+   "title": "Mechatroniker Sonderfahrzeug (m/w/d)",
+   "company": "persona service AG & Co. KG",
+   "location": "70736 Fellbach BW DE",
+   "url": "https://www.persona.de/jobs/mechatroniker-sonderfahrzeug-m-w-d-fellbach/bf5691ba-6734-4fe4-9599-d21afc78ce3b",
+   "posted": "2026-11-25",
+   "source": "persona",
+   "sourceLabel": "persona service",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-1863e518db305d0c77a1b9c8",
    "title": "Mediengestalter (m/w/d)",
    "company": "persona service AG & Co. KG",
@@ -38225,6 +41944,18 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
+   "id": "scrapling-10a867ae3c1cd8c6810222c4",
+   "title": "Qualitätsinspektor Schalterbaugruppen (m/w/d)",
+   "company": "persona service AG & Co. KG",
+   "location": "71522 Backnang BW DE",
+   "url": "https://www.persona.de/jobs/qualitaetsinspektor-schalterbaugruppen-m-w-d-backnang/1e013e5f-bd9d-48e1-b075-32742fd69d28",
+   "posted": "2026-11-25",
+   "source": "persona",
+   "sourceLabel": "persona service",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
    "id": "scrapling-a22c943261ddd1261b9af574",
    "title": "Qualitätskontrolleur Sichtprüfung (m/w/d)",
    "company": "persona service AG & Co. KG",
@@ -38594,6 +42325,18 @@
    "source": "persona",
    "sourceLabel": "persona service",
    "erstmalsGesehen": "2026-11-22",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-6f6b09904fba790a83051e7f",
+   "title": "Schweißer (m/w/d)",
+   "company": "persona service AG & Co. KG",
+   "location": "71144 Steinenbronn BW DE",
+   "url": "https://www.persona.de/jobs/schweisser-m-w-d-steinenbronn/2344a15f-745b-4bc0-b7ac-ceb4f322324c",
+   "posted": "2026-11-25",
+   "source": "persona",
+   "sourceLabel": "persona service",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -39377,18 +43120,6 @@
    "zuletztGesehen": "2026-11-25"
   },
   {
-   "id": "scrapling-46cab3f62d75dc958c9009d9",
-   "title": "Finanzbuchhalter (all genders)",
-   "company": "ploon.it group",
-   "location": "Hanover Lower Saxony DE",
-   "url": "https://de.trabajo.org/stellenangebot-4112-666f61ffd492a4d9a433da80d1b3bbe5",
-   "posted": "2026-11-22",
-   "source": "trabajo",
-   "sourceLabel": "Trabajo.org",
-   "erstmalsGesehen": "2026-11-22",
-   "zuletztGesehen": "2026-11-22"
-  },
-  {
    "id": "scrapling-54d1cad58871f1a91cfff0d4",
    "title": "Fachkraft für Arbeitssicherheit, Brand- und Umweltschutz (m/w/d)",
    "company": "REMS",
@@ -39974,7 +43705,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-2a35c0e4c7d9b2a87b0b8871",
@@ -39986,7 +43717,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-3ebd9ad7f8970b74d19c4d51",
@@ -40226,7 +43957,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-db3f5f6ab80652c02788cb3c",
@@ -40238,7 +43969,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-dc7c5f9e7849bfd8edb04ab5",
@@ -40262,7 +43993,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-e8d545b1387e57f22502180d",
@@ -40298,7 +44029,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-f23407ea46348119f92a9a16",
@@ -40310,7 +44041,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-0f6e03f13a81cb020f9c117d",
@@ -40418,7 +44149,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-fcff06d57b3b96cce11c9250",
@@ -40502,7 +44233,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-37c7c3e85bf176632ce08a56",
@@ -40538,7 +44269,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-43a07989ede807888f8c785f",
@@ -40574,7 +44305,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-558ba4a12af914591c31405a",
@@ -40658,7 +44389,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-756aa601c0539a23f976f541",
@@ -40706,7 +44437,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-782d7df7a2c1e769ebbda82c",
@@ -40754,7 +44485,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-836615f40107b9e4afbbb5e8",
@@ -40778,7 +44509,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-95744bd2a3c3c6e46fcee712",
@@ -40814,7 +44545,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-9f2644d526cf1a9ec1fee39b",
@@ -41186,7 +44917,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-d841798be958a43fb1d9497e",
@@ -41210,7 +44941,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-6b56a71c386cad03f49c6872",
@@ -41270,6 +45001,18 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
+   "zuletztGesehen": "2026-11-25"
+  },
+  {
+   "id": "scrapling-a2b9be9fddf24c70c8d2e08e",
+   "title": "Aushilfe / Minijob mit Kassiertätigkeit (m/w/d)",
+   "company": "REWE Markt GmbH",
+   "location": "70174 Stuttgart Stuttgart-Nord BW DE",
+   "url": "https://karriere.rewe.de/jobs/rewe/988052-de_DE/Aushilfe-Minijob-mit-Kassiertaetigkeit-m-w-d-Stuttgart-Stuttgart-Nord.html?feedId=172701",
+   "posted": "2026-11-25",
+   "source": "rewe",
+   "sourceLabel": "REWE",
+   "erstmalsGesehen": "2026-11-25",
    "zuletztGesehen": "2026-11-25"
   },
   {
@@ -41522,7 +45265,7 @@
    "source": "rewe",
    "sourceLabel": "REWE",
    "erstmalsGesehen": "2026-11-23",
-   "zuletztGesehen": "2026-11-24"
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-f7518c373e28bcd111a86248",
@@ -42591,6 +46334,18 @@
    "sourceLabel": "Robert Bosch Krankenhaus",
    "erstmalsGesehen": "2026-11-17",
    "zuletztGesehen": "2026-11-24"
+  },
+  {
+   "id": "scrapling-6a03db048a85d49452410fa2",
+   "title": "Teamleitung (m/w/d) Immobilien- und Liegenschaftsmanagement",
+   "company": "Robert Bosch Krankenhaus GmbH",
+   "location": "Auerbachstraße 110, Stuttgart, 70376, Baden-Württemberg",
+   "url": "https://jobs.smartrecruiters.com/robertboschkrankenhausgmbh/744000163682219-teamleitung-m-w-d-immobilien-und-liegenschaftsmanagement-",
+   "posted": "2026-11-25",
+   "source": "robert_bosch_krankenhaus",
+   "sourceLabel": "Robert Bosch Krankenhaus",
+   "erstmalsGesehen": "2026-11-25",
+   "zuletztGesehen": "2026-11-25"
   },
   {
    "id": "scrapling-90e069dbf79f69aa09179606",
