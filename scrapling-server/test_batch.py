@@ -641,6 +641,10 @@ class AreaTest(unittest.TestCase):
         self.assertTrue(batch.in_area(self.row("")))
         self.assertTrue(batch.in_area(self.row("Remote Deutschland")))
         self.assertFalse(batch.in_area(self.row("", source="lidl")))
+        self.assertFalse(batch.in_area(self.row("DE", source="trabajo")))
+        self.assertFalse(batch.in_area(self.row("Hanover Lower Saxony DE", source="trabajo")))
+        self.assertFalse(batch.in_area(self.row("", source="jobsuche_bw")))
+        self.assertTrue(batch.in_area(self.row("71332 Waiblingen", source="trabajo")))
         self.assertFalse(batch.in_area(self.row("GB UK Vereinigtes Königreich")))
         self.assertFalse(batch.in_area(self.row("Beringen CH")))
 

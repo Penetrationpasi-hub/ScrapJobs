@@ -42,6 +42,9 @@ AREA = (AREA_NAME, AREA_KM)
 AREA_SOURCES = {"persona", "lidl", "kaufland"}
 # Phenom kann direkt nach Koordinaten suchen; Catalent nutzt dasselbe Gebiet, aber das normale Zeitbudget.
 AREA_SEARCH_SOURCES = AREA_SOURCES | {"catalent"}
+# Ohne erkennbaren Ort nicht in den Katalog: Quellen mit Umkreissuche und Jobbörsen (Trabajo, jobsucheBW), deren
+# Anzeigen ohne Ort meist bundesweite Remote- oder Vermittlerinserate sind („DE“).
+UNKNOWN_PLACE_EXCLUDED = AREA_SEARCH_SOURCES | set(AGGREGATOR_SOURCES)
 AREA_SECONDS = 3600
 # Ortsangaben, die auf einen Standort im Ausland deuten (Stellen ohne auflösbaren deutschen Ort).
 FOREIGN = re.compile(r"\b(?:CH|AT|BE|FR|GB|UK|ES|IT|NL|PL|CZ|US|CN|Schweiz|Österreich|Belgien|Frankreich|Spanien|"
@@ -223,14 +226,14 @@ def area_distance(origin, place):
 
 
 def in_area(row, origin=None):
-    """Stelle im Umkreis AREA? Unbekannter Ort zählt bei regionalen Arbeitgebern, nicht bei bundesweiten Portalen
-    und nicht bei Standorten im Ausland."""
+    """Stelle im Umkreis AREA? Unbekannter Ort zählt bei regionalen Arbeitgebern, nicht bei bundesweiten Portalen,
+    nicht bei Jobbörsen und nicht bei Standorten im Ausland."""
     origin = origin or geo.center(AREA[0])
     place = row.get("location") or ""
     distance = area_distance(origin, place)
     if distance is not None:
         return distance <= AREA[1]
-    return row.get("source") not in AREA_SEARCH_SOURCES and not FOREIGN.search(place)
+    return row.get("source") not in UNKNOWN_PLACE_EXCLUDED and not FOREIGN.search(place)
 
 
 def keep_area(results, previous):
