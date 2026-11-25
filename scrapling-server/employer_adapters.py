@@ -46,7 +46,11 @@ def detail_document(get, raw, source, report, *, as_json=False):
     try:
         return json_document(get, raw, source) if as_json else get(raw, source)
     except FetchError as error:
-        if error.code != "gone":
+        # Abgelaufene Anzeigen leiten oft auf die Firmen-Website um (Peter Hahn: jobs.peterhahn.com/... ->
+        # peterhahn.com/karriere/jobs/), während die Sitemap sie noch nennt. Der fremde Host wird nicht
+        # abgerufen; die eine Anzeige zählt als verworfen statt die ganze Quelle abzubrechen.
+        moved_away = error.code == "unsafe_target" and str(error.detail or "").startswith("Host nicht freigegeben")
+        if error.code != "gone" and not moved_away:
             raise
         report["filtered"] += 1
         return None

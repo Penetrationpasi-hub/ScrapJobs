@@ -27,7 +27,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 340
     steps:
+      # Immer den aktuellen Stand des Branches holen, nicht den Commit vom
+      # Zeitpunkt des Auslösens: ein wartender Lauf (concurrency) startet sonst
+      # auf veraltetem stellen.json und kollidiert beim Push mit dem Vorlauf.
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Heute schon gesammelt?
         id: zeit
@@ -82,7 +87,9 @@ jobs:
           git config user.email "scrapjobs-bot@users.noreply.github.com"
           git add stellen.json STELLEN.md stellen.xlsx laeufe.csv
           git commit -m "Stellenkatalog $(date -u +%Y-%m-%d)"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
+          # Erzeugte Dateien: bei Konflikt gewinnt der frische Lauf (-X theirs
+          # = der gerade wiedergegebene eigene Commit).
+          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
 
       # Bewusst NACH dem Committen: die Daten sind gespeichert, rot ist nur das

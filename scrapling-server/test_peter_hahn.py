@@ -24,3 +24,26 @@ class PeterHahnTest(unittest.TestCase):
         html = '<script type="application/ld+json">' + json.dumps(posting) + "</script>"
         job = extract(html, AD, registry()["peter_hahn"])
         self.assertEqual((job["company"], job["posted"]), ("Peter Hahn GmbH", "2026-11-08"))
+
+
+class ExpiredAdRedirectTest(unittest.TestCase):
+    def test_ad_redirecting_to_foreign_host_is_skipped_not_fatal(self):
+        from employer_adapters import detail_document
+        from safe_http import FetchError
+
+        def get(raw, source):
+            raise FetchError("unsafe_target", detail="Host nicht freigegeben: peterhahn.com")
+
+        report = {"filtered": 0}
+        self.assertIsNone(detail_document(get, AD, registry()["peter_hahn"], report))
+        self.assertEqual(report["filtered"], 1)
+
+    def test_other_unsafe_targets_still_abort(self):
+        from employer_adapters import detail_document
+        from safe_http import FetchError
+
+        def get(raw, source):
+            raise FetchError("unsafe_target", detail="Adresse nicht öffentlich: 10.0.0.1")
+
+        with self.assertRaises(FetchError):
+            detail_document(get, AD, registry()["peter_hahn"], {"filtered": 0})
