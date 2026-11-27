@@ -1069,3 +1069,75 @@ lauf,datum,quelle,label,adapter,status,stellen_lauf,neu,im_katalog,detail
 2026-11-26T16:38:42+00:00,2026-11-26,iits,iits-consulting,personio,done,7,0,7,
 2026-11-26T16:38:42+00:00,2026-11-26,zvw,Zeitungsverlag Waiblingen,html,done,2,0,2,
 2026-11-26T16:38:42+00:00,2026-11-26,rems_murr_jobs,Rems-Murr-JOBS,html,done,138,5,160,teilweise: rems_murr_jobs timeout nach 138 Stellen
+2026-11-27T16:37:59+00:00,2026-11-27,festo,Festo,html,done,14,0,14,
+2026-11-27T16:37:59+00:00,2026-11-27,bosch,Bosch,html,unsafe_target,0,0,0,Host nicht freigegeben: jobs.bosch.com
+2026-11-27T16:37:59+00:00,2026-11-27,aldi_sued,ALDI SÜD,aldi_map,robots_unavailable,0,0,0,HTTP 403 von karriere.aldi-sued.de (auch nach 2 Wiederholungen)
+2026-11-27T16:37:59+00:00,2026-11-27,dm,dm-drogerie markt,dm_sitemap,done,267,0,272,
+2026-11-27T16:37:59+00:00,2026-11-27,toom,toom Baumarkt,toom_search,done,26,0,26,
+2026-11-27T16:37:59+00:00,2026-11-27,rewe,REWE,rewe_search,done,213,4,224,
+2026-11-27T16:37:59+00:00,2026-11-27,penny,PENNY,penny_search,done,153,0,154,
+2026-11-27T16:37:59+00:00,2026-11-27,mercedes_benz,Mercedes-Benz,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://jobs.mercedes-benz.com/ (3099 Zeichen, 0 Links, Titel «»)"
+2026-11-27T16:37:59+00:00,2026-11-27,stihl,STIHL,sitemap,done,121,0,130,5 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,mahle,MAHLE / MAHLE Aftermarket,html,done,33,3,53,
+2026-11-27T16:37:59+00:00,2026-11-27,diakonie_stetten,Diakonie Stetten,sitemap,done,60,2,63,
+2026-11-27T16:37:59+00:00,2026-11-27,robert_bosch_krankenhaus,Robert Bosch Krankenhaus,html,done,9,2,14,
+2026-11-27T16:37:59+00:00,2026-11-27,kaercher,Kärcher,html,done,78,0,86,
+2026-11-27T16:37:59+00:00,2026-11-27,rems_murr_kliniken,Rems-Murr-Kliniken · Winnenden / Schorndorf,html,done,10,0,10,
+2026-11-27T16:37:59+00:00,2026-11-27,landratsamt_rmk,Landratsamt Rems-Murr-Kreis,html,done,22,1,22,
+2026-11-27T16:37:59+00:00,2026-11-27,paulinenpflege,Paulinenpflege Winnenden,html,done,12,1,13,
+2026-11-27T16:37:59+00:00,2026-11-27,ksk_waiblingen,Kreissparkasse Waiblingen,html,done,8,0,8,
+2026-11-27T16:37:59+00:00,2026-11-27,stadt_waiblingen,Stadt Waiblingen,waiblingen_page,done,15,0,16,
+2026-11-27T16:37:59+00:00,2026-11-27,tesat,TESAT-Spacecom,workday,done,32,2,32,
+2026-11-27T16:37:59+00:00,2026-11-27,airbus,"Airbus (Stuttgart, Laupheim, Backnang)",workday,done,5,0,5,7 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,zfp_winnenden,Klinikum Schloß Winnenden,bite,done,10,1,12,
+2026-11-27T16:37:59+00:00,2026-11-27,volksbank_stuttgart,Volksbank Stuttgart,html,done,8,0,8,
+2026-11-27T16:37:59+00:00,2026-11-27,klinikum_stuttgart,Klinikum Stuttgart · Bad Cannstatt,sitemap,done,66,2,73,
+2026-11-27T16:37:59+00:00,2026-11-27,stadt_schorndorf,Stadt Schorndorf,html,done,7,0,7,
+2026-11-27T16:37:59+00:00,2026-11-27,frech,Oskar Frech / Frech-Gruppe,html,done,3,0,3,
+2026-11-27T16:37:59+00:00,2026-11-27,peter_hahn,Peter Hahn,sitemap,done,1,0,1,
+2026-11-27T16:37:59+00:00,2026-11-27,syntegon,Syntegon,sitemap,done,5,0,5,9 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,catalent,Catalent,phenom_widgets,done,10,2,10,
+2026-11-27T16:37:59+00:00,2026-11-27,sana_karl_olga,Sana · Karl-Olga-Krankenhaus,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://jobs.sana.de/de/sites/CX_4025/jobs?lastSelectedFacet=ORGANIZATIONS&selectedOrganizationsFacet=300000012347373 (13309 Zeichen, 0 Links, Titel «Sana»)"
+2026-11-27T16:37:59+00:00,2026-11-27,loeffelhardt,Emil Löffelhardt,datafeed,done,12,0,13,10 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,rems,REMS,rems_list,done,3,0,6,1 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,stoba,stoba Backnang,html,done,5,0,5,
+2026-11-27T16:37:59+00:00,2026-11-27,deutsche_post,Deutsche Post / DHL,phenom_widgets,done,58,0,120,
+2026-11-27T16:37:59+00:00,2026-11-27,db_audiotechnik,d&b audiotechnik,workday,done,7,0,10,1 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,swr,SWR Stuttgart,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://www.swr.de/unternehmen/karriere/stellenangebote-110.html (125234 Zeichen, 103 Links, Titel «Jobs SWR | Stellenangebote»)"
+2026-11-27T16:37:59+00:00,2026-11-27,tti,TTI / AEG / Milwaukee,workday,done,21,2,21,84 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,burger_schloz,Burger Schloz Automobile,carsonal,done,9,0,9,
+2026-11-27T16:37:59+00:00,2026-11-27,kloepfer,Klöpfer,html,done,4,0,4,
+2026-11-27T16:37:59+00:00,2026-11-27,judo,JUDO Wasseraufbereitung,judo_filter,done,40,0,40,
+2026-11-27T16:37:59+00:00,2026-11-27,riva,RIVA-Gruppe / Mpire,personio,done,18,0,18,
+2026-11-27T16:37:59+00:00,2026-11-27,wirmachendruck,WIRmachenDRUCK,dvinci,done,12,0,13,1 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,eisenmann,Eisenmann Services / Personal-Service,eisenmann_sections,done,3,0,3,
+2026-11-27T16:37:59+00:00,2026-11-27,baeckerei_maurer,Bäckerei Maurer,html,done,15,0,15,
+2026-11-27T16:37:59+00:00,2026-11-27,elanders,Elanders Waiblingen,html,done,10,0,10,
+2026-11-27T16:37:59+00:00,2026-11-27,scutum,Scutum Sicherheit,html,unsafe_target,0,0,0,Host nicht freigegeben: www.scutum-group.com
+2026-11-27T16:37:59+00:00,2026-11-27,brunold,Brunold Automobile,html,done,1,0,1,
+2026-11-27T16:37:59+00:00,2026-11-27,kuebler,KÜBLER Workwear,html,unsupported,0,0,0,"keine Anzeigenlinks auf https://kuebler.karriere.vision/jobs (1683 Zeichen, 0 Links, Titel «Online-Bewerbermanagement»)"
+2026-11-27T16:37:59+00:00,2026-11-27,swoboda,Swoboda,html,done,0,0,0,14 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,mulfinger,Autohaus Walter Mulfinger,html,done,3,0,5,2 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,foehl,Adolf Föhl,html,done,7,0,7,
+2026-11-27T16:37:59+00:00,2026-11-27,stadtwerke_waiblingen,Stadtwerke Waiblingen,myjobboard,done,9,0,9,
+2026-11-27T16:37:59+00:00,2026-11-27,fessmann,FESSMANN,html,done,2,0,2,
+2026-11-27T16:37:59+00:00,2026-11-27,soehnle,Soehnle Industrial Solutions,html,done,15,0,15,
+2026-11-27T16:37:59+00:00,2026-11-27,benz_sport,Gotthilf Benz Turngeräte,benz_sections,done,6,0,6,
+2026-11-27T16:37:59+00:00,2026-11-27,riani,RIANI,html,done,5,0,5,3 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,dusyma,Dusyma,easyhr,done,8,0,8,
+2026-11-27T16:37:59+00:00,2026-11-27,stadtwerke_schorndorf,Stadtwerke Schorndorf,html,robots_denied,0,0,0,
+2026-11-27T16:37:59+00:00,2026-11-27,awrm,Abfallwirtschaft Rems-Murr,html,done,2,0,2,
+2026-11-27T16:37:59+00:00,2026-11-27,murrelektronik,Murrelektronik,murr,done,28,0,28,2 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,pfisterer,PFISTERER,html,done,20,0,21,9 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,hahn_automobile,Hahn Automobile,hahn,done,8,1,12,
+2026-11-27T16:37:59+00:00,2026-11-27,klingele,Klingele Paper & Packaging,html,done,6,2,8,30 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,harro_hoefliger,Harro Höfliger,harro_next,done,10,0,14,
+2026-11-27T16:37:59+00:00,2026-11-27,socco,SOCCO,html,done,17,0,17,8 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,persona,persona service,persona_sitemap,done,228,2,232,684 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,lidl,Lidl,lidl_sitemap,done,1171,24,1224,424 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,kaufland,Kaufland,kaufland_sitemap,done,317,0,324,305 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,gpm,GPM Personalservice,persy_exchange,done,204,0,226,13 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,liebert,Liebert GmbH,persy_exchange,done,67,7,75,7 außerhalb 50 km um Waiblingen
+2026-11-27T16:37:59+00:00,2026-11-27,iits,iits-consulting,personio,done,7,0,7,
+2026-11-27T16:37:59+00:00,2026-11-27,zvw,Zeitungsverlag Waiblingen,html,done,2,0,2,
+2026-11-27T16:37:59+00:00,2026-11-27,rems_murr_jobs,Rems-Murr-JOBS,html,done,139,4,154,teilweise: rems_murr_jobs timeout nach 139 Stellen
